@@ -10,7 +10,7 @@
 
 ## 目前进度
 
-正在搓框架，面得每次新游戏重复造轮子: [MaaFramework](https://github.com/MaaAssistantArknights/MaaFramework)
+正在搓框架，免得每次新游戏重复造轮子: [MaaFramework](https://github.com/MaaAssistantArknights/MaaFramework)
 
 ## Join us
 
