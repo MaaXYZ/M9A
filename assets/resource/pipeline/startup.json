@@ -1,0 +1,34 @@
+{
+    "StartUp": {
+        "next": [
+            "Download",
+            "StartGame"
+        ]
+    },
+    "Download": {
+        "recognition": "TemplateMatch",
+        "template": "template/StartUp/Download.png",
+        "roi": [
+            715,
+            388,
+            187,
+            142
+        ],
+        "action": "Click",
+        "next": [
+            "WaitingToDownload"
+        ]
+    },
+    "WaitingToDownload": {},
+    "StartGame": {
+        "recognition": "TemplateMatch",
+        "template": "template/StartUp/StartGame.png",
+        "roi": [
+            517,
+            458,
+            242,
+            163
+        ],
+        "action": "Click"
+    }
+}
