@@ -1,12 +1,22 @@
 {
     "StartUp": {
-        "action": "StartApp",
-        "package": "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity",
         "next": [
             "BluePochLogo",
             "Disclaimer",
             "GameLoading",
-            "StartGame"
+            "StartGame",
+            "HomeButton",
+            "BackButton",
+            "HomeLoading",
+            "HomeFlag",
+            "Start1999"
+        ]
+    },
+    "Start1999": {
+        "action": "StartApp",
+        "package": "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity",
+        "next": [
+            "StartUp"
         ]
     },
     "BluePochLogo": {
@@ -63,6 +73,67 @@
             242,
             163
         ],
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "HomeLoading",
+            "HomeFlag"
+        ]
+    },
+    "HomeLoading": {
+        "recognition": "TemplateMatch",
+        "template": "template/StartUp/HomeLoading.png",
+        "roi": [
+            459,
+            359,
+            364,
+            152
+        ],
+        "action": "Click",
+        "next": [
+            "HomeLoading",
+            "HomeFlag"
+        ]
+    },
+    "HomeFlag": {
+        "recognition": "TemplateMatch",
+        "template": "template/StartUp/HomeFlag.png",
+        "roi": [
+            1022,
+            419,
+            194,
+            166
+        ]
+    },
+    "BackButton": {
+        "recognition": "TemplateMatch",
+        "template": "template/StartUp/BackButton.png",
+        "roi": [
+            0,
+            0,
+            134,
+            138
+        ],
+        "action": "Click",
+        "next": [
+            "HomeButton",
+            "BackButton",
+            "HomeFlag"
+        ]
+    },
+    "HomeButton": {
+        "recognition": "TemplateMatch",
+        "template": "template/StartUp/HomeButton.png",
+        "roi": [
+            70,
+            0,
+            144,
+            144
+        ],
+        "action": "Click",
+        "next": [
+            "HomeButton",
+            "BackButton",
+            "HomeFlag"
+        ]
     }
 }
