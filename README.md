@@ -13,8 +13,10 @@
 
 ## 目前进度
 
-正在搓框架，免得每次新游戏重复造轮子: [MaaFramework](https://github.com/MaaAssistantArknights/MaaFramework)
+- 正在搓 [框架](https://github.com/MaaAssistantArknights/MaaFramework)，免得每次新游戏重复造轮子
+  已经基本完成了，还有些细节及小 bug 要优化下
+- 收菜功能正在写
 
 ## Join us
 
-暂无，先加 MAA 开发群吧（
+开发 QQ 群：649344857
