@@ -1,25 +1,59 @@
 {
     "StartUp": {
+        "action": "StartApp",
+        "package": "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity",
         "next": [
-            "Download",
+            "BluePochLogo",
+            "Disclaimer",
+            "GameLoading",
             "StartGame"
         ]
     },
-    "Download": {
+    "BluePochLogo": {
         "recognition": "TemplateMatch",
-        "template": "template/StartUp/Download.png",
+        "template": "template/StartUp/BluePochLogo.png",
         "roi": [
-            715,
-            388,
-            187,
-            142
+            298,
+            163,
+            620,
+            336
         ],
-        "action": "Click",
         "next": [
-            "WaitingToDownload"
+            "BluePochLogo",
+            "Disclaimer",
+            "GameLoading",
+            "StartGame"
         ]
     },
-    "WaitingToDownload": {},
+    "Disclaimer": {
+        "recognition": "TemplateMatch",
+        "template": "template/StartUp/Disclaimer.png",
+        "roi": [
+            512,
+            107,
+            238,
+            214
+        ],
+        "next": [
+            "Disclaimer",
+            "GameLoading",
+            "StartGame"
+        ]
+    },
+    "GameLoading": {
+        "recognition": "TemplateMatch",
+        "template": "template/StartUp/GameLoading.png",
+        "roi": [
+            323,
+            0,
+            599,
+            563
+        ],
+        "next": [
+            "GameLoading",
+            "StartGame"
+        ]
+    },
     "StartGame": {
         "recognition": "TemplateMatch",
         "template": "template/StartUp/StartGame.png",
