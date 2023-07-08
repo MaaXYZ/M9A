@@ -34,7 +34,6 @@ $ paddle2onnx --model_dir . --model_filename inference.pdmodel --params_filename
 [Paddle2ONNX] PaddlePaddle model is exported as ONNX format now.
 2023-07-06 23:36:40 [INFO]      ===============Make PaddlePaddle Better!================
 2023-07-06 23:36:40 [INFO]      A little survey: https://iwenjuan.baidu.com/?code=r8hu2s
-(chatglm) 
 ```
 
 ```bash
