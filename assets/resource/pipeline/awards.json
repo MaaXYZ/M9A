@@ -1,0 +1,121 @@
+{
+    "MailAwards": {
+        "recognition": "TemplateMatch",
+        "template": "template/Awards/MailAwards.png",
+        "roi": [
+            47,
+            115,
+            108,
+            108
+        ],
+        "action": "Click",
+        "next": [
+            "CollectMailAwards",
+            "MailAwards"
+        ]
+    },
+    "CollectMailAwards": {
+        "recognition": "TemplateMatch",
+        "template": "template/Awards/CollectMailAwards.png",
+        "roi": [
+            109,
+            551,
+            191,
+            132
+        ],
+        "action": "Click",
+        "next": [
+            "ObtainedMailAwards",
+            "NoMailAwards",
+            "CollectMailAwards"
+        ]
+    },
+    "ObtainedMailAwards": {
+        "recognition": "TemplateMatch",
+        "template": "template/Awards/ObtainedMailAwards.png",
+        "roi": [
+            524,
+            62,
+            232,
+            158
+        ],
+        "action": "Click",
+        "next": [
+            "ObtainedMailAwards",
+            "BackButton"
+        ]
+    },
+    "NoMailAwards": {
+        "recognition": "TemplateMatch",
+        "template": "template/Awards/NoMailAwards.png",
+        "roi": [
+            952,
+            39,
+            164,
+            163
+        ],
+        "next": [
+            "BackButton"
+        ]
+    },
+    "DailyAwards": {
+        "recognition": "TemplateMatch",
+        "template": "template/Awards/MailAwards.png",
+        "action": "Click",
+        "roi": [
+            44,
+            194,
+            111,
+            110
+        ],
+        "next": [
+            "CollectDailyAwards",
+            "WeeklyAwards",
+            "BackButton"
+        ]
+    },
+    "CollectDailyAwards": {
+        "recognition": "TemplateMatch",
+        "template": "template/Awards/CollectDailyAwards.png",
+        "action": "Click",
+        "roi": [
+            1075,
+            63,
+            201,
+            183
+        ],
+        "next": [
+            "WeeklyAwards"
+        ]
+    },
+    "ObtainedDailyAwards": {
+        "recognition": "TemplateMatch",
+        "template": "template/Awards/ObtainedMailAwards.png",
+        "roi": [
+            524,
+            62,
+            232,
+            158
+        ],
+        "action": "Click",
+        "next": [
+            "ObtainedDailyAwards",
+            "WeeklyAwards"
+        ]
+    },
+    "WeeklyAwards": {
+        "recognition": "TemplateMatch",
+        "template": "template/Awards/WeeklyAwards.png",
+        "action": "Click",
+        "roi": [
+            732,
+            0,
+            133,
+            133
+        ],
+        "next": [
+            "CollectDailyAwards",
+            "BackButton"
+        ]
+    }
+}
