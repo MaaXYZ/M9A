@@ -132,7 +132,6 @@
             364,
             152
         ],
-        "action": "Click",
         "next": [
             "HomeLoading",
             "HomeFlag"
