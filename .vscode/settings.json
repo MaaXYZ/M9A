@@ -1,0 +1,9 @@
+{
+    "[typescript][javascript][json]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.indentSize": "tabSize"
+    }
+}

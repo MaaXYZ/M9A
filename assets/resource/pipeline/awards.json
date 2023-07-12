@@ -25,25 +25,22 @@
         ],
         "action": "Click",
         "next": [
-            "ObtainedMailAwards",
+            "Sub_ObtainedAwards",
             "NoMailAwards",
             "CollectMailAwards"
         ]
     },
-    "ObtainedMailAwards": {
+    "Sub_ObtainedAwards": {
+        "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/Awards/ObtainedMailAwards.png",
+        "template": "template/Awards/ObtainedAwards.png",
         "roi": [
             524,
             62,
             232,
             158
         ],
-        "action": "Click",
-        "next": [
-            "ObtainedMailAwards",
-            "BackButton"
-        ]
+        "action": "Click"
     },
     "NoMailAwards": {
         "recognition": "TemplateMatch",
@@ -55,7 +52,9 @@
             163
         ],
         "next": [
-            "BackButton"
+            "HomeFlag",
+            "Sub_HomeButton",
+            "Sub_BackButton"
         ]
     },
     "DailyAwards": {
@@ -69,12 +68,13 @@
             110
         ],
         "next": [
-            "CollectDailyAwards",
-            "WeeklyAwards",
-            "BackButton"
+            "Sub_CollectDailyAwards",
+            "Sub_ObtainedDailyAwards",
+            "WeeklyAwards"
         ]
     },
-    "CollectDailyAwards": {
+    "Sub_CollectDailyAwards": {
+        "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "template/Awards/CollectDailyAwards.png",
         "action": "Click",
@@ -83,25 +83,19 @@
             63,
             201,
             183
-        ],
-        "next": [
-            "WeeklyAwards"
         ]
     },
-    "ObtainedDailyAwards": {
+    "Sub_ObtainedDailyAwards": {
+        "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/Awards/ObtainedMailAwards.png",
+        "template": "template/Awards/ObtainedAwards.png",
         "roi": [
             524,
             62,
             232,
             158
         ],
-        "action": "Click",
-        "next": [
-            "ObtainedDailyAwards",
-            "WeeklyAwards"
-        ]
+        "action": "Click"
     },
     "WeeklyAwards": {
         "recognition": "TemplateMatch",
@@ -114,8 +108,10 @@
             133
         ],
         "next": [
-            "CollectDailyAwards",
-            "BackButton"
+            "Sub_CollectDailyAwards",
+            "Sub_ObtainedDailyAwards",
+            "Sub_BackButton",
+            "HomeFlag"
         ]
     }
 }

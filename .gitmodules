@@ -1,3 +1,6 @@
 [submodule "MaaFramework"]
 	path = MaaFramework
 	url = https://github.com/MaaAssistantArknights/MaaFramework.git
+[submodule "tools/MaaLang"]
+	path = tools/MaaLang
+	url = https://github.com/MaaAssistantArknights/MaaLang.git

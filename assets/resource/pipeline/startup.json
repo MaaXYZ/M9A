@@ -7,10 +7,10 @@
             "Download",
             "StartGame",
             "CloseAnnouncement",
-            "HomeButton",
-            "BackButton",
             "HomeLoading",
             "HomeFlag",
+            "Sub_HomeButton",
+            "Sub_BackButton",
             "Start1999"
         ]
     },
@@ -147,7 +147,8 @@
             166
         ]
     },
-    "BackButton": {
+    "Sub_BackButton": {
+        "is_sub": true,
         "recognition": "TemplateMatch",
         "template": [
             "template/StartUp/BackButton.png",
@@ -159,14 +160,10 @@
             134,
             138
         ],
-        "action": "Click",
-        "next": [
-            "HomeButton",
-            "BackButton",
-            "HomeFlag"
-        ]
+        "action": "Click"
     },
-    "HomeButton": {
+    "Sub_HomeButton": {
+        "is_sub": true,
         "recognition": "TemplateMatch",
         "template": [
             "template/StartUp/HomeButton.png",
@@ -178,11 +175,7 @@
             144,
             144
         ],
-        "action": "Click",
-        "next": [
-            "HomeButton",
-            "BackButton",
-            "HomeFlag"
-        ]
-    }
+        "action": "Click"
+    },
+    "Stop": {}
 }
