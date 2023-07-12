@@ -7,7 +7,7 @@
             "Download",
             "StartGame",
             "CloseAnnouncement",
-            "HomeLoading",
+            "Sub_HomeLoading",
             "HomeFlag",
             "Sub_HomeButton",
             "Sub_BackButton",
@@ -100,7 +100,7 @@
         ],
         "action": "Click",
         "next": [
-            "HomeLoading",
+            "Sub_HomeLoading",
             "HomeFlag",
             "StartGame",
             "CloseAnnouncement"
@@ -117,13 +117,14 @@
         ],
         "action": "Click",
         "next": [
-            "HomeLoading",
+            "Sub_HomeLoading",
             "HomeFlag",
             "StartGame",
             "CloseAnnouncement"
         ]
     },
-    "HomeLoading": {
+    "Sub_HomeLoading": {
+        "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "template/StartUp/HomeLoading.png",
         "roi": [
@@ -131,10 +132,6 @@
             359,
             364,
             152
-        ],
-        "next": [
-            "HomeLoading",
-            "HomeFlag"
         ]
     },
     "HomeFlag": {

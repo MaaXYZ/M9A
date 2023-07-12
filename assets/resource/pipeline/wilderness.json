@@ -1,0 +1,79 @@
+{
+    "Wilderness": {
+        "next": [
+            "EnterWilderness",
+            "CollectEXP",
+            "CollectMoney",
+            "CollectTrust",
+            "Sub_HomeButton",
+            "Sub_HomeLoading"
+        ]
+    },
+    "EnterWilderness": {
+        "recognition": "TemplateMatch",
+        "template": "template/Wilderness/EnterWilderness.png",
+        "roi": [
+            889,
+            348,
+            242,
+            132
+        ],
+        "action": "Click",
+        "next": [
+            "EnterWilderness",
+            "Sub_HomeLoading",
+            "CollectEXP",
+            "CollectMoney",
+            "CollectTrust"
+        ]
+    },
+    "CollectEXP": {
+        "recognition": "TemplateMatch",
+        "template": "template/Wilderness/CollectEXP.png",
+        "roi": [
+            455,
+            87,
+            139,
+            134
+        ],
+        "action": "Click",
+        "next": [
+            "CollectMoney",
+            "CollectTrust",
+            "Sub_HomeButton",
+            "HomeFlag"
+        ]
+    },
+    "CollectMoney": {
+        "recognition": "TemplateMatch",
+        "template": "template/Wilderness/CollectMoney.png",
+        "roi": [
+            685,
+            34,
+            132,
+            134
+        ],
+        "action": "Click",
+        "next": [
+            "CollectTrust",
+            "Sub_HomeButton",
+            "HomeFlag"
+        ]
+    },
+    "CollectTrust": {
+        "recognition": "TemplateMatch",
+        "template": "template/Wilderness/CollectTrust.png",
+        "roi": [
+            0,
+            131,
+            128,
+            138
+        ],
+        "action": "Click",
+        "next": [
+            "CollectTrust",
+            "Sub_HomeButton",
+            "HomeFlag"
+        ]
+    }
+}
