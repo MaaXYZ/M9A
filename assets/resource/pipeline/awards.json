@@ -100,16 +100,18 @@
     "WeeklyAwards": {
         "recognition": "TemplateMatch",
         "template": "template/Awards/WeeklyAwards.png",
+        "threshold": 0.92,
         "action": "Click",
         "roi": [
-            732,
-            0,
-            133,
-            133
+            992,
+            2,
+            131,
+            125
         ],
         "next": [
             "Sub_CollectDailyAwards",
             "Sub_ObtainedDailyAwards",
+            "WeeklyAwards",
             "Sub_BackButton",
             "HomeFlag"
         ]
