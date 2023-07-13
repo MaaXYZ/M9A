@@ -1,25 +1,24 @@
 {
-    "StartUp": {
+    "Sub_StartUp": {
+        "is_sub": true,
         "next": [
-            "BluePochLogo",
-            "Disclaimer",
-            "GameLoading",
-            "Download",
-            "StartGame",
-            "CloseAnnouncement",
-            "Sub_HomeLoading",
             "HomeFlag",
             "Sub_HomeButton",
             "Sub_BackButton",
-            "Start1999"
+            "Sub_HomeLoading",
+            "StartGame",
+            "CloseAnnouncement",
+            "Download",
+            "GameLoading",
+            "BluePochLogo",
+            "Disclaimer",
+            "Sub_Start1999"
         ]
     },
-    "Start1999": {
+    "Sub_Start1999": {
+        "is_sub": true,
         "action": "StartApp",
-        "package": "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity",
-        "next": [
-            "StartUp"
-        ]
+        "package": "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity"
     },
     "BluePochLogo": {
         "recognition": "TemplateMatch",

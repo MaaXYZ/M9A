@@ -1,0 +1,197 @@
+{
+    "Psychube": {
+        "next": [
+            "EnterTheShow",
+            "ResourceStages",
+            "FreePsychubeStages",
+            "PsychubeStages_7",
+            "Sub_StartUp"
+        ]
+    },
+    "EnterTheShow": {
+        "recognition": "TemplateMatch",
+        "template": "template/Psychube/EnterTheShow.png",
+        "roi": [
+            926,
+            221,
+            229,
+            153
+        ],
+        "action": "Click",
+        "next": [
+            "ResourceStages"
+        ]
+    },
+    "ResourceStages": {
+        "recognition": "TemplateMatch",
+        "template": "template/Psychube/ResourceStages.png",
+        "roi": [
+            218,
+            571,
+            169,
+            149
+        ],
+        "action": "Click",
+        "next": [
+            "FreePsychubeStages",
+            "NoFreePsychubeStagesFlag"
+        ]
+    },
+    "FreePsychubeStages": {
+        "recognition": "TemplateMatch",
+        "template": "template/Psychube/FreePsychubeStages.png",
+        "roi": [
+            180,
+            203,
+            246,
+            306
+        ],
+        "action": "Click",
+        "next": [
+            "PsychubeStages_7",
+            "ReadyForAction"
+        ]
+    },
+    "NoFreePsychubeStagesFlag": {
+        "recognition": "TemplateMatch",
+        "template": "template/Psychube/NoFreePsychubeStagesFlag.png",
+        "roi": [
+            732,
+            210,
+            233,
+            297
+        ],
+        "next": [
+            "HomeFlag",
+            "Sub_StartUp"
+        ]
+    },
+    "PsychubeStages_7": {
+        "recognition": "TemplateMatch",
+        "template": "template/Psychube/PsychubeStages_7.png",
+        "roi": [
+            306,
+            492,
+            271,
+            179
+        ],
+        "action": "Click",
+        "next": [
+            "ReadyForAction",
+            "PsychubeStages_7"
+        ]
+    },
+    "ReadyForAction": {
+        "recognition": "OCR",
+        "text": [
+            "开始行动"
+        ],
+        "roi": [
+            958,
+            537,
+            235,
+            136
+        ],
+        "action": "Click",
+        "next": [
+            "SwitchToReplay",
+            "SetReplaysTimes",
+            "StartReplay"
+        ]
+    },
+    "SwitchToReplay": {
+        "recognition": "TemplateMatch",
+        "template": "template/Psychube/SwitchToReplay.png",
+        "roi": [
+            781,
+            581,
+            145,
+            139
+        ],
+        "action": "Click",
+        "next": [
+            "SetReplaysTimes",
+            "StartReplay"
+        ]
+    },
+    "SetReplaysTimes": {
+        "recognition": "TemplateMatch",
+        "template": "template/Psychube/SetReplaysTimes.png",
+        "roi": [
+            737,
+            586,
+            174,
+            134
+        ],
+        "action": "Click",
+        "next": [
+            "ReplayTwice"
+        ]
+    },
+    "ReplayTwice": {
+        "recognition": "TemplateMatch",
+        "template": "template/Psychube/ReplayTwice.png",
+        "roi": [
+            740,
+            463,
+            168,
+            148
+        ],
+        "action": "Click",
+        "next": [
+            "StartReplay"
+        ]
+    },
+    "StartReplay": {
+        "recognition": "OCR",
+        "text": [
+            "复现"
+        ],
+        "roi": [
+            958,
+            537,
+            235,
+            136
+        ],
+        "action": "Click",
+        "next": [
+            "Replaying"
+        ]
+    },
+    "Replaying": {
+        "recognition": "OCR",
+        "text": [
+            "行为",
+            "复现"
+        ],
+        "roi": [
+            1078,
+            77,
+            202,
+            143
+        ],
+        "post_delay": 5000,
+        "next": [
+            "Replaying",
+            "Victory"
+        ]
+    },
+    "Victory": {
+        "recognition": "OCR",
+        "text": [
+            "战斗",
+            "胜利"
+        ],
+        "roi": [
+            678,
+            10,
+            473,
+            240
+        ],
+        "action": "Click",
+        "next": [
+            "HomeFlag",
+            "Sub_StartUp"
+        ]
+    }
+}

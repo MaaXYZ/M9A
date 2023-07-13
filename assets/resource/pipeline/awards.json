@@ -1,7 +1,17 @@
 {
-    "MailAwards": {
+    "Awards": {
+        "next": [
+            "Sub_MailBadge",
+            "Sub_DailyBadge",
+            "HomeFlag",
+            "Sub_StartUp"
+        ]
+    },
+    "Sub_MailBadge": {
+        "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/Awards/MailAwards.png",
+        "template": "template/Awards/Badge.png",
+        "threshold": 0.9,
         "roi": [
             47,
             115,
@@ -11,7 +21,7 @@
         "action": "Click",
         "next": [
             "CollectMailAwards",
-            "MailAwards"
+            "Sub_MailBadge"
         ]
     },
     "CollectMailAwards": {
@@ -57,9 +67,11 @@
             "Sub_BackButton"
         ]
     },
-    "DailyAwards": {
+    "Sub_DailyBadge": {
+        "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/Awards/MailAwards.png",
+        "template": "template/Awards/Badge.png",
+        "threshold": 0.9,
         "action": "Click",
         "roi": [
             44,

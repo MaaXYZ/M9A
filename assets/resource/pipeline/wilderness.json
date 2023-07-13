@@ -5,8 +5,7 @@
             "CollectEXP",
             "CollectMoney",
             "CollectTrust",
-            "Sub_HomeButton",
-            "Sub_HomeLoading"
+            "Sub_StartUp"
         ]
     },
     "EnterWilderness": {
@@ -21,10 +20,10 @@
         "action": "Click",
         "next": [
             "EnterWilderness",
-            "Sub_HomeLoading",
             "CollectEXP",
             "CollectMoney",
-            "CollectTrust"
+            "CollectTrust",
+            "Sub_HomeLoading"
         ]
     },
     "CollectEXP": {
