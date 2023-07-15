@@ -6,6 +6,8 @@
             "Sub_HomeButton",
             "Sub_BackButton",
             "Sub_HomeLoading",
+            "Sub_ObtainedAwards",
+            "Sub_Reward",
             "StartGame",
             "CloseAnnouncement",
             "Download",
@@ -116,6 +118,9 @@
         ],
         "action": "Click",
         "next": [
+            "Sub_BackButton",
+            "Sub_ObtainedAwards",
+            "Sub_Reward",
             "Sub_HomeLoading",
             "HomeFlag",
             "StartGame",
@@ -173,5 +178,23 @@
         ],
         "action": "Click"
     },
-    "Stop": {}
+    "Stop": {},
+    "Sub_Reward": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "template/StartUp/Reward.png",
+        "roi": [
+            419,
+            90,
+            297,
+            148
+        ],
+        "action": "Click",
+        "target": [
+            0,
+            0,
+            526,
+            590
+        ]
+    }
 }
