@@ -204,8 +204,7 @@ std::string read_adb_config(const std::filesystem::path& cur_dir)
 {
     std::ifstream ifs(cur_dir / "resource" / "controller_config.json", std::ios::in);
     if (!ifs.is_open()) {
-        std::cerr << "Failed to open controller_config.json\n"
-                  << "Please copy sample/cpp/config/controller_config.json to " << cur_dir << std::endl;
+        std::cout << "Can't open controller_config.json" << std::endl;
         exit(1);
     }
 
