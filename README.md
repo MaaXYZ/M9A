@@ -23,7 +23,7 @@
 _只是一个临时的编译方法，因为 MAA 新架构还缺少一块重要拼图 [MaaCommon](https://github.com/MaaAssistantArknights/MaaCommon)（欢迎大佬们来带带），所以先简单糊一下_
 
 1. 更新子模块 `git submodule update --init --recursive`
-2. 下载 MaaFramework 的 [Release 包](https://github.com/MaaAssistantArknights/MAA1999/releases)，解压到 `source\cli\x64\Release`
+2. 下载 MaaFramework 的 [Release 包](https://github.com/MaaAssistantArknights/MaaFramework/releases)，解压到 `source\cli\x64\Release`
 3. 使用 Visual Studio 编译 `source\cli\MAA1999_CLI.sln`
 
 ## Join us
