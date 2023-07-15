@@ -1,0 +1,91 @@
+name: build cli
+
+on:
+  push:
+    tags:
+      - 'v*'
+    paths:
+      - '.github/workflows/ci.yml'
+      - 'source/cli/**'
+  pull_request:
+    paths:
+      - '.github/workflows/ci.yml'
+      - 'source/cli/**'
+  workflow_dispatch:
+
+jobs:
+  meta:
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.set_tag.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v3
+      - id: set_tag
+        run: |
+          echo tag=$(git describe --tags --match "v*" ${{ github.ref }} || git rev-parse --short HEAD) | tee -a $GITHUB_OUTPUT
+
+  windows:
+    needs: meta
+    strategy:
+      matrix:
+        include:
+          - msbuild_target: x64
+            lowercase_target: x64
+        #   - msbuild_target: ARM64
+        #     lowercase_target: arm64
+    env:
+      MAABUILDER_TARGET_PLATFORM: ${{ matrix.msbuild_target }}
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Download MaaFramework
+        uses: robinraju/release-downloader@v1.8
+        with:
+          repository: MaaAssistantArknights/MaaFramework
+          latest: true
+          fileName: "MAA-win-${{ matrix.msbuild_target }}*"
+          out-file-path: "source/cli/${{ matrix.msbuild_target }}/Release"
+          extract: true
+
+      - run: ls -l source/cli/${{ matrix.msbuild_target }}/Release
+
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1
+
+      - name: Build MAA
+        run: |
+          MSBUILD source/cli/MAA1999_CLI.sln /t:rebuild /p:Configuration="Release" /p:Platform="${{ matrix.msbuild_target }}" /m /p:MAA_VERSION="${{ needs.meta.outputs.tag }}"
+
+      - name: Install
+        shell: bash
+        run: |
+          cd source/cli/${{ matrix.msbuild_target }}/Release
+          mkdir -p install
+          cp -r docs include resource MaaAgentBinary *.exe *.dll install
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: MAA1999-win-${{ matrix.msbuild_target }}
+          path: source/cli/${{ matrix.msbuild_target }}/Release/install
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: [meta, windows]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          path: assets
+      - run: |
+          cd assets
+          for f in *; do
+            (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
+          done
+      - uses: softprops/action-gh-release@v1
+        with:
+          files: assets/*
+          tag_name: ${{ needs.meta.outputs.tag }}

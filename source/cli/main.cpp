@@ -187,11 +187,11 @@ void save_config(const std::string& adb, const std::string& adb_address, const s
     config["adb_address_Doc"] = "adb 连接地址，例如 127.0.0.1:5555";
     config["tasks"] = json::array(tasks);
     config["tasks_Doc"] = "要执行的任务，Wilderness, Psychube, Awards";
-    config["touch"] = ctrl_type & MaaAdbControllerType_Touch_Mask;
+    config["touch"] = (ctrl_type & MaaAdbControllerType_Touch_Mask) >> 0;
     config["touch_Doc"] = "点击方式：1: Adb, 2: MiniTouch, 3: MaaTouch";
     // config["key"] = key;
     // config["key_Doc"] = "按键方式：1: Adb, 2: MaaTouch";
-    config["screencap"] = ctrl_type & MaaAdbControllerType_Screencap_Mask;
+    config["screencap"] = (ctrl_type & MaaAdbControllerType_Screencap_Mask) >> 16;
     config["screencap_Doc"] = "截图方式：1: 自动测速, 2: RawByNetcat, 3: RawWithGzip, 4: Encode, 5: EncodeToFile, 6: "
                               "MinicapDirect, 7: MinicapStream";
 
