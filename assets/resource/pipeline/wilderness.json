@@ -72,9 +72,9 @@
         "template": "template/Wilderness/CollectTrust.png",
         "roi": [
             0,
-            131,
-            128,
-            138
+            58,
+            188,
+            438
         ],
         "action": "Click",
         "next": [
