@@ -5,6 +5,8 @@
             "CollectEXP",
             "CollectMoney",
             "CollectTrust",
+            "TrustDialogueNext",
+            "TrustDialogueInteraction",
             "Sub_StartUp"
         ]
     },
@@ -23,6 +25,8 @@
             "CollectEXP",
             "CollectMoney",
             "CollectTrust",
+            "TrustDialogueNext",
+            "TrustDialogueInteraction",
             "Sub_HomeLoading"
         ]
     },
@@ -40,6 +44,8 @@
         "next": [
             "CollectMoney",
             "CollectTrust",
+            "TrustDialogueNext",
+            "TrustDialogueInteraction",
             "Sub_HomeButton",
             "HomeFlag"
         ]
@@ -57,6 +63,8 @@
         "post_wait_freezes": 1,
         "next": [
             "CollectTrust",
+            "TrustDialogueNext",
+            "TrustDialogueInteraction",
             "Sub_HomeButton",
             "HomeFlag"
         ]
@@ -66,13 +74,49 @@
         "template": "template/Wilderness/CollectTrust.png",
         "roi": [
             0,
-            131,
-            128,
-            138
+            58,
+            188,
+            438
         ],
         "action": "Click",
         "next": [
             "CollectTrust",
+            "TrustDialogueNext",
+            "TrustDialogueInteraction",
+            "Sub_HomeButton",
+            "HomeFlag"
+        ]
+    },
+    "TrustDialogueNext": {
+        "recognition": "TemplateMatch",
+        "template": "template/Wilderness/TrustDialogueNext.png",
+        "roi": [
+            1119,
+            631,
+            124,
+            89
+        ],
+        "action": "Click",
+        "next": [
+            "TrustDialogueNext",
+            "TrustDialogueInteraction",
+            "Sub_HomeButton",
+            "HomeFlag"
+        ]
+    },
+    "TrustDialogueInteraction": {
+        "recognition": "TemplateMatch",
+        "template": "template/Wilderness/TrustDialogueInteraction.png",
+        "roi": [
+            1095,
+            42,
+            185,
+            593
+        ],
+        "action": "Click",
+        "next": [
+            "TrustDialogueNext",
+            "TrustDialogueInteraction",
             "Sub_HomeButton",
             "HomeFlag"
         ]
