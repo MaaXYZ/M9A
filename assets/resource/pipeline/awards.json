@@ -4,6 +4,7 @@
             "Sub_MailBadge",
             "Sub_DailyBadge",
             "HomeFlag",
+            "Sub_ObtainedAwards",
             "Sub_StartUp"
         ]
     },
@@ -90,6 +91,7 @@
         "recognition": "TemplateMatch",
         "template": "template/Awards/CollectDailyAwards.png",
         "action": "Click",
+        "post_wait_freezes": 1,
         "roi": [
             1075,
             63,

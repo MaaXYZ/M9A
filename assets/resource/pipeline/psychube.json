@@ -191,6 +191,7 @@
         "action": "Click",
         "next": [
             "HomeFlag",
+            "Victory",
             "Sub_StartUp"
         ]
     }

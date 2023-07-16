@@ -36,6 +36,7 @@
             134
         ],
         "action": "Click",
+        "post_wait_freezes": 1,
         "next": [
             "CollectMoney",
             "CollectTrust",
@@ -53,6 +54,7 @@
             134
         ],
         "action": "Click",
+        "post_wait_freezes": 1,
         "next": [
             "CollectTrust",
             "Sub_HomeButton",
