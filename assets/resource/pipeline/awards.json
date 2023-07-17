@@ -11,7 +11,7 @@
     "Sub_MailBadge": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/Awards/Badge.png",
+        "template": "template/Awards/MailBadge.png",
         "threshold": 0.98,
         "roi": [
             47,
@@ -71,7 +71,7 @@
     "Sub_DailyBadge": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/Awards/Badge.png",
+        "template": "template/Awards/DailyBadge.png",
         "threshold": 0.98,
         "action": "Click",
         "roi": [
@@ -89,7 +89,10 @@
     "Sub_CollectDailyAwards": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/Awards/CollectDailyAwards.png",
+        "template": [
+            "template/Awards/CollectDailyAwards.png",
+            "template/Awards/CollectSingleDailyAwards.png"
+        ],
         "action": "Click",
         "post_wait_freezes": 1,
         "roi": [
