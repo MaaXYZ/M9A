@@ -117,6 +117,7 @@
     "SetReplaysTimes": {
         "recognition": "TemplateMatch",
         "template": "template/Psychube/SetReplaysTimes.png",
+        "threshold": 0.8,
         "roi": [
             737,
             586,
@@ -125,7 +126,8 @@
         ],
         "action": "Click",
         "next": [
-            "ReplayTwice"
+            "ReplayTwice",
+            "SetReplaysTimes"
         ]
     },
     "ReplayTwice": {
@@ -139,6 +141,7 @@
         ],
         "action": "Click",
         "next": [
+            "ReplayTwice",
             "StartReplay"
         ]
     },
