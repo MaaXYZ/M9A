@@ -71,7 +71,7 @@ jobs:
       - name: Install
         shell: bash
         run: |
-          python3 tools/update_resource_version.py assets/resource/properties.json ${{ needs.meta.outputs.tag }}
+          python3 .github/update_resource_version.py assets/resource/properties.json ${{ needs.meta.outputs.tag }}
           cd source/cli/${{ matrix.msbuild_target }}/Release
           mkdir -p install
           cp -r docs include resource MaaAgentBinary *.exe *.dll install
