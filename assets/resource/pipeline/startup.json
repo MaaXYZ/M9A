@@ -13,7 +13,10 @@
             "Download",
             "GameLoading",
             "BluePochLogo",
-            "Disclaimer",
+            "Disclaimer"
+        ],
+        "timeout": 5000,
+        "timeout_next": [
             "Sub_Start1999"
         ]
     },

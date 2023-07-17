@@ -12,7 +12,7 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "template/Awards/Badge.png",
-        "threshold": 0.9,
+        "threshold": 0.98,
         "roi": [
             47,
             115,
@@ -72,7 +72,7 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "template/Awards/Badge.png",
-        "threshold": 0.9,
+        "threshold": 0.98,
         "action": "Click",
         "roi": [
             44,
@@ -83,7 +83,7 @@
         "next": [
             "Sub_CollectDailyAwards",
             "Sub_ObtainedDailyAwards",
-            "WeeklyAwards"
+            "WeeklyAwardsBadge"
         ]
     },
     "Sub_CollectDailyAwards": {
@@ -111,21 +111,21 @@
         ],
         "action": "Click"
     },
-    "WeeklyAwards": {
+    "WeeklyAwardsBadge": {
         "recognition": "TemplateMatch",
-        "template": "template/Awards/WeeklyAwards.png",
-        "threshold": 0.92,
+        "template": "template/Awards/WeeklyAwardsBadge.png",
+        "threshold": 0.98,
         "action": "Click",
         "roi": [
-            992,
-            2,
-            131,
-            125
+            1165,
+            0,
+            111,
+            113
         ],
         "next": [
             "Sub_CollectDailyAwards",
             "Sub_ObtainedDailyAwards",
-            "WeeklyAwards",
+            "WeeklyAwardsBadge",
             "Sub_BackButton",
             "HomeFlag"
         ]
