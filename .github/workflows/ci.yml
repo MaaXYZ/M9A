@@ -50,6 +50,11 @@ jobs:
         with:
           submodules: true
 
+      - name: Update resource version
+        run: |
+          python3 .github/update_resource_version.py assets/resource/properties.json ${{ needs.meta.outputs.tag }}
+          
+
       - name: Download MaaFramework
         uses: robinraju/release-downloader@v1.8
         with:
@@ -71,7 +76,6 @@ jobs:
       - name: Install
         shell: bash
         run: |
-          python3 .github/update_resource_version.py assets/resource/properties.json ${{ needs.meta.outputs.tag }}
           cd source/cli/${{ matrix.msbuild_target }}/Release
           mkdir -p install
           cp -r docs include resource MaaAgentBinary *.exe *.dll install
