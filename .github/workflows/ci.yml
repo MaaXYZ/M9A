@@ -4,13 +4,21 @@ on:
   push:
     tags:
       - 'v*'
+    branches:
+      - '**'
     paths:
       - '.github/workflows/ci.yml'
       - 'source/cli/**'
+      - 'MaaFramework/**'
+      - 'assets/**'
   pull_request:
+    branches:
+      - '**'
     paths:
       - '.github/workflows/ci.yml'
       - 'source/cli/**'
+      - 'MaaFramework/**'
+      - 'assets/**'
   workflow_dispatch:
 
 jobs:
