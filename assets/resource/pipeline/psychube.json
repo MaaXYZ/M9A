@@ -1,14 +1,14 @@
 {
     "Psychube": {
         "next": [
-            "EnterTheShow",
-            "ResourceStages",
+            "PsychubeEnterTheShow",
+            "PsychubeResourceStages",
             "FreePsychubeStages",
             "PsychubeStages_7",
             "Sub_StartUp"
         ]
     },
-    "EnterTheShow": {
+    "PsychubeEnterTheShow": {
         "recognition": "TemplateMatch",
         "template": "template/Psychube/EnterTheShow.png",
         "roi": [
@@ -19,10 +19,10 @@
         ],
         "action": "Click",
         "next": [
-            "ResourceStages"
+            "PsychubeResourceStages"
         ]
     },
-    "ResourceStages": {
+    "PsychubeResourceStages": {
         "recognition": "TemplateMatch",
         "template": "template/Psychube/ResourceStages.png",
         "roi": [
@@ -49,7 +49,7 @@
         "action": "Click",
         "next": [
             "PsychubeStages_7",
-            "ReadyForAction"
+            "PsychubeReadyForAction"
         ]
     },
     "NoFreePsychubeStagesFlag": {
@@ -77,11 +77,11 @@
         ],
         "action": "Click",
         "next": [
-            "ReadyForAction",
+            "PsychubeReadyForAction",
             "PsychubeStages_7"
         ]
     },
-    "ReadyForAction": {
+    "PsychubeReadyForAction": {
         "recognition": "OCR",
         "text": [
             "开始行动"
@@ -94,12 +94,12 @@
         ],
         "action": "Click",
         "next": [
-            "SwitchToReplay",
-            "SetReplaysTimes",
+            "PsychubeSwitchToReplay",
+            "PsychubeSetReplaysTimes",
             "StartReplay"
         ]
     },
-    "SwitchToReplay": {
+    "PsychubeSwitchToReplay": {
         "recognition": "TemplateMatch",
         "template": "template/Psychube/SwitchToReplay.png",
         "roi": [
@@ -110,11 +110,11 @@
         ],
         "action": "Click",
         "next": [
-            "SetReplaysTimes",
+            "PsychubeSetReplaysTimes",
             "StartReplay"
         ]
     },
-    "SetReplaysTimes": {
+    "PsychubeSetReplaysTimes": {
         "recognition": "TemplateMatch",
         "template": "template/Psychube/SetReplaysTimes.png",
         "threshold": 0.8,
@@ -126,11 +126,11 @@
         ],
         "action": "Click",
         "next": [
-            "ReplayTwice",
-            "SetReplaysTimes"
+            "PsychubeReplayTwice",
+            "PsychubeSetReplaysTimes"
         ]
     },
-    "ReplayTwice": {
+    "PsychubeReplayTwice": {
         "recognition": "TemplateMatch",
         "template": "template/Psychube/ReplayTwice.png",
         "roi": [
@@ -141,7 +141,7 @@
         ],
         "action": "Click",
         "next": [
-            "ReplayTwice",
+            "PsychubeReplayTwice",
             "StartReplay"
         ]
     },
@@ -158,7 +158,8 @@
         ],
         "action": "Click",
         "next": [
-            "Replaying"
+            "Replaying",
+            "StartReplay"
         ]
     },
     "Replaying": {
@@ -193,8 +194,8 @@
         ],
         "action": "Click",
         "next": [
-            "HomeFlag",
             "Victory",
+            "HomeFlag",
             "Sub_StartUp"
         ]
     }
