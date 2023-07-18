@@ -8,7 +8,7 @@
 - [x] 自动收菜  
   最基本的了，没啥好说的。目前已支持 签到 + 收荒原 + 每日心相 + 领邮件和日常。
 - [ ] 关卡掉落识别  
-  有佬在搓类似企鹅的东西了：[圣洛夫数据部](https://github.com/St-Pavlov-Data-Department)，欢迎加入！
+  有佬在搓类似企鹅的站点了：[圣洛夫数据部](https://github.com/St-Pavlov-Data-Department)，欢迎加入！
 - [ ] 仓库识别 + 材料需求计算 + 关卡导航  
   粥 MAA 没完成的事情，就由我 韭 MAA 来完成（bushi
 - [ ] 自动战斗  
