@@ -7,6 +7,7 @@
             "Sub_BackButton",
             "Sub_HomeLoading",
             "Sub_ObtainedAwards",
+            "Sub_AccumulatedSignIn",
             "Sub_Reward",
             "StartGame",
             "CloseAnnouncement",
@@ -123,6 +124,7 @@
         "next": [
             "Sub_BackButton",
             "Sub_ObtainedAwards",
+            "Sub_AccumulatedSignIn",
             "Sub_Reward",
             "Sub_HomeLoading",
             "HomeFlag",
@@ -199,5 +201,17 @@
             526,
             590
         ]
+    },
+    "Sub_AccumulatedSignIn": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "template/StartUp/AccumulatedSignIn.png",
+        "roi":[
+            562,
+            483,
+            347,
+            163
+        ],
+        "action": "Click"
     }
 }
