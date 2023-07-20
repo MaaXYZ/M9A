@@ -144,59 +144,5 @@
             "PsychubeReplayTwice",
             "StartReplay"
         ]
-    },
-    "StartReplay": {
-        "recognition": "OCR",
-        "text": [
-            "复现"
-        ],
-        "roi": [
-            958,
-            537,
-            235,
-            136
-        ],
-        "action": "Click",
-        "next": [
-            "Replaying",
-            "StartReplay"
-        ]
-    },
-    "Replaying": {
-        "recognition": "OCR",
-        "text": [
-            "行为",
-            "复现"
-        ],
-        "roi": [
-            1078,
-            77,
-            202,
-            143
-        ],
-        "post_delay": 5000,
-        "next": [
-            "Replaying",
-            "Victory"
-        ]
-    },
-    "Victory": {
-        "recognition": "OCR",
-        "text": [
-            "战斗",
-            "胜利"
-        ],
-        "roi": [
-            678,
-            10,
-            473,
-            240
-        ],
-        "action": "Click",
-        "next": [
-            "Victory",
-            "HomeFlag",
-            "Sub_StartUp"
-        ]
     }
 }

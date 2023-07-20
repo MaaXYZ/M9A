@@ -1,1 +1,268 @@
-{}
+{
+    "Combat": {
+        "next": [
+            "EnterTheShow",
+            "Sub_StartUp"
+        ]
+    },
+    "EnterTheShow": {
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/EnterTheShow.png",
+        "roi": [
+            926,
+            221,
+            229,
+            153
+        ],
+        "action": "Click",
+        "next_doc": "Set in code."
+    },
+    "MainChapter_1": {
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/MainChapter_1.png",
+        "roi": [
+            60,
+            98,
+            318,
+            455
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "MainChapter_2": {
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/MainChapter_2.png",
+        "roi": [
+            340,
+            99,
+            310,
+            452
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "MainChapter_3": {
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/MainChapter_3.png",
+        "roi": [
+            618,
+            98,
+            313,
+            455
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "MainChapter_4": {
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/MainChapter_4.png",
+        "roi": [
+            897,
+            108,
+            316,
+            444
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "SwipeLeftAndFindStage": {
+        "next": [
+            "TargetStageName",
+            "TheFarLeftOfStageList",
+            "SwipeLeftForStageList"
+        ]
+    },
+    "TargetStageName": {
+        "recognition": "OCR",
+        "text_doc": "Set in code.",
+        "roi": [
+            0,
+            470,
+            1280,
+            160
+        ],
+        "action": "Click",
+        "next": [
+            "StageDifficulty"
+        ]
+    },
+    "TheFarLeftOfStageList": {
+        "recognition": "OCR",
+        "text": "01",
+        "roi": [
+            0,
+            470,
+            1280,
+            160
+        ],
+        "next": [
+            "Combat"
+        ]
+    },
+    "SwipeLeftForStageList": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            550,
+            100,
+            50
+        ],
+        "end": [
+            1100,
+            550,
+            100,
+            50
+        ],
+        "next": [
+            "SwipeLeftAndFindStage"
+        ]
+    },
+    "StageDifficulty": {
+        "next_doc": "Set in code."
+    },
+    "StageDifficulty_Story": {
+        "recognition": "OCR",
+        "text": [
+            "故事"
+        ],
+        "roi": [
+            837,
+            167,
+            443,
+            194
+        ],
+        "action": "Click",
+        "next": [
+            "ReadyForAction"
+        ]
+    },
+    "StageDifficulty_Hard": {
+        "recognition": "OCR",
+        "text": [
+            "厄险"
+        ],
+        "roi": [
+            837,
+            167,
+            443,
+            194
+        ],
+        "action": "Click",
+        "next": [
+            "ReadyForAction"
+        ]
+    },
+    "ReadyForAction": {
+        "recognition": "OCR",
+        "text": [
+            "开始行动"
+        ],
+        "roi": [
+            900,
+            500,
+            380,
+            220
+        ],
+        "action": "Click",
+        "next": [
+            "SwitchToReplay",
+            "OpenReplaysTimes"
+        ]
+    },
+    "SwitchToReplay": {
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/SwitchToReplay.png",
+        "roi": [
+            781,
+            581,
+            145,
+            139
+        ],
+        "action": "Click",
+        "next": [
+            "OpenReplaysTimes"
+        ]
+    },
+    "OpenReplaysTimes": {
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/OpenReplaysTimes.png",
+        "roi": [
+            737,
+            586,
+            174,
+            134
+        ],
+        "action": "Click",
+        "next": [
+            "SetReplaysTimes"
+        ]
+    },
+    "SetReplaysTimes": {
+        "recognition": "OCR",
+        "text_doc": "Set in code.",
+        "roi": [
+            791,
+            391,
+            73,
+            238
+        ],
+        "action": "Click",
+        "next": [
+            "StartReplay"
+        ]
+    },
+    "StartReplay": {
+        "recognition": "OCR",
+        "text": [
+            "复现"
+        ],
+        "roi": [
+            958,
+            537,
+            235,
+            136
+        ],
+        "action": "Click",
+        "next": [
+            "Replaying",
+            "StartReplay"
+        ]
+    },
+    "Replaying": {
+        "recognition": "OCR",
+        "text": [
+            "行为",
+            "复现"
+        ],
+        "roi": [
+            1078,
+            77,
+            202,
+            143
+        ],
+        "post_delay": 5000,
+        "next": [
+            "Replaying",
+            "Victory"
+        ]
+    },
+    "Victory": {
+        "recognition": "OCR",
+        "text": [
+            "战斗",
+            "胜利"
+        ],
+        "roi": [
+            678,
+            10,
+            473,
+            240
+        ],
+        "action": "Click",
+        "next": [
+            "Victory",
+            "HomeFlag",
+            "Sub_StartUp"
+        ]
+    }
+}
