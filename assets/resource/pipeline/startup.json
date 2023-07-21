@@ -8,6 +8,7 @@
             "Sub_HomeLoading",
             "Sub_ObtainedAwards",
             "Sub_AccumulatedSignIn",
+            "Sub_BirthdayReward",
             "Sub_Reward",
             "StartGame",
             "CloseAnnouncement",
@@ -125,6 +126,7 @@
             "Sub_BackButton",
             "Sub_ObtainedAwards",
             "Sub_AccumulatedSignIn",
+            "Sub_BirthdayReward",
             "Sub_Reward",
             "Sub_HomeLoading",
             "HomeFlag",
@@ -211,6 +213,18 @@
             483,
             347,
             163
+        ],
+        "action": "Click"
+    },
+    "Sub_BirthdayReward": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "template/StartUp/BirthdayReward.png",
+        "roi": [
+            803,
+            273,
+            121,
+            121
         ],
         "action": "Click"
     }
