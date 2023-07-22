@@ -69,6 +69,7 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "template/Combat/ResourceChapterLabel.png",
+        "threshold": 0.98,
         "roi": [
             230,
             577,
@@ -87,6 +88,7 @@
     "ResourceChapter_LPEnter": {
         "recognition": "TemplateMatch",
         "template": "template/Combat/ResourceChapter_LPEnter.png",
+        "threshold": 0.9,
         "roi": [
             0,
             153,
@@ -101,12 +103,13 @@
         "next": [
             "ResourceChapter_MAEnter",
             "Sub_ResourceChapterLabel",
-            "Sub_SwipeLeftForChapter"
+            "Sub_SwipeRightForChapter"
         ]
     },
     "ResourceChapter_MAEnter": {
         "recognition": "TemplateMatch",
         "template": "template/Combat/ResourceChapter_MAEnter.png",
+        "threshold": 0.9,
         "roi": [
             0,
             153,
@@ -121,12 +124,13 @@
         "next": [
             "ResourceChapter_HPEnter",
             "Sub_ResourceChapterLabel",
-            "Sub_SwipeLeftForChapter"
+            "Sub_SwipeRightForChapter"
         ]
     },
     "ResourceChapter_HPEnter": {
         "recognition": "TemplateMatch",
         "template": "template/Combat/ResourceChapter_HPEnter.png",
+        "threshold": 0.9,
         "roi": [
             0,
             153,
@@ -140,6 +144,7 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "template/Combat/PromotionChapterLabel.png",
+        "threshold": 0.98,
         "roi": [
             388,
             578,
@@ -158,6 +163,7 @@
     "PromotionChapter_MEEnter": {
         "recognition": "TemplateMatch",
         "template": "template/Combat/PromotionChapter_MEEnter.png",
+        "threshold": 0.9,
         "roi": [
             0,
             153,
@@ -177,6 +183,7 @@
     "PromotionChapter_SLEnter": {
         "recognition": "TemplateMatch",
         "template": "template/Combat/PromotionChapter_SLEnter.png",
+        "threshold": 0.9,
         "roi": [
             0,
             153,
@@ -191,12 +198,13 @@
         "next": [
             "PromotionChapter_SSEnter",
             "Sub_PromotionChapterLabel",
-            "Sub_SwipeLeftForChapter"
+            "Sub_SwipeRightForChapter"
         ]
     },
     "PromotionChapter_SSEnter": {
         "recognition": "TemplateMatch",
         "template": "template/Combat/PromotionChapter_SSEnter.png",
+        "threshold": 0.9,
         "roi": [
             0,
             153,
@@ -207,16 +215,17 @@
         "next": "SwipeLeftAndFindStage"
     },
     "PromotionChapter_BW": {
-        "doc": "荒野之兽",
+        "doc": "荒兽之野",
         "next": [
             "PromotionChapter_BWEnter",
             "Sub_PromotionChapterLabel",
-            "Sub_SwipeLeftForChapter"
+            "Sub_SwipeRightForChapter"
         ]
     },
     "PromotionChapter_BWEnter": {
         "recognition": "TemplateMatch",
         "template": "template/Combat/PromotionChapter_BWEnter.png",
+        "threshold": 0.9,
         "roi": [
             0,
             153,
@@ -226,17 +235,17 @@
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
     },
-    "Sub_SwipeLeftForChapter": {
+    "Sub_SwipeRightForChapter": {
         "is_sub": true,
         "action": "Swipe",
         "begin": [
-            100,
+            1100,
             300,
             100,
             100
         ],
         "end": [
-            1100,
+            100,
             300,
             100,
             100
@@ -408,7 +417,27 @@
         "action": "Click",
         "next": [
             "Replaying",
-            "StartReplay"
+            "StartReplay",
+            "RecoveryPage"
+        ]
+    },
+    "RecoveryPage": {
+        "recognition": "OCR",
+        "text": [
+            "活性",
+            "恢复"
+        ],
+        "roi": [
+            465,
+            571,
+            277,
+            149
+        ],
+        "action": "Click",
+        "target": "StartReplay",
+        "next": [
+            "HomeFlag",
+            "Sub_StartUp"
         ]
     },
     "Replaying": {
