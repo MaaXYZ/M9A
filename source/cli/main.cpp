@@ -111,7 +111,7 @@ void print_help()
 欢迎大佬来给我们搓个 GUI _(:з」∠)_
 
 v0.2.0
-新增了全关卡导航支持，引导只加了几个常用的，有其他需求可以改改 config，复现次数也在 config 里改
+新增了全关卡导航支持，但还不会吃糖。引导只加了几个常用的关卡，有其他需求可以改改 config，复现次数也在 config 里改
 
 )") << std::endl;
 }
@@ -191,7 +191,37 @@ json::value combat_param(int index)
         difficulty = "StageDifficulty_None";
         times = "1";
         break;
+
+    case 13:
+        //"13. 群山之声 06（洞悉 岩）\n"
+        chapter = "PromotionChapter_ME";
+        stage = "06";
+        difficulty = "StageDifficulty_None";
+        times = "1";
+        break;
+    case 14:
+        //"14. 星陨之所 06（洞悉 星）\n"
+        chapter = "PromotionChapter_SL";
+        stage = "06";
+        difficulty = "StageDifficulty_None";
+        times = "1";
+        break;
+    case 15:
+        //"15. 深林之形 06（洞悉 林）\n"
+        chapter = "PromotionChapter_SS";
+        stage = "06";
+        difficulty = "StageDifficulty_None";
+        times = "1";
+        break;
+    case 16:
+        //"16. 荒兽之野 06（洞悉 兽）\n"
+        chapter = "PromotionChapter_BW";
+        stage = "06";
+        difficulty = "StageDifficulty_None";
+        times = "1";
+        break;
     }
+
     return param;
 }
 
@@ -254,7 +284,11 @@ bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address
                                             "9. 3-11 厄险（金爪灵摆）\n"
                                             "10. 尘埃运动 06\n"
                                             "11. 猪鼻美学 06\n"
-                                            "12. 丰收时令 04\n")
+                                            "12. 丰收时令 04\n"
+                                            "13. 群山之声 06（洞悉 岩）\n"
+                                            "14. 星陨之所 06（洞悉 星）\n"
+                                            "15. 深林之形 06（洞悉 林）\n"
+                                            "16. 荒兽之野 06（洞悉 兽）\n")
                   << std::endl
                   << std::endl
                   << MAA_NS::utf8_to_stdout("请输入要执行的任务序号，可自定义顺序，以空格分隔，例如 1 3 11 2: ")
@@ -280,10 +314,11 @@ bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address
                 task_obj.type = "Wilderness";
                 break;
             case 2:
-                task_obj.type = "Psychube";
-                break;
-            case 3:
                 task_obj.type = "Awards";
+                break;
+
+            case 3:
+                task_obj.type = "Psychube";
                 break;
 
             case 4:
@@ -295,6 +330,10 @@ bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address
             case 10:
             case 11:
             case 12:
+            case 13:
+            case 14:
+            case 15:
+            case 16:
                 task_obj.type = "Combat";
                 task_obj.param = combat_param(id);
                 break;
