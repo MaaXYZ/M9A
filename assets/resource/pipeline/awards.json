@@ -83,7 +83,8 @@
         "next": [
             "Sub_CollectDailyAwards",
             "Sub_ObtainedDailyAwards",
-            "WeeklyAwardsBadge"
+            "WeeklyAwardsBadge",
+            "DailyAwardsPageFlag"
         ]
     },
     "Sub_CollectDailyAwards": {
@@ -131,6 +132,16 @@
             "WeeklyAwardsBadge",
             "Sub_BackButton",
             "HomeFlag"
+        ]
+    },
+    "DailyAwardsPageFlag": {
+        "recognition": "TemplateMatch",
+        "template": "template/Awards/DailyAwardsPageFlag.png",
+        "roi": [
+            458,
+            0,
+            138,
+            136
         ]
     }
 }

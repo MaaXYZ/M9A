@@ -15,15 +15,11 @@
             "Download",
             "GameLoading",
             "BluePochLogo",
-            "Disclaimer"
-        ],
-        "timeout": 5000,
-        "timeout_next": [
-            "Sub_Start1999"
+            "Disclaimer",
+            "Stop"
         ]
     },
-    "Sub_Start1999": {
-        "is_sub": true,
+    "Start1999": {
         "action": "StartApp",
         "package": "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity"
     },

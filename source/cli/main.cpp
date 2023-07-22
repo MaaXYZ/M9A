@@ -79,10 +79,11 @@ int main(int argc, char** argv)
 
     save_config(adb, adb_address, tasks, control_type);
 
+    MaaTaskId task_id = 0;
     for (const std::string& task : tasks) {
-        auto task_id = MaaPostTask(maa_handle, task.c_str(), MaaTaskParam_Empty);
-        MaaTaskWait(maa_handle, task_id);
+        task_id = MaaPostTask(maa_handle, task.c_str(), MaaTaskParam_Empty);
     }
+    MaaTaskWait(maa_handle, task_id);
 
     destroy();
 
@@ -108,6 +109,8 @@ bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address
     int touch = 1;
     int key = 1;
     int screencap = 3;
+
+    tasks.clear();
 
     if (argc >= 3) {
         adb = argv[1];
@@ -154,6 +157,9 @@ bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address
         while (iss >> task_id) {
             task_ids.emplace_back(task_id);
         }
+
+        tasks = { "Start1999" };
+
         for (auto id : task_ids) {
             switch (id) {
             case 1:
@@ -186,7 +192,7 @@ void save_config(const std::string& adb, const std::string& adb_address, const s
     config["adb_address"] = adb_address;
     config["adb_address_Doc"] = "adb 连接地址，例如 127.0.0.1:5555";
     config["tasks"] = json::array(tasks);
-    config["tasks_Doc"] = "要执行的任务，Wilderness, Psychube, Awards";
+    config["tasks_Doc"] = "要执行的任务 Start1999, Wilderness, Psychube, Awards";
     config["touch"] = (ctrl_type & MaaAdbControllerType_Touch_Mask) >> 0;
     config["touch_Doc"] = "点击方式：1: Adb, 2: MiniTouch, 3: MaaTouch";
     // config["key"] = key;
