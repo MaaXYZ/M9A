@@ -159,10 +159,10 @@
         "recognition": "TemplateMatch",
         "template": "template/Combat/PromotionChapter_MEEnter.png",
         "roi": [
-            230,
-            577,
-            145,
-            142
+            0,
+            153,
+            1280,
+            367
         ],
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
@@ -178,10 +178,10 @@
         "recognition": "TemplateMatch",
         "template": "template/Combat/PromotionChapter_SLEnter.png",
         "roi": [
-            230,
-            577,
-            145,
-            142
+            0,
+            153,
+            1280,
+            367
         ],
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
@@ -198,10 +198,10 @@
         "recognition": "TemplateMatch",
         "template": "template/Combat/PromotionChapter_SSEnter.png",
         "roi": [
-            230,
-            577,
-            145,
-            142
+            0,
+            153,
+            1280,
+            367
         ],
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
@@ -218,10 +218,10 @@
         "recognition": "TemplateMatch",
         "template": "template/Combat/PromotionChapter_BWEnter.png",
         "roi": [
-            230,
-            577,
-            145,
-            142
+            0,
+            153,
+            1280,
+            367
         ],
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
@@ -325,6 +325,11 @@
             194
         ],
         "action": "Click",
+        "next": [
+            "ReadyForAction"
+        ]
+    },
+    "StageDifficulty_None": {
         "next": [
             "ReadyForAction"
         ]
