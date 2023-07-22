@@ -65,6 +65,183 @@
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
     },
+    "Sub_ResourceChapterLabel": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/ResourceChapterLabel.png",
+        "roi": [
+            230,
+            577,
+            145,
+            142
+        ],
+        "action": "Click"
+    },
+    "ResourceChapter_LP": {
+        "doc": "尘埃运动",
+        "next": [
+            "ResourceChapter_LPEnter",
+            "Sub_ResourceChapterLabel"
+        ]
+    },
+    "ResourceChapter_LPEnter": {
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/ResourceChapter_LPEnter.png",
+        "roi": [
+            0,
+            153,
+            1280,
+            367
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "ResourceChapter_MA": {
+        "doc": "猪鼻美学",
+        "next": [
+            "ResourceChapter_MAEnter",
+            "Sub_ResourceChapterLabel",
+            "Sub_SwipeLeftForChapter"
+        ]
+    },
+    "ResourceChapter_MAEnter": {
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/ResourceChapter_MAEnter.png",
+        "roi": [
+            0,
+            153,
+            1280,
+            367
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "ResourceChapter_HP": {
+        "doc": "丰收时令",
+        "next": [
+            "ResourceChapter_HPEnter",
+            "Sub_ResourceChapterLabel",
+            "Sub_SwipeLeftForChapter"
+        ]
+    },
+    "ResourceChapter_HPEnter": {
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/ResourceChapter_HPEnter.png",
+        "roi": [
+            0,
+            153,
+            1280,
+            367
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "Sub_PromotionChapterLabel": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/PromotionChapterLabel.png",
+        "roi": [
+            388,
+            578,
+            157,
+            133
+        ],
+        "action": "Click"
+    },
+    "PromotionChapter_ME": {
+        "doc": "群山之声",
+        "next": [
+            "PromotionChapter_MEEnter",
+            "Sub_PromotionChapterLabel"
+        ]
+    },
+    "PromotionChapter_MEEnter": {
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/PromotionChapter_MEEnter.png",
+        "roi": [
+            230,
+            577,
+            145,
+            142
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "PromotionChapter_SL": {
+        "doc": "星陨之所",
+        "next": [
+            "PromotionChapter_SLEnter",
+            "Sub_PromotionChapterLabel"
+        ]
+    },
+    "PromotionChapter_SLEnter": {
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/PromotionChapter_SLEnter.png",
+        "roi": [
+            230,
+            577,
+            145,
+            142
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "PromotionChapter_SS": {
+        "doc": "深林之形",
+        "next": [
+            "PromotionChapter_SSEnter",
+            "Sub_PromotionChapterLabel",
+            "Sub_SwipeLeftForChapter"
+        ]
+    },
+    "PromotionChapter_SSEnter": {
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/PromotionChapter_SSEnter.png",
+        "roi": [
+            230,
+            577,
+            145,
+            142
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "PromotionChapter_BW": {
+        "doc": "荒野之兽",
+        "next": [
+            "PromotionChapter_BWEnter",
+            "Sub_PromotionChapterLabel",
+            "Sub_SwipeLeftForChapter"
+        ]
+    },
+    "PromotionChapter_BWEnter": {
+        "recognition": "TemplateMatch",
+        "template": "template/Combat/PromotionChapter_BWEnter.png",
+        "roi": [
+            230,
+            577,
+            145,
+            142
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "Sub_SwipeLeftForChapter": {
+        "is_sub": true,
+        "action": "Swipe",
+        "begin": [
+            100,
+            300,
+            100,
+            100
+        ],
+        "end": [
+            1100,
+            300,
+            100,
+            100
+        ]
+    },
     "SwipeLeftAndFindStage": {
         "next": [
             "TargetStageName",
@@ -194,7 +371,8 @@
         ],
         "action": "Click",
         "next": [
-            "SetReplaysTimes"
+            "SetReplaysTimes",
+            "StartReplay"
         ]
     },
     "SetReplaysTimes": {
