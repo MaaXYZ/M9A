@@ -8,10 +8,19 @@
 #include <iostream>
 #include <string>
 
+struct Task
+{
+    std::string name;
+    std::string type;
+    json::value param = json::object();
+};
+
+using TaskList = std::vector<Task>;
+
 void print_help();
-bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address, std::vector<std::string>& tasks,
+bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address, TaskList& tasks,
                MaaAdbControllerType& ctrl_type);
-void save_config(const std::string& adb, const std::string& adb_address, const std::vector<std::string>& tasks,
+void save_config(const std::string& adb, const std::string& adb_address, const TaskList& tasks,
                  MaaAdbControllerType ctrl_type);
 std::string read_adb_config(const std::filesystem::path& cur_dir);
 void pause();
@@ -22,7 +31,7 @@ int main(int argc, char** argv)
 
     std::string adb = "adb";
     std::string adb_address = "127.0.0.1:5555";
-    std::vector<std::string> tasks;
+    TaskList tasks;
     MaaAdbControllerType control_type = 0;
 
     bool proced = proc_argv(argc, argv, adb, adb_address, tasks, control_type);
@@ -39,14 +48,13 @@ int main(int argc, char** argv)
 
     const auto cur_dir = std::filesystem::path(argv[0]).parent_path();
     std::string debug_dir = (cur_dir / "debug").string();
-    std::string cache_dir = (cur_dir / "cache").string();
     std::string resource_dir = (cur_dir / "resource").string();
     std::string adb_config = read_adb_config(cur_dir);
 
     MaaSetGlobalOption(MaaGlobalOption_Logging, (void*)debug_dir.c_str(), debug_dir.size());
 
     auto maa_handle = MaaCreate(nullptr, nullptr);
-    auto resource_handle = MaaResourceCreate(cache_dir.c_str(), nullptr, nullptr);
+    auto resource_handle = MaaResourceCreate(nullptr, nullptr);
     auto controller_handle =
         MaaAdbControllerCreate(adb.c_str(), adb_address.c_str(), control_type, adb_config.c_str(), nullptr, nullptr);
 
@@ -77,11 +85,9 @@ int main(int argc, char** argv)
         return -1;
     }
 
-    save_config(adb, adb_address, tasks, control_type);
-
     MaaTaskId task_id = 0;
-    for (const std::string& task : tasks) {
-        task_id = MaaPostTask(maa_handle, task.c_str(), MaaTaskParam_Empty);
+    for (const auto& task : tasks) {
+        task_id = MaaPostTask(maa_handle, task.type.c_str(), task.param.to_string().c_str());
     }
     MaaTaskWait(maa_handle, task_id);
 
@@ -95,15 +101,101 @@ void print_help()
     std::cout << MAA_NS::utf8_to_stdout(
                      R"(欢迎使用 MAA 1999 CLI, 源码地址：https://github.com/MaaAssistantArknights/MAA1999
 
-用法: MAA1999.exe [adb路径] [adb地址] [任务名] ...
+用法: MAA1999.exe [adb路径] [adb地址] [任务名（有序）]...
 
-也可以修改 config.json 来进行相关配置（命令行参数优先于 config.json）
+可以修改 config.json 来配置任务
+
+请注意命令行参数中的任务名请输入 name，而非 type。name 是可以自己随意修改的，但 type 是固定的。
+若无命令行参数，则按顺序执行 config.json 中的全部任务。
 
 欢迎大佬来给我们搓个 GUI _(:з」∠)_
+
+v0.2.0
+新增了全关卡导航支持，引导只加了几个常用的，有其他需求可以改改 config，复现次数也在 config 里改
+
 )") << std::endl;
 }
 
-bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address, std::vector<std::string>& tasks,
+json::value combat_param(int index)
+{
+    json::value param;
+    auto& diff = param["diff_task"];
+
+    auto& chapter = diff["EnterTheShow"]["next"];
+    auto& stage = diff["TargetStageName"]["text"];
+    auto& difficulty = diff["StageDifficulty"]["next"];
+    auto& times = diff["SetReplaysTimes"]["text"];
+
+    switch (index) {
+    case 4:
+        // "4. 3-9 厄险（百灵百验鸟）\n"
+        chapter = "MainChapter_3";
+        stage = "09";
+        difficulty = "StageDifficulty_Hard";
+        times = "1";
+        break;
+    case 5:
+        // "5. 4-20 厄险（双头形骨架）\n"
+        chapter = "MainChapter_4";
+        stage = "20";
+        difficulty = "StageDifficulty_Hard";
+        times = "1";
+        break;
+    case 6:
+        // "6. 2-3 厄险（祝圣秘银）\n"
+        chapter = "MainChapter_2";
+        stage = "03";
+        difficulty = "StageDifficulty_Hard";
+        times = "1";
+        break;
+    case 7:
+        // "7. 3-13 厄险（盐封曼德拉）\n"
+        chapter = "MainChapter_3";
+        stage = "13";
+        difficulty = "StageDifficulty_Hard";
+        times = "1";
+        break;
+    case 8:
+        // "8. 4-10 厄险（啮咬盒）\n"
+        chapter = "MainChapter_4";
+        stage = "10";
+        difficulty = "StageDifficulty_Hard";
+        times = "1";
+        break;
+    case 9:
+        // "9. 3-11 厄险（金爪灵摆）\n"
+        chapter = "MainChapter_3";
+        stage = "11";
+        difficulty = "StageDifficulty_Hard";
+        times = "1";
+        break;
+
+    case 10:
+        // "10. 尘埃运动 06\n"
+        chapter = "ResourceChapter_LP";
+        stage = "06";
+        difficulty = "StageDifficulty_None";
+        times = "1";
+        break;
+    case 11:
+        // "11. 猪鼻美学 06\n"
+        chapter = "ResourceChapter_MA";
+        stage = "06";
+        difficulty = "StageDifficulty_None";
+        times = "1";
+        break;
+    case 12:
+        // "12. 丰收时令 04\n"
+        chapter = "ResourceChapter_MA";
+        stage = "04";
+        difficulty = "StageDifficulty_None";
+        times = "1";
+        break;
+    }
+    return param;
+}
+
+bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address, TaskList& tasks,
                MaaAdbControllerType& ctrl_type)
 {
     int touch = 1;
@@ -112,25 +204,31 @@ bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address
 
     tasks.clear();
 
-    if (argc >= 3) {
-        adb = argv[1];
-        adb_address = argv[2];
-
-        for (int i = 3; i < argc; ++i) {
-            tasks.emplace_back(argv[i]);
-        }
-    }
-    else if (auto config_opt = json::open("config.json")) {
+    if (auto config_opt = json::open("config.json")) {
         auto& confing = *config_opt;
 
         adb = confing["adb"].as_string();
         adb_address = confing["adb_address"].as_string();
+
+        int index = 1;
         for (auto& task : confing["tasks"].as_array()) {
-            tasks.emplace_back(task.as_string());
+            Task task_obj;
+            if (task.is_string()) {
+                task_obj.type = task.as_string();
+                task_obj.name = "MyTask" + std::to_string(index++);
+            }
+            else {
+                task_obj.type = task["type"].as_string();
+                task_obj.name = task["name"].as_string();
+                task_obj.param = task["param"];
+            }
+            tasks.emplace_back(task_obj);
         }
         touch = confing.get("touch", touch);
         key = confing.get("key", key);
         screencap = confing.get("screencap", screencap);
+
+        ctrl_type = touch << 0 | key << 8 | screencap << 16;
     }
     else {
         std::cout << std::endl
@@ -143,11 +241,23 @@ bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address
         std::getline(std::cin, adb_address);
         std::cout << std::endl
                   << std::endl
-                  << MAA_NS::utf8_to_stdout("选择任务，会自动启动游戏及登录，但不会启动模拟器") << std::endl
+                  << MAA_NS::utf8_to_stdout("选择任务，会自动登录，但不会启动游戏和模拟器") << std::endl
                   << std::endl
-                  << MAA_NS::utf8_to_stdout("1.收取荒原\n2.每日心相\n3.领取奖励") << std::endl
+                  << MAA_NS::utf8_to_stdout("1. 收取荒原\n"
+                                            "2. 领取奖励\n"
+                                            "3. 每日心相（意志解析）\n"
+                                            "4. 3-9 厄险（百灵百验鸟）\n"
+                                            "5. 4-20 厄险（双头形骨架）\n"
+                                            "6. 2-3 厄险（祝圣秘银）\n"
+                                            "7. 3-13 厄险（盐封曼德拉）\n"
+                                            "8. 4-10 厄险（啮咬盒）\n"
+                                            "9. 3-11 厄险（金爪灵摆）\n"
+                                            "10. 尘埃运动 06\n"
+                                            "11. 猪鼻美学 06\n"
+                                            "12. 丰收时令 04\n")
                   << std::endl
-                  << MAA_NS::utf8_to_stdout("请输入要执行的任务序号，可自定义顺序，以空格分隔，例如 1 2 3: ")
+                  << std::endl
+                  << MAA_NS::utf8_to_stdout("请输入要执行的任务序号，可自定义顺序，以空格分隔，例如 1 3 11 2: ")
                   << std::endl;
         std::vector<int> task_ids;
         std::string line;
@@ -158,32 +268,72 @@ bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address
             task_ids.emplace_back(task_id);
         }
 
-        tasks = { "Start1999" };
+        // tasks.emplace_back(Task { .name = "MyTask0", .type = "Start1999" });
 
+        int index = 1;
         for (auto id : task_ids) {
+            Task task_obj;
+            task_obj.name = "MyTask" + std::to_string(index++);
+
             switch (id) {
             case 1:
-                tasks.emplace_back("Wilderness");
+                task_obj.type = "Wilderness";
                 break;
             case 2:
-                tasks.emplace_back("Psychube");
+                task_obj.type = "Psychube";
                 break;
             case 3:
-                tasks.emplace_back("Awards");
+                task_obj.type = "Awards";
                 break;
+
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+            case 12:
+                task_obj.type = "Combat";
+                task_obj.param = combat_param(id);
+                break;
+
             default:
-                std::cout << "Unknown task: " << task_id << std::endl;
+                std::cout << "Unknown task: " << id << std::endl;
                 return false;
+            }
+            tasks.emplace_back(std::move(task_obj));
+        }
+
+        ctrl_type = touch << 0 | key << 8 | screencap << 16;
+        save_config(adb, adb_address, tasks, ctrl_type);
+    }
+
+    if (argc >= 3) {
+        adb = argv[1];
+        adb_address = argv[2];
+
+        std::vector<std::string> task_names;
+        for (int i = 3; i < argc; ++i) {
+            task_names.emplace_back(argv[i]);
+        }
+        auto all_tasks = std::move(tasks);
+        tasks.clear();
+        for (auto& task_name : task_names) {
+            for (auto& task : all_tasks) {
+                if (task.name == task_name) {
+                    tasks.emplace_back(task);
+                    break;
+                }
             }
         }
     }
 
-    ctrl_type = touch << 0 | key << 8 | screencap << 16;
-
     return true;
 }
 
-void save_config(const std::string& adb, const std::string& adb_address, const std::vector<std::string>& tasks,
+void save_config(const std::string& adb, const std::string& adb_address, const TaskList& tasks,
                  MaaAdbControllerType ctrl_type)
 {
     json::value config;
@@ -191,8 +341,18 @@ void save_config(const std::string& adb, const std::string& adb_address, const s
     config["adb_Doc"] = "adb.exe 所在路径，相对绝对均可";
     config["adb_address"] = adb_address;
     config["adb_address_Doc"] = "adb 连接地址，例如 127.0.0.1:5555";
-    config["tasks"] = json::array(tasks);
-    config["tasks_Doc"] = "要执行的任务 Start1999, Wilderness, Psychube, Awards";
+
+    json::value tasks_array;
+    for (auto& task : tasks) {
+        json::value task_obj;
+        task_obj["type"] = task.type;
+        task_obj["name"] = task.name;
+        task_obj["param"] = task.param;
+        tasks_array.emplace(std::move(task_obj));
+    }
+    config["tasks"] = std::move(tasks_array);
+    config["tasks_Doc"] = "要执行的任务 Start1999, Wilderness, Psychube, Awards, Combat";
+
     config["touch"] = (ctrl_type & MaaAdbControllerType_Touch_Mask) >> 0;
     config["touch_Doc"] = "点击方式：1: Adb, 2: MiniTouch, 3: MaaTouch";
     // config["key"] = key;
@@ -200,6 +360,7 @@ void save_config(const std::string& adb, const std::string& adb_address, const s
     config["screencap"] = (ctrl_type & MaaAdbControllerType_Screencap_Mask) >> 16;
     config["screencap_Doc"] = "截图方式：1: 自动测速, 2: RawByNetcat, 3: RawWithGzip, 4: Encode, 5: EncodeToFile, 6: "
                               "MinicapDirect, 7: MinicapStream";
+    config["version"] = "v0.2.0";
 
     std::ofstream ofs("config.json", std::ios::out);
     ofs << config;
