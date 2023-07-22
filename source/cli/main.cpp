@@ -280,10 +280,10 @@ bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address
                 task_obj.type = "Wilderness";
                 break;
             case 2:
-                task_obj.type = "Psychube";
+                task_obj.type = "Awards";
                 break;
             case 3:
-                task_obj.type = "Awards";
+                task_obj.type = "Psychube";
                 break;
 
             case 4:
