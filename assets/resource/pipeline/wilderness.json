@@ -123,8 +123,11 @@
         ]
     },
     "TrustMax": {
-        "recognition": "TemplateMatch",
-        "template": "template/Wilderness/TrustMax.png",
+        "recognition": "OCR",
+        "text": [
+            "信任",
+            "已满"
+        ],
         "roi": [
             915,
             13,
