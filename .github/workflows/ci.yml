@@ -37,12 +37,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - msbuild_target: x86_64
-            lowercase_target: x86_64
-        #   - msbuild_target: ARM64
-        #     lowercase_target: arm64
-    env:
-      MAABUILDER_TARGET_PLATFORM: ${{ matrix.msbuild_target }}
+          - msbuild_target: x64
+            lowercase_target: x64
     runs-on: windows-latest
 
     steps:
@@ -60,7 +56,7 @@ jobs:
         with:
           repository: MaaAssistantArknights/MaaFramework
           latest: true
-          fileName: "MAA-win-${{ matrix.msbuild_target }}*"
+          fileName: "MAA-win-x86_64*"
           out-file-path: "source/cli/${{ matrix.msbuild_target }}/Release"
           extract: true
 
