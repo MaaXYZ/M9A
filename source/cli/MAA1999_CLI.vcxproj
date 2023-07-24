@@ -109,6 +109,10 @@
     <PostBuildEvent>
       <Command>xcopy "$(ProjectDir)..\..\assets\*" "$(TargetDir)" /s /e /y</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>move "$(TargetDir)bin\*" "$(TargetDir)"
+move "$(TargetDir)lib\*" "$(TargetDir)"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
@@ -137,6 +141,10 @@
     <PostBuildEvent>
       <Command>xcopy "$(ProjectDir)..\..\assets\*" "$(TargetDir)" /s /e /y</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>move "$(TargetDir)bin\*" "$(TargetDir)"
+move "$(TargetDir)lib\*" "$(TargetDir)"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -163,6 +171,10 @@
     <PostBuildEvent>
       <Command>xcopy "$(ProjectDir)..\..\assets\*" "$(TargetDir)" /s /e /y</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>move "$(TargetDir)bin\*" "$(TargetDir)"
+move "$(TargetDir)lib\*" "$(TargetDir)"</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
