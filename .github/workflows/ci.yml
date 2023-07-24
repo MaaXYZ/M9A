@@ -37,8 +37,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - msbuild_target: x64
-            lowercase_target: x64
+          - msbuild_target: x86_64
+            lowercase_target: x86_64
         #   - msbuild_target: ARM64
         #     lowercase_target: arm64
     env:
