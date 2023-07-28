@@ -10,7 +10,7 @@
     },
     "PsychubeEnterTheShow": {
         "recognition": "TemplateMatch",
-        "template": "template/Psychube/EnterTheShow.png",
+        "template": "Psychube/EnterTheShow.png",
         "roi": [
             926,
             221,
@@ -24,7 +24,7 @@
     },
     "PsychubeResourceStages": {
         "recognition": "TemplateMatch",
-        "template": "template/Psychube/ResourceStages.png",
+        "template": "Psychube/ResourceStages.png",
         "roi": [
             218,
             571,
@@ -39,7 +39,7 @@
     },
     "FreePsychubeStages": {
         "recognition": "TemplateMatch",
-        "template": "template/Psychube/FreePsychubeStages.png",
+        "template": "Psychube/FreePsychubeStages.png",
         "roi": [
             180,
             203,
@@ -54,7 +54,7 @@
     },
     "NoFreePsychubeStagesFlag": {
         "recognition": "TemplateMatch",
-        "template": "template/Psychube/NoFreePsychubeStagesFlag.png",
+        "template": "Psychube/NoFreePsychubeStagesFlag.png",
         "roi": [
             732,
             210,
@@ -68,7 +68,7 @@
     },
     "PsychubeStages_7": {
         "recognition": "TemplateMatch",
-        "template": "template/Psychube/PsychubeStages_7.png",
+        "template": "Psychube/PsychubeStages_7.png",
         "roi": [
             306,
             492,
@@ -101,7 +101,7 @@
     },
     "PsychubeSwitchToReplay": {
         "recognition": "TemplateMatch",
-        "template": "template/Psychube/SwitchToReplay.png",
+        "template": "Psychube/SwitchToReplay.png",
         "roi": [
             781,
             581,
@@ -116,7 +116,7 @@
     },
     "PsychubeSetReplaysTimes": {
         "recognition": "TemplateMatch",
-        "template": "template/Psychube/SetReplaysTimes.png",
+        "template": "Psychube/SetReplaysTimes.png",
         "threshold": 0.8,
         "roi": [
             737,
@@ -132,7 +132,7 @@
     },
     "PsychubeReplayTwice": {
         "recognition": "TemplateMatch",
-        "template": "template/Psychube/ReplayTwice.png",
+        "template": "Psychube/ReplayTwice.png",
         "roi": [
             740,
             463,

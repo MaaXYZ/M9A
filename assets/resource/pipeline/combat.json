@@ -7,7 +7,7 @@
     },
     "EnterTheShow": {
         "recognition": "TemplateMatch",
-        "template": "template/Combat/EnterTheShow.png",
+        "template": "Combat/EnterTheShow.png",
         "roi": [
             926,
             221,
@@ -19,7 +19,7 @@
     },
     "MainChapter_1": {
         "recognition": "TemplateMatch",
-        "template": "template/Combat/MainChapter_1.png",
+        "template": "Combat/MainChapter_1.png",
         "roi": [
             60,
             98,
@@ -31,7 +31,7 @@
     },
     "MainChapter_2": {
         "recognition": "TemplateMatch",
-        "template": "template/Combat/MainChapter_2.png",
+        "template": "Combat/MainChapter_2.png",
         "roi": [
             340,
             99,
@@ -43,7 +43,7 @@
     },
     "MainChapter_3": {
         "recognition": "TemplateMatch",
-        "template": "template/Combat/MainChapter_3.png",
+        "template": "Combat/MainChapter_3.png",
         "roi": [
             618,
             98,
@@ -55,7 +55,7 @@
     },
     "MainChapter_4": {
         "recognition": "TemplateMatch",
-        "template": "template/Combat/MainChapter_4.png",
+        "template": "Combat/MainChapter_4.png",
         "roi": [
             897,
             108,
@@ -68,7 +68,7 @@
     "Sub_ResourceChapterLabel": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/Combat/ResourceChapterLabel.png",
+        "template": "Combat/ResourceChapterLabel.png",
         "threshold": 0.98,
         "roi": [
             230,
@@ -87,7 +87,7 @@
     },
     "ResourceChapter_LPEnter": {
         "recognition": "TemplateMatch",
-        "template": "template/Combat/ResourceChapter_LPEnter.png",
+        "template": "Combat/ResourceChapter_LPEnter.png",
         "threshold": 0.9,
         "roi": [
             0,
@@ -108,7 +108,7 @@
     },
     "ResourceChapter_MAEnter": {
         "recognition": "TemplateMatch",
-        "template": "template/Combat/ResourceChapter_MAEnter.png",
+        "template": "Combat/ResourceChapter_MAEnter.png",
         "threshold": 0.9,
         "roi": [
             0,
@@ -129,7 +129,7 @@
     },
     "ResourceChapter_HPEnter": {
         "recognition": "TemplateMatch",
-        "template": "template/Combat/ResourceChapter_HPEnter.png",
+        "template": "Combat/ResourceChapter_HPEnter.png",
         "threshold": 0.9,
         "roi": [
             0,
@@ -143,7 +143,7 @@
     "Sub_PromotionChapterLabel": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/Combat/PromotionChapterLabel.png",
+        "template": "Combat/PromotionChapterLabel.png",
         "threshold": 0.98,
         "roi": [
             388,
@@ -162,7 +162,7 @@
     },
     "PromotionChapter_MEEnter": {
         "recognition": "TemplateMatch",
-        "template": "template/Combat/PromotionChapter_MEEnter.png",
+        "template": "Combat/PromotionChapter_MEEnter.png",
         "threshold": 0.9,
         "roi": [
             0,
@@ -182,7 +182,7 @@
     },
     "PromotionChapter_SLEnter": {
         "recognition": "TemplateMatch",
-        "template": "template/Combat/PromotionChapter_SLEnter.png",
+        "template": "Combat/PromotionChapter_SLEnter.png",
         "threshold": 0.9,
         "roi": [
             0,
@@ -203,7 +203,7 @@
     },
     "PromotionChapter_SSEnter": {
         "recognition": "TemplateMatch",
-        "template": "template/Combat/PromotionChapter_SSEnter.png",
+        "template": "Combat/PromotionChapter_SSEnter.png",
         "threshold": 0.9,
         "roi": [
             0,
@@ -224,7 +224,7 @@
     },
     "PromotionChapter_BWEnter": {
         "recognition": "TemplateMatch",
-        "template": "template/Combat/PromotionChapter_BWEnter.png",
+        "template": "Combat/PromotionChapter_BWEnter.png",
         "threshold": 0.9,
         "roi": [
             0,
@@ -362,7 +362,7 @@
     },
     "SwitchToReplay": {
         "recognition": "TemplateMatch",
-        "template": "template/Combat/SwitchToReplay.png",
+        "template": "Combat/SwitchToReplay.png",
         "roi": [
             781,
             581,
@@ -376,7 +376,7 @@
     },
     "OpenReplaysTimes": {
         "recognition": "TemplateMatch",
-        "template": "template/Combat/OpenReplaysTimes.png",
+        "template": "Combat/OpenReplaysTimes.png",
         "roi": [
             737,
             586,

@@ -11,7 +11,7 @@
     "Sub_MailBadge": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/Awards/MailBadge.png",
+        "template": "Awards/MailBadge.png",
         "threshold": 0.98,
         "roi": [
             47,
@@ -27,7 +27,7 @@
     },
     "CollectMailAwards": {
         "recognition": "TemplateMatch",
-        "template": "template/Awards/CollectMailAwards.png",
+        "template": "Awards/CollectMailAwards.png",
         "roi": [
             109,
             551,
@@ -44,7 +44,7 @@
     "Sub_ObtainedAwards": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/Awards/ObtainedAwards.png",
+        "template": "Awards/ObtainedAwards.png",
         "roi": [
             524,
             62,
@@ -55,7 +55,7 @@
     },
     "NoMailAwards": {
         "recognition": "TemplateMatch",
-        "template": "template/Awards/NoMailAwards.png",
+        "template": "Awards/NoMailAwards.png",
         "roi": [
             952,
             39,
@@ -71,7 +71,7 @@
     "Sub_DailyBadge": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/Awards/DailyBadge.png",
+        "template": "Awards/DailyBadge.png",
         "threshold": 0.98,
         "action": "Click",
         "roi": [
@@ -91,8 +91,8 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": [
-            "template/Awards/CollectDailyAwards.png",
-            "template/Awards/CollectSingleDailyAwards.png"
+            "Awards/CollectDailyAwards.png",
+            "Awards/CollectSingleDailyAwards.png"
         ],
         "action": "Click",
         "post_wait_freezes": 1,
@@ -106,7 +106,7 @@
     "Sub_ObtainedDailyAwards": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/Awards/ObtainedAwards.png",
+        "template": "Awards/ObtainedAwards.png",
         "roi": [
             524,
             62,
@@ -117,7 +117,7 @@
     },
     "WeeklyAwardsBadge": {
         "recognition": "TemplateMatch",
-        "template": "template/Awards/WeeklyAwardsBadge.png",
+        "template": "Awards/WeeklyAwardsBadge.png",
         "threshold": 0.98,
         "action": "Click",
         "roi": [
@@ -136,7 +136,7 @@
     },
     "DailyAwardsPageFlag": {
         "recognition": "TemplateMatch",
-        "template": "template/Awards/DailyAwardsPageFlag.png",
+        "template": "Awards/DailyAwardsPageFlag.png",
         "roi": [
             458,
             0,

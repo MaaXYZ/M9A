@@ -25,7 +25,7 @@
     },
     "BluePochLogo": {
         "recognition": "TemplateMatch",
-        "template": "template/StartUp/BluePochLogo.png",
+        "template": "StartUp/BluePochLogo.png",
         "roi": [
             298,
             163,
@@ -43,7 +43,7 @@
     },
     "Disclaimer": {
         "recognition": "TemplateMatch",
-        "template": "template/StartUp/Disclaimer.png",
+        "template": "StartUp/Disclaimer.png",
         "roi": [
             512,
             107,
@@ -60,7 +60,7 @@
     },
     "GameLoading": {
         "recognition": "TemplateMatch",
-        "template": "template/StartUp/GameLoading.png",
+        "template": "StartUp/GameLoading.png",
         "roi": [
             323,
             0,
@@ -76,7 +76,7 @@
     },
     "Download": {
         "recognition": "TemplateMatch",
-        "template": "template/StartUp/Download.png",
+        "template": "StartUp/Download.png",
         "roi": [
             712,
             390,
@@ -93,7 +93,7 @@
     },
     "CloseAnnouncement": {
         "recognition": "TemplateMatch",
-        "template": "template/StartUp/CloseAnnouncement.png",
+        "template": "StartUp/CloseAnnouncement.png",
         "roi": [
             1105,
             40,
@@ -110,7 +110,7 @@
     },
     "StartGame": {
         "recognition": "TemplateMatch",
-        "template": "template/StartUp/StartGame.png",
+        "template": "StartUp/StartGame.png",
         "roi": [
             517,
             458,
@@ -133,7 +133,7 @@
     "Sub_HomeLoading": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/StartUp/HomeLoading.png",
+        "template": "StartUp/HomeLoading.png",
         "roi": [
             459,
             359,
@@ -143,7 +143,7 @@
     },
     "HomeFlag": {
         "recognition": "TemplateMatch",
-        "template": "template/StartUp/HomeFlag.png",
+        "template": "StartUp/HomeFlag.png",
         "roi": [
             1022,
             419,
@@ -155,8 +155,8 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": [
-            "template/StartUp/BackButton.png",
-            "template/StartUp/BackButton_White.png"
+            "StartUp/BackButton.png",
+            "StartUp/BackButton_White.png"
         ],
         "roi": [
             0,
@@ -170,8 +170,8 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": [
-            "template/StartUp/HomeButton.png",
-            "template/StartUp/HomeButton_White.png"
+            "StartUp/HomeButton.png",
+            "StartUp/HomeButton_White.png"
         ],
         "roi": [
             70,
@@ -185,7 +185,7 @@
     "Sub_Reward": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/StartUp/Reward.png",
+        "template": "StartUp/Reward.png",
         "roi": [
             419,
             90,
@@ -203,8 +203,8 @@
     "Sub_AccumulatedSignIn": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/StartUp/AccumulatedSignIn.png",
-        "roi":[
+        "template": "StartUp/AccumulatedSignIn.png",
+        "roi": [
             562,
             483,
             347,
@@ -215,7 +215,7 @@
     "Sub_BirthdayReward": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "template/StartUp/BirthdayReward.png",
+        "template": "StartUp/BirthdayReward.png",
         "roi": [
             803,
             273,

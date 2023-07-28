@@ -12,7 +12,7 @@
     },
     "EnterWilderness": {
         "recognition": "TemplateMatch",
-        "template": "template/Wilderness/EnterWilderness.png",
+        "template": "Wilderness/EnterWilderness.png",
         "roi": [
             889,
             348,
@@ -32,7 +32,7 @@
     },
     "CollectEXP": {
         "recognition": "TemplateMatch",
-        "template": "template/Wilderness/CollectEXP.png",
+        "template": "Wilderness/CollectEXP.png",
         "roi": [
             455,
             87,
@@ -52,7 +52,7 @@
     },
     "CollectMoney": {
         "recognition": "TemplateMatch",
-        "template": "template/Wilderness/CollectMoney.png",
+        "template": "Wilderness/CollectMoney.png",
         "roi": [
             685,
             34,
@@ -71,7 +71,7 @@
     },
     "CollectTrust": {
         "recognition": "TemplateMatch",
-        "template": "template/Wilderness/CollectTrust.png",
+        "template": "Wilderness/CollectTrust.png",
         "roi": [
             0,
             58,
@@ -90,7 +90,7 @@
     },
     "TrustDialogueNext": {
         "recognition": "TemplateMatch",
-        "template": "template/Wilderness/TrustDialogueNext.png",
+        "template": "Wilderness/TrustDialogueNext.png",
         "roi": [
             1119,
             631,
@@ -107,7 +107,7 @@
     },
     "TrustDialogueInteraction": {
         "recognition": "TemplateMatch",
-        "template": "template/Wilderness/TrustDialogueInteraction.png",
+        "template": "Wilderness/TrustDialogueInteraction.png",
         "roi": [
             1095,
             42,
