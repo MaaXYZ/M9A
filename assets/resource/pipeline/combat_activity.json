@@ -1,0 +1,70 @@
+{
+    "ANightmareAtGreenLake": {
+        "next": [
+            "ANightmareAtGreenLakeEnterTheShow",
+            "Sub_StartUp"
+        ]
+    },
+    "ANightmareAtGreenLakeEnterTheShow": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/ANightmareAtGreenLakeEnterTheShow.png",
+        "roi": [
+            940,
+            144,
+            244,
+            146
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "next": [
+            "ANightmareAtGreenLakeMainChapter"
+        ]
+    },
+    "ANightmareAtGreenLakeMainChapter": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/ANightmareAtGreenLakeMainChapter.png",
+        "roi": [
+            892,
+            400,
+            146,
+            177
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "ActivityStageDifficulty": {
+        "next": [
+            "ActivityStageDifficulty_Hard",
+            "ActivityStageDifficultyToRight"
+        ]
+    },
+    "ActivityStageDifficulty_Hard": {
+        "recognition": "OCR",
+        "text": [
+            "艰难"
+        ],
+        "roi": [
+            945,
+            168,
+            210,
+            171
+        ],
+        "next": [
+            "ReadyForAction"
+        ]
+    },
+    "ActivityStageDifficultyToRight": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/ActivityStageDifficultyToRight.png",
+        "roi": [
+            1126,
+            183,
+            130,
+            139
+        ],
+        "action": "Click",
+        "next": [
+            "ActivityStageDifficulty"
+        ]
+    }
+}

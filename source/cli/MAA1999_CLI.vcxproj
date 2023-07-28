@@ -110,8 +110,8 @@
       <Command>xcopy "$(ProjectDir)..\..\assets\*" "$(TargetDir)" /s /e /y</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>move "$(TargetDir)bin\*" "$(TargetDir)"
-move "$(TargetDir)lib\*" "$(TargetDir)"</Command>
+      <Command>xcopy "$(TargetDir)lib\*" "$(TargetDir)" /s /e /y
+xcopy "$(TargetDir)bin\*" "$(TargetDir)" /s /e /y</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
@@ -142,8 +142,8 @@ move "$(TargetDir)lib\*" "$(TargetDir)"</Command>
       <Command>xcopy "$(ProjectDir)..\..\assets\*" "$(TargetDir)" /s /e /y</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>move "$(TargetDir)bin\*" "$(TargetDir)"
-move "$(TargetDir)lib\*" "$(TargetDir)"</Command>
+      <Command>xcopy "$(TargetDir)lib\*" "$(TargetDir)" /s /e /y
+xcopy "$(TargetDir)bin\*" "$(TargetDir)" /s /e /y</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -172,8 +172,8 @@ move "$(TargetDir)lib\*" "$(TargetDir)"</Command>
       <Command>xcopy "$(ProjectDir)..\..\assets\*" "$(TargetDir)" /s /e /y</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>move "$(TargetDir)bin\*" "$(TargetDir)"
-move "$(TargetDir)lib\*" "$(TargetDir)"</Command>
+      <Command>xcopy "$(TargetDir)lib\*" "$(TargetDir)" /s /e /y
+xcopy "$(TargetDir)bin\*" "$(TargetDir)" /s /e /y</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

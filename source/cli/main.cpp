@@ -220,6 +220,14 @@ json::value combat_param(int index)
         difficulty = "StageDifficulty_None";
         times = "1";
         break;
+
+    case 17:
+        //"17. 活动：绿湖噩梦 17 艰难\n"
+        chapter = "ANightmareAtGreenLake";
+        stage = "17";
+        difficulty = "ActivityStageDifficulty";
+        times = "1";
+        break;
     }
 
     return param;
@@ -288,7 +296,8 @@ bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address
                                             "13. 群山之声 06（洞悉 岩）\n"
                                             "14. 星陨之所 06（洞悉 星）\n"
                                             "15. 深林之形 06（洞悉 林）\n"
-                                            "16. 荒兽之野 06（洞悉 兽）\n")
+                                            "16. 荒兽之野 06（洞悉 兽）\n"
+                                            "17. 活动：绿湖噩梦 17 艰难\n")
                   << std::endl
                   << std::endl
                   << MAA_NS::utf8_to_stdout("请输入要执行的任务序号，可自定义顺序，以空格分隔，例如 1 3 11 2: ")
@@ -335,6 +344,11 @@ bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address
             case 15:
             case 16:
                 task_obj.type = "Combat";
+                task_obj.param = combat_param(id);
+                break;
+
+            case 17:
+                task_obj.type = "ANightmareAtGreenLake";
                 task_obj.param = combat_param(id);
                 break;
 

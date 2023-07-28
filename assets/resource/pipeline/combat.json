@@ -280,21 +280,18 @@
             470,
             1280,
             160
-        ],
-        "next": [
-            "Combat"
         ]
     },
     "SwipeLeftForStageList": {
         "action": "Swipe",
         "begin": [
-            100,
+            300,
             550,
             100,
             50
         ],
         "end": [
-            1100,
+            900,
             550,
             100,
             50

@@ -441,3 +441,4 @@ enc_temp_folder/*
 
 # tools
 tools/CropRoi/**/*.png
+/source/cli/config.json
