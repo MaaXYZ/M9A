@@ -125,14 +125,13 @@
     "TrustMax": {
         "recognition": "OCR",
         "text": [
-            "信任",
-            "已满"
+            "MAX"
         ],
         "roi": [
-            915,
-            13,
-            365,
-            707
+            0,
+            24,
+            185,
+            638
         ],
         "next": [
             "Sub_HomeButton",
