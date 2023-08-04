@@ -1,4 +1,4 @@
-#include "MaaAPI.h"
+#include "MaaFramework/MaaAPI.h"
 
 #include "Utils/Locale.hpp" // 不应该 include 这鬼玩意，图方便，先凑合用吧
 #include <meojson/json.hpp>
@@ -61,7 +61,7 @@ int main(int argc, char** argv)
     MaaBindResource(maa_handle, resource_handle);
     MaaBindController(maa_handle, controller_handle);
     int height = 720;
-    MaaControllerSetOption(controller_handle, MaaCtrlOption_ScreenshotTargetHeight, reinterpret_cast<void*>(&height),
+    MaaControllerSetOption(controller_handle, MaaCtrlOption_ScreenshotTargetShortSide, reinterpret_cast<void*>(&height),
                            sizeof(int));
 
     auto resource_id = MaaResourcePostResource(resource_handle, resource_dir.c_str());
@@ -89,7 +89,7 @@ int main(int argc, char** argv)
     for (const auto& task : tasks) {
         task_id = MaaPostTask(maa_handle, task.type.c_str(), task.param.to_string().c_str());
     }
-    MaaTaskWait(maa_handle, task_id);
+    MaaWaitTask(maa_handle, task_id);
 
     destroy();
 
