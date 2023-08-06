@@ -1,4 +1,11 @@
 {
+    "StartUp": {
+        "next": [
+            "HomeFlag",
+            "Start1999",
+            "Sub_StartUp"
+        ]
+    },
     "Sub_StartUp": {
         "is_sub": true,
         "next": [
