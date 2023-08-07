@@ -2,8 +2,20 @@
     "StartUp": {
         "next": [
             "HomeFlag",
-            "Start1999",
-            "Sub_StartUp"
+            "Sub_HomeButton",
+            "Sub_BackButton",
+            "Sub_HomeLoading",
+            "Sub_ObtainedAwards",
+            "Sub_AccumulatedSignIn",
+            "Sub_BirthdayReward",
+            "Sub_Reward",
+            "StartGame",
+            "CloseAnnouncement",
+            "Download",
+            "GameLoading",
+            "BluePochLogo",
+            "Disclaimer",
+            "Sub_Start1999"
         ]
     },
     "Sub_StartUp": {
@@ -26,7 +38,8 @@
             "Stop"
         ]
     },
-    "Start1999": {
+    "Sub_Start1999": {
+        "is_sub": true,
         "action": "StartApp",
         "package": "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity"
     },
@@ -82,8 +95,10 @@
         ]
     },
     "Download": {
-        "recognition": "TemplateMatch",
-        "template": "StartUp/Download.png",
+        "recognition": "OCR",
+        "text": [
+            "下载"
+        ],
         "roi": [
             712,
             390,
