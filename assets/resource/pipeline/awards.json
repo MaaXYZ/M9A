@@ -2,6 +2,7 @@
     "Awards": {
         "next": [
             "Sub_MailBadge",
+            "Sub_JukeboxBadge",
             "Sub_DailyBadge",
             "HomeFlag",
             "Sub_ObtainedAwards",
@@ -142,6 +143,95 @@
             0,
             138,
             136
+        ]
+    },
+    "Sub_JukeboxBadge": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Awards/JukeboxBadge.png",
+        "roi": [
+            183,
+            0,
+            108,
+            108
+        ],
+        "action": "Click",
+        "post_wait_freezes": 200,
+        "next": [
+            "Sub_CollectJukeboxExp",
+            "Sub_JukeboxAwardsBadge",
+            "Sub_BackButton",
+            "HomeFlag"
+        ]
+    },
+    "Sub_CollectJukeboxExp": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": [
+            "Awards/CollectJukebox.png",
+            "Awards/CollectJukeboxExp_Single.png"
+        ],
+        "roi": [
+            951,
+            208,
+            329,
+            512
+        ],
+        "action": "Click"
+    },
+    "Sub_JukeboxAwardsBadge": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Awards/JukeboxAwardsBadge.png",
+        "roi": [
+            967,
+            1,
+            110,
+            113
+        ],
+        "action": "Click",
+        "next": [
+            "Sub_CollectJukeboxAwards",
+            "Sub_ObtainedJukeboxAwards",
+            "NoJukeboxAwards"
+        ]
+    },
+    "Sub_CollectJukeboxAwards": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Awards/CollectJukebox.png",
+        "roi": [
+            1009,
+            594,
+            213,
+            126
+        ],
+        "action": "Click"
+    },
+    "Sub_ObtainedJukeboxAwards": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": [
+            "获得",
+            "物品"
+        ],
+        "roi": [
+            534,
+            69,
+            211,
+            132
+        ],
+        "action": "Click"
+    },
+    "NoJukeboxAwards": {
+        "recognition": "TemplateMatch",
+        "template": "Awards/NoJukeboxAwards.png",
+        "threshold": 0.98,
+        "roi": [
+            1012,
+            46,
+            23,
+            20
         ]
     }
 }
