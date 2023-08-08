@@ -127,102 +127,102 @@ json::value combat_param(int index)
     auto& times = diff["SetReplaysTimes"]["text"];
 
     switch (index) {
-    case 4:
-        // "4. 3-9 厄险（百灵百验鸟）\n"
+    case 5:
+        // "5. 3-9 厄险（百灵百验鸟）\n"
         chapter = "MainChapter_3";
         stage = "09";
         difficulty = "StageDifficulty_Hard";
         times = "1";
         break;
-    case 5:
-        // "5. 4-20 厄险（双头形骨架）\n"
+    case 6:
+        // "6. 4-20 厄险（双头形骨架）\n"
         chapter = "MainChapter_4";
         stage = "20";
         difficulty = "StageDifficulty_Hard";
         times = "1";
         break;
-    case 6:
-        // "6. 2-3 厄险（祝圣秘银）\n"
+    case 7:
+        // "7. 2-3 厄险（祝圣秘银）\n"
         chapter = "MainChapter_2";
         stage = "03";
         difficulty = "StageDifficulty_Hard";
         times = "1";
         break;
-    case 7:
-        // "7. 3-13 厄险（盐封曼德拉）\n"
+    case 8:
+        // "8. 3-13 厄险（盐封曼德拉）\n"
         chapter = "MainChapter_3";
         stage = "13";
         difficulty = "StageDifficulty_Hard";
         times = "1";
         break;
-    case 8:
-        // "8. 4-10 厄险（啮咬盒）\n"
+    case 9:
+        // "9. 4-10 厄险（啮咬盒）\n"
         chapter = "MainChapter_4";
         stage = "10";
         difficulty = "StageDifficulty_Hard";
         times = "1";
         break;
-    case 9:
-        // "9. 3-11 厄险（金爪灵摆）\n"
+    case 10:
+        // "10. 3-11 厄险（金爪灵摆）\n"
         chapter = "MainChapter_3";
         stage = "11";
         difficulty = "StageDifficulty_Hard";
         times = "1";
         break;
 
-    case 10:
-        // "10. 尘埃运动 06\n"
+    case 11:
+        // "11. 尘埃运动 06\n"
         chapter = "ResourceChapter_LP";
         stage = "06";
         difficulty = "StageDifficulty_None";
         times = "1";
         break;
-    case 11:
-        // "11. 猪鼻美学 06\n"
+    case 12:
+        // "12. 猪鼻美学 06\n"
         chapter = "ResourceChapter_MA";
         stage = "06";
         difficulty = "StageDifficulty_None";
         times = "1";
         break;
-    case 12:
-        // "12. 丰收时令 04\n"
+    case 13:
+        // "13. 丰收时令 04\n"
         chapter = "ResourceChapter_MA";
         stage = "04";
         difficulty = "StageDifficulty_None";
         times = "1";
         break;
 
-    case 13:
-        //"13. 群山之声 06（洞悉 岩）\n"
+    case 14:
+        //"14. 群山之声 06（洞悉 岩）\n"
         chapter = "PromotionChapter_ME";
         stage = "06";
         difficulty = "StageDifficulty_None";
         times = "1";
         break;
-    case 14:
-        //"14. 星陨之所 06（洞悉 星）\n"
+    case 15:
+        //"15. 星陨之所 06（洞悉 星）\n"
         chapter = "PromotionChapter_SL";
         stage = "06";
         difficulty = "StageDifficulty_None";
         times = "1";
         break;
-    case 15:
-        //"15. 深林之形 06（洞悉 林）\n"
+    case 16:
+        //"16. 深林之形 06（洞悉 林）\n"
         chapter = "PromotionChapter_SS";
         stage = "06";
         difficulty = "StageDifficulty_None";
         times = "1";
         break;
-    case 16:
-        //"16. 荒兽之野 06（洞悉 兽）\n"
+    case 17:
+        //"17. 荒兽之野 06（洞悉 兽）\n"
         chapter = "PromotionChapter_BW";
         stage = "06";
         difficulty = "StageDifficulty_None";
         times = "1";
         break;
 
-    case 17:
-        //"17. 活动：绿湖噩梦 17 艰难\n"
+    case 18:
+        //"18. 活动：绿湖噩梦 17 艰难\n"
         chapter = "ANightmareAtGreenLake";
         stage = "17";
         difficulty = "ActivityStageDifficulty";
@@ -279,28 +279,29 @@ bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address
         std::getline(std::cin, adb_address);
         std::cout << std::endl
                   << std::endl
-                  << MAA_NS::utf8_to_stdout("选择任务，会自动登录，但不会启动游戏和模拟器") << std::endl
+                  << MAA_NS::utf8_to_stdout("选择任务，会自动登录，但不会启动模拟器") << std::endl
                   << std::endl
-                  << MAA_NS::utf8_to_stdout("1. 收取荒原\n"
-                                            "2. 领取奖励\n"
-                                            "3. 每日心相（意志解析）\n"
-                                            "4. 3-9 厄险（百灵百验鸟）\n"
-                                            "5. 4-20 厄险（双头形骨架）\n"
-                                            "6. 2-3 厄险（祝圣秘银）\n"
-                                            "7. 3-13 厄险（盐封曼德拉）\n"
-                                            "8. 4-10 厄险（啮咬盒）\n"
-                                            "9. 3-11 厄险（金爪灵摆）\n"
-                                            "10. 尘埃运动 06\n"
-                                            "11. 猪鼻美学 06\n"
-                                            "12. 丰收时令 04\n"
-                                            "13. 群山之声 06（洞悉 岩）\n"
-                                            "14. 星陨之所 06（洞悉 星）\n"
-                                            "15. 深林之形 06（洞悉 林）\n"
-                                            "16. 荒兽之野 06（洞悉 兽）\n"
-                                            "17. 活动：绿湖噩梦 17 艰难\n")
+                  << MAA_NS::utf8_to_stdout("1. 启动游戏\n"
+                                            "2. 收取荒原\n"
+                                            "3. 领取奖励\n"
+                                            "4. 每日心相（意志解析）\n"
+                                            "5. 3-9 厄险（百灵百验鸟）\n"
+                                            "6. 4-20 厄险（双头形骨架）\n"
+                                            "7. 2-3 厄险（祝圣秘银）\n"
+                                            "8. 3-13 厄险（盐封曼德拉）\n"
+                                            "9. 4-10 厄险（啮咬盒）\n"
+                                            "10. 3-11 厄险（金爪灵摆）\n"
+                                            "11. 尘埃运动 06\n"
+                                            "12. 猪鼻美学 06\n"
+                                            "13. 丰收时令 04\n"
+                                            "14. 群山之声 06（洞悉 岩）\n"
+                                            "15. 星陨之所 06（洞悉 星）\n"
+                                            "16. 深林之形 06（洞悉 林）\n"
+                                            "17. 荒兽之野 06（洞悉 兽）\n"
+                                            "18. 活动：绿湖噩梦 17 艰难\n")
                   << std::endl
                   << std::endl
-                  << MAA_NS::utf8_to_stdout("请输入要执行的任务序号，可自定义顺序，以空格分隔，例如 1 3 11 2: ")
+                  << MAA_NS::utf8_to_stdout("请输入要执行的任务序号，可自定义顺序，以空格分隔，例如 1 2 4 12 3: ")
                   << std::endl;
         std::vector<int> task_ids;
         std::string line;
@@ -320,17 +321,19 @@ bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address
 
             switch (id) {
             case 1:
-                task_obj.type = "Wilderness";
+                task_obj.type = "StartUp";
                 break;
             case 2:
+                task_obj.type = "Wilderness";
+                break;
+            case 3:
                 task_obj.type = "Awards";
                 break;
 
-            case 3:
+            case 4:
                 task_obj.type = "Psychube";
                 break;
 
-            case 4:
             case 5:
             case 6:
             case 7:
@@ -343,11 +346,12 @@ bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address
             case 14:
             case 15:
             case 16:
+            case 17:
                 task_obj.type = "Combat";
                 task_obj.param = combat_param(id);
                 break;
 
-            case 17:
+            case 18:
                 task_obj.type = "ANightmareAtGreenLake";
                 task_obj.param = combat_param(id);
                 break;
@@ -404,7 +408,7 @@ void save_config(const std::string& adb, const std::string& adb_address, const T
         tasks_array.emplace(std::move(task_obj));
     }
     config["tasks"] = std::move(tasks_array);
-    config["tasks_Doc"] = "要执行的任务 Start1999, Wilderness, Psychube, Awards, Combat";
+    config["tasks_Doc"] = "要执行的任务 StartUp, Wilderness, Psychube, Awards, Combat";
 
     config["touch"] = (ctrl_type & MaaAdbControllerType_Touch_Mask) >> 0;
     config["touch_Doc"] = "点击方式：1: Adb, 2: MiniTouch, 3: MaaTouch";
