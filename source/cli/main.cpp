@@ -29,12 +29,13 @@ int main(int argc, char** argv)
 {
     print_help();
 
+    bool debug = false;
     std::string adb = "adb";
     std::string adb_address = "127.0.0.1:5555";
     TaskList tasks;
     MaaAdbControllerType control_type = 0;
 
-    bool proced = proc_argv(argc, argv, adb, adb_address, tasks, control_type);
+    bool proced = proc_argv(argc, argv, debug, adb, adb_address, tasks, control_type);
     if (!proced) {
         std::cout << "Failed to parse argv" << std::endl;
         pause();
@@ -52,6 +53,7 @@ int main(int argc, char** argv)
     std::string adb_config = read_adb_config(cur_dir);
 
     MaaSetGlobalOption(MaaGlobalOption_Logging, (void*)debug_dir.c_str(), debug_dir.size());
+    MaaSetGlobalOption(MaaGlobalOption_DebugMode, (void*)&debug, sizeof(bool));
 
     auto maa_handle = MaaCreate(nullptr, nullptr);
     auto resource_handle = MaaResourceCreate(nullptr, nullptr);
@@ -233,7 +235,7 @@ json::value combat_param(int index)
     return param;
 }
 
-bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address, TaskList& tasks,
+bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string& adb_address, TaskList& tasks,
                MaaAdbControllerType& ctrl_type)
 {
     int touch = 1;
@@ -245,6 +247,7 @@ bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address
     if (auto config_opt = json::open("config.json")) {
         auto& confing = *config_opt;
 
+        debug = confing["debug"].as_boolean();
         adb = confing["adb"].as_string();
         adb_address = confing["adb_address"].as_string();
 
@@ -394,6 +397,7 @@ void save_config(const std::string& adb, const std::string& adb_address, const T
                  MaaAdbControllerType ctrl_type)
 {
     json::value config;
+    config["debug"] = false;
     config["adb"] = adb;
     config["adb_Doc"] = "adb.exe 所在路径，相对绝对均可";
     config["adb_address"] = adb_address;
