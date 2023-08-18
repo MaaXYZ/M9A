@@ -18,7 +18,7 @@ struct Task
 using TaskList = std::vector<Task>;
 
 void print_help();
-bool proc_argv(int argc, char** argv, std::string& adb, std::string& adb_address, TaskList& tasks,
+bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string& adb_address, TaskList& tasks,
                MaaAdbControllerType& ctrl_type);
 void save_config(const std::string& adb, const std::string& adb_address, const TaskList& tasks,
                  MaaAdbControllerType ctrl_type);
