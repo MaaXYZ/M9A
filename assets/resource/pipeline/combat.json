@@ -15,6 +15,15 @@
             153
         ],
         "action": "Click",
+        "post_wait_freezes": {
+            "time": 200,
+            "target": [
+                187,
+                199,
+                133,
+                26
+            ]
+        },
         "next_doc": "Set in code."
     },
     "MainChapter_1": {
@@ -76,7 +85,16 @@
             145,
             142
         ],
-        "action": "Click"
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 200,
+            "target": [
+                187,
+                199,
+                133,
+                26
+            ]
+        }
     },
     "ResourceChapter_LP": {
         "doc": "尘埃运动",
@@ -151,7 +169,16 @@
             157,
             133
         ],
-        "action": "Click"
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 200,
+            "target": [
+                187,
+                199,
+                133,
+                26
+            ]
+        }
     },
     "PromotionChapter_ME": {
         "doc": "群山之声",
