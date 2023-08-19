@@ -311,7 +311,7 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
         std::getline(std::cin, client_type_id_tmp);
         int client_type_id = std::stoi(client_type_id_tmp);
         if (1 > client_type_id || client_type_id > 2) {
-            std::cout << "Unknown task: " << id << std::endl;
+            std::cout << "Unknown Client Type: " << client_type_id << std::endl;
                 return false;
         }
         std::cout << std::endl
@@ -359,7 +359,7 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
             switch (id) {
             case 1:
                 task_obj.type = "StartUp";
-                task_onj.param = startup_param(client_type_id);
+                task_obj.param = startup_param(client_type_id);
                 break;
             case 2:
                 task_obj.type = "Wilderness";
