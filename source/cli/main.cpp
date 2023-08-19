@@ -306,6 +306,9 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
                   << std::endl
                   << MAA_NS::utf8_to_stdout("1. 官服\n"
                                             "2. Bilibili服\n")
+                  << std::endl
+                  << std::endl
+                  << MAA_NS::utf8_to_stdout("请输入客户端类型，例如 1: ")
                   << std::endl;
         std::string client_type_id_tmp;
         std::getline(std::cin, client_type_id_tmp);
