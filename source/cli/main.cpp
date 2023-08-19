@@ -235,6 +235,28 @@ json::value combat_param(int index)
     return param;
 }
 
+json::value startup_param(int index)
+{
+    json::value param;
+    auto& diff = param["diff_task"];
+
+    auto& package = diff["Sub_Start1999"]["package"];
+
+    switch (index)
+    {
+    case 1:
+        //"1. 官服\n"
+        package = "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity";
+        break;
+    case 2:
+        //"1. B服\n"
+        package = "com.shenlan.m.reverse1999.bilibili/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity";
+        break;
+    }
+
+    return param;
+}
+
 bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string& adb_address, TaskList& tasks,
                MaaAdbControllerType& ctrl_type)
 {
@@ -280,6 +302,18 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
                   << std::endl
                   << MAA_NS::utf8_to_stdout("请输入 adb 地址，例如 127.0.0.1:5555：") << std::endl;
         std::getline(std::cin, adb_address);
+        std::cout << MAA_NS::utf8_to_stdout("请选择客户端类型：") << std::endl
+                  << std::endl
+                  << MAA_NS::utf8_to_stdout("1. 官服\n"
+                                            "2. Bilibili服\n")
+                  << std::endl;
+        std::string client_type_id_tmp;
+        std::getline(std::cin, client_type_id_tmp);
+        int client_type_id = std::stoi(client_type_id_tmp);
+        if (1 > client_type_id || client_type_id > 2) {
+            std::cout << "Unknown task: " << id << std::endl;
+                return false;
+        }
         std::cout << std::endl
                   << std::endl
                   << MAA_NS::utf8_to_stdout("选择任务，会自动登录，但不会启动模拟器") << std::endl
@@ -325,6 +359,7 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
             switch (id) {
             case 1:
                 task_obj.type = "StartUp";
+                task_onj.param = startup_param(client_type_id);
                 break;
             case 2:
                 task_obj.type = "Wilderness";
