@@ -302,7 +302,9 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
                   << std::endl
                   << MAA_NS::utf8_to_stdout("请输入 adb 地址，例如 127.0.0.1:5555：") << std::endl;
         std::getline(std::cin, adb_address);
-        std::cout << MAA_NS::utf8_to_stdout("请选择客户端类型：") << std::endl
+        std::cout << std::endl
+                  << std::endl
+                  << MAA_NS::utf8_to_stdout("请选择客户端类型：") << std::endl
                   << std::endl
                   << MAA_NS::utf8_to_stdout("1. 官服\n"
                                             "2. Bilibili服\n")
