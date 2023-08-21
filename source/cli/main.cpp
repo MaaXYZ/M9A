@@ -269,7 +269,7 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
     if (auto config_opt = json::open("config.json")) {
         auto& confing = *config_opt;
 
-        debug = confing["debug"].as_boolean();
+        debug = confing.get("debug", false);
         adb = confing["adb"].as_string();
         adb_address = confing["adb_address"].as_string();
 
