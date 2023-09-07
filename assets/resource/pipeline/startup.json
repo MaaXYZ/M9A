@@ -9,6 +9,7 @@
             "Sub_AccumulatedSignIn",
             "Sub_BirthdayReward",
             "Sub_Reward",
+            "Sub_CloseDuringFestivalDipaRewardPage",
             "StartGame",
             "CloseAnnouncement",
             "Download",
@@ -29,6 +30,7 @@
             "Sub_AccumulatedSignIn",
             "Sub_BirthdayReward",
             "Sub_Reward",
+            "Sub_CloseDuringFestivalDipaRewardPage",
             "StartGame",
             "CloseAnnouncement",
             "Download",
@@ -147,6 +149,7 @@
             "Sub_BirthdayReward",
             "Sub_Reward",
             "Sub_HomeLoading",
+            "Sub_CloseDuringFestivalDipaRewardPage",
             "HomeFlag",
             "StartGame",
             "CloseAnnouncement"
@@ -243,6 +246,18 @@
             273,
             121,
             121
+        ],
+        "action": "Click"
+    },
+    "Sub_CloseDuringFestivalDipaRewardPage": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "StartUp/CloseDuringFestivalDipaRewardPage.png",
+        "roi": [
+            1069,
+            68,
+            138,
+            138
         ],
         "action": "Click"
     }

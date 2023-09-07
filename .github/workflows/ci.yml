@@ -55,7 +55,8 @@ jobs:
         uses: robinraju/release-downloader@v1.8
         with:
           repository: MaaAssistantArknights/MaaFramework
-          latest: true
+          latest: false
+          tag: "v0.3.5"
           fileName: "MAA-win-x86_64*"
           out-file-path: "source/cli/${{ matrix.msbuild_target }}/Release"
           extract: true
