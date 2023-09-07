@@ -56,7 +56,7 @@ jobs:
         with:
           repository: MaaAssistantArknights/MaaFramework
           latest: true
-          fileName: "MAA-win-x86_64*"
+          fileName: "MAA-win-x86_64-v0.3.5"
           out-file-path: "source/cli/${{ matrix.msbuild_target }}/Release"
           extract: true
 
