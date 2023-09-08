@@ -19,9 +19,10 @@ struct Task
 using TaskList = std::vector<Task>;
 
 void print_help();
-bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string& adb_address, TaskList& tasks,
+bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string& adb_address, int& client_type, TaskList& tasks,
                MaaAdbControllerType& ctrl_type);
-void save_config(const std::string& adb, const std::string& adb_address, const TaskList& tasks,
+bool app_package_and_activity(int client_type, std::string& package, std::string& activity);
+void save_config(const std::string& adb, const std::string& adb_address, int& client_type, const TaskList& tasks,
                  MaaAdbControllerType ctrl_type);
 std::string read_adb_config(const std::filesystem::path& cur_dir);
 void mpause();
@@ -33,12 +34,21 @@ int main(int argc, char** argv)
     bool debug = false;
     std::string adb = "adb";
     std::string adb_address = "127.0.0.1:5555";
+    int client_type = 1;
+    std::string package = "com.shenlan.m.reverse1999";
+    std::string activity = "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity";
     TaskList tasks;
     MaaAdbControllerType control_type = 0;
 
-    bool proced = proc_argv(argc, argv, debug, adb, adb_address, tasks, control_type);
+    bool proced = proc_argv(argc, argv, debug, adb, adb_address, client_type, tasks, control_type);
     if (!proced) {
         std::cout << "Failed to parse argv" << std::endl;
+        mpause();
+        return -1;
+    }
+    bool identified = app_package_and_activity(client_type, package, activity);
+    if (!identified) {
+        std::cout << "Failed to identify the client type" << std::endl;
         mpause();
         return -1;
     }
@@ -66,6 +76,8 @@ int main(int argc, char** argv)
     int height = 720;
     MaaControllerSetOption(controller_handle, MaaCtrlOption_ScreenshotTargetShortSide, reinterpret_cast<void*>(&height),
                            sizeof(int));
+    MaaControllerSetOption(controller_handle, MaaCtrlOption_DefaultAppPackageEntry, (void*)activity.c_str(), activity.size());
+    MaaControllerSetOption(controller_handle, MaaCtrlOption_DefaultAppPackage, (void*)package.c_str(), package.size());
 
     auto resource_id = MaaResourcePostPath(resource_handle, resource_dir.c_str());
     auto connection_id = MaaControllerPostConnection(controller_handle);
@@ -236,29 +248,28 @@ json::value combat_param(int index)
     return param;
 }
 
-json::value startup_param(int index)
+bool app_package_and_activity(int client_type, std::string& package, std::string& activity)
 {
-    json::value param;
-    auto& diff = param["diff_task"];
-
-    auto& package = diff["Sub_Start1999"]["package"];
-
-    switch (index) {
+    switch (client_type) {
     case 1:
         //"1. 官服\n"
-        package = "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity";
+        package = "com.shenlan.m.reverse1999";
+        activity = "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity";
         break;
     case 2:
         //"1. B服\n"
-        package = "com.shenlan.m.reverse1999.bilibili/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity";
+        package = "com.shenlan.m.reverse1999.bilibili";
+        activity = "com.shenlan.m.reverse1999.bilibili/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity";
         break;
+    default:
+        return false;
     }
 
-    return param;
+    return true;
 }
 
-bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string& adb_address, TaskList& tasks,
-               MaaAdbControllerType& ctrl_type)
+bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string& adb_address, int& client_type,
+               TaskList& tasks, MaaAdbControllerType& ctrl_type)
 {
     int touch = 1;
     int key = 1;
@@ -272,6 +283,7 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
         debug = confing.get("debug", false);
         adb = confing["adb"].as_string();
         adb_address = confing["adb_address"].as_string();
+        client_type = confing.get("client", client_type);
 
         int index = 1;
         for (auto& task : confing["tasks"].as_array()) {
@@ -302,18 +314,18 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
         std::getline(std::cin, adb_address);
         std::cout << std::endl
                   << std::endl
-                  << utf8_to_crt("请选择客户端类型：") << std::endl
+                  << utf8_to_crt("选择客户端类型：") << std::endl
                   << std::endl
                   << utf8_to_crt("1. 官服\n"
                                  "2. Bilibili服\n")
                   << std::endl
                   << std::endl
-                  << utf8_to_crt("请输入客户端类型，例如 1: ") << std::endl;
-        std::string client_type_id_tmp;
-        std::getline(std::cin, client_type_id_tmp);
-        int client_type_id = std::stoi(client_type_id_tmp);
-        if (1 > client_type_id || client_type_id > 2) {
-            std::cout << "Unknown Client Type: " << client_type_id << std::endl;
+                  << utf8_to_crt("请输入客户端类型序号，例如 1: ") << std::endl;
+        std::string client_type_tmp;
+        std::getline(std::cin, client_type_tmp);
+        client_type = std::stoi(client_type_tmp);
+        if (1 > client_type || client_type > 2) {
+            std::cout << "Unknown Client Type: " << client_type << std::endl;
             return false;
         }
         std::cout << std::endl
@@ -360,7 +372,6 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
             switch (id) {
             case 1:
                 task_obj.type = "StartUp";
-                task_obj.param = startup_param(client_type_id);
                 break;
             case 2:
                 task_obj.type = "Wilderness";
@@ -403,7 +414,7 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
         }
 
         ctrl_type = touch << 0 | key << 8 | screencap << 16;
-        save_config(adb, adb_address, tasks, ctrl_type);
+        save_config(adb, adb_address, client_type, tasks, ctrl_type);
     }
 
     if (argc >= 3) {
@@ -429,8 +440,8 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
     return true;
 }
 
-void save_config(const std::string& adb, const std::string& adb_address, const TaskList& tasks,
-                 MaaAdbControllerType ctrl_type)
+void save_config(const std::string& adb, const std::string& adb_address, int& client_type,
+                 const TaskList& tasks, MaaAdbControllerType ctrl_type)
 {
     json::value config;
     config["debug"] = false;
@@ -438,6 +449,8 @@ void save_config(const std::string& adb, const std::string& adb_address, const T
     config["adb_Doc"] = "adb.exe 所在路径，相对绝对均可";
     config["adb_address"] = adb_address;
     config["adb_address_Doc"] = "adb 连接地址，例如 127.0.0.1:5555";
+    config["client_type"] = client_type;
+    config["client_type_Doc"] = "客户端类型：1: 官服, 2: Bilibili服";
 
     json::value tasks_array;
     for (auto& task : tasks) {
