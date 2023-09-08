@@ -1,5 +1,9 @@
 include_directories(${CMAKE_SOURCE_DIR}/deps/include)
-link_directories(${CMAKE_SOURCE_DIR}/deps/lib)
+if (WIN32)
+    link_directories(${CMAKE_SOURCE_DIR}/deps/lib)
+else ()
+    link_directories(${CMAKE_SOURCE_DIR}/deps/bin)
+endif ()
 
 add_executable(MAA1999_CLI main.cpp)
 target_link_libraries(MAA1999_CLI PRIVATE MaaFramework MaaToolkit)
