@@ -211,6 +211,7 @@ jobs:
           CXX: "/usr/local/opt/llvm/bin/clang++"
         run: |
           cmake --preset 'NinjaMulti' \
+            -DARCH='${{ matrix.arch == 'x86_64' && 'x64' || 'arm64' }}' \
             -DM9A_HASH_VERSION='${{ needs.meta.outputs.tag }}'
 
           cmake --build build --preset 'NinjaMulti - Release' -j 16
