@@ -91,12 +91,10 @@ jobs:
 
       - name: Install
         shell: bash
-        if: always()
         run: |
           cmake --install build --prefix install
 
       - uses: actions/upload-artifact@v3
-        if: always()
         with:
           name: MAA1999-win-${{ matrix.arch }}
           path: "install"
@@ -163,12 +161,10 @@ jobs:
 
       - name: Install
         shell: bash
-        if: always()
         run: |
           cmake --install build --prefix install
 
       - uses: actions/upload-artifact@v3
-        if: always()
         with:
           name: MAA1999-linux-${{ matrix.arch }}
           path: "install"
@@ -221,12 +217,10 @@ jobs:
 
       - name: Install
         shell: bash
-        if: always()
         run: |
           cmake --install build --prefix install
 
       - uses: actions/upload-artifact@v3
-        if: always()
         with:
           name: MAA1999-macos-${{ matrix.arch }}
           path: "install"
