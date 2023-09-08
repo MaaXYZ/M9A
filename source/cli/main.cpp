@@ -21,6 +21,7 @@ using TaskList = std::vector<Task>;
 void print_help();
 bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string& adb_address, int& client_type, TaskList& tasks,
                MaaAdbControllerType& ctrl_type);
+bool app_package_and_activity(int client_type, std::string& package, std::string& activity);
 void save_config(const std::string& adb, const std::string& adb_address, int& client_type, const TaskList& tasks,
                  MaaAdbControllerType ctrl_type);
 std::string read_adb_config(const std::filesystem::path& cur_dir);
