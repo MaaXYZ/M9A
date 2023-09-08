@@ -3,28 +3,28 @@ name: build cli
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
     branches:
-      - '**'
+      - "**"
     paths:
-      - '.github/workflows/ci.yml'
-      - 'source/cli/**'
-      - 'MaaFramework/**'
-      - 'assets/**'
-      - 'cmake/**'
-      - 'CMakelists.txt'
-      - 'CMakePresets.json'
+      - ".github/workflows/ci.yml"
+      - "source/cli/**"
+      - "MaaFramework/**"
+      - "assets/**"
+      - "cmake/**"
+      - "CMakelists.txt"
+      - "CMakePresets.json"
   pull_request:
     branches:
-      - '**'
+      - "**"
     paths:
-      - '.github/workflows/ci.yml'
-      - 'source/cli/**'
-      - 'MaaFramework/**'
-      - 'assets/**'
-      - 'cmake/**'
-      - 'CMakelists.txt'
-      - 'CMakePresets.json'
+      - ".github/workflows/ci.yml"
+      - "source/cli/**"
+      - "MaaFramework/**"
+      - "assets/**"
+      - "cmake/**"
+      - "CMakelists.txt"
+      - "CMakePresets.json"
   workflow_dispatch:
 
 jobs:
@@ -87,7 +87,7 @@ jobs:
         run: |
           cmake --preset "${{ matrix.arch == 'x86_64' && 'MSVC 2022' || 'MSVC 2022 ARM' }}" -DM9A_HASH_VERSION='${{ needs.meta.outputs.tag }}'
 
-          cmake --build build --preset "${{ matrix.arch == 'x86_64' && 'MSVC 2022' || 'MSVC 2022 ARM' }} - Release" -j 16
+          cmake --build build --config Release -j 16
 
       - name: Install
         shell: bash
@@ -98,7 +98,6 @@ jobs:
         with:
           name: MAA1999-win-${{ matrix.arch }}
           path: "install"
-
 
   ubuntu:
     needs: meta
@@ -157,7 +156,7 @@ jobs:
           cmake --preset 'NinjaMulti' \
             -DM9A_HASH_VERSION='${{ needs.meta.outputs.tag }}'
 
-          cmake --build build --preset 'NinjaMulti - Release' -j 16
+          cmake --build build --config Release -j 16
 
       - name: Install
         shell: bash
@@ -214,7 +213,7 @@ jobs:
             -DARCH='${{ matrix.arch == 'x86_64' && 'x64' || 'arm64' }}' \
             -DM9A_HASH_VERSION='${{ needs.meta.outputs.tag }}'
 
-          cmake --build build --preset 'NinjaMulti - Release' -j 16
+          cmake --build build --config Release -j 16
 
       - name: Install
         shell: bash
