@@ -1,6 +1,0 @@
-[submodule "MaaFramework"]
-	path = MaaFramework
-	url = https://github.com/MaaAssistantArknights/MaaFramework.git
-[submodule "assets/MaaAgentBinary"]
-	path = assets/MaaAgentBinary
-	url = https://github.com/MaaAssistantArknights/MaaAgentBinary.git

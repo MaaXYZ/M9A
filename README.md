@@ -19,22 +19,33 @@
 **如果你要编译源码才看这节，否则直接 [下载](https://github.com/MaaAssistantArknights/MAA1999/releases) 即可**
 
 1. 下载 MaaFramework 的 [Release 包](https://github.com/MaaAssistantArknights/MaaFramework/releases)，解压到 `deps` 文件夹中
-2. 使用 cmake 创建工程
-
-    ```bash
-    mkdir -p build
-    cd build
-    cmake ..
-    ```
-
-3. 编译
+2. 配置 cmake
 
     - Windows  
-    双击打开 `build/MAA1999.sln`, 进行编译
-    - Linux / macOS  
-    应该不用我教.jpg
 
-4. `tools/CropRoi` 是个小工具，可以用来裁剪图片和获取 ROI
+    ```bash
+    cmake --preset 'MSVC 2022'
+    ```
+
+    - Linux / macOS
+
+    ```bash
+    cmake --preset 'NinjaMulti'
+    ```
+
+3. 使用 cmake 构建工程  
+
+    ```bash
+    cmake --build build --config Release
+    cmake --install build --prefix install
+    ```
+
+    生成的二进制及相关资源文件在 install 目录下
+
+## 开发相关
+
+- `tools/CropRoi` 可以用来裁剪图片和获取 ROI
+- Pipeline 协议可以参考 [MaaFramework 的文档](https://github.com/MaaAssistantArknights/MaaFramework/blob/main/docs/zh_cn/3.3-%E4%BB%BB%E5%8A%A1%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%8D%8F%E8%AE%AE.md)
 
 ## Join us
 

@@ -439,6 +439,10 @@ enc_temp_folder/*
 # Nuke
 .nuke/temp/*
 
-build
+# Build
 deps
+build
+install
+
+# Tools
 tools/CropRoi/**/*.png

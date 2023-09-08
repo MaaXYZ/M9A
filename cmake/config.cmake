@@ -2,7 +2,6 @@ set(debug_comp_defs "_DEBUG;MAA_DEBUG")
 add_compile_definitions("$<$<CONFIG:Debug>:${debug_comp_defs}>")
 
 set(rel_debug_comp_defs "MAA_DEBUG")
-add_compile_definitions("$<$<CONFIG:DebWithRelDeps>:${rel_debug_comp_defs}>")
 
 if (MSVC)
     add_compile_options("/utf-8")
@@ -12,7 +11,6 @@ if (MSVC)
     add_compile_options("/wd4251")  # export dll with templates
 
     set(rel_debug_comp_options "/Od")
-    add_compile_options("$<$<CONFIG:DebWithRelDeps>:${rel_debug_comp_options}>")
 
     set(release_link_options "/OPT:REF;/OPT:ICF")
     add_link_options("$<$<CONFIG:Release>:${release_link_options}>")
@@ -25,7 +23,6 @@ else ()
     endif()
 
     set(rel_debug_comp_options "-O0")
-    add_compile_options("$<$<CONFIG:DebWithRelDeps>:${rel_debug_comp_options}>")
 endif ()
 
 if (APPLE)
