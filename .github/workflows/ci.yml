@@ -83,7 +83,7 @@ jobs:
           out-file-path: "deps"
           extract: true
 
-      - name: Build MAA
+      - name: Build M9A
         run: |
           cmake --preset "${{ matrix.arch == 'x86_64' && 'MSVC 2022' || 'MSVC 2022 ARM' }}" -DM9A_HASH_VERSION='${{ needs.meta.outputs.tag }}'
 
@@ -98,7 +98,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         if: always()
         with:
-          name: MAA-win-${{ matrix.arch }}
+          name: MAA1999-win-${{ matrix.arch }}
           path: "install"
 
 
@@ -151,7 +151,7 @@ jobs:
           out-file-path: "deps"
           extract: true
 
-      - name: Build MAA
+      - name: Build M9A
         env:
           CC: ${{ matrix.arch == 'x86_64' && 'ccache gcc' || 'ccache aarch64-linux-gnu-gcc' }}
           CXX: ${{ matrix.arch == 'x86_64' && 'ccache g++' || 'ccache aarch64-linux-gnu-g++' }}
@@ -170,7 +170,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         if: always()
         with:
-          name: MAA-linux-${{ matrix.arch }}
+          name: MAA1999-linux-${{ matrix.arch }}
           path: "install"
 
   macos:
@@ -209,7 +209,7 @@ jobs:
           out-file-path: "deps"
           extract: true
 
-      - name: Build MAA
+      - name: Build M9A
         env:
           CC: "/usr/local/opt/llvm/bin/clang"
           CXX: "/usr/local/opt/llvm/bin/clang++"
@@ -228,7 +228,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         if: always()
         with:
-          name: MAA-macos-${{ matrix.arch }}
+          name: MAA1999-macos-${{ matrix.arch }}
           path: "install"
 
   release:
