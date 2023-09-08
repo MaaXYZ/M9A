@@ -1,12 +1,12 @@
-#include "MaaFramework/MaaAPI.h"
-
-#include "Utils/Locale.hpp" // 不应该 include 这鬼玩意，图方便，先凑合用吧
-#include <meojson/json.hpp>
-
 #include <filesystem>
 #include <fstream>
 #include <iostream>
 #include <string>
+
+#include "MaaFramework/MaaAPI.h"
+
+#include "meojson/json.hpp"
+#include "utils/Locale.hpp"
 
 struct Task
 {
@@ -66,7 +66,7 @@ int main(int argc, char** argv)
     MaaControllerSetOption(controller_handle, MaaCtrlOption_ScreenshotTargetShortSide, reinterpret_cast<void*>(&height),
                            sizeof(int));
 
-    auto resource_id = MaaResourcePostResource(resource_handle, resource_dir.c_str());
+    auto resource_id = MaaResourcePostPath(resource_handle, resource_dir.c_str());
     auto connection_id = MaaControllerPostConnection(controller_handle);
 
     MaaResourceWait(resource_handle, resource_id);
@@ -100,7 +100,7 @@ int main(int argc, char** argv)
 
 void print_help()
 {
-    std::cout << MAA_NS::utf8_to_stdout(
+    std::cout << utf8_to_crt(
                      R"(欢迎使用 MAA 1999 CLI, 源码地址：https://github.com/MaaAssistantArknights/MAA1999
 
 用法: MAA1999.exe [adb路径] [adb地址] [任务名（有序）]...
@@ -242,8 +242,7 @@ json::value startup_param(int index)
 
     auto& package = diff["Sub_Start1999"]["package"];
 
-    switch (index)
-    {
+    switch (index) {
     case 1:
         //"1. 官服\n"
         package = "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity";
@@ -296,55 +295,51 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
     else {
         std::cout << std::endl
                   << std::endl
-                  << MAA_NS::utf8_to_stdout("请输入 adb 路径，例如 C:/adb.exe，不要有中文: ") << std::endl;
+                  << utf8_to_crt("请输入 adb 路径，例如 C:/adb.exe，不要有中文: ") << std::endl;
         std::getline(std::cin, adb);
-        std::cout << std::endl
-                  << std::endl
-                  << MAA_NS::utf8_to_stdout("请输入 adb 地址，例如 127.0.0.1:5555：") << std::endl;
+        std::cout << std::endl << std::endl << utf8_to_crt("请输入 adb 地址，例如 127.0.0.1:5555：") << std::endl;
         std::getline(std::cin, adb_address);
         std::cout << std::endl
                   << std::endl
-                  << MAA_NS::utf8_to_stdout("请选择客户端类型：") << std::endl
+                  << utf8_to_crt("请选择客户端类型：") << std::endl
                   << std::endl
-                  << MAA_NS::utf8_to_stdout("1. 官服\n"
-                                            "2. Bilibili服\n")
+                  << utf8_to_crt("1. 官服\n"
+                                 "2. Bilibili服\n")
                   << std::endl
                   << std::endl
-                  << MAA_NS::utf8_to_stdout("请输入客户端类型，例如 1: ")
-                  << std::endl;
+                  << utf8_to_crt("请输入客户端类型，例如 1: ") << std::endl;
         std::string client_type_id_tmp;
         std::getline(std::cin, client_type_id_tmp);
         int client_type_id = std::stoi(client_type_id_tmp);
         if (1 > client_type_id || client_type_id > 2) {
             std::cout << "Unknown Client Type: " << client_type_id << std::endl;
-                return false;
+            return false;
         }
         std::cout << std::endl
                   << std::endl
-                  << MAA_NS::utf8_to_stdout("选择任务，会自动登录，但不会启动模拟器") << std::endl
+                  << utf8_to_crt("选择任务，会自动登录，但不会启动模拟器") << std::endl
                   << std::endl
-                  << MAA_NS::utf8_to_stdout("1. 启动游戏\n"
-                                            "2. 收取荒原\n"
-                                            "3. 领取奖励\n"
-                                            "4. 每日心相（意志解析）\n"
-                                            "5. 3-9 厄险（百灵百验鸟）\n"
-                                            "6. 4-20 厄险（双头形骨架）\n"
-                                            "7. 2-3 厄险（祝圣秘银）\n"
-                                            "8. 3-13 厄险（盐封曼德拉）\n"
-                                            "9. 4-10 厄险（啮咬盒）\n"
-                                            "10. 3-11 厄险（金爪灵摆）\n"
-                                            "11. 尘埃运动 06\n"
-                                            "12. 猪鼻美学 06\n"
-                                            "13. 丰收时令 04\n"
-                                            "14. 群山之声 06（洞悉 岩）\n"
-                                            "15. 星陨之所 06（洞悉 星）\n"
-                                            "16. 深林之形 06（洞悉 林）\n"
-                                            "17. 荒兽之野 06（洞悉 兽）\n"
-                                            "18. 活动：绿湖噩梦 17 艰难\n")
+                  << utf8_to_crt("1. 启动游戏\n"
+                                 "2. 收取荒原\n"
+                                 "3. 领取奖励\n"
+                                 "4. 每日心相（意志解析）\n"
+                                 "5. 3-9 厄险（百灵百验鸟）\n"
+                                 "6. 4-20 厄险（双头形骨架）\n"
+                                 "7. 2-3 厄险（祝圣秘银）\n"
+                                 "8. 3-13 厄险（盐封曼德拉）\n"
+                                 "9. 4-10 厄险（啮咬盒）\n"
+                                 "10. 3-11 厄险（金爪灵摆）\n"
+                                 "11. 尘埃运动 06\n"
+                                 "12. 猪鼻美学 06\n"
+                                 "13. 丰收时令 04\n"
+                                 "14. 群山之声 06（洞悉 岩）\n"
+                                 "15. 星陨之所 06（洞悉 星）\n"
+                                 "16. 深林之形 06（洞悉 林）\n"
+                                 "17. 荒兽之野 06（洞悉 兽）\n"
+                                 "18. 活动：绿湖噩梦 17 艰难\n")
                   << std::endl
                   << std::endl
-                  << MAA_NS::utf8_to_stdout("请输入要执行的任务序号，可自定义顺序，以空格分隔，例如 1 2 4 12 3: ")
-                  << std::endl;
+                  << utf8_to_crt("请输入要执行的任务序号，可自定义顺序，以空格分隔，例如 1 2 4 12 3: ") << std::endl;
         std::vector<int> task_ids;
         std::string line;
         std::getline(std::cin, line);

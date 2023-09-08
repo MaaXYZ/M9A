@@ -439,6 +439,6 @@ enc_temp_folder/*
 # Nuke
 .nuke/temp/*
 
-# tools
+build
+deps
 tools/CropRoi/**/*.png
-/source/cli/config.json
