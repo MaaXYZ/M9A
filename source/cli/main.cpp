@@ -19,8 +19,8 @@ struct Task
 using TaskList = std::vector<Task>;
 
 void print_help();
-bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string& adb_address, int& client_type, TaskList& tasks,
-               MaaAdbControllerType& ctrl_type);
+bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string& adb_address, int& client_type,
+               TaskList& tasks, MaaAdbControllerType& ctrl_type);
 bool app_package_and_activity(int client_type, std::string& package, std::string& activity);
 void save_config(const std::string& adb, const std::string& adb_address, int& client_type, const TaskList& tasks,
                  MaaAdbControllerType ctrl_type);
@@ -76,7 +76,8 @@ int main(int argc, char** argv)
     int height = 720;
     MaaControllerSetOption(controller_handle, MaaCtrlOption_ScreenshotTargetShortSide, reinterpret_cast<void*>(&height),
                            sizeof(int));
-    MaaControllerSetOption(controller_handle, MaaCtrlOption_DefaultAppPackageEntry, (void*)activity.c_str(), activity.size());
+    MaaControllerSetOption(controller_handle, MaaCtrlOption_DefaultAppPackageEntry, (void*)activity.c_str(),
+                           activity.size());
     MaaControllerSetOption(controller_handle, MaaCtrlOption_DefaultAppPackage, (void*)package.c_str(), package.size());
 
     auto resource_id = MaaResourcePostPath(resource_handle, resource_dir.c_str());
@@ -243,6 +244,14 @@ json::value combat_param(int index)
         difficulty = "ActivityStageDifficulty";
         times = "1";
         break;
+
+    case 19:
+        //"19. 活动：行至摩卢旁卡 16 艰难\n"
+        chapter = "JourneytoMorPankh";
+        stage = "16";
+        difficulty = "ActivityStageDifficulty";
+        times = "1";
+        break;
     }
 
     return param;
@@ -349,7 +358,8 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
                                  "15. 星陨之所 06（洞悉 星）\n"
                                  "16. 深林之形 06（洞悉 林）\n"
                                  "17. 荒兽之野 06（洞悉 兽）\n"
-                                 "18. 活动：绿湖噩梦 17 艰难\n")
+                                 "18. 活动：绿湖噩梦 17 艰难（活动已结束）\n"
+                                 "19. 活动：行至摩卢旁卡 16 艰难\n")
                   << std::endl
                   << std::endl
                   << utf8_to_crt("请输入要执行的任务序号，可自定义顺序，以空格分隔，例如 1 2 4 12 3: ") << std::endl;
@@ -406,6 +416,11 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
                 task_obj.param = combat_param(id);
                 break;
 
+            case 19:
+                task_obj.type = "JourneytoMorPankh";
+                task_obj.param = combat_param(id);
+                break;
+
             default:
                 std::cout << "Unknown task: " << id << std::endl;
                 return false;
@@ -440,8 +455,8 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
     return true;
 }
 
-void save_config(const std::string& adb, const std::string& adb_address, int& client_type,
-                 const TaskList& tasks, MaaAdbControllerType ctrl_type)
+void save_config(const std::string& adb, const std::string& adb_address, int& client_type, const TaskList& tasks,
+                 MaaAdbControllerType ctrl_type)
 {
     json::value config;
     config["debug"] = false;

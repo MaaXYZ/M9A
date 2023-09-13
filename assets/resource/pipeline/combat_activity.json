@@ -1,37 +1,4 @@
 {
-    "ANightmareAtGreenLake": {
-        "next": [
-            "ANightmareAtGreenLakeEnterTheShow",
-            "Sub_StartUp"
-        ]
-    },
-    "ANightmareAtGreenLakeEnterTheShow": {
-        "recognition": "TemplateMatch",
-        "template": "Combat/Activity/ANightmareAtGreenLakeEnterTheShow.png",
-        "roi": [
-            940,
-            144,
-            244,
-            146
-        ],
-        "action": "Click",
-        "post_wait_freezes": 1,
-        "next": [
-            "ANightmareAtGreenLakeMainChapter"
-        ]
-    },
-    "ANightmareAtGreenLakeMainChapter": {
-        "recognition": "TemplateMatch",
-        "template": "Combat/Activity/ANightmareAtGreenLakeMainChapter.png",
-        "roi": [
-            892,
-            400,
-            146,
-            177
-        ],
-        "action": "Click",
-        "next": "SwipeLeftAndFindStage"
-    },
     "ActivityStageDifficulty": {
         "next": [
             "ActivityStageDifficulty_Hard",
