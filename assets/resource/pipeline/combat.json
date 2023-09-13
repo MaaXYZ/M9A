@@ -387,6 +387,7 @@
     "SwitchToReplay": {
         "recognition": "TemplateMatch",
         "template": "Combat/SwitchToReplay.png",
+        "threshold": 0.8,
         "roi": [
             530,
             561,
