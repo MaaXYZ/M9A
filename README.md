@@ -24,13 +24,13 @@
     - Windows  
 
     ```bash
-    cmake --preset 'MSVC 2022'
+    cmake --preset "MSVC 2022"
     ```
 
     - Linux / macOS
 
     ```bash
-    cmake --preset 'NinjaMulti'
+    cmake --preset "NinjaMulti"
     ```
 
 3. 使用 cmake 构建工程  
