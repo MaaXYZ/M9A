@@ -157,7 +157,7 @@
             108
         ],
         "action": "Click",
-        "post_wait_freezes": 200,
+        "post_wait_freezes": 1,
         "next": [
             "Sub_CollectJukeboxExp",
             "Sub_JukeboxAwardsBadge",

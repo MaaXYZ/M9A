@@ -241,6 +241,7 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "StartUp/BirthdayReward.png",
+        "threshold": 0.8,
         "roi": [
             803,
             273,
