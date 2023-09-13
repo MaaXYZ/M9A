@@ -13,4 +13,4 @@ target_link_libraries(MAA1999_CLI PRIVATE MaaFramework MaaToolKit)
 
 add_dependencies(MAA1999_CLI AssetsResource)
 
-install(TARGETS MAA1999_CLI RUNTIME DESTINATION share)
+install(TARGETS MAA1999_CLI RUNTIME DESTINATION .)
