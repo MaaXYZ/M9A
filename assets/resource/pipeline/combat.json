@@ -388,10 +388,10 @@
         "recognition": "TemplateMatch",
         "template": "Combat/SwitchToReplay.png",
         "roi": [
-            781,
-            581,
-            145,
-            139
+            530,
+            561,
+            426,
+            159
         ],
         "action": "Click",
         "next": [
