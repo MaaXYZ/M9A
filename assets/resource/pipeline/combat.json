@@ -387,12 +387,19 @@
     "SwitchToReplay": {
         "recognition": "TemplateMatch",
         "template": "Combat/SwitchToReplay.png",
-        "threshold": 0.8,
         "roi": [
-            530,
-            561,
-            426,
-            159
+            [
+                781,
+                581,
+                145,
+                139
+            ],
+            [
+                548,
+                569,
+                166,
+                151
+            ]
         ],
         "action": "Click",
         "next": [
