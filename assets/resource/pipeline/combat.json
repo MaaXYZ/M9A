@@ -381,6 +381,7 @@
         "action": "Click",
         "next": [
             "SwitchToReplay",
+            "AllIn",
             "OpenReplaysTimes"
         ]
     },
@@ -403,6 +404,7 @@
         ],
         "action": "Click",
         "next": [
+            "AllIn",
             "OpenReplaysTimes"
         ]
     },
@@ -421,6 +423,66 @@
             "StartReplay"
         ]
     },
+    "OpenReplaysTimesX4": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/OpenReplaysTimes.png",
+        "roi": [
+            737,
+            586,
+            174,
+            134
+        ],
+        "action": "Click",
+        "next": [
+            "SetReplaysTimesX4",
+            "OpenReplaysTimesX4"
+        ]
+    },
+    "OpenReplaysTimesX3": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/OpenReplaysTimes.png",
+        "roi": [
+            737,
+            586,
+            174,
+            134
+        ],
+        "action": "Click",
+        "next": [
+            "SetReplaysTimesX3",
+            "OpenReplaysTimesX3"
+        ]
+    },
+    "OpenReplaysTimesX2": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/OpenReplaysTimes.png",
+        "roi": [
+            737,
+            586,
+            174,
+            134
+        ],
+        "action": "Click",
+        "next": [
+            "SetReplaysTimesX2",
+            "OpenReplaysTimesX2"
+        ]
+    },
+    "OpenReplaysTimesX1": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/OpenReplaysTimes.png",
+        "roi": [
+            737,
+            586,
+            174,
+            134
+        ],
+        "action": "Click",
+        "next": [
+            "SetReplaysTimesX1",
+            "OpenReplaysTimesX1"
+        ]
+    },
     "SetReplaysTimes": {
         "recognition": "OCR",
         "text_doc": "Set in code.",
@@ -433,6 +495,78 @@
         "action": "Click",
         "next": [
             "StartReplay"
+        ]
+    },
+    "SetReplaysTimesX4": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/SetReplaysTimesX4.png",
+            "Combat/SetReplaysTimesX4_selected.png"
+        ],
+        "roi": [
+            764,
+            352,
+            142,
+            124
+        ],
+        "action": "Click",
+        "next": [
+            "SetReplaysTimesX4",
+            "StartReplayX4"
+        ]
+    },
+    "SetReplaysTimesX3": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/SetReplaysTimesX3.png",
+            "Combat/SetReplaysTimesX3_selected.png"
+        ],
+        "roi": [
+            764,
+            413,
+            141,
+            124
+        ],
+        "action": "Click",
+        "next": [
+            "SetReplaysTimesX3",
+            "StartReplayX3"
+        ]
+    },
+    "SetReplaysTimesX2": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/SetReplaysTimesX2.png",
+            "Combat/SetReplaysTimesX2_selected.png"
+        ],
+        "roi": [
+            763,
+            473,
+            143,
+            126
+        ],
+        "action": "Click",
+        "next": [
+            "SetReplaysTimesX2",
+            "StartReplayX2"
+        ]
+    },
+    "SetReplaysTimesX1": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/SetReplaysTimesX1.png",
+            "Combat/SetReplaysTimesX1_selected.png"
+        ],
+        "roi": [
+            763,
+            535,
+            141,
+            126
+        ],
+        "action": "Click",
+        "next": [
+            "SetReplaysTimesX1",
+            "StartReplayX1"
         ]
     },
     "StartReplay": {
@@ -453,6 +587,78 @@
             "RecoveryPage"
         ]
     },
+    "StartReplayX4": {
+        "recognition": "OCR",
+        "text": [
+            "复现"
+        ],
+        "roi": [
+            958,
+            537,
+            235,
+            136
+        ],
+        "action": "Click",
+        "next": [
+            "Replaying",
+            "StartReplayX4",
+            "RecoveryPageByX4"
+        ]
+    },
+    "StartReplayX3": {
+        "recognition": "OCR",
+        "text": [
+            "复现"
+        ],
+        "roi": [
+            958,
+            537,
+            235,
+            136
+        ],
+        "action": "Click",
+        "next": [
+            "Replaying",
+            "StartReplayX3",
+            "RecoveryPageByX3"
+        ]
+    },
+    "StartReplayX2": {
+        "recognition": "OCR",
+        "text": [
+            "复现"
+        ],
+        "roi": [
+            958,
+            537,
+            235,
+            136
+        ],
+        "action": "Click",
+        "next": [
+            "Replaying",
+            "StartReplayX2",
+            "RecoveryPageByX2"
+        ]
+    },
+    "StartReplayX1": {
+        "recognition": "OCR",
+        "text": [
+            "复现"
+        ],
+        "roi": [
+            958,
+            537,
+            235,
+            136
+        ],
+        "action": "Click",
+        "next": [
+            "Replaying",
+            "StartReplayX1",
+            "RecoveryPageByX1"
+        ]
+    },
     "RecoveryPage": {
         "recognition": "OCR",
         "text": [
@@ -467,6 +673,82 @@
         ],
         "action": "Click",
         "target": "StartReplay",
+        "next": [
+            "HomeFlag",
+            "Sub_StartUp"
+        ]
+    },
+    "RecoveryPageByX4": {
+        "recognition": "OCR",
+        "text": [
+            "活性",
+            "恢复"
+        ],
+        "roi": [
+            465,
+            571,
+            277,
+            149
+        ],
+        "action": "Click",
+        "target": "StartReplayX4",
+        "next": [
+            "OpenReplaysTimesX3",
+            "SetReplaysTimesX3"
+        ]
+    },
+    "RecoveryPageByX3": {
+        "recognition": "OCR",
+        "text": [
+            "活性",
+            "恢复"
+        ],
+        "roi": [
+            465,
+            571,
+            277,
+            149
+        ],
+        "action": "Click",
+        "target": "StartReplayX3",
+        "next": [
+            "OpenReplaysTimesX2",
+            "SetReplaysTimesX2"
+        ]
+    },
+    "RecoveryPageByX2": {
+        "recognition": "OCR",
+        "text": [
+            "活性",
+            "恢复"
+        ],
+        "roi": [
+            465,
+            571,
+            277,
+            149
+        ],
+        "action": "Click",
+        "target": "StartReplayX2",
+        "next": [
+            "OpenReplaysTimesX1",
+            "SetReplaysTimesX1"
+        ]
+    },
+    "RecoveryPageByX1": {
+        "recognition": "OCR",
+        "text": [
+            "活性",
+            "恢复"
+        ],
+        "roi": [
+            465,
+            571,
+            277,
+            149
+        ],
+        "action": "Click",
+        "target": "StartReplayX1",
         "next": [
             "HomeFlag",
             "Sub_StartUp"
@@ -505,8 +787,18 @@
         "action": "Click",
         "next": [
             "Victory",
+            "AllIn",
             "HomeFlag",
             "Sub_StartUp"
+        ]
+    },
+    "AllIn": {
+        "enabled": false,
+        "next": [
+            "OpenReplaysTimesX4",
+            "SetReplaysTimesX4",
+            "StartReplayX4",
+            "RecoveryPageByX4"
         ]
     }
 }

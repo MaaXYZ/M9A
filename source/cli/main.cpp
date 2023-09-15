@@ -141,6 +141,8 @@ json::value combat_param(int index)
     auto& stage = diff["TargetStageName"]["text"];
     auto& difficulty = diff["StageDifficulty"]["next"];
     auto& times = diff["SetReplaysTimes"]["text"];
+    auto& allIn = diff["AllIn"]["enabled"];
+    allIn = false;
 
     switch (index) {
     case 5:
