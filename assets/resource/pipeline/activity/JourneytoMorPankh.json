@@ -17,6 +17,7 @@
         "action": "Click",
         "post_wait_freezes": 1,
         "next": [
+            "JourneytoMorPankhEnterTheShow",
             "JourneytoMorPankhMainChapter"
         ]
     },
@@ -30,6 +31,9 @@
             152
         ],
         "action": "Click",
-        "next": "SwipeLeftAndFindStage"
+        "next": [
+            "JourneytoMorPankhMainChapter",
+            "SwipeLeftAndFindStage"
+        ]
     }
 }
