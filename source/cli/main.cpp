@@ -141,8 +141,15 @@ json::value combat_param(int index)
     auto& stage = diff["TargetStageName"]["text"];
     auto& difficulty = diff["StageDifficulty"]["next"];
     auto& times = diff["SetReplaysTimes"]["text"];
-    auto& allIn = diff["AllIn"]["enabled"];
-    allIn = false;
+    auto& all_in = diff["AllIn"]["enabled"];
+    auto& all_in_doc = diff["AllIn"]["doc"];
+    auto& eat_candy_within_24h = diff["EatCandyWithin24H"]["enabled"];
+    auto& eat_candy_within_24h_doc = diff["EatCandyWithin24H"]["doc"];
+    
+    all_in = false;
+    all_in_doc = "刷活性；默认false";
+    eat_candy_within_24h = false;
+    eat_candy_within_24h_doc = "无限吃24小时内过期的糖；默认false，前置条件：开启刷活性";
 
     switch (index) {
     case 5:
