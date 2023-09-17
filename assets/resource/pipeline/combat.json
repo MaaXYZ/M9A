@@ -379,16 +379,6 @@
             220
         ],
         "action": "Click",
-        "post_wait_freezes": {
-            "time": 1000,
-            "target": [
-                0,
-                0,
-                640,
-                720
-            ],
-            "threshold": 0.95
-        },
         "next": [
             "SwitchToReplay",
             "AllIn",
@@ -804,6 +794,16 @@
     },
     "AllIn": {
         "enabled": false,
+        "recognition": "OCR",
+        "text": [
+            "复现"
+        ],
+        "roi": [
+            958,
+            537,
+            235,
+            136
+        ],
         "next": [
             "OpenReplaysTimesX4",
             "SetReplaysTimesX4",
