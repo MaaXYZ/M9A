@@ -164,8 +164,8 @@
         "action": "Click",
         "next": [
             "Replaying",
-            "StartReplayX4",
-            "RecoveryPageByX4"
+            "RecoveryPageByX4",
+            "StartReplayX4"
         ]
     },
     "StartReplayX3": {
@@ -182,8 +182,8 @@
         "action": "Click",
         "next": [
             "Replaying",
-            "StartReplayX3",
-            "RecoveryPageByX3"
+            "RecoveryPageByX3",
+            "StartReplayX3"
         ]
     },
     "StartReplayX2": {
@@ -200,8 +200,8 @@
         "action": "Click",
         "next": [
             "Replaying",
-            "StartReplayX2",
-            "RecoveryPageByX2"
+            "RecoveryPageByX2",
+            "StartReplayX2"
         ]
     },
     "StartReplayX1": {
@@ -218,8 +218,8 @@
         "action": "Click",
         "next": [
             "Replaying",
-            "StartReplayX1",
-            "RecoveryPageByX1"
+            "RecoveryPageByX1",
+            "StartReplayX1"
         ]
     },
     "RecoveryPageByX4": {
@@ -234,9 +234,8 @@
             277,
             149
         ],
-        "action": "Click",
-        "target": "StartReplayX4",
         "next": [
+            "Sub_QuitEatCandyPage",
             "OpenReplaysTimesX3",
             "SetReplaysTimesX3"
         ]
@@ -253,9 +252,8 @@
             277,
             149
         ],
-        "action": "Click",
-        "target": "StartReplayX3",
         "next": [
+            "Sub_QuitEatCandyPage",
             "OpenReplaysTimesX2",
             "SetReplaysTimesX2"
         ]
@@ -272,9 +270,8 @@
             277,
             149
         ],
-        "action": "Click",
-        "target": "StartReplayX2",
         "next": [
+            "Sub_QuitEatCandyPage",
             "OpenReplaysTimesX1",
             "SetReplaysTimesX1"
         ]
@@ -291,9 +288,9 @@
             277,
             149
         ],
-        "action": "Click",
-        "target": "StartReplayX1",
         "next": [
+            "EatCandyWithin24H",
+            "Sub_QuitEatCandyPage",
             "HomeFlag",
             "Sub_StartUp"
         ]

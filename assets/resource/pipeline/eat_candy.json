@@ -1,0 +1,151 @@
+{
+    "EatCandyWithin24H": {
+        "enabled": false,
+        "next": [
+            "SmallCandy24H",
+            "BigCandy24H",
+            "NotCandy24H"
+        ]
+    },
+    "SmallCandy24H": {
+        "recognition": "OCR",
+        "text": "小时",
+        "roi": [
+            829,
+            65,
+            145,
+            295
+        ],
+        "next": [
+            "EatSmallCandy24H"
+        ]
+    },
+    "BigCandy24H": {
+        "recognition": "OCR",
+        "text": "小时",
+        "roi": [
+            856,
+            373,
+            196,
+            344
+        ],
+        "next": [
+            "EatBigCandy24H"
+        ]
+    },
+    "NotCandy24H": {
+        "recognition": "OCR",
+        "text": [
+            "活性",
+            "恢复"
+        ],
+        "roi": [
+            465,
+            571,
+            277,
+            149
+        ],
+        "next": [
+            "Sub_QuitEatCandyPage",
+            "HomeFlag",
+            "Sub_StartUp"
+        ]
+    },
+    "EatSmallCandy24H": {
+        "recognition": "TemplateMatch",
+        "template": "EatCandy/SmallCandy.png",
+        "roi": [
+            829,
+            65,
+            145,
+            295
+        ],
+        "action": "Click",
+        "next": [
+            "EatCandyConfirm",
+            "SmallCandy24HNotEnough"
+        ]
+    },
+    "EatBigCandy24H": {
+        "recognition": "TemplateMatch",
+        "template": "EatCandy/BigCandy.png",
+        "roi": [
+            856,
+            373,
+            196,
+            344
+        ],
+        "action": "Click",
+        "next": [
+            "EatCandyConfirm",
+            "BigCandy24HNotEnough"
+        ]
+    },
+    "EatCandyConfirm": {
+        "recognition": "TemplateMatch",
+        "template": "EatCandy/Confirm.png",
+        "roi": [
+            709,
+            352,
+            189,
+            151
+        ],
+        "action": "Click",
+        "next": [
+            "Sub_QuitEatCandyPage",
+            "AllIn"
+        ]
+    },
+    "SmallCandy24HNotEnough": {
+        "recognition": "OCR",
+        "text": "苦目糖果",
+        "roi": [
+            997,
+            62,
+            282,
+            556
+        ],
+        "next": [
+            "BigCandy24H",
+            "Sub_QuitEatCandyPage",
+            "HomeFlag",
+            "Sub_StartUp"
+        ]
+    },
+    "BigCandy24HNotEnough": {
+        "recognition": "OCR",
+        "text": "苦目糖罐",
+        "roi": [
+            997,
+            62,
+            282,
+            556
+        ],
+        "next": [
+            "Sub_QuitEatCandyPage",
+            "HomeFlag",
+            "Sub_StartUp"
+        ]
+    },
+    "Sub_QuitEatCandyPage": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": [
+            "活性",
+            "恢复"
+        ],
+        "roi": [
+            465,
+            571,
+            277,
+            149
+        ],
+        "action": "Click",
+        "target": [
+            1116,
+            636,
+            155,
+            76
+        ]
+    }
+}
