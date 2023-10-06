@@ -1,0 +1,10 @@
+{
+    "ShutDown": {
+        "next": [
+            "Close1999"
+        ]
+    },
+    "Close1999": {
+        "action": "StopApp"
+    }
+}
