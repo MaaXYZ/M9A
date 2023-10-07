@@ -391,7 +391,7 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
 
             switch (id) {
             case 0:
-                task_obj.type = "ShutDown";
+                task_obj.type = "Close1999";
                 break;
             case 1:
                 task_obj.type = "StartUp";
@@ -489,7 +489,7 @@ void save_config(const std::string& adb, const std::string& adb_address, int& cl
         tasks_array.emplace(std::move(task_obj));
     }
     config["tasks"] = std::move(tasks_array);
-    config["tasks_Doc"] = "要执行的任务 StartUp, Wilderness, Psychube, Awards, Combat, ShutDown";
+    config["tasks_Doc"] = "要执行的任务 StartUp, Wilderness, Psychube, Awards, Combat, Close1999";
 
     config["touch"] = (ctrl_type & MaaAdbControllerType_Touch_Mask) >> 0;
     config["touch_Doc"] = "点击方式：1: Adb, 2: MiniTouch, 3: MaaTouch";
