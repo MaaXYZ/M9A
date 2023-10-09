@@ -350,7 +350,8 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
                   << std::endl
                   << utf8_to_crt("选择任务，会自动登录，但不会启动模拟器") << std::endl
                   << std::endl
-                  << utf8_to_crt("1. 启动游戏\n"
+                  << utf8_to_crt("0. 关闭游戏\n"
+                                 "1. 启动游戏\n"
                                  "2. 收取荒原\n"
                                  "3. 领取奖励\n"
                                  "4. 每日心相（意志解析）\n"
@@ -389,6 +390,9 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
             task_obj.name = "MyTask" + std::to_string(index++);
 
             switch (id) {
+            case 0:
+                task_obj.type = "Close1999";
+                break;
             case 1:
                 task_obj.type = "StartUp";
                 break;
@@ -485,7 +489,7 @@ void save_config(const std::string& adb, const std::string& adb_address, int& cl
         tasks_array.emplace(std::move(task_obj));
     }
     config["tasks"] = std::move(tasks_array);
-    config["tasks_Doc"] = "要执行的任务 StartUp, Wilderness, Psychube, Awards, Combat";
+    config["tasks_Doc"] = "要执行的任务 StartUp, Wilderness, Psychube, Awards, Combat, Close1999";
 
     config["touch"] = (ctrl_type & MaaAdbControllerType_Touch_Mask) >> 0;
     config["touch_Doc"] = "点击方式：1: Adb, 2: MiniTouch, 3: MaaTouch";
