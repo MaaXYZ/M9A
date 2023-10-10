@@ -301,7 +301,7 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
         debug = confing.get("debug", false);
         adb = confing["adb"].as_string();
         adb_address = confing["adb_address"].as_string();
-        client_type = confing.get("client", client_type);
+        client_type = confing.get("client_type", client_type);
 
         int index = 1;
         for (auto& task : confing["tasks"].as_array()) {
