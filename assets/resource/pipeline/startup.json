@@ -99,7 +99,8 @@
     "Download": {
         "recognition": "OCR",
         "text": [
-            "下载"
+            "下载",
+            "重试"
         ],
         "roi": [
             712,
