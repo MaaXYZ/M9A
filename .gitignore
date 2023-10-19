@@ -445,4 +445,4 @@ build
 install
 
 # Tools
-tools/CropRoi/**/*.png
+tools/ImageCropper/**/*.png
