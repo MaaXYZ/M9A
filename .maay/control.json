@@ -1,0 +1,356 @@
+{
+  "option": {
+    "stage": {
+      "name": "关卡",
+      "type": "select_string",
+      "case": [
+        {
+          "name": "3-9 厄险（百灵百验鸟）",
+          "value": "3-9",
+          "provide": {
+            "EnterTheShow": {
+              "next": "MainChapter_3"
+            },
+            "TargetStageName": {
+              "text": "09"
+            },
+            "StageDifficulty": {
+              "next": "StageDifficulty_Hard"
+            },
+            "SetReplaysTimes": {
+              "text": "1"
+            }
+          }
+        },
+        {
+          "name": "4-20 厄险（双头形骨架）",
+          "value": "4-20",
+          "provide": {
+            "EnterTheShow": {
+              "next": "MainChapter_4"
+            },
+            "TargetStageName": {
+              "text": "20"
+            },
+            "StageDifficulty": {
+              "next": "StageDifficulty_Hard"
+            },
+            "SetReplaysTimes": {
+              "text": "1"
+            }
+          }
+        },
+        {
+          "name": "2-3 厄险（祝圣秘银）",
+          "value": "2-3",
+          "provide": {
+            "EnterTheShow": {
+              "next": "MainChapter_2"
+            },
+            "TargetStageName": {
+              "text": "03"
+            },
+            "StageDifficulty": {
+              "next": "StageDifficulty_Hard"
+            },
+            "SetReplaysTimes": {
+              "text": "1"
+            }
+          }
+        },
+        {
+          "name": "3-13 厄险（盐封曼德拉）",
+          "value": "3-13",
+          "provide": {
+            "EnterTheShow": {
+              "next": "MainChapter_3"
+            },
+            "TargetStageName": {
+              "text": "13"
+            },
+            "StageDifficulty": {
+              "next": "StageDifficulty_Hard"
+            },
+            "SetReplaysTimes": {
+              "text": "1"
+            }
+          }
+        },
+        {
+          "name": "4-10 厄险（啮咬盒）",
+          "value": "4-10",
+          "provide": {
+            "EnterTheShow": {
+              "next": "MainChapter_4"
+            },
+            "TargetStageName": {
+              "text": "10"
+            },
+            "StageDifficulty": {
+              "next": "StageDifficulty_Hard"
+            },
+            "SetReplaysTimes": {
+              "text": "1"
+            }
+          }
+        },
+        {
+          "name": "3-11 厄险（金爪灵摆）",
+          "value": "3-11",
+          "provide": {
+            "EnterTheShow": {
+              "next": "MainChapter_3"
+            },
+            "TargetStageName": {
+              "text": "11"
+            },
+            "StageDifficulty": {
+              "next": "StageDifficulty_Hard"
+            },
+            "SetReplaysTimes": {
+              "text": "1"
+            }
+          }
+        },
+        {
+          "name": "尘埃运动 06",
+          "value": "LP-6",
+          "provide": {
+            "EnterTheShow": {
+              "next": "ResourceChapter_LP"
+            },
+            "TargetStageName": {
+              "text": "06"
+            },
+            "StageDifficulty": {
+              "next": "StageDifficulty_None"
+            },
+            "SetReplaysTimes": {
+              "text": "1"
+            }
+          }
+        },
+        {
+          "name": "猪鼻美学 06",
+          "value": "MA-6",
+          "provide": {
+            "EnterTheShow": {
+              "next": "ResourceChapter_MA"
+            },
+            "TargetStageName": {
+              "text": "06"
+            },
+            "StageDifficulty": {
+              "next": "StageDifficulty_None"
+            },
+            "SetReplaysTimes": {
+              "text": "1"
+            }
+          }
+        },
+        {
+          "name": "丰收时令 04",
+          "value": "MA-4",
+          "provide": {
+            "EnterTheShow": {
+              "next": "ResourceChapter_MA"
+            },
+            "TargetStageName": {
+              "text": "04"
+            },
+            "StageDifficulty": {
+              "next": "StageDifficulty_None"
+            },
+            "SetReplaysTimes": {
+              "text": "1"
+            }
+          }
+        },
+        {
+          "name": "群山之声 06（洞悉 岩）",
+          "value": "ME-6",
+          "provide": {
+            "EnterTheShow": {
+              "next": "PromotionChapter_ME"
+            },
+            "TargetStageName": {
+              "text": "06"
+            },
+            "StageDifficulty": {
+              "next": "StageDifficulty_None"
+            },
+            "SetReplaysTimes": {
+              "text": "1"
+            }
+          }
+        },
+        {
+          "name": "星陨之所 06（洞悉 星）",
+          "value": "SL-6",
+          "provide": {
+            "EnterTheShow": {
+              "next": "PromotionChapter_SL"
+            },
+            "TargetStageName": {
+              "text": "06"
+            },
+            "StageDifficulty": {
+              "next": "StageDifficulty_None"
+            },
+            "SetReplaysTimes": {
+              "text": "1"
+            }
+          }
+        },
+        {
+          "name": "深林之形 06（洞悉 林）",
+          "value": "SS-6",
+          "provide": {
+            "EnterTheShow": {
+              "next": "PromotionChapter_SS"
+            },
+            "TargetStageName": {
+              "text": "06"
+            },
+            "StageDifficulty": {
+              "next": "StageDifficulty_None"
+            },
+            "SetReplaysTimes": {
+              "text": "1"
+            }
+          }
+        },
+        {
+          "name": "荒兽之野 06（洞悉 兽）",
+          "value": "BW-6",
+          "provide": {
+            "EnterTheShow": {
+              "next": "PromotionChapter_BW"
+            },
+            "TargetStageName": {
+              "text": "06"
+            },
+            "StageDifficulty": {
+              "next": "StageDifficulty_None"
+            },
+            "SetReplaysTimes": {
+              "text": "1"
+            }
+          }
+        }
+      ]
+    },
+    "all_in": {
+      "name": "刷活性",
+      "type": "checkbox",
+      "default": false,
+      "inject": ["AllIn.enabled"]
+    },
+    "eat_candy_within_24h": {
+      "name": "无限吃24小时内过期的糖",
+      "type": "checkbox",
+      "default": false,
+      "inject": ["EatCandyWithin24H.enabled"],
+      "__comment": "目前没想好怎么配置validator"
+    },
+    "server": {
+      "name": "服务器",
+      "type": "select_string",
+      "default": "official",
+      "case": [
+        {
+          "name": "官服",
+          "value": "official",
+          "provide": {
+            "Sub_Start1999": {
+              "package": "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity"
+            },
+            "Close1999": {
+              "package": "com.shenlan.m.reverse1999"
+            }
+          }
+        },
+        {
+          "name": "B服",
+          "value": "bilibili",
+          "provide": {
+            "Sub_Start1999": {
+              "package": "com.shenlan.m.reverse1999.bilibili/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity"
+            },
+            "Close1999": {
+              "package": "com.shenlan.m.reverse1999.bilibili"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "global": {
+    "option": ["server"]
+  },
+  "entry": [
+    {
+      "name": "关闭游戏",
+      "task": "Close1999"
+    },
+    {
+      "name": "启动游戏",
+      "task": "StartUp"
+    },
+    {
+      "name": "收取荒原",
+      "task": "Wilderness"
+    },
+    {
+      "name": "领取奖励",
+      "task": "Awards"
+    },
+    {
+      "name": "每日心相（意志解析）",
+      "task": "Psychube"
+    },
+    {
+      "name": "作战",
+      "task": "Combat",
+      "option": ["stage", "all_in", "eat_candy_within_24h"]
+    },
+    {
+      "name": "活动：绿湖噩梦 17 艰难（活动已结束）",
+      "task": "ANightmareAtGreenLake",
+      "option": ["all_in", "eat_candy_within_24h"],
+      "provide": {
+        "EnterTheShow": {
+          "next": "ANightmareAtGreenLake"
+        },
+        "TargetStageName": {
+          "text": "17"
+        },
+        "StageDifficulty": {
+          "next": "ActivityStageDifficulty"
+        },
+        "SetReplaysTimes": {
+          "text": "1"
+        }
+      }
+    },
+    {
+      "name": "活动：行至摩卢旁卡 16 艰难",
+      "task": "JourneytoMorPankh",
+      "option": ["all_in", "eat_candy_within_24h"],
+      "provide": {
+        "EnterTheShow": {
+          "next": "JourneytoMorPankh"
+        },
+        "TargetStageName": {
+          "text": "16"
+        },
+        "StageDifficulty": {
+          "next": "ActivityStageDifficulty"
+        },
+        "SetReplaysTimes": {
+          "text": "1"
+        }
+      }
+    }
+  ]
+}
