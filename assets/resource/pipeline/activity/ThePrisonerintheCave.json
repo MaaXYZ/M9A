@@ -1,0 +1,73 @@
+{
+    "ThePrisonerintheCave": {
+        "next": [
+            "ThePrisonerintheCaveEnterTheShow",
+            "Sub_StartUp"
+        ]
+    },
+    "ThePrisonerintheCaveEnterTheShow": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/ThePrisonerintheCaveEnterTheShow.png",
+        "roi": [
+            880,
+            130,
+            287,
+            168
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "next": [
+            "ThePrisonerintheCaveEnterTheShow",
+            "ThePrisonerintheCaveTheProofs"
+        ]
+    },
+    "ThePrisonerintheCaveTheProofs": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/ThePrisonerintheCaveTheProofs.png",
+        "roi": [
+            997,
+            296,
+            201,
+            136
+        ],
+        "action": "Click",
+        "next": [
+            "ThePrisonerintheCaveTheProofs",
+            "ThePrisonerintheCaveTargetStageName"
+        ]
+    },
+    "ThePrisonerintheCaveTargetStageName": {
+        "recognition": "OCR",
+        "text": [
+            "证明启示V"
+        ],
+        "roi": [
+            1014,
+            331,
+            227,
+            144
+        ],
+        "action": "Click",
+        "next": [
+            "ThePrisonerintheCaveReadyForAction"
+        ]
+    },
+    "ThePrisonerintheCaveReadyForAction": {
+        "recognition": "OCR",
+        "text": [
+            "开始行动"
+        ],
+        "roi": [
+            762,
+            404,
+            213,
+            149
+        ],
+        "action": "Click",
+        "next": [
+            "SwitchToReplay",
+            "AllIn",
+            "OpenReplaysTimes"
+        ]
+    }
+}

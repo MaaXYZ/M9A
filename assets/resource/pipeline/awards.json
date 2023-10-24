@@ -2,7 +2,7 @@
     "Awards": {
         "next": [
             "Sub_MailBadge",
-            "Sub_JukeboxBadge",
+            "Sub_JukeboxBadge_MysteryBoxCarnival",
             "Sub_DailyBadge",
             "HomeFlag",
             "Sub_ObtainedAwards",
@@ -155,6 +155,25 @@
             0,
             108,
             108
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "next": [
+            "Sub_CollectJukeboxExp",
+            "Sub_JukeboxAwardsBadge",
+            "Sub_BackButton",
+            "HomeFlag"
+        ]
+    },
+    "Sub_JukeboxBadge_MysteryBoxCarnival": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Awards/JukeboxBadge.png",
+        "roi": [
+            288,
+            0,
+            111,
+            114
         ],
         "action": "Click",
         "post_wait_freezes": 1,

@@ -27,49 +27,96 @@
         "next_doc": "Set in code."
     },
     "MainChapter_1": {
+        "doc": "主线第一章 在我们的时代里",
+        "next": [
+            "MainChapter_1Enter",
+            "Sub_SwipeLeftForChapter"
+        ]
+    },
+    "MainChapter_1Enter": {
         "recognition": "TemplateMatch",
-        "template": "Combat/MainChapter_1.png",
+        "template": "Combat/MainChapter_1Enter.png",
         "roi": [
-            60,
-            98,
-            318,
-            455
+            0,
+            90,
+            1280,
+            460
         ],
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
     },
     "MainChapter_2": {
+        "doc": "主线第二章 夜色温柔",
+        "next": [
+            "MainChapter_2Enter",
+            "Sub_SwipeLeftForChapter"
+        ]
+    },
+    "MainChapter_2Enter": {
         "recognition": "TemplateMatch",
-        "template": "Combat/MainChapter_2.png",
+        "template": "Combat/MainChapter_2Enter.png",
         "roi": [
-            340,
-            99,
-            310,
-            452
+            0,
+            90,
+            1280,
+            460
         ],
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
     },
     "MainChapter_3": {
+        "doc": "主线第三章 故事一无所有",
+        "next": [
+            "MainChapter_3Enter",
+            "Sub_SwipeLeftForChapter"
+        ]
+    },
+    "MainChapter_3Enter": {
         "recognition": "TemplateMatch",
-        "template": "Combat/MainChapter_3.png",
+        "template": "Combat/MainChapter_3Enter.png",
         "roi": [
-            618,
-            98,
-            313,
-            455
+            0,
+            90,
+            1280,
+            460
         ],
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
     },
     "MainChapter_4": {
+        "doc": "主线第四章 老虎的金黄",
+        "next": [
+            "MainChapter_4Enter",
+            "Sub_SwipeLeftForChapter"
+        ]
+    },
+    "MainChapter_4Enter": {
         "recognition": "TemplateMatch",
-        "template": "Combat/MainChapter_4.png",
+        "template": "Combat/MainChapter_4Enter.png",
         "roi": [
-            897,
-            108,
-            316,
-            444
+            0,
+            90,
+            1280,
+            460
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "MainChapter_5": {
+        "doc": "主线第五章 洞穴的囚徒",
+        "next": [
+            "MainChapter_5Enter",
+            "Sub_SwipeLeftForChapter"
+        ]
+    },
+    "MainChapter_5Enter": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/MainChapter_5Enter.png",
+        "roi": [
+            0,
+            90,
+            1280,
+            460
         ],
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
@@ -273,6 +320,22 @@
         ],
         "end": [
             100,
+            300,
+            100,
+            100
+        ]
+    },
+    "Sub_SwipeLeftForChapter": {
+        "is_sub": true,
+        "action": "Swipe",
+        "begin": [
+            100,
+            300,
+            100,
+            100
+        ],
+        "end": [
+            1100,
             300,
             100,
             100
