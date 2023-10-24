@@ -262,6 +262,15 @@ json::value combat_param(int index)
         difficulty = "ActivityStageDifficulty";
         times = "1";
         break;
+
+    case 20:
+        //"20. 活动：洞穴的囚徒 证明启示 05\n"
+        // 选择该关卡的界面UI布局不同于既有的关卡在进入章节后通过底部滑动条选择关卡，部分pipeline没有复用
+        chapter = "dummyThePrisonerintheCave";
+        stage = "dummy证明启示V";
+        difficulty = "dummyStageDifficulty_None";
+        times = "1";
+        break;
     }
 
     return param;
@@ -370,7 +379,8 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
                                  "16. 深林之形 06（洞悉 林）\n"
                                  "17. 荒兽之野 06（洞悉 兽）\n"
                                  "18. 活动：绿湖噩梦 17 艰难（活动已结束）\n"
-                                 "19. 活动：行至摩卢旁卡 16 艰难\n")
+                                 "19. 活动：行至摩卢旁卡 16 艰难（活动已结束）\n"
+                                 "20. 活动：洞穴的囚徒 证明启示 05\n")
                   << std::endl
                   << std::endl
                   << utf8_to_crt("请输入要执行的任务序号，可自定义顺序，以空格分隔，例如 1 2 4 12 3: ") << std::endl;
@@ -432,6 +442,11 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
 
             case 19:
                 task_obj.type = "JourneytoMorPankh";
+                task_obj.param = combat_param(id);
+                break;
+
+            case 20:
+                task_obj.type = "ThePrisonerintheCave";
                 task_obj.param = combat_param(id);
                 break;
 
