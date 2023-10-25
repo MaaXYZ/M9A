@@ -2,7 +2,7 @@
   "resource": {
     "default": {
       "name": "官服",
-      "path": "./resource/default"
+      "path": "@default"
     }
   },
   "app": {
