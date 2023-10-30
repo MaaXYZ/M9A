@@ -203,6 +203,7 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "Awards/JukeboxAwardsBadge.png",
+        "threshold": 0.8,
         "roi": [
             967,
             1,
