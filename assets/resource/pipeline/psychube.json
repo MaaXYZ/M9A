@@ -103,10 +103,18 @@
         "recognition": "TemplateMatch",
         "template": "Psychube/SwitchToReplay.png",
         "roi": [
-            781,
-            581,
-            145,
-            139
+            [
+                781,
+                581,
+                145,
+                139
+            ],
+            [
+                548,
+                569,
+                166,
+                151
+            ]
         ],
         "action": "Click",
         "next": [
