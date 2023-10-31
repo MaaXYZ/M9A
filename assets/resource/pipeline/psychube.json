@@ -76,6 +76,7 @@
             179
         ],
         "action": "Click",
+        "post_wait_freezes": 1,
         "next": [
             "PsychubeReadyForAction",
             "PsychubeStages_7"
@@ -103,10 +104,18 @@
         "recognition": "TemplateMatch",
         "template": "Psychube/SwitchToReplay.png",
         "roi": [
-            781,
-            581,
-            145,
-            139
+            [
+                781,
+                581,
+                145,
+                139
+            ],
+            [
+                548,
+                569,
+                166,
+                151
+            ]
         ],
         "action": "Click",
         "next": [
@@ -125,6 +134,7 @@
             134
         ],
         "action": "Click",
+        "post_wait_freezes": 1,
         "next": [
             "PsychubeReplayTwice",
             "PsychubeSetReplaysTimes"
