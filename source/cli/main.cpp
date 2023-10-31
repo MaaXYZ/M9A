@@ -5,6 +5,7 @@
 #include <string>
 
 #include "MaaFramework/MaaAPI.h"
+#include "MaaToolKit/MaaToolKitAPI.h"
 
 #include "meojson/json.hpp"
 #include "utils/Locale.hpp"
@@ -64,8 +65,7 @@ int main(int argc, char** argv)
     std::string agent_path = (cur_dir / "MaaAgentBinary").string();
     std::string adb_config = read_adb_config(cur_dir);
 
-    MaaSetGlobalOption(MaaGlobalOption_Logging, (void*)debug_dir.c_str(), debug_dir.size());
-    MaaSetGlobalOption(MaaGlobalOption_DebugMode, (void*)&debug, sizeof(bool));
+    MaaToolKitInit();
 
     auto maa_handle = MaaCreate(nullptr, nullptr);
     auto resource_handle = MaaResourceCreate(nullptr, nullptr);
@@ -91,6 +91,7 @@ int main(int argc, char** argv)
         MaaDestroy(maa_handle);
         MaaResourceDestroy(resource_handle);
         MaaControllerDestroy(controller_handle);
+        MaaToolKitUninit();
     };
 
     if (!MaaInited(maa_handle)) {
@@ -146,7 +147,7 @@ json::value combat_param(int index)
     auto& all_in_doc = diff["AllIn"]["doc"];
     auto& eat_candy_within_24h = diff["EatCandyWithin24H"]["enabled"];
     auto& eat_candy_within_24h_doc = diff["EatCandyWithin24H"]["doc"];
-    
+
     all_in = false;
     all_in_doc = "刷活性；默认false";
     eat_candy_within_24h = false;
