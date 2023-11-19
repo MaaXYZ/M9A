@@ -1,7 +1,6 @@
 {
     "prebuilt": {
         "minicap": {
-            "root": "./MaaAgentBinary/minicap",
             "arch": [
                 "x86",
                 "armeabi-v7a",
@@ -27,7 +26,6 @@
             ]
         },
         "minitouch": {
-            "root": "./MaaAgentBinary/minitouch",
             "arch": [
                 "x86_64",
                 "x86",
@@ -37,11 +35,14 @@
             ]
         },
         "maatouch": {
-            "root": "./MaaAgentBinary/maatouch",
             "package": "com.shxyke.MaaTouch.App"
         }
     },
     "command": {
+        "Devices": [
+            "{ADB}",
+            "devices"
+        ],
         "Connect": [
             "{ADB}",
             "connect",
