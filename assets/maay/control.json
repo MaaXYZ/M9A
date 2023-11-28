@@ -334,7 +334,7 @@
       }
     },
     {
-      "name": "活动：行至摩卢旁卡 16 艰难",
+      "name": "活动：行至摩卢旁卡 16 艰难（活动已结束）",
       "task": "JourneytoMorPankh",
       "option": ["all_in", "eat_candy_within_24h"],
       "provide": {
@@ -346,6 +346,25 @@
         },
         "StageDifficulty": {
           "next": "ActivityStageDifficulty"
+        },
+        "SetReplaysTimes": {
+          "text": "1"
+        }
+      }
+    },
+    {
+      "name": "活动：洞穴的囚徒 证明启示 05（活动已结束）",
+      "task": "dummyThePrisonerintheCave",
+      "option": ["all_in", "eat_candy_within_24h"],
+      "provide": {
+        "EnterTheShow": {
+          "next": "dummyThePrisonerintheCave"
+        },
+        "TargetStageName": {
+          "text": "dummy证明启示V"
+        },
+        "StageDifficulty": {
+          "next": "dummyStageDifficulty_None"
         },
         "SetReplaysTimes": {
           "text": "1"
