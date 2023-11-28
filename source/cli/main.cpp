@@ -116,9 +116,9 @@ int main(int argc, char** argv)
 void print_help()
 {
     std::cout << utf8_to_crt(
-                     R"(欢迎使用 MAA 1999 CLI, 源码地址：https://github.com/MaaAssistantArknights/MAA1999
+                     R"(欢迎使用 MAA 1999 CLI, 源码地址：https://github.com/MaaAssistantArknights/M9A
 
-用法: MAA1999.exe [adb路径] [adb地址] [任务名（有序）]...
+用法: M9A.exe [adb路径] [adb地址] [任务名（有序）]...
 
 可以修改 config.json 来配置任务
 

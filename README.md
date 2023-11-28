@@ -1,4 +1,4 @@
-# MAA1999
+# M9A
 
 基于全新架构的 亿韭韭韭 小助手。图像技术 + 模拟控制，解放双手！  
 由 [MaaFramework](https://github.com/MaaAssistantArknights/MaaFramework) 强力驱动！
@@ -17,7 +17,7 @@
 
 ## How to build
 
-**如果你要编译源码才看这节，否则直接 [下载](https://github.com/MaaAssistantArknights/MAA1999/releases) 即可**
+**如果你要编译源码才看这节，否则直接 [下载](https://github.com/MaaAssistantArknights/M9A/releases) 即可**
 
 1. 下载 MaaFramework 的 [Release 包](https://github.com/MaaAssistantArknights/MaaFramework/releases)，解压到 `deps` 文件夹中
 2. 配置 cmake

@@ -5,9 +5,9 @@ else ()
     link_directories(${CMAKE_SOURCE_DIR}/deps/bin)
 endif ()
 
-add_executable(MAA1999_CLI main.cpp)
-target_link_libraries(MAA1999_CLI PRIVATE MaaFramework MaaToolKit)
+add_executable(M9A_CLI main.cpp)
+target_link_libraries(M9A_CLI PRIVATE MaaFramework MaaToolKit)
 
-add_dependencies(MAA1999_CLI AssetsResource)
+add_dependencies(M9A_CLI AssetsResource)
 
-install(TARGETS MAA1999_CLI RUNTIME DESTINATION .)
+install(TARGETS M9A_CLI RUNTIME DESTINATION .)

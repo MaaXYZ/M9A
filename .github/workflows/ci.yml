@@ -96,7 +96,7 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: MAA1999-win-${{ matrix.arch }}
+          name: M9A-win-${{ matrix.arch }}
           path: "install"
 
   ubuntu:
@@ -165,7 +165,7 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: MAA1999-linux-${{ matrix.arch }}
+          name: M9A-linux-${{ matrix.arch }}
           path: "install"
 
   macos:
@@ -222,7 +222,7 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: MAA1999-macos-${{ matrix.arch }}
+          name: M9A-macos-${{ matrix.arch }}
           path: "install"
 
   release:
