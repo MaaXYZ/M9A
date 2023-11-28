@@ -15,6 +15,13 @@
   ~~韭的战斗有点小难度，但又没粥那么难。我觉得完全可以做到打的比大多数玩家水平高，纯粹的无感情的概率 + 数值机器。~~  
   游戏自带了，摸！
 
+## 图形化界面
+
+目前暂无正式版 GUI，但有以下由社区大佬们贡献的 GUI 项目，欢迎使用！
+
+- [MAA1999WPF](https://github.com/MLAcookie/MAA1999WPF) 拿WPF框架写的一个MAA199的UI
+- [MaaY](https://github.com/MaaAssistantArknights/MaaY) 为MaaFramework重新设计的通用界面
+
 ## How to build
 
 **如果你要编译源码才看这节，否则直接 [下载](https://github.com/MaaAssistantArknights/M9A/releases) 即可**
