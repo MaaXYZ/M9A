@@ -93,7 +93,7 @@ jobs:
         shell: bash
         run: |
           cmake --install build --prefix install
-          cp -r maay install/.maay
+          cp -r assets/.maay install
 
       - uses: actions/upload-artifact@v3
         with:
@@ -163,7 +163,7 @@ jobs:
         shell: bash
         run: |
           cmake --install build --prefix install
-          cp -r maay install/.maay
+          cp -r assets/.maay install
 
       - uses: actions/upload-artifact@v3
         with:
@@ -221,7 +221,7 @@ jobs:
         shell: bash
         run: |
           cmake --install build --prefix install
-          cp -r maay install/.maay
+          cp -r assets/.maay install
 
       - uses: actions/upload-artifact@v3
         with:
