@@ -79,6 +79,7 @@ jobs:
         with:
           repository: MaaAssistantArknights/MaaFramework
           fileName: "MAA-win-${{ matrix.arch }}*"
+          latest: true
           out-file-path: "deps"
           extract: true
 
@@ -144,6 +145,7 @@ jobs:
         with:
           repository: MaaAssistantArknights/MaaFramework
           fileName: "MAA-linux-${{ matrix.arch }}*"
+          latest: true
           out-file-path: "deps"
           extract: true
 
@@ -200,6 +202,7 @@ jobs:
         with:
           repository: MaaAssistantArknights/MaaFramework
           fileName: "MAA-macos-${{ matrix.arch }}*"
+          latest: true
           out-file-path: "deps"
           extract: true
 
