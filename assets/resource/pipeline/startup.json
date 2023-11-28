@@ -175,6 +175,13 @@
             419,
             194,
             166
+        ],
+        "action": "Click",
+        "target": [
+            576,
+            298,
+            68,
+            64
         ]
     },
     "Sub_BackButton": {
