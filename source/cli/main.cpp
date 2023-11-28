@@ -25,7 +25,6 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
 bool app_package_and_activity(int client_type, std::string& package, std::string& activity);
 void save_config(const std::string& adb, const std::string& adb_address, int& client_type, const TaskList& tasks,
                  MaaAdbControllerType ctrl_type);
-std::string read_adb_config(const std::filesystem::path& cur_dir);
 void mpause();
 
 int main(int argc, char** argv)
@@ -63,7 +62,7 @@ int main(int argc, char** argv)
     std::string debug_dir = (cur_dir / "debug").string();
     std::string resource_dir = (cur_dir / "resource").string();
     std::string agent_path = (cur_dir / "MaaAgentBinary").string();
-    std::string adb_config = read_adb_config(cur_dir);
+    std::string adb_config = json::object().to_string();
 
     MaaToolKitInit();
 
@@ -520,19 +519,6 @@ void save_config(const std::string& adb, const std::string& adb_address, int& cl
     std::ofstream ofs("config.json", std::ios::out);
     ofs << config;
     ofs.close();
-}
-
-std::string read_adb_config(const std::filesystem::path& cur_dir)
-{
-    std::ifstream ifs(cur_dir / "resource" / "controller_config.json", std::ios::in);
-    if (!ifs.is_open()) {
-        std::cout << "Can't open controller_config.json" << std::endl;
-        exit(1);
-    }
-
-    std::stringstream buffer;
-    buffer << ifs.rdbuf();
-    return buffer.str();
 }
 
 void mpause()
