@@ -127,10 +127,10 @@
         "template": "Combat/ResourceChapterLabel.png",
         "threshold": 0.98,
         "roi": [
-            230,
-            577,
-            145,
-            142
+            4,
+            559,
+            1276,
+            161
         ],
         "action": "Click",
         "post_wait_freezes": {

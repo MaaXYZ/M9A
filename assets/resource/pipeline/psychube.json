@@ -26,10 +26,10 @@
         "recognition": "TemplateMatch",
         "template": "Psychube/ResourceStages.png",
         "roi": [
-            218,
-            571,
-            169,
-            149
+            4,
+            559,
+            1276,
+            161
         ],
         "action": "Click",
         "next": [
