@@ -16,9 +16,6 @@
             },
             "StageDifficulty": {
               "next": "StageDifficulty_Hard"
-            },
-            "SetReplaysTimes": {
-              "text": "1"
             }
           }
         },
@@ -34,9 +31,6 @@
             },
             "StageDifficulty": {
               "next": "StageDifficulty_Hard"
-            },
-            "SetReplaysTimes": {
-              "text": "1"
             }
           }
         },
@@ -52,9 +46,6 @@
             },
             "StageDifficulty": {
               "next": "StageDifficulty_Hard"
-            },
-            "SetReplaysTimes": {
-              "text": "1"
             }
           }
         },
@@ -70,9 +61,6 @@
             },
             "StageDifficulty": {
               "next": "StageDifficulty_Hard"
-            },
-            "SetReplaysTimes": {
-              "text": "1"
             }
           }
         },
@@ -88,9 +76,6 @@
             },
             "StageDifficulty": {
               "next": "StageDifficulty_Hard"
-            },
-            "SetReplaysTimes": {
-              "text": "1"
             }
           }
         },
@@ -106,9 +91,6 @@
             },
             "StageDifficulty": {
               "next": "StageDifficulty_Hard"
-            },
-            "SetReplaysTimes": {
-              "text": "1"
             }
           }
         },
@@ -124,9 +106,6 @@
             },
             "StageDifficulty": {
               "next": "StageDifficulty_None"
-            },
-            "SetReplaysTimes": {
-              "text": "1"
             }
           }
         },
@@ -142,9 +121,6 @@
             },
             "StageDifficulty": {
               "next": "StageDifficulty_None"
-            },
-            "SetReplaysTimes": {
-              "text": "1"
             }
           }
         },
@@ -160,9 +136,6 @@
             },
             "StageDifficulty": {
               "next": "StageDifficulty_None"
-            },
-            "SetReplaysTimes": {
-              "text": "1"
             }
           }
         },
@@ -178,9 +151,6 @@
             },
             "StageDifficulty": {
               "next": "StageDifficulty_None"
-            },
-            "SetReplaysTimes": {
-              "text": "1"
             }
           }
         },
@@ -196,9 +166,6 @@
             },
             "StageDifficulty": {
               "next": "StageDifficulty_None"
-            },
-            "SetReplaysTimes": {
-              "text": "1"
             }
           }
         },
@@ -214,9 +181,6 @@
             },
             "StageDifficulty": {
               "next": "StageDifficulty_None"
-            },
-            "SetReplaysTimes": {
-              "text": "1"
             }
           }
         },
@@ -232,25 +196,69 @@
             },
             "StageDifficulty": {
               "next": "StageDifficulty_None"
-            },
+            }
+          }
+        }
+      ]
+    },
+    "combat_times": {
+      "name": "复现次数",
+      "type": "select_string",
+      "default": "x1",
+      "case": [
+        {
+          "name": "x1",
+          "value": "x1",
+          "provide": {
             "SetReplaysTimes": {
               "text": "1"
+            }
+          }
+        },
+        {
+          "name": "x2",
+          "value": "x2",
+          "provide": {
+            "SetReplaysTimes": {
+              "text": "2"
+            }
+          }
+        },
+        {
+          "name": "x3",
+          "value": "x3",
+          "provide": {
+            "SetReplaysTimes": {
+              "text": "3"
+            }
+          }
+        },
+        {
+          "name": "x4",
+          "value": "x4",
+          "provide": {
+            "SetReplaysTimes": {
+              "text": "4"
             }
           }
         }
       ]
     },
     "all_in": {
-      "name": "刷活性",
+      "name": "刷完全部活性（体力）",
       "type": "checkbox",
       "default": false,
-      "inject": ["AllIn.enabled"]
+      "inject": [
+        "AllIn.enabled"
+      ]
     },
     "eat_candy_within_24h": {
       "name": "无限吃24小时内过期的糖",
       "type": "checkbox",
       "default": false,
-      "inject": ["EatCandyWithin24H.enabled"],
+      "inject": [
+        "EatCandyWithin24H.enabled"
+      ],
       "__comment": "目前没想好怎么配置validator"
     },
     "server": {
@@ -286,7 +294,9 @@
     }
   },
   "global": {
-    "option": ["server"]
+    "option": [
+      "server"
+    ]
   },
   "entry": [
     {
@@ -312,12 +322,21 @@
     {
       "name": "作战",
       "task": "Combat",
-      "option": ["stage", "all_in", "eat_candy_within_24h"]
+      "option": [
+        "stage",
+        "combat_times",
+        "all_in",
+        "eat_candy_within_24h"
+      ]
     },
     {
       "name": "活动：绿湖噩梦 17 艰难（活动已结束）",
       "task": "ANightmareAtGreenLake",
-      "option": ["all_in", "eat_candy_within_24h"],
+      "option": [
+        "combat_times",
+        "all_in",
+        "eat_candy_within_24h"
+      ],
       "provide": {
         "EnterTheShow": {
           "next": "ANightmareAtGreenLake"
@@ -327,16 +346,17 @@
         },
         "StageDifficulty": {
           "next": "ActivityStageDifficulty"
-        },
-        "SetReplaysTimes": {
-          "text": "1"
         }
       }
     },
     {
       "name": "活动：行至摩卢旁卡 16 艰难（活动已结束）",
       "task": "JourneytoMorPankh",
-      "option": ["all_in", "eat_candy_within_24h"],
+      "option": [
+        "combat_times",
+        "all_in",
+        "eat_candy_within_24h"
+      ],
       "provide": {
         "EnterTheShow": {
           "next": "JourneytoMorPankh"
@@ -346,16 +366,17 @@
         },
         "StageDifficulty": {
           "next": "ActivityStageDifficulty"
-        },
-        "SetReplaysTimes": {
-          "text": "1"
         }
       }
     },
     {
       "name": "活动：洞穴的囚徒 证明启示 05（活动已结束）",
       "task": "dummyThePrisonerintheCave",
-      "option": ["all_in", "eat_candy_within_24h"],
+      "option": [
+        "combat_times",
+        "all_in",
+        "eat_candy_within_24h"
+      ],
       "provide": {
         "EnterTheShow": {
           "next": "dummyThePrisonerintheCave"
@@ -365,9 +386,26 @@
         },
         "StageDifficulty": {
           "next": "dummyStageDifficulty_None"
+        }
+      }
+    },
+    {
+      "name": "活动：复兴乌卢鲁运动会 13 艰难",
+      "task": "RevivalTheUluruGames",
+      "option": [
+        "combat_times",
+        "all_in",
+        "eat_candy_within_24h"
+      ],
+      "provide": {
+        "EnterTheShow": {
+          "next": "RevivalTheUluruGames"
         },
-        "SetReplaysTimes": {
-          "text": "1"
+        "TargetStageName": {
+          "text": "13"
+        },
+        "StageDifficulty": {
+          "next": "ActivityStageDifficulty"
         }
       }
     }
