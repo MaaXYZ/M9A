@@ -371,7 +371,7 @@
     },
     {
       "name": "活动：洞穴的囚徒 证明启示 05（活动已结束）",
-      "task": "dummyThePrisonerintheCave",
+      "task": "ThePrisonerintheCave",
       "option": [
         "combat_times",
         "all_in",
