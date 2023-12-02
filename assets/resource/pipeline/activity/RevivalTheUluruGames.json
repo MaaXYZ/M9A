@@ -1,0 +1,35 @@
+{
+    "RevivalTheUluruGames": {
+        "next": [
+            "RevivalTheUluruGamesEnterTheShow",
+            "Sub_StartUp"
+        ]
+    },
+    "RevivalTheUluruGamesEnterTheShow": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/RevivalTheUluruGamesEnterTheShow.png",
+        "roi": [
+            940,
+            144,
+            244,
+            146
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "next": [
+            "RevivalTheUluruGamesMainChapter"
+        ]
+    },
+    "RevivalTheUluruGamesMainChapter": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/RevivalTheUluruGamesMainChapter.png",
+        "roi": [
+            1024,
+            445,
+            206,
+            154
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    }
+}

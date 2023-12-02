@@ -148,9 +148,9 @@ json::value combat_param(int index)
     auto& eat_candy_within_24h_doc = diff["EatCandyWithin24H"]["doc"];
 
     all_in = false;
-    all_in_doc = "刷活性；默认false";
+    all_in_doc = "刷完全部活性（体力）；默认false";
     eat_candy_within_24h = false;
-    eat_candy_within_24h_doc = "无限吃24小时内过期的糖；默认false，前置条件：开启刷活性";
+    eat_candy_within_24h_doc = "无限吃24小时内过期的糖；默认false，前置条件：开启刷完全部活性";
 
     switch (index) {
     case 5:
