@@ -125,7 +125,6 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "Combat/ResourceChapterLabel.png",
-        "threshold": 0.98,
         "roi": [
             4,
             559,
