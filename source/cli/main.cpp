@@ -20,8 +20,8 @@ struct Task
 using TaskList = std::vector<Task>;
 
 void print_help();
-bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string& adb_address, int& client_type,
-               TaskList& tasks, MaaAdbControllerType& ctrl_type);
+bool proc_argv(const std::filesystem::path& config_path, int argc, char** argv, bool& debug, std::string& adb,
+               std::string& adb_address, int& client_type, TaskList& tasks, MaaAdbControllerType& ctrl_type);
 bool app_package_and_activity(int client_type, std::string& package, std::string& activity);
 void save_config(const std::string& adb, const std::string& adb_address, int& client_type, const TaskList& tasks,
                  MaaAdbControllerType ctrl_type);
@@ -31,6 +31,7 @@ int main(int argc, char** argv)
 {
     print_help();
 
+    const auto cur_dir = std::filesystem::path(argv[0]).parent_path();
     bool debug = false;
     std::string adb = "adb";
     std::string adb_address = "127.0.0.1:5555";
@@ -40,7 +41,7 @@ int main(int argc, char** argv)
     TaskList tasks;
     MaaAdbControllerType control_type = 0;
 
-    bool proced = proc_argv(argc, argv, debug, adb, adb_address, client_type, tasks, control_type);
+    bool proced = proc_argv(cur_dir / "config.json", argc, argv, debug, adb, adb_address, client_type, tasks, control_type);
     if (!proced) {
         std::cout << "Failed to parse argv" << std::endl;
         mpause();
@@ -58,7 +59,6 @@ int main(int argc, char** argv)
         return -1;
     }
 
-    const auto cur_dir = std::filesystem::path(argv[0]).parent_path();
     std::string debug_dir = (cur_dir / "debug").string();
     std::string resource_dir = (cur_dir / "resource").string();
     std::string agent_path = (cur_dir / "MaaAgentBinary").string();
@@ -304,7 +304,8 @@ bool app_package_and_activity(int client_type, std::string& package, std::string
     return true;
 }
 
-bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string& adb_address, int& client_type,
+bool proc_argv(const std::filesystem::path& config_path, int argc, char** argv, bool& debug, std::string& adb,
+               std::string& adb_address, int& client_type,
                TaskList& tasks, MaaAdbControllerType& ctrl_type)
 {
     int touch = 1;
@@ -313,7 +314,7 @@ bool proc_argv(int argc, char** argv, bool& debug, std::string& adb, std::string
 
     tasks.clear();
 
-    if (auto config_opt = json::open("config.json")) {
+    if (auto config_opt = json::open(config_path)) {
         auto& confing = *config_opt;
 
         debug = confing.get("debug", false);
