@@ -5,7 +5,7 @@
 #include <string>
 
 #include "MaaFramework/MaaAPI.h"
-#include "MaaToolKit/MaaToolKitAPI.h"
+#include "MaaToolkit/MaaToolkitAPI.h"
 
 #include "meojson/json.hpp"
 #include "utils/Locale.hpp"
@@ -64,7 +64,7 @@ int main(int argc, char** argv)
     std::string agent_path = (cur_dir / "MaaAgentBinary").string();
     std::string adb_config = json::object().to_string();
 
-    MaaToolKitInit();
+    MaaToolkitInit();
 
     auto maa_handle = MaaCreate(nullptr, nullptr);
     auto resource_handle = MaaResourceCreate(nullptr, nullptr);
@@ -90,7 +90,7 @@ int main(int argc, char** argv)
         MaaDestroy(maa_handle);
         MaaResourceDestroy(resource_handle);
         MaaControllerDestroy(controller_handle);
-        MaaToolKitUninit();
+        MaaToolkitUninit();
     };
 
     if (!MaaInited(maa_handle)) {

@@ -6,7 +6,7 @@ else ()
 endif ()
 
 add_executable(M9A_CLI main.cpp)
-target_link_libraries(M9A_CLI PRIVATE MaaFramework MaaToolKit)
+target_link_libraries(M9A_CLI PRIVATE MaaFramework MaaToolkit)
 
 add_dependencies(M9A_CLI AssetsResource)
 
