@@ -8,6 +8,7 @@
 #include "MaaToolkit/MaaToolkitAPI.h"
 
 #include "meojson/json.hpp"
+
 #include "utils/Locale.hpp"
 
 struct Task
