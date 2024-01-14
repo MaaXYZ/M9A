@@ -390,7 +390,7 @@
       }
     },
     {
-      "name": "活动：复兴乌卢鲁运动会 13 艰难",
+      "name": "活动：复兴乌卢鲁运动会 13 艰难（活动已结束）",
       "task": "RevivalTheUluruGames",
       "option": [
         "combat_times",
@@ -403,6 +403,26 @@
         },
         "TargetStageName": {
           "text": "13"
+        },
+        "StageDifficulty": {
+          "next": "ActivityStageDifficulty"
+        }
+      }
+    },
+    {
+      "name": "活动：朔日手记 19 艰难",
+      "task": "NotesOnShuoRi",
+      "option": [
+        "combat_times",
+        "all_in",
+        "eat_candy_within_24h"
+      ],
+      "provide": {
+        "EnterTheShow": {
+          "next": "NotesOnShuoRi"
+        },
+        "TargetStageName": {
+          "text": "19"
         },
         "StageDifficulty": {
           "next": "ActivityStageDifficulty"

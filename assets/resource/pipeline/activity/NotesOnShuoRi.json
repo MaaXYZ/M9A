@@ -1,0 +1,35 @@
+{
+    "NotesOnShuoRi": {
+        "next": [
+            "NotesOnShuoRiEnterTheShow",
+            "Sub_StartUp"
+        ]
+    },
+    "NotesOnShuoRiEnterTheShow": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/NotesOnShuoRiEnterTheShow.png",
+        "roi": [
+            872,
+            119,
+            333,
+            178
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "next": [
+            "NotesOnShuoRiMainChapter"
+        ]
+    },
+    "NotesOnShuoRiMainChapter": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/NotesOnShuoRiMainChapter.png",
+        "roi": [
+            1029,
+            569,
+            243,
+            140
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    }
+}

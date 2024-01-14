@@ -280,6 +280,14 @@ json::value combat_param(int index)
         difficulty = "ActivityStageDifficulty";
         times = "1";
         break;
+
+    case 22:
+        //"22. 活动：朔日手记 19 艰难\n"
+        chapter = "NotesOnShuoRi";
+        stage = "19";
+        difficulty = "ActivityStageDifficulty";
+        times = "1";
+        break;
     }
 
     return param;
@@ -391,7 +399,8 @@ bool proc_argv(const std::filesystem::path& config_path, int argc, char** argv, 
                                  "18. 活动：绿湖噩梦 17 艰难（活动已结束）\n"
                                  "19. 活动：行至摩卢旁卡 16 艰难（活动已结束）\n"
                                  "20. 活动：洞穴的囚徒 证明启示 05（活动已结束）\n"
-                                 "21. 活动：复兴乌卢鲁运动会 13 艰难\n")
+                                 "21. 活动：复兴乌卢鲁运动会 13 艰难（活动已结束）\n"
+                                 "22. 活动：朔日手记 19 艰难\n")
                   << std::endl
                   << std::endl
                   << utf8_to_crt("请输入要执行的任务序号，可自定义顺序，以空格分隔，例如 1 2 4 12 3: ") << std::endl;
@@ -463,6 +472,11 @@ bool proc_argv(const std::filesystem::path& config_path, int argc, char** argv, 
 
             case 21:
                 task_obj.type = "RevivalTheUluruGames";
+                task_obj.param = combat_param(id);
+                break;
+
+            case 22:
+                task_obj.type = "NotesOnShuoRi";
                 task_obj.param = combat_param(id);
                 break;
 
