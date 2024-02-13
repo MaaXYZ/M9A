@@ -20,7 +20,6 @@
 目前暂无正式版 GUI，但有以下由社区大佬们贡献的 GUI 项目，欢迎使用！
 
 - [MAA1999WPF](https://github.com/MLAcookie/MAA1999WPF) 拿WPF框架写的一个MAA199的UI
-- [MaaY](https://github.com/MaaAssistantArknights/MaaY) 为MaaFramework重新设计的通用界面
 
 ## How to build
 
@@ -29,7 +28,7 @@
 0. 完整克隆本项目及子项目
 
     ```bash
-    git clone https://github.com/MaaAssistantArknights/MaaFramework.git
+    git clone https://github.com/MaaAssistantArknights/M9A.git
     git submodule update --init --recursive
     ```
 
