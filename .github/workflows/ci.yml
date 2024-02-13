@@ -13,8 +13,8 @@ on:
     branches:
       - "**"
     paths:
-        - ".github/workflows/ci.yml"
-        - "assets/**"
+      - ".github/workflows/ci.yml"
+      - "assets/**"
   workflow_dispatch:
 
 jobs:
@@ -89,6 +89,11 @@ jobs:
       fail-fast: false
 
     steps:
+      - name: Install dep
+        run: |
+          pacman -Sy
+          pacman -S --noconfirm python git
+
       # https://github.com/MaaAssistantArknights/MaaFramework/actions/runs/5643408179/job/15285186255
       - uses: actions/checkout@v3
         with:
