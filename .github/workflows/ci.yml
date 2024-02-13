@@ -1,4 +1,4 @@
-name: build cli
+name: install
 
 on:
   push:
@@ -8,23 +8,13 @@ on:
       - "**"
     paths:
       - ".github/workflows/ci.yml"
-      - "source/cli/**"
-      - "MaaFramework/**"
       - "assets/**"
-      - "cmake/**"
-      - "CMakelists.txt"
-      - "CMakePresets.json"
   pull_request:
     branches:
       - "**"
     paths:
-      - ".github/workflows/ci.yml"
-      - "source/cli/**"
-      - "MaaFramework/**"
-      - "assets/**"
-      - "cmake/**"
-      - "CMakelists.txt"
-      - "CMakePresets.json"
+        - ".github/workflows/ci.yml"
+        - "assets/**"
   workflow_dispatch:
 
 jobs:
@@ -70,10 +60,6 @@ jobs:
         with:
           submodules: true
 
-      - name: Update resource version
-        run: |
-          python3 .github/update_resource_version.py assets/resource/properties.json ${{ needs.meta.outputs.tag }}
-
       - name: Download MaaFramework
         uses: robinraju/release-downloader@v1.8
         with:
@@ -83,16 +69,10 @@ jobs:
           out-file-path: "deps"
           extract: true
 
-      - name: Build M9A
-        run: |
-          cmake --preset "${{ matrix.arch == 'x86_64' && 'MSVC 2022' || 'MSVC 2022 ARM' }}" -DM9A_HASH_VERSION='${{ needs.meta.outputs.tag }}'
-
-          cmake --build build --config Release -j 16
-
       - name: Install
         shell: bash
         run: |
-          cmake --install build --prefix install
+          python ./install.py ${{ needs.meta.outputs.tag }}
 
       - uses: actions/upload-artifact@v3
         with:
@@ -109,35 +89,10 @@ jobs:
       fail-fast: false
 
     steps:
-      # maybe should explicitly update some pkg instead of all?
-      - name: Update system
-        run: |
-          pacman -Syu --noconfirm
-
-      - name: Install dep
-        run: |
-          pacman -Sy
-          pacman -S --noconfirm cmake python ccache ninja git
-
       # https://github.com/MaaAssistantArknights/MaaFramework/actions/runs/5643408179/job/15285186255
       - uses: actions/checkout@v3
         with:
           submodules: true
-
-      - name: Install cross compile toolchains
-        if: ${{ matrix.arch != 'x86_64' }}
-        run: |
-          pacman -Sy
-          pacman -S --noconfirm aarch64-linux-gnu-gcc
-
-      - name: Setup ccache
-        uses: Chocobo1/setup-ccache-action@v1
-        with:
-          remove_stale_cache: false
-
-      - name: Update resource version
-        run: |
-          python3 .github/update_resource_version.py assets/resource/properties.json ${{ needs.meta.outputs.tag }}
 
       - name: Download MaaFramework
         uses: robinraju/release-downloader@v1.8
@@ -148,20 +103,10 @@ jobs:
           out-file-path: "deps"
           extract: true
 
-      - name: Build M9A
-        env:
-          CC: ${{ matrix.arch == 'x86_64' && 'ccache gcc' || 'ccache aarch64-linux-gnu-gcc' }}
-          CXX: ${{ matrix.arch == 'x86_64' && 'ccache g++' || 'ccache aarch64-linux-gnu-g++' }}
-        run: |
-          cmake --preset 'NinjaMulti' \
-            -DM9A_HASH_VERSION='${{ needs.meta.outputs.tag }}'
-
-          cmake --build build --config Release -j 16
-
       - name: Install
         shell: bash
         run: |
-          cmake --install build --prefix install
+          python ./install.py ${{ needs.meta.outputs.tag }}
 
       - uses: actions/upload-artifact@v3
         with:
@@ -181,20 +126,6 @@ jobs:
         with:
           submodules: true
 
-      - name: Install dep
-        run: |
-          brew install cmake python ninja
-        # ccache?
-
-      - name: Install compiler
-        run: |
-          brew install llvm
-        # 16
-
-      - name: Update resource version
-        run: |
-          python3 .github/update_resource_version.py assets/resource/properties.json ${{ needs.meta.outputs.tag }}
-
       - name: Download MaaFramework
         uses: robinraju/release-downloader@v1.8
         with:
@@ -204,21 +135,10 @@ jobs:
           out-file-path: "deps"
           extract: true
 
-      - name: Build M9A
-        env:
-          CC: "/usr/local/opt/llvm/bin/clang"
-          CXX: "/usr/local/opt/llvm/bin/clang++"
-        run: |
-          cmake --preset 'NinjaMulti' \
-            -DARCH='${{ matrix.arch == 'x86_64' && 'x64' || 'arm64' }}' \
-            -DM9A_HASH_VERSION='${{ needs.meta.outputs.tag }}'
-
-          cmake --build build --config Release -j 16
-
       - name: Install
         shell: bash
         run: |
-          cmake --install build --prefix install
+          python ./install.py ${{ needs.meta.outputs.tag }}
 
       - uses: actions/upload-artifact@v3
         with:
