@@ -1,0 +1,7 @@
+{
+    "Sub_Start1999": {
+        "is_sub": true,
+        "action": "StartApp",
+        "package": "com.shenlan.m.reverse1999.bilibili/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity"
+    }
+}

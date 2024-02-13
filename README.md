@@ -26,29 +26,21 @@
 
 **如果你要编译源码才看这节，否则直接 [下载](https://github.com/MaaAssistantArknights/M9A/releases) 即可**
 
+0. 完整克隆本项目及子项目
+
+    ```bash
+    git clone https://github.com/MaaAssistantArknights/MaaFramework.git
+    git submodule update --init --recursive
+    ```
+
 1. 下载 MaaFramework 的 [Release 包](https://github.com/MaaAssistantArknights/MaaFramework/releases)，解压到 `deps` 文件夹中
-2. 配置 cmake
+2. 安装
 
-    - Windows  
-
-    ```bash
-    cmake --preset "MSVC 2022"
+    ```python
+    python ./install.py
     ```
 
-    - Linux / macOS
-
-    ```bash
-    cmake --preset "NinjaMulti"
-    ```
-
-3. 使用 cmake 构建工程  
-
-    ```bash
-    cmake --build build --config Release
-    cmake --install build --prefix install
-    ```
-
-    生成的二进制及相关资源文件在 `install` 目录下
+生成的二进制及相关资源文件在 `install` 目录下
 
 ## 开发相关
 

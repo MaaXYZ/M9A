@@ -43,7 +43,7 @@
     "Sub_Start1999": {
         "is_sub": true,
         "action": "StartApp",
-        "package_doc": "set in code."
+        "package": "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity"
     },
     "BluePochLogo": {
         "recognition": "TemplateMatch",
