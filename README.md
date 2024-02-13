@@ -28,8 +28,7 @@
 0. 完整克隆本项目及子项目
 
     ```bash
-    git clone https://github.com/MaaAssistantArknights/M9A.git
-    git submodule update --init --recursive
+    git clone --recursive https://github.com/MaaAssistantArknights/M9A.git
     ```
 
 1. 下载 MaaFramework 的 [Release 包](https://github.com/MaaAssistantArknights/MaaFramework/releases)，解压到 `deps` 文件夹中
