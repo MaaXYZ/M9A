@@ -1,0 +1,277 @@
+{
+    "EchoesinInTheMountain": {
+        "next": [
+            "EITM_开始探索",
+            "EITM_入口2",
+            "EITM_入口1",
+            "EITM_重置",
+            "EITM_退出",
+            "Sub_StartUp"
+        ]
+    },
+    "EITM_入口1": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/入口1.png",
+        "roi": [
+            896,
+            163,
+            248,
+            139
+        ],
+        "action": "Click",
+        "next": [
+            "EITM_入口2",
+            "EITM_入口1"
+        ]
+    },
+    "EITM_入口2": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/入口2.png",
+        "roi": [
+            14,
+            247,
+            224,
+            391
+        ],
+        "action": "Click",
+        "next": [
+            "EITM_开始探索",
+            "EITM_入口2"
+        ]
+    },
+    "EITM_开始探索": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/开始探索.png",
+        "roi": [
+            977,
+            600,
+            260,
+            92
+        ],
+        "action": "Click",
+        "next": [
+            "EITM_移动",
+            "EITM_开始探索"
+        ]
+    },
+    "EITM_移动": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/移动.png",
+        "roi": [
+            75,
+            68,
+            400,
+            165
+        ],
+        "action": "Swipe",
+        "begin": [
+            213,
+            594,
+            5,
+            5
+        ],
+        "end": [
+            1100,
+            594,
+            5,
+            5
+        ],
+        "duration": 3000,
+        "next": [
+            "EITM_准备",
+            "EITM_移动"
+        ]
+    },
+    "EITM_准备": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/准备.png",
+        "roi": [
+            1109,
+            307,
+            130,
+            109
+        ],
+        "action": "Click",
+        "next": [
+            "EITM_开始调查",
+            "EITM_准备"
+        ]
+    },
+    "EITM_开始调查": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/开始调查.png",
+        "roi": [
+            1109,
+            307,
+            130,
+            109
+        ],
+        "action": "Click",
+        "next": [
+            "EITM_仅战斗",
+            "EITM_开始调查"
+        ]
+    },
+    "EITM_仅战斗": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/仅战斗.png",
+        "roi": [
+            1028,
+            551,
+            90,
+            90
+        ],
+        "action": "Click",
+        "target": [
+            647,
+            357,
+            40,
+            40
+        ],
+        "next": [
+            "EITM_开始行动",
+            "EITM_仅战斗"
+        ]
+    },
+    "EITM_开始行动": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/开始行动.png",
+        "roi": [
+            1023,
+            631,
+            174,
+            59
+        ],
+        "action": "Click",
+        "next": [
+            "EITM_战斗中",
+            "EITM_开始行动"
+        ]
+    },
+    "EITM_战斗中": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/战斗中.png",
+        "roi": [
+            1088,
+            24,
+            42,
+            42
+        ],
+        "next": [
+            "EITM_战斗胜利",
+            "EITM_战斗中"
+        ]
+    },
+    "EITM_战斗胜利": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/战斗胜利.png",
+        "roi": [
+            764,
+            72,
+            339,
+            118
+        ],
+        "action": "Click",
+        "next": [
+            "EITM_退出",
+            "EITM_战斗胜利"
+        ]
+    },
+    "EITM_退出": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/退出.png",
+        "roi": [
+            5,
+            5,
+            80,
+            80
+        ],
+        "action": "Click",
+        "next": [
+            "EITM_放弃奖励",
+            "EITM_重置",
+            "EITM_退出"
+        ]
+    },
+    "EITM_放弃奖励": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/放弃奖励.png",
+        "roi": [
+            720,
+            400,
+            178,
+            61
+        ],
+        "action": "Click",
+        "next": [
+            "EITM_退出",
+            "EITM_放弃奖励"
+        ]
+    },
+    "EITM_重置": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/重置.png",
+        "roi": [
+            864,
+            612,
+            70,
+            70
+        ],
+        "action": "Click",
+        "next": [
+            "EITM_确认",
+            "EITM_重置"
+        ]
+    },
+    "EITM_确认": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/确认.png",
+        "roi": [
+            731,
+            397,
+            140,
+            53
+        ],
+        "action": "Click",
+        "next": [
+            "EITM_前路尽失",
+            "EITM_确认"
+        ]
+    },
+    "EITM_前路尽失": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/前路尽失.png",
+        "roi": [
+            457,
+            230,
+            405,
+            170
+        ],
+        "action": "Click",
+        "next": [
+            "EITM_沿途所见",
+            "EITM_前路尽失"
+        ]
+    },
+    "EITM_沿途所见": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/EchoesinInTheMountain/沿途所见.png",
+        "roi": [
+            750,
+            30,
+            252,
+            65
+        ],
+        "action": "Click",
+        "target": [
+            657,
+            569,
+            20,
+            20
+        ],
+        "next": [
+            "EITM_开始探索",
+            "EITM_沿途所见"
+        ]
+    }
+}
