@@ -1,4 +1,11 @@
 {
+    "controller": [
+        {
+            "name": "ADB 默认方式",
+            "type": "Adb",
+            "screencap": 16580608
+        }
+    ],
     "resource": [
         {
             "name": "官服",
