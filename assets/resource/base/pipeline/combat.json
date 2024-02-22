@@ -121,6 +121,25 @@
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
     },
+    "MainChapter_6": {
+        "doc": "主线第六章 今夜星光灿烂",
+        "next": [
+            "MainChapter_6Enter",
+            "Sub_SwipeLeftForChapter"
+        ]
+    },
+    "MainChapter_6Enter": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/MainChapter_6Enter.png",
+        "roi": [
+            0,
+            90,
+            1280,
+            460
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
     "Sub_ResourceChapterLabel": {
         "is_sub": true,
         "recognition": "TemplateMatch",

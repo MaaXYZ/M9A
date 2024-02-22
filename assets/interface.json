@@ -163,6 +163,20 @@
         "作战关卡": {
             "cases": [
                 {
+                    "name": "6-14 厄险（祝圣秘银）",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_6"
+                        },
+                        "TargetStageName": {
+                            "text": "14"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
                     "name": "3-9 厄险（百灵百验鸟）",
                     "param": {
                         "EnterTheShow": {

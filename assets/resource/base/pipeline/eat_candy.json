@@ -2,9 +2,23 @@
     "EatCandyWithin24H": {
         "enabled": false,
         "next": [
+            "MiniCandy24H",
             "SmallCandy24H",
             "BigCandy24H",
             "NotCandy24H"
+        ]
+    },
+    "MiniCandy24H": {
+        "recognition": "OCR",
+        "text": "小时",
+        "roi": [
+            989,
+            212,
+            165,
+            200
+        ],
+        "next": [
+            "EatMiniCandy24H"
         ]
     },
     "SmallCandy24H": {
@@ -51,6 +65,21 @@
             "Sub_StartUp"
         ]
     },
+    "EatMiniCandy24H": {
+        "recognition": "TemplateMatch",
+        "template": "EatCandy/MiniCandy.png",
+        "roi": [
+            989,
+            212,
+            165,
+            200
+        ],
+        "action": "Click",
+        "next": [
+            "EatCandyConfirm",
+            "MiniCandy24HNotEnough"
+        ]
+    },
     "EatSmallCandy24H": {
         "recognition": "TemplateMatch",
         "template": "EatCandy/SmallCandy.png",
@@ -94,6 +123,22 @@
         "next": [
             "Sub_QuitEatCandyPage",
             "AllIn"
+        ]
+    },
+    "MiniCandy24HNotEnough": {
+        "recognition": "OCR",
+        "text": "苦目软糖",
+        "roi": [
+            989,
+            212,
+            165,
+            200
+        ],
+        "next": [
+            "SmallCandy24H",
+            "Sub_QuitEatCandyPage",
+            "HomeFlag",
+            "Sub_StartUp"
         ]
     },
     "SmallCandy24HNotEnough": {
