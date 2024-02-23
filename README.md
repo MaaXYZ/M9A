@@ -3,17 +3,47 @@
 基于全新架构的 亿韭韭韭 小助手。图像技术 + 模拟控制，解放双手！  
 由 [MaaFramework](https://github.com/MaaAssistantArknights/MaaFramework) 强力驱动！
 
-## 画大饼
+## 功能介绍
 
-- [x] 自动收菜  
-  最基本的了，没啥好说的。目前已支持 全关卡导航刷关 + 可配置吃糖 + 签到 + 收荒原 + 每日心相 + 领邮件和日常。
-- [ ] 关卡掉落识别  
-  有佬在搓类似企鹅的站点了：[圣洛夫数据部](https://github.com/St-Pavlov-Data-Department)，欢迎加入！
-- [ ] 仓库识别 + 材料需求计算 + 关卡导航  
-  粥 MAA 没完成的事情，就由我 韭 MAA 来完成（bushi
-- [ ] ~~自动战斗~~  
-  ~~韭的战斗有点小难度，但又没粥那么难。我觉得完全可以做到打的比大多数玩家水平高，纯粹的无感情的概率 + 数值机器。~~  
-  游戏自带了，摸！
+目前已有的功能：
+
+- 启动/关闭游戏
+- 收取荒原
+- 每日心相（意志解析）
+- 刷体力、常用主线/活动关卡导航、吃糖选项
+- 山麓的回音（肉鸽）
+- 领取日常奖励
+
+近期可能会支持的功能：
+
+- 每周深眠域（使用游戏自带自动战斗）
+- 重新整理最优刷体力关卡
+- 自定义刷体力关卡
+
+## 下载说明
+
+下载地址：<https://github.com/MaaAssistantArknights/M9A/releases>
+
+### Windows
+
+- 对于绝大部分用户，请下载 `M9A-win-x86_64-vXXX.zip`
+- 如果您确定自己的电脑是 arm 架构，请下载 `M9A-win-aarch64-vXXX.zip`
+- 解压后运行 `MaaPiCli.exe` 即可
+
+### macOS
+
+- 使用 Intel 处理器的 macOS 请下载 `M9A-macos-x86_64-vXXX.zip`
+- 使用 M1, M2 等 arm 处理器的 macOS 请下载 `M9A-macos-aarch64-vXXX.zip`
+- 使用方式：
+
+  ```bash
+  chmod a+x MaaPiCli
+  ./MaaPiCli
+  ```
+
+### Linux
+
+~~用 Linux 的大佬应该不需要我教~~
 
 ## 图形化界面
 
@@ -46,4 +76,5 @@
 
 ## Join us
 
-开发 QQ 群：649344857
+- 1999 开发交流 QQ 群：649344857
+- MaaFramework 开发交流 QQ 群: 595990173
