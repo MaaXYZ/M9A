@@ -32,10 +32,9 @@
 
 ### macOS
 
-- 使用 Intel 处理器的 macOS 请下载 `M9A-macos-x86_64-vXXX.zip`
-- 使用 M1, M2 等 arm 处理器的 macOS 请下载 `M9A-macos-aarch64-vXXX.zip`
+- 使用 Intel 处理器请下载 `M9A-macos-x86_64-vXXX.zip`
+- 使用 M1, M2 等 arm 处理器请下载 `M9A-macos-aarch64-vXXX.zip`
 - 使用方式：
-
   ```bash
   chmod a+x MaaPiCli
   ./MaaPiCli
