@@ -1,7 +1,7 @@
 # M9A
 
 基于全新架构的 亿韭韭韭 小助手。图像技术 + 模拟控制，解放双手！  
-由 [MaaFramework](https://github.com/MaaAssistantArknights/MaaFramework) 强力驱动！
+由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
 
 ## 功能介绍
 
@@ -22,7 +22,7 @@
 
 ## 下载说明
 
-下载地址：<https://github.com/MaaAssistantArknights/M9A/releases>
+下载地址：<https://github.com/MaaXYZ/M9A/releases>
 
 ### Windows
 
@@ -35,6 +35,7 @@
 - 若使用 Intel 处理器，请下载 `M9A-macos-x86_64-vXXX.zip`
 - 若使用 M1, M2 等 arm 处理器，请下载 `M9A-macos-aarch64-vXXX.zip`
 - 使用方式：
+
   ```bash
   chmod a+x MaaPiCli
   ./MaaPiCli
@@ -52,15 +53,15 @@
 
 ## How to build
 
-**如果你要编译源码才看这节，否则直接 [下载](https://github.com/MaaAssistantArknights/M9A/releases) 即可**
+**如果你要编译源码才看这节，否则直接 [下载](https://github.com/MaaXYZ/M9A/releases) 即可**
 
 0. 完整克隆本项目及子项目
 
     ```bash
-    git clone --recursive https://github.com/MaaAssistantArknights/M9A.git
+    git clone --recursive https://github.com/MaaXYZ/M9A.git
     ```
 
-1. 下载 MaaFramework 的 [Release 包](https://github.com/MaaAssistantArknights/MaaFramework/releases)，解压到 `deps` 文件夹中
+1. 下载 MaaFramework 的 [Release 包](https://github.com/MaaXYZ/MaaFramework/releases)，解压到 `deps` 文件夹中
 2. 安装
 
     ```python
@@ -71,7 +72,7 @@
 
 ## 开发相关
 
-- [MaaFramework 快速开始](https://github.com/MaaAssistantArknights/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md)
+- [MaaFramework 快速开始](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md)
 
 ## Join us
 

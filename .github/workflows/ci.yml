@@ -29,7 +29,7 @@ jobs:
           is_release=${{ startsWith(github.ref, 'refs/tags/v') }}
           tag=$(git describe --tags --match "v*" ${{ github.ref }} || true)
           if [[ $tag != v* ]]; then
-            tag=$(curl -sX GET "https://api.github.com/repos/MaaAssistantArknights/MaaFramework/releases/latest" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | awk '/tag_name/{print $4}' FS='["]')
+            tag=$(curl -sX GET "https://api.github.com/repos/MaaXYZ/MaaFramework/releases/latest" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | awk '/tag_name/{print $4}' FS='["]')
             if [[ $tag != v* ]]; then
               tag="v0.0.0"
             fi
@@ -63,7 +63,7 @@ jobs:
       - name: Download MaaFramework
         uses: robinraju/release-downloader@v1.8
         with:
-          repository: MaaAssistantArknights/MaaFramework
+          repository: MaaXYZ/MaaFramework
           fileName: "MAA-win-${{ matrix.arch }}*"
           latest: true
           out-file-path: "deps"
@@ -94,7 +94,7 @@ jobs:
           pacman -Sy
           pacman -S --noconfirm python git
 
-      # https://github.com/MaaAssistantArknights/MaaFramework/actions/runs/5643408179/job/15285186255
+      # https://github.com/MaaXYZ/MaaFramework/actions/runs/5643408179/job/15285186255
       - uses: actions/checkout@v3
         with:
           submodules: true
@@ -102,7 +102,7 @@ jobs:
       - name: Download MaaFramework
         uses: robinraju/release-downloader@v1.8
         with:
-          repository: MaaAssistantArknights/MaaFramework
+          repository: MaaXYZ/MaaFramework
           fileName: "MAA-linux-${{ matrix.arch }}*"
           latest: true
           out-file-path: "deps"
@@ -134,7 +134,7 @@ jobs:
       - name: Download MaaFramework
         uses: robinraju/release-downloader@v1.8
         with:
-          repository: MaaAssistantArknights/MaaFramework
+          repository: MaaXYZ/MaaFramework
           fileName: "MAA-macos-${{ matrix.arch }}*"
           latest: true
           out-file-path: "deps"
