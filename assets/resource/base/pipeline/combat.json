@@ -586,6 +586,7 @@
             240
         ],
         "action": "Click",
+        "post_wait_freezes": 1,
         "next": [
             "Victory",
             "AllIn",
