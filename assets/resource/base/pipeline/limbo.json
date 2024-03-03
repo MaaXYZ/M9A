@@ -1,0 +1,144 @@
+{
+    "Limbo": {
+        "next": [
+            "LimboEnterTheShow",
+            "ArtificialSleepwalking",
+            "LimboEntry",
+            "LimboStageRightest",
+            "Sub_StartUp"
+        ]
+    },
+    "LimboEnterTheShow": {
+        "recognition": "TemplateMatch",
+        "template": "Limbo/EnterTheShow.png",
+        "roi": [
+            926,
+            221,
+            229,
+            153
+        ],
+        "action": "Click",
+        "next": [
+            "ArtificialSleepwalking"
+        ]
+    },
+    "ArtificialSleepwalking": {
+        "recognition": "OCR",
+        "text": "人工梦游",
+        "roi": [
+            0,
+            550,
+            1280,
+            170
+        ],
+        "action": "Click",
+        "next": [
+            "ArtificialSleepwalkingAwards",
+            "LimboEntry"
+        ]
+    },
+    "ArtificialSleepwalkingAwards": {
+        "recognition": "TemplateMatch",
+        "template": "Limbo/ArtificialSleepwalkingAwards.png",
+        "roi": [
+            937,
+            463,
+            214,
+            189
+        ],
+        "action": "Click",
+        "next": [
+            "Sub_ObtainedAwards",
+            "ArtificialSleepwalkingAwards",
+            "ArtificialSleepwalkingCloseAwards",
+            "LimboEntry"
+        ]
+    },
+    "ArtificialSleepwalkingCloseAwards": {
+        "recognition": "TemplateMatch",
+        "template": "Limbo/ArtificialSleepwalkingCloseAwards.png",
+        "roi": [
+            511,
+            578,
+            248,
+            142
+        ],
+        "action": "Click",
+        "next": [
+            "ArtificialSleepwalkingCloseAwards",
+            "LimboEntry"
+        ]
+    },
+    "LimboEntry": {
+        "enable": false,
+        "enable_doc": "还没写完",
+        "recognition": "TemplateMatch",
+        "template": "Limbo/LimboEntry.png",
+        "roi": [
+            873,
+            244,
+            264,
+            231
+        ],
+        "action": "Click",
+        "next": [
+            "LimboStageRightest"
+        ]
+    },
+    "LimboStageRightest": {
+        "recognition": "OCR",
+        "text": "深眠片段",
+        "roi": [
+            0,
+            112,
+            1280,
+            234
+        ],
+        "order_by": "Horizontal",
+        "index": -1,
+        "action": "Click",
+        "target_offset": [
+            80,
+            80,
+            -120,
+            50
+        ],
+        "post_wait_freezes": 1,
+        "next": [
+            "LimboStageRightest",
+            "LimboStageFlag"
+        ]
+    },
+    "LimboStageFlag": {
+        "recognition": "OCR",
+        "text": "梦境重置",
+        "roi": [
+            0,
+            586,
+            194,
+            134
+        ],
+        "next": [
+            "LimboStageLightest"
+        ]
+    },
+    "LimboStageLightest": {
+        "recognition": "ColorMatch",
+        "method": 6,
+        "roi": [
+            0,
+            70,
+            1280,
+            560
+        ],
+        "lower": [
+            200
+        ],
+        "upper": [
+            255
+        ],
+        "connected": true,
+        "count": 500,
+        "action": "Click"
+    }
+}
