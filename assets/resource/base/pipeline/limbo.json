@@ -32,9 +32,12 @@
             170
         ],
         "action": "Click",
+        "post_wait_freezes": 1,
         "next": [
             "ArtificialSleepwalkingAwards",
-            "LimboEntry"
+            "LimboEntry",
+            "HomeFlag",
+            "Sub_StartUp"
         ]
     },
     "ArtificialSleepwalkingAwards": {
@@ -66,12 +69,14 @@
         "action": "Click",
         "next": [
             "ArtificialSleepwalkingCloseAwards",
-            "LimboEntry"
+            "LimboEntry",
+            "HomeFlag",
+            "Sub_StartUp"
         ]
     },
     "LimboEntry": {
-        "enable": false,
-        "enable_doc": "还没写完",
+        "enabled": false,
+        "enabled_doc": "还没写完",
         "recognition": "TemplateMatch",
         "template": "Limbo/LimboEntry.png",
         "roi": [
