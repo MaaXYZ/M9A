@@ -20,7 +20,7 @@
 - 重新整理最优刷体力关卡
 - 自定义刷体力关卡
 
-## 下载说明
+## 使用说明
 
 下载地址：<https://github.com/MaaXYZ/M9A/releases>
 
@@ -45,11 +45,16 @@
 
 ~~用 Linux 的大佬应该不需要我教~~
 
+## 其他说明
+
+- 添加 `-d` 参数可跳过交互直接运行任务，如 `./MaaPiCli.exe -d`
+- 反馈问题请附上日志文件 `debug/maa.log`，谢谢！
+
 ## 图形化界面
 
 目前暂无正式版 GUI，但有以下由社区大佬们贡献的 GUI 项目，欢迎使用！
 
-- [MAA1999WPF](https://github.com/MLAcookie/MAA1999WPF) 拿WPF框架写的一个MAA199的UI
+- [M9AWPF](https://github.com/MLAcookie/M9AWPF) 拿 WPF 框架写的一个 M9A 的UI
 
 ## How to build
 
