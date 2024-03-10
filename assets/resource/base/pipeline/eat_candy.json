@@ -77,7 +77,8 @@
         "action": "Click",
         "next": [
             "EatCandyConfirm",
-            "MiniCandy24HNotEnough"
+            "MiniCandy24HNotEnough",
+            "EatMiniCandy24H"
         ]
     },
     "EatSmallCandy24H": {
@@ -92,7 +93,8 @@
         "action": "Click",
         "next": [
             "EatCandyConfirm",
-            "SmallCandy24HNotEnough"
+            "SmallCandy24HNotEnough",
+            "EatSmallCandy24H"
         ]
     },
     "EatBigCandy24H": {
@@ -107,7 +109,8 @@
         "action": "Click",
         "next": [
             "EatCandyConfirm",
-            "BigCandy24HNotEnough"
+            "BigCandy24HNotEnough",
+            "EatBigCandy24H"
         ]
     },
     "EatCandyConfirm": {

@@ -404,6 +404,7 @@
             100,
             50
         ],
+        "post_wait_freezes": 1,
         "next": [
             "SwipeLeftAndFindStage"
         ]
@@ -586,6 +587,7 @@
             240
         ],
         "action": "Click",
+        "post_wait_freezes": 1,
         "next": [
             "Victory",
             "AllIn",

@@ -1,37 +1,72 @@
 # M9A
 
 基于全新架构的 亿韭韭韭 小助手。图像技术 + 模拟控制，解放双手！  
-由 [MaaFramework](https://github.com/MaaAssistantArknights/MaaFramework) 强力驱动！
+由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！
 
-## 画大饼
+## 功能介绍
 
-- [x] 自动收菜  
-  最基本的了，没啥好说的。目前已支持 全关卡导航刷关 + 可配置吃糖 + 签到 + 收荒原 + 每日心相 + 领邮件和日常。
-- [ ] 关卡掉落识别  
-  有佬在搓类似企鹅的站点了：[圣洛夫数据部](https://github.com/St-Pavlov-Data-Department)，欢迎加入！
-- [ ] 仓库识别 + 材料需求计算 + 关卡导航  
-  粥 MAA 没完成的事情，就由我 韭 MAA 来完成（bushi
-- [ ] ~~自动战斗~~  
-  ~~韭的战斗有点小难度，但又没粥那么难。我觉得完全可以做到打的比大多数玩家水平高，纯粹的无感情的概率 + 数值机器。~~  
-  游戏自带了，摸！
+目前已有的功能：
+
+- 启动/关闭游戏
+- 收取荒原
+- 每日心相（意志解析）
+- 刷体力、常用主线/活动关卡导航、吃糖选项
+- 山麓的回音（肉鸽）
+- 领取日常奖励
+
+近期可能会支持的功能：
+
+- 每周深眠域（使用游戏自带自动战斗）
+- 重新整理最优刷体力关卡
+- 自定义刷体力关卡
+
+## 使用说明
+
+下载地址：<https://github.com/MaaXYZ/M9A/releases>
+
+### Windows
+
+- 对于绝大部分用户，请下载 `M9A-win-x86_64-vXXX.zip`
+- 若确定自己的电脑是 arm 架构，请下载 `M9A-win-aarch64-vXXX.zip`
+- 解压后运行 `MaaPiCli.exe` 即可
+
+### macOS
+
+- 若使用 Intel 处理器，请下载 `M9A-macos-x86_64-vXXX.zip`
+- 若使用 M1, M2 等 arm 处理器，请下载 `M9A-macos-aarch64-vXXX.zip`
+- 使用方式：
+
+  ```bash
+  chmod a+x MaaPiCli
+  ./MaaPiCli
+  ```
+
+### Linux
+
+~~用 Linux 的大佬应该不需要我教~~
+
+## 其他说明
+
+- 添加 `-d` 参数可跳过交互直接运行任务，如 `./MaaPiCli.exe -d`
+- 反馈问题请附上日志文件 `debug/maa.log`，谢谢！
 
 ## 图形化界面
 
 目前暂无正式版 GUI，但有以下由社区大佬们贡献的 GUI 项目，欢迎使用！
 
-- [MAA1999WPF](https://github.com/MLAcookie/MAA1999WPF) 拿WPF框架写的一个MAA199的UI
+- [M9AWPF](https://github.com/MLAcookie/M9AWPF) 拿 WPF 框架写的一个 M9A 的UI
 
 ## How to build
 
-**如果你要编译源码才看这节，否则直接 [下载](https://github.com/MaaAssistantArknights/M9A/releases) 即可**
+**如果你要编译源码才看这节，否则直接 [下载](https://github.com/MaaXYZ/M9A/releases) 即可**
 
 0. 完整克隆本项目及子项目
 
     ```bash
-    git clone --recursive https://github.com/MaaAssistantArknights/M9A.git
+    git clone --recursive https://github.com/MaaXYZ/M9A.git
     ```
 
-1. 下载 MaaFramework 的 [Release 包](https://github.com/MaaAssistantArknights/MaaFramework/releases)，解压到 `deps` 文件夹中
+1. 下载 MaaFramework 的 [Release 包](https://github.com/MaaXYZ/MaaFramework/releases)，解压到 `deps` 文件夹中
 2. 安装
 
     ```python
@@ -42,8 +77,9 @@
 
 ## 开发相关
 
-- [MaaFramework 快速开始](https://github.com/MaaAssistantArknights/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md)
+- [MaaFramework 快速开始](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md)
 
 ## Join us
 
-开发 QQ 群：649344857
+- 1999 开发交流 QQ 群：649344857
+- MaaFramework 开发交流 QQ 群: 595990173
