@@ -7,14 +7,16 @@ on:
     branches:
       - "**"
     paths:
-      - ".github/workflows/ci.yml"
+      - ".github/workflows/install.yml"
       - "assets/**"
+      - "**.py"
   pull_request:
     branches:
       - "**"
     paths:
-      - ".github/workflows/ci.yml"
+      - ".github/workflows/install.yml"
       - "assets/**"
+      - "**.py"
   workflow_dispatch:
 
 jobs:
@@ -29,7 +31,7 @@ jobs:
           is_release=${{ startsWith(github.ref, 'refs/tags/v') }}
           tag=$(git describe --tags --match "v*" ${{ github.ref }} || true)
           if [[ $tag != v* ]]; then
-            tag=$(curl -sX GET "https://api.github.com/repos/MaaXYZ/MaaFramework/releases/latest" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | awk '/tag_name/{print $4}' FS='["]')
+            tag=$(curl -sX GET "https://api.github.com/repos/${{ github.repository }}/releases/latest" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | awk '/tag_name/{print $4}' FS='["]')
             if [[ $tag != v* ]]; then
               tag="v0.0.0"
             fi
@@ -82,19 +84,12 @@ jobs:
   ubuntu:
     needs: meta
     runs-on: ubuntu-latest
-    container: archlinux:base-devel
     strategy:
       matrix:
         arch: [aarch64, x86_64]
       fail-fast: false
 
     steps:
-      - name: Install dep
-        run: |
-          pacman -Sy
-          pacman -S --noconfirm python git
-
-      # https://github.com/MaaXYZ/MaaFramework/actions/runs/5643408179/job/15285186255
       - uses: actions/checkout@v3
         with:
           submodules: true
