@@ -12,7 +12,7 @@ install_path = working_dir / Path("install")
 version = len(sys.argv) > 1 and sys.argv[1] or "v0.0.1"
 
 
-if __name__ == "__main__":
+def install_deps():
     shutil.copytree(
         working_dir / "deps" / "bin",
         install_path,
@@ -21,6 +21,7 @@ if __name__ == "__main__":
             "*MaaThriftControlUnit*",
             "*MaaWin32ControlUnit*",
             "*MaaRpc*",
+            "*MaaHttp*",
         ),
         dirs_exist_ok=True,
     )
@@ -29,6 +30,9 @@ if __name__ == "__main__":
         install_path / "MaaAgentBinary",
         dirs_exist_ok=True,
     )
+
+
+def install_resource():
 
     configure_ocr_model()
 
@@ -41,6 +45,14 @@ if __name__ == "__main__":
         working_dir / "assets" / "interface.json",
         install_path,
     )
+
+    with open(install_path / "interface.json", "rw", encoding="utf-8") as f:
+        interface = json.load(f)
+        interface["version"] = version
+        json.dump(interface, f, ensure_ascii=False, indent=4)
+
+
+def install_chores():
     shutil.copy2(
         working_dir / "README.md",
         install_path,
@@ -50,10 +62,8 @@ if __name__ == "__main__":
         install_path,
     )
 
-    with open(install_path / "interface.json", "r", encoding="utf-8") as f:
-        interface = json.load(f)
 
-    interface["version"] = version
-
-    with open(install_path / "interface.json", "w", encoding="utf-8") as f:
-        json.dump(interface, f, ensure_ascii=False, indent=4)
+if __name__ == "__main__":
+    install_deps()
+    install_resource()
+    install_chores()
