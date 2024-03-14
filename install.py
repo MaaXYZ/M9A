@@ -4,9 +4,13 @@ import shutil
 import sys
 import json
 
+from configure import configure_ocr_model
+
+
 working_dir = Path(__file__).parent
 install_path = working_dir / Path("install")
 version = len(sys.argv) > 1 and sys.argv[1] or "v0.0.1"
+
 
 if __name__ == "__main__":
     shutil.copytree(
@@ -26,6 +30,8 @@ if __name__ == "__main__":
         dirs_exist_ok=True,
     )
 
+    configure_ocr_model()
+
     shutil.copytree(
         working_dir / "assets" / "resource",
         install_path / "resource",
@@ -34,11 +40,6 @@ if __name__ == "__main__":
     shutil.copy2(
         working_dir / "assets" / "interface.json",
         install_path,
-    )
-    shutil.copytree(
-        working_dir / "assets" / "MaaCommonAssets" / "OCR" / "ppocr_v4" / "zh_cn",
-        install_path / "resource" / "base" / "model" / "ocr",
-        dirs_exist_ok=True,
     )
     shutil.copy2(
         working_dir / "README.md",
