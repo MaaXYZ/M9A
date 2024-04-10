@@ -46,9 +46,12 @@ def install_resource():
         install_path,
     )
 
-    with open(install_path / "interface.json", "r+", encoding="utf-8") as f:
+    with open(install_path / "interface.json", "r", encoding="utf-8") as f:
         interface = json.load(f)
-        interface["version"] = version
+
+    interface["version"] = version
+    
+    with open(install_path / "interface.json", "w", encoding="utf-8") as f:
         json.dump(interface, f, ensure_ascii=False, indent=4)
 
 
