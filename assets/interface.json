@@ -125,7 +125,7 @@
             }
         },
         {
-            "name": "活动：朔日手记 19 艰难",
+            "name": "活动：朔日手记 19 艰难 （活动已结束）",
             "entry": "NotesOnShuoRi",
             "option": [
                 "复现次数",
@@ -149,8 +149,24 @@
             "entry": "EchoesinInTheMountain"
         },
         {
-            "name": "人工梦游",
-            "entry": "Limbo"
+            "name": "活动：再见，来亚什基 16 艰难",
+            "entry": "GoodbyeRaya",
+            "option": [
+                "复现次数",
+                "刷完全部体力",
+                "吃全部临期糖"
+            ],
+            "param": {
+                "EnterTheShow": {
+                    "next": "GoodbyeRaya"
+                },
+                "TargetStageName": {
+                    "text": "16"
+                },
+                "StageDifficulty": {
+                    "next": "ActivityStageDifficulty"
+                }
+            }
         },
         {
             "name": "领取奖励",
