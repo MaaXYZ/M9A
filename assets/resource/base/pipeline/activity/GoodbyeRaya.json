@@ -1,0 +1,35 @@
+{
+    "GoodbyeRaya": {
+        "next": [
+            "GoodbyeRayaEnterTheShow",
+            "Sub_StartUp"
+        ]
+    },
+    "GoodbyeRayaEnterTheShow": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/GoodbyeRayaEnterTheShow.png",
+        "roi": [
+            940,
+            144,
+            244,
+            146
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "next": [
+            "GoodbyeRayaMainChapter"
+        ]
+    },
+    "GoodbyeRayaMainChapter": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/GoodbyeRayaMainChapter.png",
+        "roi": [
+            988,
+            571,
+            261,
+            95
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    }
+}
