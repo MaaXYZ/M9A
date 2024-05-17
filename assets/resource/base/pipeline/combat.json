@@ -432,39 +432,57 @@
         "next_doc": "Set in code."
     },
     "StageDifficulty_Story": {
-        "recognition": "OCR",
-        "text": [
-            "故事"
-        ],
+        "recognition": "ColorMatch",
         "roi": [
-            837,
-            167,
-            443,
-            194
+            893,
+            239,
+            328,
+            50
         ],
+        "method": 4,
+        "lower": [
+            175,
+            81,
+            49
+        ],
+        "upper": [
+            247,
+            113,
+            66
+        ],
+        "count": 1,
+        "order_by": "Score",
+        "index": 0,
         "action": "Click",
+        "target": true,
         "next": [
             "ReadyForAction"
         ]
     },
     "StageDifficulty_Hard": {
-        "recognition": "OCR",
-        "text": [
-            "故事"
-        ],
+        "recognition": "ColorMatch",
         "roi": [
-            837,
-            167,
-            443,
-            194
+            893,
+            239,
+            328,
+            50
         ],
+        "method": 4,
+        "lower": [
+            193,
+            52,
+            51
+        ],
+        "upper": [
+            255,
+            67,
+            66
+        ],
+        "count": 1,
+        "order_by": "Score",
+        "index": 0,
         "action": "Click",
-        "target_offset": [
-            70,
-            0,
-            0,
-            0
-        ],
+        "target": true,
         "next": [
             "ReadyForAction"
         ]
