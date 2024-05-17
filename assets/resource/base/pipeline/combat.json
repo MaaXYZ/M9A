@@ -506,6 +506,20 @@
         "action": "Click",
         "next": [
             "SwitchToReplay",
+            "IsReplay"
+        ]
+    },
+    "IsReplay": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/IsReplay.png",
+        "threshold": 0.9,
+        "roi": [
+            736,
+            624,
+            53,
+            66
+        ],
+        "next": [
             "AllIn",
             "OpenReplaysTimes"
         ]
@@ -514,19 +528,12 @@
         "recognition": "TemplateMatch",
         "template": "Combat/SwitchToReplay.png",
         "roi": [
-            [
-                781,
-                581,
-                145,
-                139
-            ],
-            [
-                548,
-                569,
-                166,
-                151
-            ]
+            559,
+            619,
+            62,
+            76
         ],
+        "threshold": 0.9,
         "action": "Click",
         "next": [
             "AllIn",
