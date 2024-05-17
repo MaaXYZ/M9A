@@ -450,7 +450,7 @@
     "StageDifficulty_Hard": {
         "recognition": "OCR",
         "text": [
-            "厄险"
+            "故事"
         ],
         "roi": [
             837,
@@ -459,6 +459,12 @@
             194
         ],
         "action": "Click",
+        "target_offset": [
+            70,
+            0,
+            0,
+            0
+        ],
         "next": [
             "ReadyForAction"
         ]
