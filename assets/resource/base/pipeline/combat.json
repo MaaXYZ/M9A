@@ -140,6 +140,25 @@
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
     },
+    "MainChapter_7": {
+        "doc": "主线第七章 孤独之歌",
+        "next": [
+            "MainChapter_7Enter",
+            "Sub_SwipeLeftForChapter"
+        ]
+    },
+    "MainChapter_7Enter": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/MainChapter_7Enter.png",
+        "roi": [
+            0,
+            90,
+            1280,
+            460
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
     "Sub_ResourceChapterLabel": {
         "is_sub": true,
         "recognition": "TemplateMatch",
@@ -431,7 +450,7 @@
     "StageDifficulty_Hard": {
         "recognition": "OCR",
         "text": [
-            "厄险"
+            "故事"
         ],
         "roi": [
             837,
@@ -440,6 +459,12 @@
             194
         ],
         "action": "Click",
+        "target_offset": [
+            70,
+            0,
+            0,
+            0
+        ],
         "next": [
             "ReadyForAction"
         ]
