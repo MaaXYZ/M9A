@@ -182,6 +182,20 @@
         "作战关卡": {
             "cases": [
                 {
+                    "name": "7-26 厄险（啮咬盒）",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_7"
+                        },
+                        "TargetStageName": {
+                            "text": "26"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
                     "name": "6-14 厄险（祝圣秘银）",
                     "param": {
                         "EnterTheShow": {
