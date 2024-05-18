@@ -83,7 +83,6 @@
             140
         ],
         "action": "Click",
-        "post_wait_freezes": 1,
         "next": [
             "Sub_ObtainedAwards",
             "CollectTrust",
