@@ -4,6 +4,7 @@
             "EnterWilderness",
             "CollectEXP",
             "CollectMoney",
+            "CollectAwards",
             "CollectTrust",
             "TrustDialogueNext",
             "TrustDialogueInteraction",
@@ -24,6 +25,7 @@
             "EnterWilderness",
             "CollectEXP",
             "CollectMoney",
+            "CollectAwards",
             "CollectTrust",
             "TrustDialogueNext",
             "TrustDialogueInteraction",
@@ -43,6 +45,7 @@
         "post_wait_freezes": 1,
         "next": [
             "CollectMoney",
+            "CollectAwards",
             "CollectTrust",
             "TrustDialogueNext",
             "TrustDialogueInteraction",
@@ -62,6 +65,26 @@
         "action": "Click",
         "post_wait_freezes": 1,
         "next": [
+            "CollectAwards",
+            "CollectTrust",
+            "TrustDialogueNext",
+            "TrustDialogueInteraction",
+            "Sub_HomeButton",
+            "HomeFlag"
+        ]
+    },
+    "CollectAwards": {
+        "recognition": "TemplateMatch",
+        "template": "Wilderness/CollectAwards.png",
+        "roi": [
+            680,
+            170,
+            140,
+            140
+        ],
+        "action": "Click",
+        "next": [
+            "Sub_ObtainedAwards",
             "CollectTrust",
             "TrustDialogueNext",
             "TrustDialogueInteraction",
@@ -123,16 +146,15 @@
         ]
     },
     "TrustMax": {
-        "recognition": "OCR",
-        "text": [
-            "MAX"
-        ],
+        "recognition": "TemplateMatch",
+        "template": "Wilderness/TrustMax.png",
         "roi": [
             0,
-            24,
-            185,
-            638
+            162,
+            141,
+            114
         ],
+        "action": "Click",
         "next": [
             "Sub_HomeButton",
             "HomeFlag"
