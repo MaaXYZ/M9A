@@ -436,6 +436,20 @@
                             "next": "StageDifficulty_None"
                         }
                     }
+                },
+                {
+                    "name": "意志解析 07 (请在每日心相后使用)",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "ResourceChapter_Psychube"
+                        },
+                        "TargetStageName": {
+                            "text": "07"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_None"
+                        }
+                    }
                 }
             ]
         },
