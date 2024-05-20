@@ -619,10 +619,10 @@
         "recognition": "OCR",
         "text_doc": "Set in code.",
         "roi": [
-            791,
-            391,
-            73,
-            238
+            751,
+            333,
+            188,
+            347
         ],
         "action": "Click",
         "next": [
