@@ -182,7 +182,7 @@
         "作战关卡": {
             "cases": [
                 {
-                    "name": "7-26 厄险（啮咬盒）",
+                    "name": "7-26 厄险（啮咬盒）（效率未知）",
                     "param": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
@@ -196,7 +196,35 @@
                     }
                 },
                 {
-                    "name": "6-14 厄险（祝圣秘银）",
+                    "name": "7-6 厄险（金草焚香）（效率未知）",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_7"
+                        },
+                        "TargetStageName": {
+                            "text": "06"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "6-21 厄险（砂金甲虫）（可刷可合成可开箱）",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_6"
+                        },
+                        "TargetStageName": {
+                            "text": "21"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "6-14 厄险（祝圣秘银）（可刷可合成）",
                     "param": {
                         "EnterTheShow": {
                             "next": "MainChapter_6"
@@ -210,13 +238,13 @@
                     }
                 },
                 {
-                    "name": "3-9 厄险（百灵百验鸟）",
+                    "name": "5-19 厄险（啮咬盒）（可刷可合成）",
                     "param": {
                         "EnterTheShow": {
-                            "next": "MainChapter_3"
+                            "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": "09"
+                            "text": "19"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -224,7 +252,35 @@
                     }
                 },
                 {
-                    "name": "4-20 厄险（双头形骨架）",
+                    "name": "5-4 厄险（弯曲鹅颈）（直接刷取）",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_5"
+                        },
+                        "TargetStageName": {
+                            "text": "04"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "5-3 厄险（翼造门匙）（可刷可合成）",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_5"
+                        },
+                        "TargetStageName": {
+                            "text": "03"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "4-20 厄险（双头形骨架）（可刷可合成）",
                     "param": {
                         "EnterTheShow": {
                             "next": "MainChapter_4"
@@ -238,21 +294,7 @@
                     }
                 },
                 {
-                    "name": "2-3 厄险（祝圣秘银）",
-                    "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_2"
-                        },
-                        "TargetStageName": {
-                            "text": "03"
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "3-13 厄险（盐封曼德拉）",
+                    "name": "3-13 厄险（盐封曼德拉）（可刷可合成）",
                     "param": {
                         "EnterTheShow": {
                             "next": "MainChapter_3"
@@ -266,21 +308,7 @@
                     }
                 },
                 {
-                    "name": "4-10 厄险（啮咬盒）",
-                    "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_4"
-                        },
-                        "TargetStageName": {
-                            "text": "10"
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "3-11 厄险（金爪灵摆）",
+                    "name": "3-11 厄险（金爪灵摆）（优先合成）",
                     "param": {
                         "EnterTheShow": {
                             "next": "MainChapter_3"
@@ -292,6 +320,24 @@
                             "next": "StageDifficulty_Hard"
                         }
                     }
+                },
+                {
+                    "name": "2-6 厄险（百灵百验鸟）（可刷可合成）",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_2"
+                        },
+                        "TargetStageName": {
+                            "text": "06"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "---推荐来源：必要的记录。此条勿选---",
+                    "param": {}
                 },
                 {
                     "name": "尘埃运动 06",
@@ -315,20 +361,6 @@
                         },
                         "TargetStageName": {
                             "text": "06"
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_None"
-                        }
-                    }
-                },
-                {
-                    "name": "丰收时令 04",
-                    "param": {
-                        "EnterTheShow": {
-                            "next": "ResourceChapter_MA"
-                        },
-                        "TargetStageName": {
-                            "text": "04"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -385,6 +417,20 @@
                         },
                         "TargetStageName": {
                             "text": "06"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_None"
+                        }
+                    }
+                },
+                {
+                    "name": "丰收时令 04",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "ResourceChapter_MA"
+                        },
+                        "TargetStageName": {
+                            "text": "04"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
