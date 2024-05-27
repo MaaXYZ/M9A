@@ -77,7 +77,6 @@
         "action": "Click",
         "next": [
             "SellectMiniCandyMax",
-            "EatCandyConfirm",
             "MiniCandy24HNotEnough",
             "EatMiniCandy24H"
         ]
