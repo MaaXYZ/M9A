@@ -134,15 +134,14 @@
         ]
     },
     "StartGame": {
-        "recognition": "OCR",
-        "text": [
-            "A"
-        ],
+        "recognition": "TemplateMatch",
+        "template": "StartUp/StartGame.png",
+        "green_mask":true,
         "roi": [
-            625,
-            525,
-            18,
-            23
+            352,
+            230,
+            587,
+            183
         ],
         "action": "Click",
         "next": [
