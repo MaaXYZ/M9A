@@ -76,7 +76,7 @@
         ],
         "action": "Click",
         "next": [
-            "EatCandyConfirm",
+            "SellectMiniCandyMax",
             "MiniCandy24HNotEnough",
             "EatMiniCandy24H"
         ]
@@ -194,6 +194,36 @@
             636,
             155,
             76
+        ]
+    },
+    "SellectMiniCandyMax": {
+        "recognition": "TemplateMatch",
+        "template": "EatCandy/SellectMiniCandyMax.png",
+        "roi": [
+            782,
+            414,
+            52,
+            40
+        ],
+        "action": "Click",
+        "next": [
+            "ConvertCandyConfirm"
+        ]
+    },
+    "ConvertCandyConfirm": {
+        "recognition": "TemplateMatch",
+        "template": "EatCandy/ConvertCandyConfirm.png",
+        "roi": [
+            594,
+            491,
+            88,
+            48
+        ],
+        "action": "Click",
+        "next": [
+            "Sub_QuitEatCandyPage",
+            "AllIn",
+            "ConvertCandyConfirm"
         ]
     }
 }
