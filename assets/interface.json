@@ -438,7 +438,7 @@
                     }
                 },
                 {
-                    "name": "意志解析 07 (请在每日心相后使用)",
+                    "name": "意志解析 07",
                     "param": {
                         "EnterTheShow": {
                             "next": "ResourceChapter_Psychube"

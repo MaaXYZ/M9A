@@ -245,11 +245,24 @@
     "ResourceChapter_Psychube": {
         "doc": "意志解析",
         "next": [
-            "ResourceChapter_Psychube07Enter",
-            "NoFreePsychube07",
+            "ResourceChapter_Psychube07FreeEnter",
+            "ResourceChapter_NoFreePsychube07",
             "Sub_ResourceChapterLabel",
             "Sub_SwipeRightForChapter"
         ]
+    },
+    "ResourceChapter_Psychube07FreeEnter": {
+        "recognition": "TemplateMatch",
+        "template": "Psychube/FreePsychubeStages.png",
+        "threshold": 0.9,
+        "roi": [
+            180,
+            203,
+            246,
+            306
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
     },
     "ResourceChapter_Psychube07Enter": {
         "recognition": "TemplateMatch",
@@ -264,7 +277,7 @@
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
     },
-    "NoFreePsychube07": {
+    "ResourceChapter_NoFreePsychube07": {
         "recognition": "TemplateMatch",
         "template": "Psychube/NoFreePsychubeStagesFlag.png",
         "roi": [
