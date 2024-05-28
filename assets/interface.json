@@ -44,7 +44,15 @@
             ]
         },
         {
-            "name": "活动：绿湖噩梦 17 艰难（活动已结束）",
+            "name": "领取奖励",
+            "entry": "Awards"
+        },
+        {
+            "name": "关闭游戏",
+            "entry": "Close1999"
+        },
+        {
+            "name": "活动：绿湖噩梦 17 艰难（已结束）",
             "entry": "ANightmareAtGreenLake",
             "option": [
                 "复现次数",
@@ -64,7 +72,7 @@
             }
         },
         {
-            "name": "活动：行至摩卢旁卡 16 艰难（活动已结束）",
+            "name": "活动：行至摩卢旁卡 16 艰难（已结束）",
             "entry": "JourneytoMorPankh",
             "option": [
                 "复现次数",
@@ -84,7 +92,7 @@
             }
         },
         {
-            "name": "活动：洞穴的囚徒 证明启示 05（活动已结束）",
+            "name": "活动：洞穴的囚徒 证明启示 05（已结束）",
             "entry": "ThePrisonerintheCave",
             "option": [
                 "复现次数",
@@ -104,7 +112,7 @@
             }
         },
         {
-            "name": "活动：复兴乌卢鲁运动会 13 艰难（活动已结束）",
+            "name": "活动：复兴乌卢鲁运动会 13 艰难（已结束）",
             "entry": "RevivalTheUluruGames",
             "option": [
                 "复现次数",
@@ -124,7 +132,7 @@
             }
         },
         {
-            "name": "活动：朔日手记 19 艰难 （活动已结束）",
+            "name": "活动：朔日手记 19 艰难 （已结束）",
             "entry": "NotesOnShuoRi",
             "option": [
                 "复现次数",
@@ -144,11 +152,7 @@
             }
         },
         {
-            "name": "山麓的回音（肉鸽）",
-            "entry": "EchoesinInTheMountain"
-        },
-        {
-            "name": "活动：再见，来亚什基 16 艰难",
+            "name": "活动：再见，来亚什基 16 艰难（已结束）",
             "entry": "GoodbyeRaya",
             "option": [
                 "复现次数",
@@ -168,12 +172,8 @@
             }
         },
         {
-            "name": "领取奖励",
-            "entry": "Awards"
-        },
-        {
-            "name": "关闭游戏",
-            "entry": "Close1999"
+            "name": "肉鸽：山麓的回音（已结束）",
+            "entry": "EchoesinInTheMountain"
         }
     ],
     "recognizer": {},
@@ -182,7 +182,7 @@
         "作战关卡": {
             "cases": [
                 {
-                    "name": "7-26 厄险（啮咬盒）（效率未知）",
+                    "name": "啮咬盒：7-26 厄险 （最优。可刷可合成）",
                     "param": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
@@ -196,49 +196,7 @@
                     }
                 },
                 {
-                    "name": "7-6 厄险（金草焚香）（效率未知）",
-                    "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_7"
-                        },
-                        "TargetStageName": {
-                            "text": "06"
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "6-21 厄险（砂金甲虫）（可刷可合成可开箱）",
-                    "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_6"
-                        },
-                        "TargetStageName": {
-                            "text": "21"
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "6-14 厄险（祝圣秘银）（可刷可合成）",
-                    "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_6"
-                        },
-                        "TargetStageName": {
-                            "text": "14"
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "5-19 厄险（啮咬盒）（可刷可合成）",
+                    "name": "啮咬盒：5-19 厄险 （可刷可合成）",
                     "param": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
@@ -252,49 +210,7 @@
                     }
                 },
                 {
-                    "name": "5-4 厄险（弯曲鹅颈）（直接刷取）",
-                    "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_5"
-                        },
-                        "TargetStageName": {
-                            "text": "04"
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "5-3 厄险（翼造门匙）（可刷可合成）",
-                    "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_5"
-                        },
-                        "TargetStageName": {
-                            "text": "03"
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "4-20 厄险（双头形骨架）（可刷可合成）",
-                    "param": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_4"
-                        },
-                        "TargetStageName": {
-                            "text": "20"
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "3-13 厄险（盐封曼德拉）（可刷可合成）",
+                    "name": "盐封曼德拉：3-13 厄险（可刷可合成）",
                     "param": {
                         "EnterTheShow": {
                             "next": "MainChapter_3"
@@ -308,13 +224,13 @@
                     }
                 },
                 {
-                    "name": "3-11 厄险（金爪灵摆）（优先合成）",
+                    "name": "双头形骨架：7-7 厄险（可刷可合成）",
                     "param": {
                         "EnterTheShow": {
-                            "next": "MainChapter_3"
+                            "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": "11"
+                            "text": "07"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -322,7 +238,49 @@
                     }
                 },
                 {
-                    "name": "2-6 厄险（百灵百验鸟）（可刷可合成）",
+                    "name": "双头形骨架：4-20 厄险（可刷可合成）",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_4"
+                        },
+                        "TargetStageName": {
+                            "text": "20"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "祝圣秘银：6-14 厄险（最优。只刷）",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_6"
+                        },
+                        "TargetStageName": {
+                            "text": "14"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "祝圣秘银：7-19 厄险",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_7"
+                        },
+                        "TargetStageName": {
+                            "text": "19"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "百灵百验鸟：2-6 厄险（可刷可合成）",
                     "param": {
                         "EnterTheShow": {
                             "next": "MainChapter_2"
@@ -336,7 +294,91 @@
                     }
                 },
                 {
-                    "name": "---推荐来源：必要的记录。此条勿选---",
+                    "name": "翼造门匙：5-3 厄险（最优。可刷可合成）",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_5"
+                        },
+                        "TargetStageName": {
+                            "text": "03"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "翼造门匙：7-10 厄险",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_7"
+                        },
+                        "TargetStageName": {
+                            "text": "10"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "弯曲鹅颈：5-4 厄险（可刷可合成）",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_5"
+                        },
+                        "TargetStageName": {
+                            "text": "04"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "金草焚香：4-4 故事（可刷可合成）",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_4"
+                        },
+                        "TargetStageName": {
+                            "text": "04"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Story"
+                        }
+                    }
+                },
+                {
+                    "name": "金爪灵摆：7-20 厄险（优先合成，合不了就刷）",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_7"
+                        },
+                        "TargetStageName": {
+                            "text": "20"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "砂金甲虫：6-21 厄险（优先合成，合不了就刷。可开箱）",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_6"
+                        },
+                        "TargetStageName": {
+                            "text": "21"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "---刷取推荐来源：必要的记录https://www.kdocs.cn/l/cd5MWeCl5bKw。此条勿选---",
                     "param": {}
                 },
                 {
