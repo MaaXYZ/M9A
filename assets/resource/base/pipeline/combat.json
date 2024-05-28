@@ -242,6 +242,79 @@
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
     },
+    "ResourceChapter_Psychube": {
+        "doc": "意志解析",
+        "next": [
+            "ResourceChapter_Psychube07FreeEnter",
+            "ResourceChapter_NoFreePsychube07",
+            "Sub_ResourceChapterLabel",
+            "Sub_SwipeRightForChapter"
+        ]
+    },
+    "ResourceChapter_Psychube07FreeEnter": {
+        "recognition": "TemplateMatch",
+        "template": "Psychube/FreePsychubeStages.png",
+        "threshold": 0.9,
+        "roi": [
+            180,
+            203,
+            246,
+            306
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "ResourceChapter_Psychube07Enter": {
+        "recognition": "TemplateMatch",
+        "template": "Psychube/FreePsychubeStages.png",
+        "threshold": 0.9,
+        "roi": [
+            841,
+            230,
+            265,
+            290
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "ResourceChapter_NoFreePsychube07": {
+        "recognition": "TemplateMatch",
+        "template": "Psychube/NoFreePsychubeStagesFlag.png",
+        "roi": [
+            732,
+            210,
+            233,
+            297
+        ],
+        "next": [
+            "SwipeRightForPsychube"
+        ]
+    },
+    "SwipeRightForPsychube": {
+        "next": [
+            "ResourceChapter_Psychube07Enter",
+            "SwipeRightForPsychube07"
+        ]
+    },
+    "SwipeRightForPsychube07": {
+        "action": "Swipe",
+        "begin": [
+            900,
+            600,
+            100,
+            50
+        ],
+        "end": [
+            300,
+            600,
+            100,
+            50
+        ],
+        "post_wait_freezes": 1,
+        "next": [
+            "SwipeRightForPsychube"
+        ]
+    },
     "Sub_PromotionChapterLabel": {
         "is_sub": true,
         "recognition": "TemplateMatch",
@@ -559,10 +632,10 @@
         "recognition": "OCR",
         "text_doc": "Set in code.",
         "roi": [
-            791,
-            391,
-            73,
-            238
+            751,
+            333,
+            188,
+            347
         ],
         "action": "Click",
         "next": [

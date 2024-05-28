@@ -78,6 +78,16 @@
 
 - [MaaFramework 快速开始](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md)
 
+## 鸣谢
+
+本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
+
+感谢以下开发者对本项目作出的贡献:
+
+<a href="https://github.com/MaaXYZ/M9A/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MaaXYZ/M9A&max=1000" />
+</a>
+
 ## Join us
 
 - 1999 开发交流 QQ 群：649344857
