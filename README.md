@@ -10,14 +10,13 @@
 - 启动/关闭游戏
 - 收取荒原
 - 每日心相（意志解析）
-- 刷体力、常用主线/活动关卡导航、吃糖选项
+- 刷体力、最优材料关卡、活动关卡导航、吃糖选项
 - 山麓的回音（肉鸽）
 - 领取日常奖励
 
 近期可能会支持的功能：
 
 - 每周深眠域（使用游戏自带自动战斗）
-- 重新整理最优刷体力关卡
 - 自定义刷体力关卡
 
 ## 使用说明
@@ -78,6 +77,16 @@
 ## 开发相关
 
 - [MaaFramework 快速开始](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md)
+
+## 鸣谢
+
+本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！
+
+感谢以下开发者对本项目作出的贡献:
+
+<a href="https://github.com/MaaXYZ/M9A/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MaaXYZ/M9A&max=1000" />
+</a>
 
 ## Join us
 
