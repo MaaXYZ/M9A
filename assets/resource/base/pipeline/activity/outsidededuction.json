@@ -1,0 +1,2235 @@
+{
+    "SeriesOfDusks": {
+        "next": [
+            "EnterTheShow",
+            "Sub_StartUp"
+        ]
+    },
+    "OutsideDeduction": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/OutsideDeduction.png",
+        "roi": [
+            1127,
+            602,
+            111,
+            104
+        ],
+        "action": "Click",
+        "next": [
+            "SODStop",
+            "SODStart",
+            "OutsideDeduction"
+        ]
+    },
+    "SODStop": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SODStop.png",
+        "roi": [
+            830,
+            597,
+            67,
+            75
+        ],
+        "action": "Click",
+        "next": [
+            "SODStop_Confirm",
+            "SODStop"
+        ]
+    },
+    "SODStop_Confirm": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_ArcanistAdd_Confirm_1.png",
+        "roi": [
+            754,
+            396,
+            106,
+            54
+        ],
+        "action": "Click",
+        "next": [
+            "SODStart",
+            "SODStop_Click_1",
+            "SODStop_Confirm"
+        ]
+    },
+    "SODStop_Click_1": {
+        "recognition": "OCR",
+        "text": [
+            "阴霾",
+            "渐生"
+        ],
+        "roi": [
+            395,
+            205,
+            483,
+            181
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Skip",
+            "SODStop_Click_1"
+        ]
+    },
+    "SODStop_Click_2": {
+        "recognition": "OCR",
+        "text": [
+            "幕终寻获"
+        ],
+        "roi": [
+            535,
+            4,
+            224,
+            90
+        ],
+        "action": "Click",
+        "target": [
+            787,
+            45,
+            10,
+            10
+        ],
+        "next": [
+            "SODStart",
+            "SODStop_Click_3",
+            "SODStop_Click_2"
+        ]
+    },
+    "SOD_Complete_Click_1": {
+        "recognition": "OCR",
+        "text": [
+            "阴霾",
+            "消散"
+        ],
+        "roi": [
+            395,
+            205,
+            483,
+            181
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Skip",
+            "SODStop_Click_1"
+        ]
+    },
+    "SODStop_Click_3": {
+        "recognition": "OCR",
+        "text": [
+            "累计获得造物"
+        ],
+        "roi": [
+            286,
+            272,
+            247,
+            92
+        ],
+        "action": "Click",
+        "target": [
+            654,
+            90,
+            5,
+            5
+        ],
+        "next": [
+            "SODStart",
+            "SODStop_Click_3"
+        ]
+    },
+    "SODStart": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SODStart.png",
+        "roi": [
+            947,
+            559,
+            246,
+            113
+        ],
+        "action": "Click",
+        "next": [
+            "SODStart_Confirm",
+            "SODStart"
+        ]
+    },
+    "SODStart_Confirm": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SODStart_Confirm.png",
+        "roi": [
+            997,
+            605,
+            143,
+            86
+        ],
+        "action": "Click",
+        "next": [
+            "SODStart_GoodsSellect",
+            "SODStart_MediaSellect",
+            "SOD_ArcanistAdd",
+            "SODStart_Confirm"
+        ]
+    },
+    "SODStart_GoodsSellect": {
+        "recognition": "OCR",
+        "text": [
+            "镜的馈赠"
+        ],
+        "roi": [
+            535,
+            4,
+            224,
+            90
+        ],
+        "action": "Click",
+        "target": [
+            267,
+            361,
+            20,
+            20
+        ],
+        "next": [
+            "SODStart_MediaSellect",
+            "SOD_ArcanistAdd",
+            "SODStart_Confirm",
+            "SODStart_GoodsSellect_2"
+        ]
+    },
+    "SODStart_GoodsSellect_2": {
+        "recognition": "OCR",
+        "text": [
+            "镜的馈赠"
+        ],
+        "roi": [
+            535,
+            4,
+            224,
+            90
+        ],
+        "action": "Click",
+        "target": [
+            632,
+            361,
+            20,
+            20
+        ],
+        "next": [
+            "SOD_ItemSellct_1",
+            "SODStart_MediaSellect",
+            "SOD_ArcanistAdd",
+            "SODStart_Confirm"
+        ]
+    },
+    "SODStart_MediaSellect": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SODStart_MediaSellect.png",
+        "roi": [
+            128,
+            219,
+            240,
+            210
+        ],
+        "action": "Click",
+        "next": [
+            "SODStart_Confirm",
+            "SODStart_MediaSellect"
+        ]
+    },
+    "SOD_ArcanistAdd": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_ArcanistAdd.png",
+        "roi": [
+            63,
+            335,
+            90,
+            85
+        ],
+        "action": "Click",
+        "post_delay": 2500,
+        "next": [
+            "SOD_Quickformation",
+            "SOD_Quickformation_On",
+            "SOD_ArcanistAdd"
+        ]
+    },
+    "SOD_Quickformation": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Quickformation.png",
+        "roi": [
+            542,
+            17,
+            31,
+            45
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Quickformation_On",
+            "SOD_Quickformation"
+        ]
+    },
+    "SOD_Quickformation_On": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Quickformation_On.png",
+        "roi": [
+            542,
+            17,
+            31,
+            45
+        ],
+        "next": [
+            "SOD_ArcanistAdd_1"
+        ]
+    },
+    "SOD_ArcanistAdd_1": {
+        "action": "Click",
+        "target": [
+            587,
+            206,
+            20,
+            20
+        ],
+        "next": [
+            "SOD_ArcanistAdd_2"
+        ]
+    },
+    "SOD_ArcanistAdd_2": {
+        "action": "Click",
+        "target": [
+            719,
+            206,
+            20,
+            20
+        ],
+        "next": [
+            "SOD_ArcanistAdd_3"
+        ]
+    },
+    "SOD_ArcanistAdd_3": {
+        "action": "Click",
+        "target": [
+            867,
+            206,
+            20,
+            20
+        ],
+        "next": [
+            "SOD_ArcanistAdd_4"
+        ]
+    },
+    "SOD_ArcanistAdd_4": {
+        "action": "Click",
+        "target": [
+            1002,
+            206,
+            20,
+            20
+        ],
+        "next": [
+            "SOD_ArcanistAdd_Confirm_1"
+        ]
+    },
+    "SOD_ArcanistAdd_Confirm_1": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_ArcanistAdd_Confirm_1.png",
+        "roi": [
+            1107,
+            635,
+            91,
+            62
+        ],
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "SOD_ArcanistAdd_Confirm_2",
+            "SOD_CombatStart",
+            "SOD_Departure",
+            "SOD_Main",
+            "SOD_Skip",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_Levelup",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Acquire",
+            "SOD_NewArcanist",
+            "SOD_Nothinghappen",
+            "SOD_ArcanistAdd_Confirm_1"
+        ]
+    },
+    "SOD_ArcanistAdd_Confirm_2": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SODStart_Confirm.png",
+        "roi": [
+            997,
+            605,
+            143,
+            86
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Main",
+            "SOD_ItemSellct_1",
+            "SOD_Acquire",
+            "SOD_ArcanistAdd_Confirm_2"
+        ]
+    },
+    "SOD_SellectNext_1": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Combat.png",
+        "threshold":0.85,
+        "index": -1,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_2",
+            "SOD_SellectNext_3",
+            "SOD_SellectNext_4",
+            "SOD_SellectNext_5",
+            "SOD_SellectNext_6",
+            "SOD_SellectNext_7",
+            "SOD_SellectNext_1_1",
+            "SOD_SellectNext_2_1",
+            "SOD_SellectNext_3_1",
+            "SOD_SellectNext_4_1",
+            "SOD_SellectNext_5_1",
+            "SOD_SellectNext_6_1",
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_2": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Danger.png",
+        "threshold":0.85,
+        "index": -1,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_3",
+            "SOD_SellectNext_4",
+            "SOD_SellectNext_5",
+            "SOD_SellectNext_6",
+            "SOD_SellectNext_7",
+            "SOD_SellectNext_1_1",
+            "SOD_SellectNext_2_1",
+            "SOD_SellectNext_3_1",
+            "SOD_SellectNext_4_1",
+            "SOD_SellectNext_5_1",
+            "SOD_SellectNext_6_1",
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_3": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Imminent.png",
+        "threshold":0.85,
+        "index": -1,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_4",
+            "SOD_SellectNext_5",
+            "SOD_SellectNext_6",
+            "SOD_SellectNext_7",
+            "SOD_SellectNext_1_1",
+            "SOD_SellectNext_2_1",
+            "SOD_SellectNext_3_1",
+            "SOD_SellectNext_4_1",
+            "SOD_SellectNext_5_1",
+            "SOD_SellectNext_6_1",
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_4": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Shopping.png",
+        "threshold":0.85,
+        "index": -1,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_5",
+            "SOD_SellectNext_6",
+            "SOD_SellectNext_7",
+            "SOD_SellectNext_1_1",
+            "SOD_SellectNext_2_1",
+            "SOD_SellectNext_3_1",
+            "SOD_SellectNext_4_1",
+            "SOD_SellectNext_5_1",
+            "SOD_SellectNext_6_1",
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_5": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Discovery.png",
+        "threshold":0.85,
+        "index": -1,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_6",
+            "SOD_SellectNext_7",
+            "SOD_SellectNext_1_1",
+            "SOD_SellectNext_2_1",
+            "SOD_SellectNext_3_1",
+            "SOD_SellectNext_4_1",
+            "SOD_SellectNext_5_1",
+            "SOD_SellectNext_6_1",
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_6": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_RestSite.png",
+        "threshold":0.85,
+        "index": -1,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_7",
+            "SOD_SellectNext_1_1",
+            "SOD_SellectNext_2_1",
+            "SOD_SellectNext_3_1",
+            "SOD_SellectNext_4_1",
+            "SOD_SellectNext_5_1",
+            "SOD_SellectNext_6_1",
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_7": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Treasure.png",
+        "threshold":0.85,
+        "index": -1,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_1_1",
+            "SOD_SellectNext_2_1",
+            "SOD_SellectNext_3_1",
+            "SOD_SellectNext_4_1",
+            "SOD_SellectNext_5_1",
+            "SOD_SellectNext_6_1",
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_1_1": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Combat.png",
+        "threshold":0.85,
+        "index": -2,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_2_1",
+            "SOD_SellectNext_3_1",
+            "SOD_SellectNext_4_1",
+            "SOD_SellectNext_5_1",
+            "SOD_SellectNext_6_1",
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_2_1": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Danger.png",
+        "threshold":0.85,
+        "index": -2,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_3_1",
+            "SOD_SellectNext_4_1",
+            "SOD_SellectNext_5_1",
+            "SOD_SellectNext_6_1",
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_3_1": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Imminent.png",
+        "threshold":0.85,
+        "index": -2,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_4_1",
+            "SOD_SellectNext_5_1",
+            "SOD_SellectNext_6_1",
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_4_1": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Shopping.png",
+        "threshold":0.85,
+        "index": -2,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_5_1",
+            "SOD_SellectNext_6_1",
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_5_1": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Discovery.png",
+        "threshold":0.85,
+        "index": -2,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_6_1",
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_6_1": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_RestSite.png",
+        "threshold":0.85,
+        "index": -2,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_7_1": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Treasure.png",
+        "threshold":0.85,
+        "index": -2,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_1_2": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Combat.png",
+        "threshold":0.85,
+        "index": 0,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_2_2": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Danger.png",
+        "threshold":0.85,
+        "index": 0,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_3_2": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Imminent.png",
+        "threshold":0.85,
+        "index": 0,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_4_2": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Shopping.png",
+        "threshold":0.85,
+        "index": 0,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_5_2": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Discovery.png",
+        "threshold":0.85,
+        "index": 0,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_6_2": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_RestSite.png",
+        "threshold":0.85,
+        "index": 0,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_7_2": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Treasure.png",
+        "threshold":0.85,
+        "index": 0,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_1_3": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Combat.png",
+        "threshold":0.85,
+        "index": 1,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_2_3": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Danger.png",
+        "threshold":0.85,
+        "index": 1,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_3_3": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Imminent.png",
+        "threshold":0.85,
+        "index": 1,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_4_3": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Shopping.png",
+        "threshold":0.85,
+        "index": 1,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_5_3": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Discovery.png",
+        "threshold":0.85,
+        "index": 1,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_6_3": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_RestSite.png",
+        "threshold":0.85,
+        "index": 1,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_7_3": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Treasure.png",
+        "threshold":0.85,
+        "index": 1,
+        "roi": [
+            247,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip"
+        ]
+    },
+    "SOD_Levelup": {
+        "recognition": "OCR",
+        "text": [
+            "触媒等级提升"
+        ],
+        "roi": [
+            500,
+            4,
+            300,
+            68
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_NewArcanist",
+            "SOD_Levelup"
+        ]
+    },
+    "SOD_Move": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Move.png",
+        "roi": [
+            1019,
+            590,
+            106,
+            91
+        ],
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "SOD_ArcanistSellct",
+            "SOD_ArcanistAdd_Single4",
+            "SOD_CombatStart",
+            "SOD_Shopping_Leave",
+            "SOD_EndEvent",
+            "SOD_ItemSellct_1",
+            "SOD_Acquire",
+            "SOD_Nothinghappen",
+            "SOD_Move"
+        ]
+    },
+    "SOD_Fight": {
+        "recognition": "OCR",
+        "text": [
+            "开始行动"
+        ],
+        "roi": [
+            884,
+            513,
+            382,
+            198
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_ArcanistSellct",
+            "SOD_ArcanistAdd_Single4",
+            "SOD_CombatStart",
+            "SOD_ItemSellct_1",
+            "SOD_Acquire"
+        ]
+    },
+    "SOD_ArcanistSellct": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_ArcanistSellct.png",
+        "roi": [
+            495,
+            234,
+            54,
+            54
+        ],
+        "action": "Click",
+        "post_delay": 2500,
+        "next": [
+            "SOD_Quickformation",
+            "SOD_Quickformation_On",
+            "SOD_ArcanistSellct"
+        ]
+    },
+    "SOD_ArcanistAdd_Single4": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_ArcanistSellct.png",
+        "roi": [
+            1020,
+            235,
+            60,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_ArcanistAdd_Single4_0",
+            "SOD_ArcanistAdd_Single4"
+        ]
+    },
+    "SOD_ArcanistAdd_Single4_0": {
+        "action": "Click",
+        "target": [
+            1002,
+            206,
+            20,
+            20
+        ],
+        "next": [
+            "SOD_ArcanistAdd_Confirm_1"
+        ]
+    },
+    "SOD_CombatStart": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_CombatStart.png",
+        "roi": [
+            987,
+            604,
+            170,
+            60
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Dialog_1",
+            "SOD_Dialog_2",
+            "SOD_Combating",
+            "SOD_CombatStart"
+        ]
+    },
+    "SOD_Dialog_1": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Dialog_1.png",
+        "roi": [
+            164,
+            19,
+            37,
+            52
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Dialog_1",
+            "SOD_Dialog_2",
+            "SOD_Combating",
+            "SOD_CombatVictory"
+        ]
+    },
+    "SOD_Dialog_2": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Dialog_2.png",
+        "roi": [
+            1074,
+            29,
+            42,
+            38
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Dialog_1",
+            "SOD_Dialog_2",
+            "SOD_Combating",
+            "SOD_CombatVictory"
+        ]
+    },
+    "SOD_Combating": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Combating.png",
+        "roi": [
+            1208,
+            6,
+            64,
+            64
+        ],
+        "timeout":40000,
+        "next": [
+            "SOD_Dialog_1",
+            "SOD_Dialog_2",
+            "SOD_CombatVictory",
+            "SOD_CombatDefeat_hint",
+            "SOD_CombatDefeat",
+            "SOD_Combating"
+        ]
+    },
+    "SOD_CombatDefeat_hint": {
+        "recognition": "OCR",
+        "text": [
+            "终止探索"
+        ],
+        "roi": [
+            325,
+            344,
+            328,
+            175
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "post_delay": 1500,
+        "next": [
+            "SOD_CombatDefeat",
+            "SOD_CombatDefeat_hint"
+        ]
+    },
+    "SOD_CombatVictory": {
+        "recognition": "OCR",
+        "text": [
+            "战斗",
+            "胜利"
+        ],
+        "roi": [
+            678,
+            10,
+            473,
+            250
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "post_delay": 1500,
+        "next": [
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Acquire",
+            "SOD_Skip",
+            "SOD_Main",
+            "SOD_Nothinghappen",
+            "SOD_CombatVictory"
+        ]
+    },
+    "SOD_CombatDefeat": {
+        "recognition": "OCR",
+        "text": [
+            "战斗",
+            "失败"
+        ],
+        "roi": [
+            384,
+            42,
+            446,
+            214
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "next": [
+            "SODStop_Click_1",
+            "SOD_CombatDefeat"
+        ]
+    },
+    "SOD_ItemSellct_1": {
+        "recognition": "OCR",
+        "text": [
+            "造物选择"
+        ],
+        "roi": [
+            535,
+            4,
+            224,
+            68
+        ],
+        "action": "Click",
+        "target": [
+            267,
+            361,
+            20,
+            20
+        ],
+        "next": [
+            "SOD_Departure",
+            "SOD_Main",
+            "SOD_Skip",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_Levelup",
+            "SOD_ItemLose_1",
+            "SOD_Acquire",
+            "SOD_NewArcanist",
+            "SOD_Nothinghappen",
+            "SOD_ItemSellct_Confirm",
+            "SOD_ItemSellct_2",
+            "SODStart_MediaSellect",
+            "SOD_ArcanistAdd",
+            "SODStart_Confirm"
+        ]
+    },
+    "SOD_ItemSellct_2": {
+        "recognition": "OCR",
+        "text": [
+            "造物选择"
+        ],
+        "roi": [
+            535,
+            4,
+            224,
+            68
+        ],
+        "action": "Click",
+        "target": [
+            632,
+            361,
+            20,
+            20
+        ],
+        "next": [
+            "SOD_Departure",
+            "SOD_Main",
+            "SOD_Skip",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_Levelup",
+            "SOD_ItemLose_1",
+            "SOD_Acquire",
+            "SOD_NewArcanist",
+            "SOD_Nothinghappen",
+            "SOD_ItemSellct_Confirm",
+            "SOD_ItemSellct_3",
+            "SODStart_MediaSellect",
+            "SOD_ArcanistAdd",
+            "SODStart_Confirm"
+        ]
+    },
+    "SOD_ItemSellct_3": {
+        "recognition": "OCR",
+        "text": [
+            "造物选择"
+        ],
+        "roi": [
+            535,
+            4,
+            224,
+            68
+        ],
+        "action": "Click",
+        "target": [
+            855,
+            361,
+            20,
+            20
+        ],
+        "next": [
+            "SOD_Departure",
+            "SOD_Main",
+            "SOD_Skip",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_Levelup",
+            "SOD_ItemLose_1",
+            "SOD_Acquire",
+            "SOD_NewArcanist",
+            "SOD_Nothinghappen",
+            "SOD_ItemSellct_Confirm",
+            "SOD_ItemSellct_4",
+            "SODStart_MediaSellect",
+            "SOD_ArcanistAdd",
+            "SODStart_Confirm"
+        ]
+    },
+    "SOD_ItemSellct_4": {
+        "recognition": "OCR",
+        "text": [
+            "造物选择"
+        ],
+        "roi": [
+            535,
+            4,
+            224,
+            68
+        ],
+        "action": "Click",
+        "target": [
+            1132,
+            361,
+            20,
+            20
+        ],
+        "next": [
+            "SOD_Departure",
+            "SOD_Main",
+            "SOD_Skip",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_Levelup",
+            "SOD_ItemLose_1",
+            "SOD_Acquire",
+            "SOD_NewArcanist",
+            "SOD_Nothinghappen",
+            "SOD_ItemSellct_Confirm",
+            "SODStart_MediaSellect",
+            "SOD_ArcanistAdd",
+            "SODStart_Confirm"
+        ]
+    },
+    "SOD_ItemSellct_Confirm": {
+        "recognition": "OCR",
+        "text": [
+            "确认"
+        ],
+        "roi": [
+            485,
+            561,
+            316,
+            150
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Departure",
+            "SOD_Main",
+            "SOD_Skip",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_Levelup",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Acquire",
+            "SOD_NewArcanist",
+            "SOD_Nothinghappen",
+            "SOD_ItemSellct_Confirm",
+            "SODStart_MediaSellect",
+            "SOD_ArcanistAdd",
+            "SODStart_Confirm"
+        ]
+    },
+    "SOD_ItemLose_1": {
+        "recognition": "OCR",
+        "text": [
+            "交付造物",
+            "失去造物"
+        ],
+        "roi": [
+            535,
+            4,
+            224,
+            68
+        ],
+        "action": "Click",
+        "target": [
+            366,
+            190,
+            20,
+            20
+        ],
+        "next": [
+            "SOD_ItemSellct_Confirm",
+            "SOD_ItemSellct_1"
+        ]
+    },
+    "SOD_Shopping_Leave": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Shopping_Leave.png",
+        "roi": [
+            1123,
+            290,
+            121,
+            120
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Departure",
+            "SOD_Main",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_Levelup",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Acquire",
+            "SOD_Nothinghappen",
+            "SOD_Shopping_Leave"
+        ]
+    },
+    "SOD_NewArcanist": {
+        "recognition": "OCR",
+        "text": [
+            "等级"
+        ],
+        "roi": [
+            824,
+            9,
+            189,
+            74
+        ],
+        "action": "Click",
+        "target": [
+            587,
+            206,
+            20,
+            20
+        ],
+        "next": [
+            "SOD_ArcanistAdd_Confirm_1"
+        ]
+    },
+    "SOD_Departure": {
+        "recognition": "OCR",
+        "text": [
+            "启程"
+        ],
+        "roi": [
+            129,
+            91,
+            1142,
+            591
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Departure"
+        ]
+    },
+    "SOD_Nothinghappen": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Nothinghappen.png",
+        "roi": [
+            1072,
+            14,
+            37,
+            37
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "SOD_ArcanistSellct",
+            "SOD_ArcanistAdd_Single4",
+            "SOD_CombatStart",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Acquire",
+            "SOD_EndEvent",
+            "SOD_Main",
+            "SOD_Nothinghappen"
+        ]
+    },
+    "SOD_EndEvent": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_EndEvent.png",
+        "order_by": "Random",
+        "roi": [
+            760,
+            71,
+            520,
+            600
+        ],
+        "threshold":0.55,
+        "action": "Click",
+        "next": [
+            "SOD_EndEvent_OK",
+            "SOD_Departure",
+            "SOD_Main",
+            "SOD_Skip",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_Levelup",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Acquire",
+            "SOD_NewArcanist",
+            "SOD_Nothinghappen",
+            "SOD_ArcanistSellct",
+            "SOD_ArcanistAdd_Single4",
+            "SOD_CombatStart",
+            "SOD_Main",
+            "SOD_EndEvent"
+        ]
+    },
+    "SOD_EndEvent_OK": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_EndEvent_OK.png",
+        "roi": [
+            931,
+            82,
+            319,
+            600
+        ],
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "SOD_Departure",
+            "SOD_Main",
+            "SOD_Skip",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_Levelup",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Acquire",
+            "SOD_NewArcanist",
+            "SOD_Nothinghappen",
+            "SOD_ArcanistSellct",
+            "SOD_ArcanistAdd_Single4",
+            "SOD_CombatStart",
+            "SOD_EndEvent_OK"
+        ]
+    },
+    "SOD_Acquire": {
+        "recognition": "OCR",
+        "text": [
+            "获得造物"
+        ],
+        "roi": [
+            535,
+            4,
+            224,
+            68
+        ],
+        "action": "Click",
+        "target": [
+            637,
+            642,
+            20,
+            20
+        ],
+        "next": [
+            "SOD_Departure",
+            "SOD_Main",
+            "SOD_Skip",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_Levelup",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Acquire",
+            "SOD_NewArcanist",
+            "SOD_Nothinghappen",
+            "SOD_Levelup"
+        ]
+    },
+    "SOD_Main": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Main.png",
+        "roi": [
+            33,
+            430,
+            82,
+            85
+        ],
+        "next": [
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_SellectNext_1",
+            "SOD_SellectNext_2",
+            "SOD_SellectNext_3",
+            "SOD_SellectNext_4",
+            "SOD_SellectNext_5",
+            "SOD_SellectNext_6",
+            "SOD_SellectNext_7",
+            "SOD_SellectNext_1_1",
+            "SOD_SellectNext_2_1",
+            "SOD_SellectNext_3_1",
+            "SOD_SellectNext_4_1",
+            "SOD_SellectNext_5_1",
+            "SOD_SellectNext_6_1",
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_Skip": {
+        "recognition": "OCR",
+        "text": [
+            "跳过"
+        ],
+        "roi": [
+            1115,
+            7,
+            137,
+            90
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Skip_Confirm",
+            "SODStop_Click_2",
+            "SOD_Skip"
+        ]
+    },
+    "SOD_Skip_Confirm": {
+        "recognition": "OCR",
+        "text": [
+            "确认"
+        ],
+        "roi": [
+            687,
+            336,
+            280,
+            174
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_ArcanistSellct",
+            "SOD_ArcanistAdd_Single4",
+            "SOD_CombatStart",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Acquire",
+            "SOD_EndEvent",
+            "SOD_Main",
+            "SOD_Nothinghappen",
+            "SODStop_Click_2",
+            "SOD_Complete_Click_1",
+            "SOD_Skip_Confirm"
+        ]
+    },
+    "SOD_Ending_1": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Ending_1.png",
+        "roi": [
+            582,
+            281,
+            135,
+            190
+        ],
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "SOD_EndingSelecct",
+            "SOD_Departure",
+            "SOD_Main",
+            "SOD_Ending_1"
+        ]
+    },
+    "SOD_Ending_2": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Ending_2.png",
+        "roi": [
+            346,
+            364,
+            157,
+            192
+        ],
+        "action": "Click",
+        "post_delay": 1500,
+        "next": [
+            "SOD_EndingSelecct",
+            "SOD_Departure",
+            "SOD_Main",
+            "SOD_Ending_2"
+        ]
+    },
+    "SOD_EndingSelecct": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_EndEvent.png",
+        "roi": [
+            767,
+            71,
+            502,
+            330
+        ],
+        "action": "Click",
+        "threshold":0.55,
+        "next": [
+            "SOD_Departure",
+            "SOD_Main",
+            "SOD_Skip",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_Levelup",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Acquire",
+            "SOD_NewArcanist",
+            "SOD_Nothinghappen",
+            "SOD_ArcanistSellct",
+            "SOD_ArcanistAdd_Single4",
+            "SOD_CombatStart",
+            "SOD_EndEvent_OK",
+            "SOD_EndingSelecct"
+        ]
+    }
+}
