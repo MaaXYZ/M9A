@@ -478,7 +478,7 @@
                     "name": "丰收时令 04",
                     "param": {
                         "EnterTheShow": {
-                            "next": "ResourceChapter_MA"
+                            "next": "ResourceChapter_HP"
                         },
                         "TargetStageName": {
                             "text": "04"
