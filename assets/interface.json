@@ -387,6 +387,160 @@
                     }
                 },
                 {
+                    "name": "液化战栗：4-21 厄险",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_4"
+                        },
+                        "TargetStageName": {
+                            "text": "21"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "液化战栗：3-7 厄险",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_3"
+                        },
+                        "TargetStageName": {
+                            "text": "07"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "精磨苦盐：6-10 厄险",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_6"
+                        },
+                        "TargetStageName": {
+                            "text": "10"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "精磨苦盐：5-8 厄险",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_5"
+                        },
+                        "TargetStageName": {
+                            "text": "08"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "未知种根骨：5-7 厄险",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_5"
+                        },
+                        "TargetStageName": {
+                            "text": "07"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "未知种根骨：5-3 厄险",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_5"
+                        },
+                        "TargetStageName": {
+                            "text": "03"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "粗糙银锭：7-19 厄险",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_7"
+                        },
+                        "TargetStageName": {
+                            "text": "19"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "幸运咒语：4-20 厄险",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_4"
+                        },
+                        "TargetStageName": {
+                            "text": "20"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "干蝉翼：7-10 厄险",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_7"
+                        },
+                        "TargetStageName": {
+                            "text": "10"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "不休轮：7-16 厄险",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_7"
+                        },
+                        "TargetStageName": {
+                            "text": "16"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "狐儿尾：7-6 厄险",
+                    "param": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_7"
+                        },
+                        "TargetStageName": {
+                            "text": "06"
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
                     "name": "---刷取推荐来源：必要的记录https://www.kdocs.cn/l/cd5MWeCl5bKw。此条勿选---",
                     "param": {}
                 },
@@ -580,5 +734,6 @@
                 }
             ]
         }
-    }
+    },
+    "version": "v0.0.1"
 }
