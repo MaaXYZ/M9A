@@ -75,7 +75,7 @@
         "template": "Awards/DailyBadge.png",
         "threshold": 0.97,
         "action": "Click",
-        "post_wait_freezes": 1,
+        "post_wait_freezes": 200,
         "roi": [
             44,
             194,
