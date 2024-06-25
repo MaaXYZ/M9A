@@ -1970,6 +1970,7 @@
             "SOD_Acquire",
             "SOD_EndEvent",
             "SOD_Main",
+            "SOD_Shopping_Leave",
             "SOD_Nothinghappen"
         ]
     },
