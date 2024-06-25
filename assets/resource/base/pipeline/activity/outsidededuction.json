@@ -1484,6 +1484,7 @@
             "SOD_EndEvent",
             "SOD_ItemSellct_1",
             "SOD_Acquire",
+            "SOD_NewArcanist",
             "SOD_Nothinghappen",
             "SOD_Move"
         ]
@@ -2091,6 +2092,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_NewArcanist",
             "SOD_SellectNext_1",
             "SOD_SellectNext_2",
             "SOD_SellectNext_3",
