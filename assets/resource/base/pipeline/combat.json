@@ -480,6 +480,9 @@
             470,
             1280,
             160
+        ],
+        "next": [
+            "SwipeRightForStageList"
         ]
     },
     "SwipeLeftForStageList": {
@@ -499,6 +502,31 @@
         "post_wait_freezes": 1,
         "next": [
             "SwipeLeftAndFindStage"
+        ]
+    },
+    "SwipeRightAndFindStage": {
+        "next": [
+            "TargetStageName",
+            "SwipeRightForStageList"
+        ]
+    },
+    "SwipeRightForStageList": {
+        "action": "Swipe",
+        "begin": [
+            900,
+            600,
+            100,
+            50
+        ],
+        "end": [
+            300,
+            600,
+            100,
+            50
+        ],
+        "post_wait_freezes": 1,
+        "next": [
+            "SwipeRightAndFindStage"
         ]
     },
     "StageDifficulty": {
