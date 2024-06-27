@@ -1,0 +1,72 @@
+{
+    "FloorItToTheGoldenCity": {
+        "next": [
+            "FloorItToTheGoldenCityEnterTheShow",
+            "Sub_StartUp"
+        ]
+    },
+    "FloorItToTheGoldenCityEnterTheShow": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/FloorItToTheGoldenCityEnterTheShow.png",
+        "roi": [
+            920,
+            144,
+            244,
+            146
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "next": [
+            "FloorItToTheGoldenCityMainChapter",
+            "FloorItToTheGoldenCityEnterTheShow"
+        ]
+    },
+    "FloorItToTheGoldenCityMainChapter": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/FloorItToTheGoldenCityMainChapter.png",
+        "roi": [
+            988,
+            571,
+            281,
+            144
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "FloorItToTheGoldenCity_StagePromotion": {
+        "next": [
+            "FloorItToTheGoldenCityEnterTheShow_StagePromotion",
+            "Sub_StartUp"
+        ]
+    },
+    "FloorItToTheGoldenCityEnterTheShow_StagePromotion": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/FloorItToTheGoldenCityEnterTheShow.png",
+        "roi": [
+            920,
+            144,
+            244,
+            146
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "next": [
+            "FloorItToTheGoldenCityMainChapter_StagePromotion",
+            "FloorItToTheGoldenCityEnterTheShow_StagePromotion"
+        ]
+    },
+    "FloorItToTheGoldenCityMainChapter_StagePromotion": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/FloorItToTheGoldenCityMainChapter.png",
+        "roi": [
+            988,
+            571,
+            281,
+            144
+        ],
+        "action": "Click",
+        "next": [
+            "StagePromotion_SwipeRightAndFindStage"
+        ]
+    }
+}
