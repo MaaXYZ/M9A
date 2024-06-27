@@ -198,13 +198,13 @@
             "软盘",
             "造物",
             "发条",
-            "金雀子儿"
+            "金雀"
         ],
         "roi": [
-            61,
-            296,
-            1202,
-            55
+            2,
+            359,
+            1278,
+            57
         ],
         "action": "Click",
         "next": [
@@ -219,24 +219,24 @@
             "软盘",
             "造物",
             "发条",
-            "金雀子儿"
+            "金雀"
         ],
         "roi": [
-            61,
-            296,
-            1202,
-            55
+            2,
+            359,
+            1278,
+            57
         ],
         "action": "Click"
     },
     "SODStart_MediaSellect": {
         "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SODStart_MediaSellect.png",
+        "template": "OutsideDeduction/SODStart_MediaSellect3.png",
         "roi": [
-            128,
-            219,
-            240,
-            210
+            0,
+            81,
+            1280,
+            469
         ],
         "action": "Click",
         "next": [
@@ -1200,44 +1200,8 @@
         ],
         "action": "Click",
         "next": [
-            "SOD_Dialog_1",
-            "SOD_Dialog_2",
             "SOD_Combating",
             "SOD_CombatStart"
-        ]
-    },
-    "SOD_Dialog_1": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Dialog_1.png",
-        "roi": [
-            164,
-            19,
-            37,
-            52
-        ],
-        "action": "Click",
-        "next": [
-            "SOD_Dialog_1",
-            "SOD_Dialog_2",
-            "SOD_Combating",
-            "SOD_CombatVictory"
-        ]
-    },
-    "SOD_Dialog_2": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Dialog_2.png",
-        "roi": [
-            1074,
-            29,
-            42,
-            38
-        ],
-        "action": "Click",
-        "next": [
-            "SOD_Dialog_1",
-            "SOD_Dialog_2",
-            "SOD_Combating",
-            "SOD_CombatVictory"
         ]
     },
     "SOD_Combating": {
@@ -1251,13 +1215,52 @@
         ],
         "timeout": 40000,
         "next": [
-            "SOD_Dialog_1",
-            "SOD_Dialog_2",
             "SOD_CombatVictory",
+            "Sub_SOD_Dialog_1",
+            "Sub_SOD_Dialog_2",
+            "Sub_SOD_Dialog_3",
             "SOD_CombatDefeat_hint",
             "SOD_CombatDefeat",
             "SOD_Combating"
         ]
+    },
+    "Sub_SOD_Dialog_1": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Dialog_1.png",
+        "roi": [
+            164,
+            19,
+            37,
+            52
+        ],
+        "action": "Click"
+    },
+    "Sub_SOD_Dialog_2": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Dialog_2.png",
+        "roi": [
+            1074,
+            29,
+            42,
+            38
+        ],
+        "action": "Click"
+    },
+    "Sub_SOD_Dialog_3": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": [
+            "升华"
+        ],
+        "roi": [
+            542,
+            545,
+            198,
+            138
+        ],
+        "action": "Click"
     },
     "SOD_CombatDefeat_hint": {
         "recognition": "OCR",
