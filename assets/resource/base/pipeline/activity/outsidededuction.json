@@ -2,6 +2,9 @@
     "SeriesOfDusks": {
         "next": [
             "EnterTheShow",
+            "SODStop",
+            "SODStart",
+            "OutsideDeduction",
             "Sub_StartUp"
         ]
     },
@@ -9,9 +12,9 @@
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/OutsideDeduction.png",
         "roi": [
-            427,
+            1127,
             602,
-            811,
+            111,
             104
         ],
         "action": "Click",
@@ -120,7 +123,7 @@
         "roi": [
             286,
             272,
-            247,
+            277,
             92
         ],
         "action": "Click",
@@ -178,53 +181,62 @@
             224,
             90
         ],
-        "action": "Click",
-        "target": [
-            267,
-            361,
-            20,
-            20
-        ],
         "next": [
-            "SODStart_MediaSellect",
-            "SOD_ArcanistAdd",
             "SODStart_Confirm",
+            "Sub_SODStart_GoodsSellect",
+            "SOD_ItemSellct_1",
+            "SODStart_MediaSellect",
+            "SOD_ArcanistAdd"
+        ]
+    },
+    "Sub_SODStart_GoodsSellect": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "order_by": "Length",
+        "index": -1,
+        "text": [
+            "软盘",
+            "造物",
+            "发条",
+            "金雀"
+        ],
+        "roi": [
+            2,
+            359,
+            1278,
+            57
+        ],
+        "action": "Click",
+        "next": [
             "SODStart_GoodsSellect_2"
         ]
     },
     "SODStart_GoodsSellect_2": {
         "recognition": "OCR",
+        "order_by": "Length",
+        "index": -2,
         "text": [
-            "镜的馈赠"
+            "软盘",
+            "造物",
+            "发条",
+            "金雀"
         ],
         "roi": [
-            535,
-            4,
-            224,
-            90
+            2,
+            359,
+            1278,
+            57
         ],
-        "action": "Click",
-        "target": [
-            632,
-            361,
-            20,
-            20
-        ],
-        "next": [
-            "SOD_ItemSellct_1",
-            "SODStart_MediaSellect",
-            "SOD_ArcanistAdd",
-            "SODStart_Confirm"
-        ]
+        "action": "Click"
     },
     "SODStart_MediaSellect": {
         "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SODStart_MediaSellect.png",
+        "template": "OutsideDeduction/SODStart_MediaSellect3.png",
         "roi": [
-            128,
-            219,
-            240,
-            210
+            0,
+            81,
+            1280,
+            469
         ],
         "action": "Click",
         "next": [
@@ -260,8 +272,8 @@
         ],
         "action": "Click",
         "next": [
-            "SOD_Quickformation_On",
-            "SOD_Quickformation"
+            "SOD_Quickformation",
+            "SOD_Quickformation_On"
         ]
     },
     "SOD_Quickformation_On": {
@@ -325,6 +337,21 @@
             "SOD_ArcanistAdd_Confirm_1"
         ]
     },
+    "SOD_ArcanistAdd_37": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/37.png",
+        "threshold": 0.85,
+        "roi": [
+            502,
+            64,
+            766,
+            633
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_ArcanistAdd_Confirm_1"
+        ]
+    },
     "SOD_ArcanistAdd_Confirm_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_ArcanistAdd_Confirm_1.png",
@@ -374,10 +401,10 @@
     "SOD_SellectNext_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Combat.png",
-        "threshold":0.85,
-        "index": -1,
+        "threshold": 0.85,
+        "index": 0,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -406,30 +433,16 @@
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
-            "SOD_SellectNext_7_1",
-            "SOD_SellectNext_1_2",
-            "SOD_SellectNext_2_2",
-            "SOD_SellectNext_3_2",
-            "SOD_SellectNext_4_2",
-            "SOD_SellectNext_5_2",
-            "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_1"
         ]
     },
     "SOD_SellectNext_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Danger.png",
-        "threshold":0.85,
-        "index": -1,
+        "threshold": 0.85,
+        "index": 0,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -457,30 +470,16 @@
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
-            "SOD_SellectNext_7_1",
-            "SOD_SellectNext_1_2",
-            "SOD_SellectNext_2_2",
-            "SOD_SellectNext_3_2",
-            "SOD_SellectNext_4_2",
-            "SOD_SellectNext_5_2",
-            "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_1"
         ]
     },
     "SOD_SellectNext_3": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Imminent.png",
-        "threshold":0.85,
-        "index": -1,
+        "threshold": 0.85,
+        "index": 0,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -507,30 +506,16 @@
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
-            "SOD_SellectNext_7_1",
-            "SOD_SellectNext_1_2",
-            "SOD_SellectNext_2_2",
-            "SOD_SellectNext_3_2",
-            "SOD_SellectNext_4_2",
-            "SOD_SellectNext_5_2",
-            "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_1"
         ]
     },
     "SOD_SellectNext_4": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Shopping.png",
-        "threshold":0.85,
-        "index": -1,
+        "threshold": 0.85,
+        "index": 0,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -556,30 +541,16 @@
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
-            "SOD_SellectNext_7_1",
-            "SOD_SellectNext_1_2",
-            "SOD_SellectNext_2_2",
-            "SOD_SellectNext_3_2",
-            "SOD_SellectNext_4_2",
-            "SOD_SellectNext_5_2",
-            "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_1"
         ]
     },
     "SOD_SellectNext_5": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Discovery.png",
-        "threshold":0.85,
-        "index": -1,
+        "threshold": 0.85,
+        "index": 0,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -604,30 +575,16 @@
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
-            "SOD_SellectNext_7_1",
-            "SOD_SellectNext_1_2",
-            "SOD_SellectNext_2_2",
-            "SOD_SellectNext_3_2",
-            "SOD_SellectNext_4_2",
-            "SOD_SellectNext_5_2",
-            "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_1"
         ]
     },
     "SOD_SellectNext_6": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_RestSite.png",
-        "threshold":0.85,
-        "index": -1,
+        "threshold": 0.85,
+        "index": 0,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -651,30 +608,16 @@
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
-            "SOD_SellectNext_7_1",
-            "SOD_SellectNext_1_2",
-            "SOD_SellectNext_2_2",
-            "SOD_SellectNext_3_2",
-            "SOD_SellectNext_4_2",
-            "SOD_SellectNext_5_2",
-            "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_1"
         ]
     },
     "SOD_SellectNext_7": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Treasure.png",
-        "threshold":0.85,
-        "index": -1,
+        "threshold": 0.85,
+        "index": 0,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -697,30 +640,16 @@
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
-            "SOD_SellectNext_7_1",
-            "SOD_SellectNext_1_2",
-            "SOD_SellectNext_2_2",
-            "SOD_SellectNext_3_2",
-            "SOD_SellectNext_4_2",
-            "SOD_SellectNext_5_2",
-            "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_1"
         ]
     },
     "SOD_SellectNext_1_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Combat.png",
-        "threshold":0.85,
-        "index": -2,
+        "threshold": 0.85,
+        "index": 1,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -749,23 +678,16 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_2"
         ]
     },
     "SOD_SellectNext_2_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Danger.png",
-        "threshold":0.85,
-        "index": -2,
+        "threshold": 0.85,
+        "index": 1,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -793,23 +715,16 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_2"
         ]
     },
     "SOD_SellectNext_3_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Imminent.png",
-        "threshold":0.85,
-        "index": -2,
+        "threshold": 0.85,
+        "index": 1,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -836,23 +751,16 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_2"
         ]
     },
     "SOD_SellectNext_4_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Shopping.png",
-        "threshold":0.85,
-        "index": -2,
+        "threshold": 0.85,
+        "index": 1,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -878,23 +786,16 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_2"
         ]
     },
     "SOD_SellectNext_5_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Discovery.png",
-        "threshold":0.85,
-        "index": -2,
+        "threshold": 0.85,
+        "index": 1,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -919,23 +820,16 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_2"
         ]
     },
     "SOD_SellectNext_6_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_RestSite.png",
-        "threshold":0.85,
-        "index": -2,
+        "threshold": 0.85,
+        "index": 1,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -959,23 +853,16 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_2"
         ]
     },
     "SOD_SellectNext_7_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Treasure.png",
-        "threshold":0.85,
-        "index": -2,
+        "threshold": 0.85,
+        "index": 1,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -998,23 +885,16 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_2"
         ]
     },
     "SOD_SellectNext_1_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Combat.png",
-        "threshold":0.85,
-        "index": 0,
+        "threshold": 0.85,
+        "index": 2,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1036,23 +916,16 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_2"
         ]
     },
     "SOD_SellectNext_2_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Danger.png",
-        "threshold":0.85,
-        "index": 0,
+        "threshold": 0.85,
+        "index": 2,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1073,23 +946,16 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_2"
         ]
     },
     "SOD_SellectNext_3_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Imminent.png",
-        "threshold":0.85,
-        "index": 0,
+        "threshold": 0.85,
+        "index": 2,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1109,23 +975,16 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_2"
         ]
     },
     "SOD_SellectNext_4_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Shopping.png",
-        "threshold":0.85,
-        "index": 0,
+        "threshold": 0.85,
+        "index": 2,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1144,23 +1003,16 @@
             "SOD_Acquire",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_2"
         ]
     },
     "SOD_SellectNext_5_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Discovery.png",
-        "threshold":0.85,
-        "index": 0,
+        "threshold": 0.85,
+        "index": 2,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1178,23 +1030,16 @@
             "SOD_Skip",
             "SOD_Acquire",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_2"
         ]
     },
     "SOD_SellectNext_6_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_RestSite.png",
-        "threshold":0.85,
-        "index": 0,
+        "threshold": 0.85,
+        "index": 2,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1211,23 +1056,16 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_2"
         ]
     },
     "SOD_SellectNext_7_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Treasure.png",
-        "threshold":0.85,
-        "index": 0,
+        "threshold": 0.85,
+        "index": 2,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1243,209 +1081,7 @@
             "SOD_ItemSellct_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
-            "SOD_Acquire",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
-        ]
-    },
-    "SOD_SellectNext_1_3": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Combat.png",
-        "threshold":0.85,
-        "index": 1,
-        "roi": [
-            247,
-            23,
-            1018,
-            653
-        ],
-        "action": "Click",
-        "next": [
-            "SOD_Move",
-            "SOD_Fight",
-            "SOD_Departure",
-            "SOD_Ending_1",
-            "SOD_Ending_2",
-            "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
-            "SOD_ItemLose_1",
-            "SOD_Skip",
-            "SOD_Acquire",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
-        ]
-    },
-    "SOD_SellectNext_2_3": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Danger.png",
-        "threshold":0.85,
-        "index": 1,
-        "roi": [
-            247,
-            23,
-            1018,
-            653
-        ],
-        "action": "Click",
-        "next": [
-            "SOD_Move",
-            "SOD_Fight",
-            "SOD_Departure",
-            "SOD_Ending_1",
-            "SOD_Ending_2",
-            "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
-            "SOD_ItemLose_1",
-            "SOD_Skip",
-            "SOD_Acquire",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
-        ]
-    },
-    "SOD_SellectNext_3_3": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Imminent.png",
-        "threshold":0.85,
-        "index": 1,
-        "roi": [
-            247,
-            23,
-            1018,
-            653
-        ],
-        "action": "Click",
-        "next": [
-            "SOD_Move",
-            "SOD_Fight",
-            "SOD_Departure",
-            "SOD_Ending_1",
-            "SOD_Ending_2",
-            "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
-            "SOD_ItemLose_1",
-            "SOD_Skip",
-            "SOD_Acquire",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
-        ]
-    },
-    "SOD_SellectNext_4_3": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Shopping.png",
-        "threshold":0.85,
-        "index": 1,
-        "roi": [
-            247,
-            23,
-            1018,
-            653
-        ],
-        "action": "Click",
-        "next": [
-            "SOD_Move",
-            "SOD_Fight",
-            "SOD_Departure",
-            "SOD_Ending_1",
-            "SOD_Ending_2",
-            "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
-            "SOD_ItemLose_1",
-            "SOD_Skip",
-            "SOD_Acquire",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
-        ]
-    },
-    "SOD_SellectNext_5_3": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Discovery.png",
-        "threshold":0.85,
-        "index": 1,
-        "roi": [
-            247,
-            23,
-            1018,
-            653
-        ],
-        "action": "Click",
-        "next": [
-            "SOD_Move",
-            "SOD_Fight",
-            "SOD_Departure",
-            "SOD_Ending_1",
-            "SOD_Ending_2",
-            "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
-            "SOD_ItemLose_1",
-            "SOD_Skip",
-            "SOD_Acquire",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
-        ]
-    },
-    "SOD_SellectNext_6_3": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_RestSite.png",
-        "threshold":0.85,
-        "index": 1,
-        "roi": [
-            247,
-            23,
-            1018,
-            653
-        ],
-        "action": "Click",
-        "next": [
-            "SOD_Move",
-            "SOD_Fight",
-            "SOD_Departure",
-            "SOD_Ending_1",
-            "SOD_Ending_2",
-            "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
-            "SOD_ItemLose_1",
-            "SOD_Skip",
-            "SOD_Acquire",
-            "SOD_SellectNext_7_3"
-        ]
-    },
-    "SOD_SellectNext_7_3": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Treasure.png",
-        "threshold":0.85,
-        "index": 1,
-        "roi": [
-            247,
-            23,
-            1018,
-            653
-        ],
-        "action": "Click",
-        "next": [
-            "SOD_Move",
-            "SOD_Fight",
-            "SOD_Departure",
-            "SOD_Ending_1",
-            "SOD_Ending_2",
-            "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
-            "SOD_ItemLose_1",
-            "SOD_Skip"
+            "SOD_Acquire"
         ]
     },
     "SOD_Levelup": {
@@ -1564,44 +1200,8 @@
         ],
         "action": "Click",
         "next": [
-            "SOD_Dialog_1",
-            "SOD_Dialog_2",
             "SOD_Combating",
             "SOD_CombatStart"
-        ]
-    },
-    "SOD_Dialog_1": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Dialog_1.png",
-        "roi": [
-            164,
-            19,
-            37,
-            52
-        ],
-        "action": "Click",
-        "next": [
-            "SOD_Dialog_1",
-            "SOD_Dialog_2",
-            "SOD_Combating",
-            "SOD_CombatVictory"
-        ]
-    },
-    "SOD_Dialog_2": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Dialog_2.png",
-        "roi": [
-            1074,
-            29,
-            42,
-            38
-        ],
-        "action": "Click",
-        "next": [
-            "SOD_Dialog_1",
-            "SOD_Dialog_2",
-            "SOD_Combating",
-            "SOD_CombatVictory"
         ]
     },
     "SOD_Combating": {
@@ -1613,15 +1213,54 @@
             64,
             64
         ],
-        "timeout":40000,
+        "timeout": 40000,
         "next": [
-            "SOD_Dialog_1",
-            "SOD_Dialog_2",
             "SOD_CombatVictory",
+            "Sub_SOD_Dialog_1",
+            "Sub_SOD_Dialog_2",
+            "Sub_SOD_Dialog_3",
             "SOD_CombatDefeat_hint",
             "SOD_CombatDefeat",
             "SOD_Combating"
         ]
+    },
+    "Sub_SOD_Dialog_1": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Dialog_1.png",
+        "roi": [
+            164,
+            19,
+            37,
+            52
+        ],
+        "action": "Click"
+    },
+    "Sub_SOD_Dialog_2": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Dialog_2.png",
+        "roi": [
+            1074,
+            29,
+            42,
+            38
+        ],
+        "action": "Click"
+    },
+    "Sub_SOD_Dialog_3": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "text": [
+            "升华"
+        ],
+        "roi": [
+            542,
+            545,
+            198,
+            138
+        ],
+        "action": "Click"
     },
     "SOD_CombatDefeat_hint": {
         "recognition": "OCR",
@@ -1645,7 +1284,7 @@
     "SOD_CombatVictory": {
         "recognition": "OCR",
         "text": [
-            "战斗",
+            "战斗胜利",
             "胜利"
         ],
         "roi": [
@@ -1670,7 +1309,7 @@
     "SOD_CombatDefeat": {
         "recognition": "OCR",
         "text": [
-            "战斗",
+            "战斗失败",
             "失败"
         ],
         "roi": [
@@ -1985,7 +1624,7 @@
             520,
             600
         ],
-        "threshold":0.55,
+        "threshold": 0.55,
         "action": "Click",
         "next": [
             "SOD_EndEvent_OK",
@@ -2113,14 +1752,7 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2",
-            "SOD_SellectNext_1_3",
-            "SOD_SellectNext_2_3",
-            "SOD_SellectNext_3_3",
-            "SOD_SellectNext_4_3",
-            "SOD_SellectNext_5_3",
-            "SOD_SellectNext_6_3",
-            "SOD_SellectNext_7_3"
+            "SOD_SellectNext_7_2"
         ]
     },
     "SOD_Skip": {
@@ -2129,10 +1761,10 @@
             "跳过"
         ],
         "roi": [
-            1115,
-            7,
-            137,
-            90
+            1009,
+            4,
+            267,
+            80
         ],
         "action": "Click",
         "next": [
@@ -2214,7 +1846,7 @@
             330
         ],
         "action": "Click",
-        "threshold":0.55,
+        "threshold": 0.55,
         "next": [
             "SOD_Departure",
             "SOD_Main",
