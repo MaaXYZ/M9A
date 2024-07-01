@@ -271,11 +271,8 @@
         ]
     },
     "LimboTeamSelection_2": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "Limbo/LimboTeamSelection_21.png",
-            "Limbo/LimboTeamSelection_22.png"
-        ],
+        "recognition": "OCR",
+        "text": "队列二",
         "roi": [
             786,
             631,
@@ -289,8 +286,11 @@
         ]
     },
     "LimboTeamSelection_22": {
-        "recognition": "OCR",
-        "text": "队列二",
+        "recognition": "TemplateMatch",
+        "template": [
+            "Limbo/LimboTeamSelection_21.png",
+            "Limbo/LimboTeamSelection_22.png"
+        ],
         "roi": [
             722,
             342,
