@@ -34,6 +34,10 @@
             "entry": "Psychube"
         },
         {
+            "name": "自动深眠（配置一二队后再运行，队列名称需包含“队列一”，“队列二”）",
+            "entry": "Limbo"
+        },
+        {
             "name": "常规作战",
             "entry": "Combat",
             "option": [
