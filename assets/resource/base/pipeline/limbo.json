@@ -272,7 +272,7 @@
     },
     "LimboTeamSelection_2": {
         "recognition": "OCR",
-        "text": "队列二",
+        "text": "成员队列",
         "roi": [
             786,
             631,
