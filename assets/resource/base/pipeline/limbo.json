@@ -75,15 +75,14 @@
         ]
     },
     "LimboEntry": {
-        "enabled": false,
-        "enabled_doc": "还没写完",
+        "enabled_doc": "正在写",
         "recognition": "TemplateMatch",
         "template": "Limbo/LimboEntry.png",
         "roi": [
-            873,
-            244,
-            264,
-            231
+            864,
+            393,
+            297,
+            162
         ],
         "action": "Click",
         "next": [
@@ -110,6 +109,7 @@
         ],
         "post_wait_freezes": 1,
         "next": [
+            "LimboEnd",
             "LimboStageRightest",
             "LimboStageFlag"
         ]
@@ -124,10 +124,11 @@
             134
         ],
         "next": [
-            "LimboStageLightest"
+            "LimboStageLightest_1"
         ]
     },
-    "LimboStageLightest": {
+    "LimboStageLightest_1": {
+        "doc": "最靓的位置，要多点几次",
         "recognition": "ColorMatch",
         "method": 6,
         "roi": [
@@ -144,6 +145,282 @@
         ],
         "connected": true,
         "count": 500,
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "LimboActionFlag_1",
+            "LimboStageLightest_1"
+        ]
+    },
+    "LimboActionFlag_1": {
+        "recognition": "OCR",
+        "text": "开始行动",
+        "roi": [
+            988,
+            566,
+            256,
+            154
+        ],
+        "next": [
+            "LimboTeamSelection_1",
+            "LimboActionFlag_1"
+        ]
+    },
+    "LimboTeamSelection_1": {
+        "recognition": "OCR",
+        "text": "成员队列",
+        "roi": [
+            786,
+            631,
+            156,
+            43
+        ],
+        "action": "Click",
+        "next": [
+            "LimboTeamSelection_11",
+            "LimboTeamSelection_1"
+        ]
+    },
+    "LimboTeamSelection_11": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Limbo/LimboTeamSelection_11.png",
+            "Limbo/LimboTeamSelection_12.png"
+        ],
+        "order_by": "Score",
+        "threshold": 0.9,
+        "roi": [
+            722,
+            342,
+            272,
+            219
+        ],
+        "action": "Click",
+        "next": [
+            "LimboAction_1",
+            "LimboTeamSelection_11"
+        ]
+    },
+    "LimboAction_1": {
+        "recognition": "OCR",
+        "text": "开始行动",
+        "roi": [
+            988,
+            566,
+            256,
+            154
+        ],
+        "timeout": 2000000,
+        "action": "Click",
+        "next": [
+            "LimboVictory_1",
+            "LimboAction_1"
+        ]
+    },
+    "LimboVictory_1": {
+        "recognition": "OCR",
+        "text": [
+            "战斗胜利",
+            "战斗失败"
+        ],
+        "roi": [
+            678,
+            10,
+            473,
+            240
+        ],
+        "action": "Click",
+        "next": [
+            "LimboVictory_1",
+            "LimboStageLightest_2"
+        ]
+    },
+    "LimboStageLightest_2": {
+        "doc": "最靓的位置，要多点几次",
+        "recognition": "ColorMatch",
+        "method": 6,
+        "roi": [
+            0,
+            70,
+            1280,
+            560
+        ],
+        "lower": [
+            200
+        ],
+        "upper": [
+            255
+        ],
+        "connected": true,
+        "count": 500,
+        "action": "Click",
+        "next": [
+            "LimboActionFlag_2",
+            "LimboStageLightest_2"
+        ]
+    },
+    "LimboActionFlag_2": {
+        "recognition": "OCR",
+        "text": "开始行动",
+        "roi": [
+            988,
+            566,
+            256,
+            154
+        ],
+        "next": [
+            "LimboTeamSelection_2",
+            "LimboActionFlag_2"
+        ]
+    },
+    "LimboTeamSelection_2": {
+        "recognition": "OCR",
+        "text": "成员队列",
+        "roi": [
+            786,
+            631,
+            156,
+            43
+        ],
+        "action": "Click",
+        "next": [
+            "LimboTeamSelection_22",
+            "LimboTeamSelection_2"
+        ]
+    },
+    "LimboTeamSelection_22": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Limbo/LimboTeamSelection_21.png",
+            "Limbo/LimboTeamSelection_22.png"
+        ],
+        "order_by": "Score",
+        "threshold": 0.9,
+        "roi": [
+            722,
+            342,
+            272,
+            219
+        ],
+        "action": "Click",
+        "next": [
+            "LimboAction_2",
+            "LimboTeamSelection_22"
+        ]
+    },
+    "LimboAction_2": {
+        "recognition": "OCR",
+        "text": "开始行动",
+        "roi": [
+            988,
+            566,
+            256,
+            154
+        ],
+        "timeout": 2000000,
+        "action": "Click",
+        "next": [
+            "LimboVictory_2",
+            "LimboAction_2"
+        ]
+    },
+    "LimboVictory_2": {
+        "recognition": "OCR",
+        "text": [
+            "战斗胜利",
+            "战斗失败"
+        ],
+        "roi": [
+            678,
+            10,
+            473,
+            240
+        ],
+        "action": "Click",
+        "next": [
+            "LimboFinish",
+            "LimboVictory_2"
+        ]
+    },
+    "LimboFinish": {
+        "recognition": "TemplateMatch",
+        "template": "Limbo/LimboFinish.png",
+        "roi": [
+            400,
+            199,
+            569,
+            354
+        ],
+        "green_mask": true,
+        "action": "Click",
+        "next": [
+            "LimboAwards",
+            "LimboFinish"
+        ]
+    },
+    "LimboAwards": {
+        "recognition": "TemplateMatch",
+        "template": "Limbo/LimboAwards.png",
+        "roi": [
+            139,
+            589,
+            109,
+            110
+        ],
+        "green_mask": true,
+        "action": "Click",
+        "next": [
+            "LimboObtainedAwards_1"
+        ]
+    },
+    "LimboObtainedAwards_1": {
+        "recognition": "TemplateMatch",
+        "template": "Limbo/LimboObtainedAwards.png",
+        "roi": [
+            941,
+            132,
+            205,
+            176
+        ],
+        "action": "Click",
+        "next": [
+            "Sub_ObtainedAwards",
+            "LimboObtainedAwards_2"
+        ]
+    },
+    "LimboObtainedAwards_2": {
+        "recognition": "OCR",
+        "text": "深眠试验酬劳",
+        "roi": [
+            104,
+            36,
+            358,
+            157
+        ],
+        "action": "Click",
+        "target": [
+            20,
+            20,
+            20,
+            20
+        ],
+        "next": [
+            "Sub_ObtainedAwards",
+            "LimboEnd",
+            "LimboStageRightest",
+            "Sub_BackButton",
+            "LimboObtainedAwards_2"
+        ]
+    },
+    "LimboEnd": {
+        "recognition": "TemplateMatch",
+        "template": "Limbo/LimboEnd.png",
+        "threshold": 0.9,
+        "roi": [
+            843,
+            431,
+            231,
+            135
+        ],
+        "next": []
     }
 }
