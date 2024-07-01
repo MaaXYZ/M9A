@@ -26,7 +26,8 @@
 ### Windows
 
 - 对于绝大部分用户，请下载 `M9A-win-x86_64-vXXX.zip`
-- 若确定自己的电脑是 arm 架构，请下载 `M9A-win-aarch64-vXXX.zip`
+- 若确定自己的电脑是 arm 架构，请下载 `M9A-win-aarch64-vXXX.zip`  
+  _请注意！Windows 的电脑几乎全都是 x86_64 的，可能占 99.999%，除非你非常确定自己是 arm，否则别下这个！_
 - 解压后运行 `MaaPiCli.exe` 即可
 
 ### macOS
