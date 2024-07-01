@@ -186,6 +186,7 @@
             "Limbo/LimboTeamSelection_11.png",
             "Limbo/LimboTeamSelection_12.png"
         ],
+        "threshold": 0.9,
         "roi": [
             722,
             342,
@@ -291,6 +292,7 @@
             "Limbo/LimboTeamSelection_21.png",
             "Limbo/LimboTeamSelection_22.png"
         ],
+        "threshold": 0.9,
         "roi": [
             722,
             342,
