@@ -98,7 +98,7 @@
     },
     "Download": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "下载",
             "重试"
         ],
@@ -136,7 +136,7 @@
     "StartGame": {
         "recognition": "TemplateMatch",
         "template": "StartUp/StartGame.png",
-        "green_mask":true,
+        "green_mask": true,
         "roi": [
             352,
             230,

@@ -24,7 +24,7 @@
     },
     "ArtificialSleepwalking": {
         "recognition": "OCR",
-        "text": "人工梦游",
+        "expected": "人工梦游",
         "roi": [
             0,
             550,
@@ -91,7 +91,7 @@
     },
     "LimboStageRightest": {
         "recognition": "OCR",
-        "text": "深眠片段",
+        "expected": "深眠片段",
         "roi": [
             0,
             112,
@@ -116,7 +116,7 @@
     },
     "LimboStageFlag": {
         "recognition": "OCR",
-        "text": "梦境重置",
+        "expected": "梦境重置",
         "roi": [
             0,
             586,
@@ -153,7 +153,7 @@
     },
     "LimboActionFlag_1": {
         "recognition": "OCR",
-        "text": "开始行动",
+        "expected": "开始行动",
         "roi": [
             988,
             566,
@@ -167,7 +167,7 @@
     },
     "LimboTeamSelection_1": {
         "recognition": "OCR",
-        "text": "成员队列",
+        "expected": "成员队列",
         "roi": [
             786,
             631,
@@ -187,7 +187,10 @@
             "Limbo/LimboTeamSelection_12.png"
         ],
         "order_by": "Score",
-        "threshold": 0.9,
+        "threshold": [
+            0.9,
+            0.9
+        ],
         "roi": [
             722,
             342,
@@ -202,7 +205,7 @@
     },
     "LimboAction_1": {
         "recognition": "OCR",
-        "text": "开始行动",
+        "expected": "开始行动",
         "roi": [
             988,
             566,
@@ -218,7 +221,7 @@
     },
     "LimboVictory_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "战斗胜利",
             "战斗失败"
         ],
@@ -260,7 +263,7 @@
     },
     "LimboActionFlag_2": {
         "recognition": "OCR",
-        "text": "开始行动",
+        "expected": "开始行动",
         "roi": [
             988,
             566,
@@ -274,7 +277,7 @@
     },
     "LimboTeamSelection_2": {
         "recognition": "OCR",
-        "text": "成员队列",
+        "expected": "成员队列",
         "roi": [
             786,
             631,
@@ -294,7 +297,10 @@
             "Limbo/LimboTeamSelection_22.png"
         ],
         "order_by": "Score",
-        "threshold": 0.9,
+        "threshold": [
+            0.9,
+            0.9
+        ],
         "roi": [
             722,
             342,
@@ -309,7 +315,7 @@
     },
     "LimboAction_2": {
         "recognition": "OCR",
-        "text": "开始行动",
+        "expected": "开始行动",
         "roi": [
             988,
             566,
@@ -325,7 +331,7 @@
     },
     "LimboVictory_2": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "战斗胜利",
             "战斗失败"
         ],
@@ -389,7 +395,7 @@
     },
     "LimboObtainedAwards_2": {
         "recognition": "OCR",
-        "text": "深眠试验酬劳",
+        "expected": "深眠试验酬劳",
         "roi": [
             104,
             36,
