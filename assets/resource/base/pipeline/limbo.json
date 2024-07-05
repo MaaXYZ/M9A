@@ -187,7 +187,10 @@
             "Limbo/LimboTeamSelection_12.png"
         ],
         "order_by": "Score",
-        "threshold": 0.9,
+        "threshold": [
+            0.9,
+            0.9
+        ],
         "roi": [
             722,
             342,
@@ -294,7 +297,10 @@
             "Limbo/LimboTeamSelection_22.png"
         ],
         "order_by": "Score",
-        "threshold": 0.9,
+        "threshold": [
+            0.9,
+            0.9
+        ],
         "roi": [
             722,
             342,

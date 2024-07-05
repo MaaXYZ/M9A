@@ -364,6 +364,7 @@
         "action": "Click",
         "post_delay": 1500,
         "next": [
+            "SOD_ClearDeployment",
             "SOD_ArcanistAdd_Confirm_2",
             "SOD_CombatStart",
             "SOD_Departure",
@@ -1339,7 +1340,7 @@
         "action": "Click",
         "target": [
             267,
-            361,
+            300,
             20,
             20
         ],
@@ -1376,7 +1377,7 @@
         "action": "Click",
         "target": [
             632,
-            361,
+            300,
             20,
             20
         ],
@@ -1413,7 +1414,7 @@
         "action": "Click",
         "target": [
             855,
-            361,
+            300,
             20,
             20
         ],
@@ -1450,7 +1451,7 @@
         "action": "Click",
         "target": [
             1132,
-            361,
+            300,
             20,
             20
         ],
@@ -1721,6 +1722,7 @@
             85
         ],
         "next": [
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -1753,6 +1755,41 @@
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
             "SOD_SellectNext_7_2"
+        ]
+    },
+    "SOD_ClearDeployment": {
+        "recognition": "OCR",
+        "text": [
+            "清空布设"
+        ],
+        "roi": [
+            0,
+            440,
+            210,
+            278
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "next": [
+            "SOD_OneClickDeploymentt",
+            "SOD_ClearDeployment"
+        ]
+    },
+    "SOD_OneClickDeploymentt": {
+        "recognition": "OCR",
+        "text": [
+            "布设"
+        ],
+        "roi": [
+            0,
+            492,
+            104,
+            81
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Main",
+            "Sub_BackButton"
         ]
     },
     "SOD_Skip": {
