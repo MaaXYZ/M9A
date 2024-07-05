@@ -12,9 +12,9 @@
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/OutsideDeduction.png",
         "roi": [
-            1127,
+            427,
             602,
-            111,
+            811,
             104
         ],
         "action": "Click",

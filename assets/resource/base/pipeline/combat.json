@@ -321,10 +321,10 @@
         "template": "Combat/PromotionChapterLabel.png",
         "threshold": 0.98,
         "roi": [
-            388,
-            578,
-            157,
-            133
+            4,
+            559,
+            1276,
+            161
         ],
         "action": "Click",
         "post_wait_freezes": {
