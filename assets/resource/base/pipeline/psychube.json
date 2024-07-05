@@ -84,7 +84,7 @@
     },
     "PsychubeReadyForAction": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "开始行动"
         ],
         "roi": [

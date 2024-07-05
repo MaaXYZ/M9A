@@ -474,7 +474,7 @@
     },
     "TheFarLeftOfStageList": {
         "recognition": "OCR",
-        "text": "01",
+        "expected": "01",
         "roi": [
             0,
             470,
@@ -595,7 +595,7 @@
     },
     "ReadyForAction": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "开始行动"
         ],
         "roi": [
@@ -672,7 +672,7 @@
     },
     "StartReplay": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "复现"
         ],
         "roi": [
@@ -690,7 +690,7 @@
     },
     "RecoveryPage": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "活性",
             "恢复"
         ],
@@ -709,7 +709,7 @@
     },
     "Replaying": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "行为",
             "复现"
         ],
@@ -727,7 +727,7 @@
     },
     "Victory": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "战斗",
             "胜利"
         ],

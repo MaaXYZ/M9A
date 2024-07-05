@@ -2,7 +2,7 @@
     "AllIn": {
         "enabled": false,
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "复现"
         ],
         "roi": [
@@ -152,7 +152,7 @@
     },
     "StartReplayX4": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "复现"
         ],
         "roi": [
@@ -170,7 +170,7 @@
     },
     "StartReplayX3": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "复现"
         ],
         "roi": [
@@ -188,7 +188,7 @@
     },
     "StartReplayX2": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "复现"
         ],
         "roi": [
@@ -206,7 +206,7 @@
     },
     "StartReplayX1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "复现"
         ],
         "roi": [
@@ -224,7 +224,7 @@
     },
     "RecoveryPageByX4": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "活性",
             "恢复"
         ],
@@ -242,7 +242,7 @@
     },
     "RecoveryPageByX3": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "活性",
             "恢复"
         ],
@@ -260,7 +260,7 @@
     },
     "RecoveryPageByX2": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "活性",
             "恢复"
         ],
@@ -278,7 +278,7 @@
     },
     "RecoveryPageByX1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "活性",
             "恢复"
         ],

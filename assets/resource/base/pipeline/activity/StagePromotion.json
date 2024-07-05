@@ -60,7 +60,7 @@
     },
     "StagePromotion_ReadyForAction": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "开始行动"
         ],
         "roi": [
@@ -81,7 +81,7 @@
     "StagePromotion_BalanceModel": {
         "is_sub": true,
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "制衡模式"
         ],
         "roi": [
@@ -101,7 +101,7 @@
     "StagePromotion_EatCandy": {
         "enabled": false,
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "活性",
             "恢复"
         ],
@@ -194,7 +194,7 @@
     },
     "StagePromotion_QuitEatCandyPage": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "活性",
             "恢复"
         ],
@@ -218,7 +218,7 @@
     },
     "StagePromotion_Skip": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "跳过"
         ],
         "roi": [
@@ -236,7 +236,7 @@
     },
     "StagePromotion_Confirm": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "确认"
         ],
         "roi": [
@@ -263,7 +263,7 @@
             64,
             64
         ],
-        "timeout":40000,
+        "timeout": 40000,
         "next": [
             "StagePromotion_Victory",
             "StagePromotion_CombatDefeat",
@@ -274,7 +274,7 @@
     },
     "StagePromotion_Victory": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "战斗",
             "胜利"
         ],
@@ -296,7 +296,7 @@
     },
     "StagePromotion_CombatDefeat": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "战斗",
             "失败"
         ],

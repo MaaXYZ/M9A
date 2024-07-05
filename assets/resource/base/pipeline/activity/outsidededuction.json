@@ -57,7 +57,7 @@
     },
     "SODStop_Click_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "阴霾",
             "渐生"
         ],
@@ -75,7 +75,7 @@
     },
     "SODStop_Click_2": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "幕终寻获"
         ],
         "roi": [
@@ -99,7 +99,7 @@
     },
     "SOD_Complete_Click_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "阴霾",
             "消散"
         ],
@@ -117,7 +117,7 @@
     },
     "SODStop_Click_3": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "累计获得造物"
         ],
         "roi": [
@@ -172,7 +172,7 @@
     },
     "SODStart_GoodsSellect": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "镜的馈赠"
         ],
         "roi": [
@@ -192,14 +192,14 @@
     "Sub_SODStart_GoodsSellect": {
         "is_sub": true,
         "recognition": "OCR",
-        "order_by": "Length",
-        "index": -1,
-        "text": [
+        "expected": [
             "软盘",
             "造物",
             "发条",
             "金雀"
         ],
+        "order_by": "Length",
+        "index": -1,
         "roi": [
             2,
             359,
@@ -213,14 +213,14 @@
     },
     "SODStart_GoodsSellect_2": {
         "recognition": "OCR",
-        "order_by": "Length",
-        "index": -2,
-        "text": [
+        "expected": [
             "软盘",
             "造物",
             "发条",
             "金雀"
         ],
+        "order_by": "Length",
+        "index": -2,
         "roi": [
             2,
             359,
@@ -1087,7 +1087,7 @@
     },
     "SOD_Levelup": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "触媒等级提升"
         ],
         "roi": [
@@ -1128,7 +1128,7 @@
     },
     "SOD_Fight": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "开始行动"
         ],
         "roi": [
@@ -1252,7 +1252,7 @@
     "Sub_SOD_Dialog_3": {
         "is_sub": true,
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "升华"
         ],
         "roi": [
@@ -1265,7 +1265,7 @@
     },
     "SOD_CombatDefeat_hint": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "终止探索"
         ],
         "roi": [
@@ -1284,7 +1284,7 @@
     },
     "SOD_CombatVictory": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "战斗胜利",
             "胜利"
         ],
@@ -1309,7 +1309,7 @@
     },
     "SOD_CombatDefeat": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "战斗失败",
             "失败"
         ],
@@ -1328,7 +1328,7 @@
     },
     "SOD_ItemSellct_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "造物选择"
         ],
         "roi": [
@@ -1365,7 +1365,7 @@
     },
     "SOD_ItemSellct_2": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "造物选择"
         ],
         "roi": [
@@ -1402,7 +1402,7 @@
     },
     "SOD_ItemSellct_3": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "造物选择"
         ],
         "roi": [
@@ -1439,7 +1439,7 @@
     },
     "SOD_ItemSellct_4": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "造物选择"
         ],
         "roi": [
@@ -1475,7 +1475,7 @@
     },
     "SOD_ItemSellct_Confirm": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "确认"
         ],
         "roi": [
@@ -1506,7 +1506,7 @@
     },
     "SOD_ItemLose_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "交付造物",
             "失去造物"
         ],
@@ -1554,7 +1554,7 @@
     },
     "SOD_NewArcanist": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "等级"
         ],
         "roi": [
@@ -1576,7 +1576,7 @@
     },
     "SOD_Departure": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "启程"
         ],
         "roi": [
@@ -1680,7 +1680,7 @@
     },
     "SOD_Acquire": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "获得造物"
         ],
         "roi": [
@@ -1759,7 +1759,7 @@
     },
     "SOD_ClearDeployment": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "清空布设"
         ],
         "roi": [
@@ -1777,7 +1777,7 @@
     },
     "SOD_OneClickDeploymentt": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "布设"
         ],
         "roi": [
@@ -1794,7 +1794,7 @@
     },
     "SOD_Skip": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "跳过"
         ],
         "roi": [
@@ -1812,7 +1812,7 @@
     },
     "SOD_Skip_Confirm": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "确认"
         ],
         "roi": [
