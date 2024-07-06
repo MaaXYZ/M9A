@@ -198,7 +198,6 @@
             "发条",
             "金雀"
         ],
-        "order_by": "Length",
         "index": -1,
         "roi": [
             2,
@@ -219,7 +218,6 @@
             "发条",
             "金雀"
         ],
-        "order_by": "Length",
         "index": -2,
         "roi": [
             2,
@@ -412,8 +410,11 @@
         ],
         "action": "Click",
         "next": [
+            "SOD_ClearDeployment",
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -452,6 +453,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -489,6 +491,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -525,6 +528,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -560,6 +564,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -594,6 +599,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -627,6 +633,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -659,6 +666,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -697,6 +705,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -734,6 +743,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -770,6 +780,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -805,6 +816,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -839,6 +851,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -872,6 +885,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -904,6 +918,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -935,6 +950,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -965,6 +981,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -994,6 +1011,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -1022,6 +1040,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -1049,6 +1068,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -1075,6 +1095,7 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -1345,6 +1366,7 @@
             20
         ],
         "next": [
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Main",
             "SOD_Skip",
@@ -1382,6 +1404,7 @@
             20
         ],
         "next": [
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Main",
             "SOD_Skip",
@@ -1419,6 +1442,7 @@
             20
         ],
         "next": [
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Main",
             "SOD_Skip",
@@ -1456,6 +1480,7 @@
             20
         ],
         "next": [
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Main",
             "SOD_Skip",
@@ -1603,6 +1628,7 @@
         "action": "Click",
         "post_delay": 2000,
         "next": [
+            "SOD_ClearDeployment",
             "SOD_ArcanistSellct",
             "SOD_ArcanistAdd_Single4",
             "SOD_CombatStart",
@@ -1697,6 +1723,7 @@
             20
         ],
         "next": [
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Main",
             "SOD_Skip",
@@ -1727,8 +1754,6 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
-            "SOD_ItemLose_1",
             "SOD_ItemSellct_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
