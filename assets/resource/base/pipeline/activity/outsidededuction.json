@@ -413,8 +413,6 @@
             "SOD_ClearDeployment",
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
