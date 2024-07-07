@@ -5,6 +5,7 @@
             "SODStop",
             "SODStart",
             "OutsideDeduction",
+            "SOD_Main",
             "Sub_StartUp"
         ]
     },
@@ -129,7 +130,7 @@
         "action": "Click",
         "target": [
             654,
-            90,
+            30,
             5,
             5
         ],
@@ -320,7 +321,7 @@
             20
         ],
         "next": [
-            "SOD_ArcanistAdd_4"
+            "SOD_ArcanistAdd_37"
         ]
     },
     "SOD_ArcanistAdd_4": {
@@ -410,7 +411,6 @@
         ],
         "action": "Click",
         "next": [
-            "SOD_ClearDeployment",
             "SOD_Move",
             "SOD_Fight",
             "SOD_Departure",
@@ -421,6 +421,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_2",
             "SOD_SellectNext_3",
             "SOD_SellectNext_4",
@@ -433,7 +434,21 @@
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
-            "SOD_SellectNext_7_1"
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_2": {
@@ -451,7 +466,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -460,6 +474,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_3",
             "SOD_SellectNext_4",
             "SOD_SellectNext_5",
@@ -471,7 +486,21 @@
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
-            "SOD_SellectNext_7_1"
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_3": {
@@ -489,7 +518,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -498,6 +526,8 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
+            "SOD_EndEvent",
             "SOD_SellectNext_4",
             "SOD_SellectNext_5",
             "SOD_SellectNext_6",
@@ -508,7 +538,21 @@
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
-            "SOD_SellectNext_7_1"
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_4": {
@@ -526,7 +570,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -535,6 +578,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_5",
             "SOD_SellectNext_6",
             "SOD_SellectNext_7",
@@ -544,7 +588,21 @@
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
-            "SOD_SellectNext_7_1"
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_5": {
@@ -562,7 +620,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -571,6 +628,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_6",
             "SOD_SellectNext_7",
             "SOD_SellectNext_1_1",
@@ -579,7 +637,21 @@
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
-            "SOD_SellectNext_7_1"
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_6": {
@@ -597,7 +669,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -606,6 +677,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_7",
             "SOD_SellectNext_1_1",
             "SOD_SellectNext_2_1",
@@ -613,7 +685,21 @@
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
-            "SOD_SellectNext_7_1"
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_7": {
@@ -631,7 +717,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -640,13 +725,28 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_1_1",
             "SOD_SellectNext_2_1",
             "SOD_SellectNext_3_1",
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
-            "SOD_SellectNext_7_1"
+            "SOD_SellectNext_7_1",
+            "SOD_SellectNext_1_2",
+            "SOD_SellectNext_2_2",
+            "SOD_SellectNext_3_2",
+            "SOD_SellectNext_4_2",
+            "SOD_SellectNext_5_2",
+            "SOD_SellectNext_6_2",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_1_1": {
@@ -664,7 +764,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -673,6 +772,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_2_1",
             "SOD_SellectNext_3_1",
             "SOD_SellectNext_4_1",
@@ -685,7 +785,14 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2"
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_2_1": {
@@ -703,7 +810,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -712,6 +818,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_3_1",
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
@@ -723,7 +830,14 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2"
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_3_1": {
@@ -741,7 +855,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -750,6 +863,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
@@ -760,7 +874,14 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2"
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_4_1": {
@@ -778,7 +899,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -787,6 +907,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
             "SOD_SellectNext_7_1",
@@ -796,7 +917,14 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2"
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_5_1": {
@@ -814,7 +942,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -823,6 +950,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_6_1",
             "SOD_SellectNext_7_1",
             "SOD_SellectNext_1_2",
@@ -831,7 +959,14 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2"
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_6_1": {
@@ -849,7 +984,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -858,6 +992,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_7_1",
             "SOD_SellectNext_1_2",
             "SOD_SellectNext_2_2",
@@ -865,7 +1000,14 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2"
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_7_1": {
@@ -883,7 +1025,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -892,13 +1033,21 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_1_2",
             "SOD_SellectNext_2_2",
             "SOD_SellectNext_3_2",
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2"
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_1_2": {
@@ -916,7 +1065,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -925,12 +1073,20 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_2_2",
             "SOD_SellectNext_3_2",
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2"
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_2_2": {
@@ -948,7 +1104,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -957,11 +1112,19 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_3_2",
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2"
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_3_2": {
@@ -979,7 +1142,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -988,10 +1150,18 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2"
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_4_2": {
@@ -1009,7 +1179,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -1018,9 +1187,17 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2"
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_5_2": {
@@ -1038,7 +1215,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -1047,8 +1223,16 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2"
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_6_2": {
@@ -1066,7 +1250,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -1075,7 +1258,15 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
-            "SOD_SellectNext_7_2"
+            "SOD_ClearDeployment",
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_7_2": {
@@ -1093,7 +1284,6 @@
         "next": [
             "SOD_Move",
             "SOD_Fight",
-            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
@@ -1101,7 +1291,218 @@
             "SOD_ItemSellct_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
-            "SOD_Acquire"
+            "SOD_Acquire",
+            "SOD_ClearDeployment",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_1_3": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Combat.png",
+        "threshold": 0.85,
+        "index": 3,
+        "roi": [
+            277,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_ClearDeployment",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_2_3": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Danger.png",
+        "threshold": 0.85,
+        "index": 3,
+        "roi": [
+            277,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_ClearDeployment",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_3_3": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Imminent.png",
+        "threshold": 0.85,
+        "index": 3,
+        "roi": [
+            277,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_ClearDeployment",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_4_3": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Shopping.png",
+        "threshold": 0.85,
+        "index": 3,
+        "roi": [
+            277,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_ClearDeployment",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_5_3": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Discovery.png",
+        "threshold": 0.85,
+        "index": 3,
+        "roi": [
+            277,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_ClearDeployment",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_6_3": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_RestSite.png",
+        "threshold": 0.85,
+        "index": 3,
+        "roi": [
+            277,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_ClearDeployment",
+            "SOD_SellectNext_7_3"
+        ]
+    },
+    "SOD_SellectNext_7_3": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Treasure.png",
+        "threshold": 0.85,
+        "index": 3,
+        "roi": [
+            277,
+            23,
+            1018,
+            653
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Move",
+            "SOD_Fight",
+            "SOD_Departure",
+            "SOD_Ending_1",
+            "SOD_Ending_2",
+            "SOD_EndingSelecct",
+            "SOD_ItemSellct_1",
+            "SOD_ItemLose_1",
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_ClearDeployment"
         ]
     },
     "SOD_Levelup": {
@@ -1239,6 +1640,7 @@
             "Sub_SOD_Dialog_1",
             "Sub_SOD_Dialog_2",
             "Sub_SOD_Dialog_3",
+            "Sub_SOD_Dialog_4",
             "SOD_CombatDefeat_hint",
             "SOD_CombatDefeat",
             "SOD_Combating"
@@ -1279,6 +1681,19 @@
             545,
             198,
             138
+        ],
+        "action": "Click"
+    },
+    "Sub_SOD_Dialog_4": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Dialog_4.png",
+        "threshold": 0.97,
+        "roi": [
+            1160,
+            61,
+            40,
+            28
         ],
         "action": "Click"
     },
@@ -1586,6 +2001,7 @@
             189,
             74
         ],
+        "pre_delay": 500,
         "action": "Click",
         "target": [
             587,
@@ -1746,6 +2162,7 @@
             82,
             85
         ],
+        "pre_delay": 500,
         "next": [
             "SOD_ClearDeployment",
             "SOD_Departure",
@@ -1777,7 +2194,14 @@
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
-            "SOD_SellectNext_7_2"
+            "SOD_SellectNext_7_2",
+            "SOD_SellectNext_1_3",
+            "SOD_SellectNext_2_3",
+            "SOD_SellectNext_3_3",
+            "SOD_SellectNext_4_3",
+            "SOD_SellectNext_5_3",
+            "SOD_SellectNext_6_3",
+            "SOD_SellectNext_7_3"
         ]
     },
     "SOD_ClearDeployment": {
