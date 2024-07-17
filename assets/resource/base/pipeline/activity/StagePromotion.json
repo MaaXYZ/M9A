@@ -272,8 +272,7 @@
         "next": [
             "StagePromotion_Victory",
             "StagePromotion_CombatDefeat",
-            "StagePromotion_Dialog_1",
-            "StagePromotion_Dialog_2",
+            "StagePromotion_Dialog",
             "StagePromotion_Combating"
         ]
     },
@@ -312,37 +311,75 @@
             214
         ]
     },
-    "StagePromotion_Dialog_1": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Dialog_1.png",
-        "roi": [
-            164,
-            19,
-            37,
-            52
-        ],
-        "action": "Click",
+    "StagePromotion_Dialog": {
         "next": [
-            "StagePromotion_Dialog_1",
-            "StagePromotion_Dialog_2",
+            "StagePromotion_Victory",
+            "StagePromotion_Skip",
+            "StagePromotion_ReadyForAction",
+            "StagePromotion_NextStage2",
+            "StagePromotion_NextStage1",
+            "StagePromotion_Combating",
+            "StagePromotion_Dialog_Right",
+            "StagePromotion_Dialog_Left"
+        ]
+    },
+    "StagePromotion_Dialog_Right": {
+        "recognition": "ColorMatch",
+        "roi": [
+            1093,
+            44,
+            122,
+            42
+        ],
+        "method": 4,
+        "lower": [
+            225,
+            215,
+            200
+        ],
+        "upper": [
+            245,
+            225,
+            210
+        ],
+        "count": 1,
+        "order_by": "Score",
+        "index": 0,
+        "action": "Click",
+        "target": true,
+        "next": [
+            "StagePromotion_Dialog",
             "StagePromotion_Combating",
             "StagePromotion_Victory",
             "StagePromotion_CombatDefeat"
         ]
     },
-    "StagePromotion_Dialog_2": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Dialog_2.png",
+    "StagePromotion_Dialog_Left": {
+        "recognition": "ColorMatch",
         "roi": [
-            1074,
-            29,
-            42,
-            38
+            72,
+            44,
+            122,
+            122
         ],
+        "method": 4,
+        "lower": [
+            225,
+            215,
+            200
+        ],
+        "upper": [
+            245,
+            225,
+            210
+        ],
+        "count": 1,
+        "order_by": "Score",
+        "index": 0,
         "action": "Click",
+        "target": true,
         "next": [
-            "StagePromotion_Dialog_1",
-            "StagePromotion_Dialog_2",
+            "StagePromotion_Dialog",
             "StagePromotion_Combating",
             "StagePromotion_Victory",
             "StagePromotion_CombatDefeat"
