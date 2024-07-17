@@ -318,9 +318,9 @@
             "StagePromotion_ReadyForAction",
             "StagePromotion_NextStage2",
             "StagePromotion_NextStage1",
-            "StagePromotion_Combating",
             "StagePromotion_Dialog_Right",
-            "StagePromotion_Dialog_Left"
+            "StagePromotion_Dialog_Left",
+            "StagePromotion_Combating"
         ]
     },
     "StagePromotion_Dialog_Right": {
