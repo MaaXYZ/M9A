@@ -13,7 +13,7 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "Awards/MailBadge.png",
-        "threshold": 0.98,
+        "threshold": 0.97,
         "roi": [
             47,
             115,
@@ -73,9 +73,9 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "Awards/DailyBadge.png",
-        "threshold": 0.98,
+        "threshold": 0.97,
         "action": "Click",
-        "post_wait_freezes": 1,
+        "post_wait_freezes": 200,
         "roi": [
             44,
             194,
@@ -108,7 +108,7 @@
     "WeeklyAwardsBadge": {
         "recognition": "TemplateMatch",
         "template": "Awards/WeeklyAwardsBadge.png",
-        "threshold": 0.98,
+        "threshold": 0.97,
         "action": "Click",
         "roi": [
             1165,
@@ -138,7 +138,7 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "Awards/JukeboxBadge.png",
-        "threshold": 0.95,
+        "threshold": 0.9,
         "roi": [
             133,
             0,
@@ -188,7 +188,7 @@
     "NoJukeboxAwards": {
         "recognition": "TemplateMatch",
         "template": "Awards/NoJukeboxAwards.png",
-        "threshold": 0.98,
+        "threshold": 0.97,
         "roi": [
             1012,
             46,

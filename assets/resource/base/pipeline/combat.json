@@ -321,10 +321,10 @@
         "template": "Combat/PromotionChapterLabel.png",
         "threshold": 0.98,
         "roi": [
-            388,
-            578,
-            157,
-            133
+            4,
+            559,
+            1276,
+            161
         ],
         "action": "Click",
         "post_wait_freezes": {
@@ -474,12 +474,15 @@
     },
     "TheFarLeftOfStageList": {
         "recognition": "OCR",
-        "text": "01",
+        "expected": "01",
         "roi": [
             0,
             470,
             1280,
             160
+        ],
+        "next": [
+            "SwipeRightForStageList"
         ]
     },
     "SwipeLeftForStageList": {
@@ -499,6 +502,31 @@
         "post_wait_freezes": 1,
         "next": [
             "SwipeLeftAndFindStage"
+        ]
+    },
+    "SwipeRightAndFindStage": {
+        "next": [
+            "TargetStageName",
+            "SwipeRightForStageList"
+        ]
+    },
+    "SwipeRightForStageList": {
+        "action": "Swipe",
+        "begin": [
+            900,
+            600,
+            100,
+            50
+        ],
+        "end": [
+            300,
+            600,
+            100,
+            50
+        ],
+        "post_wait_freezes": 1,
+        "next": [
+            "SwipeRightAndFindStage"
         ]
     },
     "StageDifficulty": {
@@ -567,7 +595,7 @@
     },
     "ReadyForAction": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "开始行动"
         ],
         "roi": [
@@ -644,7 +672,7 @@
     },
     "StartReplay": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "复现"
         ],
         "roi": [
@@ -662,7 +690,7 @@
     },
     "RecoveryPage": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "活性",
             "恢复"
         ],
@@ -681,7 +709,7 @@
     },
     "Replaying": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "行为",
             "复现"
         ],
@@ -699,7 +727,7 @@
     },
     "Victory": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "战斗",
             "胜利"
         ],

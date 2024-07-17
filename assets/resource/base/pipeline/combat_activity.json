@@ -7,7 +7,7 @@
     },
     "ActivityStageDifficulty_Hard": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "艰难"
         ],
         "roi": [

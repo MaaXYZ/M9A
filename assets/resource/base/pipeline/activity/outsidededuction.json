@@ -2,6 +2,10 @@
     "SeriesOfDusks": {
         "next": [
             "EnterTheShow",
+            "SODStop",
+            "SODStart",
+            "OutsideDeduction",
+            "SOD_Main",
             "Sub_StartUp"
         ]
     },
@@ -9,9 +13,9 @@
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/OutsideDeduction.png",
         "roi": [
-            1127,
+            427,
             602,
-            111,
+            811,
             104
         ],
         "action": "Click",
@@ -54,7 +58,7 @@
     },
     "SODStop_Click_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "阴霾",
             "渐生"
         ],
@@ -72,7 +76,7 @@
     },
     "SODStop_Click_2": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "幕终寻获"
         ],
         "roi": [
@@ -96,7 +100,7 @@
     },
     "SOD_Complete_Click_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "阴霾",
             "消散"
         ],
@@ -114,19 +118,19 @@
     },
     "SODStop_Click_3": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "累计获得造物"
         ],
         "roi": [
             286,
             272,
-            247,
+            277,
             92
         ],
         "action": "Click",
         "target": [
             654,
-            90,
+            30,
             5,
             5
         ],
@@ -169,7 +173,7 @@
     },
     "SODStart_GoodsSellect": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "镜的馈赠"
         ],
         "roi": [
@@ -178,53 +182,60 @@
             224,
             90
         ],
-        "action": "Click",
-        "target": [
-            267,
-            361,
-            20,
-            20
-        ],
         "next": [
-            "SODStart_MediaSellect",
-            "SOD_ArcanistAdd",
             "SODStart_Confirm",
+            "Sub_SODStart_GoodsSellect",
+            "SOD_ItemSellct_1",
+            "SODStart_MediaSellect",
+            "SOD_ArcanistAdd"
+        ]
+    },
+    "Sub_SODStart_GoodsSellect": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": [
+            "软盘",
+            "造物",
+            "发条",
+            "金雀"
+        ],
+        "index": -1,
+        "roi": [
+            2,
+            359,
+            1278,
+            57
+        ],
+        "action": "Click",
+        "next": [
             "SODStart_GoodsSellect_2"
         ]
     },
     "SODStart_GoodsSellect_2": {
         "recognition": "OCR",
-        "text": [
-            "镜的馈赠"
+        "expected": [
+            "软盘",
+            "造物",
+            "发条",
+            "金雀"
         ],
+        "index": -2,
         "roi": [
-            535,
-            4,
-            224,
-            90
+            2,
+            359,
+            1278,
+            57
         ],
-        "action": "Click",
-        "target": [
-            632,
-            361,
-            20,
-            20
-        ],
-        "next": [
-            "SOD_ItemSellct_1",
-            "SODStart_MediaSellect",
-            "SOD_ArcanistAdd",
-            "SODStart_Confirm"
-        ]
+        "action": "Click"
     },
     "SODStart_MediaSellect": {
         "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SODStart_MediaSellect.png",
+        "template": "OutsideDeduction/SODStart_MediaSellect3.png",
         "roi": [
-            128,
-            219,
-            240,
-            210
+            0,
+            81,
+            1280,
+            469
         ],
         "action": "Click",
         "next": [
@@ -260,8 +271,8 @@
         ],
         "action": "Click",
         "next": [
-            "SOD_Quickformation_On",
-            "SOD_Quickformation"
+            "SOD_Quickformation",
+            "SOD_Quickformation_On"
         ]
     },
     "SOD_Quickformation_On": {
@@ -325,6 +336,21 @@
             "SOD_ArcanistAdd_Confirm_1"
         ]
     },
+    "SOD_ArcanistAdd_37": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/37.png",
+        "threshold": 0.85,
+        "roi": [
+            502,
+            64,
+            766,
+            633
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_ArcanistAdd_Confirm_1"
+        ]
+    },
     "SOD_ArcanistAdd_Confirm_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_ArcanistAdd_Confirm_1.png",
@@ -337,6 +363,7 @@
         "action": "Click",
         "post_delay": 1500,
         "next": [
+            "SOD_ClearDeployment",
             "SOD_ArcanistAdd_Confirm_2",
             "SOD_CombatStart",
             "SOD_Departure",
@@ -374,10 +401,10 @@
     "SOD_SellectNext_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Combat.png",
-        "threshold":0.85,
-        "index": -1,
+        "threshold": 0.85,
+        "index": 0,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -394,6 +421,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_2",
             "SOD_SellectNext_3",
             "SOD_SellectNext_4",
@@ -426,10 +454,10 @@
     "SOD_SellectNext_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Danger.png",
-        "threshold":0.85,
-        "index": -1,
+        "threshold": 0.85,
+        "index": 0,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -446,6 +474,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_3",
             "SOD_SellectNext_4",
             "SOD_SellectNext_5",
@@ -477,10 +506,10 @@
     "SOD_SellectNext_3": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Imminent.png",
-        "threshold":0.85,
-        "index": -1,
+        "threshold": 0.85,
+        "index": 0,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -497,6 +526,8 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
+            "SOD_EndEvent",
             "SOD_SellectNext_4",
             "SOD_SellectNext_5",
             "SOD_SellectNext_6",
@@ -527,10 +558,10 @@
     "SOD_SellectNext_4": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Shopping.png",
-        "threshold":0.85,
-        "index": -1,
+        "threshold": 0.85,
+        "index": 0,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -547,6 +578,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_5",
             "SOD_SellectNext_6",
             "SOD_SellectNext_7",
@@ -576,10 +608,10 @@
     "SOD_SellectNext_5": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Discovery.png",
-        "threshold":0.85,
-        "index": -1,
+        "threshold": 0.85,
+        "index": 0,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -596,6 +628,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_6",
             "SOD_SellectNext_7",
             "SOD_SellectNext_1_1",
@@ -624,10 +657,10 @@
     "SOD_SellectNext_6": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_RestSite.png",
-        "threshold":0.85,
-        "index": -1,
+        "threshold": 0.85,
+        "index": 0,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -644,6 +677,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_7",
             "SOD_SellectNext_1_1",
             "SOD_SellectNext_2_1",
@@ -671,10 +705,10 @@
     "SOD_SellectNext_7": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Treasure.png",
-        "threshold":0.85,
-        "index": -1,
+        "threshold": 0.85,
+        "index": 0,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -691,6 +725,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_1_1",
             "SOD_SellectNext_2_1",
             "SOD_SellectNext_3_1",
@@ -717,10 +752,10 @@
     "SOD_SellectNext_1_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Combat.png",
-        "threshold":0.85,
-        "index": -2,
+        "threshold": 0.85,
+        "index": 1,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -737,6 +772,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_2_1",
             "SOD_SellectNext_3_1",
             "SOD_SellectNext_4_1",
@@ -762,10 +798,10 @@
     "SOD_SellectNext_2_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Danger.png",
-        "threshold":0.85,
-        "index": -2,
+        "threshold": 0.85,
+        "index": 1,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -782,6 +818,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_3_1",
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
@@ -806,10 +843,10 @@
     "SOD_SellectNext_3_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Imminent.png",
-        "threshold":0.85,
-        "index": -2,
+        "threshold": 0.85,
+        "index": 1,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -826,6 +863,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_4_1",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
@@ -849,10 +887,10 @@
     "SOD_SellectNext_4_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Shopping.png",
-        "threshold":0.85,
-        "index": -2,
+        "threshold": 0.85,
+        "index": 1,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -869,6 +907,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_5_1",
             "SOD_SellectNext_6_1",
             "SOD_SellectNext_7_1",
@@ -891,10 +930,10 @@
     "SOD_SellectNext_5_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Discovery.png",
-        "threshold":0.85,
-        "index": -2,
+        "threshold": 0.85,
+        "index": 1,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -911,6 +950,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_6_1",
             "SOD_SellectNext_7_1",
             "SOD_SellectNext_1_2",
@@ -932,10 +972,10 @@
     "SOD_SellectNext_6_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_RestSite.png",
-        "threshold":0.85,
-        "index": -2,
+        "threshold": 0.85,
+        "index": 1,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -952,6 +992,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_7_1",
             "SOD_SellectNext_1_2",
             "SOD_SellectNext_2_2",
@@ -972,10 +1013,10 @@
     "SOD_SellectNext_7_1": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Treasure.png",
-        "threshold":0.85,
-        "index": -2,
+        "threshold": 0.85,
+        "index": 1,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -992,6 +1033,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_1_2",
             "SOD_SellectNext_2_2",
             "SOD_SellectNext_3_2",
@@ -1011,10 +1053,10 @@
     "SOD_SellectNext_1_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Combat.png",
-        "threshold":0.85,
-        "index": 0,
+        "threshold": 0.85,
+        "index": 2,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1031,6 +1073,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_2_2",
             "SOD_SellectNext_3_2",
             "SOD_SellectNext_4_2",
@@ -1049,10 +1092,10 @@
     "SOD_SellectNext_2_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Danger.png",
-        "threshold":0.85,
-        "index": 0,
+        "threshold": 0.85,
+        "index": 2,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1069,6 +1112,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_3_2",
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
@@ -1086,10 +1130,10 @@
     "SOD_SellectNext_3_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Imminent.png",
-        "threshold":0.85,
-        "index": 0,
+        "threshold": 0.85,
+        "index": 2,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1106,6 +1150,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_4_2",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
@@ -1122,10 +1167,10 @@
     "SOD_SellectNext_4_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Shopping.png",
-        "threshold":0.85,
-        "index": 0,
+        "threshold": 0.85,
+        "index": 2,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1142,6 +1187,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_5_2",
             "SOD_SellectNext_6_2",
             "SOD_SellectNext_7_2",
@@ -1157,10 +1203,10 @@
     "SOD_SellectNext_5_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Discovery.png",
-        "threshold":0.85,
-        "index": 0,
+        "threshold": 0.85,
+        "index": 2,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1177,6 +1223,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_6_2",
             "SOD_SellectNext_7_2",
             "SOD_SellectNext_1_3",
@@ -1191,10 +1238,10 @@
     "SOD_SellectNext_6_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_RestSite.png",
-        "threshold":0.85,
-        "index": 0,
+        "threshold": 0.85,
+        "index": 2,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1211,6 +1258,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_7_2",
             "SOD_SellectNext_1_3",
             "SOD_SellectNext_2_3",
@@ -1224,10 +1272,10 @@
     "SOD_SellectNext_7_2": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Treasure.png",
-        "threshold":0.85,
-        "index": 0,
+        "threshold": 0.85,
+        "index": 2,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1244,6 +1292,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_1_3",
             "SOD_SellectNext_2_3",
             "SOD_SellectNext_3_3",
@@ -1256,10 +1305,10 @@
     "SOD_SellectNext_1_3": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Combat.png",
-        "threshold":0.85,
-        "index": 1,
+        "threshold": 0.85,
+        "index": 3,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1276,6 +1325,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_2_3",
             "SOD_SellectNext_3_3",
             "SOD_SellectNext_4_3",
@@ -1287,10 +1337,10 @@
     "SOD_SellectNext_2_3": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Danger.png",
-        "threshold":0.85,
-        "index": 1,
+        "threshold": 0.85,
+        "index": 3,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1307,6 +1357,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_3_3",
             "SOD_SellectNext_4_3",
             "SOD_SellectNext_5_3",
@@ -1317,10 +1368,10 @@
     "SOD_SellectNext_3_3": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Imminent.png",
-        "threshold":0.85,
-        "index": 1,
+        "threshold": 0.85,
+        "index": 3,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1337,6 +1388,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_4_3",
             "SOD_SellectNext_5_3",
             "SOD_SellectNext_6_3",
@@ -1346,10 +1398,10 @@
     "SOD_SellectNext_4_3": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Shopping.png",
-        "threshold":0.85,
-        "index": 1,
+        "threshold": 0.85,
+        "index": 3,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1366,6 +1418,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_5_3",
             "SOD_SellectNext_6_3",
             "SOD_SellectNext_7_3"
@@ -1374,10 +1427,10 @@
     "SOD_SellectNext_5_3": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Discovery.png",
-        "threshold":0.85,
-        "index": 1,
+        "threshold": 0.85,
+        "index": 3,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1394,6 +1447,7 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_6_3",
             "SOD_SellectNext_7_3"
         ]
@@ -1401,10 +1455,10 @@
     "SOD_SellectNext_6_3": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_RestSite.png",
-        "threshold":0.85,
-        "index": 1,
+        "threshold": 0.85,
+        "index": 3,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1421,16 +1475,17 @@
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_ClearDeployment",
             "SOD_SellectNext_7_3"
         ]
     },
     "SOD_SellectNext_7_3": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Treasure.png",
-        "threshold":0.85,
-        "index": 1,
+        "threshold": 0.85,
+        "index": 3,
         "roi": [
-            247,
+            277,
             23,
             1018,
             653
@@ -1445,12 +1500,14 @@
             "SOD_EndingSelecct",
             "SOD_ItemSellct_1",
             "SOD_ItemLose_1",
-            "SOD_Skip"
+            "SOD_Skip",
+            "SOD_Acquire",
+            "SOD_ClearDeployment"
         ]
     },
     "SOD_Levelup": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "触媒等级提升"
         ],
         "roi": [
@@ -1484,13 +1541,14 @@
             "SOD_EndEvent",
             "SOD_ItemSellct_1",
             "SOD_Acquire",
+            "SOD_NewArcanist",
             "SOD_Nothinghappen",
             "SOD_Move"
         ]
     },
     "SOD_Fight": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "开始行动"
         ],
         "roi": [
@@ -1563,44 +1621,8 @@
         ],
         "action": "Click",
         "next": [
-            "SOD_Dialog_1",
-            "SOD_Dialog_2",
             "SOD_Combating",
             "SOD_CombatStart"
-        ]
-    },
-    "SOD_Dialog_1": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Dialog_1.png",
-        "roi": [
-            164,
-            19,
-            37,
-            52
-        ],
-        "action": "Click",
-        "next": [
-            "SOD_Dialog_1",
-            "SOD_Dialog_2",
-            "SOD_Combating",
-            "SOD_CombatVictory"
-        ]
-    },
-    "SOD_Dialog_2": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Dialog_2.png",
-        "roi": [
-            1074,
-            29,
-            42,
-            38
-        ],
-        "action": "Click",
-        "next": [
-            "SOD_Dialog_1",
-            "SOD_Dialog_2",
-            "SOD_Combating",
-            "SOD_CombatVictory"
         ]
     },
     "SOD_Combating": {
@@ -1612,19 +1634,72 @@
             64,
             64
         ],
-        "timeout":40000,
+        "timeout": 40000,
         "next": [
-            "SOD_Dialog_1",
-            "SOD_Dialog_2",
             "SOD_CombatVictory",
+            "Sub_SOD_Dialog_1",
+            "Sub_SOD_Dialog_2",
+            "Sub_SOD_Dialog_3",
+            "Sub_SOD_Dialog_4",
             "SOD_CombatDefeat_hint",
             "SOD_CombatDefeat",
             "SOD_Combating"
         ]
     },
+    "Sub_SOD_Dialog_1": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Dialog_1.png",
+        "roi": [
+            164,
+            19,
+            37,
+            52
+        ],
+        "action": "Click"
+    },
+    "Sub_SOD_Dialog_2": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Dialog_2.png",
+        "roi": [
+            1074,
+            29,
+            42,
+            38
+        ],
+        "action": "Click"
+    },
+    "Sub_SOD_Dialog_3": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": [
+            "升华"
+        ],
+        "roi": [
+            542,
+            545,
+            198,
+            138
+        ],
+        "action": "Click"
+    },
+    "Sub_SOD_Dialog_4": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Dialog_4.png",
+        "threshold": 0.97,
+        "roi": [
+            1160,
+            61,
+            40,
+            28
+        ],
+        "action": "Click"
+    },
     "SOD_CombatDefeat_hint": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "终止探索"
         ],
         "roi": [
@@ -1643,8 +1718,8 @@
     },
     "SOD_CombatVictory": {
         "recognition": "OCR",
-        "text": [
-            "战斗",
+        "expected": [
+            "战斗胜利",
             "胜利"
         ],
         "roi": [
@@ -1668,8 +1743,8 @@
     },
     "SOD_CombatDefeat": {
         "recognition": "OCR",
-        "text": [
-            "战斗",
+        "expected": [
+            "战斗失败",
             "失败"
         ],
         "roi": [
@@ -1687,7 +1762,7 @@
     },
     "SOD_ItemSellct_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "造物选择"
         ],
         "roi": [
@@ -1699,11 +1774,12 @@
         "action": "Click",
         "target": [
             267,
-            361,
+            300,
             20,
             20
         ],
         "next": [
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Main",
             "SOD_Skip",
@@ -1724,7 +1800,7 @@
     },
     "SOD_ItemSellct_2": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "造物选择"
         ],
         "roi": [
@@ -1736,11 +1812,12 @@
         "action": "Click",
         "target": [
             632,
-            361,
+            300,
             20,
             20
         ],
         "next": [
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Main",
             "SOD_Skip",
@@ -1761,7 +1838,7 @@
     },
     "SOD_ItemSellct_3": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "造物选择"
         ],
         "roi": [
@@ -1773,11 +1850,12 @@
         "action": "Click",
         "target": [
             855,
-            361,
+            300,
             20,
             20
         ],
         "next": [
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Main",
             "SOD_Skip",
@@ -1798,7 +1876,7 @@
     },
     "SOD_ItemSellct_4": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "造物选择"
         ],
         "roi": [
@@ -1810,11 +1888,12 @@
         "action": "Click",
         "target": [
             1132,
-            361,
+            300,
             20,
             20
         ],
         "next": [
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Main",
             "SOD_Skip",
@@ -1834,7 +1913,7 @@
     },
     "SOD_ItemSellct_Confirm": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "确认"
         ],
         "roi": [
@@ -1865,7 +1944,7 @@
     },
     "SOD_ItemLose_1": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "交付造物",
             "失去造物"
         ],
@@ -1913,7 +1992,7 @@
     },
     "SOD_NewArcanist": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "等级"
         ],
         "roi": [
@@ -1922,6 +2001,7 @@
             189,
             74
         ],
+        "pre_delay": 500,
         "action": "Click",
         "target": [
             587,
@@ -1935,7 +2015,7 @@
     },
     "SOD_Departure": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "启程"
         ],
         "roi": [
@@ -1962,6 +2042,7 @@
         "action": "Click",
         "post_delay": 2000,
         "next": [
+            "SOD_ClearDeployment",
             "SOD_ArcanistSellct",
             "SOD_ArcanistAdd_Single4",
             "SOD_CombatStart",
@@ -1970,6 +2051,7 @@
             "SOD_Acquire",
             "SOD_EndEvent",
             "SOD_Main",
+            "SOD_Shopping_Leave",
             "SOD_Nothinghappen"
         ]
     },
@@ -1983,7 +2065,7 @@
             520,
             600
         ],
-        "threshold":0.55,
+        "threshold": 0.55,
         "action": "Click",
         "next": [
             "SOD_EndEvent_OK",
@@ -2038,7 +2120,7 @@
     },
     "SOD_Acquire": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "获得造物"
         ],
         "roi": [
@@ -2055,6 +2137,7 @@
             20
         ],
         "next": [
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Main",
             "SOD_Skip",
@@ -2079,17 +2162,18 @@
             82,
             85
         ],
+        "pre_delay": 500,
         "next": [
+            "SOD_ClearDeployment",
             "SOD_Departure",
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
             "SOD_ItemSellct_1",
             "SOD_ItemLose_1",
-            "SOD_ItemSellct_1",
-            "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
+            "SOD_NewArcanist",
             "SOD_SellectNext_1",
             "SOD_SellectNext_2",
             "SOD_SellectNext_3",
@@ -2120,16 +2204,51 @@
             "SOD_SellectNext_7_3"
         ]
     },
+    "SOD_ClearDeployment": {
+        "recognition": "OCR",
+        "expected": [
+            "清空布设"
+        ],
+        "roi": [
+            0,
+            440,
+            210,
+            278
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "next": [
+            "SOD_OneClickDeploymentt",
+            "SOD_ClearDeployment"
+        ]
+    },
+    "SOD_OneClickDeploymentt": {
+        "recognition": "OCR",
+        "expected": [
+            "布设"
+        ],
+        "roi": [
+            0,
+            492,
+            104,
+            81
+        ],
+        "action": "Click",
+        "next": [
+            "SOD_Main",
+            "Sub_BackButton"
+        ]
+    },
     "SOD_Skip": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "跳过"
         ],
         "roi": [
-            1115,
-            7,
-            137,
-            90
+            1009,
+            4,
+            267,
+            80
         ],
         "action": "Click",
         "next": [
@@ -2140,7 +2259,7 @@
     },
     "SOD_Skip_Confirm": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "确认"
         ],
         "roi": [
@@ -2211,7 +2330,7 @@
             330
         ],
         "action": "Click",
-        "threshold":0.55,
+        "threshold": 0.55,
         "next": [
             "SOD_Departure",
             "SOD_Main",

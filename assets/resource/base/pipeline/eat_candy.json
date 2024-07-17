@@ -10,7 +10,7 @@
     },
     "MiniCandy24H": {
         "recognition": "OCR",
-        "text": "小时",
+        "expected": "小时",
         "roi": [
             989,
             212,
@@ -23,7 +23,7 @@
     },
     "SmallCandy24H": {
         "recognition": "OCR",
-        "text": "小时",
+        "expected": "小时",
         "roi": [
             829,
             65,
@@ -36,7 +36,7 @@
     },
     "BigCandy24H": {
         "recognition": "OCR",
-        "text": "小时",
+        "expected": "小时",
         "roi": [
             856,
             373,
@@ -49,7 +49,7 @@
     },
     "NotCandy24H": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "活性",
             "恢复"
         ],
@@ -130,7 +130,7 @@
     },
     "MiniCandy24HNotEnough": {
         "recognition": "OCR",
-        "text": "苦目软糖",
+        "expected": "苦目软糖",
         "roi": [
             989,
             212,
@@ -146,7 +146,7 @@
     },
     "SmallCandy24HNotEnough": {
         "recognition": "OCR",
-        "text": "苦目糖果",
+        "expected": "苦目糖果",
         "roi": [
             997,
             62,
@@ -162,7 +162,7 @@
     },
     "BigCandy24HNotEnough": {
         "recognition": "OCR",
-        "text": "苦目糖罐",
+        "expected": "苦目糖罐",
         "roi": [
             997,
             62,
@@ -178,7 +178,7 @@
     "Sub_QuitEatCandyPage": {
         "is_sub": true,
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "活性",
             "恢复"
         ],

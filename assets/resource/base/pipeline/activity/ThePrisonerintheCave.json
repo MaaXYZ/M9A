@@ -39,7 +39,7 @@
     },
     "ThePrisonerintheCaveTargetStageName": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "证明启示V"
         ],
         "roi": [
@@ -55,7 +55,7 @@
     },
     "ThePrisonerintheCaveReadyForAction": {
         "recognition": "OCR",
-        "text": [
+        "expected": [
             "开始行动"
         ],
         "roi": [

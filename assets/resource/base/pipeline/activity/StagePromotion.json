@@ -1,0 +1,375 @@
+{
+    "StagePromotion_SwipeRightAndFindStage": {
+        "next": [
+            "StagePromotion_NextStage2",
+            "StagePromotion_NextStage1",
+            "StagePromotion_SwipeRightForStageList"
+        ]
+    },
+    "StagePromotion_NextStage1": {
+        "recognition": "ColorMatch",
+        "roi": [
+            44,
+            533,
+            1209,
+            50
+        ],
+        "method": 4,
+        "lower": [
+            122,
+            122,
+            122
+        ],
+        "upper": [
+            122,
+            122,
+            122
+        ],
+        "count": 80,
+        "action": "Click",
+        "next": [
+            "StagePromotion_ReadyForAction",
+            "StagePromotion_NextStage1"
+        ]
+    },
+    "StagePromotion_NextStage2": {
+        "recognition": "ColorMatch",
+        "roi": [
+            422,
+            533,
+            200,
+            50
+        ],
+        "method": 4,
+        "lower": [
+            122,
+            122,
+            122
+        ],
+        "upper": [
+            122,
+            122,
+            122
+        ],
+        "count": 160,
+        "action": "Click",
+        "next": [
+            "StagePromotion_ReadyForAction",
+            "StagePromotion_NextStage2"
+        ]
+    },
+    "StagePromotion_ReadyForAction": {
+        "recognition": "OCR",
+        "expected": [
+            "开始行动"
+        ],
+        "roi": [
+            900,
+            500,
+            380,
+            220
+        ],
+        "action": "Click",
+        "next": [
+            "StagePromotion_Skip",
+            "StagePromotion_Combating",
+            "StagePromotion_EatCandy",
+            "StagePromotion_BalanceModel",
+            "StagePromotion_ReadyForAction"
+        ]
+    },
+    "StagePromotion_BalanceModel": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": [
+            "制衡模式"
+        ],
+        "roi": [
+            510,
+            105,
+            290,
+            115
+        ],
+        "action": "Click",
+        "target_offset": [
+            -200,
+            -100,
+            30,
+            30
+        ]
+    },
+    "StagePromotion_EatCandy": {
+        "enabled": false,
+        "recognition": "OCR",
+        "expected": [
+            "活性",
+            "恢复"
+        ],
+        "roi": [
+            465,
+            571,
+            277,
+            149
+        ],
+        "next": [
+            "StagePromotion_SmallCandy",
+            "StagePromotion_MiniCandy",
+            "StagePromotion_BigCandy"
+        ]
+    },
+    "StagePromotion_MiniCandy": {
+        "recognition": "TemplateMatch",
+        "template": "EatCandy/MiniCandy.png",
+        "roi": [
+            989,
+            212,
+            165,
+            200
+        ],
+        "action": "Click",
+        "next": [
+            "StagePromotion_MiniCandyConfirm",
+            "StagePromotion_MiniCandy"
+        ]
+    },
+    "StagePromotion_SmallCandy": {
+        "recognition": "TemplateMatch",
+        "template": "EatCandy/SmallCandy.png",
+        "roi": [
+            829,
+            65,
+            145,
+            295
+        ],
+        "action": "Click",
+        "next": [
+            "StagePromotion_EatCandyConfirm",
+            "StagePromotion_SmallCandy"
+        ]
+    },
+    "StagePromotion_BigCandy": {
+        "recognition": "TemplateMatch",
+        "template": "EatCandy/BigCandy.png",
+        "roi": [
+            856,
+            373,
+            196,
+            344
+        ],
+        "action": "Click",
+        "next": [
+            "StagePromotion_EatCandyConfirm",
+            "StagePromotion_SmallCandy"
+        ]
+    },
+    "StagePromotion_MiniCandyConfirm": {
+        "recognition": "TemplateMatch",
+        "template": "EatCandy/ConvertCandyConfirm.png",
+        "roi": [
+            594,
+            491,
+            88,
+            48
+        ],
+        "action": "Click",
+        "next": [
+            "StagePromotion_QuitEatCandyPage",
+            "StagePromotion_EatCandyConfirm"
+        ]
+    },
+    "StagePromotion_EatCandyConfirm": {
+        "recognition": "TemplateMatch",
+        "template": "EatCandy/Confirm.png",
+        "roi": [
+            709,
+            352,
+            189,
+            151
+        ],
+        "action": "Click",
+        "next": [
+            "StagePromotion_QuitEatCandyPage",
+            "StagePromotion_EatCandyConfirm"
+        ]
+    },
+    "StagePromotion_QuitEatCandyPage": {
+        "recognition": "OCR",
+        "expected": [
+            "活性",
+            "恢复"
+        ],
+        "roi": [
+            465,
+            571,
+            277,
+            149
+        ],
+        "action": "Click",
+        "target": [
+            1116,
+            636,
+            155,
+            76
+        ],
+        "next": [
+            "StagePromotion_ReadyForAction",
+            "StagePromotion_QuitEatCandyPage"
+        ]
+    },
+    "StagePromotion_Skip": {
+        "recognition": "OCR",
+        "expected": [
+            "跳过"
+        ],
+        "roi": [
+            1015,
+            7,
+            263,
+            70
+        ],
+        "action": "Click",
+        "next": [
+            "StagePromotion_Confirm",
+            "StagePromotion_Combating",
+            "StagePromotion_Skip"
+        ]
+    },
+    "StagePromotion_Confirm": {
+        "recognition": "OCR",
+        "expected": [
+            "确认"
+        ],
+        "roi": [
+            687,
+            336,
+            280,
+            174
+        ],
+        "action": "Click",
+        "next": [
+            "StagePromotion_ReadyForAction",
+            "StagePromotion_NextStage2",
+            "StagePromotion_NextStage1",
+            "StagePromotion_Skip",
+            "StagePromotion_Confirm"
+        ]
+    },
+    "StagePromotion_Combating": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Combating.png",
+        "roi": [
+            1208,
+            6,
+            64,
+            64
+        ],
+        "timeout": 40000,
+        "next": [
+            "StagePromotion_Victory",
+            "StagePromotion_CombatDefeat",
+            "StagePromotion_Dialog_1",
+            "StagePromotion_Dialog_2",
+            "StagePromotion_Combating"
+        ]
+    },
+    "StagePromotion_Victory": {
+        "recognition": "OCR",
+        "expected": [
+            "战斗",
+            "胜利"
+        ],
+        "roi": [
+            678,
+            10,
+            473,
+            240
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "next": [
+            "StagePromotion_Skip",
+            "StagePromotion_ReadyForAction",
+            "StagePromotion_NextStage2",
+            "StagePromotion_NextStage1",
+            "StagePromotion_Victory"
+        ]
+    },
+    "StagePromotion_CombatDefeat": {
+        "recognition": "OCR",
+        "expected": [
+            "战斗",
+            "失败"
+        ],
+        "roi": [
+            384,
+            42,
+            446,
+            214
+        ]
+    },
+    "StagePromotion_Dialog_1": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Dialog_1.png",
+        "roi": [
+            164,
+            19,
+            37,
+            52
+        ],
+        "action": "Click",
+        "next": [
+            "StagePromotion_Dialog_1",
+            "StagePromotion_Dialog_2",
+            "StagePromotion_Combating",
+            "StagePromotion_Victory",
+            "StagePromotion_CombatDefeat"
+        ]
+    },
+    "StagePromotion_Dialog_2": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Dialog_2.png",
+        "roi": [
+            1074,
+            29,
+            42,
+            38
+        ],
+        "action": "Click",
+        "next": [
+            "StagePromotion_Dialog_1",
+            "StagePromotion_Dialog_2",
+            "StagePromotion_Combating",
+            "StagePromotion_Victory",
+            "StagePromotion_CombatDefeat"
+        ]
+    },
+    "StagePromotion_CantAuto": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/CantAuto.png",
+        "roi": [
+            1072,
+            6,
+            72,
+            72
+        ]
+    },
+    "StagePromotion_SwipeRightForStageList": {
+        "action": "Swipe",
+        "begin": [
+            900,
+            600,
+            100,
+            50
+        ],
+        "end": [
+            300,
+            600,
+            100,
+            50
+        ],
+        "post_wait_freezes": 1,
+        "next": [
+            "StagePromotion_SwipeRightAndFindStage"
+        ]
+    }
+}
