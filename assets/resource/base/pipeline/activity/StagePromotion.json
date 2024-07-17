@@ -96,6 +96,10 @@
             -100,
             30,
             30
+        ],
+        "next": [
+            "StagePromotion_ReadyForAction",
+            "StagePromotion_BalanceModel"
         ]
     },
     "StagePromotion_EatCandy": {
@@ -248,6 +252,7 @@
         "action": "Click",
         "next": [
             "StagePromotion_ReadyForAction",
+            "StagePromotion_BalanceModel",
             "StagePromotion_NextStage2",
             "StagePromotion_NextStage1",
             "StagePromotion_Skip",
