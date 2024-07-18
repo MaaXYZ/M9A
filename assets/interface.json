@@ -34,7 +34,7 @@
             "entry": "Psychube"
         },
         {
-            "name": "自动深眠（配置一二队后再运行，队列名称默认）",
+            "name": "自动深眠（先配置一二队以后再运行，上下半队列名称需要分别为「成员队列一」和「成员队列二」）",
             "entry": "Limbo"
         },
         {
@@ -76,12 +76,19 @@
             }
         },
         {
-            "name": "当期活动推图",
-            "entry": "FloorItToTheGoldenCity_StagePromotion",
+            "name": "当期活动推图（故事模式）",
+            "entry": "FloorItToTheGoldenCity_StoryMode_StagePromotion",
             "option": [
                 "体力不够自动吃糖"
             ]
         },
+        {
+            "name": "当期活动推图（探索模式）",
+            "entry": "FloorItToTheGoldenCity_ExploreMode_StagePromotion",
+            "option": [
+                "体力不够自动吃糖"
+            ]
+        }
         {
             "name": "局外演绎：黄昏的音序",
             "entry": "SeriesOfDusks",

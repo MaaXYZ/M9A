@@ -33,13 +33,13 @@
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
     },
-    "FloorItToTheGoldenCity_StagePromotion": {
+    "FloorItToTheGoldenCity_StoryMode_StagePromotion": {
         "next": [
-            "FloorItToTheGoldenCityEnterTheShow_StagePromotion",
+            "FloorItToTheGoldenCityEnterTheShow_StoryMode_StagePromotion",
             "Sub_StartUp"
         ]
     },
-    "FloorItToTheGoldenCityEnterTheShow_StagePromotion": {
+    "FloorItToTheGoldenCityEnterTheShow_StoryMode_StagePromotion": {
         "recognition": "TemplateMatch",
         "template": "Combat/Activity/FloorItToTheGoldenCityEnterTheShow.png",
         "roi": [
@@ -51,11 +51,11 @@
         "action": "Click",
         "post_wait_freezes": 1,
         "next": [
-            "FloorItToTheGoldenCityMainChapter_StagePromotion",
-            "FloorItToTheGoldenCityEnterTheShow_StagePromotion"
+            "FloorItToTheGoldenCityMainChapter_StoryMode_StagePromotion",
+            "FloorItToTheGoldenCityEnterTheShow_StoryMode_StagePromotion"
         ]
     },
-    "FloorItToTheGoldenCityMainChapter_StagePromotion": {
+    "FloorItToTheGoldenCityMainChapter_StoryMode_StagePromotion": {
         "recognition": "TemplateMatch",
         "template": "Combat/Activity/FloorItToTheGoldenCityMainChapter.png",
         "roi": [
@@ -63,6 +63,56 @@
             571,
             281,
             144
+        ],
+        "action": "Click",
+        "next": [
+            "StagePromotion_SwipeRightAndFindStage"
+        ]
+    },
+    "FloorItToTheGoldenCity_ExploreMode_StagePromotion": {
+        "next": [
+            "FloorItToTheGoldenCityEnterTheShow_ExploreMode_StagePromotion",
+            "Sub_StartUp"
+        ]
+    },
+    "FloorItToTheGoldenCityEnterTheShow_ExploreMode_StagePromotion": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/FloorItToTheGoldenCityEnterTheShow.png",
+        "roi": [
+            920,
+            144,
+            244,
+            146
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "next": [
+            "FloorItToTheGoldenCityMainChapter_ExploreMode_StagePromotion",
+            "FloorItToTheGoldenCityEnterTheShow_ExploreMode_StagePromotion"
+        ]
+    },
+    "FloorItToTheGoldenCityMainChapter_ExploreMode_StagePromotion": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/FloorItToTheGoldenCityMainChapter.png",
+        "roi": [
+            988,
+            571,
+            281,
+            144
+        ],
+        "action": "Click",
+        "next": [
+            "FloorItToTheGoldenCityChooseExploreMode_StagePromotion"
+        ]
+    },
+    "FloorItToTheGoldenCityChooseExploreMode_StagePromotion": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/FloorItToTheGoldenCityChooseExploreMode.png",
+        "roi": [
+            30,
+            240,
+            196,
+            70
         ],
         "action": "Click",
         "next": [
