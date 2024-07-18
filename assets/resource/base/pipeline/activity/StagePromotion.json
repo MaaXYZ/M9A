@@ -21,9 +21,9 @@
             122
         ],
         "upper": [
-            122,
-            122,
-            122
+            133,
+            135,
+            139
         ],
         "count": 80,
         "action": "Click",
@@ -47,11 +47,11 @@
             122
         ],
         "upper": [
-            122,
-            122,
-            122
+            133,
+            135,
+            139
         ],
-        "count": 160,
+        "count": 70,
         "action": "Click",
         "next": [
             "StagePromotion_ReadyForAction",
@@ -312,8 +312,6 @@
             "StagePromotion_Victory",
             "StagePromotion_Skip",
             "StagePromotion_ReadyForAction",
-            "StagePromotion_NextStage2",
-            "StagePromotion_NextStage1",
             "StagePromotion_Dialog_Right",
             "StagePromotion_Dialog_Left",
             "StagePromotion_Combating"
