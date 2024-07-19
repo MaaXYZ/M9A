@@ -83,6 +83,10 @@
             ]
         },
         {
+            "name": "推图模式（请先手动在游戏的页面中打开需要推图的页面，如当期活动、佚事等，然后再运行此任务）",
+            "entry": "StagePromotion_SwipeRightAndFindStage"
+        },
+        {
             "name": "局外演绎：黄昏的音序",
             "entry": "SeriesOfDusks",
             "param": {
