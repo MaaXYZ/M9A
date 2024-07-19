@@ -232,7 +232,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": "26"
+                            "text": ["26","银镜与纱幕"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -246,7 +246,7 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": "19"
+                            "text": ["19","逆行的舟"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -260,7 +260,7 @@
                             "next": "MainChapter_3"
                         },
                         "TargetStageName": {
-                            "text": "13"
+                            "text": ["13","一处庭院"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -274,7 +274,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": "07"
+                            "text": ["07","米诺陶迷宫"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -288,7 +288,7 @@
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": "20"
+                            "text": ["20","草坪午餐"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -302,7 +302,7 @@
                             "next": "MainChapter_6"
                         },
                         "TargetStageName": {
-                            "text": "14"
+                            "text": ["14","费切尔怪鸟"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -316,7 +316,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": "19"
+                            "text": ["19","双行道"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -330,7 +330,7 @@
                             "next": "MainChapter_2"
                         },
                         "TargetStageName": {
-                            "text": "06"
+                            "text": ["06","不朽的尽头"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -344,7 +344,7 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": "03"
+                            "text": ["03","压箱底"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -358,7 +358,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": "10"
+                            "text": ["10","泥泞路"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -372,7 +372,7 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": "04"
+                            "text": ["04","出航日"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -386,7 +386,7 @@
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": "04"
+                            "text": ["04","干杯"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Story"
@@ -400,7 +400,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": "20"
+                            "text": ["20","古希腊悲剧"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -414,7 +414,7 @@
                             "next": "MainChapter_6"
                         },
                         "TargetStageName": {
-                            "text": "21"
+                            "text": ["21","回旋镖"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -428,7 +428,7 @@
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": "21"
+                            "text": ["21","好天气"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -442,7 +442,7 @@
                             "next": "MainChapter_3"
                         },
                         "TargetStageName": {
-                            "text": "07"
+                            "text": ["07","苏格兰"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -456,7 +456,7 @@
                             "next": "MainChapter_6"
                         },
                         "TargetStageName": {
-                            "text": "10"
+                            "text": ["10","内窥镜"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -470,7 +470,7 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": "08"
+                            "text": ["08","旧诫言"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -484,7 +484,7 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": "07"
+                            "text": ["07","豆子罐头"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -498,7 +498,7 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": "03"
+                            "text": ["03","压箱底"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -512,7 +512,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": "19"
+                            "text": ["19","双行道"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -526,7 +526,7 @@
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": "20"
+                            "text": ["20","草坪午餐"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -540,7 +540,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": "10"
+                            "text": ["10","泥泞路"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -554,7 +554,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": "16"
+                            "text": ["16","水流的引线"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -568,7 +568,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": "06"
+                            "text": ["06","傲慢与偏见"]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
