@@ -79,6 +79,7 @@
             "name": "当期活动推图",
             "entry": "FloorItToTheGoldenCity_StagePromotion",
             "option": [
+                "模式选择",
                 "体力不够自动吃糖"
             ]
         },
@@ -784,6 +785,26 @@
                     "param": {
                         "StagePromotion_EatCandy": {
                             "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "模式选择": {
+            "cases": [
+                {
+                    "name": "故事模式",
+                    "param": {
+                        "ActivityStageDifficultySellect": {
+                            "next": "ActivityStageDifficulty_Story"
+                        }
+                    }
+                },
+                {
+                    "name": "探索模式",
+                    "param": {
+                        "ActivityStageDifficultySellect": {
+                            "next": "ActivityStageDifficulty_Explore"
                         }
                     }
                 }
