@@ -17,7 +17,7 @@
             "StagePromotion_SwipeRightAndFindStage"
         ]
     },
-    "ActivityStageDifficulty_Story": {
+    "ActivityStageDifficulty_Explore": {
         "recognition": "OCR",
         "expected": [
             "探索模式"
