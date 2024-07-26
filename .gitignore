@@ -446,3 +446,6 @@ install
 
 # Tools
 tools/ImageCropper/**/*.png
+
+# MacOS
+.DS_Store

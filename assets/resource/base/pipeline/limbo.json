@@ -166,13 +166,14 @@
         ]
     },
     "LimboTeamSelection_1": {
-        "recognition": "OCR",
-        "expected": "成员队列",
+        "recognition": "TemplateMatch",
+        "template": "Limbo/LimboTeamList_Off.png",
+        "threshold": 0.9,
         "roi": [
-            786,
+            940,
             631,
-            156,
-            43
+            48,
+            48
         ],
         "action": "Click",
         "next": [
@@ -182,22 +183,21 @@
     },
     "LimboTeamSelection_11": {
         "recognition": "TemplateMatch",
-        "template": [
-            "Limbo/LimboTeamSelection_11.png",
-            "Limbo/LimboTeamSelection_12.png"
-        ],
-        "order_by": "Score",
-        "threshold": [
-            0.9,
-            0.9
-        ],
+        "template": "Limbo/LimboTeamList_Open.png",
+        "threshold": 0.9,
         "roi": [
-            722,
-            342,
-            272,
-            219
+            940,
+            631,
+            48,
+            48
         ],
         "action": "Click",
+        "target": [
+            840,
+            406,
+            48,
+            30
+        ],
         "next": [
             "LimboAction_1",
             "LimboTeamSelection_11"
@@ -276,13 +276,14 @@
         ]
     },
     "LimboTeamSelection_2": {
-        "recognition": "OCR",
-        "expected": "成员队列",
+        "recognition": "TemplateMatch",
+        "template": "Limbo/LimboTeamList_Off.png",
+        "threshold": 0.9,
         "roi": [
-            786,
+            940,
             631,
-            156,
-            43
+            48,
+            48
         ],
         "action": "Click",
         "next": [
@@ -292,22 +293,21 @@
     },
     "LimboTeamSelection_22": {
         "recognition": "TemplateMatch",
-        "template": [
-            "Limbo/LimboTeamSelection_21.png",
-            "Limbo/LimboTeamSelection_22.png"
-        ],
-        "order_by": "Score",
-        "threshold": [
-            0.9,
-            0.9
-        ],
+        "template": "Limbo/LimboTeamList_Open.png",
+        "threshold": 0.9,
         "roi": [
-            722,
-            342,
-            272,
-            219
+            940,
+            631,
+            48,
+            48
         ],
         "action": "Click",
+        "target": [
+            837,
+            463,
+            48,
+            35
+        ],
         "next": [
             "LimboAction_2",
             "LimboTeamSelection_22"

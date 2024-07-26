@@ -78,7 +78,7 @@
         "next": [
             "SellectMiniCandyMax",
             "MiniCandy24HNotEnough",
-            "EatMiniCandy24H"
+            "EatCandyWithin24H"
         ]
     },
     "EatSmallCandy24H": {
@@ -94,7 +94,7 @@
         "next": [
             "EatCandyConfirm",
             "SmallCandy24HNotEnough",
-            "EatSmallCandy24H"
+            "EatCandyWithin24H"
         ]
     },
     "EatBigCandy24H": {
@@ -110,7 +110,7 @@
         "next": [
             "EatCandyConfirm",
             "BigCandy24HNotEnough",
-            "EatBigCandy24H"
+            "EatCandyWithin24H"
         ]
     },
     "EatCandyConfirm": {
