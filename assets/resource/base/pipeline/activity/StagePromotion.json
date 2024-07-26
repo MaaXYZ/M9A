@@ -1,4 +1,38 @@
 {
+    "ActivityStageDifficultySellect": {
+    },
+    "ActivityStageDifficulty_Story": {
+        "recognition": "OCR",
+        "expected": [
+            "故事模式"
+        ],
+        "roi": [
+            14,
+            90,
+            244,
+            143
+        ],
+        "action": "Click",
+        "next": [
+            "StagePromotion_SwipeRightAndFindStage"
+        ]
+    },
+    "ActivityStageDifficulty_Explore": {
+        "recognition": "OCR",
+        "expected": [
+            "探索模式"
+        ],
+        "roi": [
+            14,
+            200,
+            244,
+            143
+        ],
+        "action": "Click",
+        "next": [
+            "StagePromotion_SwipeRightAndFindStage"
+        ]
+    },
     "StagePromotion_SwipeRightAndFindStage": {
         "next": [
             "StagePromotion_NextStage2",
