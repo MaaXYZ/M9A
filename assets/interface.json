@@ -76,6 +76,23 @@
             }
         },
         {
+            "name": "活动：复兴乌卢鲁运动会 13 艰难（复刻）",
+            "entry": "RevivalTheUluruGames_Reproduction",
+            "option": [
+                "复现次数",
+                "刷完全部体力",
+                "吃全部临期糖"
+            ],
+            "param": {
+                "TargetStageName": {
+                    "text": "13"
+                },
+                "StageDifficulty": {
+                    "next": "ActivityStageDifficulty"
+                }
+            }
+        },
+        {
             "name": "当期活动推图",
             "entry": "FloorItToTheGoldenCity_StagePromotion",
             "option": [
