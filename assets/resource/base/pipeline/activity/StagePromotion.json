@@ -1,7 +1,7 @@
 {
-    "ActivityStageDifficultySellect": {
+    "ActivityStageModelSellect": {
     },
-    "ActivityStageDifficulty_Story": {
+    "ActivityStageModel_Story": {
         "recognition": "OCR",
         "expected": [
             "故事模式"
@@ -17,7 +17,7 @@
             "StagePromotion_SwipeRightAndFindStage"
         ]
     },
-    "ActivityStageDifficulty_Explore": {
+    "ActivityStageModel_Explore": {
         "recognition": "OCR",
         "expected": [
             "探索模式"
@@ -283,9 +283,9 @@
         "next": [
             "StagePromotion_ReadyForAction",
             "StagePromotion_BalanceModel",
+            "StagePromotion_Skip",
             "StagePromotion_NextStage2",
             "StagePromotion_NextStage1",
-            "StagePromotion_Skip",
             "StagePromotion_Confirm"
         ]
     },

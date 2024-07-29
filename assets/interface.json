@@ -812,16 +812,16 @@
                 {
                     "name": "故事模式",
                     "param": {
-                        "ActivityStageDifficultySellect": {
-                            "next": "ActivityStageDifficulty_Story"
+                        "ActivityStageModelSellect": {
+                            "next": "ActivityStageModel_Story"
                         }
                     }
                 },
                 {
                     "name": "探索模式",
                     "param": {
-                        "ActivityStageDifficultySellect": {
-                            "next": "ActivityStageDifficulty_Explore"
+                        "ActivityStageModelSellect": {
+                            "next": "ActivityStageModel_Explore"
                         }
                     }
                 }
