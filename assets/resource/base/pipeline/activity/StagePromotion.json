@@ -283,9 +283,9 @@
         "next": [
             "StagePromotion_ReadyForAction",
             "StagePromotion_BalanceModel",
+            "StagePromotion_Skip",
             "StagePromotion_NextStage2",
             "StagePromotion_NextStage1",
-            "StagePromotion_Skip",
             "StagePromotion_Confirm"
         ]
     },
