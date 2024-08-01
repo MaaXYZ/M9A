@@ -143,8 +143,8 @@
         "upper": [
             255
         ],
-        "connected": true,
-        "count": 500,
+        "connected": false,
+        "count": 1,
         "action": "Click",
         "next": [
             "LimboActionFlag_1",
@@ -253,8 +253,8 @@
         "upper": [
             255
         ],
-        "connected": true,
-        "count": 500,
+        "connected": false,
+        "count": 1,
         "action": "Click",
         "next": [
             "LimboActionFlag_2",
