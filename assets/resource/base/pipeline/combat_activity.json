@@ -11,25 +11,34 @@
             "艰难"
         ],
         "roi": [
-            945,
-            168,
-            210,
-            171
+            971,
+            221,
+            194,
+            51
         ],
         "next": [
             "ReadyForAction"
         ]
     },
     "ActivityStageDifficultyToRight": {
-        "recognition": "TemplateMatch",
-        "template": "Combat/Activity/ActivityStageDifficultyToRight.png",
+        "recognition": "OCR",
+        "expected": [
+            "故事",
+            "意外"
+        ],
         "roi": [
-            1126,
-            183,
-            130,
-            139
+            971,
+            221,
+            194,
+            51
         ],
         "action": "Click",
+        "target": [
+            1196,
+            238,
+            24,
+            20
+        ],
         "next": [
             "ActivityStageDifficulty"
         ]
