@@ -56,8 +56,8 @@
             "entry": "Close1999"
         },
         {
-            "name": "活动：飞驰，明日之城 18 艰难",
-            "entry": "FloorItToTheGoldenCity",
+            "name": "活动：77号往事 18 艰难",
+            "entry": "Route77",
             "option": [
                 "复现次数",
                 "刷完全部体力",
@@ -65,7 +65,7 @@
             ],
             "param": {
                 "EnterTheShow": {
-                    "next": "FloorItToTheGoldenCity"
+                    "next": "Route77"
                 },
                 "TargetStageName": {
                     "text": "18"
@@ -76,25 +76,8 @@
             }
         },
         {
-            "name": "活动：复兴乌卢鲁运动会 13 艰难（复刻）",
-            "entry": "RevivalTheUluruGames_Reproduction",
-            "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
-            "param": {
-                "TargetStageName": {
-                    "text": "13"
-                },
-                "StageDifficulty": {
-                    "next": "ActivityStageDifficulty"
-                }
-            }
-        },
-        {
             "name": "当期活动推图",
-            "entry": "FloorItToTheGoldenCity_StagePromotion",
+            "entry": "Route77_StagePromotion",
             "option": [
                 "模式选择",
                 "体力不够自动吃糖"
@@ -102,7 +85,10 @@
         },
         {
             "name": "推图模式（请先手动在游戏的页面中打开需要推图的页面，如当期活动、佚事等，然后再运行此任务）",
-            "entry": "StagePromotion_SwipeRightAndFindStage"
+            "entry": "StagePromotion_SwipeRightAndFindStage",
+            "option": [
+                "体力不够自动吃糖"
+            ]
         },
         {
             "name": "局外演绎：黄昏的音序",
@@ -227,6 +213,43 @@
                 },
                 "TargetStageName": {
                     "text": "16"
+                },
+                "StageDifficulty": {
+                    "next": "ActivityStageDifficulty"
+                }
+            }
+        },
+        {
+            "name": "活动：飞驰，明日之城 18 艰难（已结束）",
+            "entry": "FloorItToTheGoldenCity",
+            "option": [
+                "复现次数",
+                "刷完全部体力",
+                "吃全部临期糖"
+            ],
+            "param": {
+                "EnterTheShow": {
+                    "next": "FloorItToTheGoldenCity"
+                },
+                "TargetStageName": {
+                    "text": "18"
+                },
+                "StageDifficulty": {
+                    "next": "ActivityStageDifficulty"
+                }
+            }
+        },
+        {
+            "name": "活动：复兴乌卢鲁运动会 13 艰难（复刻）",
+            "entry": "RevivalTheUluruGames_Reproduction",
+            "option": [
+                "复现次数",
+                "刷完全部体力",
+                "吃全部临期糖"
+            ],
+            "param": {
+                "TargetStageName": {
+                    "text": "13"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"

@@ -1,0 +1,72 @@
+{
+    "Route77": {
+        "next": [
+            "Route77EnterTheShow",
+            "Sub_StartUp"
+        ]
+    },
+    "Route77EnterTheShow": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/Route77EnterTheShow.png",
+        "roi": [
+            935,
+            193,
+            254,
+            110
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "next": [
+            "Route77MainChapter",
+            "Route77EnterTheShow"
+        ]
+    },
+    "Route77MainChapter": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/Route77MainChapter.png",
+        "roi": [
+            988,
+            571,
+            281,
+            144
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "Route77_StagePromotion": {
+        "next": [
+            "Route77EnterTheShow_StagePromotion",
+            "Sub_StartUp"
+        ]
+    },
+    "Route77EnterTheShow_StagePromotion": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/Route77EnterTheShow.png",
+        "roi": [
+            935,
+            193,
+            254,
+            110
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "next": [
+            "Route77MainChapter_StagePromotion",
+            "Route77EnterTheShow_StagePromotion"
+        ]
+    },
+    "Route77MainChapter_StagePromotion": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Activity/Route77MainChapter.png",
+        "roi": [
+            988,
+            571,
+            281,
+            144
+        ],
+        "action": "Click",
+        "next": [
+            "ActivityStageModelSellect"
+        ]
+    }
+}
