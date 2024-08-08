@@ -1,5 +1,6 @@
 {
     "ActivityStageModelSellect": {
+        "next_doc": "Set in code."
     },
     "ActivityStageModel_Story": {
         "recognition": "OCR",
@@ -7,10 +8,10 @@
             "故事模式"
         ],
         "roi": [
-            14,
+            10,
             90,
-            244,
-            143
+            250,
+            140
         ],
         "action": "Click",
         "next": [
@@ -23,10 +24,10 @@
             "探索模式"
         ],
         "roi": [
-            14,
+            10,
             200,
-            244,
-            143
+            250,
+            140
         ],
         "action": "Click",
         "next": [
@@ -50,19 +51,21 @@
         ],
         "method": 4,
         "lower": [
-            122,
-            122,
-            122
+            85,
+            85,
+            85
         ],
         "upper": [
-            133,
-            135,
-            139
+            150,
+            150,
+            150
         ],
-        "count": 80,
+        "connected": true,
+        "count": 70,
         "action": "Click",
         "next": [
             "StagePromotion_ReadyForAction",
+            "StagePromotion_Skip",
             "StagePromotion_NextStage1"
         ]
     },
@@ -72,23 +75,25 @@
             422,
             533,
             200,
-            50
+            60
         ],
         "method": 4,
         "lower": [
-            122,
-            122,
-            122
+            85,
+            85,
+            85
         ],
         "upper": [
-            133,
-            135,
-            139
+            150,
+            150,
+            150
         ],
+        "connected": true,
         "count": 70,
         "action": "Click",
         "next": [
             "StagePromotion_ReadyForAction",
+            "StagePromotion_Skip",
             "StagePromotion_NextStage2"
         ]
     },
@@ -145,6 +150,7 @@
             277,
             149
         ],
+        "threshold": 0.7,
         "next": [
             "StagePromotion_SmallCandy",
             "StagePromotion_MiniCandy",
@@ -302,7 +308,10 @@
         "next": [
             "StagePromotion_Victory",
             "StagePromotion_CombatDefeat",
-            "StagePromotion_Dialog",
+            "StagePromotion_Skip",
+            "StagePromotion_ReadyForAction",
+            "StagePromotion_Dialog_Right",
+            "StagePromotion_Dialog_Left",
             "StagePromotion_Combating"
         ]
     },
@@ -341,17 +350,8 @@
             214
         ]
     },
-    "StagePromotion_Dialog": {
-        "next": [
-            "StagePromotion_Victory",
-            "StagePromotion_Skip",
-            "StagePromotion_ReadyForAction",
-            "StagePromotion_Dialog_Right",
-            "StagePromotion_Dialog_Left",
-            "StagePromotion_Combating"
-        ]
-    },
     "StagePromotion_Dialog_Right": {
+        "is_sub": true,
         "recognition": "ColorMatch",
         "roi": [
             1093,
@@ -374,15 +374,10 @@
         "order_by": "Score",
         "index": 0,
         "action": "Click",
-        "target": true,
-        "next": [
-            "StagePromotion_Dialog",
-            "StagePromotion_Combating",
-            "StagePromotion_Victory",
-            "StagePromotion_CombatDefeat"
-        ]
+        "target": true
     },
     "StagePromotion_Dialog_Left": {
+        "is_sub": true,
         "recognition": "ColorMatch",
         "roi": [
             72,
@@ -405,13 +400,7 @@
         "order_by": "Score",
         "index": 0,
         "action": "Click",
-        "target": true,
-        "next": [
-            "StagePromotion_Dialog",
-            "StagePromotion_Combating",
-            "StagePromotion_Victory",
-            "StagePromotion_CombatDefeat"
-        ]
+        "target": true
     },
     "StagePromotion_CantAuto": {
         "recognition": "TemplateMatch",
