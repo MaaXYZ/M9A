@@ -742,8 +742,7 @@
         "next": [
             "Victory",
             "AllIn",
-            "HomeFlag",
-            "Sub_StartUp"
+            "HomeFlag"
         ]
     }
 }
