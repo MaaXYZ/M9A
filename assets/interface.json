@@ -273,7 +273,10 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": ["26","银镜与纱幕"]
+                            "text": [
+                                "26",
+                                "银镜与纱幕"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -287,7 +290,10 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": ["19","逆行的舟"]
+                            "text": [
+                                "19",
+                                "逆行的舟"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -301,7 +307,10 @@
                             "next": "MainChapter_3"
                         },
                         "TargetStageName": {
-                            "text": ["13","一处庭院"]
+                            "text": [
+                                "13",
+                                "一处庭院"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -315,7 +324,10 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": ["07","米诺陶迷宫"]
+                            "text": [
+                                "07",
+                                "米诺陶迷宫"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -329,7 +341,10 @@
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": ["20","草坪午餐"]
+                            "text": [
+                                "20",
+                                "草坪午餐"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -343,7 +358,10 @@
                             "next": "MainChapter_6"
                         },
                         "TargetStageName": {
-                            "text": ["14","费切尔怪鸟"]
+                            "text": [
+                                "14",
+                                "费切尔怪鸟"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -357,7 +375,10 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": ["19","双行道"]
+                            "text": [
+                                "19",
+                                "双行道"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -371,7 +392,10 @@
                             "next": "MainChapter_2"
                         },
                         "TargetStageName": {
-                            "text": ["06","不朽的尽头"]
+                            "text": [
+                                "06",
+                                "不朽的尽头"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -385,7 +409,10 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": ["03","压箱底"]
+                            "text": [
+                                "03",
+                                "压箱底"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -399,7 +426,10 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": ["10","泥泞路"]
+                            "text": [
+                                "10",
+                                "泥泞路"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -413,7 +443,10 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": ["04","出航日"]
+                            "text": [
+                                "04",
+                                "出航日"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -427,7 +460,10 @@
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": ["04","干杯"]
+                            "text": [
+                                "04",
+                                "干杯"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Story"
@@ -441,7 +477,10 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": ["20","古希腊悲剧"]
+                            "text": [
+                                "20",
+                                "古希腊悲剧"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -455,7 +494,10 @@
                             "next": "MainChapter_6"
                         },
                         "TargetStageName": {
-                            "text": ["21","回旋镖"]
+                            "text": [
+                                "21",
+                                "回旋镖"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -469,7 +511,10 @@
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": ["21","好天气"]
+                            "text": [
+                                "21",
+                                "好天气"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -483,7 +528,10 @@
                             "next": "MainChapter_3"
                         },
                         "TargetStageName": {
-                            "text": ["07","苏格兰"]
+                            "text": [
+                                "07",
+                                "苏格兰"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -497,7 +545,10 @@
                             "next": "MainChapter_6"
                         },
                         "TargetStageName": {
-                            "text": ["10","内窥镜"]
+                            "text": [
+                                "10",
+                                "内窥镜"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -511,7 +562,10 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": ["08","旧诫言"]
+                            "text": [
+                                "08",
+                                "旧诫言"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -525,7 +579,10 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": ["07","豆子罐头"]
+                            "text": [
+                                "07",
+                                "豆子罐头"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -539,7 +596,10 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": ["03","压箱底"]
+                            "text": [
+                                "03",
+                                "压箱底"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -553,7 +613,10 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": ["19","双行道"]
+                            "text": [
+                                "19",
+                                "双行道"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -567,7 +630,10 @@
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": ["20","草坪午餐"]
+                            "text": [
+                                "20",
+                                "草坪午餐"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -581,7 +647,10 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": ["10","泥泞路"]
+                            "text": [
+                                "10",
+                                "泥泞路"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -595,7 +664,10 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": ["16","水流的引线"]
+                            "text": [
+                                "16",
+                                "水流的引线"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -609,7 +681,10 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": ["06","傲慢与偏见"]
+                            "text": [
+                                "06",
+                                "傲慢与偏见"
+                            ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
@@ -635,7 +710,7 @@
                     }
                 },
                 {
-                    "name": "猪鼻美学 06",
+                    "name": "铸币美学 06",
                     "param": {
                         "EnterTheShow": {
                             "next": "ResourceChapter_MA"
