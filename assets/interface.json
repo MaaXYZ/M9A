@@ -63,7 +63,7 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "Route77"
                 },
@@ -93,7 +93,7 @@
         {
             "name": "局外演绎：黄昏的音序",
             "entry": "SeriesOfDusks",
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "OutsideDeduction"
                 }
@@ -107,7 +107,7 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "ANightmareAtGreenLake"
                 },
@@ -127,7 +127,7 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "JourneytoMorPankh"
                 },
@@ -147,7 +147,7 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "dummyThePrisonerintheCave"
                 },
@@ -167,7 +167,7 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "RevivalTheUluruGames"
                 },
@@ -187,7 +187,7 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "NotesOnShuoRi"
                 },
@@ -207,7 +207,7 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "GoodbyeRaya"
                 },
@@ -227,7 +227,7 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "FloorItToTheGoldenCity"
                 },
@@ -247,7 +247,7 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "TargetStageName": {
                     "text": "13"
                 },
@@ -268,7 +268,7 @@
             "cases": [
                 {
                     "name": "啮咬盒：7-26 厄险 （最优。可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
@@ -285,7 +285,7 @@
                 },
                 {
                     "name": "啮咬盒：5-19 厄险 （可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
                         },
@@ -302,7 +302,7 @@
                 },
                 {
                     "name": "盐封曼德拉：3-13 厄险（可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_3"
                         },
@@ -319,7 +319,7 @@
                 },
                 {
                     "name": "双头形骨架：7-7 厄险（可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
@@ -336,7 +336,7 @@
                 },
                 {
                     "name": "双头形骨架：4-20 厄险（可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_4"
                         },
@@ -353,7 +353,7 @@
                 },
                 {
                     "name": "祝圣秘银：6-14 厄险（最优。只刷）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_6"
                         },
@@ -370,7 +370,7 @@
                 },
                 {
                     "name": "祝圣秘银：7-19 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
@@ -387,7 +387,7 @@
                 },
                 {
                     "name": "百灵百验鸟：2-6 厄险（可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_2"
                         },
@@ -404,7 +404,7 @@
                 },
                 {
                     "name": "翼造门匙：5-3 厄险（最优。可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
                         },
@@ -421,7 +421,7 @@
                 },
                 {
                     "name": "翼造门匙：7-10 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
@@ -438,7 +438,7 @@
                 },
                 {
                     "name": "弯曲鹅颈：5-4 厄险（可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
                         },
@@ -455,7 +455,7 @@
                 },
                 {
                     "name": "金草焚香：4-4 故事（可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_4"
                         },
@@ -472,7 +472,7 @@
                 },
                 {
                     "name": "金爪灵摆：7-20 厄险（优先合成，合不了就刷）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
@@ -489,7 +489,7 @@
                 },
                 {
                     "name": "砂金甲虫：6-21 厄险（优先合成，合不了就刷。可开箱）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_6"
                         },
@@ -506,7 +506,7 @@
                 },
                 {
                     "name": "液化战栗：4-21 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_4"
                         },
@@ -523,7 +523,7 @@
                 },
                 {
                     "name": "液化战栗：3-7 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_3"
                         },
@@ -540,7 +540,7 @@
                 },
                 {
                     "name": "精磨苦盐：6-10 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_6"
                         },
@@ -557,7 +557,7 @@
                 },
                 {
                     "name": "精磨苦盐：5-8 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
                         },
@@ -574,7 +574,7 @@
                 },
                 {
                     "name": "未知种根骨：5-7 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
                         },
@@ -591,7 +591,7 @@
                 },
                 {
                     "name": "未知种根骨：5-3 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
                         },
@@ -608,7 +608,7 @@
                 },
                 {
                     "name": "粗糙银锭：7-19 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
@@ -625,7 +625,7 @@
                 },
                 {
                     "name": "幸运咒语：4-20 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_4"
                         },
@@ -642,7 +642,7 @@
                 },
                 {
                     "name": "干蝉翼：7-10 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
@@ -659,7 +659,7 @@
                 },
                 {
                     "name": "不休轮：7-16 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
@@ -676,7 +676,7 @@
                 },
                 {
                     "name": "狐儿尾：7-6 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
@@ -693,11 +693,11 @@
                 },
                 {
                     "name": "---刷取推荐来源：必要的记录https://www.kdocs.cn/l/cd5MWeCl5bKw。此条勿选---",
-                    "param": {}
+                    "pipeline_override": {}
                 },
                 {
                     "name": "尘埃运动 06",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "ResourceChapter_LP"
                         },
@@ -711,7 +711,7 @@
                 },
                 {
                     "name": "铸币美学 06",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "ResourceChapter_MA"
                         },
@@ -725,7 +725,7 @@
                 },
                 {
                     "name": "群山之声 06（洞悉 岩）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "PromotionChapter_ME"
                         },
@@ -739,7 +739,7 @@
                 },
                 {
                     "name": "星陨之所 06（洞悉 星）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "PromotionChapter_SL"
                         },
@@ -753,7 +753,7 @@
                 },
                 {
                     "name": "深林之形 06（洞悉 林）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "PromotionChapter_SS"
                         },
@@ -767,7 +767,7 @@
                 },
                 {
                     "name": "荒兽之野 06（洞悉 兽）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "PromotionChapter_BW"
                         },
@@ -781,7 +781,7 @@
                 },
                 {
                     "name": "丰收时令 04",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "ResourceChapter_HP"
                         },
@@ -795,7 +795,7 @@
                 },
                 {
                     "name": "意志解析 07",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "ResourceChapter_Psychube"
                         },
@@ -813,7 +813,7 @@
             "cases": [
                 {
                     "name": "x1",
-                    "param": {
+                    "pipeline_override": {
                         "SetReplaysTimes": {
                             "text": "1"
                         }
@@ -821,7 +821,7 @@
                 },
                 {
                     "name": "x2",
-                    "param": {
+                    "pipeline_override": {
                         "SetReplaysTimes": {
                             "text": "2"
                         }
@@ -829,7 +829,7 @@
                 },
                 {
                     "name": "x3",
-                    "param": {
+                    "pipeline_override": {
                         "SetReplaysTimes": {
                             "text": "3"
                         }
@@ -837,7 +837,7 @@
                 },
                 {
                     "name": "x4",
-                    "param": {
+                    "pipeline_override": {
                         "SetReplaysTimes": {
                             "text": "4"
                         }
@@ -849,7 +849,7 @@
             "cases": [
                 {
                     "name": "Yes",
-                    "param": {
+                    "pipeline_override": {
                         "AllIn": {
                             "enabled": true
                         }
@@ -857,7 +857,7 @@
                 },
                 {
                     "name": "No",
-                    "param": {
+                    "pipeline_override": {
                         "AllIn": {
                             "enabled": false
                         }
@@ -869,7 +869,7 @@
             "cases": [
                 {
                     "name": "Yes",
-                    "param": {
+                    "pipeline_override": {
                         "EatCandyWithin24H": {
                             "enabled": true
                         }
@@ -877,7 +877,7 @@
                 },
                 {
                     "name": "No",
-                    "param": {
+                    "pipeline_override": {
                         "EatCandyWithin24H": {
                             "enabled": false
                         }
@@ -889,7 +889,7 @@
             "cases": [
                 {
                     "name": "Yes",
-                    "param": {
+                    "pipeline_override": {
                         "StagePromotion_EatCandy": {
                             "enabled": true
                         }
@@ -897,7 +897,7 @@
                 },
                 {
                     "name": "No",
-                    "param": {
+                    "pipeline_override": {
                         "StagePromotion_EatCandy": {
                             "enabled": false
                         }
@@ -909,7 +909,7 @@
             "cases": [
                 {
                     "name": "故事模式",
-                    "param": {
+                    "pipeline_override": {
                         "ActivityStageModelSellect": {
                             "next": "ActivityStageModel_Story"
                         }
@@ -917,7 +917,7 @@
                 },
                 {
                     "name": "探索模式",
-                    "param": {
+                    "pipeline_override": {
                         "ActivityStageModelSellect": {
                             "next": "ActivityStageModel_Explore"
                         }
