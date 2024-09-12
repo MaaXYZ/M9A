@@ -68,7 +68,7 @@
                     "next": "Route77"
                 },
                 "TargetStageName": {
-                    "text": "18"
+                    "expected": "18"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -112,7 +112,7 @@
                     "next": "ANightmareAtGreenLake"
                 },
                 "TargetStageName": {
-                    "text": "17"
+                    "expected": "17"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -132,7 +132,7 @@
                     "next": "JourneytoMorPankh"
                 },
                 "TargetStageName": {
-                    "text": "16"
+                    "expected": "16"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -152,7 +152,7 @@
                     "next": "dummyThePrisonerintheCave"
                 },
                 "TargetStageName": {
-                    "text": "dummy证明启示V"
+                    "expected": "dummy证明启示V"
                 },
                 "StageDifficulty": {
                     "next": "dummyStageDifficulty_None"
@@ -172,7 +172,7 @@
                     "next": "RevivalTheUluruGames"
                 },
                 "TargetStageName": {
-                    "text": "13"
+                    "expected": "13"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -192,7 +192,7 @@
                     "next": "NotesOnShuoRi"
                 },
                 "TargetStageName": {
-                    "text": "19"
+                    "expected": "19"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -212,7 +212,7 @@
                     "next": "GoodbyeRaya"
                 },
                 "TargetStageName": {
-                    "text": "16"
+                    "expected": "16"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -232,7 +232,7 @@
                     "next": "FloorItToTheGoldenCity"
                 },
                 "TargetStageName": {
-                    "text": "18"
+                    "expected": "18"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -249,7 +249,7 @@
             ],
             "pipeline_override": {
                 "TargetStageName": {
-                    "text": "13"
+                    "expected": "13"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -273,7 +273,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "26",
                                 "银镜与纱幕"
                             ]
@@ -290,7 +290,7 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "19",
                                 "逆行的舟"
                             ]
@@ -307,7 +307,7 @@
                             "next": "MainChapter_3"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "13",
                                 "一处庭院"
                             ]
@@ -324,7 +324,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "07",
                                 "米诺陶迷宫"
                             ]
@@ -341,7 +341,7 @@
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "20",
                                 "草坪午餐"
                             ]
@@ -358,7 +358,7 @@
                             "next": "MainChapter_6"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "14",
                                 "费切尔怪鸟"
                             ]
@@ -375,7 +375,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "19",
                                 "双行道"
                             ]
@@ -392,7 +392,7 @@
                             "next": "MainChapter_2"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "06",
                                 "不朽的尽头"
                             ]
@@ -409,7 +409,7 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "03",
                                 "压箱底"
                             ]
@@ -426,7 +426,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "10",
                                 "泥泞路"
                             ]
@@ -443,7 +443,7 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "04",
                                 "出航日"
                             ]
@@ -460,7 +460,7 @@
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "04",
                                 "干杯"
                             ]
@@ -477,7 +477,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "20",
                                 "古希腊悲剧"
                             ]
@@ -494,7 +494,7 @@
                             "next": "MainChapter_6"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "21",
                                 "回旋镖"
                             ]
@@ -511,7 +511,7 @@
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "21",
                                 "好天气"
                             ]
@@ -528,7 +528,7 @@
                             "next": "MainChapter_3"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "07",
                                 "苏格兰"
                             ]
@@ -545,7 +545,7 @@
                             "next": "MainChapter_6"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "10",
                                 "内窥镜"
                             ]
@@ -562,7 +562,7 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "08",
                                 "旧诫言"
                             ]
@@ -579,7 +579,7 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "07",
                                 "豆子罐头"
                             ]
@@ -596,7 +596,7 @@
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "03",
                                 "压箱底"
                             ]
@@ -613,7 +613,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "19",
                                 "双行道"
                             ]
@@ -630,7 +630,7 @@
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "20",
                                 "草坪午餐"
                             ]
@@ -647,7 +647,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "10",
                                 "泥泞路"
                             ]
@@ -664,7 +664,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "16",
                                 "水流的引线"
                             ]
@@ -681,7 +681,7 @@
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "06",
                                 "傲慢与偏见"
                             ]
@@ -702,7 +702,7 @@
                             "next": "ResourceChapter_LP"
                         },
                         "TargetStageName": {
-                            "text": "06"
+                            "expected": "06"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -716,7 +716,7 @@
                             "next": "ResourceChapter_MA"
                         },
                         "TargetStageName": {
-                            "text": "06"
+                            "expected": "06"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -730,7 +730,7 @@
                             "next": "PromotionChapter_ME"
                         },
                         "TargetStageName": {
-                            "text": "06"
+                            "expected": "06"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -744,7 +744,7 @@
                             "next": "PromotionChapter_SL"
                         },
                         "TargetStageName": {
-                            "text": "06"
+                            "expected": "06"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -758,7 +758,7 @@
                             "next": "PromotionChapter_SS"
                         },
                         "TargetStageName": {
-                            "text": "06"
+                            "expected": "06"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -772,7 +772,7 @@
                             "next": "PromotionChapter_BW"
                         },
                         "TargetStageName": {
-                            "text": "06"
+                            "expected": "06"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -786,7 +786,7 @@
                             "next": "ResourceChapter_HP"
                         },
                         "TargetStageName": {
-                            "text": "04"
+                            "expected": "04"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -800,7 +800,7 @@
                             "next": "ResourceChapter_Psychube"
                         },
                         "TargetStageName": {
-                            "text": "07"
+                            "expected": "07"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -815,7 +815,7 @@
                     "name": "x1",
                     "pipeline_override": {
                         "SetReplaysTimes": {
-                            "text": "1"
+                            "expected": "1"
                         }
                     }
                 },
@@ -823,7 +823,7 @@
                     "name": "x2",
                     "pipeline_override": {
                         "SetReplaysTimes": {
-                            "text": "2"
+                            "expected": "2"
                         }
                     }
                 },
@@ -831,7 +831,7 @@
                     "name": "x3",
                     "pipeline_override": {
                         "SetReplaysTimes": {
-                            "text": "3"
+                            "expected": "3"
                         }
                     }
                 },
@@ -839,7 +839,7 @@
                     "name": "x4",
                     "pipeline_override": {
                         "SetReplaysTimes": {
-                            "text": "4"
+                            "expected": "4"
                         }
                     }
                 }
