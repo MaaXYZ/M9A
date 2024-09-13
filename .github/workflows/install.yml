@@ -68,6 +68,7 @@ jobs:
           repository: MaaXYZ/MaaFramework
           fileName: "MAA-win-${{ matrix.arch }}*"
           latest: true
+          preRelease: true
           out-file-path: "deps"
           extract: true
 
@@ -100,6 +101,7 @@ jobs:
           repository: MaaXYZ/MaaFramework
           fileName: "MAA-linux-${{ matrix.arch }}*"
           latest: true
+          preRelease: true
           out-file-path: "deps"
           extract: true
 
@@ -132,6 +134,7 @@ jobs:
           repository: MaaXYZ/MaaFramework
           fileName: "MAA-macos-${{ matrix.arch }}*"
           latest: true
+          preRelease: true
           out-file-path: "deps"
           extract: true
 
@@ -143,6 +146,39 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: M9A-macos-${{ matrix.arch }}
+          path: "install"
+
+  android:
+    needs: meta
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        arch: [aarch64, x86_64]
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Download MaaFramework
+        uses: robinraju/release-downloader@v1.8
+        with:
+          repository: MaaXYZ/MaaFramework
+          fileName: "MAA-android-${{ matrix.arch }}*"
+          latest: true
+          preRelease: true
+          out-file-path: "deps"
+          extract: true
+
+      - name: Install
+        shell: bash
+        run: |
+          python ./install.py ${{ needs.meta.outputs.tag }}
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: M9A-android-${{ matrix.arch }}
           path: "install"
 
   release:
