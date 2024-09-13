@@ -67,7 +67,8 @@ jobs:
         with:
           repository: MaaXYZ/MaaFramework
           fileName: "MAA-win-${{ matrix.arch }}*"
-          # latest: true
+          latest: true
+          preRelease: true
           out-file-path: "deps"
           extract: true
 
@@ -99,7 +100,8 @@ jobs:
         with:
           repository: MaaXYZ/MaaFramework
           fileName: "MAA-linux-${{ matrix.arch }}*"
-          # latest: true
+          latest: true
+          preRelease: true
           out-file-path: "deps"
           extract: true
 
@@ -131,7 +133,8 @@ jobs:
         with:
           repository: MaaXYZ/MaaFramework
           fileName: "MAA-macos-${{ matrix.arch }}*"
-          # latest: true
+          latest: true
+          preRelease: true
           out-file-path: "deps"
           extract: true
 
@@ -163,7 +166,8 @@ jobs:
         with:
           repository: MaaXYZ/MaaFramework
           fileName: "MAA-android-${{ matrix.arch }}*"
-          # latest: true
+          latest: true
+          preRelease: true
           out-file-path: "deps"
           extract: true
 
