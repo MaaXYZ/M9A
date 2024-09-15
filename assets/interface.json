@@ -18,6 +18,13 @@
                 "{PROJECT_DIR}/resource/base",
                 "{PROJECT_DIR}/resource/bilibili"
             ]
+        },
+        {
+            "name": "国际服（EN）",
+            "path": [
+                "{PROJECT_DIR}/resource/base",
+                "{PROJECT_DIR}/resource/global_en"
+            ]
         }
     ],
     "task": [

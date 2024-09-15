@@ -1,0 +1,7 @@
+{
+    "Sub_Start1999": {
+        "is_sub": true,
+        "action": "StartApp",
+        "package": "com.bluepoch.m.en.reverse1999"
+    }
+}
