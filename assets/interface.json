@@ -18,6 +18,13 @@
                 "{PROJECT_DIR}/resource/base",
                 "{PROJECT_DIR}/resource/bilibili"
             ]
+        },
+        {
+            "name": "国际服（EN）",
+            "path": [
+                "{PROJECT_DIR}/resource/base",
+                "{PROJECT_DIR}/resource/global_en"
+            ]
         }
     ],
     "task": [
@@ -63,12 +70,12 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "Route77"
                 },
                 "TargetStageName": {
-                    "text": "18"
+                    "expected": "18"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -93,7 +100,7 @@
         {
             "name": "局外演绎：黄昏的音序",
             "entry": "SeriesOfDusks",
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "OutsideDeduction"
                 }
@@ -107,12 +114,12 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "ANightmareAtGreenLake"
                 },
                 "TargetStageName": {
-                    "text": "17"
+                    "expected": "17"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -127,12 +134,12 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "JourneytoMorPankh"
                 },
                 "TargetStageName": {
-                    "text": "16"
+                    "expected": "16"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -147,12 +154,12 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "dummyThePrisonerintheCave"
                 },
                 "TargetStageName": {
-                    "text": "dummy证明启示V"
+                    "expected": "dummy证明启示V"
                 },
                 "StageDifficulty": {
                     "next": "dummyStageDifficulty_None"
@@ -167,12 +174,12 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "RevivalTheUluruGames"
                 },
                 "TargetStageName": {
-                    "text": "13"
+                    "expected": "13"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -187,12 +194,12 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "NotesOnShuoRi"
                 },
                 "TargetStageName": {
-                    "text": "19"
+                    "expected": "19"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -207,12 +214,12 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "GoodbyeRaya"
                 },
                 "TargetStageName": {
-                    "text": "16"
+                    "expected": "16"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -227,12 +234,12 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "EnterTheShow": {
                     "next": "FloorItToTheGoldenCity"
                 },
                 "TargetStageName": {
-                    "text": "18"
+                    "expected": "18"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -247,9 +254,9 @@
                 "刷完全部体力",
                 "吃全部临期糖"
             ],
-            "param": {
+            "pipeline_override": {
                 "TargetStageName": {
-                    "text": "13"
+                    "expected": "13"
                 },
                 "StageDifficulty": {
                     "next": "ActivityStageDifficulty"
@@ -268,12 +275,12 @@
             "cases": [
                 {
                     "name": "啮咬盒：7-26 厄险 （最优。可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "26",
                                 "银镜与纱幕"
                             ]
@@ -285,12 +292,12 @@
                 },
                 {
                     "name": "啮咬盒：5-19 厄险 （可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "19",
                                 "逆行的舟"
                             ]
@@ -302,12 +309,12 @@
                 },
                 {
                     "name": "盐封曼德拉：3-13 厄险（可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_3"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "13",
                                 "一处庭院"
                             ]
@@ -319,12 +326,12 @@
                 },
                 {
                     "name": "双头形骨架：7-7 厄险（可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "07",
                                 "米诺陶迷宫"
                             ]
@@ -336,12 +343,12 @@
                 },
                 {
                     "name": "双头形骨架：4-20 厄险（可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "20",
                                 "草坪午餐"
                             ]
@@ -353,12 +360,12 @@
                 },
                 {
                     "name": "祝圣秘银：6-14 厄险（最优。只刷）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_6"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "14",
                                 "费切尔怪鸟"
                             ]
@@ -370,12 +377,12 @@
                 },
                 {
                     "name": "祝圣秘银：7-19 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "19",
                                 "双行道"
                             ]
@@ -387,12 +394,12 @@
                 },
                 {
                     "name": "百灵百验鸟：2-6 厄险（可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_2"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "06",
                                 "不朽的尽头"
                             ]
@@ -404,12 +411,12 @@
                 },
                 {
                     "name": "翼造门匙：5-3 厄险（最优。可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "03",
                                 "压箱底"
                             ]
@@ -421,12 +428,12 @@
                 },
                 {
                     "name": "翼造门匙：7-10 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "10",
                                 "泥泞路"
                             ]
@@ -438,12 +445,12 @@
                 },
                 {
                     "name": "弯曲鹅颈：5-4 厄险（可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "04",
                                 "出航日"
                             ]
@@ -455,12 +462,12 @@
                 },
                 {
                     "name": "金草焚香：4-4 故事（可刷可合成）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "04",
                                 "干杯"
                             ]
@@ -472,12 +479,12 @@
                 },
                 {
                     "name": "金爪灵摆：7-20 厄险（优先合成，合不了就刷）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "20",
                                 "古希腊悲剧"
                             ]
@@ -489,12 +496,12 @@
                 },
                 {
                     "name": "砂金甲虫：6-21 厄险（优先合成，合不了就刷。可开箱）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_6"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "21",
                                 "回旋镖"
                             ]
@@ -506,12 +513,12 @@
                 },
                 {
                     "name": "液化战栗：4-21 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "21",
                                 "好天气"
                             ]
@@ -523,12 +530,12 @@
                 },
                 {
                     "name": "液化战栗：3-7 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_3"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "07",
                                 "苏格兰"
                             ]
@@ -540,12 +547,12 @@
                 },
                 {
                     "name": "精磨苦盐：6-10 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_6"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "10",
                                 "内窥镜"
                             ]
@@ -557,12 +564,12 @@
                 },
                 {
                     "name": "精磨苦盐：5-8 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "08",
                                 "旧诫言"
                             ]
@@ -574,12 +581,12 @@
                 },
                 {
                     "name": "未知种根骨：5-7 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "07",
                                 "豆子罐头"
                             ]
@@ -591,12 +598,12 @@
                 },
                 {
                     "name": "未知种根骨：5-3 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "03",
                                 "压箱底"
                             ]
@@ -608,12 +615,12 @@
                 },
                 {
                     "name": "粗糙银锭：7-19 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "19",
                                 "双行道"
                             ]
@@ -625,12 +632,12 @@
                 },
                 {
                     "name": "幸运咒语：4-20 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_4"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "20",
                                 "草坪午餐"
                             ]
@@ -642,12 +649,12 @@
                 },
                 {
                     "name": "干蝉翼：7-10 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "10",
                                 "泥泞路"
                             ]
@@ -659,12 +666,12 @@
                 },
                 {
                     "name": "不休轮：7-16 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "16",
                                 "水流的引线"
                             ]
@@ -676,12 +683,12 @@
                 },
                 {
                     "name": "狐儿尾：7-6 厄险",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
                         },
                         "TargetStageName": {
-                            "text": [
+                            "expected": [
                                 "06",
                                 "傲慢与偏见"
                             ]
@@ -693,16 +700,16 @@
                 },
                 {
                     "name": "---刷取推荐来源：必要的记录https://www.kdocs.cn/l/cd5MWeCl5bKw。此条勿选---",
-                    "param": {}
+                    "pipeline_override": {}
                 },
                 {
                     "name": "尘埃运动 06",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "ResourceChapter_LP"
                         },
                         "TargetStageName": {
-                            "text": "06"
+                            "expected": "06"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -711,12 +718,12 @@
                 },
                 {
                     "name": "铸币美学 06",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "ResourceChapter_MA"
                         },
                         "TargetStageName": {
-                            "text": "06"
+                            "expected": "06"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -725,12 +732,12 @@
                 },
                 {
                     "name": "群山之声 06（洞悉 岩）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "PromotionChapter_ME"
                         },
                         "TargetStageName": {
-                            "text": "06"
+                            "expected": "06"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -739,12 +746,12 @@
                 },
                 {
                     "name": "星陨之所 06（洞悉 星）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "PromotionChapter_SL"
                         },
                         "TargetStageName": {
-                            "text": "06"
+                            "expected": "06"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -753,12 +760,12 @@
                 },
                 {
                     "name": "深林之形 06（洞悉 林）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "PromotionChapter_SS"
                         },
                         "TargetStageName": {
-                            "text": "06"
+                            "expected": "06"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -767,12 +774,12 @@
                 },
                 {
                     "name": "荒兽之野 06（洞悉 兽）",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "PromotionChapter_BW"
                         },
                         "TargetStageName": {
-                            "text": "06"
+                            "expected": "06"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -781,12 +788,12 @@
                 },
                 {
                     "name": "丰收时令 04",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "ResourceChapter_HP"
                         },
                         "TargetStageName": {
-                            "text": "04"
+                            "expected": "04"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -795,12 +802,12 @@
                 },
                 {
                     "name": "意志解析 07",
-                    "param": {
+                    "pipeline_override": {
                         "EnterTheShow": {
                             "next": "ResourceChapter_Psychube"
                         },
                         "TargetStageName": {
-                            "text": "07"
+                            "expected": "07"
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_None"
@@ -813,33 +820,33 @@
             "cases": [
                 {
                     "name": "x1",
-                    "param": {
+                    "pipeline_override": {
                         "SetReplaysTimes": {
-                            "text": "1"
+                            "expected": "1"
                         }
                     }
                 },
                 {
                     "name": "x2",
-                    "param": {
+                    "pipeline_override": {
                         "SetReplaysTimes": {
-                            "text": "2"
+                            "expected": "2"
                         }
                     }
                 },
                 {
                     "name": "x3",
-                    "param": {
+                    "pipeline_override": {
                         "SetReplaysTimes": {
-                            "text": "3"
+                            "expected": "3"
                         }
                     }
                 },
                 {
                     "name": "x4",
-                    "param": {
+                    "pipeline_override": {
                         "SetReplaysTimes": {
-                            "text": "4"
+                            "expected": "4"
                         }
                     }
                 }
@@ -849,7 +856,7 @@
             "cases": [
                 {
                     "name": "Yes",
-                    "param": {
+                    "pipeline_override": {
                         "AllIn": {
                             "enabled": true
                         }
@@ -857,7 +864,7 @@
                 },
                 {
                     "name": "No",
-                    "param": {
+                    "pipeline_override": {
                         "AllIn": {
                             "enabled": false
                         }
@@ -869,7 +876,7 @@
             "cases": [
                 {
                     "name": "Yes",
-                    "param": {
+                    "pipeline_override": {
                         "EatCandyWithin24H": {
                             "enabled": true
                         }
@@ -877,7 +884,7 @@
                 },
                 {
                     "name": "No",
-                    "param": {
+                    "pipeline_override": {
                         "EatCandyWithin24H": {
                             "enabled": false
                         }
@@ -889,7 +896,7 @@
             "cases": [
                 {
                     "name": "Yes",
-                    "param": {
+                    "pipeline_override": {
                         "StagePromotion_EatCandy": {
                             "enabled": true
                         }
@@ -897,7 +904,7 @@
                 },
                 {
                     "name": "No",
-                    "param": {
+                    "pipeline_override": {
                         "StagePromotion_EatCandy": {
                             "enabled": false
                         }
@@ -909,7 +916,7 @@
             "cases": [
                 {
                     "name": "故事模式",
-                    "param": {
+                    "pipeline_override": {
                         "ActivityStageModelSellect": {
                             "next": "ActivityStageModel_Story"
                         }
@@ -917,7 +924,7 @@
                 },
                 {
                     "name": "探索模式",
-                    "param": {
+                    "pipeline_override": {
                         "ActivityStageModelSellect": {
                             "next": "ActivityStageModel_Explore"
                         }
