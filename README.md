@@ -78,7 +78,11 @@
 
 ## 开发相关
 
-- [MaaFramework 快速开始](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/1.1-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B.md)
+- [MaaFW 开发思路](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/0.1-%E5%BC%80%E5%8F%91%E6%80%9D%E8%B7%AF.md)  
+  M9A 目前使用其中第一种方式（纯 Pipeline 低代码），后续可能会迁移到第二种方式（Pipeline + 自定义任务）
+- [Pipeline 流水线协议](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/3.1-%E4%BB%BB%E5%8A%A1%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%8D%8F%E8%AE%AE.md)
+
+更多文档请前往 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 主仓库查看
 
 ## 鸣谢
 
