@@ -46,7 +46,9 @@
 
 ## 其他说明
 
+- 提示“应用程序错误”，一般是缺少运行库，请安装一下 [vc_redist](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 - 添加 `-d` 参数可跳过交互直接运行任务，如 `./MaaPiCli.exe -d`
+- 2.0 版本已支持 mumu 后台保活，会在 run task 时获取 mumu 最前台的 tab，并始终使用这个 tab（即使之后被切到后台了）
 - 反馈问题请附上日志文件 `debug/maa.log`，谢谢！
 
 ## 图形化界面
