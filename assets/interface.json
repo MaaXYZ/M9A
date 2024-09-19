@@ -396,7 +396,7 @@
                     }
                 },
                 {
-                    "name": "金草焚香：8-18 故事（可刷可合成）",
+                    "name": "金草焚香：8-18 厄险（可刷可合成）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_8"
@@ -408,7 +408,7 @@
                             ]
                         },
                         "StageDifficulty": {
-                            "next": "StageDifficulty_Story"
+                            "next": "StageDifficulty_Hard"
                         }
                     }
                 },
