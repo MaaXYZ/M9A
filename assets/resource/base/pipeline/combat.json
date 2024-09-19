@@ -159,6 +159,25 @@
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
     },
+    "MainChapter_8": {
+        "doc": "主线第八章 忧郁的热带",
+        "next": [
+            "MainChapter_8Enter",
+            "Sub_SwipeLeftForChapter"
+        ]
+    },
+    "MainChapter_8Enter": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/MainChapter_8Enter.png",
+        "roi": [
+            0,
+            90,
+            1280,
+            460
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
     "Sub_ResourceChapterLabel": {
         "is_sub": true,
         "recognition": "TemplateMatch",
