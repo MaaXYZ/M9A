@@ -5,6 +5,9 @@
             "ActivityStageDifficultyToRight"
         ]
     },
+    "ActivityEntry": {
+        "next": []
+    },
     "ActivityStageDifficulty_Hard": {
         "recognition": "OCR",
         "expected": [
