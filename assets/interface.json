@@ -55,6 +55,16 @@
             ]
         },
         {
+            "name": "活动刷取",
+            "entry": "ActivityEntry",
+            "option": [
+                "活动选择",
+                "复现次数",
+                "刷完全部体力",
+                "吃全部临期糖"
+            ]
+        },
+        {
             "name": "领取奖励",
             "entry": "Awards"
         },
@@ -63,7 +73,7 @@
             "entry": "Close1999"
         },
         {
-            "name": "(测试中)当期活动推图",
+            "name": "(不可用)当期活动推图",
             "entry": "Route77_StagePromotion",
             "option": [
                 "模式选择",
@@ -71,7 +81,7 @@
             ]
         },
         {
-            "name": "(测试中)推图模式（请先手动在游戏的页面中打开需要推图的页面，如当期活动、佚事等，然后再运行此任务）",
+            "name": "(测试中)推图模式（主线不可用，请先手动打开需要推图的页面，如当期活动、佚事等，然后再运行此任务）",
             "entry": "StagePromotion_SwipeRightAndFindStage",
             "option": [
                 "体力不够自动吃糖"
@@ -83,183 +93,6 @@
             "pipeline_override": {
                 "EnterTheShow": {
                     "next": "OutsideDeduction"
-                }
-            }
-        },
-        {
-            "name": "活动：绿湖噩梦 17 艰难（已结束）",
-            "entry": "ANightmareAtGreenLake",
-            "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
-            "pipeline_override": {
-                "EnterTheShow": {
-                    "next": "ANightmareAtGreenLake"
-                },
-                "TargetStageName": {
-                    "expected": "17"
-                },
-                "StageDifficulty": {
-                    "next": "ActivityStageDifficulty"
-                }
-            }
-        },
-        {
-            "name": "活动：行至摩卢旁卡 16 艰难（已结束）",
-            "entry": "JourneytoMorPankh",
-            "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
-            "pipeline_override": {
-                "EnterTheShow": {
-                    "next": "JourneytoMorPankh"
-                },
-                "TargetStageName": {
-                    "expected": "16"
-                },
-                "StageDifficulty": {
-                    "next": "ActivityStageDifficulty"
-                }
-            }
-        },
-        {
-            "name": "活动：洞穴的囚徒 证明启示 05（已结束）",
-            "entry": "ThePrisonerintheCave",
-            "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
-            "pipeline_override": {
-                "EnterTheShow": {
-                    "next": "dummyThePrisonerintheCave"
-                },
-                "TargetStageName": {
-                    "expected": "dummy证明启示V"
-                },
-                "StageDifficulty": {
-                    "next": "dummyStageDifficulty_None"
-                }
-            }
-        },
-        {
-            "name": "活动：复兴乌卢鲁运动会 13 艰难（已结束）",
-            "entry": "RevivalTheUluruGames",
-            "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
-            "pipeline_override": {
-                "EnterTheShow": {
-                    "next": "RevivalTheUluruGames"
-                },
-                "TargetStageName": {
-                    "expected": "13"
-                },
-                "StageDifficulty": {
-                    "next": "ActivityStageDifficulty"
-                }
-            }
-        },
-        {
-            "name": "活动：朔日手记 19 艰难 （已结束）",
-            "entry": "NotesOnShuoRi",
-            "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
-            "pipeline_override": {
-                "EnterTheShow": {
-                    "next": "NotesOnShuoRi"
-                },
-                "TargetStageName": {
-                    "expected": "19"
-                },
-                "StageDifficulty": {
-                    "next": "ActivityStageDifficulty"
-                }
-            }
-        },
-        {
-            "name": "活动：再见，来亚什基 16 艰难（已结束）",
-            "entry": "GoodbyeRaya",
-            "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
-            "pipeline_override": {
-                "EnterTheShow": {
-                    "next": "GoodbyeRaya"
-                },
-                "TargetStageName": {
-                    "expected": "16"
-                },
-                "StageDifficulty": {
-                    "next": "ActivityStageDifficulty"
-                }
-            }
-        },
-        {
-            "name": "活动：飞驰，明日之城 18 艰难（已结束）",
-            "entry": "FloorItToTheGoldenCity",
-            "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
-            "pipeline_override": {
-                "EnterTheShow": {
-                    "next": "FloorItToTheGoldenCity"
-                },
-                "TargetStageName": {
-                    "expected": "18"
-                },
-                "StageDifficulty": {
-                    "next": "ActivityStageDifficulty"
-                }
-            }
-        },
-        {
-            "name": "活动：77号往事 18 艰难（已结束）",
-            "entry": "Route77",
-            "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
-            "pipeline_override": {
-                "EnterTheShow": {
-                    "next": "Route77"
-                },
-                "TargetStageName": {
-                    "expected": "18"
-                },
-                "StageDifficulty": {
-                    "next": "ActivityStageDifficulty"
-                }
-            }
-        },
-        {
-            "name": "活动：复兴乌卢鲁运动会 13 艰难（复刻）",
-            "entry": "RevivalTheUluruGames_Reproduction",
-            "option": [
-                "复现次数",
-                "刷完全部体力",
-                "吃全部临期糖"
-            ],
-            "pipeline_override": {
-                "TargetStageName": {
-                    "expected": "13"
-                },
-                "StageDifficulty": {
-                    "next": "ActivityStageDifficulty"
                 }
             }
         },
@@ -1063,6 +896,136 @@
                     "pipeline_override": {
                         "ActivityStageModelSellect": {
                             "next": "ActivityStageModel_Explore"
+                        }
+                    }
+                }
+            ]
+        },
+        "活动选择": {
+            "cases": [
+                {
+                    "name": "活动：绿湖噩梦 17 艰难（已结束）",
+                    "pipeline_override": {
+                        "ActivityEntry": {
+                            "next": "ANightmareAtGreenLake"
+                        },
+                        "TargetStageName": {
+                            "expected": "17"
+                        },
+                        "StageDifficulty": {
+                            "next": "ActivityStageDifficulty"
+                        }
+                    }
+                },
+                {
+                    "name": "活动：行至摩卢旁卡 16 艰难（已结束）",
+                    "pipeline_override": {
+                        "ActivityEntry": {
+                            "next": "JourneytoMorPankh"
+                        },
+                        "TargetStageName": {
+                            "expected": "16"
+                        },
+                        "StageDifficulty": {
+                            "next": "ActivityStageDifficulty"
+                        }
+                    }
+                },
+                {
+                    "name": "活动：洞穴的囚徒 证明启示 05（已结束）",
+                    "pipeline_override": {
+                        "ActivityEntry": {
+                            "next": "dummyThePrisonerintheCave"
+                        },
+                        "TargetStageName": {
+                            "expected": "dummy证明启示V"
+                        },
+                        "StageDifficulty": {
+                            "next": "dummyStageDifficulty_None"
+                        }
+                    }
+                },
+                {
+                    "name": "活动：复兴乌卢鲁运动会 13 艰难（已结束）",
+                    "pipeline_override": {
+                        "ActivityEntry": {
+                            "next": "RevivalTheUluruGames"
+                        },
+                        "TargetStageName": {
+                            "expected": "13"
+                        },
+                        "StageDifficulty": {
+                            "next": "ActivityStageDifficulty"
+                        }
+                    }
+                },
+                {
+                    "name": "活动：朔日手记 19 艰难 （已结束）",
+                    "pipeline_override": {
+                        "ActivityEntry": {
+                            "next": "NotesOnShuoRi"
+                        },
+                        "TargetStageName": {
+                            "expected": "19"
+                        },
+                        "StageDifficulty": {
+                            "next": "ActivityStageDifficulty"
+                        }
+                    }
+                },
+                {
+                    "name": "活动：再见，来亚什基 16 艰难（已结束）",
+                    "pipeline_override": {
+                        "ActivityEntry": {
+                            "next": "GoodbyeRaya"
+                        },
+                        "TargetStageName": {
+                            "expected": "16"
+                        },
+                        "StageDifficulty": {
+                            "next": "ActivityStageDifficulty"
+                        }
+                    }
+                },
+                {
+                    "name": "活动：飞驰，明日之城 18 艰难（已结束）",
+                    "pipeline_override": {
+                        "ActivityEntry": {
+                            "next": "FloorItToTheGoldenCity"
+                        },
+                        "TargetStageName": {
+                            "expected": "18"
+                        },
+                        "StageDifficulty": {
+                            "next": "ActivityStageDifficulty"
+                        }
+                    }
+                },
+                {
+                    "name": "活动：77号往事 18 艰难（已结束）",
+                    "pipeline_override": {
+                        "ActivityEntry": {
+                            "next": "Route77"
+                        },
+                        "TargetStageName": {
+                            "expected": "18"
+                        },
+                        "StageDifficulty": {
+                            "next": "ActivityStageDifficulty"
+                        }
+                    }
+                },
+                {
+                    "name": "活动：复兴乌卢鲁运动会 13 艰难（复刻）",
+                    "pipeline_override": {
+                        "ActivityEntry": {
+                            "next": "RevivalTheUluruGames_Reproduction"
+                        },
+                        "TargetStageName": {
+                            "expected": "13"
+                        },
+                        "StageDifficulty": {
+                            "next": "ActivityStageDifficulty"
                         }
                     }
                 }
