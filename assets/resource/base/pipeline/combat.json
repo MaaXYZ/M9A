@@ -220,11 +220,11 @@
         "next": "SwipeLeftAndFindStage"
     },
     "ResourceChapter_MA": {
-        "doc": "猪鼻美学",
+        "doc": "铸币美学",
         "next": [
             "ResourceChapter_MAEnter",
-            "Sub_ResourceChapterLabel",
-            "Sub_SwipeRightForChapter"
+            "Sub_SwipeRightForChapter",
+            "Sub_ResourceChapterLabel"
         ]
     },
     "ResourceChapter_MAEnter": {

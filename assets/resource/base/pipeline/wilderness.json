@@ -23,6 +23,7 @@
         "action": "Click",
         "next": [
             "EnterWilderness",
+            "EnterProduct",
             "CollectEXP",
             "CollectMoney",
             "CollectAwards",
@@ -67,47 +68,6 @@
             6,
             221,
             232
-        ],
-        "action": "Click",
-        "post_wait_freezes": 1,
-        "next": [
-            "CollectAwards",
-            "CollectTrust",
-            "TrustDialogueNext",
-            "TrustDialogueInteraction",
-            "Sub_HomeButton",
-            "HomeFlag"
-        ]
-    },
-    "CollectEXP备份": {
-        "recognition": "TemplateMatch",
-        "template": "Wilderness/CollectEXP.png",
-        "roi": [
-            455,
-            87,
-            139,
-            134
-        ],
-        "action": "Click",
-        "post_wait_freezes": 1,
-        "next": [
-            "CollectMoney",
-            "CollectAwards",
-            "CollectTrust",
-            "TrustDialogueNext",
-            "TrustDialogueInteraction",
-            "Sub_HomeButton",
-            "HomeFlag"
-        ]
-    },
-    "CollectMoney备份": {
-        "recognition": "TemplateMatch",
-        "template": "Wilderness/CollectMoney.png",
-        "roi": [
-            685,
-            34,
-            132,
-            134
         ],
         "action": "Click",
         "post_wait_freezes": 1,
@@ -209,19 +169,110 @@
             "HomeFlag"
         ]
     },
-    "TrustMax备份": {
-        "recognition": "TemplateMatch",
-        "template": "Wilderness/TrustMax.png",
+    "EnterProduct": {
+        "recognition": "OCR",
+        "expected": [
+            "生产"
+        ],
         "roi": [
+            238,
+            506,
+            191,
+            214
+        ],
+        "target_offset": [
             0,
-            162,
-            141,
-            114
+            -30,
+            0,
+            0
         ],
         "action": "Click",
         "next": [
-            "Sub_HomeButton",
-            "HomeFlag"
+            "CollectProduct",
+            "EnterProduct"
+        ]
+    },
+    "CollectProduct": {
+        "recognition": "OCR",
+        "expected": [
+            "收取"
+        ],
+        "roi": [
+            157,
+            22,
+            971,
+            650
+        ],
+        "action": "Click",
+        "next": [
+            "Sub_CollectProduct",
+            "AutoSelectProducts"
+        ]
+    },
+    "Sub_CollectProduct": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Wilderness/CollectProduct.png",
+        "roi": [
+            431,
+            48,
+            406,
+            220
+        ],
+        "action": "Click"
+    },
+    "AutoSelectProducts": {
+        "recognition": "OCR",
+        "expected": [
+            "批量放入产品"
+        ],
+        "roi": [
+            675,
+            563,
+            309,
+            152
+        ],
+        "action": "Click",
+        "next": [
+            "AutoSelectLeast"
+        ]
+    },
+    "AutoSelectLeast": {
+        "recognition": "OCR",
+        "expected": [
+            "最少"
+        ],
+        "roi": [
+            567,
+            91,
+            184,
+            282
+        ],
+        "action": "Click",
+        "next": [
+            "AutoSelectComfirm"
+        ]
+    },
+    "AutoSelectComfirm": {
+        "recognition": "OCR",
+        "expected": [
+            "批量放入"
+        ],
+        "roi": [
+            507,
+            483,
+            264,
+            138
+        ],
+        "action": "Click",
+        "next": [
+            "CollectEXP",
+            "CollectMoney",
+            "CollectAwards",
+            "CollectTrust",
+            "TrustDialogueNext",
+            "TrustDialogueInteraction",
+            "Sub_BackButton"
         ]
     }
 }

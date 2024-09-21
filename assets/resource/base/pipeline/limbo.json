@@ -143,8 +143,9 @@
         "upper": [
             255
         ],
+        "order_by": "Random",
         "connected": true,
-        "count": 50,
+        "count": 10,
         "action": "Click",
         "next": [
             "LimboActionFlag_1",
@@ -253,8 +254,9 @@
         "upper": [
             255
         ],
+        "order_by": "Random",
         "connected": true,
-        "count": 50,
+        "count": 10,
         "action": "Click",
         "next": [
             "LimboActionFlag_2",
