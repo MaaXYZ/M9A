@@ -261,6 +261,7 @@
     },
     "Sub_CloseDuringFestivalDipaRewardPage": {
         "is_sub": true,
+        "green_mask": true,
         "recognition": "TemplateMatch",
         "template": "StartUp/CloseDuringFestivalDipaRewardPage.png",
         "roi": [
