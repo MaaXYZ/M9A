@@ -2084,7 +2084,6 @@
             "SOD_ArcanistSellct",
             "SOD_ArcanistAdd_Single4",
             "SOD_CombatStart",
-            "SOD_Main",
             "SOD_EndEvent"
         ]
     },
@@ -2149,8 +2148,7 @@
             "SOD_ItemLose_1",
             "SOD_Acquire",
             "SOD_NewArcanist",
-            "SOD_Nothinghappen",
-            "SOD_Levelup"
+            "SOD_Nothinghappen"
         ]
     },
     "SOD_Main": {
@@ -2347,8 +2345,7 @@
             "SOD_ArcanistSellct",
             "SOD_ArcanistAdd_Single4",
             "SOD_CombatStart",
-            "SOD_EndEvent_OK",
-            "SOD_EndingSelecct"
+            "SOD_EndEvent_OK"
         ]
     }
 }
