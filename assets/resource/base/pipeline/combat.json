@@ -223,11 +223,31 @@
         "doc": "铸币美学",
         "next": [
             "ResourceChapter_MAEnter",
-            "Sub_SwipeRightForChapter",
             "Sub_ResourceChapterLabel"
         ]
     },
     "ResourceChapter_MAEnter": {
+        "recognition": "OCR",
+        "expected": [
+            "铸币"
+        ],
+        "replace": [
+            "市",
+            "币"
+        ],
+        "roi": [
+            0,
+            153,
+            1280,
+            367
+        ],
+        "action": "Click",
+        "next": [
+            "SwipeLeftAndFindStage",
+            "Sub_SwipeRightForChapter"
+        ]
+    },
+    "ResourceChapter_MAEnter原": {
         "recognition": "TemplateMatch",
         "template": "Combat/ResourceChapter_MAEnter.png",
         "threshold": 0.9,

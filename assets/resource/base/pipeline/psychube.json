@@ -104,6 +104,7 @@
     "PsychubeSwitchToReplay": {
         "recognition": "TemplateMatch",
         "template": "Psychube/SwitchToReplay.png",
+        "threshold": 0.8,
         "roi": [
             548,
             569,

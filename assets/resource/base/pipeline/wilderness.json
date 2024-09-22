@@ -2,6 +2,7 @@
     "Wilderness": {
         "next": [
             "EnterWilderness",
+            "EnterProduct",
             "CollectEXP",
             "CollectMoney",
             "CollectAwards",
@@ -114,8 +115,27 @@
             "CollectTrust",
             "TrustDialogueNext",
             "TrustDialogueInteraction",
+            "Sub_TestCritterTraining",
             "Sub_HomeButton",
             "HomeFlag"
+        ]
+    },
+    "Sub_TestCritterTraining": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "培训位置",
+        "roi": [
+            1076,
+            0,
+            204,
+            131
+        ],
+        "action": "Click",
+        "target": [
+            44,
+            44,
+            8,
+            8
         ]
     },
     "TrustDialogueNext": {
@@ -186,10 +206,30 @@
             0,
             0
         ],
+        "post_delay": 500,
         "action": "Click",
         "next": [
             "CollectProduct",
-            "EnterProduct"
+            "EnterProduct",
+            "Sub_SummonlngSuccess"
+        ]
+    },
+    "Sub_SummonlngSuccess": {
+        "is_sub": true,
+        "recognition": "TemplateMatch",
+        "template": "Wilderness/SummonlngSuccess.png",
+        "roi": [
+            528,
+            1,
+            245,
+            166
+        ],
+        "action": "Click",
+        "target": [
+            44,
+            44,
+            8,
+            8
         ]
     },
     "CollectProduct": {
@@ -234,7 +274,8 @@
         ],
         "action": "Click",
         "next": [
-            "AutoSelectLeast"
+            "AutoSelectLeast",
+            "AutoSelectProducts"
         ]
     },
     "AutoSelectLeast": {
@@ -250,7 +291,8 @@
         ],
         "action": "Click",
         "next": [
-            "AutoSelectComfirm"
+            "AutoSelectComfirm",
+            "AutoSelectLeast"
         ]
     },
     "AutoSelectComfirm": {
@@ -266,6 +308,7 @@
         ],
         "action": "Click",
         "next": [
+            "AutoSelectComfirm",
             "CollectEXP",
             "CollectMoney",
             "CollectAwards",

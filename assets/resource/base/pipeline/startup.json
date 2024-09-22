@@ -77,7 +77,8 @@
             "GameLoading",
             "Download",
             "StartGame",
-            "CloseAnnouncement"
+            "CloseAnnouncement",
+            "HomeFlag"
         ]
     },
     "GameLoading": {
