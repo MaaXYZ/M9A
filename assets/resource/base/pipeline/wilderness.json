@@ -115,8 +115,27 @@
             "CollectTrust",
             "TrustDialogueNext",
             "TrustDialogueInteraction",
+            "Sub_TestCritterTraining",
             "Sub_HomeButton",
             "HomeFlag"
+        ]
+    },
+    "Sub_TestCritterTraining": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "培训位置",
+        "roi": [
+            1076,
+            0,
+            204,
+            131
+        ],
+        "action": "Click",
+        "target": [
+            44,
+            44,
+            8,
+            8
         ]
     },
     "TrustDialogueNext": {
