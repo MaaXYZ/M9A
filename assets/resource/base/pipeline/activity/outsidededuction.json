@@ -51,8 +51,10 @@
         ],
         "action": "Click",
         "next": [
-            "SODStart",
+            "SOD_Skip",
+            "SODStop_Click_2",
             "SODStop_Click_1",
+            "SODStart",
             "SODStop_Confirm"
         ]
     },
