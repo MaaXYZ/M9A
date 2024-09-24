@@ -1965,7 +1965,8 @@
         ],
         "next": [
             "SOD_ItemSellct_Confirm",
-            "SOD_ItemSellct_1"
+            "SOD_ItemSellct_1",
+            "SOD_Nothinghappen"
         ]
     },
     "SOD_Shopping_Leave": {
