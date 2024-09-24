@@ -2044,6 +2044,7 @@
         "next": [
             "SOD_ClearDeployment",
             "SOD_ArcanistSellct",
+            "SOD_NewArcanist",
             "SOD_ArcanistAdd_Single4",
             "SOD_CombatStart",
             "SOD_ItemSellct_1",
