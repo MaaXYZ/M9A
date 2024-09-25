@@ -50,6 +50,7 @@
             54
         ],
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "SOD_Skip",
             "SODStop_Click_2",
