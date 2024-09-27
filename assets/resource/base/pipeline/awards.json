@@ -97,7 +97,6 @@
             "Awards/CollectSingleDailyAwards.png"
         ],
         "action": "Click",
-        "post_wait_freezes": 1,
         "roi": [
             1075,
             63,
