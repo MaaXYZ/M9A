@@ -49,13 +49,13 @@
 - 提示“应用程序错误”，一般是缺少运行库，请安装一下 [vc_redist](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 - 添加 `-d` 参数可跳过交互直接运行任务，如 `./MaaPiCli.exe -d`
 - 2.0 版本已支持 mumu 后台保活，会在 run task 时获取 mumu 最前台的 tab，并始终使用这个 tab（即使之后被切到后台了）
-- 反馈问题请附上日志文件 `debug/maa.log`，谢谢！
+- 反馈问题请附上日志文件 `debug/maa.log`以及问题界面的截图，谢谢！
 
 ## 图形化界面
 
 目前暂无正式版 GUI，但有以下由社区大佬们贡献的 GUI 项目，欢迎使用！
 
-- [M9AWPF](https://github.com/MLAcookie/M9AWPF) 拿 WPF 框架写的一个 M9A 的UI
+- [MFAWPF](https://github.com/SweetSmellFox/MFAWPF) 本项目是一个基于WPF框架开发的用户界面，旨在提供类似于MaaPiCli的功能
 
 ## How to build
 

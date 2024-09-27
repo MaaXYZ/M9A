@@ -229,7 +229,9 @@
     "ResourceChapter_MAEnter": {
         "recognition": "OCR",
         "expected": [
-            "铸币"
+            "铸币",
+            "铸",
+            "美学"
         ],
         "replace": [
             "市",
