@@ -276,7 +276,8 @@
         "post_delay": 200,
         "next": [
             "AutoSelectLeast",
-            "AutoSelectProducts"
+            "AutoSelectProducts",
+            "Sub_CollectProduct"
         ]
     },
     "AutoSelectLeast": {
