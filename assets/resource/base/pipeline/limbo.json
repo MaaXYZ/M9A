@@ -132,7 +132,6 @@
         "recognition": "NeuralNetworkDetect",
         "model": "LimbDetection.onnx",
         "expected": 0,
-        "threshold": 0.1,
         "action": "Click",
         "next": [
             "LimboActionFlag_1",
@@ -255,7 +254,6 @@
         "recognition": "NeuralNetworkDetect",
         "model": "LimbDetection.onnx",
         "expected": 0,
-        "threshold": 0.1,
         "action": "Click",
         "next": [
             "LimboActionFlag_2",
