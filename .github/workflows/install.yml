@@ -164,7 +164,6 @@ jobs:
           repository: MaaXYZ/MaaFramework
           fileName: "MAA-android-${{ matrix.arch }}*"
           latest: true
-          preRelease: true
           out-file-path: "deps"
           extract: true
 
