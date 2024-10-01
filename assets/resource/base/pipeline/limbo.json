@@ -129,6 +129,17 @@
     },
     "LimboStageLightest_1": {
         "doc": "最靓的位置，要多点几次",
+        "recognition": "NeuralNetworkDetect",
+        "model": "LimbDetection.onnx",
+        "expected": 0,
+        "action": "Click",
+        "next": [
+            "LimboActionFlag_1",
+            "LimboStageLightest_1"
+        ]
+    },
+    "LimboStageLightest_1_存档": {
+        "doc": "最靓的位置，要多点几次",
         "recognition": "ColorMatch",
         "method": 6,
         "roi": [
@@ -239,6 +250,17 @@
         ]
     },
     "LimboStageLightest_2": {
+        "doc": "最靓的位置，要多点几次",
+        "recognition": "NeuralNetworkDetect",
+        "model": "LimbDetection.onnx",
+        "expected": 0,
+        "action": "Click",
+        "next": [
+            "LimboActionFlag_2",
+            "LimboStageLightest_2"
+        ]
+    },
+    "LimboStageLightest_2_存档": {
         "doc": "最靓的位置，要多点几次",
         "recognition": "ColorMatch",
         "method": 6,
