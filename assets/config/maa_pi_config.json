@@ -1,0 +1,8 @@
+{
+    "controller": {
+        "name": "ADB 默认方式",
+        "type": "Adb"
+    },
+    "resource": "官服",
+    "task": []
+}
