@@ -273,10 +273,10 @@
             152
         ],
         "action": "Click",
+        "post_delay": 200,
         "next": [
             "AutoSelectLeast",
-            "AutoSelectProducts",
-            "Sub_CollectProduct"
+            "AutoSelectProducts"
         ]
     },
     "AutoSelectLeast": {
