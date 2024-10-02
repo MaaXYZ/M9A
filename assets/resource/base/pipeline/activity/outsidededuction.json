@@ -2337,12 +2337,12 @@
         "action": "Click",
         "threshold": 0.55,
         "next": [
+            "SOD_EndEvent_OK",
             "SOD_Departure",
             "SOD_Main",
             "SOD_Skip",
             "SOD_Ending_1",
             "SOD_Ending_2",
-            "SOD_EndingSelecct",
             "SOD_Levelup",
             "SOD_ItemSellct_1",
             "SOD_ItemLose_1",
@@ -2352,7 +2352,7 @@
             "SOD_ArcanistSellct",
             "SOD_ArcanistAdd_Single4",
             "SOD_CombatStart",
-            "SOD_EndEvent_OK"
+            "SOD_EndingSelecct"
         ]
     }
 }
