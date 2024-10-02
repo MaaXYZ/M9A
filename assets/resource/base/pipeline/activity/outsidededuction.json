@@ -2177,6 +2177,7 @@
             "SOD_Skip",
             "SOD_Acquire",
             "SOD_NewArcanist",
+            "SOD_EndEvent",
             "SOD_SellectNext_1",
             "SOD_SellectNext_2",
             "SOD_SellectNext_3",
