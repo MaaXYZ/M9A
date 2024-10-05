@@ -1309,7 +1309,7 @@
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Combat.png",
         "threshold": 0.85,
-        "index": 3,
+        "index": -1,
         "roi": [
             277,
             23,
@@ -1341,7 +1341,7 @@
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Danger.png",
         "threshold": 0.85,
-        "index": 3,
+        "index": -1,
         "roi": [
             277,
             23,
@@ -1372,7 +1372,7 @@
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Imminent.png",
         "threshold": 0.85,
-        "index": 3,
+        "index": -1,
         "roi": [
             277,
             23,
@@ -1402,7 +1402,7 @@
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Shopping.png",
         "threshold": 0.85,
-        "index": 3,
+        "index": -1,
         "roi": [
             277,
             23,
@@ -1431,7 +1431,7 @@
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Discovery.png",
         "threshold": 0.85,
-        "index": 3,
+        "index": -1,
         "roi": [
             277,
             23,
@@ -1459,7 +1459,7 @@
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_RestSite.png",
         "threshold": 0.85,
-        "index": 3,
+        "index": -1,
         "roi": [
             277,
             23,
@@ -1486,7 +1486,7 @@
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Treasure.png",
         "threshold": 0.85,
-        "index": 3,
+        "index": -1,
         "roi": [
             277,
             23,
