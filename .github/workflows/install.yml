@@ -71,10 +71,20 @@ jobs:
           out-file-path: "deps"
           extract: true
 
+      - name: Download MFAWPF  
+        uses: robinraju/release-downloader@v1  
+        with:  
+          repository: SweetSmellFox/MFAWPF  
+          filename: MFAWPF*
+          latest: true  
+          out-file-path: "MFA"  
+          extract: true  
+
       - name: Install
         shell: bash
         run: |
           python ./install.py ${{ needs.meta.outputs.tag }}
+          cp MFA/MFAWPF.exe install
 
       - uses: actions/upload-artifact@v4
         with:
