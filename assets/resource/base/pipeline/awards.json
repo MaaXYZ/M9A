@@ -84,7 +84,8 @@
         "next": [
             "Sub_CollectDailyAwards",
             "Sub_ObtainedAwards",
-            "WeeklyAwardsBadge"
+            "WeeklyAwardsBadge",
+            "Sub_BackButton"
         ]
     },
     "Sub_CollectDailyAwards": {

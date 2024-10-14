@@ -38,7 +38,10 @@
         },
         {
             "name": "收取荒原",
-            "entry": "Wilderness"
+            "entry": "Wilderness",
+            "option": [
+                "魔精收菜"
+            ]
         },
         {
             "name": "每日心相（意志解析）",
@@ -879,6 +882,26 @@
                     "name": "No",
                     "pipeline_override": {
                         "StagePromotion_EatCandy": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "魔精收菜": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "EnterProduct": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "EnterProduct": {
                             "enabled": false
                         }
                     }
