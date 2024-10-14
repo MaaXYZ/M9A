@@ -190,6 +190,7 @@
         ]
     },
     "EnterProduct": {
+        "enabled": true,
         "recognition": "OCR",
         "expected": [
             "生产"
