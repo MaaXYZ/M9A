@@ -8,10 +8,10 @@
 目前已有的功能：
 
 - 启动/关闭游戏
-- 收取荒原
+- 收取荒原、魔精收取生产物品
 - 每日心相（意志解析）
 - 刷体力、最优材料关卡、活动关卡导航、吃糖选项
-- 山麓的回音（肉鸽）
+- 局外演绎、山麓的回音（肉鸽）
 - 领取日常奖励
 - 每周深眠域（使用游戏自带自动战斗）
 
@@ -28,6 +28,13 @@
 - 若确定自己的电脑是 arm 架构，请下载 `M9A-win-aarch64-vXXX.zip`  
   _请注意！Windows 的电脑几乎全都是 x86_64 的，可能占 99.999%，除非你非常确定自己是 arm，否则别下这个！_
 - 解压后运行 `MaaPiCli.exe` 即可
+
+## 图形化界面
+
+目前暂无正式版 GUI，但有以下由社区大佬们贡献的 GUI 项目，欢迎使用！
+
+- [MFAWPF](https://github.com/SweetSmellFox/MFAWPF) 本项目是一个基于WPF框架开发的用户界面，旨在提供类似于MaaPiCli的功能
+- 目前MFAWPF已经集成到 `M9A-win-x86_64-vXXX.zip`中，解压后运行 `MFAWPF.exe` 即可
 
 ### macOS
 
@@ -51,11 +58,7 @@
 - 2.0 版本已支持 mumu 后台保活，会在 run task 时获取 mumu 最前台的 tab，并始终使用这个 tab（即使之后被切到后台了）
 - 反馈问题请附上日志文件 `debug/maa.log`以及问题界面的截图，谢谢！
 
-## 图形化界面
 
-目前暂无正式版 GUI，但有以下由社区大佬们贡献的 GUI 项目，欢迎使用！
-
-- [MFAWPF](https://github.com/SweetSmellFox/MFAWPF) 本项目是一个基于WPF框架开发的用户界面，旨在提供类似于MaaPiCli的功能
 
 ## How to build
 
