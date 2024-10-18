@@ -1,4 +1,6 @@
 {
+    "default_controller": "adb",
+    "lock_controller": true,
     "controller": [
         {
             "name": "ADB 默认方式",
