@@ -169,7 +169,8 @@
             "Sub_CollectJukebox",
             "Sub_ObtainedAwards",
             "Sub_JukeboxAwardsBadge",
-            "NoJukeboxAwards"
+            "NoJukeboxAwards",
+            "ExitEdition"
         ]
     },
     "ExitEdition": {
@@ -181,9 +182,15 @@
             187,
             154
         ],
+        "action": "Click",
+        "target_offset": [
+            46,
+            46,
+            0,
+            0
+        ],
         "next": [
-            "Sub_BackButton",
-            "Stop"
+            "Sub_JukeboxAwardsBadge"
         ]
     },
     "Sub_CollectJukebox": {
