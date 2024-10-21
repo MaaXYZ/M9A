@@ -129,9 +129,22 @@
     },
     "LimboStageLightest_1": {
         "doc": "最靓的位置，要多点几次",
-        "recognition": "NeuralNetworkDetect",
-        "model": "LimbDetection.onnx",
-        "expected": 0,
+        "recognition": "ColorMatch",
+        "method": 6,
+        "roi": [
+            0,
+            70,
+            1280,
+            560
+        ],
+        "lower": [
+            200
+        ],
+        "upper": [
+            255
+        ],
+        "connected": true,
+        "count": 50,
         "action": "Click",
         "next": [
             "LimboActionFlag_1",
@@ -251,9 +264,22 @@
     },
     "LimboStageLightest_2": {
         "doc": "最靓的位置，要多点几次",
-        "recognition": "NeuralNetworkDetect",
-        "model": "LimbDetection.onnx",
-        "expected": 0,
+        "recognition": "ColorMatch",
+        "method": 6,
+        "roi": [
+            0,
+            70,
+            1280,
+            560
+        ],
+        "lower": [
+            200
+        ],
+        "upper": [
+            255
+        ],
+        "connected": true,
+        "count": 50,
         "action": "Click",
         "next": [
             "LimboActionFlag_2",
