@@ -1,4 +1,6 @@
 {
+    "name": "M9A",
+    "url": "https://github.com/MaaXYZ/M9A",
     "default_controller": "adb",
     "lock_controller": true,
     "controller": [
