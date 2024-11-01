@@ -1,12 +1,46 @@
 {
+    "ActivityEntry": {
+        "next": [
+            "ActivityEnterTheShow",
+            "Sub_StartUp"
+        ]
+    },
+    "ActivityEnterTheShow": {
+        "recognition": "TemplateMatch",
+        "template_doc": "Set in code",
+        "roi": [
+            885,
+            123,
+            340,
+            183
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1,
+        "next": [
+            "ActivityMainChapter",
+            "ActivityEnterTheShow"
+        ]
+    },
+    "ActivityMainChapter": {
+        "recognition": "OCR",
+        "expected": [
+            "剧情",
+            "步"
+        ],
+        "roi": [
+            988,
+            571,
+            281,
+            144
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
     "ActivityStageDifficulty": {
         "next": [
             "ActivityStageDifficulty_Hard",
             "ActivityStageDifficultyToRight"
         ]
-    },
-    "ActivityEntry": {
-        "next": []
     },
     "ActivityStageDifficulty_Hard": {
         "recognition": "OCR",

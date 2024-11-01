@@ -931,6 +931,20 @@
         "活动选择": {
             "cases": [
                 {
+                    "name": "活动：东区黎明 19 艰难",
+                    "pipeline_override": {
+                        "ActivityEnterTheShow": {
+                            "template": "Combat/Activity/LondonDawningEnterTheShow.png"
+                        },
+                        "TargetStageName": {
+                            "expected": "19"
+                        },
+                        "StageDifficulty": {
+                            "next": "ActivityStageDifficulty"
+                        }
+                    }
+                },
+                {
                     "name": "活动：绿湖噩梦 17 艰难（已结束）",
                     "pipeline_override": {
                         "ActivityEntry": {
