@@ -1,4 +1,8 @@
 {
+    "name": "M9A",
+    "url": "https://github.com/MaaXYZ/M9A",
+    "default_controller": "adb",
+    "lock_controller": true,
     "controller": [
         {
             "name": "ADB 默认方式",
@@ -29,16 +33,15 @@
     ],
     "task": [
         {
-            "name": "（不可用）日常任务顺序建议：启动游戏、收取荒原、每日心相、清体力、领取奖励、关闭游戏",
-            "entry": ""
-        },
-        {
             "name": "启动游戏",
             "entry": "StartUp"
         },
         {
             "name": "收取荒原",
-            "entry": "Wilderness"
+            "entry": "Wilderness",
+            "option": [
+                "魔精收菜"
+            ]
         },
         {
             "name": "每日心相（意志解析）",
@@ -879,6 +882,26 @@
                     "name": "No",
                     "pipeline_override": {
                         "StagePromotion_EatCandy": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "魔精收菜": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "EnterProduct": {
+                            "enabled": true
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "EnterProduct": {
                             "enabled": false
                         }
                     }

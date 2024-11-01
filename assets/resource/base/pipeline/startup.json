@@ -220,7 +220,10 @@
     "Sub_Reward": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "StartUp/Reward.png",
+        "template": [
+            "StartUp/Reward.png",
+            "StartUp/Reward1.png"
+        ],
         "roi": [
             419,
             90,

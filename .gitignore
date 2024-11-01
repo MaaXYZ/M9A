@@ -450,4 +450,7 @@ tools/ImageCropper/**/*.png
 # MacOS
 .DS_Store
 .nicegui/storage-general.json
+
+# M9A
 config/maa_option.json
+assets/config/maa_pi_config.json
