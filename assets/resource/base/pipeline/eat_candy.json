@@ -78,6 +78,10 @@
         "next": [
             "SellectMiniCandyMax",
             "MiniCandy24HNotEnough"
+        ],
+        "interrupt": [
+            "Sub_QuitEatCandyPage",
+            "AllIn"
         ]
     },
     "EatSmallCandy24H": {
@@ -93,6 +97,10 @@
         "next": [
             "EatCandyConfirm",
             "SmallCandy24HNotEnough"
+        ],
+        "interrupt": [
+            "Sub_QuitEatCandyPage",
+            "AllIn"
         ]
     },
     "EatBigCandy24H": {
@@ -108,6 +116,10 @@
         "next": [
             "EatCandyConfirm",
             "BigCandy24HNotEnough"
+        ],
+        "interrupt": [
+            "Sub_QuitEatCandyPage",
+            "AllIn"
         ]
     },
     "EatCandyConfirm": {
