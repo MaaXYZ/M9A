@@ -49,7 +49,10 @@
         },
         {
             "name": "自动深眠（配置一二队后再运行）",
-            "entry": "Limbo"
+            "entry": "Limbo",
+            "option": [
+                "仅领取每周浅眠域奖励"
+            ]
         },
         {
             "name": "常规作战",
@@ -1067,6 +1070,22 @@
                         },
                         "StageDifficulty": {
                             "next": "ActivityStageDifficulty"
+                        }
+                    }
+                }
+            ]
+        },
+        "仅领取每周浅眠域奖励": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "LimboEntry": {
+                            "next": []
                         }
                     }
                 }
