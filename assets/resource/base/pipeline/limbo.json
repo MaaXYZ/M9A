@@ -238,7 +238,8 @@
         "next": [
             "LimboVictory_1",
             "LimboAction_1"
-        ]
+        ],
+        "rate_limit": 5000
     },
     "LimboVictory_1": {
         "doc": "深眠战斗结束",
@@ -361,7 +362,8 @@
         "next": [
             "LimboVictory_2",
             "LimboAction_2"
-        ]
+        ],
+        "rate_limit": 5000
     },
     "LimboVictory_2": {
         "recognition": "OCR",
