@@ -237,17 +237,31 @@
         "timeout": 2000000,
         "action": "Click",
         "next": [
+            "LimboFailed",
             "LimboVictory_1",
             "LimboAction_1"
         ],
         "rate_limit": 5000
     },
-    "LimboVictory_1": {
-        "doc": "深眠战斗结束",
+    "LimboFailed": {
+        "doc": "深眠战斗失败",
         "recognition": "OCR",
         "expected": [
-            "战斗胜利",
             "战斗失败"
+        ],
+        "roi": [
+            678,
+            10,
+            473,
+            240
+        ],
+        "action": "Click"
+    },
+    "LimboVictory_1": {
+        "doc": "深眠战斗成功_1",
+        "recognition": "OCR",
+        "expected": [
+            "战斗胜利"
         ],
         "roi": [
             678,
@@ -361,6 +375,7 @@
         "timeout": 2000000,
         "action": "Click",
         "next": [
+            "LimboFailed",
             "LimboVictory_2",
             "LimboAction_2"
         ],
@@ -369,8 +384,7 @@
     "LimboVictory_2": {
         "recognition": "OCR",
         "expected": [
-            "战斗胜利",
-            "战斗失败"
+            "战斗胜利"
         ],
         "roi": [
             678,
