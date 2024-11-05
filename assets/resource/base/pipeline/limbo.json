@@ -90,7 +90,6 @@
         ],
         "action": "Click",
         "next": [
-            "LimboEnd",
             "LimboStageRightest"
         ]
     },
