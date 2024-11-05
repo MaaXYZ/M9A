@@ -121,17 +121,85 @@
         ]
     },
     "LimboStageFlag": {
-        "doc": "判断位于深眠片段",
+        "doc": "判断当前位于深眠片段",
         "recognition": "OCR",
-        "expected": "梦境重置",
+        "expected": "本层酬劳",
         "roi": [
-            0,
-            586,
-            194,
-            134
+            146,
+            676,
+            67,
+            21
         ],
+        "only_rec": true,
+        "action": "Click",
         "next": [
-            "LimboStageLightest_1"
+            "LimboStarsMainFlag",
+            "LimboStageFlag"
+        ]
+    },
+    "LimboStarsMainFlag": {
+        "doc": "判断当前位于深眠试验酬劳界面,后续进行上下半判断",
+        "recognition": "OCR",
+        "expected": "深眠试验",
+        "roi": [
+            161,
+            96,
+            163,
+            43
+        ],
+        "only_rec": true,
+        "next": [
+            "LimboStageFlag_up",
+            "LimboStageFlag_down",
+            "LimboStageFlag"
+        ]
+    },
+    "LimboStageFlag_up": {
+        "doc": "判断当前位于深眠片段上半部分",
+        "recognition": "OCR",
+        "expected": "0/6",
+        "roi": [
+            1028,
+            101,
+            66,
+            36
+        ],
+        "only_rec": true,
+        "target": [
+            681,
+            654,
+            85,
+            43
+        ],
+        "action": "Click",
+        "next": [
+            "LimboStageLightest_1",
+            "LimboStarsMainFlag"
+        ]
+    },
+    "LimboStageFlag_down": {
+        "doc": "判断当前位于深眠片段下半部分",
+        "recognition": "OCR",
+        "expected": "0/6",
+        "roi": [
+            1028,
+            101,
+            66,
+            36
+        ],
+        "only_rec": true,
+        "inverse": true,
+        "target": [
+            681,
+            707,
+            85,
+            43
+        ],
+        "action": "Click",
+        "next": [
+            "LimboStageLightest_2",
+            "LimboFinish",
+            "LimboStarsMainFlag"
         ]
     },
     "LimboStageLightest_1": {
@@ -215,10 +283,10 @@
         ],
         "action": "Click",
         "target": [
-            840,
-            406,
-            48,
-            30
+            799,
+            404,
+            127,
+            32
         ],
         "next": [
             "LimboAction_1",
@@ -354,10 +422,10 @@
         ],
         "action": "Click",
         "target": [
-            837,
+            798,
             463,
-            48,
-            35
+            128,
+            33
         ],
         "next": [
             "LimboAction_2",
