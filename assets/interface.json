@@ -48,9 +48,11 @@
             "entry": "Psychube"
         },
         {
-            "name": "自动深眠（配置一二队后再运行）",
+            "name": "自动深眠",
             "entry": "Limbo",
             "option": [
+                "上半编队",
+                "下半编队(不要和上半编队重复)",
                 "仅领取每周浅眠域奖励"
             ]
         },
@@ -1070,6 +1072,118 @@
                         },
                         "StageDifficulty": {
                             "next": "ActivityStageDifficulty"
+                        }
+                    }
+                }
+            ]
+        },
+        "上半编队": {
+            "cases": [
+                {
+                    "name": "一",
+                    "pipeline_override": {
+                        "LimboTeamSelection_11": {
+                            "target": [
+                                799,
+                                404,
+                                127,
+                                32
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "二",
+                    "pipeline_override": {
+                        "LimboTeamSelection_11": {
+                            "target": [
+                                798,
+                                463,
+                                128,
+                                33
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "三",
+                    "pipeline_override": {
+                        "LimboTeamSelection_11": {
+                            "target": [
+                                797,
+                                522,
+                                129,
+                                34
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "四",
+                    "pipeline_override": {
+                        "LimboTeamSelection_11": {
+                            "target": [
+                                795,
+                                580,
+                                130,
+                                34
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "下半编队(不要和上半编队重复)": {
+            "cases": [
+                {
+                    "name": "一",
+                    "pipeline_override": {
+                        "LimboTeamSelection_22": {
+                            "target": [
+                                799,
+                                404,
+                                127,
+                                32
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "二",
+                    "pipeline_override": {
+                        "LimboTeamSelection_22": {
+                            "target": [
+                                798,
+                                463,
+                                128,
+                                33
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "三",
+                    "pipeline_override": {
+                        "LimboTeamSelection_22": {
+                            "target": [
+                                797,
+                                522,
+                                129,
+                                34
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "四",
+                    "pipeline_override": {
+                        "LimboTeamSelection_22": {
+                            "target": [
+                                795,
+                                580,
+                                130,
+                                34
+                            ]
                         }
                     }
                 }
