@@ -42,6 +42,17 @@
             "CollectMailAwards"
         ]
     },
+    "ObtainedAwards": {
+        "recognition": "TemplateMatch",
+        "template": "Awards/ObtainedAwards.png",
+        "roi": [
+            524,
+            62,
+            232,
+            158
+        ],
+        "action": "Click"
+    },
     "Sub_ObtainedAwards": {
         "is_sub": true,
         "recognition": "TemplateMatch",
