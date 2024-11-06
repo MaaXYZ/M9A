@@ -1136,19 +1136,6 @@
         "下半编队(不要和上半编队重复)": {
             "cases": [
                 {
-                    "name": "一",
-                    "pipeline_override": {
-                        "LimboTeamSelection_22": {
-                            "target": [
-                                799,
-                                404,
-                                127,
-                                32
-                            ]
-                        }
-                    }
-                },
-                {
                     "name": "二",
                     "pipeline_override": {
                         "LimboTeamSelection_22": {
@@ -1183,6 +1170,19 @@
                                 580,
                                 130,
                                 34
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "一",
+                    "pipeline_override": {
+                        "LimboTeamSelection_22": {
+                            "target": [
+                                799,
+                                404,
+                                127,
+                                32
                             ]
                         }
                     }
