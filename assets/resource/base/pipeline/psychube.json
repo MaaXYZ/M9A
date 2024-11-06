@@ -114,7 +114,8 @@
         "action": "Click",
         "next": [
             "PsychubeSetReplaysTimes",
-            "StartReplay"
+            "StartReplay",
+            "PsychubeSwitchToReplay"
         ]
     },
     "PsychubeSetReplaysTimes": {

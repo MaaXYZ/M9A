@@ -1,5 +1,6 @@
 {
     "Limbo": {
+        "doc": "深眠任务开始",
         "next": [
             "LimboEnterTheShow",
             "ArtificialSleepwalking",
@@ -9,6 +10,7 @@
         ]
     },
     "LimboEnterTheShow": {
+        "doc": "由主界面点击入场",
         "recognition": "TemplateMatch",
         "template": "Limbo/EnterTheShow.png",
         "roi": [
@@ -23,6 +25,7 @@
         ]
     },
     "ArtificialSleepwalking": {
+        "doc": "入场后，进入人工梦游",
         "recognition": "OCR",
         "expected": "人工梦游",
         "roi": [
@@ -32,7 +35,7 @@
             170
         ],
         "action": "Click",
-        "post_wait_freezes": 100,
+        "post_wait_freezes": 300,
         "next": [
             "ArtificialSleepwalkingAwards",
             "LimboEntry",
@@ -41,6 +44,7 @@
         ]
     },
     "ArtificialSleepwalkingAwards": {
+        "doc": "人工梦游主界面，点击全部领取",
         "recognition": "TemplateMatch",
         "template": "Limbo/ArtificialSleepwalkingAwards.png",
         "roi": [
@@ -75,7 +79,7 @@
         ]
     },
     "LimboEntry": {
-        "enabled_doc": "正在写",
+        "doc": "人工梦游主界面，点击挑战，进入深眠域",
         "recognition": "TemplateMatch",
         "template": "Limbo/LimboEntry.png",
         "roi": [
@@ -90,6 +94,7 @@
         ]
     },
     "LimboStageRightest": {
+        "doc": "深眠域，点击最右侧的深眠片段",
         "recognition": "OCR",
         "expected": "深眠片段",
         "roi": [
@@ -115,16 +120,85 @@
         ]
     },
     "LimboStageFlag": {
+        "doc": "判断当前位于深眠片段",
         "recognition": "OCR",
-        "expected": "梦境重置",
+        "expected": "本层酬劳",
         "roi": [
-            0,
-            586,
-            194,
-            134
+            146,
+            676,
+            67,
+            21
         ],
+        "only_rec": true,
+        "action": "Click",
         "next": [
-            "LimboStageLightest_1"
+            "LimboStarsMainFlag",
+            "LimboStageFlag"
+        ]
+    },
+    "LimboStarsMainFlag": {
+        "doc": "判断当前位于深眠试验酬劳界面,后续进行上下半判断",
+        "recognition": "OCR",
+        "expected": "深眠试验",
+        "roi": [
+            161,
+            96,
+            163,
+            43
+        ],
+        "only_rec": true,
+        "next": [
+            "LimboStageFlag_up",
+            "LimboStageFlag_down",
+            "LimboStageFlag"
+        ]
+    },
+    "LimboStageFlag_up": {
+        "doc": "判断当前位于深眠片段上半部分",
+        "recognition": "OCR",
+        "expected": "0/6",
+        "roi": [
+            1028,
+            101,
+            66,
+            36
+        ],
+        "only_rec": true,
+        "target": [
+            681,
+            654,
+            85,
+            43
+        ],
+        "action": "Click",
+        "next": [
+            "LimboStageLightest_1",
+            "LimboStarsMainFlag"
+        ]
+    },
+    "LimboStageFlag_down": {
+        "doc": "判断当前位于深眠片段下半部分",
+        "recognition": "OCR",
+        "expected": "0/6",
+        "roi": [
+            1028,
+            101,
+            66,
+            36
+        ],
+        "only_rec": true,
+        "inverse": true,
+        "target": [
+            681,
+            707,
+            85,
+            43
+        ],
+        "action": "Click",
+        "next": [
+            "LimboStageLightest_2",
+            "LimboFinish",
+            "LimboStarsMainFlag"
         ]
     },
     "LimboStageLightest_1": {
@@ -164,6 +238,7 @@
         ]
     },
     "LimboActionFlag_1": {
+        "doc": "进入深眠战斗",
         "recognition": "OCR",
         "expected": "开始行动",
         "roi": [
@@ -178,6 +253,7 @@
         ]
     },
     "LimboTeamSelection_1": {
+        "doc": "深眠，选择队伍1，列表未展开",
         "recognition": "TemplateMatch",
         "template": "Limbo/LimboTeamList_Off.png",
         "threshold": 0.9,
@@ -194,6 +270,7 @@
         ]
     },
     "LimboTeamSelection_11": {
+        "doc": "深眠，选择队伍1，列表已展开，选择队伍1",
         "recognition": "TemplateMatch",
         "template": "Limbo/LimboTeamList_Open.png",
         "threshold": 0.9,
@@ -205,10 +282,10 @@
         ],
         "action": "Click",
         "target": [
-            840,
-            406,
-            48,
-            30
+            799,
+            404,
+            127,
+            32
         ],
         "next": [
             "LimboAction_1",
@@ -227,15 +304,32 @@
         "timeout": 2000000,
         "action": "Click",
         "next": [
+            "LimboFailed",
             "LimboVictory_1",
             "LimboAction_1"
-        ]
+        ],
+        "rate_limit": 5000
     },
-    "LimboVictory_1": {
+    "LimboFailed": {
+        "doc": "深眠战斗失败",
         "recognition": "OCR",
         "expected": [
-            "战斗胜利",
             "战斗失败"
+        ],
+        "roi": [
+            490,
+            115,
+            289,
+            78
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "LimboVictory_1": {
+        "doc": "深眠战斗成功_1",
+        "recognition": "OCR",
+        "expected": [
+            "战斗胜利"
         ],
         "roi": [
             678,
@@ -327,10 +421,10 @@
         ],
         "action": "Click",
         "target": [
-            837,
+            798,
             463,
-            48,
-            35
+            128,
+            33
         ],
         "next": [
             "LimboAction_2",
@@ -349,15 +443,16 @@
         "timeout": 2000000,
         "action": "Click",
         "next": [
+            "LimboFailed",
             "LimboVictory_2",
             "LimboAction_2"
-        ]
+        ],
+        "rate_limit": 5000
     },
     "LimboVictory_2": {
         "recognition": "OCR",
         "expected": [
-            "战斗胜利",
-            "战斗失败"
+            "战斗胜利"
         ],
         "roi": [
             678,
@@ -372,6 +467,7 @@
         ]
     },
     "LimboFinish": {
+        "doc": "当前深眠片段战斗完成",
         "recognition": "TemplateMatch",
         "template": "Limbo/LimboFinish.png",
         "roi": [
@@ -388,6 +484,7 @@
         ]
     },
     "LimboAwards": {
+        "doc": "深眠片段，存在本层酬劳",
         "recognition": "TemplateMatch",
         "template": "Limbo/LimboAwards.png",
         "roi": [
@@ -442,6 +539,7 @@
         ]
     },
     "LimboEnd": {
+        "doc": "深眠片段·Ⅵ进度100%，任务结束",
         "recognition": "TemplateMatch",
         "template": "Limbo/LimboEnd.png",
         "threshold": 0.9,

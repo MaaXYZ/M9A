@@ -714,14 +714,17 @@
     "StartReplay": {
         "recognition": "OCR",
         "expected": [
-            "复现"
+            "级",
+            "复",
+            "现"
         ],
         "roi": [
-            958,
-            537,
-            235,
-            136
+            1030,
+            634,
+            139,
+            33
         ],
+        "only_rec": true,
         "action": "Click",
         "next": [
             "Replaying",
