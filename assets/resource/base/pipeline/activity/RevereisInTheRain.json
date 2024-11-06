@@ -20,7 +20,8 @@
             151,
             148
         ],
-        "action": "Click"
+        "action": "Click",
+        "post_wait_freezes": 300
     },
     "RevereisInTheRainMainFlag": {
         "doc": "判断位于雨中悬想主页面",
