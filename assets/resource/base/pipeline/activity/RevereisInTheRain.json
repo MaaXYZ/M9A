@@ -2,12 +2,29 @@
     "RevereisInTheRain": {
         "doc": "常驻活动：雨中悬想",
         "next": [
+            "RevereisInTheRainMainFlag",
+            "RevereisInTheRainHomeFlag"
+        ],
+        "interrupt": [
+            "StartUp"
+        ]
+    },
+    "RevereisInTheRainHomeFlag": {
+        "doc": "判断位于全局主页面",
+        "recognition": "TemplateMatch",
+        "template": "Combat/EnterTheShow.png",
+        "roi": [
+            926,
+            221,
+            229,
+            153
+        ],
+        "next": [
             "RevereisInTheRainMainFlag"
         ],
         "interrupt": [
             "RevereisInTheRainMainEntry",
-            "EnterTheShow",
-            "StartUp"
+            "EnterTheShow"
         ]
     },
     "RevereisInTheRainMainEntry": {
