@@ -28,14 +28,7 @@
 - 对于绝大部分用户，请下载 `M9A-win-x86_64-vXXX.zip`
 - 若确定自己的电脑是 arm 架构，请下载 `M9A-win-aarch64-vXXX.zip`  
   _请注意！Windows 的电脑几乎全都是 x86_64 的，可能占 99.999%，除非你非常确定自己是 arm，否则别下这个！_
-- 解压后运行 `MaaPiCli.exe` 即可
-
-### 图形化界面
-
-目前暂无正式版 GUI，但有以下由社区大佬们贡献的 GUI 项目，欢迎使用！
-
-- [MFAWPF](https://github.com/SweetSmellFox/MFAWPF) 本项目是一个基于WPF框架开发的用户界面，旨在提供类似于MaaPiCli的功能
-- 目前MFAWPF已经集成到 `M9A-win-x86_64-vXXX.zip`中，解压后运行 `MFAWPF.exe` 即可
+- 解压后运行 `MFAWPF.exe`（图形化界面）或 `MaaPiCli.exe`（命令行）即可
 
 ### macOS
 
