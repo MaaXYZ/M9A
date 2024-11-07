@@ -111,10 +111,6 @@
                     "next": "OutsideDeduction"
                 }
             }
-        },
-        {
-            "name": "肉鸽：山麓的回音（已结束）",
-            "entry": "EchoesinInTheMountain"
         }
     ],
     "recognizer": {},
