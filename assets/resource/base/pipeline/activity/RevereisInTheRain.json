@@ -1,0 +1,419 @@
+{
+    "RevereisInTheRain": {
+        "doc": "常驻活动：雨中悬想",
+        "next": [
+            "RevereisInTheRainMainFlag",
+            "RevereisInTheRainHomeFlag"
+        ],
+        "interrupt": [
+            "StartUp"
+        ]
+    },
+    "RevereisInTheRainHomeFlag": {
+        "doc": "判断位于全局主页面",
+        "recognition": "TemplateMatch",
+        "template": "Combat/EnterTheShow.png",
+        "roi": [
+            926,
+            221,
+            229,
+            153
+        ],
+        "next": [
+            "RevereisInTheRainMainFlag"
+        ],
+        "interrupt": [
+            "RevereisInTheRainMainEntry",
+            "EnterTheShow"
+        ]
+    },
+    "RevereisInTheRainMainEntry": {
+        "doc": "进入雨中悬想主页面",
+        "recognition": "TemplateMatch",
+        "template": "RevereisInTheRain/RevereisInTheRainMainEntry.png",
+        "roi": [
+            1097,
+            564,
+            151,
+            148
+        ],
+        "action": "Click",
+        "post_wait_freezes": 300
+    },
+    "RevereisInTheRainMainFlag": {
+        "doc": "判断位于雨中悬想主页面",
+        "recognition": "OCR",
+        "expected": "迷思原型",
+        "roi": [
+            108,
+            499,
+            94,
+            26
+        ],
+        "only_rec": true,
+        "next": [
+            "DepthsOfMythEnd",
+            "DepthsOfMythMainFlag"
+        ],
+        "interrupt": [
+            "DepthsOfMythEntry",
+            "DepthsOfMythLoading"
+        ]
+    },
+    "DepthsOfMythLoading": {
+        "doc": "等待进入迷思海",
+        "recognition": "OCR",
+        "expected": [
+            "透光层",
+            "朦胧层",
+            "微光层",
+            "晦暗层",
+            "无光层"
+        ],
+        "roi": [
+            534,
+            294,
+            213,
+            70
+        ],
+        "only_rec": true,
+        "post_wait_freezes": 300
+    },
+    "DepthsOfMythEntry": {
+        "doc": "进入迷思海",
+        "recognition": "TemplateMatch",
+        "template": "RevereisInTheRain/DepthsOfMythEntry.png",
+        "roi": [
+            921,
+            484,
+            248,
+            161
+        ],
+        "action": "Click",
+        "post_wait_freezes": 300
+    },
+    "DepthsOfMythEnd": {
+        "doc": "迷思海“寻思”耗尽（雨中悬想主页面）",
+        "recognition": "OCR",
+        "expected": "0/8",
+        "roi": [
+            1101,
+            443,
+            51,
+            25
+        ],
+        "only_rec": true
+    },
+    "DepthsOfMythMainFlag": {
+        "doc": "判断位于迷思海主页面",
+        "recognition": "TemplateMatch",
+        "template": "RevereisInTheRain/TranceButton.png",
+        "roi": [
+            914,
+            0,
+            156,
+            102
+        ],
+        "next": [
+            "TranceEnd",
+            "TranceMainFlag"
+        ],
+        "interrupt": [
+            "TranceButtonClick"
+        ]
+    },
+    "TranceButtonClick": {
+        "doc": "点击“寻思”按钮",
+        "recognition": "TemplateMatch",
+        "template": "RevereisInTheRain/TranceButton.png",
+        "roi": [
+            914,
+            0,
+            156,
+            102
+        ],
+        "action": "Click"
+    },
+    "TranceEnd": {
+        "doc": "迷思海“寻思”耗尽（迷思海主页面）",
+        "recognition": "OCR",
+        "expected": "0/",
+        "roi": [
+            1132,
+            24,
+            39,
+            21
+        ],
+        "only_rec": true
+    },
+    "TranceMainFlag": {
+        "doc": "判断位于迷思海“寻思”页面",
+        "recognition": "OCR",
+        "expected": "寻思",
+        "roi": [
+            606,
+            117,
+            71,
+            36
+        ],
+        "only_rec": true,
+        "next": [
+            "TranceEnd_1"
+        ],
+        "interrupt": [
+            "ObtainedAwards",
+            "Trancele1",
+            "Trancele2",
+            "Trancele3",
+            "Tranceme4"
+        ]
+    },
+    "TrancePlay": {
+        "doc": "寻思寻思",
+        "recognition": "OCR",
+        "expected": "寻思",
+        "roi": [
+            1040,
+            461,
+            123,
+            33
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "Trancele1": {
+        "doc": "“寻思”x1（寻思小于等于1）",
+        "recognition": "OCR",
+        "expected": "1/",
+        "roi": [
+            1103,
+            402,
+            41,
+            21
+        ],
+        "only_rec": true,
+        "next": [
+            "TrancePlayTimesX1"
+        ],
+        "interrupt": [
+            "TranceSetPlayTimesX1",
+            "TranceOpenSetPlayTimes"
+        ]
+    },
+    "Trancele2": {
+        "doc": "“寻思”x2",
+        "recognition": "OCR",
+        "expected": "2/",
+        "roi": [
+            1103,
+            402,
+            41,
+            21
+        ],
+        "only_rec": true,
+        "next": [
+            "TrancePlayTimesX2"
+        ],
+        "interrupt": [
+            "TranceSetPlayTimesX2",
+            "TranceOpenSetPlayTimes"
+        ]
+    },
+    "Trancele3": {
+        "doc": "“寻思”x3",
+        "recognition": "OCR",
+        "expected": "3/",
+        "roi": [
+            1103,
+            402,
+            41,
+            21
+        ],
+        "only_rec": true,
+        "next": [
+            "TrancePlayTimesX3"
+        ],
+        "interrupt": [
+            "TranceSetPlayTimesX3",
+            "TranceOpenSetPlayTimes"
+        ]
+    },
+    "Tranceme4": {
+        "doc": "“寻思”x4-8",
+        "recognition": "OCR",
+        "expected": "[4-8]/",
+        "roi": [
+            1103,
+            402,
+            41,
+            21
+        ],
+        "only_rec": true,
+        "next": [
+            "TrancePlayTimesX4"
+        ],
+        "interrupt": [
+            "TranceSetPlayTimesX4",
+            "TranceOpenSetPlayTimes"
+        ]
+    },
+    "TranceSetPlayTimesX1": {
+        "doc": "设置寻思次数X1",
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/SetReplaysTimesX1.png",
+            "Combat/SetReplaysTimesX1_selected.png"
+        ],
+        "roi": [
+            753,
+            360,
+            143,
+            128
+        ],
+        "action": "Click"
+    },
+    "TranceSetPlayTimesX2": {
+        "doc": "设置寻思次数X2",
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/SetReplaysTimesX2.png",
+            "Combat/SetReplaysTimesX2_selected.png"
+        ],
+        "roi": [
+            756,
+            299,
+            142,
+            127
+        ],
+        "action": "Click"
+    },
+    "TranceSetPlayTimesX3": {
+        "doc": "设置寻思次数X3",
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/SetReplaysTimesX3.png",
+            "Combat/SetReplaysTimesX3_selected.png"
+        ],
+        "roi": [
+            760,
+            235,
+            141,
+            126
+        ],
+        "action": "Click"
+    },
+    "TranceSetPlayTimesX4": {
+        "doc": "设置寻思次数X4",
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat/SetReplaysTimesX4.png",
+            "Combat/SetReplaysTimesX4_selected.png"
+        ],
+        "roi": [
+            758,
+            177,
+            140,
+            125
+        ],
+        "action": "Click"
+    },
+    "TranceOpenSetPlayTimes": {
+        "doc": "打开设置寻思次数",
+        "recognition": "TemplateMatch",
+        "template": "Combat/OpenReplaysTimes.png",
+        "roi": [
+            793,
+            406,
+            125,
+            151
+        ],
+        "action": "Click"
+    },
+    "TrancePlayTimesX1": {
+        "doc": "当前预消耗“寻思”X1",
+        "recognition": "TemplateMatch",
+        "template": "RevereisInTheRain/PlayTimesX1.png",
+        "roi": [
+            743,
+            418,
+            147,
+            126
+        ],
+        "next": [
+            "TrancePlay"
+        ]
+    },
+    "TrancePlayTimesX2": {
+        "doc": "当前预消耗“寻思”X2",
+        "recognition": "TemplateMatch",
+        "template": "RevereisInTheRain/PlayTimesX2.png",
+        "roi": [
+            743,
+            418,
+            147,
+            126
+        ],
+        "next": [
+            "TrancePlay"
+        ]
+    },
+    "TrancePlayTimesX3": {
+        "doc": "当前预消耗“寻思”X3",
+        "recognition": "TemplateMatch",
+        "template": "RevereisInTheRain/PlayTimesX3.png",
+        "roi": [
+            743,
+            418,
+            147,
+            126
+        ],
+        "next": [
+            "TrancePlay"
+        ]
+    },
+    "TrancePlayTimesX4": {
+        "doc": "当前预消耗“寻思”X4",
+        "recognition": "TemplateMatch",
+        "template": "RevereisInTheRain/PlayTimesX4.png",
+        "roi": [
+            743,
+            418,
+            147,
+            126
+        ],
+        "next": [
+            "TrancePlay"
+        ]
+    },
+    "TranceEnd_1": {
+        "doc": "迷思海“寻思”耗尽（迷思海“寻思”页面）",
+        "recognition": "OCR",
+        "expected": "0/8",
+        "roi": [
+            1103,
+            402,
+            40,
+            22
+        ],
+        "only_rec": true,
+        "post_wait_freezes": 300,
+        "next": [
+            "TranceClose"
+        ],
+        "interrupt": [
+            "ObtainedAwards"
+        ]
+    },
+    "TranceClose": {
+        "doc": "关闭迷思海“寻思”页面",
+        "recognition": "TemplateMatch",
+        "template": "RevereisInTheRain/TranceClose.png",
+        "roi": [
+            1162,
+            0,
+            118,
+            119
+        ],
+        "action": "Click"
+    }
+}
