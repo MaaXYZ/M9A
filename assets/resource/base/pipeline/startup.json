@@ -186,6 +186,20 @@
             64
         ]
     },
+    "BackButton": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "StartUp/BackButton.png",
+            "StartUp/BackButton_White.png"
+        ],
+        "roi": [
+            0,
+            0,
+            134,
+            138
+        ],
+        "action": "Click"
+    },
     "Sub_BackButton": {
         "is_sub": true,
         "recognition": "TemplateMatch",
@@ -198,6 +212,20 @@
             0,
             134,
             138
+        ],
+        "action": "Click"
+    },
+    "HomeButton": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "StartUp/HomeButton.png",
+            "StartUp/HomeButton_White.png"
+        ],
+        "roi": [
+            70,
+            0,
+            144,
+            144
         ],
         "action": "Click"
     },
