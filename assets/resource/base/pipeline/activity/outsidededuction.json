@@ -266,11 +266,12 @@
     "SOD_Quickformation": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Quickformation.png",
+        "threshold": 0.95,
         "roi": [
-            542,
-            17,
-            31,
-            45
+            499,
+            0,
+            212,
+            107
         ],
         "action": "Click",
         "next": [
@@ -281,11 +282,12 @@
     "SOD_Quickformation_On": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Quickformation_On.png",
+        "threshold": 0.9,
         "roi": [
-            542,
-            17,
-            31,
-            45
+            490,
+            0,
+            140,
+            108
         ],
         "next": [
             "SOD_ArcanistAdd_1"
