@@ -1,21 +1,21 @@
 {
-    "RevereisInTheRain": {
+    "ReveriesInTheRain": {
         "doc": "常驻活动：雨中悬想",
         "next": [
-            "RevereisInTheRainMainFlag"
+            "ReveriesInTheRainMainFlag"
         ],
         "interrupt": [
-            "RevereisInTheRainMainEntry",
+            "ReveriesInTheRainMainEntry",
             "EnterTheShow",
             "HomeButton",
             "BackButton",
             "StartUp"
         ]
     },
-    "RevereisInTheRainMainEntry": {
+    "ReveriesInTheRainMainEntry": {
         "doc": "进入雨中悬想主页面",
         "recognition": "TemplateMatch",
-        "template": "RevereisInTheRain/RevereisInTheRainMainEntry.png",
+        "template": "ReveriesInTheRain/ReveriesInTheRainMainEntry.png",
         "roi": [
             1097,
             564,
@@ -25,7 +25,7 @@
         "action": "Click",
         "post_wait_freezes": 300
     },
-    "RevereisInTheRainMainFlag": {
+    "ReveriesInTheRainMainFlag": {
         "doc": "判断位于雨中悬想主页面",
         "recognition": "OCR",
         "expected": "迷思原型",
@@ -67,7 +67,7 @@
     "DepthsOfMythEntry": {
         "doc": "进入迷思海",
         "recognition": "TemplateMatch",
-        "template": "RevereisInTheRain/DepthsOfMythEntry.png",
+        "template": "ReveriesInTheRain/DepthsOfMythEntry.png",
         "roi": [
             921,
             484,
@@ -92,7 +92,7 @@
     "DepthsOfMythMainFlag": {
         "doc": "判断位于迷思海主页面",
         "recognition": "TemplateMatch",
-        "template": "RevereisInTheRain/TranceButton.png",
+        "template": "ReveriesInTheRain/TranceButton.png",
         "roi": [
             914,
             0,
@@ -110,7 +110,7 @@
     "TranceButtonClick": {
         "doc": "点击“寻思”按钮",
         "recognition": "TemplateMatch",
-        "template": "RevereisInTheRain/TranceButton.png",
+        "template": "ReveriesInTheRain/TranceButton.png",
         "roi": [
             914,
             0,
@@ -317,7 +317,7 @@
     "TrancePlayTimesX1": {
         "doc": "当前预消耗“寻思”X1",
         "recognition": "TemplateMatch",
-        "template": "RevereisInTheRain/PlayTimesX1.png",
+        "template": "ReveriesInTheRain/PlayTimesX1.png",
         "roi": [
             743,
             418,
@@ -331,7 +331,7 @@
     "TrancePlayTimesX2": {
         "doc": "当前预消耗“寻思”X2",
         "recognition": "TemplateMatch",
-        "template": "RevereisInTheRain/PlayTimesX2.png",
+        "template": "ReveriesInTheRain/PlayTimesX2.png",
         "roi": [
             743,
             418,
@@ -345,7 +345,7 @@
     "TrancePlayTimesX3": {
         "doc": "当前预消耗“寻思”X3",
         "recognition": "TemplateMatch",
-        "template": "RevereisInTheRain/PlayTimesX3.png",
+        "template": "ReveriesInTheRain/PlayTimesX3.png",
         "roi": [
             743,
             418,
@@ -359,7 +359,7 @@
     "TrancePlayTimesX4": {
         "doc": "当前预消耗“寻思”X4",
         "recognition": "TemplateMatch",
-        "template": "RevereisInTheRain/PlayTimesX4.png",
+        "template": "ReveriesInTheRain/PlayTimesX4.png",
         "roi": [
             743,
             418,
@@ -392,7 +392,7 @@
     "TranceClose": {
         "doc": "关闭迷思海“寻思”页面",
         "recognition": "TemplateMatch",
-        "template": "RevereisInTheRain/TranceClose.png",
+        "template": "ReveriesInTheRain/TranceClose.png",
         "roi": [
             1162,
             0,
