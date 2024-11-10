@@ -1,12 +1,15 @@
 {
     "SeriesOfDusks": {
         "next": [
-            "EnterTheShow",
-            "SODStop",
-            "SODStart",
+            "SOD_MENU",
+            "SOD_Main"
+        ],
+        "interrupt": [
             "OutsideDeduction",
-            "SOD_Main",
-            "Sub_StartUp"
+            "EnterTheShow",
+            "HomeButton",
+            "BackButton",
+            "StartUp"
         ]
     },
     "OutsideDeduction": {
@@ -18,11 +21,21 @@
             811,
             104
         ],
-        "action": "Click",
+        "action": "Click"
+    },
+    "SOD_MENU": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_MENU.png",
+        "roi": [
+            196,
+            169,
+            355,
+            161
+        ],
         "next": [
             "SODStop",
             "SODStart",
-            "OutsideDeduction"
+            "SOD_Main"
         ]
     },
     "SODStop": {
