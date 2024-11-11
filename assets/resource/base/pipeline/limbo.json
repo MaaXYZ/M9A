@@ -75,6 +75,7 @@
         ],
         "action": "Click",
         "next": [
+            "LimboEnd",
             "LimboStageRightest"
         ]
     },
@@ -99,7 +100,6 @@
         ],
         "post_wait_freezes": 1,
         "next": [
-            "LimboEnd",
             "LimboStageRightest",
             "LimboStageFlag"
         ]
