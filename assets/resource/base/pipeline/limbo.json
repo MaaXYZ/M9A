@@ -2,27 +2,15 @@
     "Limbo": {
         "doc": "深眠任务开始",
         "next": [
-            "LimboEnterTheShow",
-            "ArtificialSleepwalking",
             "LimboEntry",
-            "LimboStageRightest",
-            "Sub_StartUp"
-        ]
-    },
-    "LimboEnterTheShow": {
-        "doc": "由主界面点击入场",
-        "recognition": "TemplateMatch",
-        "template": "Limbo/EnterTheShow.png",
-        "roi": [
-            926,
-            221,
-            229,
-            153
+            "LimboStageRightest"
         ],
-        "action": "Click",
-        "next": [
+        "interrupt": [
+            "EnterTheShow",
             "ArtificialSleepwalking",
-            "LimboEnterTheShow"
+            "HomeButton",
+            "BackButton",
+            "StartUp"
         ]
     },
     "ArtificialSleepwalking": {
@@ -36,13 +24,7 @@
             170
         ],
         "action": "Click",
-        "post_wait_freezes": 300,
-        "next": [
-            "ArtificialSleepwalkingAwards",
-            "LimboEntry",
-            "HomeFlag",
-            "Sub_StartUp"
-        ]
+        "post_wait_freezes": 300
     },
     "ArtificialSleepwalkingAwards": {
         "doc": "人工梦游主界面，点击全部领取",
@@ -56,10 +38,12 @@
         ],
         "action": "Click",
         "next": [
-            "Sub_ObtainedAwards",
-            "ArtificialSleepwalkingAwards",
             "ArtificialSleepwalkingCloseAwards",
-            "LimboEntry"
+            "LimboEntry",
+            "ArtificialSleepwalkingAwards"
+        ],
+        "interrupt": [
+            "ObtainedAwards"
         ]
     },
     "ArtificialSleepwalkingCloseAwards": {
