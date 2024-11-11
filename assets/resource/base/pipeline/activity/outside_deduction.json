@@ -1737,6 +1737,7 @@
             64
         ],
         "timeout": 40000,
+        "post_delay": 3000,
         "next": [
             "SOD_CombatVictory",
             "Sub_SOD_Dialog_1",
