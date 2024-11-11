@@ -21,7 +21,8 @@
         ],
         "action": "Click",
         "next": [
-            "ArtificialSleepwalking"
+            "ArtificialSleepwalking",
+            "LimboEnterTheShow"
         ]
     },
     "ArtificialSleepwalking": {
