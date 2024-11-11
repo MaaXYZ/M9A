@@ -21,7 +21,8 @@
             811,
             104
         ],
-        "action": "Click"
+        "action": "Click",
+        "post_wait_freezes": 300
     },
     "SOD_MENU": {
         "recognition": "TemplateMatch",
