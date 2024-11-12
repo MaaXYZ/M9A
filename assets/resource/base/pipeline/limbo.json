@@ -2,10 +2,14 @@
     "Limbo": {
         "doc": "深眠任务开始",
         "next": [
-            "LimboEntry",
+            "LimboEnd",
             "LimboStageRightest"
         ],
         "interrupt": [
+            "LimboEntry",
+            "ObtainedAwards",
+            "ArtificialSleepwalkingCloseAwards",
+            "ArtificialSleepwalkingAwards",
             "EnterTheShow",
             "ArtificialSleepwalking",
             "HomeButton",
@@ -36,15 +40,7 @@
             214,
             189
         ],
-        "action": "Click",
-        "next": [
-            "ArtificialSleepwalkingCloseAwards",
-            "LimboEntry",
-            "ArtificialSleepwalkingAwards"
-        ],
-        "interrupt": [
-            "ObtainedAwards"
-        ]
+        "action": "Click"
     },
     "ArtificialSleepwalkingCloseAwards": {
         "recognition": "TemplateMatch",
@@ -55,13 +51,7 @@
             248,
             142
         ],
-        "action": "Click",
-        "next": [
-            "ArtificialSleepwalkingCloseAwards",
-            "LimboEntry",
-            "HomeFlag",
-            "Sub_StartUp"
-        ]
+        "action": "Click"
     },
     "LimboEntry": {
         "doc": "人工梦游主界面，点击挑战，进入深眠域",
@@ -74,10 +64,7 @@
             162
         ],
         "action": "Click",
-        "next": [
-            "LimboEnd",
-            "LimboStageRightest"
-        ]
+        "post_wait_freezes": 500
     },
     "LimboStageRightest": {
         "doc": "深眠域，点击最右侧的深眠片段",
@@ -98,10 +85,10 @@
             -120,
             50
         ],
-        "post_wait_freezes": 1,
+        "post_wait_freezes": 300,
         "next": [
-            "LimboStageRightest",
-            "LimboStageFlag"
+            "LimboStageFlag",
+            "LimboStageRightest"
         ]
     },
     "LimboStageFlag": {
