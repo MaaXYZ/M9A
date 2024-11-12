@@ -489,7 +489,17 @@
         "action": "Click",
         "next": [
             "LimboAwards",
-            "LimboFinish"
+            "LimboNoAwards"
+        ]
+    },
+    "LimboNoAwards": {
+        "doc": "当前深眠片段战斗无未领取奖励",
+        "next": [
+            "LimboEnd",
+            "LimboStageRightest"
+        ],
+        "interrupt": [
+            "BackButton"
         ]
     },
     "LimboAwards": {
