@@ -19,6 +19,27 @@
             "Sub_Start1999"
         ]
     },
+    "ReturnMain": {
+        "doc": "返回主界面（专供任务开始前使用）",
+        "next": [
+            "HomeFlag",
+            "Sub_HomeButton",
+            "Sub_BackButton",
+            "Sub_HomeLoading",
+            "Sub_ObtainedAwards",
+            "Sub_AccumulatedSignIn",
+            "Sub_BirthdayReward",
+            "Sub_Reward",
+            "Sub_CloseDuringFestivalDipaRewardPage",
+            "StartGame",
+            "CloseAnnouncement",
+            "Download",
+            "GameLoading",
+            "BluePochLogo",
+            "Disclaimer",
+            "Stop"
+        ]
+    },
     "Sub_StartUp": {
         "is_sub": true,
         "next": [

@@ -10,7 +10,7 @@
             "EnterTheActivityMain",
             "ActivityMainSelectAnecdote",
             "ObtainedAwards",
-            "StartUp"
+            "ReturnMain"
         ]
     },
     "ActivityMainFlag": {

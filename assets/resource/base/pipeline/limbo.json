@@ -14,7 +14,7 @@
             "ArtificialSleepwalking",
             "HomeButton",
             "BackButton",
-            "StartUp"
+            "ReturnMain"
         ]
     },
     "ArtificialSleepwalking": {
