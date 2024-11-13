@@ -4,10 +4,10 @@
         "next": [
             "ActivityMainFlag",
             "ActivityMainAnecdoteFlag",
-            "AnecdoteMainFlag"
+            "AnecdoteMainFlag",
+            "EnterTheActivityMain"
         ],
         "interrupt": [
-            "EnterTheActivityMain",
             "ActivityMainSelectAnecdote",
             "ReturnMain"
         ]
@@ -589,6 +589,10 @@
             183
         ],
         "action": "Click",
-        "post_wait_freezes": 500
+        "post_wait_freezes": 300,
+        "next": [
+            "ActivityMainFlag",
+            "EnterTheActivityMain"
+        ]
     }
 }
