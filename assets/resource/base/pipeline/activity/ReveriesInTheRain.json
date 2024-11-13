@@ -7,8 +7,6 @@
         "interrupt": [
             "ReveriesInTheRainMainEntry",
             "EnterTheShow",
-            "HomeButton",
-            "BackButton",
             "ReturnMain"
         ]
     },
