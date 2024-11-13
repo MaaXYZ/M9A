@@ -92,7 +92,7 @@
         },
         {
             "name": "雨中悬想：迷思海（“寻思”每周扫荡）",
-            "entry": "RevereisInTheRain"
+            "entry": "ReveriesInTheRain"
         },
         {
             "name": "关闭游戏",
@@ -115,12 +115,7 @@
         },
         {
             "name": "局外演绎：黄昏的音序（勿挂资料片）",
-            "entry": "SeriesOfDusks",
-            "pipeline_override": {
-                "EnterTheShow": {
-                    "next": "OutsideDeduction"
-                }
-            }
+            "entry": "SeriesOfDusks"
         }
     ],
     "recognizer": {},

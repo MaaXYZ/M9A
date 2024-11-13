@@ -1,12 +1,15 @@
 {
     "SeriesOfDusks": {
         "next": [
-            "EnterTheShow",
-            "SODStop",
-            "SODStart",
+            "SOD_MENU",
+            "SOD_Main"
+        ],
+        "interrupt": [
             "OutsideDeduction",
-            "SOD_Main",
-            "Sub_StartUp"
+            "EnterTheShow",
+            "HomeButton",
+            "BackButton",
+            "StartUp"
         ]
     },
     "OutsideDeduction": {
@@ -19,10 +22,21 @@
             104
         ],
         "action": "Click",
+        "post_wait_freezes": 300
+    },
+    "SOD_MENU": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_MENU.png",
+        "roi": [
+            196,
+            169,
+            355,
+            161
+        ],
         "next": [
             "SODStop",
             "SODStart",
-            "OutsideDeduction"
+            "SOD_Main"
         ]
     },
     "SODStop": {
@@ -1723,6 +1737,7 @@
             64
         ],
         "timeout": 40000,
+        "post_delay": 3000,
         "next": [
             "SOD_CombatVictory",
             "Sub_SOD_Dialog_1",

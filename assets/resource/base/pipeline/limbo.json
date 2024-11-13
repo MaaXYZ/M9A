@@ -2,26 +2,19 @@
     "Limbo": {
         "doc": "深眠任务开始",
         "next": [
-            "LimboEnterTheShow",
-            "ArtificialSleepwalking",
-            "LimboEntry",
-            "LimboStageRightest",
-            "Sub_StartUp"
-        ]
-    },
-    "LimboEnterTheShow": {
-        "doc": "由主界面点击入场",
-        "recognition": "TemplateMatch",
-        "template": "Limbo/EnterTheShow.png",
-        "roi": [
-            926,
-            221,
-            229,
-            153
+            "LimboEnd",
+            "LimboStageRightest"
         ],
-        "action": "Click",
-        "next": [
-            "ArtificialSleepwalking"
+        "interrupt": [
+            "LimboEntry",
+            "ObtainedAwards",
+            "ArtificialSleepwalkingCloseAwards",
+            "ArtificialSleepwalkingAwards",
+            "EnterTheShow",
+            "ArtificialSleepwalking",
+            "HomeButton",
+            "BackButton",
+            "StartUp"
         ]
     },
     "ArtificialSleepwalking": {
@@ -35,13 +28,7 @@
             170
         ],
         "action": "Click",
-        "post_wait_freezes": 300,
-        "next": [
-            "ArtificialSleepwalkingAwards",
-            "LimboEntry",
-            "HomeFlag",
-            "Sub_StartUp"
-        ]
+        "post_wait_freezes": 300
     },
     "ArtificialSleepwalkingAwards": {
         "doc": "人工梦游主界面，点击全部领取",
@@ -53,13 +40,7 @@
             214,
             189
         ],
-        "action": "Click",
-        "next": [
-            "Sub_ObtainedAwards",
-            "ArtificialSleepwalkingAwards",
-            "ArtificialSleepwalkingCloseAwards",
-            "LimboEntry"
-        ]
+        "action": "Click"
     },
     "ArtificialSleepwalkingCloseAwards": {
         "recognition": "TemplateMatch",
@@ -70,13 +51,7 @@
             248,
             142
         ],
-        "action": "Click",
-        "next": [
-            "ArtificialSleepwalkingCloseAwards",
-            "LimboEntry",
-            "HomeFlag",
-            "Sub_StartUp"
-        ]
+        "action": "Click"
     },
     "LimboEntry": {
         "doc": "人工梦游主界面，点击挑战，进入深眠域",
@@ -89,9 +64,7 @@
             162
         ],
         "action": "Click",
-        "next": [
-            "LimboStageRightest"
-        ]
+        "post_wait_freezes": 500
     },
     "LimboStageRightest": {
         "doc": "深眠域，点击最右侧的深眠片段",
@@ -112,11 +85,10 @@
             -120,
             50
         ],
-        "post_wait_freezes": 1,
+        "post_wait_freezes": 300,
         "next": [
-            "LimboEnd",
-            "LimboStageRightest",
-            "LimboStageFlag"
+            "LimboStageFlag",
+            "LimboStageRightest"
         ]
     },
     "LimboStageFlag": {
@@ -150,6 +122,7 @@
         "next": [
             "LimboStageFlag_up",
             "LimboStageFlag_down",
+            "LimboStageFlag_failed",
             "LimboStageFlag"
         ]
     },
@@ -179,7 +152,7 @@
     "LimboStageFlag_down": {
         "doc": "判断当前位于深眠片段下半部分",
         "recognition": "OCR",
-        "expected": "0/6",
+        "expected": "3/6",
         "roi": [
             1028,
             101,
@@ -187,7 +160,6 @@
             36
         ],
         "only_rec": true,
-        "inverse": true,
         "target": [
             681,
             707,
@@ -200,6 +172,26 @@
             "LimboFinish",
             "LimboStarsMainFlag"
         ]
+    },
+    "LimboStageFlag_failed": {
+        "doc": "判断当前位于深眠片段上半部分未满星，结束任务",
+        "todo_doc": "后续可在这里添加重打当前深眠片段的操作",
+        "recognition": "OCR",
+        "expected": "[1-2]/6",
+        "roi": [
+            1028,
+            101,
+            66,
+            36
+        ],
+        "only_rec": true,
+        "target": [
+            681,
+            707,
+            85,
+            43
+        ],
+        "action": "Click"
     },
     "LimboStageLightest_1": {
         "doc": "最靓的位置，要多点几次",
@@ -450,6 +442,7 @@
         "rate_limit": 5000
     },
     "LimboVictory_2": {
+        "doc": "深眠下半完成时，先判断是否有finish，有则继续下面的操作，否则直接结束任务",
         "recognition": "OCR",
         "expected": [
             "战斗胜利"
@@ -462,8 +455,24 @@
         ],
         "action": "Click",
         "next": [
-            "LimboFinish",
+            "LimboMain",
             "LimboVictory_2"
+        ]
+    },
+    "LimboMain": {
+        "doc": "深眠片段主界面",
+        "recognition": "OCR",
+        "expected": "本层酬劳",
+        "roi": [
+            146,
+            676,
+            67,
+            21
+        ],
+        "only_rec": true,
+        "next": [
+            "LimboFinish",
+            "Stop"
         ]
     },
     "LimboFinish": {
@@ -480,7 +489,17 @@
         "action": "Click",
         "next": [
             "LimboAwards",
-            "LimboFinish"
+            "LimboNoAwards"
+        ]
+    },
+    "LimboNoAwards": {
+        "doc": "当前深眠片段战斗无未领取奖励",
+        "next": [
+            "LimboEnd",
+            "LimboStageRightest"
+        ],
+        "interrupt": [
+            "BackButton"
         ]
     },
     "LimboAwards": {
@@ -510,8 +529,10 @@
         ],
         "action": "Click",
         "next": [
-            "Sub_ObtainedAwards",
             "LimboObtainedAwards_2"
+        ],
+        "interrupt": [
+            "ObtainedAwards"
         ]
     },
     "LimboObtainedAwards_2": {
@@ -531,11 +552,13 @@
             20
         ],
         "next": [
-            "Sub_ObtainedAwards",
             "LimboEnd",
             "LimboStageRightest",
-            "Sub_BackButton",
             "LimboObtainedAwards_2"
+        ],
+        "interrupt": [
+            "ObtainedAwards",
+            "BackButton"
         ]
     },
     "LimboEnd": {
