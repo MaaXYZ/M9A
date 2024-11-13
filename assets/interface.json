@@ -811,30 +811,6 @@
                             "expected": "4"
                         }
                     }
-                },
-                {
-                    "name": "x3",
-                    "pipeline_override": {
-                        "SetReplaysTimes": {
-                            "expected": "3"
-                        }
-                    }
-                },
-                {
-                    "name": "x2",
-                    "pipeline_override": {
-                        "SetReplaysTimes": {
-                            "expected": "2"
-                        }
-                    }
-                },
-                {
-                    "name": "x1",
-                    "pipeline_override": {
-                        "SetReplaysTimes": {
-                            "expected": "1"
-                        }
-                    }
                 }
             ]
         },
