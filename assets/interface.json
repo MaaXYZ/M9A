@@ -81,6 +81,16 @@
             "entry": "Awards"
         },
         {
+            "name": "轶事派遣",
+            "entry": "Anecdote",
+            "pipeline_override": {
+                "EnterTheActivityMain": {
+                    "template_doc": "修改为当期活动入口的template",
+                    "template": "Combat/Activity/LondonDawningEnterTheShow.png"
+                }
+            }
+        },
+        {
             "name": "雨中悬想：迷思海（“寻思”每周扫荡）",
             "entry": "RevereisInTheRain"
         },
