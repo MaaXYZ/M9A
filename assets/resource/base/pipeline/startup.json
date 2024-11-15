@@ -19,6 +19,25 @@
             "Sub_Start1999"
         ]
     },
+    "ReturnMain": {
+        "doc": "返回主界面（专供任务开始前使用）",
+        "next": [
+            "HomeButton",
+            "BackButton",
+            "ObtainedAwards",
+            "AccumulatedSignIn",
+            "BirthdayReward",
+            "Reward",
+            "CloseDuringFestivalDipaRewardPage",
+            "StartGame",
+            "CloseAnnouncement",
+            "Download",
+            "GameLoading",
+            "BluePochLogo",
+            "Disclaimer",
+            "Stop"
+        ]
+    },
     "Sub_StartUp": {
         "is_sub": true,
         "next": [
@@ -245,6 +264,26 @@
         "action": "Click"
     },
     "Stop": {},
+    "Reward": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "StartUp/Reward.png",
+            "StartUp/Reward1.png"
+        ],
+        "roi": [
+            419,
+            90,
+            297,
+            148
+        ],
+        "action": "Click",
+        "target": [
+            0,
+            0,
+            526,
+            590
+        ]
+    },
     "Sub_Reward": {
         "is_sub": true,
         "recognition": "TemplateMatch",
@@ -266,6 +305,17 @@
             590
         ]
     },
+    "AccumulatedSignIn": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/AccumulatedSignIn.png",
+        "roi": [
+            562,
+            483,
+            347,
+            163
+        ],
+        "action": "Click"
+    },
     "Sub_AccumulatedSignIn": {
         "is_sub": true,
         "recognition": "TemplateMatch",
@@ -275,6 +325,18 @@
             483,
             347,
             163
+        ],
+        "action": "Click"
+    },
+    "BirthdayReward": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/BirthdayReward.png",
+        "threshold": 0.8,
+        "roi": [
+            803,
+            273,
+            121,
+            121
         ],
         "action": "Click"
     },
@@ -288,6 +350,18 @@
             273,
             121,
             121
+        ],
+        "action": "Click"
+    },
+    "CloseDuringFestivalDipaRewardPage": {
+        "green_mask": true,
+        "recognition": "TemplateMatch",
+        "template": "StartUp/CloseDuringFestivalDipaRewardPage.png",
+        "roi": [
+            1069,
+            68,
+            138,
+            138
         ],
         "action": "Click"
     },

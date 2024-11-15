@@ -12,9 +12,7 @@
             "ArtificialSleepwalkingAwards",
             "EnterTheShow",
             "ArtificialSleepwalking",
-            "HomeButton",
-            "BackButton",
-            "StartUp"
+            "ReturnMain"
         ]
     },
     "ArtificialSleepwalking": {

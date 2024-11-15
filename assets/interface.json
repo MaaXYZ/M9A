@@ -81,7 +81,7 @@
             "entry": "Awards"
         },
         {
-            "name": "轶事派遣",
+            "name": "轶事派遣（角色故事请自行阅读）",
             "entry": "Anecdote",
             "pipeline_override": {
                 "EnterTheActivityMain": {
@@ -802,30 +802,6 @@
         },
         "复现次数": {
             "cases": [
-                {
-                    "name": "x1",
-                    "pipeline_override": {
-                        "SetReplaysTimes": {
-                            "expected": "1"
-                        }
-                    }
-                },
-                {
-                    "name": "x2",
-                    "pipeline_override": {
-                        "SetReplaysTimes": {
-                            "expected": "2"
-                        }
-                    }
-                },
-                {
-                    "name": "x3",
-                    "pipeline_override": {
-                        "SetReplaysTimes": {
-                            "expected": "3"
-                        }
-                    }
-                },
                 {
                     "name": "x4",
                     "pipeline_override": {

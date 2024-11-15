@@ -7,9 +7,7 @@
         "interrupt": [
             "OutsideDeduction",
             "EnterTheShow",
-            "HomeButton",
-            "BackButton",
-            "StartUp"
+            "ReturnMain"
         ]
     },
     "OutsideDeduction": {
