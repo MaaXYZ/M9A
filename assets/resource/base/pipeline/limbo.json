@@ -3,14 +3,15 @@
         "doc": "深眠任务开始",
         "next": [
             "LimboEnd",
+            "LimboStageFlag",
             "LimboStageRightest"
         ],
         "interrupt": [
             "LimboEntry",
             "ObtainedAwards",
-            "ArtificialSleepwalkingCloseAwards",
             "ArtificialSleepwalkingAwards",
             "EnterTheShow",
+            "ClickBlank",
             "ArtificialSleepwalking",
             "ReturnMain"
         ]
@@ -40,15 +41,21 @@
         ],
         "action": "Click"
     },
-    "ArtificialSleepwalkingCloseAwards": {
-        "recognition": "TemplateMatch",
-        "template": "Limbo/ArtificialSleepwalkingCloseAwards.png",
-        "roi": [
-            511,
-            578,
-            248,
-            142
+    "ClickBlank": {
+        "doc": "点击空白关闭",
+        "recognition": "OCR",
+        "expected": [
+            "点击",
+            "空白",
+            "关闭"
         ],
+        "roi": [
+            569,
+            660,
+            121,
+            27
+        ],
+        "only_rec": true,
         "action": "Click"
     },
     "LimboEntry": {
@@ -106,8 +113,25 @@
             "LimboStageFlag"
         ]
     },
+    "LimboStageFlag_AfterFailed": {
+        "doc": "判断当前位于深眠片段(After Failed)",
+        "recognition": "OCR",
+        "expected": "本层酬劳",
+        "roi": [
+            146,
+            676,
+            67,
+            21
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "LimboStarsMainFlag_AfterFailed",
+            "LimboStageFlag_AfterFailed"
+        ]
+    },
     "LimboStarsMainFlag": {
-        "doc": "判断当前位于深眠试验酬劳界面,后续进行上下半判断",
+        "doc": "判断当前位于深眠试验酬劳界面,查看是否有奖励未领取",
         "recognition": "OCR",
         "expected": "深眠试验",
         "roi": [
@@ -118,11 +142,114 @@
         ],
         "only_rec": true,
         "next": [
+            "LimboStarsMainNoAwards"
+        ],
+        "interrupt": [
+            "LimboStarsMainAwards",
+            "ObtainedAwards"
+        ]
+    },
+    "LimboStarsMainFlag_AfterFailed": {
+        "doc": "判断当前位于深眠试验酬劳界面(After Failed)",
+        "recognition": "OCR",
+        "expected": "深眠试验",
+        "roi": [
+            161,
+            96,
+            163,
+            43
+        ],
+        "only_rec": true,
+        "next": [
+            "LimboStarsMainNoAwards_AfterFailed"
+        ],
+        "interrupt": [
+            "LimboStarsMainAwards",
+            "ObtainedAwards"
+        ]
+    },
+    "LimboStarsMainNoAwards": {
+        "doc": "深眠试验酬劳界面，没有奖励未领取",
+        "recognition": "OCR",
+        "expected": [
+            "已领取",
+            "未达成"
+        ],
+        "roi": [
+            1007,
+            204,
+            70,
+            28
+        ],
+        "only_rec": true,
+        "next": [
             "LimboStageFlag_up",
             "LimboStageFlag_down",
-            "LimboStageFlag_failed",
-            "LimboStageFlag"
+            "LimboStageFlag_failed"
         ]
+    },
+    "LimboStarsMainNoAwards_AfterFailed": {
+        "doc": "深眠试验酬劳界面，没有奖励未领取(After Failed)",
+        "recognition": "OCR",
+        "expected": [
+            "已领取",
+            "未达成"
+        ],
+        "roi": [
+            1007,
+            204,
+            70,
+            28
+        ],
+        "only_rec": true,
+        "target": [
+            681,
+            707,
+            85,
+            43
+        ],
+        "action": "Click",
+        "next": [
+            "LimboMain",
+            "LimboStarsMainNoAwards_AfterFailed"
+        ]
+    },
+    "LimboStarsMainAwards": {
+        "doc": "深眠试验酬劳界面，点击全部领取/领取",
+        "recognition": "TemplateMatch",
+        "template": [
+            "Limbo/ObtainedAllAwards.png",
+            "Limbo/ObtainedAwards.png"
+        ],
+        "roi": [
+            941,
+            132,
+            205,
+            176
+        ],
+        "action": "Click",
+        "next": [
+            "LimboStarsMainNoAwardsFlag",
+            "LimboStarsMainAwards"
+        ],
+        "interrupt": [
+            "ObtainedAwards"
+        ]
+    },
+    "LimboStarsMainNoAwardsFlag": {
+        "doc": "判断当前位于深眠试验酬劳界面,奖励已领取完毕",
+        "recognition": "OCR",
+        "expected": [
+            "已领取",
+            "未达成"
+        ],
+        "roi": [
+            1007,
+            204,
+            70,
+            28
+        ],
+        "only_rec": true
     },
     "LimboStageFlag_up": {
         "doc": "判断当前位于深眠片段上半部分",
@@ -148,9 +275,9 @@
         ]
     },
     "LimboStageFlag_down": {
-        "doc": "判断当前位于深眠片段下半部分",
+        "doc": "判断当前位于深眠片段下半部分，未开始战斗/已完成战斗",
         "recognition": "OCR",
-        "expected": "3/6",
+        "expected": "[36]/6",
         "roi": [
             1028,
             101,
@@ -173,9 +300,10 @@
     },
     "LimboStageFlag_failed": {
         "doc": "判断当前位于深眠片段上半部分未满星，结束任务",
+        "_doc": "经测试，上下半各一星时，会解锁下一深眠",
         "todo_doc": "后续可在这里添加重打当前深眠片段的操作",
         "recognition": "OCR",
-        "expected": "[1-2]/6",
+        "expected": "[12]/6",
         "roi": [
             1028,
             101,
@@ -189,7 +317,11 @@
             85,
             43
         ],
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "LimboMain",
+            "LimboStageFlag_failed"
+        ]
     },
     "LimboStageLightest_1": {
         "doc": "最靓的位置，要多点几次",
@@ -313,7 +445,11 @@
             78
         ],
         "only_rec": true,
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "LimboStageFlag_AfterFailed",
+            "LimboFailed"
+        ]
     },
     "LimboVictory_1": {
         "doc": "深眠战斗成功_1",
@@ -518,7 +654,10 @@
     },
     "LimboObtainedAwards_1": {
         "recognition": "TemplateMatch",
-        "template": "Limbo/LimboObtainedAwards.png",
+        "template": [
+            "Limbo/ObtainedAllAwards.png",
+            "Limbo/ObtainedAwards.png"
+        ],
         "roi": [
             941,
             132,
