@@ -1171,15 +1171,11 @@
         "仅领取每周浅眠域奖励": {
             "cases": [
                 {
-                    "name": "No",
-                    "pipeline_override": {}
+                    "name": "No"
                 },
                 {
                     "name": "Yes",
                     "pipeline_override": {
-                        "LimboEntry": {
-                            "next": []
-                        },
                         "LimboStageRightest": {
                             "next": []
                         }

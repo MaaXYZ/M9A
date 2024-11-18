@@ -27,7 +27,16 @@
             170
         ],
         "action": "Click",
-        "post_wait_freezes": 300
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                569,
+                660,
+                121,
+                27
+            ]
+        },
+        "post_wait_freezes_doc": "识别‘点击空白关闭’区域"
     },
     "ArtificialSleepwalkingAwards": {
         "doc": "人工梦游主界面，点击全部领取",
