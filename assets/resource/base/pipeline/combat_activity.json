@@ -7,7 +7,7 @@
     },
     "ActivityEnterTheShow": {
         "recognition": "TemplateMatch",
-        "template_doc": "Set in code",
+        "template_code": "Set in code",
         "roi": [
             885,
             123,

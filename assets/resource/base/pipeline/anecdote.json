@@ -579,9 +579,8 @@
     },
     "EnterTheActivityMain": {
         "doc": "进入当期活动主界面",
-        "template_doc": "在interface.json中修改template",
+        "template_code": "在interface.json中修改template",
         "recognition": "TemplateMatch",
-        "template": "./empty.png",
         "roi": [
             885,
             123,

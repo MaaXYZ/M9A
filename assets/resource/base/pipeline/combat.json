@@ -501,7 +501,7 @@
     },
     "TargetStageName": {
         "recognition": "OCR",
-        "text_doc": "Set in code.",
+        "expected_code": "Set in code.",
         "roi": [
             0,
             470,
