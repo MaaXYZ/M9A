@@ -348,37 +348,53 @@
         "action": "Click",
         "post_delay": 2500,
         "next": [
-            "SOD_Quickformation",
             "SOD_Quickformation_On",
             "SOD_ArcanistAdd"
+        ],
+        "interrupt": [
+            "SOD_Quickformation"
         ]
     },
     "SOD_Quickformation": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Quickformation.png",
-        "threshold": 0.95,
+        "recognition": "ColorMatch",
         "roi": [
-            499,
-            0,
-            212,
-            107
+            529,
+            19,
+            150,
+            49
         ],
-        "action": "Click",
-        "next": [
-            "SOD_Quickformation",
-            "SOD_Quickformation_On"
-        ]
+        "upper": [
+            138,
+            137,
+            137
+        ],
+        "lower": [
+            88,
+            87,
+            87
+        ],
+        "count": 100,
+        "action": "Click"
     },
     "SOD_Quickformation_On": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Quickformation_On.png",
-        "threshold": 0.9,
+        "recognition": "ColorMatch",
         "roi": [
-            490,
-            0,
-            140,
-            108
+            529,
+            19,
+            150,
+            49
         ],
+        "upper": [
+            250,
+            130,
+            75
+        ],
+        "lower": [
+            200,
+            80,
+            25
+        ],
+        "count": 100,
         "next": [
             "SOD_ArcanistAdd_1"
         ]
@@ -427,21 +443,6 @@
             20,
             20
         ],
-        "next": [
-            "SOD_ArcanistAdd_Confirm_1"
-        ]
-    },
-    "SOD_ArcanistAdd_37": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/37.png",
-        "threshold": 0.85,
-        "roi": [
-            502,
-            64,
-            766,
-            633
-        ],
-        "action": "Click",
         "next": [
             "SOD_ArcanistAdd_Confirm_1"
         ]
