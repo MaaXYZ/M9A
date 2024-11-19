@@ -1620,6 +1620,9 @@
         "next": [
             "SOD_NewArcanist",
             "SOD_Levelup"
+        ],
+        "interrupt": [
+            "SOD_Acquire_NoNext"
         ]
     },
     "SOD_Move": {
@@ -2257,6 +2260,25 @@
             "SOD_Acquire",
             "SOD_NewArcanist",
             "SOD_Nothinghappen"
+        ]
+    },
+    "SOD_Acquire_NoNext": {
+        "recognition": "OCR",
+        "expected": [
+            "获得造物"
+        ],
+        "roi": [
+            535,
+            4,
+            224,
+            68
+        ],
+        "action": "Click",
+        "target": [
+            637,
+            642,
+            20,
+            20
         ]
     },
     "SOD_Main": {
