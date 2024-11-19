@@ -1726,6 +1726,7 @@
         ]
     },
     "SOD_Combating": {
+        "doc": "考虑到对话框可能出现，也可能不出现，匹配太多，故选择点击空白",
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Combating.png",
         "roi": [
@@ -1735,13 +1736,16 @@
             64
         ],
         "timeout": 40000,
-        "post_delay": 3000,
+        "post_delay": 1000,
+        "action": "Click",
+        "target": [
+            254,
+            146,
+            89,
+            73
+        ],
         "next": [
             "SOD_CombatVictory",
-            "Sub_SOD_Dialog_1",
-            "Sub_SOD_Dialog_2",
-            "Sub_SOD_Dialog_3",
-            "Sub_SOD_Dialog_4",
             "SOD_CombatDefeat_hint",
             "SOD_CombatDefeat",
             "SOD_ItemSellct_1",
