@@ -72,10 +72,10 @@
     "StagePromotion_NextStage2": {
         "recognition": "ColorMatch",
         "roi": [
-            422,
-            533,
-            200,
-            60
+            424,
+            542,
+            353,
+            41
         ],
         "method": 4,
         "lower": [
