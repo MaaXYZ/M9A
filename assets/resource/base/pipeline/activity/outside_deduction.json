@@ -1,7 +1,7 @@
 {
     "SeriesOfDusks": {
         "next": [
-            "SOD_MENU",
+            "SOD_Menu",
             "SOD_Main"
         ],
         "interrupt": [
@@ -22,9 +22,9 @@
         "action": "Click",
         "post_wait_freezes": 300
     },
-    "SOD_MENU": {
+    "SOD_Menu": {
         "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_MENU.png",
+        "template": "OutsideDeduction/SOD_Menu.png",
         "roi": [
             196,
             169,
@@ -32,9 +32,87 @@
             161
         ],
         "next": [
+            "SOD_UNOPENED",
+            "SOD_Main"
+        ],
+        "interrupt": [
+            "SOD_unmount"
+        ]
+    },
+    "SOD_MenuFlag": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_MENU.png",
+        "roi": [
+            196,
+            169,
+            355,
+            161
+        ]
+    },
+    "SOD_unmount": {
+        "recognition": "OCR",
+        "expected": "资料片",
+        "roi": [
+            396,
+            88,
+            63,
+            27
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "SOD_unmount_completed",
+            "SOD_unmount"
+        ],
+        "interrupt": [
+            "SOD_unmount_confirm"
+        ]
+    },
+    "SOD_unmount_completed": {
+        "recognition": "OCR",
+        "expected": "^挂载$",
+        "roi": [
+            1016,
+            620,
+            124,
+            38
+        ],
+        "only_rec": true,
+        "post_wait_freezes": 300,
+        "next": [
+            "SOD_MenuFlag"
+        ],
+        "interrupt": [
+            "BackButton"
+        ]
+    },
+    "SOD_unmount_confirm": {
+        "recognition": "OCR",
+        "expected": "^取消挂载$",
+        "roi": [
+            1016,
+            620,
+            124,
+            38
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "SOD_UNOPENED": {
+        "recognition": "OCR",
+        "expected": "UNOPENED",
+        "roi": [
+            1041,
+            426,
+            122,
+            24
+        ],
+        "only_rec": true,
+        "next": [
             "SODStop",
             "SODStart",
-            "SOD_Main"
+            "SOD_Main",
+            "SOD_UNOPENED"
         ]
     },
     "SODStop": {
