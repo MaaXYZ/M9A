@@ -23,31 +23,34 @@
         "post_wait_freezes": 300
     },
     "SOD_Menu": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Menu.png",
+        "recognition": "OCR",
+        "expected": "黄金巷",
         "roi": [
-            196,
-            169,
-            355,
-            161
+            189,
+            566,
+            78,
+            33
         ],
+        "only_rec": true,
         "next": [
             "SOD_UNOPENED",
             "SOD_Main"
         ],
         "interrupt": [
+            "SODStop",
             "SOD_unmount"
         ]
     },
     "SOD_MenuFlag": {
-        "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_MENU.png",
+        "recognition": "OCR",
+        "expected": "黄金巷",
         "roi": [
-            196,
-            169,
-            355,
-            161
-        ]
+            189,
+            566,
+            78,
+            33
+        ],
+        "only_rec": true
     },
     "SOD_unmount": {
         "recognition": "OCR",
@@ -109,10 +112,11 @@
         ],
         "only_rec": true,
         "next": [
-            "SODStop",
             "SODStart",
-            "SOD_Main",
-            "SOD_UNOPENED"
+            "SOD_Main"
+        ],
+        "interrupt": [
+            "SODStop"
         ]
     },
     "SODStop": {
@@ -142,12 +146,29 @@
         "action": "Click",
         "post_delay": 2000,
         "next": [
-            "SOD_Skip",
-            "SODStop_Click_2",
-            "SODStop_Click_1",
-            "SODStart",
+            "SOD_MenuFlag",
             "SODStop_Confirm"
+        ],
+        "interrupt": [
+            "SOD_Skip_NoNext",
+            "SODStop_Click_NoNext_3",
+            "SODStop_Click_NoNext_2",
+            "SODStop_Click_NoNext_1"
         ]
+    },
+    "SOD_Skip_NoNext": {
+        "recognition": "OCR",
+        "expected": [
+            "跳过"
+        ],
+        "roi": [
+            1143,
+            36,
+            45,
+            25
+        ],
+        "only_rec": true,
+        "action": "Click"
     },
     "SODStop_Click_1": {
         "recognition": "OCR",
@@ -166,6 +187,20 @@
             "SOD_Skip",
             "SODStop_Click_1"
         ]
+    },
+    "SODStop_Click_NoNext_1": {
+        "recognition": "OCR",
+        "expected": [
+            "阴霾",
+            "渐生"
+        ],
+        "roi": [
+            395,
+            205,
+            483,
+            181
+        ],
+        "action": "Click"
     },
     "SODStop_Click_2": {
         "recognition": "OCR",
@@ -189,6 +224,25 @@
             "SODStart",
             "SODStop_Click_3",
             "SODStop_Click_2"
+        ]
+    },
+    "SODStop_Click_NoNext_2": {
+        "recognition": "OCR",
+        "expected": [
+            "幕终寻获"
+        ],
+        "roi": [
+            535,
+            4,
+            224,
+            90
+        ],
+        "action": "Click",
+        "target": [
+            787,
+            45,
+            10,
+            10
         ]
     },
     "SOD_Complete_Click_1": {
@@ -230,6 +284,25 @@
         "next": [
             "SODStart",
             "SODStop_Click_3"
+        ]
+    },
+    "SODStop_Click_NoNext_3": {
+        "recognition": "OCR",
+        "expected": [
+            "累计获得造物"
+        ],
+        "roi": [
+            286,
+            272,
+            277,
+            92
+        ],
+        "action": "Click",
+        "target": [
+            654,
+            30,
+            5,
+            5
         ]
     },
     "SODStart": {
