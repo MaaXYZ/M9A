@@ -1171,7 +1171,8 @@
         "仅领取每周浅眠域奖励": {
             "cases": [
                 {
-                    "name": "No"
+                    "name": "No",
+                    "pipeline_override": {}
                 },
                 {
                     "name": "Yes",
