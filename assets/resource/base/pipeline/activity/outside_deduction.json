@@ -1833,9 +1833,11 @@
         "action": "Click",
         "post_delay": 2500,
         "next": [
-            "SOD_Quickformation",
             "SOD_Quickformation_On",
             "SOD_ArcanistSellct"
+        ],
+        "interrupt": [
+            "SOD_Quickformation"
         ]
     },
     "SOD_ArcanistAdd_Single4": {
