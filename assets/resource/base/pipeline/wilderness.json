@@ -12,6 +12,7 @@
             "Sub_StartUp"
         ]
     },
+    
     "EnterWilderness": {
         "recognition": "TemplateMatch",
         "template": "Wilderness/EnterWilderness.png",
@@ -253,7 +254,7 @@
             152
         ],
         "action": "Click",
-        "post_delay": 200,
+        "post_wait_freezes": 100,
         "next": [
             "AutoSelectLeast",
             "AutoSelectProducts"
