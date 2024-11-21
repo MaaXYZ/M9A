@@ -782,6 +782,15 @@
             240
         ],
         "action": "Click",
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                389,
+                194,
+                442,
+                326
+            ]
+        },
         "next": [
             "Victory",
             "AllIn",
