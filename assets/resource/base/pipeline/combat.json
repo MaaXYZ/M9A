@@ -24,6 +24,7 @@
                 26
             ]
         },
+        "post_delay": 1000,
         "next_doc": "Set in code."
     },
     "MainChapter_1": {
