@@ -29,6 +29,13 @@
                 "{PROJECT_DIR}/resource/base",
                 "{PROJECT_DIR}/resource/global_en"
             ]
+        },
+        {
+            "name": "国际服（JP）",
+            "path": [
+                "{PROJECT_DIR}/resource/base",
+                "{PROJECT_DIR}/resource/global_jp"
+            ]
         }
     ],
     "task": [
