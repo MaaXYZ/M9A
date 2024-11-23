@@ -19,13 +19,13 @@
 
 ## 使用说明
 
-[新手上路](https://github.com/MaaXYZ/M9A/tree/main/docs/zh_cn/manual/%E6%96%B0%E6%89%8B%E4%B8%8A%E8%B7%AF.md)(使用前必看)
+[新手上路](https://github.com/MaaXYZ/M9A/tree/main/docs/zh_cn/manual/%E6%96%B0%E6%89%8B%E4%B8%8A%E8%B7%AF.md)(必看)
 
-[部分功能介绍](https://github.com/MaaXYZ/M9A/tree/main/docs/zh_cn/manual/%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.md)(使用前推荐看)
+[部分功能介绍](https://github.com/MaaXYZ/M9A/tree/main/docs/zh_cn/manual/%E9%83%A8%E5%88%86%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.md)(推荐)
 
-[连接设置](https://github.com/MaaXYZ/M9A/tree/main/docs/zh_cn/manual/%E8%BF%9E%E6%8E%A5%E8%AE%BE%E7%BD%AE.md)(有需求再看)
+[连接设置](https://github.com/MaaXYZ/M9A/tree/main/docs/zh_cn/manual/%E8%BF%9E%E6%8E%A5%E8%AE%BE%E7%BD%AE.md)(可选)
 
-[常见问题](https://github.com/MaaXYZ/M9A/tree/main/docs/zh_cn/manual/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.md)(有问题必看)
+[常见问题](https://github.com/MaaXYZ/M9A/tree/main/docs/zh_cn/manual/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.md)(推荐)
 
 ## 开发相关
 
