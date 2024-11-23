@@ -1893,7 +1893,16 @@
             64
         ],
         "timeout": 40000,
-        "post_delay": 1000,
+        "post_wait_freezes": {
+            "time": 400,
+            "target": [
+                275,
+                196,
+                536,
+                143
+            ],
+            "threshold": 0.9
+        },
         "action": "Click",
         "target": [
             254,
