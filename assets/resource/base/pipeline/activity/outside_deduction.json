@@ -1915,7 +1915,12 @@
             "SOD_CombatDefeat_hint",
             "SOD_CombatDefeat",
             "SOD_ItemSellct_1",
-            "SOD_Combating"
+            "SOD_Combating",
+            "SOD_ItemLose_1",
+            "SOD_Acquire",
+            "SOD_Skip",
+            "SOD_Main",
+            "SOD_Nothinghappen"
         ]
     },
     "Sub_SOD_Dialog_1": {
