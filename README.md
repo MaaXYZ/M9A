@@ -41,9 +41,7 @@
 
 感谢以下开发者对本项目作出的贡献:
 
-<a href="https://github.com/MaaXYZ/M9A/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=MaaXYZ/M9A&max=1000" />
-</a>
+[![Contributors](https://contrib.rocks/image?repo=MaaXYZ/M9A&max=1000)](https://github.com/MaaXYZ/M9A/graphs/contributors)
 
 ## Join us
 
