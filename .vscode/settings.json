@@ -21,6 +21,9 @@
             "url": "/deps/tools/interface_config.schema.json"
         }
     ],
+    "files.exclude": {
+        "__pycache__": true
+    },
     "[json]": {
         "editor.formatOnSave": true,
         "editor.insertSpaces": true,
@@ -29,5 +32,9 @@
     },
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     }
 }
