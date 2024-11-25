@@ -61,8 +61,10 @@
         ],
         "next": [
             "Sub_QuitEatCandyPage",
-            "HomeFlag",
-            "Sub_StartUp"
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "EatMiniCandy24H": {
@@ -149,8 +151,10 @@
         "next": [
             "SmallCandy24H",
             "Sub_QuitEatCandyPage",
-            "HomeFlag",
-            "Sub_StartUp"
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "SmallCandy24HNotEnough": {
@@ -165,8 +169,10 @@
         "next": [
             "BigCandy24H",
             "Sub_QuitEatCandyPage",
-            "HomeFlag",
-            "Sub_StartUp"
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "BigCandy24HNotEnough": {
@@ -180,8 +186,10 @@
         ],
         "next": [
             "Sub_QuitEatCandyPage",
-            "HomeFlag",
-            "Sub_StartUp"
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "Sub_QuitEatCandyPage": {

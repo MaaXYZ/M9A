@@ -1,8 +1,10 @@
 {
     "Route77": {
         "next": [
-            "Route77EnterTheShow",
-            "Sub_StartUp"
+            "Route77EnterTheShow"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "Route77EnterTheShow": {
@@ -35,8 +37,10 @@
     },
     "Route77_StagePromotion": {
         "next": [
-            "Route77EnterTheShow_StagePromotion",
-            "Sub_StartUp"
+            "Route77EnterTheShow_StagePromotion"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "Route77EnterTheShow_StagePromotion": {

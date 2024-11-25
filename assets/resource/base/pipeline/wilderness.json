@@ -8,11 +8,12 @@
             "CollectAwards",
             "CollectTrust",
             "TrustDialogueNext",
-            "TrustDialogueInteraction",
-            "Sub_StartUp"
+            "TrustDialogueInteraction"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
-    
     "EnterWilderness": {
         "recognition": "TemplateMatch",
         "template": "Wilderness/EnterWilderness.png",
@@ -31,8 +32,10 @@
             "CollectAwards",
             "CollectTrust",
             "TrustDialogueNext",
-            "TrustDialogueInteraction",
-            "Sub_HomeLoading"
+            "TrustDialogueInteraction"
+        ],
+        "interrupt": [
+            "HomeLoading"
         ]
     },
     "CollectEXP": {
@@ -61,8 +64,10 @@
             "CollectTrust",
             "TrustDialogueNext",
             "TrustDialogueInteraction",
-            "Sub_HomeButton",
             "HomeFlag"
+        ],
+        "interrupt": [
+            "HomeButton"
         ]
     },
     "CollectMoney": {
@@ -90,8 +95,10 @@
             "CollectTrust",
             "TrustDialogueNext",
             "TrustDialogueInteraction",
-            "Sub_HomeButton",
             "HomeFlag"
+        ],
+        "interrupt": [
+            "HomeButton"
         ]
     },
     "CollectAwards": {
@@ -109,8 +116,10 @@
             "CollectTrust",
             "TrustDialogueNext",
             "TrustDialogueInteraction",
-            "Sub_HomeButton",
             "HomeFlag"
+        ],
+        "interrupt": [
+            "HomeButton"
         ]
     },
     "CollectTrust": {
@@ -128,8 +137,10 @@
             "CollectTrust",
             "TrustDialogueNext",
             "TrustDialogueInteraction",
-            "Sub_HomeButton",
             "HomeFlag"
+        ],
+        "interrupt": [
+            "HomeButton"
         ]
     },
     "TrustDialogueNext": {
@@ -145,8 +156,10 @@
         "next": [
             "TrustDialogueNext",
             "TrustDialogueInteraction",
-            "Sub_HomeButton",
             "HomeFlag"
+        ],
+        "interrupt": [
+            "HomeButton"
         ]
     },
     "TrustDialogueInteraction": {
@@ -162,8 +175,10 @@
         "next": [
             "TrustDialogueNext",
             "TrustDialogueInteraction",
-            "Sub_HomeButton",
             "HomeFlag"
+        ],
+        "interrupt": [
+            "HomeButton"
         ]
     },
     "TrustMax": {
@@ -179,8 +194,10 @@
         ],
         "action": "Click",
         "next": [
-            "Sub_HomeButton",
             "HomeFlag"
+        ],
+        "interrupt": [
+            "HomeButton"
         ]
     },
     "EnterProduct": {
@@ -297,8 +314,10 @@
             "CollectAwards",
             "CollectTrust",
             "TrustDialogueNext",
-            "TrustDialogueInteraction",
-            "Sub_BackButton"
+            "TrustDialogueInteraction"
+        ],
+        "interrupt": [
+            "BackButton"
         ]
     },
     "AutoAssignCritters": {
@@ -347,8 +366,10 @@
             "CollectAwards",
             "CollectTrust",
             "TrustDialogueNext",
-            "TrustDialogueInteraction",
-            "Sub_BackButton"
+            "TrustDialogueInteraction"
+        ],
+        "interrupt": [
+            "BackButton"
         ]
     },
     "SummonlngSuccess": {
@@ -365,6 +386,10 @@
             "SummonlngSuccess",
             "SummonlngSuccessBack"
         ]
+    },
+    "test": {
+        "recognition": "TemplateMatch",
+        "template": "Wilderness/UniqueParxxxx.png"
     },
     "SummonlngSuccessBack": {
         "recognition": "TemplateMatch",
@@ -388,8 +413,10 @@
             "CollectAwards",
             "CollectTrust",
             "TrustDialogueNext",
-            "TrustDialogueInteraction",
-            "Sub_BackButton"
+            "TrustDialogueInteraction"
+        ],
+        "interrupt": [
+            "BackButton"
         ]
     },
     "interrupt_SummonlngSuccessBack": {

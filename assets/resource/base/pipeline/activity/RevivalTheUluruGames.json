@@ -1,8 +1,10 @@
 {
     "RevivalTheUluruGames": {
         "next": [
-            "RevivalTheUluruGamesEnterTheShow",
-            "Sub_StartUp"
+            "RevivalTheUluruGamesEnterTheShow"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "RevivalTheUluruGamesEnterTheShow": {
@@ -34,8 +36,10 @@
     },
     "RevivalTheUluruGames_Reproduction": {
         "next": [
-            "RevivalTheUluruGames_ReproductionEnterTheShow",
-            "Sub_StartUp"
+            "RevivalTheUluruGames_ReproductionEnterTheShow"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "RevivalTheUluruGames_ReproductionEnterTheShow": {

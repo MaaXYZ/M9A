@@ -1,8 +1,10 @@
 {
     "FloorItToTheGoldenCity": {
         "next": [
-            "FloorItToTheGoldenCityEnterTheShow",
-            "Sub_StartUp"
+            "FloorItToTheGoldenCityEnterTheShow"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "FloorItToTheGoldenCityEnterTheShow": {
@@ -35,8 +37,10 @@
     },
     "FloorItToTheGoldenCity_StagePromotion": {
         "next": [
-            "FloorItToTheGoldenCityEnterTheShow_StagePromotion",
-            "Sub_StartUp"
+            "FloorItToTheGoldenCityEnterTheShow_StagePromotion"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "FloorItToTheGoldenCityEnterTheShow_StagePromotion": {

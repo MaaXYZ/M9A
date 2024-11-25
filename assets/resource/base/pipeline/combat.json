@@ -1,8 +1,10 @@
 {
     "Combat": {
         "next": [
-            "EnterTheShow",
-            "Sub_StartUp"
+            "EnterTheShow"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "EnterTheShow": {
@@ -748,8 +750,10 @@
         "action": "Click",
         "target": "StartReplay",
         "next": [
-            "HomeFlag",
-            "Sub_StartUp"
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "Replaying": {
@@ -795,8 +799,10 @@
         "next": [
             "Victory",
             "AllIn",
-            "HomeFlag",
-            "Sub_HomeButton"
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "HomeButton"
         ]
     }
 }
