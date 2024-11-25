@@ -405,10 +405,6 @@
             "SummonlngSuccessBack"
         ]
     },
-    "test": {
-        "recognition": "TemplateMatch",
-        "template": "Wilderness/UniqueParxxxx.png"
-    },
     "SummonlngSuccessBack": {
         "recognition": "TemplateMatch",
         "template": "Wilderness/SummonlngSuccess.png",
