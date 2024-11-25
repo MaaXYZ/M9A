@@ -1,8 +1,10 @@
 {
     "GoodbyeRaya": {
         "next": [
-            "GoodbyeRayaEnterTheShow",
-            "Sub_StartUp"
+            "GoodbyeRayaEnterTheShow"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "GoodbyeRayaEnterTheShow": {

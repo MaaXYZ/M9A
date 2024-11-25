@@ -6,8 +6,10 @@
             "EITM_入口2",
             "EITM_入口1",
             "EITM_重置",
-            "EITM_退出",
-            "Sub_StartUp"
+            "EITM_退出"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "EITM_入口1": {

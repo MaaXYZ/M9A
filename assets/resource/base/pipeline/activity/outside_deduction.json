@@ -2532,8 +2532,10 @@
         ],
         "action": "Click",
         "next": [
-            "SOD_Main",
-            "Sub_BackButton"
+            "SOD_Main"
+        ],
+        "interrupt": [
+            "BackButton"
         ]
     },
     "SOD_Skip": {

@@ -1,8 +1,10 @@
 {
     "ActivityEntry": {
         "next": [
-            "ActivityEnterTheShow",
-            "Sub_StartUp"
+            "ActivityEnterTheShow"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "ActivityEnterTheShow": {

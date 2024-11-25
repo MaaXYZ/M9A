@@ -1,8 +1,10 @@
 {
     "ThePrisonerintheCave": {
         "next": [
-            "ThePrisonerintheCaveEnterTheShow",
-            "Sub_StartUp"
+            "ThePrisonerintheCaveEnterTheShow"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "ThePrisonerintheCaveEnterTheShow": {

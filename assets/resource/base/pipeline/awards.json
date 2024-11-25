@@ -4,9 +4,10 @@
             "Sub_MailBadge",
             "Sub_JukeboxBadge",
             "Sub_DailyBadge",
-            "HomeFlag",
-            "Sub_ObtainedAwards",
-            "Sub_StartUp"
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "Sub_MailBadge": {
@@ -75,8 +76,10 @@
             163
         ],
         "next": [
-            "HomeFlag",
-            "Sub_BackButton"
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "BackButton"
         ]
     },
     "Sub_DailyBadge": {
@@ -95,8 +98,10 @@
         "next": [
             "Sub_CollectDailyAwards",
             "Sub_ObtainedAwards",
-            "WeeklyAwardsBadge",
-            "Sub_BackButton"
+            "WeeklyAwardsBadge"
+        ],
+        "interrupt": [
+            "BackButton"
         ]
     },
     "Sub_CollectDailyAwards": {

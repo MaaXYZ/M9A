@@ -4,8 +4,10 @@
             "PsychubeEnterTheShow",
             "PsychubeResourceStages",
             "FreePsychubeStages",
-            "PsychubeStages_7",
-            "Sub_StartUp"
+            "PsychubeStages_7"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "PsychubeEnterTheShow": {
@@ -63,8 +65,10 @@
             297
         ],
         "next": [
-            "HomeFlag",
-            "Sub_StartUp"
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "PsychubeStages_7": {

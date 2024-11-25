@@ -303,8 +303,10 @@
         "next": [
             "EatCandyWithin24H",
             "Sub_QuitEatCandyPage",
-            "HomeFlag",
-            "Sub_StartUp"
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     }
 }

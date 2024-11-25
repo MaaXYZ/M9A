@@ -1,8 +1,10 @@
 {
     "NotesOnShuoRi": {
         "next": [
-            "NotesOnShuoRiEnterTheShow",
-            "Sub_StartUp"
+            "NotesOnShuoRiEnterTheShow"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "NotesOnShuoRiEnterTheShow": {

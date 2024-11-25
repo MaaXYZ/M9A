@@ -1,8 +1,10 @@
 {
     "ANightmareAtGreenLake": {
         "next": [
-            "ANightmareAtGreenLakeEnterTheShow",
-            "Sub_StartUp"
+            "ANightmareAtGreenLakeEnterTheShow"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "ANightmareAtGreenLakeEnterTheShow": {

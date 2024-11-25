@@ -1,8 +1,10 @@
 {
     "JourneytoMorPankh": {
         "next": [
-            "JourneytoMorPankhEnterTheShow",
-            "Sub_StartUp"
+            "JourneytoMorPankhEnterTheShow"
+        ],
+        "interrupt": [
+            "ReturnMain"
         ]
     },
     "JourneytoMorPankhEnterTheShow": {
