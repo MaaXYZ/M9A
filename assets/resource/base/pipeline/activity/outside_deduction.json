@@ -2541,7 +2541,8 @@
     "SOD_Skip": {
         "recognition": "OCR",
         "expected": [
-            "跳过"
+            "跳过",
+            "SKIP"
         ],
         "roi": [
             1009,
