@@ -16,7 +16,8 @@
             "AccumulatedSignIn",
             "BirthdayReward",
             "Reward",
-            "CloseDuringFestivalDipaRewardPage",
+            "Item-140001Reward",
+            "CloseRewardPage",
             "Download",
             "BackButton",
             "HomeButton",
@@ -34,7 +35,7 @@
             "AccumulatedSignIn",
             "BirthdayReward",
             "Reward",
-            "CloseDuringFestivalDipaRewardPage",
+            "CloseRewardPage",
             "Stop"
         ]
     },
@@ -133,7 +134,8 @@
             "BirthdayReward",
             "CloseAnnouncement",
             "Reward",
-            "CloseDuringFestivalDipaRewardPage",
+            "Item-140001Reward",
+            "CloseRewardPage",
             "BackButton"
         ]
     },
@@ -157,7 +159,37 @@
             364,
             152
         ],
-        "pre_wait_freezes": 1000
+        "action": "Click",
+        "next": [
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "SkipButton",
+            "Item-140001Reward",
+            "SkipOpeningAnimation"
+        ]
+    },
+    "SkipButton": {
+        "recognition": "OCR",
+        "expected": [
+            "跳过",
+            "Skip"
+        ],
+        "roi": [
+            1094,
+            0,
+            186,
+            119
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": "HomeLoading_wait"
+        }
+    },
+    "SkipOpeningAnimation": {
+        "action": "Click",
+        "target": "HomeLoading_wait"
     },
     "HomeFlag": {
         "recognition": "TemplateMatch",
@@ -239,7 +271,11 @@
             0,
             526,
             590
-        ]
+        ],
+        "post_wait_freezes": {
+            "time": 300,
+            "target": "HomeLoading_wait"
+        }
     },
     "AccumulatedSignIn": {
         "recognition": "TemplateMatch",
@@ -264,16 +300,63 @@
         ],
         "action": "Click"
     },
-    "CloseDuringFestivalDipaRewardPage": {
+    "Item-140001Reward": {
+        "doc": "独一律奖励",
+        "recognition": "TemplateMatch",
+        "template": "StartUp/Item-140001Reward.png",
+        "roi": [
+            126,
+            415,
+            1024,
+            204
+        ],
+        "action": "Click",
+        "target_offset": [
+            0,
+            -108,
+            0,
+            0
+        ],
+        "next": [
+            "NoItem-140001Reward",
+            "Item-140001Reward",
+            "CloseRewardPage"
+        ],
+        "interrupt": [
+            "ObtainedAwards"
+        ]
+    },
+    "NoItem-140001Reward": {
+        "recognition": "OCR",
+        "expected": [
+            "未达到",
+            "领取",
+            "条件"
+        ],
+        "roi": [
+            1020,
+            41,
+            260,
+            236
+        ],
+        "next": [
+            "CloseRewardPage"
+        ],
+        "interrupt": [
+            "ObtainedAwards"
+        ]
+    },
+    "CloseRewardPage": {
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "StartUp/CloseDuringFestivalDipaRewardPage.png",
+        "template": "StartUp/CloseRewardPage.png",
         "roi": [
             1069,
             68,
             138,
             138
         ],
-        "action": "Click"
+        "action": "Click",
+        "post_wait_freezes": 300
     }
 }
