@@ -73,12 +73,12 @@ jobs:
 
       - name: Download MFAWPF  
         uses: robinraju/release-downloader@v1  
-        with:  
-          repository: SweetSmellFox/MFAWPF  
-          filename: MFAWPF*
-          latest: true  
-          out-file-path: "MFA"  
-          extract: true  
+        with:
+          repository: SweetSmellFox/MFAWPF
+          fileName: "MFAWPF*"
+          latest: true
+          out-file-path: "MFA"
+          extract: true
 
       - name: Install
         shell: bash
