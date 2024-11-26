@@ -112,7 +112,7 @@ MD026:
 MD027: false
 
 # MD028/no-blanks-blockquote - Blank line inside blockquote
-MD028: true
+MD028: false
 
 # MD029/ol-prefix - Ordered list item prefix
 MD029:
