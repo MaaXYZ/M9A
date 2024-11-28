@@ -64,6 +64,11 @@ def install_chores():
         working_dir / "LICENSE",
         install_path,
     )
+    shutil.copytree(
+        working_dir / "docs",
+        install_path / "docs",
+        dirs_exist_ok=True,
+    )
 
 
 if __name__ == "__main__":
