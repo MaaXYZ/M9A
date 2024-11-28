@@ -813,7 +813,10 @@
                     "name": "x4",
                     "pipeline_override": {
                         "SetReplaysTimes": {
-                            "expected": "4"
+                            "template": [
+                                "Combat/SetReplaysTimesX4.png",
+                                "Combat/SetReplaysTimesX4_selected.png"
+                            ]
                         }
                     }
                 }

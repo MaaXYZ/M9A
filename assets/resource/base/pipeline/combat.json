@@ -701,8 +701,8 @@
         ]
     },
     "SetReplaysTimes": {
-        "recognition": "OCR",
-        "text_doc": "Set in code.",
+        "recognition": "TemplateMatch",
+        "template_code": "Set in interface.json.",
         "roi": [
             751,
             333,
@@ -711,6 +711,7 @@
         ],
         "action": "Click",
         "next": [
+            "SetReplaysTimes",
             "StartReplay"
         ]
     },
