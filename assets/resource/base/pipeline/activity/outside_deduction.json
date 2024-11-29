@@ -2535,8 +2535,31 @@
             "SOD_Main"
         ],
         "interrupt": [
-            "BackButton"
+            "SOD_BackButton"
         ]
+    },
+    "SOD_BackButton": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "StartUp/BackButton.png",
+            "StartUp/BackButton_White.png"
+        ],
+        "roi": [
+            0,
+            0,
+            134,
+            138
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                0,
+                324,
+                106,
+                319
+            ]
+        }
     },
     "SOD_Skip": {
         "recognition": "OCR",
