@@ -2,7 +2,7 @@
 
 [参考资料——interface.schema.json](https://github.com/MaaXYZ/MaaFramework/blob/main/tools/interface.schema.json)
 
-interface.json
+`interface.json` 旨在提供菜单配置。
 
 ## controller
 
@@ -26,6 +26,7 @@ interface.json
                 "{PROJECT_DIR}/resource/bilibili"
             ]
         }
+    ]
 }
 ```
 
@@ -46,6 +47,7 @@ interface.json
             "template_doc": "修改为当期活动入口的template",
             "template": "Combat/Activity/LondonDawningEnterTheShow.png"
         }
+    }
 }
 ```
 
@@ -143,6 +145,7 @@ interface.json
         }
     }
 }
+```
 
 ## version
 
@@ -150,4 +153,4 @@ interface.json
 
 ## message
 
-信息。目前为 MaaPiCli 运行时第一行输出的文字。
+信息。目前为 `MaaPiCli` 运行时第一行输出的文字。
