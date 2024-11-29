@@ -68,6 +68,7 @@ def install_chores():
         working_dir / "docs",
         install_path / "docs",
         dirs_exist_ok=True,
+        ignore=shutil.ignore_patterns("*.yaml"),
     )
 
 
