@@ -196,11 +196,40 @@ jobs:
         with:
           path: assets
 
-      - run: |
+      - name: Check assets directory
+        run: |
+          ls -la assets
+          if [ -z "$(ls -A assets)" ]; then
+            echo "assets directory is empty"
+            exit 1
+          fi
+
+      - name: Compress and generate checksums
+        run: |
           cd assets
+          echo "Generating checksums for all zip files..."
+          checksum_file="checksums.txt"
+          touch "$checksum_file"
+      
           for f in *; do
-            (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
+            if [ -d "$f" ]; then
+              echo "Processing directory: $f"
+              zip_file="$f-${{ needs.meta.outputs.tag }}.zip"
+              (cd "$f" && zip -r "../$zip_file" .)
+              if [ $? -eq 0 ]; then
+                echo "ZIP file created: ../$zip_file"
+                echo "Processing directory: $f"
+                sha256sum "$zip_file" >> "$checksum_file"
+                echo "" >> "$checksum_file"
+              else
+                echo "Failed to create ZIP file: ../$zip_file"
+                exit 1
+              fi
+            else
+              echo "Skipping non-directory: $f"
+            fi
           done
+
       - uses: softprops/action-gh-release@v2
         with:
           files: assets/*
