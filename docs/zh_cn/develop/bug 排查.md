@@ -47,6 +47,16 @@
 
 在这里我将问题大致分为三类：资源加载问题、连接问题以及 pipeline 问题（timeout）。
 
+### 资源加载问题
+
+### 连接问题
+
+模拟器多开，地址有误：
+
+```log
+[2024-11-30 11:01:21.301][ERR][Px21524][Tx19223][MuMuPlayerExtras.cpp][L417][MaaNS::CtrlUnitNs::MuMuPlayerExtras::get_display_id] Failed to get display id [display_id=-1] 
+```
+
 ## 解决问题
 
 前两种参考[常见问题](../manual/常见问题.md)解决，pipeline 问题需要进一步分析。
