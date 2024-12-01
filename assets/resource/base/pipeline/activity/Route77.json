@@ -70,7 +70,7 @@
         ],
         "action": "Click",
         "next": [
-            "ActivityStageModelSellect"
+            "ActivityStageModelSelect"
         ]
     }
 }

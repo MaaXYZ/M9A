@@ -331,13 +331,13 @@
         ],
         "action": "Click",
         "next": [
-            "SODStart_GoodsSellect",
-            "SODStart_MediaSellect",
+            "SODStart_GoodsSelect",
+            "SODStart_MediaSelect",
             "SOD_ArcanistAdd",
             "SODStart_Confirm"
         ]
     },
-    "SODStart_GoodsSellect": {
+    "SODStart_GoodsSelect": {
         "recognition": "OCR",
         "expected": [
             "镜的馈赠"
@@ -350,13 +350,13 @@
         ],
         "next": [
             "SODStart_Confirm",
-            "Sub_SODStart_GoodsSellect",
-            "SOD_ItemSellct_1",
-            "SODStart_MediaSellect",
+            "Sub_SODStart_GoodsSelect",
+            "SOD_ItemSelect_1",
+            "SODStart_MediaSelect",
             "SOD_ArcanistAdd"
         ]
     },
-    "Sub_SODStart_GoodsSellect": {
+    "Sub_SODStart_GoodsSelect": {
         "is_sub": true,
         "recognition": "OCR",
         "expected": [
@@ -374,10 +374,10 @@
         ],
         "action": "Click",
         "next": [
-            "SODStart_GoodsSellect_2"
+            "SODStart_GoodsSelect_2"
         ]
     },
-    "SODStart_GoodsSellect_2": {
+    "SODStart_GoodsSelect_2": {
         "recognition": "OCR",
         "expected": [
             "软盘",
@@ -394,9 +394,9 @@
         ],
         "action": "Click"
     },
-    "SODStart_MediaSellect": {
+    "SODStart_MediaSelect": {
         "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SODStart_MediaSellect3.png",
+        "template": "OutsideDeduction/SODStart_MediaSelect3.png",
         "roi": [
             0,
             81,
@@ -406,7 +406,7 @@
         "action": "Click",
         "next": [
             "SODStart_Confirm",
-            "SODStart_MediaSellect"
+            "SODStart_MediaSelect"
         ]
     },
     "SOD_ArcanistAdd": {
@@ -542,7 +542,7 @@
             "SOD_Ending_2",
             "SOD_EndingSelecct",
             "SOD_Levelup",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Acquire",
             "SOD_NewArcanist",
@@ -562,7 +562,7 @@
         "action": "Click",
         "next": [
             "SOD_Main",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_Acquire",
             "SOD_ArcanistAdd_Confirm_2"
         ]
@@ -586,7 +586,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -642,7 +642,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -697,7 +697,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -751,7 +751,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -804,7 +804,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -856,7 +856,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -907,7 +907,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -957,7 +957,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1006,7 +1006,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1054,7 +1054,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1101,7 +1101,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1147,7 +1147,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1192,7 +1192,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1236,7 +1236,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1279,7 +1279,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1321,7 +1321,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1362,7 +1362,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1402,7 +1402,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1441,7 +1441,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1479,7 +1479,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1516,7 +1516,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1552,7 +1552,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1587,7 +1587,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1621,7 +1621,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1654,7 +1654,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1686,7 +1686,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1717,7 +1717,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1747,7 +1747,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -1789,12 +1789,12 @@
         "action": "Click",
         "post_delay": 1500,
         "next": [
-            "SOD_ArcanistSellct",
+            "SOD_ArcanistSelect",
             "SOD_ArcanistAdd_Single4",
             "SOD_CombatStart",
             "SOD_Shopping_Leave",
             "SOD_EndEvent",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_Acquire",
             "SOD_NewArcanist",
             "SOD_Nothinghappen",
@@ -1814,16 +1814,16 @@
         ],
         "action": "Click",
         "next": [
-            "SOD_ArcanistSellct",
+            "SOD_ArcanistSelect",
             "SOD_ArcanistAdd_Single4",
             "SOD_CombatStart",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_Acquire"
         ]
     },
-    "SOD_ArcanistSellct": {
+    "SOD_ArcanistSelect": {
         "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_ArcanistSellct.png",
+        "template": "OutsideDeduction/SOD_ArcanistSelect.png",
         "roi": [
             495,
             234,
@@ -1834,7 +1834,7 @@
         "post_delay": 2500,
         "next": [
             "SOD_Quickformation_On",
-            "SOD_ArcanistSellct"
+            "SOD_ArcanistSelect"
         ],
         "interrupt": [
             "SOD_Quickformation"
@@ -1842,7 +1842,7 @@
     },
     "SOD_ArcanistAdd_Single4": {
         "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_ArcanistSellct.png",
+        "template": "OutsideDeduction/SOD_ArcanistSelect.png",
         "roi": [
             1020,
             235,
@@ -1914,15 +1914,17 @@
             "SOD_CombatVictory",
             "SOD_CombatDefeat_hint",
             "SOD_CombatDefeat",
-            "SOD_Dialog_3",
-            "SOD_Dialog_5",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_Combating",
             "SOD_ItemLose_1",
             "SOD_Acquire",
             "SOD_Skip",
             "SOD_Main",
             "SOD_Nothinghappen"
+        ],
+        "interrupt": [
+            "SOD_Dialog_3",
+            "SOD_Dialog_5"
         ]
     },
     "Sub_SOD_Dialog_1": {
@@ -1956,12 +1958,11 @@
             "升华"
         ],
         "roi": [
-            607,
-            597,
-            63,
-            34
+            557,
+            541,
+            165,
+            142
         ],
-        "only_rec": true,
         "action": "Click"
     },
     "Sub_SOD_Dialog_4": {
@@ -1982,12 +1983,11 @@
         "recognition": "OCR",
         "expected": "选择缔约对象",
         "roi": [
-            538,
-            144,
-            203,
-            35
+            485,
+            90,
+            305,
+            144
         ],
-        "only_rec": true,
         "action": "Click",
         "target": [
             393,
@@ -2004,12 +2004,11 @@
         "recognition": "OCR",
         "expected": "缔结契约",
         "roi": [
-            585,
-            596,
-            109,
-            30
+            532,
+            541,
+            215,
+            137
         ],
-        "only_rec": true,
         "action": "Click"
     },
     "SOD_CombatDefeat_hint": {
@@ -2047,7 +2046,7 @@
         "post_wait_freezes": 1,
         "post_delay": 1500,
         "next": [
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Acquire",
             "SOD_Skip",
@@ -2075,7 +2074,7 @@
             "SOD_CombatDefeat"
         ]
     },
-    "SOD_ItemSellct_1": {
+    "SOD_ItemSelect_1": {
         "recognition": "OCR",
         "expected": [
             "造物选择"
@@ -2106,14 +2105,14 @@
             "SOD_Acquire",
             "SOD_NewArcanist",
             "SOD_Nothinghappen",
-            "SOD_ItemSellct_Confirm",
-            "SOD_ItemSellct_2",
-            "SODStart_MediaSellect",
+            "SOD_ItemSelect_Confirm",
+            "SOD_ItemSelect_2",
+            "SODStart_MediaSelect",
             "SOD_ArcanistAdd",
             "SODStart_Confirm"
         ]
     },
-    "SOD_ItemSellct_2": {
+    "SOD_ItemSelect_2": {
         "recognition": "OCR",
         "expected": [
             "造物选择"
@@ -2144,14 +2143,14 @@
             "SOD_Acquire",
             "SOD_NewArcanist",
             "SOD_Nothinghappen",
-            "SOD_ItemSellct_Confirm",
-            "SOD_ItemSellct_3",
-            "SODStart_MediaSellect",
+            "SOD_ItemSelect_Confirm",
+            "SOD_ItemSelect_3",
+            "SODStart_MediaSelect",
             "SOD_ArcanistAdd",
             "SODStart_Confirm"
         ]
     },
-    "SOD_ItemSellct_3": {
+    "SOD_ItemSelect_3": {
         "recognition": "OCR",
         "expected": [
             "造物选择"
@@ -2182,14 +2181,14 @@
             "SOD_Acquire",
             "SOD_NewArcanist",
             "SOD_Nothinghappen",
-            "SOD_ItemSellct_Confirm",
-            "SOD_ItemSellct_4",
-            "SODStart_MediaSellect",
+            "SOD_ItemSelect_Confirm",
+            "SOD_ItemSelect_4",
+            "SODStart_MediaSelect",
             "SOD_ArcanistAdd",
             "SODStart_Confirm"
         ]
     },
-    "SOD_ItemSellct_4": {
+    "SOD_ItemSelect_4": {
         "recognition": "OCR",
         "expected": [
             "造物选择"
@@ -2220,13 +2219,13 @@
             "SOD_Acquire",
             "SOD_NewArcanist",
             "SOD_Nothinghappen",
-            "SOD_ItemSellct_Confirm",
-            "SODStart_MediaSellect",
+            "SOD_ItemSelect_Confirm",
+            "SODStart_MediaSelect",
             "SOD_ArcanistAdd",
             "SODStart_Confirm"
         ]
     },
-    "SOD_ItemSellct_Confirm": {
+    "SOD_ItemSelect_Confirm": {
         "recognition": "OCR",
         "expected": [
             "确认"
@@ -2246,13 +2245,13 @@
             "SOD_Ending_2",
             "SOD_EndingSelecct",
             "SOD_Levelup",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Acquire",
             "SOD_NewArcanist",
             "SOD_Nothinghappen",
-            "SOD_ItemSellct_Confirm",
-            "SODStart_MediaSellect",
+            "SOD_ItemSelect_Confirm",
+            "SODStart_MediaSelect",
             "SOD_ArcanistAdd",
             "SODStart_Confirm"
         ]
@@ -2277,8 +2276,8 @@
             20
         ],
         "next": [
-            "SOD_ItemSellct_Confirm",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_Confirm",
+            "SOD_ItemSelect_1",
             "SOD_Nothinghappen"
         ]
     },
@@ -2299,7 +2298,7 @@
             "SOD_Ending_2",
             "SOD_EndingSelecct",
             "SOD_Levelup",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Acquire",
             "SOD_Nothinghappen",
@@ -2359,11 +2358,11 @@
         "post_delay": 2000,
         "next": [
             "SOD_ClearDeployment",
-            "SOD_ArcanistSellct",
+            "SOD_ArcanistSelect",
             "SOD_NewArcanist",
             "SOD_ArcanistAdd_Single4",
             "SOD_CombatStart",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Acquire",
             "SOD_EndEvent",
@@ -2393,12 +2392,12 @@
             "SOD_Ending_2",
             "SOD_EndingSelecct",
             "SOD_Levelup",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Acquire",
             "SOD_NewArcanist",
             "SOD_Nothinghappen",
-            "SOD_ArcanistSellct",
+            "SOD_ArcanistSelect",
             "SOD_ArcanistAdd_Single4",
             "SOD_CombatStart",
             "SOD_EndEvent"
@@ -2423,12 +2422,12 @@
             "SOD_Ending_2",
             "SOD_EndingSelecct",
             "SOD_Levelup",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Acquire",
             "SOD_NewArcanist",
             "SOD_Nothinghappen",
-            "SOD_ArcanistSellct",
+            "SOD_ArcanistSelect",
             "SOD_ArcanistAdd_Single4",
             "SOD_CombatStart",
             "SOD_EndEvent_OK"
@@ -2461,7 +2460,7 @@
             "SOD_Ending_2",
             "SOD_EndingSelecct",
             "SOD_Levelup",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Acquire",
             "SOD_NewArcanist",
@@ -2503,7 +2502,7 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_EndingSelecct",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Skip",
             "SOD_Acquire",
@@ -2631,10 +2630,10 @@
         ],
         "action": "Click",
         "next": [
-            "SOD_ArcanistSellct",
+            "SOD_ArcanistSelect",
             "SOD_ArcanistAdd_Single4",
             "SOD_CombatStart",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Acquire",
             "SOD_EndEvent",
@@ -2700,12 +2699,12 @@
             "SOD_Ending_1",
             "SOD_Ending_2",
             "SOD_Levelup",
-            "SOD_ItemSellct_1",
+            "SOD_ItemSelect_1",
             "SOD_ItemLose_1",
             "SOD_Acquire",
             "SOD_NewArcanist",
             "SOD_Nothinghappen",
-            "SOD_ArcanistSellct",
+            "SOD_ArcanistSelect",
             "SOD_ArcanistAdd_Single4",
             "SOD_CombatStart",
             "SOD_EndingSelecct"

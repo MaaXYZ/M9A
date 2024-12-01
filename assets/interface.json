@@ -907,7 +907,7 @@
                 {
                     "name": "故事模式",
                     "pipeline_override": {
-                        "ActivityStageModelSellect": {
+                        "ActivityStageModelSelect": {
                             "next": "ActivityStageModel_Story"
                         }
                     }
@@ -915,7 +915,7 @@
                 {
                     "name": "探索模式",
                     "pipeline_override": {
-                        "ActivityStageModelSellect": {
+                        "ActivityStageModelSelect": {
                             "next": "ActivityStageModel_Explore"
                         }
                     }

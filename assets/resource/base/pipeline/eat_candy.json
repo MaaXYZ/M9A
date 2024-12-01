@@ -78,7 +78,7 @@
         ],
         "action": "Click",
         "next": [
-            "SellectMiniCandyMax",
+            "SelectMiniCandyMax",
             "MiniCandy24HNotEnough"
         ],
         "interrupt": [
@@ -213,9 +213,9 @@
             76
         ]
     },
-    "SellectMiniCandyMax": {
+    "SelectMiniCandyMax": {
         "recognition": "TemplateMatch",
-        "template": "EatCandy/SellectMiniCandyMax.png",
+        "template": "EatCandy/SelectMiniCandyMax.png",
         "roi": [
             782,
             414,
