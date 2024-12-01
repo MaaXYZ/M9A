@@ -24,6 +24,8 @@
 
 下载地址：<https://github.com/MaaXYZ/M9A/releases>
 
+PS: 可以连接模拟器和手机, 但需要屏幕比例为 16:9
+
 ### Windows
 
 - 对于绝大部分用户，请下载 `M9A-win-x86_64-vXXX.zip`
