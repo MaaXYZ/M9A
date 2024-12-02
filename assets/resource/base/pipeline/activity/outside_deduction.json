@@ -2645,7 +2645,7 @@
         ]
     },
     "SOD_Ending_1": {
-        "recognition": "TemplateMatch",
+        "recognition": "FeatureMatch",
         "template": "OutsideDeduction/SOD_Ending_1.png",
         "roi": [
             582,
@@ -2654,6 +2654,7 @@
             190
         ],
         "action": "Click",
+        "count": 9,
         "post_delay": 1500,
         "next": [
             "SOD_EndingSelecct",
