@@ -132,9 +132,9 @@
             "ObtainedAwards",
             "AccumulatedSignIn",
             "BirthdayReward",
-            "CloseAnnouncement",
             "Reward",
             "Item-140001Reward",
+            "CloseAnnouncement",
             "CloseRewardPage",
             "BackButton"
         ]
@@ -165,7 +165,13 @@
         ],
         "interrupt": [
             "SkipButton",
+            "ObtainedAwards",
+            "AccumulatedSignIn",
+            "BirthdayReward",
             "Item-140001Reward",
+            "Reward",
+            "CloseRewardPage",
+            "CloseAnnouncement",
             "SkipOpeningAnimation"
         ]
     },
