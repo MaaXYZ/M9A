@@ -2536,6 +2536,9 @@
             "SOD_SelectNext_5_3",
             "SOD_SelectNext_6_3",
             "SOD_SelectNext_7_3"
+        ],
+        "interrupt": [
+            "SOD_Levelup"
         ]
     },
     "SOD_ClearDeployment": {
