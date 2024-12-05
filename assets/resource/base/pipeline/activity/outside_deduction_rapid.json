@@ -226,7 +226,6 @@
         ],
         "only_rec": true,
         "action": "Click",
-        "pre_wait_freezes": 1,
         "post_wait_freezes": 1,
         "next": [
             "ODR_Start_MediaSelect",
@@ -289,7 +288,7 @@
             20,
             20
         ],
-        "post_wait_freezes": 300,
+        "post_wait_freezes": 1000,
         "next": [
             "ODR_AddChar_OK",
             "ODR_AddChar"
@@ -306,7 +305,6 @@
             30
         ],
         "only_rec": true,
-        "pre_wait_freezes": 1,
         "next": "ODR_Start_AddChar_Confirm"
     },
     "ODR_Start_Teambuild_Confirm": {
@@ -357,7 +355,7 @@
             628
         ],
         "post_wait_freezes": {
-            "time": 1200,
+            "time": 750,
             "target": [
                 881,
                 317,
@@ -385,7 +383,7 @@
             628
         ],
         "post_wait_freezes": {
-            "time": 1200,
+            "time": 750,
             "target": [
                 881,
                 317,
@@ -419,7 +417,7 @@
             628
         ],
         "post_wait_freezes": {
-            "time": 1200,
+            "time": 750,
             "target": [
                 881,
                 317,
@@ -452,7 +450,7 @@
             628
         ],
         "post_wait_freezes": {
-            "time": 1200,
+            "time": 750,
             "target": [
                 881,
                 317,
@@ -484,7 +482,7 @@
             628
         ],
         "post_wait_freezes": {
-            "time": 1200,
+            "time": 750,
             "target": [
                 881,
                 317,
@@ -512,7 +510,7 @@
             628
         ],
         "post_wait_freezes": {
-            "time": 1200,
+            "time": 750,
             "target": [
                 881,
                 317,
@@ -563,7 +561,7 @@
                 40
             ]
         },
-        "timeout": 1500,
+        "timeout": 750,
         "next": "ODR_Move"
     },
     "ODR_SkipText": {
@@ -725,7 +723,7 @@
         "only_rec": true,
         "action": "Click",
         "post_wait_freezes": {
-            "time": 1200,
+            "time": 750,
             "target": [
                 1195,
                 400,
@@ -741,14 +739,13 @@
     "ODR_Event_Select": {
         "doc": "选中事件",
         "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_EndEvent.png",
+        "template": "OutsideDeductionRapid/EventSelect.png",
         "roi": [
             760,
             70,
             520,
             640
         ],
-        "threshold": 0.4,
         "order_by": "Vertical",
         "index": -1,
         "action": "Click",
