@@ -122,7 +122,10 @@
         },
         {
             "name": "局外演绎：黄昏的音序（勿带天使娜娜）",
-            "entry": "SeriesOfDusks"
+            "entry": "SeriesOfDusks",
+            "option": [
+                "只刷第一关（需要先手动将“刻画生长-指引之歌”点满）"
+            ]
         }
     ],
     "option": {
@@ -1189,6 +1192,22 @@
                     "pipeline_override": {
                         "LimboStageRightest": {
                             "next": []
+                        }
+                    }
+                }
+            ]
+        },
+        "只刷第一关（需要先手动将“刻画生长-指引之歌”点满）": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "SeriesOfDusks": {
+                            "next": "ODR_Entrance"
                         }
                     }
                 }
