@@ -112,13 +112,13 @@
         ],
         "action": "Click",
         "next": [
-            "Sub_ObtainedAwards",
             "CollectTrust",
             "TrustDialogueNext",
             "TrustDialogueInteraction",
             "HomeFlag"
         ],
         "interrupt": [
+            "ObtainedAwards",
             "HomeButton"
         ]
     },

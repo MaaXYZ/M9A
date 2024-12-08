@@ -2,8 +2,8 @@
     "Awards": {
         "next": [
             "Sub_MailBadge",
-            "Sub_JukeboxBadge",
             "Sub_DailyBadge",
+            "Sub_JukeboxBadge",
             "HomeFlag"
         ],
         "interrupt": [
@@ -38,24 +38,14 @@
         ],
         "action": "Click",
         "next": [
-            "Sub_ObtainedAwards",
             "NoMailAwards",
             "CollectMailAwards"
+        ],
+        "interrupt": [
+            "ObtainedAwards"
         ]
     },
     "ObtainedAwards": {
-        "recognition": "TemplateMatch",
-        "template": "Awards/ObtainedAwards.png",
-        "roi": [
-            524,
-            62,
-            232,
-            158
-        ],
-        "action": "Click"
-    },
-    "Sub_ObtainedAwards": {
-        "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "Awards/ObtainedAwards.png",
         "roi": [
@@ -97,10 +87,11 @@
         "post_wait_freezes": 200,
         "next": [
             "Sub_CollectDailyAwards",
-            "Sub_ObtainedAwards",
-            "WeeklyAwardsBadge"
+            "WeeklyAwardsBadge",
+            "HomeFlag"
         ],
         "interrupt": [
+            "ObtainedAwards",
             "BackButton"
         ]
     },
@@ -132,10 +123,12 @@
         ],
         "next": [
             "Sub_CollectDailyAwards",
-            "Sub_ObtainedAwards",
             "WeeklyAwardsBadge",
-            "Sub_BackButton",
             "HomeFlag"
+        ],
+        "interrupt": [
+            "ObtainedAwards",
+            "BackButton"
         ]
     },
     "DailyAwardsPageFlag": {
@@ -164,9 +157,11 @@
         "next": [
             "Sub_CollectJukebox",
             "Sub_JukeboxAwardsBadge",
-            "Sub_ObtainedAwards",
-            "Sub_BackButton",
             "HomeFlag"
+        ],
+        "interrupt": [
+            "ObtainedAwards",
+            "BackButton"
         ]
     },
     "Sub_JukeboxAwardsBadge": {
@@ -183,10 +178,12 @@
         "action": "Click",
         "next": [
             "Sub_CollectJukebox",
-            "Sub_ObtainedAwards",
             "Sub_JukeboxAwardsBadge",
             "NoJukeboxAwards",
             "ExitEdition"
+        ],
+        "interrupt": [
+            "ObtainedAwards"
         ]
     },
     "ExitEdition": {
@@ -247,8 +244,10 @@
         "action": "Click",
         "post_wait_freezes": 200,
         "next": [
-            "Sub_CollectJukebox",
-            "Sub_ObtainedAwards"
+            "Sub_CollectJukebox"
+        ],
+        "interrupt": [
+            "ObtainedAwards"
         ]
     }
 }
