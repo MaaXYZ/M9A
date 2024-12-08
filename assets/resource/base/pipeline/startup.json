@@ -355,12 +355,15 @@
     "CloseRewardPage": {
         "green_mask": true,
         "recognition": "TemplateMatch",
-        "template": "StartUp/CloseRewardPage.png",
+        "template": [
+            "StartUp/CloseRewardPage.png",
+            "StartUp/CloseItemDetail.png"
+        ],
         "roi": [
-            1069,
-            68,
-            138,
-            138
+            1040,
+            60,
+            167,
+            146
         ],
         "action": "Click",
         "post_wait_freezes": 300
