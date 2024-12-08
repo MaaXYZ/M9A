@@ -37,6 +37,7 @@
 - [Pipeline 编写](./docs/zh_cn/develop/Pipeline%20编写.md)
 - [Bug 排查](./docs/zh_cn/develop/Bug%20排查.md)
 - [项目重构](./docs/zh_cn/develop/项目重构.md)
+- [活动资源维护](./docs/zh_cn/develop/活动资源维护.md)
 - [外服适配](./docs/zh_cn/develop/外服适配.md)
 - [文档编写](./docs/zh_cn/develop/文档编写.md)
 
