@@ -549,7 +549,15 @@
         "doc": "查询棋子位置",
         "recognition": "TemplateMatch",
         "template": "OutsideDeductionRapid/Chess.png",
-        "action": "StopTask"
+        "next": [
+            "ODR_SelectDiscovery",
+            "ODR_SelectCombat",
+            "ODR_SelectImminent",
+            "ODR_SelectTreasure",
+            "ODR_SelectRestSite",
+            "ODR_SelectShop",
+            "ODR_QueryChessLocation"
+        ]
     },
     "ODR_Levelup": {
         "recognition": "OCR",
@@ -864,6 +872,7 @@
         "next": "ODR_Entrance",
         "interrupt": [
             "BackButton",
+            "HomeLoading",
             "ODR_MainLoop"
         ]
     },
@@ -876,16 +885,30 @@
             82,
             85
         ],
+        "pre_wait_freezes": 1,
         "post_wait_freezes": 1,
         "next": [
-            "ODR_SelectImminent",
-            "ODR_SelectTreasure",
-            "ODR_SelectRestSite",
-            "ODR_SelectShop",
-            "ODR_SelectDiscovery",
-            "ODR_SelectCombat",
+            "ODR_QueryChessLocation",
             "ODR_Exit"
         ],
-        "interrupt": "ODR_QueryChessLocation"
+        "interrupt": [
+            "SwipLeft"
+        ]
+    },
+    "SwipLeft": {
+        "doc": "向左滑动",
+        "action": "Swipe",
+        "begin": [
+            380,
+            600,
+            50,
+            50
+        ],
+        "end": [
+            500,
+            600,
+            50,
+            50
+        ]
     }
 }
