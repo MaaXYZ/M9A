@@ -227,9 +227,11 @@
         "action": "Click",
         "post_wait_freezes": 1,
         "next": [
-            "ODR_Start_Gift",
             "ODR_Start_MediaSelect",
             "ODR_Start_Difficulty_Confirm"
+        ],
+        "interrupt": [
+            "ODR_Start_Gift"
         ]
     },
     "ODR_Start_Gift": {
@@ -238,11 +240,12 @@
             "镜的馈赠"
         ],
         "roi": [
-            535,
-            4,
-            224,
-            90
+            572,
+            22,
+            133,
+            36
         ],
+        "only_rec": true,
         "next": [
             "ODR_Start_GiftSelect",
             "ODR_Start_Gift"
@@ -300,11 +303,7 @@
         ],
         "only_rec": true,
         "action": "Click",
-        "post_wait_freezes": 1,
-        "next": [
-            "ODR_Start_MediaSelect",
-            "ODR_Start_Gift_Confirm"
-        ]
+        "post_wait_freezes": 1
     },
     "ODR_Start_MediaSelect": {
         "doc": "触媒选择",
@@ -745,7 +744,6 @@
         "expected_doc": "来自BV197421Z7bm&灰机wiki-维也纳拾遗",
         "recognition": "OCR",
         "expected": [
-            "藏宝地",
             "休憩点",
             "盛情款待",
             "今日运势",
