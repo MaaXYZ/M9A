@@ -1206,8 +1206,8 @@
                 {
                     "name": "Yes",
                     "pipeline_override": {
-                        "SeriesOfDusks": {
-                            "next": "ODR_Entrance"
+                        "SOD_UNOPENED": {
+                            "next": "ODR_Start"
                         }
                     }
                 }
