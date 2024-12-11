@@ -550,7 +550,7 @@
         "only_rec": true,
         "action": "Click",
         "post_wait_freezes": {
-            "time": 1000,
+            "time": 700,
             "target": [
                 33,
                 430,
@@ -575,7 +575,7 @@
         "only_rec": true,
         "action": "Click",
         "post_wait_freezes": {
-            "time": 1000,
+            "time": 700,
             "target": [
                 33,
                 430,
@@ -609,13 +609,15 @@
             38
         ],
         "only_rec": true,
-        "action": "Click"
+        "action": "Click",
+        "post_wait_freezes": 700
     },
     "ODR_ItemLose": {
         "recognition": "OCR",
         "expected": [
             "交付造物",
-            "失去造物"
+            "失去造物",
+            "失声天平"
         ],
         "roi": [
             535,
@@ -843,9 +845,36 @@
             "ODR_Event_Windows&Doors_Completed"
         ],
         "interrupt": [
+            "ODR_Windows&Doors_Exchange",
             "ODR_Event_Select_Windows&Doors",
+            "SOD_Acquire_NoNext",
             "ODR_ItemLose",
             "ODR_SkipText"
+        ]
+    },
+    "ODR_Windows&Doors_Exchange": {
+        "doc": "失声天平",
+        "recognition": "OCR",
+        "expected": "[12]",
+        "roi": [
+            941,
+            505,
+            142,
+            19
+        ],
+        "only_rec": true,
+        "target_offset": [
+            0,
+            0,
+            0,
+            -35
+        ],
+        "action": "Click",
+        "next": [
+            "ODR_ItemLose"
+        ],
+        "interrupt": [
+            "ODR_Event_Confirm"
         ]
     },
     "ODR_Event_Select": {
@@ -944,7 +973,7 @@
         "interrupt": [
             "ODR_Event_Confirm",
             "ODR_OptionSelectAll",
-            "ODR_Windows&Doors_Change",
+            "ODR_Windows&Doors_ChangeRound",
             "BackButton"
         ]
     },
@@ -952,7 +981,7 @@
         "recognition": "TemplateMatch",
         "template": "./OutsideDeductionRapid/WindowsCompleted.png"
     },
-    "ODR_Windows&Doors_Change": {
+    "ODR_Windows&Doors_ChangeRound": {
         "doc": "换一批",
         "recognition": "OCR",
         "expected": [
@@ -1022,7 +1051,7 @@
             69
         ],
         "post_wait_freezes": {
-            "time": 1000,
+            "time": 700,
             "target": [
                 33,
                 430,
