@@ -332,6 +332,9 @@
             "SODStart_MediaSelect",
             "SOD_ArcanistAdd",
             "SODStart_Confirm"
+        ],
+        "interrupt": [
+            "SOD_SwipeLeft"
         ]
     },
     "SODStart_GoodsSelect": {
@@ -351,6 +354,9 @@
             "SOD_ItemSelect_1",
             "SODStart_MediaSelect",
             "SOD_ArcanistAdd"
+        ],
+        "interrupt": [
+            "SOD_SwipeLeft"
         ]
     },
     "Sub_SODStart_GoodsSelect": {
@@ -393,7 +399,7 @@
     },
     "SODStart_MediaSelect": {
         "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SODStart_MediaSelect3.png",
+        "template": "OutsideDeduction/SODStart_Media_RitualDagger.png",
         "roi": [
             0,
             81,
@@ -404,6 +410,33 @@
         "next": [
             "SODStart_Confirm",
             "SODStart_MediaSelect"
+        ]
+    },
+    "SOD_SwipeLeft": {
+        "action": "Swipe",
+        "begin": [
+            1020,
+            630,
+            100,
+            55
+        ],
+        "end": [
+            500,
+            630,
+            100,
+            55
+        ],
+        "next": [
+            "SOD_Click"
+        ]
+    },
+    "SOD_Click": {
+        "action": "Click",
+        "target": [
+            500,
+            630,
+            100,
+            55
         ]
     },
     "SOD_ArcanistAdd": {
