@@ -2514,7 +2514,8 @@
             642,
             20,
             20
-        ]
+        ],
+        "post_wait_freezes": 500
     },
     "SOD_Main": {
         "recognition": "TemplateMatch",

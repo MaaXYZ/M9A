@@ -319,7 +319,7 @@
             1080
         ],
         "action": "Click",
-        "next": "ODR_Event_Select_SkipText_First",
+        "next": "ODR_Event_Select_SkipText",
         "interrupt": "ODR_Move"
     },
     "ODR_SelectShop": {
@@ -558,7 +558,10 @@
             ]
         },
         "next": "ODR_MainLoop",
-        "interrupt": "ODR_Levelup"
+        "interrupt": [
+            "ODR_Levelup",
+            "SOD_Acquire_NoNext"
+        ]
     },
     "ODR_ItemSelect_Confirm_NoNext": {
         "recognition": "OCR",
@@ -1145,10 +1148,10 @@
         "recognition": "TemplateMatch",
         "template": "OutsideDeductionRapid/Event.png",
         "roi": [
-            760,
-            70,
-            520,
-            640
+            694,
+            84,
+            586,
+            596
         ],
         "order_by": "Vertical",
         "index": 1,
@@ -1166,7 +1169,13 @@
     },
     "ODR_Event_Windows&Doors_Completed": {
         "recognition": "TemplateMatch",
-        "template": "./OutsideDeductionRapid/WindowsCompleted.png"
+        "template": "./OutsideDeductionRapid/WindowsCompleted.png",
+        "roi": [
+            441,
+            418,
+            150,
+            172
+        ]
     },
     "ODR_Windows&Doors_ChangeRound": {
         "doc": "换一批",
@@ -1238,7 +1247,7 @@
             69
         ],
         "post_wait_freezes": {
-            "time": 700,
+            "time": 200,
             "target": [
                 33,
                 430,
