@@ -47,15 +47,13 @@
         ],
         "only_rec": true,
         "next": [
-            "ODR_Start_GiftSelect",
-            "ODR_Start_Gift"
+            "ODR_Start_Gift_ConfirmFlag",
+            "ODR_Start_GiftSelect"
         ]
     },
     "ODR_Start_GiftSelect": {
-        "is_sub": true,
         "recognition": "OCR",
         "expected": [
-            "软盘",
             "造物",
             "发条",
             "金雀"
@@ -280,7 +278,12 @@
             1080
         ],
         "action": "Click",
-        "next": "ODR_Event_Select_SkipText",
+        "next": [
+            "ODR_Event_Select_SkipText",
+            "ODR_Event_Select_SkipText_First",
+            "ODR_Event_Select_SkipText_Second",
+            "ODR_Event_Select_SkipText_Second2Last"
+        ],
         "interrupt": "ODR_Move"
     },
     "ODR_SelectTreasure": {
@@ -314,7 +317,7 @@
             1080
         ],
         "action": "Click",
-        "next": "ODR_Event_Select_SkipText",
+        "next": "ODR_Event_Select_SkipText_Second2Last",
         "interrupt": "ODR_Move"
     },
     "ODR_SelectShop": {
@@ -400,7 +403,8 @@
             "ODR_SelectTreasure",
             "ODR_SelectRestSite",
             "ODR_SelectShop",
-            "ODR_QueryChessLocation"
+            "ODR_QueryChessLocation",
+            "ODR_QueryChessLocation2"
         ]
     },
     "ODR_Levelup": {
@@ -444,6 +448,25 @@
         "only_rec": true,
         "next": [
             "ODR_ItemSelect_Confirm"
+        ],
+        "interrupt": [
+            "ODR_ItemSelect_1"
+        ]
+    },
+    "ODR_ItemSelect_NoNext": {
+        "recognition": "OCR",
+        "expected": [
+            "造物选择"
+        ],
+        "roi": [
+            570,
+            20,
+            142,
+            44
+        ],
+        "only_rec": true,
+        "next": [
+            "ODR_ItemSelect_Confirm_NoNext"
         ],
         "interrupt": [
             "ODR_ItemSelect_1"
@@ -532,6 +555,29 @@
         "next": "ODR_MainLoop",
         "interrupt": "ODR_Levelup"
     },
+    "ODR_ItemSelect_Confirm_NoNext": {
+        "recognition": "OCR",
+        "expected": [
+            "确认"
+        ],
+        "roi": [
+            606,
+            628,
+            74,
+            40
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 1000,
+            "target": [
+                33,
+                430,
+                82,
+                85
+            ]
+        }
+    },
     "ODR_ItemSelect_ConfirmFlag": {
         "recognition": "OCR",
         "expected": [
@@ -557,12 +603,7 @@
             38
         ],
         "only_rec": true,
-        "action": "Click",
-        "next": "ODR_MainLoop",
-        "interrupt": [
-            "ODR_Levelup",
-            "ODR_SkipText"
-        ]
+        "action": "Click"
     },
     "ODR_ItemLose": {
         "recognition": "OCR",
@@ -630,42 +671,27 @@
         }
     },
     "ODR_Event_Select_SkipText": {
-        "doc": "选中事件",
+        "doc": "事件——默认最后一个选项",
         "expected_doc": "来自BV197421Z7bm&灰机wiki-维也纳拾遗",
         "recognition": "OCR",
         "expected": [
-            "休憩点",
-            "盛情款待",
-            "今日运势",
             "神奇商店",
-            "落魄画家",
             "乞食的鸟雀",
-            "板条箱",
             "门的内侧",
-            "洞窟尽头",
             "合法受益人",
             "受害者",
             "美味汽水",
-            "降灵",
             "床位纷争",
-            "旧唱片",
             "聒噪的箱子",
-            "狂热粉丝",
-            "何谓艺术",
             "模糊的油画",
             "赃物",
             "魔精典当行",
-            "地底与星空",
             "水泊精灵",
             "传闻",
             "星空之腹",
             "交易地",
             "命运之泉",
             "便民服务",
-            "旧栈道",
-            "破碎的怀表",
-            "矫饰主义",
-            "非典型茶歇",
             "未来",
             "市场雏形",
             "向导",
@@ -673,7 +699,6 @@
             "脱轨电车",
             "城市的静脉",
             "滑翔冒险",
-            "死胡同",
             "旅者的馈赠",
             "艺术的回馈",
             "分享情报",
@@ -688,12 +713,137 @@
         "only_rec": true,
         "action": "Click",
         "next": [
+            "ODR_MainLoop"
+        ],
+        "interrupt": [
             "ODR_Event_Select",
-            "ODR_Event_Select_SkipText"
+            "ODR_ItemSelect_NoNext",
+            "ODR_Levelup",
+            "ODR_ItemLose",
+            "SOD_Acquire_NoNext",
+            "ODR_SkipText"
+        ]
+    },
+    "ODR_Event_Select_SkipText_First": {
+        "doc": "事件——选择第一个选项",
+        "expected_doc": "来自BV197421Z7bm&灰机wiki-维也纳拾遗",
+        "recognition": "OCR",
+        "expected": [
+            "盛情款待",
+            "今日运势",
+            "落魄画家",
+            "板条箱",
+            "降灵",
+            "何谓艺术",
+            "地底与星空",
+            "旧栈道",
+            "非典型茶歇",
+            "死胡同"
+        ],
+        "roi": [
+            239,
+            468,
+            407,
+            41
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "ODR_MainLoop"
+        ],
+        "interrupt": [
+            "ODR_Event_Select_First",
+            "ODR_ItemSelect_NoNext",
+            "ODR_Levelup",
+            "ODR_ItemLose",
+            "SOD_Acquire_NoNext",
+            "ODR_SkipText"
+        ]
+    },
+    "ODR_Event_Select_SkipText_Second": {
+        "doc": "事件——选择第二个选项",
+        "expected_doc": "来自BV197421Z7bm&灰机wiki-维也纳拾遗",
+        "recognition": "OCR",
+        "expected": [
+            "破碎的怀表",
+            "狂热粉丝",
+            "矫饰主义"
+        ],
+        "roi": [
+            239,
+            468,
+            407,
+            41
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "ODR_MainLoop"
+        ],
+        "interrupt": [
+            "ODR_Event_Select_Second",
+            "ODR_ItemSelect_NoNext",
+            "ODR_Levelup",
+            "ODR_ItemLose",
+            "SOD_Acquire_NoNext",
+            "ODR_SkipText"
+        ]
+    },
+    "ODR_Event_Select_SkipText_Second2Last": {
+        "doc": "事件——休憩点（倒数第二个选项）",
+        "expected_doc": "来自BV197421Z7bm&灰机wiki-维也纳拾遗",
+        "recognition": "OCR",
+        "expected": [
+            "休憩点",
+            "洞窟尽头",
+            "旧唱片"
+        ],
+        "roi": [
+            239,
+            468,
+            407,
+            41
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "ODR_MainLoop"
+        ],
+        "interrupt": [
+            "ODR_Event_Select_Second2Last",
+            "ODR_ItemSelect_NoNext",
+            "ODR_Levelup",
+            "ODR_ItemLose",
+            "SOD_Acquire_NoNext",
+            "ODR_SkipText"
+        ]
+    },
+    "ODR_Event_Select_SkipText_Windows&Doors": {
+        "doc": "选中事件——窗与扉",
+        "expected_doc": "来自BV197421Z7bm&灰机wiki-维也纳拾遗",
+        "recognition": "OCR",
+        "expected": [
+            "窗与扉"
+        ],
+        "roi": [
+            239,
+            468,
+            407,
+            41
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "ODR_Event_Windows&Doors_Completed"
+        ],
+        "interrupt": [
+            "ODR_Event_Select_Windows&Doors",
+            "ODR_ItemLose",
+            "ODR_SkipText"
         ]
     },
     "ODR_Event_Select": {
-        "doc": "选中事件",
+        "doc": "选择选项（最后）",
         "recognition": "TemplateMatch",
         "template": "OutsideDeductionRapid/Event.png",
         "roi": [
@@ -711,6 +861,119 @@
         ],
         "interrupt": "ODR_SkipText"
     },
+    "ODR_Event_Select_First": {
+        "doc": "选择选项（第一）",
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeductionRapid/Event.png",
+        "roi": [
+            760,
+            70,
+            520,
+            640
+        ],
+        "order_by": "Vertical",
+        "index": 0,
+        "action": "Click",
+        "next": [
+            "ODR_Event_Confirm",
+            "ODR_Event_Select_First"
+        ],
+        "interrupt": "ODR_SkipText"
+    },
+    "ODR_Event_Select_Second2Last": {
+        "doc": "选择选项（倒数第二）",
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeductionRapid/Event.png",
+        "roi": [
+            760,
+            70,
+            520,
+            640
+        ],
+        "order_by": "Vertical",
+        "index": -2,
+        "action": "Click",
+        "next": [
+            "ODR_Event_Confirm",
+            "ODR_Event_Select_Second2Last"
+        ],
+        "interrupt": "ODR_SkipText"
+    },
+    "ODR_Event_Select_Second": {
+        "doc": "选择选项（第二）",
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeductionRapid/Event.png",
+        "roi": [
+            760,
+            70,
+            520,
+            640
+        ],
+        "order_by": "Vertical",
+        "index": 1,
+        "action": "Click",
+        "next": [
+            "ODR_Event_Confirm",
+            "ODR_Event_Select_Second"
+        ],
+        "interrupt": "ODR_SkipText"
+    },
+    "ODR_Event_Select_Windows&Doors": {
+        "doc": "选择选项（窗与扉）",
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeductionRapid/Event.png",
+        "roi": [
+            760,
+            70,
+            520,
+            640
+        ],
+        "order_by": "Vertical",
+        "index": 1,
+        "post_wait_freezes": 1,
+        "action": "Click",
+        "next": [
+            "ODR_Event_Windows&Doors_Completed"
+        ],
+        "interrupt": [
+            "ODR_Event_Confirm",
+            "ODR_OptionSelectAll",
+            "ODR_Windows&Doors_Change",
+            "BackButton"
+        ]
+    },
+    "ODR_Event_Windows&Doors_Completed": {
+        "recognition": "TemplateMatch",
+        "template": "./OutsideDeductionRapid/WindowsCompleted.png"
+    },
+    "ODR_Windows&Doors_Change": {
+        "doc": "换一批",
+        "recognition": "OCR",
+        "expected": [
+            "1/1"
+        ],
+        "roi": [
+            803,
+            610,
+            55,
+            28
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "ODR_OptionSelectAll": {
+        "doc": "选择选项（所有）",
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeductionRapid/OptionBorder.png",
+        "roi": [
+            721,
+            125,
+            559,
+            441
+        ],
+        "action": "Click",
+        "threshold": 0.6
+    },
     "ODR_Event_Confirm": {
         "doc": "确认选项",
         "recognition": "TemplateMatch",
@@ -722,15 +985,7 @@
             600
         ],
         "post_wait_freezes": 1,
-        "action": "Click",
-        "next": [
-            "ODR_MainLoop",
-            "ODR_Event_Confirm"
-        ],
-        "interrupt": [
-            "ODR_ItemLose",
-            "ODR_SkipText"
-        ]
+        "action": "Click"
     },
     "ODR_QuitShop": {
         "recognition": "TemplateMatch",
@@ -757,21 +1012,34 @@
             67,
             69
         ],
-        "next": "ODR_Start",
+        "post_wait_freezes": {
+            "time": 1000,
+            "target": [
+                33,
+                430,
+                82,
+                85
+            ]
+        },
+        "action": "Click",
+        "next": [
+            "ODR_Start"
+        ],
         "interrupt": [
             "SODStop",
+            "ODR_Event_Select_SkipText_Windows&Doors",
             "HomeLoading",
             "BackButton"
         ]
     },
     "ODR_MainLoop": {
         "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_Main.png",
+        "template": "OutsideDeductionRapid/Main.png",
         "roi": [
-            33,
-            430,
-            82,
-            85
+            70,
+            0,
+            145,
+            119
         ],
         "post_wait_freezes": 1,
         "next": [
@@ -780,23 +1048,11 @@
             "ODR_QueryChessLocation2"
         ],
         "interrupt": [
-            "SwipLeft"
-        ]
-    },
-    "SwipLeft": {
-        "doc": "向左滑动",
-        "action": "Swipe",
-        "begin": [
-            250,
-            600,
-            50,
-            50
-        ],
-        "end": [
-            500,
-            600,
-            50,
-            50
+            "ODR_ItemSelect_NoNext",
+            "ODR_Levelup",
+            "ODR_ItemLose",
+            "SOD_Acquire_NoNext",
+            "ODR_SkipText"
         ]
     }
 }
