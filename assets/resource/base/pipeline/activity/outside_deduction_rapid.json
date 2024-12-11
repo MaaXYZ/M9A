@@ -1034,12 +1034,12 @@
     },
     "ODR_MainLoop": {
         "recognition": "TemplateMatch",
-        "template": "OutsideDeductionRapid/Main.png",
+        "template": "OutsideDeduction/SOD_Main.png",
         "roi": [
-            70,
-            0,
-            145,
-            119
+            33,
+            430,
+            82,
+            85
         ],
         "post_wait_freezes": 1,
         "next": [
