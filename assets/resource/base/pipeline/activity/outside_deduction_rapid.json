@@ -964,7 +964,10 @@
     "ODR_OptionSelectAll": {
         "doc": "选择选项（所有）",
         "recognition": "TemplateMatch",
-        "template": "OutsideDeductionRapid/OptionBorder.png",
+        "template": [
+            "OutsideDeductionRapid/OptionBorder.png",
+            "OutsideDeductionRapid/OptionBorder1.png"
+        ],
         "roi": [
             721,
             125,
