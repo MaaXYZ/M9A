@@ -1176,6 +1176,7 @@
             "ODR_Event_Confirm",
             "ODR_OptionSelectAll",
             "ODR_Windows&Doors_CreationContract_ChangeRound",
+            "SOD_Acquire_NoNext",
             "BackButton"
         ]
     },
