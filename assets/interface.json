@@ -93,7 +93,7 @@
             "pipeline_override": {
                 "EnterTheActivityMain": {
                     "template_doc": "修改为当期活动入口的template",
-                    "template": "Combat/Activity/LondonDawningEnterTheShow.png"
+                    "template": "Combat/Activity/TheLastEveningOnEarthEnterTheShow.png"
                 }
             }
         },
@@ -927,6 +927,20 @@
         },
         "活动选择": {
             "cases": [
+                {
+                    "name": "活动：地球上最后的夜晚 20 艰难",
+                    "pipeline_override": {
+                        "ActivityEnterTheShow": {
+                            "template": "Combat/Activity/TheLastEveningOnEarthEnterTheShow.png"
+                        },
+                        "TargetStageName": {
+                            "expected": "20"
+                        },
+                        "StageDifficulty": {
+                            "next": "ActivityStageDifficulty"
+                        }
+                    }
+                },
                 {
                     "name": "活动：东区黎明 19 艰难",
                     "pipeline_override": {
