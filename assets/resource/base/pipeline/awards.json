@@ -145,7 +145,7 @@
         "is_sub": true,
         "recognition": "TemplateMatch",
         "template": "Awards/JukeboxBadge.png",
-        "threshold": 0.9,
+        "threshold": 0.8,
         "roi": [
             133,
             0,
