@@ -13,8 +13,12 @@
         ]
     },
     "ActivityMainFlag": {
+        "doc": "活动主页面",
         "recognition": "OCR",
-        "expected": "步入剧情",
+        "expected": [
+            "步",
+            "入剧情"
+        ],
         "roi": [
             1046,
             623,
@@ -42,11 +46,24 @@
         "action": "Click",
         "next": [
             "AnecdoteMainFlag",
+            "AnecdoteNotReadEver",
             "ActivityMainAnecdoteFlag"
         ],
         "interrupt": [
             "ObtainedAwards"
         ]
+    },
+    "AnecdoteNotReadEver": {
+        "recognition": "OCR",
+        "expected": "首次免费",
+        "roi": [
+            595,
+            291,
+            79,
+            25
+        ],
+        "only_rec": true,
+        "action": "Click"
     },
     "AnecdoteMainFlag": {
         "recognition": "OCR",
@@ -58,10 +75,14 @@
             32
         ],
         "only_rec": true,
+        "post_wait_freezes": 500,
         "next": [
             "AnecdoteNotRead",
             "AnecdoteTaskExist",
             "AnecdoteCompleted"
+        ],
+        "interrupt": [
+            "ObtainedAwards"
         ]
     },
     "AnecdoteTaskExist": {
@@ -90,6 +111,17 @@
             "AnecdoteTaskExist"
         ]
     },
+    "AnecdoteNoFusingBox": {
+        "recognition": "OCR",
+        "expected": "0",
+        "roi": [
+            1155,
+            22,
+            30,
+            26
+        ],
+        "only_rec": true
+    },
     "AnecdoteTraceFlag": {
         "doc": "当前位于轶事追溯界面",
         "todo_doc": "后面看看又没有别的flag，目前这个效率还是太低了",
@@ -113,6 +145,7 @@
             418
         ],
         "next": [
+            "AnecdoteNoFusingBox",
             "AnecdoteTaskAwardCompleted"
         ],
         "interrupt": [
@@ -140,6 +173,7 @@
             418
         ],
         "next": [
+            "AnecdoteNoFusingBox",
             "AnecdoteTaskCompleted_1"
         ],
         "interrupt": [
@@ -242,6 +276,7 @@
             50
         ],
         "next": [
+            "AnecdoteNoFusingBox",
             "AnecdoteTaskCompleted_2"
         ],
         "interrupt": [
