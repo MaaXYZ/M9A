@@ -269,7 +269,25 @@
         ],
         "action": "Click",
         "next": "ODR_ItemSelect",
-        "interrupt": "ODR_Move"
+        "interrupt": [
+            "ODR_Move",
+            "ODR_SelectCombat_NoNext"
+        ]
+    },
+    "ODR_SelectCombat_NoNext": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeductionRapid/Combat.png",
+        "green_mask": true,
+        "threshold": 0.85,
+        "index": -1,
+        "roi": "ODR_QueryChessLocation",
+        "roi_offset": [
+            10,
+            -1080,
+            1920,
+            1080
+        ],
+        "action": "Click"
     },
     "ODR_SelectDiscovery": {
         "recognition": "TemplateMatch",
@@ -291,7 +309,25 @@
             "ODR_Event_Select_SkipText_Second",
             "ODR_Event_Select_SkipText_Second2Last"
         ],
-        "interrupt": "ODR_Move"
+        "interrupt": [
+            "ODR_Move",
+            "ODR_SelectDiscovery_NoNext"
+        ]
+    },
+    "ODR_SelectDiscovery_NoNext": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeductionRapid/Discovery.png",
+        "green_mask": true,
+        "threshold": 0.85,
+        "index": -1,
+        "roi": "ODR_QueryChessLocation",
+        "roi_offset": [
+            10,
+            -1080,
+            1920,
+            1080
+        ],
+        "action": "Click"
     },
     "ODR_SelectTreasure": {
         "recognition": "TemplateMatch",
@@ -308,7 +344,25 @@
         ],
         "action": "Click",
         "next": "ODR_Event_Select_SkipText",
-        "interrupt": "ODR_Move"
+        "interrupt": [
+            "ODR_Move",
+            "ODR_SelectTreasure_NoNext"
+        ]
+    },
+    "ODR_SelectTreasure_NoNext": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeductionRapid/Treasure.png",
+        "green_mask": true,
+        "threshold": 0.9,
+        "index": -1,
+        "roi": "ODR_QueryChessLocation",
+        "roi_offset": [
+            10,
+            -1080,
+            1920,
+            1080
+        ],
+        "action": "Click"
     },
     "ODR_SelectRestSite": {
         "recognition": "TemplateMatch",
@@ -325,7 +379,25 @@
         ],
         "action": "Click",
         "next": "ODR_Event_Select_SkipText",
-        "interrupt": "ODR_Move"
+        "interrupt": [
+            "ODR_Move",
+            "ODR_SelectRestSite_NoNext"
+        ]
+    },
+    "ODR_SelectRestSite_NoNext": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeductionRapid/RestSite.png",
+        "green_mask": true,
+        "threshold": 0.85,
+        "index": -1,
+        "roi": "ODR_QueryChessLocation",
+        "roi_offset": [
+            10,
+            -1080,
+            1920,
+            1080
+        ],
+        "action": "Click"
     },
     "ODR_SelectShop": {
         "recognition": "TemplateMatch",
@@ -342,7 +414,25 @@
         ],
         "action": "Click",
         "next": "ODR_QuitShop",
-        "interrupt": "ODR_Move"
+        "interrupt": [
+            "ODR_Move",
+            "ODR_SelectShop_NoNext"
+        ]
+    },
+    "ODR_SelectShop_NoNext": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeductionRapid/Shop.png",
+        "green_mask": true,
+        "threshold": 0.85,
+        "index": -1,
+        "roi": "ODR_QueryChessLocation",
+        "roi_offset": [
+            10,
+            -1080,
+            1920,
+            1080
+        ],
+        "action": "Click"
     },
     "ODR_SelectImminent": {
         "recognition": "TemplateMatch",
@@ -359,7 +449,25 @@
         ],
         "action": "Click",
         "next": "ODR_ItemSelect",
-        "interrupt": "ODR_Move"
+        "interrupt": [
+            "ODR_Move",
+            "ODR_SelectImminent_NoNext"
+        ]
+    },
+    "ODR_SelectImminent_NoNext": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeductionRapid/Imminent.png",
+        "green_mask": true,
+        "threshold": 0.85,
+        "index": -1,
+        "roi": "ODR_QueryChessLocation",
+        "roi_offset": [
+            10,
+            -1080,
+            1920,
+            1080
+        ],
+        "action": "Click"
     },
     "ODR_Move": {
         "doc": "点击一下移动按钮",
