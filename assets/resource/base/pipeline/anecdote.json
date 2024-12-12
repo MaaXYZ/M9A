@@ -128,7 +128,13 @@
             30,
             26
         ],
-        "only_rec": true
+        "only_rec": true,
+        "next": [
+            "AnecdoteAccumulatedRewardNotExist"
+        ],
+        "interrupt": [
+            "AnecdoteAccumulatedRewardExist"
+        ]
     },
     "AnecdoteTraceFlag": {
         "doc": "当前位于轶事追溯界面",
@@ -153,7 +159,6 @@
             418
         ],
         "next": [
-            "AnecdoteNoFusingBox",
             "AnecdoteTaskAwardCompleted"
         ],
         "interrupt": [
