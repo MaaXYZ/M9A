@@ -103,7 +103,9 @@
     },
     "CloseAnnouncement": {
         "recognition": "TemplateMatch",
-        "template": "StartUp/CloseAnnouncement.png",
+        "template": [
+            "StartUp/CloseAnnouncement.png"
+        ],
         "roi": [
             1105,
             40,
@@ -353,10 +355,12 @@
         ]
     },
     "CloseRewardPage": {
+        "doc": "关闭独一律签到页面",
         "green_mask": true,
         "recognition": "TemplateMatch",
         "template": [
-            "StartUp/CloseRewardPage.png",
+            "StartUp/CloseRewardPage_2.2.png",
+            "StartUp/CloseRewardPage_2.4.png",
             "StartUp/CloseItemDetail.png"
         ],
         "roi": [
