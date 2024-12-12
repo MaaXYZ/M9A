@@ -327,6 +327,7 @@
             86
         ],
         "action": "Click",
+        "post_wait_freezes": 300,
         "next": [
             "SODStart_GoodsSelect",
             "SODStart_MediaSelect",
