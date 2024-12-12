@@ -395,6 +395,7 @@
             "ODR_SelectCombat",
             "ODR_SelectImminent",
             "ODR_SelectShop",
+            "ODR_Exit",
             "ODR_QueryChessLocation"
         ]
     },
@@ -1102,8 +1103,8 @@
         ],
         "post_wait_freezes": 1,
         "next": [
-            "ODR_QueryChessLocation",
             "ODR_Exit",
+            "ODR_QueryChessLocation",
             "ODR_QueryChessLocation2"
         ],
         "interrupt": [
