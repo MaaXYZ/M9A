@@ -1044,7 +1044,7 @@
             344,
             600
         ],
-        "post_wait_freezes": 1,
+        "post_wait_freezes": 300,
         "action": "Click"
     },
     "ODR_QuitShop": {
@@ -1101,7 +1101,7 @@
             82,
             85
         ],
-        "post_wait_freezes": 1,
+        "post_wait_freezes": 300,
         "next": [
             "ODR_Exit",
             "ODR_QueryChessLocation",
