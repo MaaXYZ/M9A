@@ -455,7 +455,7 @@
             "ODR_ItemSelect_Confirm"
         ],
         "interrupt": [
-            "ODR_ItemSelect_1"
+            "ODR_ItemSelect_2"
         ]
     },
     "ODR_ItemSelect_NoNext": {
@@ -474,7 +474,7 @@
             "ODR_ItemSelect_Confirm_NoNext"
         ],
         "interrupt": [
-            "ODR_ItemSelect_1"
+            "ODR_ItemSelect_2"
         ]
     },
     "ODR_ItemSelect_1": {
@@ -487,9 +487,6 @@
         ],
         "next": [
             "ODR_ItemSelect_ConfirmFlag"
-        ],
-        "interrupt": [
-            "ODR_ItemSelect_2"
         ]
     },
     "ODR_ItemSelect_2": {
@@ -533,6 +530,9 @@
         "timeout": 10000,
         "next": [
             "ODR_ItemSelect_ConfirmFlag"
+        ],
+        "interrupt": [
+            "ODR_ItemSelect_1"
         ]
     },
     "ODR_ItemSelect_Confirm": {
@@ -848,7 +848,7 @@
         ],
         "interrupt": [
             "ODR_Windows&Doors_Exchange",
-            "ODR_Windows&Doors_Merge",
+            "ODR_Windows&Doors_CreationContract",
             "SOD_Acquire_NoNext",
             "ODR_ItemLose",
             "ODR_SkipText"
@@ -909,7 +909,7 @@
         ],
         "only_rec": true,
         "next": [
-            "ODR_Event_Select_Windows&Doors"
+            "ODR_Windows&Doors_CreationContract"
         ],
         "interrupt": [
             "BackButton"
@@ -1143,8 +1143,8 @@
         ],
         "interrupt": "ODR_SkipText"
     },
-    "ODR_Event_Select_Windows&Doors": {
-        "doc": "选择选项（窗与扉）",
+    "ODR_Windows&Doors_CreationContract": {
+        "doc": "造物典契",
         "recognition": "TemplateMatch",
         "template": "OutsideDeductionRapid/Event.png",
         "roi": [
@@ -1163,7 +1163,7 @@
         "interrupt": [
             "ODR_Event_Confirm",
             "ODR_OptionSelectAll",
-            "ODR_Windows&Doors_ChangeRound",
+            "ODR_Windows&Doors_CreationContract_ChangeRound",
             "BackButton"
         ]
     },
@@ -1177,7 +1177,7 @@
             172
         ]
     },
-    "ODR_Windows&Doors_ChangeRound": {
+    "ODR_Windows&Doors_CreationContract_ChangeRound": {
         "doc": "换一批",
         "recognition": "OCR",
         "expected": [
@@ -1206,7 +1206,7 @@
             441
         ],
         "action": "Click",
-        "threshold": 0.6
+        "threshold": 0.75
     },
     "ODR_Event_Confirm": {
         "doc": "确认选项",
