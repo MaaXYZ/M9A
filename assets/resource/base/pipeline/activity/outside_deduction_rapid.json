@@ -889,6 +889,12 @@
             44
         ],
         "only_rec": true,
+        "next": [
+            "ODR_KitKatReplacement_Completed"
+        ],
+        "interrupt": [
+            "ODR_KitKatReplacement_First"
+        ]
     },
     "ODR_KitKatReplacement_Completed": {
         "recognition": "OCR",
@@ -923,6 +929,34 @@
         "only_rec": true,
         "post_delay": 1
     },
+    "ODR_KitKatReplacement_First": {
+        "recognition": "OCR",
+        "expected": [
+            "1/1"
+        ],
+        "roi": [
+            950,
+            516,
+            35,
+            19
+        ],
+        "only_rec": true,
+        "target": [
+            831,
+            580,
+            64,
+            35
+        ],
+        "action": "Click",
+        "next": [
+            "ODR_KitKatReplacement_CompletedFlag"
+        ],
+        "interrupt": [
+            "ODR_KitKatReplacement_Second",
+            "ODR_Confirm",
+            "ODR_KitKatReplacement_Switch_2"
+        ]
+    },
     "ODR_Confirm": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_ArcanistAdd_Confirm_1.png",
@@ -933,6 +967,80 @@
             54
         ],
         "action": "Click"
+    },
+    "ODR_KitKatReplacement_Second": {
+        "recognition": "OCR",
+        "expected": [
+            "1/1"
+        ],
+        "roi": [
+            950,
+            516,
+            35,
+            19
+        ],
+        "only_rec": true,
+        "target": [
+            831,
+            580,
+            64,
+            35
+        ],
+        "action": "Click",
+        "next": [
+            "ODR_KitKatReplacement_CompletedFlag"
+        ],
+        "interrupt": [
+            "ODR_KitKatReplacement_Third",
+            "ODR_Confirm",
+            "ODR_KitKatReplacement_Switch_3"
+        ]
+    },
+    "ODR_KitKatReplacement_Third": {
+        "recognition": "OCR",
+        "expected": [
+            "1/1"
+        ],
+        "roi": [
+            950,
+            516,
+            35,
+            19
+        ],
+        "only_rec": true,
+        "target": [
+            831,
+            580,
+            64,
+            35
+        ],
+        "action": "Click",
+        "next": [
+            "ODR_KitKatReplacement_CompletedFlag"
+        ],
+        "interrupt": [
+            "ODR_KitKatReplacement_Third",
+            "ODR_Confirm",
+            "ODR_KitKatReplacement_Switch_3"
+        ]
+    },
+    "ODR_KitKatReplacement_Switch_2": {
+        "action": "Click",
+        "target": [
+            349,
+            196,
+            64,
+            60
+        ]
+    },
+    "ODR_KitKatReplacement_Switch_3": {
+        "action": "Click",
+        "target": [
+            230,
+            314,
+            52,
+            51
+        ]
     },
     "ODR_Windows&Doors_Exchange": {
         "doc": "失声天平",
