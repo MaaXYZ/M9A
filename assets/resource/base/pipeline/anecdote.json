@@ -75,7 +75,15 @@
             32
         ],
         "only_rec": true,
-        "post_wait_freezes": 500,
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                614,
+                41,
+                51,
+                57
+            ]
+        },
         "next": [
             "AnecdoteNotRead",
             "AnecdoteTaskExist",
