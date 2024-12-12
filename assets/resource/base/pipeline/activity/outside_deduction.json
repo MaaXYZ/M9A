@@ -426,6 +426,7 @@
             100,
             55
         ],
+        "post_delay": 0,
         "next": [
             "SOD_Click"
         ]
