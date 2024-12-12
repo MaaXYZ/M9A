@@ -400,7 +400,7 @@
     },
     "SODStart_MediaSelect": {
         "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SODStart_Media_RitualDagger.png",
+        "template": "OutsideDeduction/SODStart_Media_MagicLamp.png",
         "roi": [
             0,
             81,
