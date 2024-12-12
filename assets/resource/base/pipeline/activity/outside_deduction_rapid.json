@@ -402,6 +402,12 @@
         "doc": "查询棋子位置(棋子位于左边界被遮挡)",
         "recognition": "TemplateMatch",
         "template": "OutsideDeductionRapid/Chess2.png",
+        "roi": [
+            0,
+            288,
+            167,
+            158
+        ],
         "order_by": "Score",
         "next": [
             "ODR_SelectRestSite",
@@ -411,6 +417,7 @@
             "ODR_SelectImminent",
             "ODR_SelectShop",
             "ODR_QueryChessLocation",
+            "ODR_Exit",
             "ODR_QueryChessLocation2"
         ]
     },
