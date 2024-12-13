@@ -260,12 +260,11 @@
         "green_mask": true,
         "threshold": 0.85,
         "index": -1,
-        "roi": "ODR_QueryChessLocation",
-        "roi_offset": [
-            10,
-            -1080,
-            1920,
-            1080
+        "roi": [
+            303,
+            196,
+            392,
+            307
         ],
         "action": "Click",
         "next": "ODR_ItemSelect",
@@ -495,7 +494,11 @@
     "ODR_QueryChessLocation": {
         "doc": "查询棋子位置",
         "recognition": "TemplateMatch",
-        "template": "OutsideDeductionRapid/Chess.png",
+        "template": [
+            "OutsideDeductionRapid/Chess.png"
+        ],
+        "threshold": 0.75,
+        "order_by": "Score",
         "next": [
             "ODR_SelectRestSite",
             "ODR_SelectTreasure",
@@ -507,28 +510,20 @@
             "ODR_QueryChessLocation"
         ]
     },
-    "ODR_QueryChessLocation2": {
-        "doc": "查询棋子位置(棋子位于左边界被遮挡)",
-        "recognition": "TemplateMatch",
-        "template": [
-            "OutsideDeductionRapid/Chess1.png"
-        ],
+    "ODR_FirstFloorFlag": {
+        "doc": "当前位于第一层，且前置任务“ODR_QueryChessLocation”失败，说明为最开始准备进入combat节点的情况",
+        "recognition": "OCR",
+        "expected": "环城大道",
         "roi": [
-            0,
-            262,
-            176,
-            215
+            585,
+            19,
+            91,
+            25
         ],
         "next": [
-            "ODR_SelectRestSite",
-            "ODR_SelectTreasure",
-            "ODR_SelectDiscovery",
             "ODR_SelectCombat",
-            "ODR_SelectImminent",
-            "ODR_SelectShop",
             "ODR_QueryChessLocation",
-            "ODR_Exit",
-            "ODR_QueryChessLocation2"
+            "ODR_FirstFloorFlag"
         ]
     },
     "ODR_Levelup": {
@@ -1156,6 +1151,19 @@
         "post_wait_freezes": 300,
         "action": "Click"
     },
+    "ODR_Event_Confirm_CreationContract": {
+        "doc": "确认选项",
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_EndEvent_OK.png",
+        "roi": [
+            932,
+            82,
+            344,
+            600
+        ],
+        "post_delay": 1000,
+        "action": "Click"
+    },
     "ODR_QuitShop": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Shopping_Leave.png",
@@ -1210,11 +1218,11 @@
             82,
             85
         ],
-        "post_wait_freezes": 300,
+        "post_wait_freezes": 1000,
         "next": [
             "ODR_Exit",
             "ODR_QueryChessLocation",
-            "ODR_QueryChessLocation2"
+            "ODR_FirstFloorFlag"
         ],
         "interrupt": [
             "ODR_ItemSelect_NoNext",
