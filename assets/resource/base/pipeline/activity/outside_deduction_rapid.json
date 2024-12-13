@@ -460,11 +460,189 @@
             ]
         },
         "action": "Click",
-        "next": "ODR_QuitShop",
+        "next": [
+            "ODR_ShopCompleted",
+            "ODR_ShopCompleted_2-1"
+        ],
         "interrupt": [
             "ODR_Move",
+            "ODR_ShopBuy",
+            "ODR_ShopEnter_2-1",
+            "ODR_ShopSingleCompleted",
             "ODR_SelectShop_NoNext"
         ]
+    },
+    "ODR_ShopCompleted_2-1": {
+        "doc": "第二排兽牙项链买完",
+        "recognition": "OCR",
+        "expected": [
+            "^售"
+        ],
+        "roi": [
+            204,
+            474,
+            47,
+            27
+        ],
+        "only_rec": true,
+        "next": [
+            "ODR_ShopCompleted",
+            "ODR_ShopCompleted_2-2"
+        ],
+        "interrupt": [
+            "ODR_ShopBuy",
+            "ODR_ShopEnter_2-2",
+            "ODR_ShopSingleCompleted"
+        ]
+    },
+    "ODR_ShopCompleted_2-2": {
+        "doc": "第二排七日发条买完",
+        "recognition": "OCR",
+        "expected": [
+            "^售"
+        ],
+        "roi": [
+            447,
+            474,
+            48,
+            28
+        ],
+        "only_rec": true,
+        "next": [
+            "ODR_ShopCompleted",
+            "ODR_ShopCompleted_2-4"
+        ],
+        "interrupt": [
+            "ODR_ShopBuy",
+            "ODR_ShopEnter_2-4",
+            "ODR_ShopSingleCompleted"
+        ]
+    },
+    "ODR_ShopCompleted_2-4": {
+        "doc": "第二排软驱买完",
+        "recognition": "OCR",
+        "expected": [
+            "^售"
+        ],
+        "roi": [
+            934,
+            471,
+            46,
+            29
+        ],
+        "only_rec": true,
+        "next": [
+            "ODR_ShopCompleted",
+            "ODR_QuitShop"
+        ],
+        "interrupt": [
+            "ODR_ShopBuy",
+            "ODR_ShopSingleCompleted"
+        ]
+    },
+    "ODR_ShopCompleted": {
+        "doc": "钱不够",
+        "recognition": "OCR",
+        "expected": [
+            "金雀子儿",
+            "不足"
+        ],
+        "roi": [
+            1023,
+            58,
+            200,
+            130
+        ],
+        "action": "Click",
+        "target": [
+            1124,
+            173,
+            100,
+            94
+        ],
+        "next": [
+            "ODR_QuitShop"
+        ]
+    },
+    "ODR_ShopEnter_2-1": {
+        "recognition": "OCR",
+        "expected": [
+            "兽牙项链"
+        ],
+        "roi": [
+            188,
+            550,
+            87,
+            29
+        ],
+        "post_wait_freezes": 1,
+        "only_rec": true,
+        "action": "Click"
+    },
+    "ODR_ShopEnter_2-2": {
+        "recognition": "OCR",
+        "expected": [
+            "发条"
+        ],
+        "roi": [
+            425,
+            549,
+            88,
+            30
+        ],
+        "post_wait_freezes": 1,
+        "only_rec": true,
+        "action": "Click"
+    },
+    "ODR_ShopEnter_2-4": {
+        "recognition": "OCR",
+        "expected": [
+            "软驱"
+        ],
+        "roi": [
+            893,
+            551,
+            127,
+            26
+        ],
+        "post_wait_freezes": 1,
+        "only_rec": true,
+        "action": "Click"
+    },
+    "ODR_ShopSingleCompleted": {
+        "recognition": "OCR",
+        "expected": [
+            "商品",
+            "已",
+            "售"
+        ],
+        "roi": [
+            1023,
+            58,
+            200,
+            130
+        ],
+        "action": "Click",
+        "target": [
+            1124,
+            173,
+            100,
+            94
+        ]
+    },
+    "ODR_ShopBuy": {
+        "recognition": "OCR",
+        "expected": [
+            "确认购买"
+        ],
+        "roi": [
+            869,
+            567,
+            131,
+            38
+        ],
+        "only_rec": true,
+        "action": "Click"
     },
     "ODR_SelectShop_NoNext": {
         "recognition": "TemplateMatch",
@@ -557,12 +735,12 @@
         "threshold": 0.75,
         "order_by": "Score",
         "next": [
+            "ODR_SelectShop",
             "ODR_SelectRestSite",
             "ODR_SelectTreasure",
             "ODR_SelectDiscovery",
             "ODR_SelectCombat",
             "ODR_SelectImminent",
-            "ODR_SelectShop",
             "ODR_Exit",
             "ODR_QueryChessLocation"
         ]
