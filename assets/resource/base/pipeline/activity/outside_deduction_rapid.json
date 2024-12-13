@@ -269,6 +269,15 @@
             392,
             307
         ],
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                1019,
+                590,
+                106,
+                91
+            ]
+        },
         "action": "Click",
         "next": "ODR_ItemSelect",
         "interrupt": [
@@ -304,6 +313,15 @@
             1920,
             1080
         ],
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                1019,
+                590,
+                106,
+                91
+            ]
+        },
         "action": "Click",
         "next": [
             "ODR_Event_Select_SkipText",
@@ -344,6 +362,15 @@
             1920,
             1080
         ],
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                1019,
+                590,
+                106,
+                91
+            ]
+        },
         "action": "Click",
         "next": "ODR_Event_Select_SkipText",
         "interrupt": [
@@ -379,6 +406,15 @@
             1920,
             1080
         ],
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                1019,
+                590,
+                106,
+                91
+            ]
+        },
         "action": "Click",
         "next": "ODR_Event_Select_SkipText",
         "interrupt": [
@@ -414,6 +450,15 @@
             1920,
             1080
         ],
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                1019,
+                590,
+                106,
+                91
+            ]
+        },
         "action": "Click",
         "next": "ODR_QuitShop",
         "interrupt": [
@@ -449,6 +494,15 @@
             1920,
             1080
         ],
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                1019,
+                590,
+                106,
+                91
+            ]
+        },
         "action": "Click",
         "next": "ODR_ItemSelect",
         "interrupt": [
