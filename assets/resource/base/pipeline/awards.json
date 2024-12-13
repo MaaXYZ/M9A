@@ -1,6 +1,29 @@
 {
     "Awards": {
         "next": [
+            "AwardsMainFlag"
+        ],
+        "interrupt": [
+            "ReturnMain"
+        ]
+    },
+    "AwardsMainFlag": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/HomeFlag.png",
+        "roi": [
+            1022,
+            419,
+            194,
+            166
+        ],
+        "action": "Click",
+        "target": [
+            576,
+            298,
+            68,
+            64
+        ],
+        "next": [
             "Sub_MailBadge",
             "Sub_DailyBadge",
             "Sub_JukeboxBadge",
