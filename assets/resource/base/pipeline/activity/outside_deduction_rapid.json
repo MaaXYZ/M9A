@@ -523,7 +523,8 @@
         "next": [
             "ODR_SelectCombat",
             "ODR_QueryChessLocation",
-            "ODR_FirstFloorFlag"
+            "ODR_FirstFloorFlag",
+            "ODR_Exit"
         ]
     },
     "ODR_Levelup": {
