@@ -154,9 +154,9 @@
         "threshold": 0.6,
         "roi": [
             50,
-            173,
+            117,
             1230,
-            418
+            474
         ],
         "next": [
             "AnecdoteTaskAwardCompleted"
@@ -181,9 +181,9 @@
         "inverse": true,
         "roi": [
             50,
-            173,
+            117,
             1230,
-            418
+            474
         ],
         "next": [
             "AnecdoteNoFusingBox",
@@ -209,9 +209,9 @@
         "order_by": "Score",
         "roi": [
             50,
-            173,
+            117,
             1230,
-            418
+            474
         ],
         "action": "Click",
         "next": [
@@ -247,7 +247,24 @@
             0,
             0
         ],
-        "action": "Click"
+        "action": "Click",
+        "next": [
+            "AnecdoteTaskAwardMainCompleted",
+            "AnecdoteTraceFlag2"
+        ]
+    },
+    "AnecdoteTraceFlag2": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "StartUp/HomeButton.png",
+            "StartUp/HomeButton_White.png"
+        ],
+        "roi": [
+            70,
+            0,
+            144,
+            144
+        ]
     },
     "AnecdoteTaskAwardMainConfirm": {
         "doc": "确认轶事追溯任务奖励",
@@ -260,7 +277,16 @@
             31
         ],
         "only_rec": true,
-        "action": "Click"
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                832,
+                613,
+                89,
+                80
+            ]
+        }
     },
     "AnecdoteTaskCompleted_1": {
         "doc": "当前界面已无轶事追溯任务，向左滑后再次检查",
@@ -270,9 +296,9 @@
         ],
         "roi": [
             50,
-            173,
+            117,
             1230,
-            418
+            474
         ],
         "inverse": true,
         "action": "Swipe",
@@ -304,9 +330,9 @@
         ],
         "roi": [
             50,
-            173,
+            117,
             1230,
-            418
+            474
         ],
         "inverse": true,
         "next": [
@@ -336,7 +362,10 @@
             12
         ],
         "count": 50,
-        "inverse": true
+        "inverse": true,
+        "next": [
+            "HomeButton"
+        ]
     },
     "AnecdoteAccumulatedRewardExist": {
         "doc": "检查有积分累计奖励",
@@ -369,9 +398,9 @@
         "template": "./Anecdote/TaskEntry.png",
         "roi": [
             50,
-            173,
+            117,
             1230,
-            418
+            474
         ],
         "action": "Click",
         "next": [
@@ -599,20 +628,65 @@
             15
         ],
         "count": 100,
+        "inverse": true,
+        "next": [
+            "AnecdoteTaskExist",
+            "AnecdoteCompleted_NoNext"
+        ]
+    },
+    "AnecdoteCompleted_NoNext": {
+        "doc": "追溯右上角无红点",
+        "recognition": "ColorMatch",
+        "lower": [
+            160,
+            25,
+            15
+        ],
+        "upper": [
+            210,
+            75,
+            75
+        ],
+        "roi": [
+            1145,
+            481,
+            16,
+            15
+        ],
+        "count": 100,
         "inverse": true
     },
     "AnecdoteNotRead": {
         "doc": "尚未阅读完故事，任务结束",
         "recognition": "OCR",
-        "expected": "已完成",
+        "expected": "剧情进度",
         "roi": [
             500,
-            531,
-            55,
-            23
+            530,
+            72,
+            24
         ],
         "only_rec": true,
-        "inverse": true
+        "next": [
+            "AnecdoteTaskExist",
+            "AnecdoteCompleted"
+        ],
+        "interrupt": [
+            "AnecdoteTryAward",
+            "ObtainedAwards"
+        ]
+    },
+    "AnecdoteTryAward": {
+        "recognition": "OCR",
+        "expected": "7/7",
+        "roi": [
+            618,
+            530,
+            43,
+            25
+        ],
+        "action": "Click",
+        "post_wait_freezes": 300
     },
     "ActivityMainSelectAnecdote": {
         "recognition": "OCR",
