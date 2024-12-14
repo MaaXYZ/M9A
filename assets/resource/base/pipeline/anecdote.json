@@ -241,11 +241,11 @@
         "doc": "轶事追溯任务奖励已领取",
         "recognition": "TemplateMatch",
         "template": "./Anecdote/TaskAwardMainCompleted.png",
-        "target_offset": [
-            615,
-            0,
-            0,
-            0
+        "target": [
+            1006,
+            493,
+            78,
+            46
         ],
         "action": "Click",
         "next": [
@@ -629,6 +629,23 @@
         ],
         "count": 100,
         "inverse": true,
+        "next": [
+            "AnecdoteTaskExist",
+            "AnecdoteMainFlag2"
+        ],
+        "interrupt": [
+            "ObtainedAwards"
+        ]
+    },
+    "AnecdoteMainFlag2": {
+        "recognition": "TemplateMatch",
+        "template": "./Anecdote/MainFlag.png",
+        "roi": [
+            956,
+            443,
+            178,
+            146
+        ],
         "next": [
             "AnecdoteTaskExist",
             "AnecdoteCompleted_NoNext"
