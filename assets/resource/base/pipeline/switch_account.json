@@ -71,13 +71,13 @@
         ]
     },
     "SwitchAccountMainFlag": {
-        "recognition": "TemplateMatch",
+        "recognition": "FeatureMatch",
         "template": "./SwitchAccount/SwitchAccountMain.png",
         "roi": [
-            409,
-            274,
-            141,
-            140
+            518,
+            168,
+            243,
+            158
         ],
         "next": [
             "SwitchAccountMainExpandFlag"
@@ -106,12 +106,13 @@
         "recognition": "OCR",
         "expected": "登录",
         "roi": [
-            606,
-            420,
-            65,
-            31
+            567,
+            355,
+            146,
+            126
         ],
-        "only_rec": true,
+        "order_by": "Horizontal",
+        "index": 0,
         "next": [
             "StartGame"
         ],
@@ -122,12 +123,7 @@
     "LogIn": {
         "recognition": "OCR",
         "expected": "登录",
-        "roi": [
-            606,
-            420,
-            65,
-            31
-        ],
+        "roi": "SwitchLastAccountComplete",
         "only_rec": true,
         "action": "Click",
         "post_wait_freezes": {
