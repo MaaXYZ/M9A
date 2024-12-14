@@ -465,10 +465,10 @@
             "ODR_ShopCompleted_2-1"
         ],
         "interrupt": [
-            "ODR_Move",
+            "ODR_ShopSingleCompleted",
             "ODR_ShopBuy",
             "ODR_ShopEnter_2-1",
-            "ODR_ShopSingleCompleted",
+            "ODR_Move",
             "ODR_SelectShop_NoNext"
         ]
     },
@@ -490,9 +490,9 @@
             "ODR_ShopCompleted_2-2"
         ],
         "interrupt": [
+            "ODR_ShopSingleCompleted",
             "ODR_ShopBuy",
-            "ODR_ShopEnter_2-2",
-            "ODR_ShopSingleCompleted"
+            "ODR_ShopEnter_2-2"
         ]
     },
     "ODR_ShopCompleted_2-2": {
@@ -513,9 +513,9 @@
             "ODR_ShopCompleted_2-4"
         ],
         "interrupt": [
+            "ODR_ShopSingleCompleted",
             "ODR_ShopBuy",
-            "ODR_ShopEnter_2-4",
-            "ODR_ShopSingleCompleted"
+            "ODR_ShopEnter_2-4"
         ]
     },
     "ODR_ShopCompleted_2-4": {
@@ -536,8 +536,8 @@
             "ODR_QuitShop"
         ],
         "interrupt": [
-            "ODR_ShopBuy",
-            "ODR_ShopSingleCompleted"
+            "ODR_ShopSingleCompleted",
+            "ODR_ShopBuy"
         ]
     },
     "ODR_ShopCompleted": {
@@ -617,10 +617,10 @@
             "售"
         ],
         "roi": [
-            1023,
-            58,
-            200,
-            130
+            900,
+            70,
+            380,
+            220
         ],
         "action": "Click",
         "target": [
@@ -628,7 +628,16 @@
             173,
             100,
             94
-        ]
+        ],
+        "pre_wait_freezes": {
+            "time": 300,
+            "target": [
+                900,
+                70,
+                380,
+                220
+            ]
+        }
     },
     "ODR_ShopBuy": {
         "recognition": "OCR",
@@ -910,7 +919,10 @@
                 85
             ]
         },
-        "next": "ODR_MainLoop",
+        "next": [
+            "ODR_MainLoop",
+            "ODR_ItemSelect_Confirm"
+        ],
         "interrupt": [
             "ODR_Levelup",
             "SOD_Acquire_NoNext"
@@ -1033,6 +1045,10 @@
             ]
         }
     },
+    "test": {
+        "recognition": "OCR",
+        "expected": "市场(.*| 雏)形"
+    },
     "ODR_Event_Select_SkipText": {
         "doc": "事件——默认最后一个选项",
         "expected_doc": "来自BV197421Z7bm&灰机wiki-维也纳拾遗",
@@ -1053,7 +1069,7 @@
             "命运之泉",
             "便民服务",
             "未来",
-            "市场雏形",
+            "市场(.*| 雏)形",
             "向导",
             "失窃案",
             "脱轨电车",
