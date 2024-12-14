@@ -1,0 +1,298 @@
+{
+    "SwitchAccount": {
+        "next": [
+            "MainMenuFlag"
+        ],
+        "interrupt": [
+            "MainMenuEntry",
+            "StartUp"
+        ]
+    },
+    "MainMenuFlag": {
+        "recognition": "TemplateMatch",
+        "template": "./SwitchAccount/Detail.png",
+        "roi": [
+            364,
+            84,
+            166,
+            125
+        ],
+        "next": [
+            "SettingEntry"
+        ],
+        "interrupt": [
+            "MenuRight"
+        ]
+    },
+    "SettingEntry": {
+        "recognition": "OCR",
+        "expected": "设置",
+        "roi": [
+            40,
+            452,
+            424,
+            225
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                52,
+                450,
+                122,
+                174
+            ]
+        },
+        "next": [
+            "StartGameFlag"
+        ],
+        "interrupt": [
+            "AccountExitConfirm",
+            "AccountExit",
+            "AccountSettingEnter"
+        ]
+    },
+    "StartGameFlag": {
+        "recognition": "TemplateMatch",
+        "template": "./StartUp/StartGame.png",
+        "green_mask": true,
+        "roi": [
+            352,
+            230,
+            587,
+            183
+        ],
+        "next": [
+            "SwitchAccountMainFlag"
+        ],
+        "interrupt": [
+            "AccountExitButtonConfirm",
+            "AccountExitButton"
+        ]
+    },
+    "SwitchAccountMainFlag": {
+        "recognition": "TemplateMatch",
+        "template": "./SwitchAccount/SwitchAccountMain.png",
+        "roi": [
+            409,
+            274,
+            141,
+            140
+        ],
+        "next": [
+            "SwitchAccountMainExpandFlag"
+        ],
+        "interrupt": [
+            "SwitchAccountMainExpand"
+        ]
+    },
+    "SwitchAccountMainExpandFlag": {
+        "recognition": "TemplateMatch",
+        "template": "./SwitchAccount/AccountDel.png",
+        "roi": [
+            725,
+            353,
+            141,
+            278
+        ],
+        "next": [
+            "SwitchLastAccountComplete"
+        ],
+        "interrupt": [
+            "SwitchLastAccount"
+        ]
+    },
+    "SwitchLastAccountComplete": {
+        "recognition": "OCR",
+        "expected": "登录",
+        "roi": [
+            606,
+            420,
+            65,
+            31
+        ],
+        "only_rec": true,
+        "next": [
+            "StartGame"
+        ],
+        "interrupt": [
+            "LogIn"
+        ]
+    },
+    "LogIn": {
+        "recognition": "OCR",
+        "expected": "登录",
+        "roi": [
+            606,
+            420,
+            65,
+            31
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                352,
+                230,
+                587,
+                183
+            ]
+        }
+    },
+    "SwitchLastAccount": {
+        "recognition": "TemplateMatch",
+        "template": "./SwitchAccount/AccountDel.png",
+        "roi": [
+            725,
+            353,
+            141,
+            278
+        ],
+        "order_by": "Vertical",
+        "index": -1,
+        "target_offset": [
+            -150,
+            0,
+            0,
+            0
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                437,
+                297,
+                408,
+                246
+            ]
+        }
+    },
+    "SwitchAccountMainExpand": {
+        "recognition": "TemplateMatch",
+        "template": "./SwitchAccount/AccountMainExpand.png",
+        "roi": [
+            723,
+            278,
+            138,
+            130
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                437,
+                297,
+                408,
+                246
+            ]
+        }
+    },
+    "AccountExitButtonConfirm": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            773,
+            403,
+            63,
+            35
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                429,
+                180,
+                417,
+                295
+            ]
+        }
+    },
+    "AccountExitButton": {
+        "recognition": "TemplateMatch",
+        "template": "./SwitchAccount/AccountExitButton.png",
+        "roi": [
+            1166,
+            590,
+            114,
+            130
+        ],
+        "action": "Click"
+    },
+    "AccountExitConfirm": {
+        "recognition": "OCR",
+        "expected": "返回登录",
+        "roi": [
+            739,
+            404,
+            126,
+            33
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1
+    },
+    "AccountExit": {
+        "recognition": "OCR",
+        "expected": "退出",
+        "roi": [
+            853,
+            514,
+            42,
+            22
+        ],
+        "action": "Click",
+        "post_wait_freezes": 1
+    },
+    "AccountSettingEnter": {
+        "recognition": "OCR",
+        "expected": "账号",
+        "roi": [
+            22,
+            78,
+            177,
+            630
+        ],
+        "action": "Click"
+    },
+    "MenuRight": {
+        "recognition": "TemplateMatch",
+        "template": "./SwitchAccount/MenuRight.png",
+        "roi": [
+            408,
+            484,
+            119,
+            125
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                40,
+                452,
+                424,
+                225
+            ]
+        }
+    },
+    "MainMenuEntry": {
+        "recognition": "TemplateMatch",
+        "template": "./SwitchAccount/MainMenuEntry.png",
+        "roi": [
+            3,
+            460,
+            141,
+            151
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                52,
+                450,
+                122,
+                174
+            ]
+        }
+    }
+}
