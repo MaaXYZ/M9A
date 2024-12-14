@@ -102,6 +102,10 @@
             "entry": "ReveriesInTheRain"
         },
         {
+            "name": "切换账号",
+            "entry": "SwitchAccount"
+        },
+        {
             "name": "关闭游戏",
             "entry": "Close1999"
         },
