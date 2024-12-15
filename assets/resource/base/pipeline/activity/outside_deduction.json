@@ -327,7 +327,15 @@
             86
         ],
         "action": "Click",
-        "post_wait_freezes": 300,
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                200,
+                250,
+                900,
+                300
+            ]
+        },
         "next": [
             "SODStart_GoodsSelect",
             "SODStart_MediaSelect",
