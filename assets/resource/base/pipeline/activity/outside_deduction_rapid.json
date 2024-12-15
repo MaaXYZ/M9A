@@ -1346,6 +1346,7 @@
             "ODR_OptionSelectAll",
             "ODR_Windows&Doors_CreationContract_ChangeRound",
             "SOD_Acquire_NoNext",
+            "ODR_Windows&Doors_Merge",
             "BackButton"
         ]
     },
@@ -1357,6 +1358,26 @@
             418,
             150,
             172
+        ]
+    },
+    "ODR_Windows&Doors_Merge": {
+        "doc": "位于奇巧置换",
+        "recognition": "OCR",
+        "expected": [
+            "奇巧置换"
+        ],
+        "roi": [
+            570,
+            20,
+            142,
+            44
+        ],
+        "only_rec": true,
+        "next": [
+            "ODR_Event_Windows&Doors_Completed"
+        ],
+        "interrupt": [
+            "BackButton"
         ]
     },
     "ODR_Windows&Doors_CreationContract_ChangeRound": {
