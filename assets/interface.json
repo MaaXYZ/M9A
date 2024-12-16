@@ -981,66 +981,10 @@
                     }
                 },
                 {
-                    "name": "活动：东区黎明 19 艰难",
-                    "pipeline_override": {
-                        "EnterTheActivityMain": {
-                            "template": "Combat/Activity/LondonDawningEnterTheShow.png"
-                        },
-                        "TargetStageName": {
-                            "expected": "19"
-                        },
-                        "StageDifficulty": {
-                            "next": "ActivityStageDifficulty"
-                        }
-                    }
-                },
-                {
-                    "name": "活动：绿湖噩梦 17 艰难（已结束）",
+                    "name": "活动：复兴乌卢鲁运动会 13 艰难（复刻）",
                     "pipeline_override": {
                         "ActivityEntry": {
-                            "next": "ANightmareAtGreenLake"
-                        },
-                        "TargetStageName": {
-                            "expected": "17"
-                        },
-                        "StageDifficulty": {
-                            "next": "ActivityStageDifficulty"
-                        }
-                    }
-                },
-                {
-                    "name": "活动：行至摩卢旁卡 16 艰难（已结束）",
-                    "pipeline_override": {
-                        "ActivityEntry": {
-                            "next": "JourneytoMorPankh"
-                        },
-                        "TargetStageName": {
-                            "expected": "16"
-                        },
-                        "StageDifficulty": {
-                            "next": "ActivityStageDifficulty"
-                        }
-                    }
-                },
-                {
-                    "name": "活动：洞穴的囚徒 证明启示 05（已结束）",
-                    "pipeline_override": {
-                        "ActivityEntry": {
-                            "next": "dummyThePrisonerintheCave"
-                        },
-                        "TargetStageName": {
-                            "expected": "dummy证明启示V"
-                        },
-                        "StageDifficulty": {
-                            "next": "dummyStageDifficulty_None"
-                        }
-                    }
-                },
-                {
-                    "name": "活动：复兴乌卢鲁运动会 13 艰难（已结束）",
-                    "pipeline_override": {
-                        "ActivityEntry": {
-                            "next": "RevivalTheUluruGames"
+                            "next": "RevivalTheUluruGames_Reproduction"
                         },
                         "TargetStageName": {
                             "expected": "13"
@@ -1107,13 +1051,13 @@
                     }
                 },
                 {
-                    "name": "活动：复兴乌卢鲁运动会 13 艰难（复刻）",
+                    "name": "活动：东区黎明 19 艰难（已结束）",
                     "pipeline_override": {
-                        "ActivityEntry": {
-                            "next": "RevivalTheUluruGames_Reproduction"
+                        "ActivityEnterTheShow": {
+                            "template": "Combat/Activity/LondonDawningEnterTheShow.png"
                         },
                         "TargetStageName": {
-                            "expected": "13"
+                            "expected": "19"
                         },
                         "StageDifficulty": {
                             "next": "ActivityStageDifficulty"
