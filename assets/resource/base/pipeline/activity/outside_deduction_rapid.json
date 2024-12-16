@@ -1394,7 +1394,16 @@
             28
         ],
         "only_rec": true,
-        "action": "Click"
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                744,
+                584,
+                153,
+                55
+            ]
+        }
     },
     "ODR_OptionSelectAll": {
         "doc": "选择选项（所有）",
