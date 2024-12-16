@@ -187,7 +187,8 @@
         ],
         "action": "Click",
         "next": [
-            "HomeFlag"
+            "HomeFlag",
+            "HomeLoading_wait"
         ],
         "interrupt": [
             "SkipButton",
@@ -371,6 +372,7 @@
             260,
             236
         ],
+        "post_wait_freezes": 300,
         "next": [
             "CloseRewardPage"
         ],

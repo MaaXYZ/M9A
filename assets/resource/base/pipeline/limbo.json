@@ -65,7 +65,16 @@
             27
         ],
         "only_rec": true,
-        "action": "Click"
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                99,
+                480,
+                1068,
+                197
+            ]
+        }
     },
     "LimboEntry": {
         "doc": "人工梦游主界面，点击挑战，进入深眠域",
