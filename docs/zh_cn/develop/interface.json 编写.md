@@ -147,6 +147,8 @@
 }
 ```
 
+`defaul_case` 为默认选项，从 `cases` 中选择一个。
+
 ## version
 
 版本。不必填写，ci install 时会自动生成。
