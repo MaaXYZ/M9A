@@ -818,6 +818,39 @@
         "复现次数": {
             "cases": [
                 {
+                    "name": "x1",
+                    "pipeline_override": {
+                        "SetReplaysTimes": {
+                            "template": [
+                                "Combat/SetReplaysTimesX1.png",
+                                "Combat/SetReplaysTimesX1_selected.png"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "x2",
+                    "pipeline_override": {
+                        "SetReplaysTimes": {
+                            "template": [
+                                "Combat/SetReplaysTimesX2.png",
+                                "Combat/SetReplaysTimesX2_selected.png"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "x3",
+                    "pipeline_override": {
+                        "SetReplaysTimes": {
+                            "template": [
+                                "Combat/SetReplaysTimesX3.png",
+                                "Combat/SetReplaysTimesX3_selected.png"
+                            ]
+                        }
+                    }
+                },
+                {
                     "name": "x4",
                     "pipeline_override": {
                         "SetReplaysTimes": {
@@ -828,7 +861,8 @@
                         }
                     }
                 }
-            ]
+            ],
+            "default_case": "x4"
         },
         "刷完全部体力": {
             "cases": [
