@@ -444,6 +444,7 @@
             "AnecdoteTraceTaskCompleted"
         ],
         "interrupt": [
+            "AnecdoteTraceTaskReachingTheLimitComfirm",
             "AnecdoteTraceTaskComfirm"
         ]
     },
@@ -463,7 +464,21 @@
             0,
             0
         ],
-        "action": "Click"
+        "action": "Click",
+        "post_wait_freezes": 300
+    },
+    "AnecdoteTraceTaskReachingTheLimitComfirm": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            773,
+            405,
+            64,
+            31
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_wait_freezes": 300
     },
     "AnecdoteTraceTaskComfirm": {
         "recognition": "OCR",
@@ -475,7 +490,8 @@
             32
         ],
         "only_rec": true,
-        "action": "Click"
+        "action": "Click",
+        "post_wait_freezes": 300
     },
     "AnecdoteAddPersonFlag": {
         "doc": "位于选人界面",
