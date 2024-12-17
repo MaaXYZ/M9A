@@ -4,10 +4,10 @@
         "next": [
             "ActivityMainFlag",
             "ActivityMainAnecdoteFlag",
-            "AnecdoteMainFlag",
-            "EnterTheActivityMain"
+            "AnecdoteMainFlag"
         ],
         "interrupt": [
+            "EnterTheActivityMain",
             "ActivityMainSelectAnecdote",
             "ReturnMain"
         ]
@@ -731,22 +731,5 @@
             626
         ],
         "action": "Click"
-    },
-    "EnterTheActivityMain": {
-        "doc": "进入当期活动主界面",
-        "template_code": "在interface.json中修改template",
-        "recognition": "TemplateMatch",
-        "roi": [
-            885,
-            123,
-            340,
-            183
-        ],
-        "action": "Click",
-        "post_wait_freezes": 300,
-        "next": [
-            "ActivityMainFlag",
-            "EnterTheActivityMain"
-        ]
     }
 }

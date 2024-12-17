@@ -969,7 +969,7 @@
                 {
                     "name": "活动：地球上最后的夜晚 20 艰难",
                     "pipeline_override": {
-                        "ActivityEnterTheShow": {
+                        "EnterTheActivityMain": {
                             "template": "Combat/Activity/TheLastEveningOnEarthEnterTheShow.png"
                         },
                         "TargetStageName": {
@@ -983,7 +983,7 @@
                 {
                     "name": "活动：东区黎明 19 艰难",
                     "pipeline_override": {
-                        "ActivityEnterTheShow": {
+                        "EnterTheActivityMain": {
                             "template": "Combat/Activity/LondonDawningEnterTheShow.png"
                         },
                         "TargetStageName": {

@@ -1,13 +1,15 @@
 {
     "ActivityEntry": {
         "next": [
-            "ActivityEnterTheShow"
+            "ActivityMainChapter"
         ],
         "interrupt": [
+            "EnterTheActivityMain",
             "ReturnMain"
         ]
     },
-    "ActivityEnterTheShow": {
+    "EnterTheActivityMain": {
+        "doc": "进入当期活动主界面",
         "recognition": "TemplateMatch",
         "template_code": "Set in code",
         "roi": [
@@ -17,11 +19,15 @@
             183
         ],
         "action": "Click",
-        "post_wait_freezes": 1,
-        "next": [
-            "ActivityMainChapter",
-            "ActivityEnterTheShow"
-        ]
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                0,
+                179,
+                190,
+                541
+            ]
+        }
     },
     "ActivityMainChapter": {
         "recognition": "OCR",
