@@ -28,10 +28,10 @@
         "recognition": "OCR",
         "expected": "设置",
         "roi": [
-            40,
-            452,
-            424,
-            225
+            33,
+            457,
+            515,
+            214
         ],
         "action": "Click",
         "post_wait_freezes": {
@@ -255,7 +255,7 @@
         "recognition": "TemplateMatch",
         "template": "./SwitchAccount/MenuRight.png",
         "roi": [
-            408,
+            450,
             484,
             119,
             125
