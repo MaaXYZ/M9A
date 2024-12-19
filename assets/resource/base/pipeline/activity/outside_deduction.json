@@ -62,14 +62,14 @@
         "only_rec": true,
         "action": "Click",
         "next": [
-            "SOD_unmount_completed",
+            "SOD_unmount_completed_1",
             "SOD_unmount"
         ],
         "interrupt": [
             "SOD_unmount_confirm"
         ]
     },
-    "SOD_unmount_completed": {
+    "SOD_unmount_completed_1": {
         "recognition": "OCR",
         "expected": "^挂载$",
         "roi": [
@@ -79,7 +79,48 @@
             38
         ],
         "only_rec": true,
-        "post_wait_freezes": 300,
+        "action": "Click",
+        "target": [
+            144,
+            273,
+            133,
+            33
+        ],
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                0,
+                105,
+                1280,
+                482
+            ]
+        },
+        "next": [
+            "SOD_unmount_completed_2"
+        ],
+        "interrupt": [
+            "SOD_unmount_confirm"
+        ]
+    },
+    "SOD_unmount_completed_2": {
+        "recognition": "OCR",
+        "expected": "^挂载$",
+        "roi": [
+            1016,
+            620,
+            124,
+            38
+        ],
+        "only_rec": true,
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                0,
+                105,
+                1280,
+                482
+            ]
+        },
         "next": [
             "SOD_MenuFlag"
         ],
@@ -97,7 +138,16 @@
             38
         ],
         "only_rec": true,
-        "action": "Click"
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                0,
+                105,
+                1280,
+                482
+            ]
+        }
     },
     "SOD_UNOPENED": {
         "recognition": "OCR",
