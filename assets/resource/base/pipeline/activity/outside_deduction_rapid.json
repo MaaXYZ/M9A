@@ -473,7 +473,7 @@
         ]
     },
     "ODR_ShopCompleted_2-1": {
-        "doc": "第二排兽牙项链买完",
+        "doc": "第二排第一列买完",
         "recognition": "OCR",
         "expected": [
             "^售"
@@ -496,7 +496,7 @@
         ]
     },
     "ODR_ShopCompleted_2-2": {
-        "doc": "第二排七日发条买完",
+        "doc": "第二排第二列买完",
         "recognition": "OCR",
         "expected": [
             "^售"
@@ -567,7 +567,7 @@
     "ODR_ShopEnter_2-1": {
         "recognition": "OCR",
         "expected": [
-            "兽牙项链"
+            "[\\u4e00-\\u9fa5]"
         ],
         "roi": [
             188,
@@ -582,7 +582,7 @@
     "ODR_ShopEnter_2-2": {
         "recognition": "OCR",
         "expected": [
-            "发条"
+            "[\\u4e00-\\u9fa5]"
         ],
         "roi": [
             425,
