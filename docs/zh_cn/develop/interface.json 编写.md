@@ -1,6 +1,10 @@
 # interface.json 编写
 
-[参考资料——interface.schema.json](https://github.com/MaaXYZ/MaaFramework/blob/main/tools/interface.schema.json)
+> [!TIP]
+>
+> 参考资料：
+> [interface.schema.json](https://github.com/MaaXYZ/MaaFramework/blob/main/tools/interface.schema.json)
+> [ProjectInterface协议.md](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/3.2-ProjectInterface%E5%8D%8F%E8%AE%AE.md)
 
 `interface.json` 旨在提供菜单配置。
 
@@ -36,7 +40,7 @@
 
 任务列表。任务列表包含多个任务，而每个任务又有任务名 `name`、任务入口 `entry`、任务参数 `pipeline_override`、以及任务选项 `option`，其中 `name` `entry` 必填。
 
-`pipeline_override` 中应为 pipeline task，并带有覆写参数，例如：
+`pipeline_override` 中应为 pipeline node，并带有覆写参数，例如：
 
 ```json
 {
@@ -51,14 +55,14 @@
 }
 ```
 
-这里原task为：
+这里原 node 为：
 
 ```json
 {
     "EnterTheActivityMain": {
         "doc": "进入当期活动主界面",
-        "template_code": "在interface.json中修改template",
         "recognition": "TemplateMatch",
+        "template_code": "在interface.json中修改template",
         "roi": [
             885,
             123,
@@ -66,16 +70,20 @@
             183
         ],
         "action": "Click",
-        "post_wait_freezes": 300,
-        "next": [
-            "ActivityMainFlag",
-            "EnterTheActivityMain"
-        ]
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                0,
+                179,
+                190,
+                541
+            ]
+        }
     }
 }
 ```
 
-经过覆写，该 task 在执行“轶事派遣（角色故事请自行阅读）”任务时，实际执行效果等同于：
+经过覆写，该 node 在执行“轶事派遣（角色故事请自行阅读）”任务时，实际执行效果等同于：
 
 ```json
 {
@@ -89,18 +97,22 @@
             183
         ],
         "action": "Click",
-        "post_wait_freezes": 300,
-        "next": [
-            "ActivityMainFlag",
-            "EnterTheActivityMain"
-        ]
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                0,
+                179,
+                190,
+                541
+            ]
+        }
     }
 }
 ```
 
-执行“轶事派遣（角色故事请自行阅读）”任务后，task 便会恢复原状。
+执行“轶事派遣（角色故事请自行阅读）”任务后，node 便会恢复原状。
 
-`option` 则是根据你下面的具体设置来决定如何覆写 pipeline task。
+`option` 则是根据你下面的具体设置来决定如何覆写 pipeline node。
 
 ## option
 
@@ -146,6 +158,8 @@
     }
 }
 ```
+
+`defaul_case` 为默认选项，从 `cases` 中选择一个。
 
 ## version
 
