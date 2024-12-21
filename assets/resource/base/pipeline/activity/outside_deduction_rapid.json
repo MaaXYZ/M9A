@@ -723,7 +723,15 @@
             91
         ],
         "action": "Click",
-        "post_wait_freezes": 1
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                859,
+                0,
+                421,
+                720
+            ]
+        }
     },
     "ODR_SkipText": {
         "doc": "点击一下屏幕以跳过文本加载",
