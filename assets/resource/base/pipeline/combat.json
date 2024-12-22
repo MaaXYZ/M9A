@@ -32,8 +32,10 @@
     "MainChapter_1": {
         "doc": "主线第一章 在我们的时代里",
         "next": [
-            "MainChapter_1Enter",
-            "Sub_SwipeLeftForChapter"
+            "MainChapter_1Enter"
+        ],
+        "interrupt": [
+            "SwipeLeftForChapter"
         ]
     },
     "MainChapter_1Enter": {
@@ -51,8 +53,10 @@
     "MainChapter_2": {
         "doc": "主线第二章 夜色温柔",
         "next": [
-            "MainChapter_2Enter",
-            "Sub_SwipeLeftForChapter"
+            "MainChapter_2Enter"
+        ],
+        "interrupt": [
+            "SwipeLeftForChapter"
         ]
     },
     "MainChapter_2Enter": {
@@ -70,8 +74,10 @@
     "MainChapter_3": {
         "doc": "主线第三章 故事一无所有",
         "next": [
-            "MainChapter_3Enter",
-            "Sub_SwipeLeftForChapter"
+            "MainChapter_3Enter"
+        ],
+        "interrupt": [
+            "SwipeLeftForChapter"
         ]
     },
     "MainChapter_3Enter": {
@@ -89,8 +95,10 @@
     "MainChapter_4": {
         "doc": "主线第四章 老虎的金黄",
         "next": [
-            "MainChapter_4Enter",
-            "Sub_SwipeLeftForChapter"
+            "MainChapter_4Enter"
+        ],
+        "interrupt": [
+            "SwipeLeftForChapter"
         ]
     },
     "MainChapter_4Enter": {
@@ -108,8 +116,10 @@
     "MainChapter_5": {
         "doc": "主线第五章 洞穴的囚徒",
         "next": [
-            "MainChapter_5Enter",
-            "Sub_SwipeLeftForChapter"
+            "MainChapter_5Enter"
+        ],
+        "interrupt": [
+            "SwipeLeftForChapter"
         ]
     },
     "MainChapter_5Enter": {
@@ -127,8 +137,10 @@
     "MainChapter_6": {
         "doc": "主线第六章 今夜星光灿烂",
         "next": [
-            "MainChapter_6Enter",
-            "Sub_SwipeLeftForChapter"
+            "MainChapter_6Enter"
+        ],
+        "interrupt": [
+            "SwipeLeftForChapter"
         ]
     },
     "MainChapter_6Enter": {
@@ -146,8 +158,10 @@
     "MainChapter_7": {
         "doc": "主线第七章 孤独之歌",
         "next": [
-            "MainChapter_7Enter",
-            "Sub_SwipeLeftForChapter"
+            "MainChapter_7Enter"
+        ],
+        "interrupt": [
+            "SwipeLeftForChapter"
         ]
     },
     "MainChapter_7Enter": {
@@ -165,8 +179,10 @@
     "MainChapter_8": {
         "doc": "主线第八章 忧郁的热带",
         "next": [
-            "MainChapter_8Enter",
-            "Sub_SwipeLeftForChapter"
+            "MainChapter_8Enter"
+        ],
+        "interrupt": [
+            "SwipeLeftForChapter"
         ]
     },
     "MainChapter_8Enter": {
@@ -181,8 +197,7 @@
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
     },
-    "Sub_ResourceChapterLabel": {
-        "is_sub": true,
+    "ResourceChapterLabel": {
         "recognition": "TemplateMatch",
         "template": "Combat/ResourceChapterLabel.png",
         "roi": [
@@ -205,8 +220,10 @@
     "ResourceChapter_LP": {
         "doc": "尘埃运动",
         "next": [
-            "ResourceChapter_LPEnter",
-            "Sub_ResourceChapterLabel"
+            "ResourceChapter_LPEnter"
+        ],
+        "interrupt": [
+            "ResourceChapterLabel"
         ]
     },
     "ResourceChapter_LPEnter": {
@@ -225,8 +242,10 @@
     "ResourceChapter_MA": {
         "doc": "铸币美学",
         "next": [
-            "ResourceChapter_MAEnter",
-            "Sub_ResourceChapterLabel"
+            "ResourceChapter_MAEnter"
+        ],
+        "interrupt": [
+            "ResourceChapterLabel"
         ]
     },
     "ResourceChapter_MAEnter": {
@@ -248,8 +267,10 @@
         ],
         "action": "Click",
         "next": [
-            "SwipeLeftAndFindStage",
-            "Sub_SwipeRightForChapter"
+            "SwipeLeftAndFindStage"
+        ],
+        "interrupt": [
+            "SwipeRightForChapter"
         ]
     },
     "ResourceChapter_MAEnter原": {
@@ -268,9 +289,11 @@
     "ResourceChapter_HP": {
         "doc": "丰收时令",
         "next": [
-            "ResourceChapter_HPEnter",
-            "Sub_ResourceChapterLabel",
-            "Sub_SwipeRightForChapter"
+            "ResourceChapter_HPEnter"
+        ],
+        "interrupt": [
+            "ResourceChapterLabel",
+            "SwipeRightForChapter"
         ]
     },
     "ResourceChapter_HPEnter": {
@@ -290,9 +313,11 @@
         "doc": "意志解析",
         "next": [
             "ResourceChapter_Psychube07FreeEnter",
-            "ResourceChapter_NoFreePsychube07",
-            "Sub_ResourceChapterLabel",
-            "Sub_SwipeRightForChapter"
+            "ResourceChapter_NoFreePsychube07"
+        ],
+        "interrupt": [
+            "ResourceChapterLabel",
+            "SwipeRightForChapter"
         ]
     },
     "ResourceChapter_Psychube07FreeEnter": {
@@ -359,8 +384,7 @@
             "SwipeRightForPsychube"
         ]
     },
-    "Sub_PromotionChapterLabel": {
-        "is_sub": true,
+    "PromotionChapterLabel": {
         "recognition": "TemplateMatch",
         "template": "Combat/PromotionChapterLabel.png",
         "threshold": 0.98,
@@ -384,8 +408,10 @@
     "PromotionChapter_ME": {
         "doc": "群山之声",
         "next": [
-            "PromotionChapter_MEEnter",
-            "Sub_PromotionChapterLabel"
+            "PromotionChapter_MEEnter"
+        ],
+        "interrupt": [
+            "PromotionChapterLabel"
         ]
     },
     "PromotionChapter_MEEnter": {
@@ -404,8 +430,10 @@
     "PromotionChapter_SL": {
         "doc": "星陨之所",
         "next": [
-            "PromotionChapter_SLEnter",
-            "Sub_PromotionChapterLabel"
+            "PromotionChapter_SLEnter"
+        ],
+        "interrupt": [
+            "PromotionChapterLabel"
         ]
     },
     "PromotionChapter_SLEnter": {
@@ -424,9 +452,11 @@
     "PromotionChapter_SS": {
         "doc": "深林之形",
         "next": [
-            "PromotionChapter_SSEnter",
-            "Sub_PromotionChapterLabel",
-            "Sub_SwipeRightForChapter"
+            "PromotionChapter_SSEnter"
+        ],
+        "interrupt": [
+            "PromotionChapterLabel",
+            "SwipeRightForChapter"
         ]
     },
     "PromotionChapter_SSEnter": {
@@ -445,9 +475,11 @@
     "PromotionChapter_BW": {
         "doc": "荒兽之野",
         "next": [
-            "PromotionChapter_BWEnter",
-            "Sub_PromotionChapterLabel",
-            "Sub_SwipeRightForChapter"
+            "PromotionChapter_BWEnter"
+        ],
+        "interrupt": [
+            "PromotionChapterLabel",
+            "SwipeRightForChapter"
         ]
     },
     "PromotionChapter_BWEnter": {
@@ -463,11 +495,10 @@
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
     },
-    "Sub_SwipeRightForChapter": {
-        "is_sub": true,
+    "SwipeRightForChapter": {
         "action": "Swipe",
         "begin": [
-            1100,
+            500,
             300,
             100,
             100
@@ -477,10 +508,13 @@
             300,
             100,
             100
+        ],
+        "post_delay": 0,
+        "next": [
+            "SwipeStop"
         ]
     },
-    "Sub_SwipeLeftForChapter": {
-        "is_sub": true,
+    "SwipeLeftForChapter": {
         "action": "Swipe",
         "begin": [
             100,
@@ -489,11 +523,34 @@
             100
         ],
         "end": [
-            1100,
+            500,
             300,
             100,
             100
+        ],
+        "post_delay": 0,
+        "next": [
+            "SwipeStop"
         ]
+    },
+    "SwipeStop": {
+        "action": "Click",
+        "target": [
+            750,
+            570,
+            40,
+            30
+        ],
+        "pre_delay": 1,
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                0,
+                235,
+                1280,
+                353
+            ]
+        }
     },
     "SwipeLeftAndFindStage": {
         "next": [
@@ -544,11 +601,14 @@
             50
         ],
         "post_wait_freezes": 1,
+        "post_delay": 0,
         "next": [
             "SwipeLeftAndFindStage"
         ]
     },
     "SwipeRightAndFindStage": {
+        "pre_delay": 0,
+        "post_delay": 0,
         "next": [
             "TargetStageName",
             "SwipeRightForStageList"
