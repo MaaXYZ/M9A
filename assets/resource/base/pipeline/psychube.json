@@ -99,6 +99,15 @@
             136
         ],
         "action": "Click",
+        "post_wait_freezes": {
+            "time": 1000,
+            "target": [
+                0,
+                375,
+                1091,
+                345
+            ]
+        },
         "next": [
             "PsychubeSwitchToReplay",
             "PsychubeSetReplaysTimes",
