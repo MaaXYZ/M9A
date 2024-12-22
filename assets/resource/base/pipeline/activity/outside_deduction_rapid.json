@@ -1054,10 +1054,6 @@
             ]
         }
     },
-    "test": {
-        "recognition": "OCR",
-        "expected": "市场(.*| 雏)形"
-    },
     "ODR_Event_Select_SkipText": {
         "doc": "事件——默认最后一个选项",
         "expected_doc": "来自BV197421Z7bm&灰机wiki-维也纳拾遗",
