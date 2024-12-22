@@ -88,11 +88,14 @@
     },
     "SwitchAccountMainExpandFlag": {
         "recognition": "TemplateMatch",
-        "template": "./SwitchAccount/AccountDel.png",
+        "template": [
+            "./SwitchAccount/AccountDel.png",
+            "./SwitchAccount/AccountDel1.png"
+        ],
         "roi": [
-            725,
+            682,
             353,
-            141,
+            184,
             278
         ],
         "next": [
@@ -104,7 +107,7 @@
     },
     "SwitchLastAccountComplete": {
         "recognition": "OCR",
-        "expected": "登录",
+        "expected": "(登|.)录",
         "roi": [
             567,
             355,
@@ -122,7 +125,7 @@
     },
     "LogIn": {
         "recognition": "OCR",
-        "expected": "登录",
+        "expected": "(登|.)录",
         "roi": "SwitchLastAccountComplete",
         "only_rec": true,
         "action": "Click",
@@ -138,11 +141,14 @@
     },
     "SwitchLastAccount": {
         "recognition": "TemplateMatch",
-        "template": "./SwitchAccount/AccountDel.png",
+        "template": [
+            "./SwitchAccount/AccountDel.png",
+            "./SwitchAccount/AccountDel1.png"
+        ],
         "roi": [
-            725,
+            682,
             353,
-            141,
+            184,
             278
         ],
         "order_by": "Vertical",
@@ -166,11 +172,14 @@
     },
     "SwitchAccountMainExpand": {
         "recognition": "TemplateMatch",
-        "template": "./SwitchAccount/AccountMainExpand.png",
+        "template": [
+            "./SwitchAccount/AccountMainExpand.png",
+            "./SwitchAccount/AccountMainExpand1.png"
+        ],
         "roi": [
-            723,
+            682,
             278,
-            138,
+            179,
             130
         ],
         "action": "Click",
