@@ -1268,7 +1268,8 @@
         "action": "Click",
         "next": [
             "ODR_Event_Confirm",
-            "ODR_Event_Select"
+            "ODR_Event_Select",
+            "ODR_MainFlag"
         ],
         "interrupt": "ODR_SkipText"
     },
@@ -1287,7 +1288,8 @@
         "action": "Click",
         "next": [
             "ODR_Event_Confirm",
-            "ODR_Event_Select_First"
+            "ODR_Event_Select_First",
+            "ODR_MainFlag"
         ],
         "interrupt": "ODR_SkipText"
     },
@@ -1306,7 +1308,8 @@
         "action": "Click",
         "next": [
             "ODR_Event_Confirm",
-            "ODR_Event_Select_Second2Last"
+            "ODR_Event_Select_Second2Last",
+            "ODR_MainFlag"
         ],
         "interrupt": "ODR_SkipText"
     },
@@ -1325,7 +1328,8 @@
         "action": "Click",
         "next": [
             "ODR_Event_Confirm",
-            "ODR_Event_Select_Second"
+            "ODR_Event_Select_Second",
+            "ODR_MainFlag"
         ],
         "interrupt": "ODR_SkipText"
     },
@@ -1525,6 +1529,16 @@
             "ODR_ItemLose",
             "SOD_Acquire_NoNext",
             "ODR_SkipText"
+        ]
+    },
+    "ODR_MainFlag": {
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/SOD_Main.png",
+        "roi": [
+            33,
+            430,
+            82,
+            85
         ]
     }
 }
