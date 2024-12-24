@@ -110,10 +110,10 @@
         "recognition": "OCR",
         "expected": "[×xX✕✖]",
         "roi": [
-            686,
-            370,
-            25,
-            77
+            673,
+            362,
+            47,
+            99
         ],
         "next": [
             "SwitchLastAccountComplete"
@@ -190,15 +190,15 @@
         "recognition": "OCR",
         "expected": "[×xX✕✖]",
         "roi": [
-            686,
-            370,
-            25,
-            77
+            673,
+            362,
+            47,
+            99
         ],
         "order_by": "Vertical",
         "index": -1,
         "target_offset": [
-            -150,
+            -60,
             0,
             0,
             0
@@ -238,7 +238,7 @@
     },
     "SwitchAccountMainExpand_1440p": {
         "recognition": "OCR",
-        "expected": "v√V",
+        "expected": "[v√V]",
         "roi": [
             685,
             344,
