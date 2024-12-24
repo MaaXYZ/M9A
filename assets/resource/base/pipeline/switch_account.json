@@ -80,17 +80,18 @@
             158
         ],
         "next": [
-            "SwitchAccountMainExpandFlag"
+            "SwitchAccountMainExpandFlag",
+            "SwitchAccountMainExpandFlag_1440p"
         ],
         "interrupt": [
-            "SwitchAccountMainExpand"
+            "SwitchAccountMainExpand",
+            "SwitchAccountMainExpand_1440p"
         ]
     },
     "SwitchAccountMainExpandFlag": {
         "recognition": "TemplateMatch",
         "template": [
-            "./SwitchAccount/AccountDel.png",
-            "./SwitchAccount/AccountDel1.png"
+            "./SwitchAccount/AccountDel.png"
         ],
         "roi": [
             682,
@@ -103,6 +104,22 @@
         ],
         "interrupt": [
             "SwitchLastAccount"
+        ]
+    },
+    "SwitchAccountMainExpandFlag_1440p": {
+        "recognition": "OCR",
+        "expected": "[×xX✕✖]",
+        "roi": [
+            686,
+            370,
+            25,
+            77
+        ],
+        "next": [
+            "SwitchLastAccountComplete"
+        ],
+        "interrupt": [
+            "SwitchLastAccount_1440p"
         ]
     },
     "SwitchLastAccountComplete": {
@@ -142,8 +159,7 @@
     "SwitchLastAccount": {
         "recognition": "TemplateMatch",
         "template": [
-            "./SwitchAccount/AccountDel.png",
-            "./SwitchAccount/AccountDel1.png"
+            "./SwitchAccount/AccountDel.png"
         ],
         "roi": [
             682,
@@ -170,17 +186,64 @@
             ]
         }
     },
+    "SwitchLastAccount_1440p": {
+        "recognition": "OCR",
+        "expected": "[×xX✕✖]",
+        "roi": [
+            686,
+            370,
+            25,
+            77
+        ],
+        "order_by": "Vertical",
+        "index": -1,
+        "target_offset": [
+            -150,
+            0,
+            0,
+            0
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                437,
+                297,
+                408,
+                246
+            ]
+        }
+    },
     "SwitchAccountMainExpand": {
         "recognition": "TemplateMatch",
         "template": [
-            "./SwitchAccount/AccountMainExpand.png",
-            "./SwitchAccount/AccountMainExpand1.png"
+            "./SwitchAccount/AccountMainExpand.png"
         ],
         "roi": [
             682,
             278,
             179,
             130
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                437,
+                297,
+                408,
+                246
+            ]
+        }
+    },
+    "SwitchAccountMainExpand_1440p": {
+        "recognition": "OCR",
+        "expected": "v√V",
+        "roi": [
+            685,
+            344,
+            25,
+            22
         ],
         "action": "Click",
         "post_wait_freezes": {
