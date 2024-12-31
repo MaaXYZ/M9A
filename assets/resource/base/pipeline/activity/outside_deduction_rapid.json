@@ -108,10 +108,7 @@
         ],
         "only_rec": true,
         "action": "Click",
-        "post_wait_freezes": 1,
-        "next": [
-            "ODR_Start"
-        ]
+        "post_wait_freezes": 1
     },
     "ODR_Start_MediaSelect": {
         "doc": "触媒选择",
