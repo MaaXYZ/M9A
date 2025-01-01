@@ -512,7 +512,7 @@
         ]
     },
     "ODR_ShopCompleted_2-4": {
-        "doc": "第二排软驱买完",
+        "doc": "第二排软驱买完(小概率不是软驱)",
         "recognition": "OCR",
         "expected": [
             "^售"
@@ -590,7 +590,7 @@
     "ODR_ShopEnter_2-4": {
         "recognition": "OCR",
         "expected": [
-            "软驱"
+            "[\\u4e00-\\u9fa5]"
         ],
         "roi": [
             893,
