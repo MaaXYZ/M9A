@@ -751,7 +751,6 @@
             "ODR_SelectRestSite",
             "ODR_SelectTreasure",
             "ODR_SelectDiscovery",
-            "ODR_SelectCombat",
             "ODR_SelectImminent",
             "ODR_Exit",
             "ODR_QueryChessLocation"
