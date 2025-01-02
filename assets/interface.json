@@ -982,20 +982,6 @@
                     }
                 },
                 {
-                    "name": "活动：复兴乌卢鲁运动会 13 艰难（复刻）",
-                    "pipeline_override": {
-                        "ActivityEntry": {
-                            "next": "RevivalTheUluruGames_Reproduction"
-                        },
-                        "TargetStageName": {
-                            "expected": "13"
-                        },
-                        "StageDifficulty": {
-                            "next": "ActivityStageDifficulty"
-                        }
-                    }
-                },
-                {
                     "name": "活动：朔日手记 19 艰难 （已结束）",
                     "pipeline_override": {
                         "ActivityEntry": {
