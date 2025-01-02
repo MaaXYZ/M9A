@@ -2464,15 +2464,15 @@
     },
     "SOD_EndEvent": {
         "recognition": "TemplateMatch",
-        "template": "OutsideDeduction/SOD_EndEvent.png",
-        "order_by": "Random",
+        "template": "OutsideDeductionRapid/Event.png",
         "roi": [
             760,
-            71,
+            70,
             520,
-            600
+            640
         ],
-        "threshold": 0.55,
+        "order_by": "Vertical",
+        "index": -1,
         "action": "Click",
         "next": [
             "SOD_EndEvent_OK",
