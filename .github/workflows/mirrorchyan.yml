@@ -22,7 +22,7 @@ jobs:
         id: zip
         run: |
           mkdir MirrorChyan
-          zip -r MirrorChyan/${{ github.event.repository.name }}.zip resource cache
+          zip -r MirrorChyan/${{ github.event.repository.name }}.zip assets/resource assets/interface.json
 
       - uses: actions/upload-artifact@v4
         with:
