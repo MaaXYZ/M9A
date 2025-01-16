@@ -1026,20 +1026,6 @@
                     }
                 },
                 {
-                    "name": "活动：朔日手记 19 艰难 （已结束）",
-                    "pipeline_override": {
-                        "ActivityEntry": {
-                            "next": "NotesOnShuoRi"
-                        },
-                        "TargetStageName": {
-                            "expected": "19"
-                        },
-                        "StageDifficulty": {
-                            "next": "ActivityStageDifficulty"
-                        }
-                    }
-                },
-                {
                     "name": "活动：再见，来亚什基 16 艰难（已结束）",
                     "pipeline_override": {
                         "ActivityEntry": {
