@@ -94,7 +94,7 @@
             "pipeline_override": {
                 "EnterTheActivityMain": {
                     "template_doc": "修改为当期活动入口的template",
-                    "template": "Combat/Activity/TheLastEveningOnEarthEnterTheShow.png"
+                    "template": "Combat/Activity/ChinatownFilmsEnterTheShow.png"
                 }
             }
         },
@@ -968,13 +968,25 @@
         "活动选择": {
             "cases": [
                 {
-                    "name": "活动：地球上最后的夜晚 20 艰难",
+                    "name": "活动：唐人街影画 19 艰难",
                     "pipeline_override": {
                         "EnterTheActivityMain": {
-                            "template": "Combat/Activity/TheLastEveningOnEarthEnterTheShow.png"
+                            "template": "Combat/Activity/ChinatownFilmsEnterTheShow.png"
+                        },
+                        "ActivityMainChapter": {
+                            "expected": [
+                                "开",
+                                "始"
+                            ],
+                            "roi": [
+                                514,
+                                547,
+                                277,
+                                104
+                            ]
                         },
                         "TargetStageName": {
-                            "expected": "20"
+                            "expected": "19"
                         },
                         "StageDifficulty": {
                             "next": "ActivityStageDifficulty"
@@ -982,13 +994,31 @@
                     }
                 },
                 {
-                    "name": "活动：朔日手记 19 艰难 （已结束）",
+                    "name": "活动：朔日手记 19 艰难 （复刻）",
                     "pipeline_override": {
-                        "ActivityEntry": {
-                            "next": "NotesOnShuoRi"
+                        "EnterTheActivityMain": {
+                            "template": "Combat/Activity/ChinatownFilmsEnterTheShow.png"
+                        },
+                        "ActivityReturn": {
+                            "enabled": true,
+                            "expected": "朔日"
                         },
                         "TargetStageName": {
                             "expected": "19"
+                        },
+                        "StageDifficulty": {
+                            "next": "ActivityStageDifficulty"
+                        }
+                    }
+                },
+                {
+                    "name": "活动：地球上最后的夜晚 20 艰难（已结束）",
+                    "pipeline_override": {
+                        "EnterTheActivityMain": {
+                            "template": "Combat/Activity/TheLastEveningOnEarthEnterTheShow.png"
+                        },
+                        "TargetStageName": {
+                            "expected": "20"
                         },
                         "StageDifficulty": {
                             "next": "ActivityStageDifficulty"
