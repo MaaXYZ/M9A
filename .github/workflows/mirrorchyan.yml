@@ -1,0 +1,53 @@
+name: mirrorchyan
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Version Name
+        id: version_name
+        run: |
+          is_release=${{ startsWith(github.ref, 'refs/tags/v') }}
+          tag=$(git describe --tags --match "v*" ${{ github.ref }} || true)
+          if [[ $tag != v* ]]; then
+            tag=$(curl -sX GET "https://api.github.com/repos/${{ github.repository }}/releases/latest" --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' | awk '/tag_name/{print $4}' FS='["]')
+            if [[ $tag != v* ]]; then
+              tag="v0.0.0"
+            fi
+            tag=$(date "+$tag-%y%m%d-$(git rev-parse --short HEAD)")
+          fi
+          if ! $($is_release) ; then
+            prefix=${tag%-*-*}
+            suffix=${tag#$prefix-}
+            tag="$prefix-ci.$suffix"
+          fi
+
+          echo version=$tag | tee -a $GITHUB_OUTPUT
+
+      - name: Zip
+        id: zip
+        run: |
+          mkdir MirrorChyan
+          zip -r MirrorChyan/${{ github.event.repository.name }}.zip assets/resource assets/interface.json
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MirrorChyan
+          path: MirrorChyan
+
+      - name: Upload to MirrorChyan
+        run: |
+          curl --location --request POST 'https://mirrorc.top/api/resources/${{ github.event.repository.name }}/versions' \
+            --header 'Authorization:${{ secrets.MirrorChyanUploadToken }}' \
+            --form 'name="${{ steps.version_name.outputs.version }}"' \
+            --form 'file=@"MirrorChyan/${{ github.event.repository.name }}.zip"'
