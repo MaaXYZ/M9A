@@ -1,0 +1,37 @@
+name: mirrorchyan
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Version Name
+        id: version_name
+        run: |
+          version=${{ github.ref }}
+          echo "version=$version" | tee -a "$GITHUB_OUTPUT"
+
+      - name: Zip
+        id: zip
+        run: |
+          mkdir MirrorChyan
+          zip -r MirrorChyan/${{ github.event.repository.name }}.zip resource cache
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MirrorChyan
+          path: MirrorChyan
+
+      - name: Upload to MirrorChyan
+        run: |
+          curl --location --request POST 'https://mirrorc.top/api/resources/${{ github.event.repository.name }}/versions' \
+            --header 'Authorization:${{ secrets.MirrorChyanUploadToken }}' \
+            --form 'name="${{ steps.version_name.outputs.version }}"' \
+            --form 'file=@"MirrorChyan/${{ github.event.repository.name }}.zip"'
