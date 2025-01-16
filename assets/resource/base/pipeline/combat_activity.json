@@ -1,12 +1,28 @@
 {
     "ActivityEntry": {
         "next": [
+            "ActivityReturn",
             "ActivityMainChapter"
         ],
         "interrupt": [
             "EnterTheActivityMain",
             "ReturnMain"
         ]
+    },
+    "ActivityReturn": {
+        "recognition": "OCR",
+        "expected_code": [
+            "set in code"
+        ],
+        "enabled": false,
+        "roi": [
+            33,
+            89,
+            234,
+            479
+        ],
+        "action": "Click",
+        "next": "ActivityMainChapter"
     },
     "EnterTheActivityMain": {
         "doc": "进入当期活动主界面",
