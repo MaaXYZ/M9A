@@ -94,7 +94,7 @@
             "pipeline_override": {
                 "EnterTheActivityMain": {
                     "template_doc": "修改为当期活动入口的template",
-                    "template": "Combat/Activity/TheGhostMaster.png"
+                    "template": "Combat/Activity/ChinatownFilmsEnterTheShow.png"
                 }
             }
         },
