@@ -290,7 +290,8 @@
         "recognition": "TemplateMatch",
         "template": [
             "StartUp/Reward.png",
-            "StartUp/Reward1.png"
+            "StartUp/Reward1.png",
+            "StartUp/Reward2.png"
         ],
         "roi": [
             419,
@@ -389,13 +390,20 @@
             "StartUp/CloseRewardPage_2.4.png",
             "StartUp/CloseItemDetail.png"
         ],
+        "threshold": 0.6,
         "roi": [
             1040,
             60,
-            167,
+            250,
             146
         ],
         "action": "Click",
-        "post_delay": 1000
+        "post_delay": 1000,
+        "next": [
+            "CloseRewardPage"
+        ],
+        "interrupt": [
+            "ReturnMain"
+        ]
     }
 }
