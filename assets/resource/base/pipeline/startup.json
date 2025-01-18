@@ -400,10 +400,8 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "CloseRewardPage"
-        ],
-        "interrupt": [
-            "ReturnMain"
+            "CloseRewardPage",
+            "HomeFlag"
         ]
     }
 }
