@@ -34,9 +34,9 @@
   > M9A 目前使用其中第一种方式（纯 Pipeline 低代码），  
   > 后续可能会迁移到第二种方式（Pipeline + 自定义任务）
 - [开发前须知](./docs/zh_cn/develop/开发前须知.md)
-- [interface.json 编写](./docs/zh_cn/develop/interface.json%20编写.md)
-- [Pipeline 编写](./docs/zh_cn/develop/Pipeline%20编写.md)
-- [Bug 排查](./docs/zh_cn/develop/Bug%20排查.md)
+- [interface.json编写](./docs/zh_cn/develop/interface.json编写.md)
+- [Pipeline编写](./docs/zh_cn/develop/Pipeline编写.md)
+- [Bug排查](./docs/zh_cn/develop/Bug排查.md)
 - [项目重构](./docs/zh_cn/develop/项目重构.md)
 - [活动资源维护](./docs/zh_cn/develop/活动资源维护.md)
 - [外服适配](./docs/zh_cn/develop/外服适配.md)
