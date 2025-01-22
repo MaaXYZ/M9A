@@ -280,13 +280,21 @@
         "green_mask": true,
         "threshold": 0.85,
         "index": -1,
-        "roi": "ODR_QueryChessLocation",
-        "roi_offset": [
-            10,
-            -1080,
-            1920,
-            1080
+        "roi": [
+            303,
+            196,
+            392,
+            307
         ],
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                1019,
+                590,
+                106,
+                91
+            ]
+        },
         "action": "Click"
     },
     "ODR_SelectDiscovery": {
