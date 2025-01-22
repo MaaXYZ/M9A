@@ -971,7 +971,15 @@
         ],
         "only_rec": true,
         "action": "Click",
-        "post_wait_freezes": 700
+        "post_wait_freezes": {
+            "time": 700,
+            "target": [
+                506,
+                130,
+                390,
+                450
+            ]
+        }
     },
     "ODR_ItemLose": {
         "recognition": "OCR",
