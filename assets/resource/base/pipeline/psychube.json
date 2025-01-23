@@ -99,6 +99,24 @@
             136
         ],
         "action": "Click",
+        "next": [
+            "PsychubeSwitchToReplay",
+            "PsychubeSetReplaysTimes",
+            "StartReplay"
+        ],
+        "interrupt": [
+            "CombatEntering"
+        ]
+    },
+    "CombatEntering": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/Entering.png",
+        "roi": [
+            1106,
+            0,
+            174,
+            311
+        ],
         "post_wait_freezes": {
             "time": 1000,
             "target": [
@@ -107,12 +125,7 @@
                 1091,
                 345
             ]
-        },
-        "next": [
-            "PsychubeSwitchToReplay",
-            "PsychubeSetReplaysTimes",
-            "StartReplay"
-        ]
+        }
     },
     "PsychubeSwitchToReplay": {
         "recognition": "TemplateMatch",
