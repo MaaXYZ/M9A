@@ -155,6 +155,33 @@ jobs:
           name: M9A-macos-${{ matrix.arch }}
           path: "install"
 
+  mirrorchyan:
+    needs: meta
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        arch: [aarch64]
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Download MaaFramework
+        uses: robinraju/release-downloader@v1
+        with:
+          repository: MaaXYZ/MaaFramework
+          fileName: "MAA-macos-${{ matrix.arch }}*"
+          latest: true
+          out-file-path: "deps"
+          extract: true
+
+      - name: Install
+        shell: bash
+        run: |
+          python ./install.py ${{ needs.meta.outputs.tag }}
+
       - name: MirrorChyan Package
         id: zip
         run: |
@@ -202,7 +229,7 @@ jobs:
 
   release:
     if: ${{ needs.meta.outputs.is_release == 'true' }}
-    needs: [meta, windows, ubuntu, macos, android]
+    needs: [meta, windows, ubuntu, macos, android, mirrorchyan]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
