@@ -34,11 +34,17 @@ jobs:
 
           echo version=$tag | tee -a $GITHUB_OUTPUT
 
+      - name: install
+        run: |
+          python ./install.py ${{ steps.version_name.outputs.version }}
+
       - name: Zip
         id: zip
         run: |
+          rm -rf install/resource/base/model/ocr
+        
           mkdir MirrorChyan
-          zip -r MirrorChyan/${{ github.event.repository.name }}.zip assets/resource assets/interface.json
+          zip -r MirrorChyan/${{ github.event.repository.name }}.zip install/resource install/interface.json
 
       - uses: actions/upload-artifact@v4
         with:
