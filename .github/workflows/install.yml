@@ -155,6 +155,21 @@ jobs:
           name: M9A-macos-${{ matrix.arch }}
           path: "install"
 
+      - name: MirrorChyan Package
+        id: zip
+        run: |
+          rm -rf install/resource/base/model/ocr
+        
+          mkdir MirrorChyan
+          zip -r MirrorChyan/${{ github.event.repository.name }}.zip install/resource install/interface.json
+
+      - name: Upload to MirrorChyan
+        run: |
+          curl --location --request POST 'https://mirrorc.top/api/resources/${{ github.event.repository.name }}/versions' \
+            --header 'Authorization:${{ secrets.MirrorChyanUploadToken }}' \
+            --form 'name="${{ needs.meta.outputs.tag }}"' \
+            --form 'file=@"MirrorChyan/${{ github.event.repository.name }}.zip"'
+
   android:
     needs: meta
     runs-on: macos-latest
