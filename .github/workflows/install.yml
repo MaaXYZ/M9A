@@ -162,13 +162,11 @@ jobs:
         
           mkdir MirrorChyan
           zip -r MirrorChyan/${{ github.event.repository.name }}.zip install/resource install/interface.json
-
-      - name: Upload to MirrorChyan
-        run: |
-          curl --location --request POST 'https://mirrorc.top/api/resources/${{ github.event.repository.name }}/versions' \
-            --header 'Authorization:${{ secrets.MirrorChyanUploadToken }}' \
-            --form 'name="${{ needs.meta.outputs.tag }}"' \
-            --form 'file=@"MirrorChyan/${{ github.event.repository.name }}.zip"'
+          
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MirrorChyan
+          path: MirrorChyan
 
   android:
     needs: meta
@@ -210,6 +208,15 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           path: assets
+
+      - name: Upload to MirrorChyan
+        run: |
+          curl --location --request POST 'https://mirrorc.top/api/resources/${{ github.event.repository.name }}/versions' \
+            --header 'Authorization:${{ secrets.MirrorChyanUploadToken }}' \
+            --form 'name="${{ needs.meta.outputs.tag }}"' \
+            --form 'file=@"assets/MirrorChyan/${{ github.event.repository.name }}.zip"'
+
+          rm -rf assets/MirrorChyan
 
       - name: Check assets directory
         run: |
