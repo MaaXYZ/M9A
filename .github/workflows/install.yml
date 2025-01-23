@@ -155,12 +155,10 @@ jobs:
           name: M9A-macos-${{ matrix.arch }}
           path: "install"
 
-  mirrorchyan:
+  mirrorchyan_res:
     needs: meta
     runs-on: macos-latest
     strategy:
-      matrix:
-        arch: [aarch64]
       fail-fast: false
 
     steps:
@@ -172,7 +170,7 @@ jobs:
         uses: robinraju/release-downloader@v1
         with:
           repository: MaaXYZ/MaaFramework
-          fileName: "MAA-macos-${{ matrix.arch }}*"
+          fileName: "MAA-macos-aarch64*"
           latest: true
           out-file-path: "deps"
           extract: true
