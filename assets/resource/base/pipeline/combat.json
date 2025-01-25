@@ -851,14 +851,13 @@
         "post_wait_freezes": {
             "time": 500,
             "target": [
-                389,
-                194,
-                442,
-                326
+                614,
+                457,
+                666,
+                263
             ]
         },
         "next": [
-            "Victory",
             "AllIn",
             "HomeFlag"
         ],
