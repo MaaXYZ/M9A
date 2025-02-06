@@ -234,13 +234,16 @@ jobs:
         with:
           path: assets
 
-      - name: Upload to MirrorChyan
+      - uses: MirrorChyan/uploading-action@v1
+        with:
+          filetype: local
+          filename: "assets/MirrorChyanRes/${{ github.event.repository.name }}.zip"
+          version_name: ${{ needs.meta.outputs.tag }}
+          mirrorchyan_rid: M9A
+          upload_token: ${{ secrets.MirrorChyanUploadToken }}
+          
+      - name: rm MirrorChyan
         run: |
-          curl --location --request POST 'https://mirrorc.top/api/resources/${{ github.event.repository.name }}/versions' \
-            --header 'Authorization:${{ secrets.MirrorChyanUploadToken }}' \
-            --form 'name="${{ needs.meta.outputs.tag }}"' \
-            --form 'file=@"assets/MirrorChyanRes/${{ github.event.repository.name }}.zip"'
-
           rm -rf assets/MirrorChyanRes
 
       - name: Check assets directory
