@@ -155,44 +155,6 @@ jobs:
           name: M9A-macos-${{ matrix.arch }}
           path: "install"
 
-  mirrorchyan_res:
-    needs: meta
-    runs-on: macos-latest
-    strategy:
-      fail-fast: false
-
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: true
-
-      - name: Download MaaFramework
-        uses: robinraju/release-downloader@v1
-        with:
-          repository: MaaXYZ/MaaFramework
-          fileName: "MAA-macos-aarch64*"
-          latest: true
-          out-file-path: "deps"
-          extract: true
-
-      - name: Install
-        shell: bash
-        run: |
-          python ./install.py ${{ needs.meta.outputs.tag }}
-
-      - name: MirrorChyan Package
-        id: zip
-        run: |
-          rm -rf install/resource/base/model/ocr
-        
-          mkdir MirrorChyan
-          zip -r MirrorChyan/${{ github.event.repository.name }}.zip install/resource install/interface.json
-          
-      - uses: actions/upload-artifact@v4
-        with:
-          name: MirrorChyanRes
-          path: MirrorChyan
-
   android:
     needs: meta
     runs-on: macos-latest
@@ -227,24 +189,12 @@ jobs:
 
   release:
     if: ${{ needs.meta.outputs.is_release == 'true' }}
-    needs: [meta, windows, ubuntu, macos, android, mirrorchyan_res]
+    needs: [meta, windows, ubuntu, macos, android]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
         with:
           path: assets
-
-      - uses: MirrorChyan/uploading-action@v1
-        with:
-          filetype: local
-          filename: "assets/MirrorChyanRes/${{ github.event.repository.name }}.zip"
-          version_name: ${{ needs.meta.outputs.tag }}
-          mirrorchyan_rid: M9A
-          upload_token: ${{ secrets.MirrorChyanUploadToken }}
-          
-      - name: rm MirrorChyan
-        run: |
-          rm -rf assets/MirrorChyanRes
 
       - name: Check assets directory
         run: |

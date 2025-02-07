@@ -1,0 +1,24 @@
+name: M9A
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  mirrorchyan:
+    runs-on: macos-latest
+    steps:
+      - id: uploading
+        uses: MirrorChyan/uploading-action@v1
+        with:
+          filetype: latest-release
+          filename: "M9A-win-x86_64-*.zip"
+          pick_files: '["resource", "interface.json"]'
+          exclude_files: '["resource/base/model/ocr/**"]'
+          mirrorchyan_rid: M9A
+
+          owner: MaaXYZ
+          repo: M9A
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          upload_token: ${{ secrets.MirrorChyanUploadToken }}
