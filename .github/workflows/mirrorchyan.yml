@@ -15,7 +15,7 @@ jobs:
           filetype: latest-release
           filename: "M9A-win-x86_64-*.zip"
           pick_files: '["resource", "interface.json"]'
-          exclude_files: '["resource/base/model/ocr/**"]'
+          exclude_files: '["*model/ocr/**"]'
           mirrorchyan_rid: M9A
 
           owner: MaaXYZ
