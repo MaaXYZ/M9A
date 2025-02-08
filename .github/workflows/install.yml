@@ -113,15 +113,31 @@ jobs:
           out-file-path: "deps"
           extract: true
 
+      - name: Download MFW
+        uses: robinraju/release-downloader@v1
+        with:
+          repository: overflow65537/MFW-PyQt6
+          fileName: "MFW-PyQt6-linux-${{ matrix.arch }}*"
+          latest: true
+          out-file-path: "install"
+          extract: true
+  
+
       - name: Install
         shell: bash
         run: |
           python ./install.py ${{ needs.meta.outputs.tag }}
 
+      - name: Install MFW
+        shell: bash
+        run: |
+          python ./deploy.py
+  
       - uses: actions/upload-artifact@v4
         with:
           name: M9A-linux-${{ matrix.arch }}
           path: "install"
+
 
   macos:
     needs: meta
@@ -145,11 +161,25 @@ jobs:
           out-file-path: "deps"
           extract: true
 
+      - name: Download MFW
+        uses: robinraju/release-downloader@v1
+        with:
+          repository: overflow65537/MFW-PyQt6
+          fileName: "MFW-PyQt6-macos-${{ matrix.arch }}*"
+          latest: true
+          out-file-path: "install"
+          extract: true
+    
+  
       - name: Install
         shell: bash
         run: |
           python ./install.py ${{ needs.meta.outputs.tag }}
 
+      - name: Install MFW
+        shell: bash
+        run: |
+          python ./deploy.py
       - uses: actions/upload-artifact@v4
         with:
           name: M9A-macos-${{ matrix.arch }}
