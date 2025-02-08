@@ -131,6 +131,7 @@ jobs:
       - name: Install MFW
         shell: bash
         run: |
+          rm install/MFW-PyQt6-linux-${{ matrix.arch }}*
           python ./deploy.py
   
       - uses: actions/upload-artifact@v4
@@ -179,6 +180,7 @@ jobs:
       - name: Install MFW
         shell: bash
         run: |
+          rm install/MFW-PyQt6-macos-${{ matrix.arch }}*
           python ./deploy.py
       - uses: actions/upload-artifact@v4
         with:
