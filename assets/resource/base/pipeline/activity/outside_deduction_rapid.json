@@ -210,6 +210,15 @@
         ],
         "only_rec": true,
         "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                215,
+                0,
+                315,
+                720
+            ]
+        },
         "next": [
             "ODR_Start_Teambuild_Confirm",
             "ODR_Start_AddChar_Confirm"
