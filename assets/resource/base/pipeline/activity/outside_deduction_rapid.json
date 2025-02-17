@@ -1274,6 +1274,7 @@
             "ODR_MainFlag"
         ],
         "interrupt": [
+            "ODR_ItemLose",
             "ODR_SkipText"
         ]
     },
@@ -1296,6 +1297,7 @@
             "ODR_MainFlag"
         ],
         "interrupt": [
+            "ODR_ItemLose",
             "ODR_SkipText"
         ]
     },
@@ -1318,6 +1320,7 @@
             "ODR_MainFlag"
         ],
         "interrupt": [
+            "ODR_ItemLose",
             "ODR_SkipText"
         ]
     },
@@ -1340,6 +1343,7 @@
             "ODR_MainFlag"
         ],
         "interrupt": [
+            "ODR_ItemLose",
             "ODR_SkipText"
         ]
     },
