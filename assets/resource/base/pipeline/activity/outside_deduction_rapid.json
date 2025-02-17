@@ -1451,11 +1451,11 @@
         ],
         "post_wait_freezes": {
             "time": 500,
-            "target_offset": [
-                -200,
-                -50,
-                200,
-                150
+            "target": [
+                0,
+                0,
+                800,
+                450
             ]
         },
         "action": "Click"
