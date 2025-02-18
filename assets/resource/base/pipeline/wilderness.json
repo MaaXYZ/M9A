@@ -3,8 +3,7 @@
         "next": [
             "EnterWilderness",
             "EnterProduct",
-            "CollectEXP",
-            "CollectMoney",
+            "EnterAncientHall",
             "CollectAwards",
             "CollectTrust",
             "TrustDialogueNext",
@@ -27,8 +26,7 @@
         "next": [
             "EnterWilderness",
             "EnterProduct",
-            "CollectEXP",
-            "CollectMoney",
+            "EnterAncientHall",
             "CollectAwards",
             "CollectTrust",
             "TrustDialogueNext",
@@ -38,58 +36,51 @@
             "HomeLoading"
         ]
     },
-    "CollectEXP": {
+    "EnterAncientHall": {
         "recognition": "OCR",
-        "expected": [
-            "微尘",
-            "钟楼"
-        ],
+        "expected": "古厅定位",
         "roi": [
-            422,
-            65,
-            218,
-            236
+            1168,
+            148,
+            86,
+            24
         ],
-        "target_offset": [
-            0,
-            -30,
-            0,
-            0
-        ],
+        "only_rec": true,
         "action": "Click",
-        "post_wait_freezes": 1,
         "next": [
-            "CollectMoney",
-            "CollectAwards",
-            "CollectTrust",
-            "TrustDialogueNext",
-            "TrustDialogueInteraction",
-            "HomeFlag"
+            "AncientHallFlag"
         ],
         "interrupt": [
-            "HomeButton"
+            "ClickAncientHall"
         ]
     },
-    "CollectMoney": {
+    "AncientHallFlag": {
         "recognition": "OCR",
-        "expected": [
-            "利齿",
-            "市集"
-        ],
+        "expected": "古厅",
         "roi": [
-            638,
-            6,
-            221,
-            232
+            843,
+            75,
+            55,
+            30
         ],
-        "target_offset": [
-            0,
-            -30,
-            0,
-            0
+        "only_rec": true,
+        "next": [
+            "NoExpMoney"
         ],
-        "action": "Click",
-        "post_wait_freezes": 1,
+        "interrupt": [
+            "CollectExpMoney"
+        ]
+    },
+    "NoExpMoney": {
+        "recognition": "OCR",
+        "expected": "^(100|[1-9]\\d?)%$",
+        "roi": [
+            1015,
+            162,
+            65,
+            312
+        ],
+        "inverse": true,
         "next": [
             "CollectAwards",
             "CollectTrust",
@@ -98,8 +89,48 @@
             "HomeFlag"
         ],
         "interrupt": [
-            "HomeButton"
+            "BackButtonWithDelay"
         ]
+    },
+    "CollectExpMoney": {
+        "recognition": "OCR",
+        "expected": "收取",
+        "roi": [
+            1106,
+            180,
+            110,
+            258
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                843,
+                0,
+                242,
+                719
+            ]
+        }
+    },
+    "ClickAncientHall": {
+        "recognition": "OCR",
+        "expected": "荒原古厅",
+        "roi": [
+            596,
+            93,
+            237,
+            172
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                843,
+                0,
+                242,
+                719
+            ]
+        }
     },
     "CollectAwards": {
         "recognition": "TemplateMatch",
@@ -119,6 +150,7 @@
         ],
         "interrupt": [
             "ObtainedAwards",
+            "BackButtonWithDelay",
             "HomeButton"
         ]
     },
@@ -141,6 +173,7 @@
         ],
         "interrupt": [
             "TestCritterTraining",
+            "BackButtonWithDelay",
             "HomeButton"
         ]
     },
@@ -177,6 +210,7 @@
             "HomeFlag"
         ],
         "interrupt": [
+            "BackButtonWithDelay",
             "HomeButton"
         ]
     },
@@ -196,6 +230,7 @@
             "HomeFlag"
         ],
         "interrupt": [
+            "BackButtonWithDelay",
             "HomeButton"
         ]
     },
@@ -215,6 +250,7 @@
             "HomeFlag"
         ],
         "interrupt": [
+            "BackButtonWithDelay",
             "HomeButton"
         ]
     },
@@ -237,7 +273,15 @@
             0
         ],
         "action": "Click",
-        "post_wait_freezes": 100,
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                0,
+                508,
+                622,
+                212
+            ]
+        },
         "next": [
             "CollectProduct",
             "AutoAssignCritters",
@@ -327,15 +371,14 @@
         "next": [
             "AutoAssignCritters",
             "AutoSelectComfirm",
-            "CollectEXP",
-            "CollectMoney",
+            "EnterAncientHall",
             "CollectAwards",
             "CollectTrust",
             "TrustDialogueNext",
             "TrustDialogueInteraction"
         ],
         "interrupt": [
-            "BackButton"
+            "BackButtonWithDelay"
         ]
     },
     "AutoAssignCritters": {
@@ -379,15 +422,14 @@
             8
         ],
         "next": [
-            "CollectEXP",
-            "CollectMoney",
+            "EnterAncientHall",
             "CollectAwards",
             "CollectTrust",
             "TrustDialogueNext",
             "TrustDialogueInteraction"
         ],
         "interrupt": [
-            "BackButton"
+            "BackButtonWithDelay"
         ]
     },
     "SummonlngSuccess": {
@@ -422,15 +464,14 @@
         ],
         "action": "Click",
         "next": [
-            "CollectEXP",
-            "CollectMoney",
+            "EnterAncientHall",
             "CollectAwards",
             "CollectTrust",
             "TrustDialogueNext",
             "TrustDialogueInteraction"
         ],
         "interrupt": [
-            "BackButton"
+            "BackButtonWithDelay"
         ]
     },
     "interrupt_SummonlngSuccessBack": {
