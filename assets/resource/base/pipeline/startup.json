@@ -255,6 +255,21 @@
         ],
         "action": "Click"
     },
+    "BackButtonWithDelay": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "StartUp/BackButton.png",
+            "StartUp/BackButton_White.png"
+        ],
+        "roi": [
+            0,
+            0,
+            134,
+            138
+        ],
+        "action": "Click",
+        "post_delay": 3000
+    },
     "Sub_BackButton": {
         "is_sub": true,
         "recognition": "TemplateMatch",
