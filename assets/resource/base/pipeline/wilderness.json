@@ -3,11 +3,8 @@
         "next": [
             "EnterWilderness",
             "EnterProduct",
-            "EnterAncientHall",
-            "CollectAwards",
-            "CollectTrust",
-            "TrustDialogueNext",
-            "TrustDialogueInteraction"
+            "EnterTrade",
+            "EnterAncientHall"
         ],
         "interrupt": [
             "ReturnMain"
@@ -26,14 +23,74 @@
         "next": [
             "EnterWilderness",
             "EnterProduct",
-            "EnterAncientHall",
-            "CollectAwards",
-            "CollectTrust",
-            "TrustDialogueNext",
-            "TrustDialogueInteraction"
+            "EnterTrade",
+            "EnterAncientHall"
         ],
         "interrupt": [
             "HomeLoading"
+        ]
+    },
+    "EnterTrade": {
+        "recognition": "OCR",
+        "expected": "交易",
+        "roi": [
+            264,
+            619,
+            318,
+            101
+        ],
+        "target_offset": [
+            0,
+            -30,
+            0,
+            0
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 1000,
+            "target": [
+                90,
+                223,
+                1082,
+                394
+            ]
+        },
+        "next": [
+            "Trade",
+            "TradeCompleted"
+        ]
+    },
+    "Trade": {
+        "recognition": "OCR",
+        "expected": "订单交付",
+        "roi": [
+            172,
+            553,
+            990,
+            81
+        ],
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "Trade",
+            "TradeCompleted"
+        ]
+    },
+    "TradeCompleted": {
+        "recognition": "OCR",
+        "expected": "批发交易",
+        "roi": [
+            713,
+            60,
+            108,
+            30
+        ],
+        "only_rec": true,
+        "next": [
+            "EnterAncientHall"
+        ],
+        "interrupt": [
+            "BackButtonWithDelay"
         ]
     },
     "EnterAncientHall": {
@@ -371,11 +428,8 @@
         "next": [
             "AutoAssignCritters",
             "AutoSelectComfirm",
-            "EnterAncientHall",
-            "CollectAwards",
-            "CollectTrust",
-            "TrustDialogueNext",
-            "TrustDialogueInteraction"
+            "EnterTrade",
+            "EnterAncientHall"
         ],
         "interrupt": [
             "BackButtonWithDelay"
@@ -422,11 +476,7 @@
             8
         ],
         "next": [
-            "EnterAncientHall",
-            "CollectAwards",
-            "CollectTrust",
-            "TrustDialogueNext",
-            "TrustDialogueInteraction"
+            "EnterAncientHall"
         ],
         "interrupt": [
             "BackButtonWithDelay"
@@ -464,11 +514,7 @@
         ],
         "action": "Click",
         "next": [
-            "EnterAncientHall",
-            "CollectAwards",
-            "CollectTrust",
-            "TrustDialogueNext",
-            "TrustDialogueInteraction"
+            "EnterAncientHall"
         ],
         "interrupt": [
             "BackButtonWithDelay"
