@@ -362,12 +362,85 @@
         "next": [
             "Sub_CollectDailyAwards",
             "WeeklyAwardsBadge",
+            "WeeklyAwardsCompleted",
             "HomeFlag"
         ],
         "interrupt": [
             "ObtainedAwards",
             "BackButton"
         ]
+    },
+    "WeeklyAwardsCompleted": {
+        "doc": "周任务完成，开始尝试获取显影罐",
+        "recognition": "OCR",
+        "expected": "已领取全部奖励",
+        "roi": [
+            156,
+            350,
+            211,
+            31
+        ],
+        "only_rec": true,
+        "next": [
+            "ShowFlag"
+        ],
+        "interrupt": [
+            "EnterTheShow",
+            "BackButton"
+        ]
+    },
+    "ShowFlag": {
+        "recognition": "OCR",
+        "expected": [
+            "故事",
+            "映像",
+            "轶事"
+        ],
+        "roi": [
+            80,
+            665,
+            318,
+            27
+        ],
+        "only_rec": true
+    },
+    "DevelopmentTank": {
+        "recognition": "OCR",
+        "expected": [
+            "映像",
+            "轶事"
+        ],
+        "roi": [
+            30,
+            615,
+            418,
+            105
+        ],
+        "action": "click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                203,
+                0,
+                851,
+                154
+            ]
+        },
+        "next": [
+            "FullDevelopmentTank",
+            "ObtainedAwards"
+        ]
+    },
+    "FullDevelopmentTank": {
+        "recognition": "OCR",
+        "expected": "5/5",
+        "roi": [
+            1135,
+            21,
+            40,
+            22
+        ],
+        "only_rec": true
     },
     "DailyAwardsPageFlag": {
         "recognition": "TemplateMatch",
