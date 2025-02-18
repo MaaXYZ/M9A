@@ -46,9 +46,23 @@
         ],
         "action": "Click",
         "next": [
-            "CollectMailAwards",
-            "Sub_MailBadge"
+            "CollectMailAwards"
+        ],
+        "interrupt": [
+            "MailBadge"
         ]
+    },
+    "MailBadge": {
+        "recognition": "TemplateMatch",
+        "template": "Awards/MailBadge.png",
+        "threshold": 0.97,
+        "roi": [
+            47,
+            115,
+            108,
+            108
+        ],
+        "action": "Click"
     },
     "CollectMailAwards": {
         "recognition": "TemplateMatch",
@@ -89,11 +103,212 @@
             163
         ],
         "next": [
+            "EquipmentOverflows",
             "HomeFlag"
         ],
         "interrupt": [
             "BackButton"
         ]
+    },
+    "EquipmentOverflows": {
+        "doc": "心相仓库已满",
+        "recognition": "OCR",
+        "expected": "仓库已满",
+        "roi": [
+            151,
+            97,
+            300,
+            504
+        ],
+        "next": [
+            "WareHouseFlag"
+        ],
+        "interrupt": [
+            "EnterWareHouse",
+            "BackButton"
+        ]
+    },
+    "WareHouseFlag": {
+        "recognition": "OCR",
+        "expected": [
+            "心相"
+        ],
+        "roi": [
+            27,
+            93,
+            162,
+            359
+        ],
+        "pre_wait_freezes": {
+            "time": 300,
+            "target": [
+                27,
+                93,
+                162,
+                359
+            ]
+        },
+        "action": "Click",
+        "next": [
+            "EnterDissociation",
+            "WareHouseFlag"
+        ]
+    },
+    "EnterDissociation": {
+        "recognition": "OCR",
+        "expected": "解离",
+        "roi": [
+            1008,
+            582,
+            214,
+            138
+        ],
+        "action": "Click",
+        "next": [
+            "Dissociation4StarFlag"
+        ],
+        "interrupt": [
+            "Dissociation4StarSelect",
+            "Dissociation3StarSelect"
+        ]
+    },
+    "Dissociation4StarFlag": {
+        "recognition": "OCR",
+        "expected": "4",
+        "roi": [
+            143,
+            650,
+            35,
+            22
+        ],
+        "only_rec": true,
+        "next": [
+            "DissociationFastInsertCompleted"
+        ],
+        "interrupt": [
+            "DissociationFastInsert"
+        ]
+    },
+    "DissociationFastInsertCompleted": {
+        "recognition": "ColorMatch",
+        "roi": [
+            978,
+            629,
+            215,
+            47
+        ],
+        "upper": [
+            223,
+            122,
+            74
+        ],
+        "lower": [
+            173,
+            72,
+            24
+        ],
+        "count": 20,
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "DissociationCompleted",
+            "DissociationFastInsertCompleted"
+        ],
+        "interrupt": [
+            "ObtainedAwards"
+        ]
+    },
+    "DissociationCompleted": {
+        "recognition": "ColorMatch",
+        "roi": [
+            978,
+            629,
+            215,
+            47
+        ],
+        "upper": [
+            141,
+            141,
+            141
+        ],
+        "lower": [
+            91,
+            91,
+            91
+        ],
+        "count": 20,
+        "next": [
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "HomeButton",
+            "BackButton"
+        ]
+    },
+    "DissociationFastInsert": {
+        "recognition": "OCR",
+        "expected": "快(.?)放入",
+        "roi": [
+            380,
+            650,
+            80,
+            24
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "Dissociation4StarSelect": {
+        "recognition": "OCR",
+        "expected": "4",
+        "roi": [
+            160,
+            608,
+            35,
+            22
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                68,
+                504,
+                316,
+                216
+            ]
+        }
+    },
+    "Dissociation3StarSelect": {
+        "recognition": "OCR",
+        "expected": "3",
+        "roi": [
+            143,
+            650,
+            35,
+            22
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                68,
+                504,
+                316,
+                216
+            ]
+        }
+    },
+    "EnterWareHouse": {
+        "recognition": "OCR",
+        "expected": "仓库",
+        "roi": [
+            4,
+            154,
+            149,
+            397
+        ],
+        "action": "Click"
     },
     "Sub_DailyBadge": {
         "is_sub": true,
