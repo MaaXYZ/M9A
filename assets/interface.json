@@ -3,11 +3,19 @@
     "url": "https://github.com/MaaXYZ/M9A",
     "mirrorchyan_rid": "M9A",
     "default_controller": "adb",
-    "lock_controller": true,
     "controller": [
         {
-            "name": "ADB 默认方式",
+            "name": "模拟器",
             "type": "Adb"
+        },
+        {
+            "name": "国际服 PC 端",
+            "type": "Win32",
+            "win32": {
+                "window_regex": "1999",
+                "input": 1,
+                "screencap": 2
+            }
         }
     ],
     "resource": [
