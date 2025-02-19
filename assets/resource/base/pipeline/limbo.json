@@ -35,8 +35,7 @@
                 121,
                 27
             ]
-        },
-        "post_wait_freezes_doc": "识别‘点击空白关闭’区域"
+        }
     },
     "ArtificialSleepwalkingAwards": {
         "doc": "人工梦游主界面，点击全部领取",
@@ -87,7 +86,15 @@
             162
         ],
         "action": "Click",
-        "post_wait_freezes": 500
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                0,
+                526,
+                1280,
+                194
+            ]
+        }
     },
     "LimboStageRightest": {
         "doc": "深眠域，点击最右侧的深眠片段",
@@ -108,7 +115,15 @@
             -120,
             50
         ],
-        "post_wait_freezes": 300,
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                0,
+                589,
+                369,
+                131
+            ]
+        },
         "next": [
             "LimboStageFlag",
             "LimboStageRightest"
