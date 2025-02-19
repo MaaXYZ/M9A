@@ -34,11 +34,12 @@
         "recognition": "OCR",
         "expected": "交易",
         "roi": [
-            264,
-            619,
-            318,
-            101
+            399,
+            670,
+            47,
+            24
         ],
+        "only_rec": true,
         "target_offset": [
             0,
             -30,
@@ -317,11 +318,12 @@
         "expected": [
             "生产"
         ],
+        "only_rec": true,
         "roi": [
-            238,
-            506,
-            191,
-            214
+            311,
+            670,
+            51,
+            25
         ],
         "target_offset": [
             0,
