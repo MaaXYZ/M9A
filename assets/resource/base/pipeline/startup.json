@@ -42,7 +42,7 @@
     },
     "Start1999": {
         "action": "StartApp",
-        "package": "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity"
+        "package": "com.shenlan.m.reverse1999/com.ssgame.mobile.gamesdk.frame.AppStartUpActivity --windowingMode 4"
     },
     "BluePochLogo": {
         "recognition": "TemplateMatch",
