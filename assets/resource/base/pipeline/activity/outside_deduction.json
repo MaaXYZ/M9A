@@ -179,7 +179,10 @@
         "next": [
             "SODStop_Confirm",
             "SODStop"
-        ]
+        ],
+        "focus": true,
+        "focus_tip": "本轮肉鸽结束",
+        "focus_tip_color": "tomato"
     },
     "SODStop_Confirm": {
         "recognition": "TemplateMatch",
@@ -365,7 +368,10 @@
         "next": [
             "SODStart_Confirm",
             "SODStart"
-        ]
+        ],
+        "focus": true,
+        "focus_tip": "开始本轮肉鸽",
+        "focus_tip_color": "tomato"
     },
     "SODStart_Confirm": {
         "recognition": "TemplateMatch",
