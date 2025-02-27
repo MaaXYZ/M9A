@@ -197,6 +197,27 @@
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
     },
+    "MainChapter_9": {
+        "doc": "主线第九章 疯癫与文明",
+        "next": [
+            "MainChapter_9Enter"
+        ],
+        "interrupt": [
+            "SwipeLeftForChapter"
+        ]
+    },
+    "MainChapter_9Enter": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/MainChapter_9Enter.png",
+        "roi": [
+            0,
+            90,
+            1280,
+            460
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
     "ResourceChapterLabel": {
         "recognition": "TemplateMatch",
         "template": "Combat/ResourceChapterLabel.png",
