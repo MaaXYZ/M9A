@@ -455,13 +455,17 @@
     "Sub_JukeboxBadge": {
         "is_sub": true,
         "recognition": "TemplateMatch",
-        "template": "Awards/JukeboxBadge.png",
+        "template": [
+            "Awards/JukeboxBadge1.png",
+            "Awards/JukeboxBadge2.png",
+            "Awards/JukeboxBadge3.png"
+        ],
         "threshold": 0.7,
         "roi": [
-            133,
-            0,
-            294,
-            216
+            154,
+            29,
+            383,
+            75
         ],
         "action": "Click",
         "post_delay": 1000,
