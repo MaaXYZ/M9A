@@ -149,7 +149,7 @@
         "作战关卡": {
             "cases": [
                 {
-                    "name": "啮咬盒：7-26 厄险 （效率1）",
+                    "name": "啮咬盒(床下怪物)：7-26 厄险 （效率1）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
@@ -166,7 +166,7 @@
                     }
                 },
                 {
-                    "name": "啮咬盒：5-19 厄险 （效率2）",
+                    "name": "啮咬盒(银光子弹)：5-19 厄险 （效率2）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
@@ -217,7 +217,7 @@
                     }
                 },
                 {
-                    "name": "盐封曼德拉：3-13 厄险（效率1）",
+                    "name": "盐封曼德拉(狂人絮语)：3-13 厄险（效率1）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_3"
@@ -234,7 +234,7 @@
                     }
                 },
                 {
-                    "name": "盐封曼德拉：8-17 厄险（效率2）",
+                    "name": "盐封曼德拉(不腐猴爪)：8-17 厄险（效率2）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_8"
@@ -336,7 +336,7 @@
                     }
                 },
                 {
-                    "name": "祝圣秘银：6-14 厄险（效率1，只刷）",
+                    "name": "祝圣秘银(幼龙骨标本)：6-14 厄险（效率1，只刷）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_6"
@@ -506,7 +506,7 @@
                     }
                 },
                 {
-                    "name": "翼造门匙：9-15 厄险（主线新增）",
+                    "name": "翼造门匙(微光蛾翼灯)：9-15 厄险（主线新增）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_9"
@@ -655,6 +655,40 @@
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "红漆泥板：9-1 厄险（主线新增）",
+                    "pipeline_override": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_9"
+                        },
+                        "TargetStageName": {
+                            "expected": [
+                                "01",
+                                "开篇"
+                            ]
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "红漆泥板：4-3 故事（主线新增）",
+                    "pipeline_override": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_4"
+                        },
+                        "TargetStageName": {
+                            "expected": [
+                                "03",
+                                "衣帽架"
+                            ]
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Story"
                         }
                     }
                 },
