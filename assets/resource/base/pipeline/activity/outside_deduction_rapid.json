@@ -18,7 +18,10 @@
             "ODR_Start_Difficulty_Confirm",
             "ODR_Start_Gift",
             "SOD_SwipeLeft"
-        ]
+        ],
+        "focus": true,
+        "focus_tip": "开启本轮速刷",
+        "focus_tip_color": "tomato"
     },
     "ODR_Start_Difficulty_Confirm": {
         "doc": "难度确认",

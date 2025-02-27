@@ -82,9 +82,10 @@
             "entry": "Limbo",
             "option": [
                 "上半编队",
-                "下半编队(不要和上半编队重复)",
+                "下半编队",
                 "仅领取每周浅眠域奖励"
-            ]
+            ],
+            "doc": "[size:15][color:tomato]注意上下半编队不要重复[/color][/size]"
         },
         {
             "name": "领取奖励",
@@ -94,22 +95,25 @@
             ]
         },
         {
-            "name": "轶事派遣（角色故事请自行阅读）",
+            "name": "轶事派遣",
             "entry": "Anecdote",
             "pipeline_override": {
                 "EnterTheActivityMain": {
                     "template_doc": "修改为当期活动入口的template",
                     "template": "Combat/Activity/ChinatownFilmsEnterTheShow.png"
                 }
-            }
+            },
+            "doc": "[size:15][color:tomato]1.请自行阅读角色故事后使用本功能[/color][/size]\n[size:15][color:tomato]2.请在当期轶事活动关闭后关闭本功能[/color][/size]"
         },
         {
-            "name": "雨中悬想：迷思海（“寻思”每周扫荡）",
-            "entry": "ReveriesInTheRain"
+            "name": "雨中悬想：迷思海",
+            "entry": "ReveriesInTheRain",
+            "doc": "[size:15][color:tomato]本功能仅完成“寻思”每周扫荡[/color][/size]"
         },
         {
             "name": "切换账号",
-            "entry": "SwitchAccount"
+            "entry": "SwitchAccount",
+            "doc": "[size:15][color:tomato]本功能仅会切换至最后一个账号（超过3个的账号会被忽略）[/color][/size]\n[size:15][color:tomato]切换后可继续添加任务，以便多账号多配置运行任务[/color][/size]"
         },
         {
             "name": "关闭游戏",
@@ -124,19 +128,21 @@
             ]
         },
         {
-            "name": "(测试中)推图模式（主线不可用，请先手动打开需要推图的页面，如当期活动、佚事等，然后再运行此任务）",
+            "name": "(测试中)推图模式",
             "entry": "StagePromotion_SwipeRightAndFindStage",
             "option": [
                 "体力不够自动吃糖"
-            ]
+            ],
+            "doc": "[size:15][color:tomato]本功能处于测试中，不保证正常运行。当前本功能主线不可用。[/color][/size]\n[size:15][color:tomato]使用时请先手动打开需要推图的页面，如当期活动、佚事等，然后再运行此任务[/color][/size]"
         },
         {
             "name": "局外演绎：黄昏的音序",
             "entry": "SeriesOfDusks",
             "option": [
-                "触媒选择(非速刷)",
-                "速刷第一层(需将“刻画生长-指引之歌”点满)"
-            ]
+                "触媒选择",
+                "速刷模式"
+            ],
+            "doc": "[size:15][color:darkgray]本功能有两种模式，触媒选择仅在非速刷模式生效，开启速刷模式后仅使用术式神灯刷取第一层[/color][/size]\n[size:18][color:black]速刷模式[/color][/size]\n[size:15][color:darkgray]1.使用前请先将`刻画生长-指引之歌`点满[/color][/size]\n[size:15][color:darkgray]2.请尽量调高难度等级(11难度达到最高效率)，以防止分数不够导致刷取信物失败[/color][/size]\n[size:18][color:black]非速刷模式[/color][/size]\n[size:15][color:darkgray]1.可在箱子里置顶(标记)四个角色出战[/color][/size]\n[size:15][color:darkgray]2.队伍推荐携带奶[/color][/size]\n[size:15][color:darkgray]3.M9A不能检查是否处于自动战斗状态，请自行进入[/color][/size]\n[size:15][color:orange]⚠更多详细说明请看文档[/color][/size]"
         }
     ],
     "option": {
@@ -1094,7 +1100,7 @@
                 }
             ]
         },
-        "下半编队(不要和上半编队重复)": {
+        "下半编队": {
             "cases": [
                 {
                     "name": "二",
@@ -1188,7 +1194,7 @@
                 }
             ]
         },
-        "触媒选择(非速刷)": {
+        "触媒选择": {
             "cases": [
                 {
                     "name": "术式神灯",
@@ -1252,7 +1258,7 @@
                 }
             ]
         },
-        "速刷第一层(需将“刻画生长-指引之歌”点满)": {
+        "速刷模式": {
             "cases": [
                 {
                     "name": "No",

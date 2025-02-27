@@ -478,6 +478,7 @@
             8
         ],
         "next": [
+            "EnterTrade",
             "EnterAncientHall"
         ],
         "interrupt": [
@@ -516,6 +517,7 @@
         ],
         "action": "Click",
         "next": [
+            "EnterTrade",
             "EnterAncientHall"
         ],
         "interrupt": [
