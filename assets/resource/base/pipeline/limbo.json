@@ -78,12 +78,15 @@
     "LimboEntry": {
         "doc": "人工梦游主界面，点击挑战，进入深眠域",
         "recognition": "TemplateMatch",
-        "template": "Limbo/LimboEntry.png",
+        "template": [
+            "Limbo/LimboEntry.png",
+            "Limbo/LimboEntryNew.png"
+        ],
         "roi": [
-            864,
-            393,
-            297,
-            162
+            230,
+            339,
+            949,
+            215
         ],
         "action": "Click",
         "post_wait_freezes": {
