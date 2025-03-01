@@ -1,0 +1,684 @@
+{
+    "Lucidscape": {
+        "doc": "醒梦域任务开始",
+        "next": [
+            "LucidscapeEnd",
+            "LucidscapeStageFlag",
+            "LucidscapeStageRightest"
+        ],
+        "interrupt": [
+            "LucidscapeEntry",
+            "ObtainedAwards",
+            "ArtificialSleepwalkingAwards",
+            "EnterTheShow",
+            "ClickBlank",
+            "ArtificialSleepwalking",
+            "ReturnMain"
+        ]
+    },
+    "LucidscapeEntry": {
+        "doc": "人工梦游主界面，点击挑战，进入醒梦域",
+        "recognition": "TemplateMatch",
+        "template": [
+            "Lucidscape/LucidscapeEntry.png"
+        ],
+        "roi": [
+            856,
+            413,
+            135,
+            53
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                0,
+                526,
+                1280,
+                194
+            ]
+        }
+    },
+    "LucidscapeStageRightest": {
+        "_doc": "(待修改）",
+        "doc": "醒梦域，点击最右侧的片段",
+        "recognition": "OCR",
+        "expected": [
+            "醒梦片段",
+            "醒"
+        ],
+        "roi": [
+            0,
+            112,
+            1280,
+            234
+        ],
+        "order_by": "Horizontal",
+        "index": -1,
+        "action": "Click",
+        "target_offset": [
+            80,
+            80,
+            -120,
+            50
+        ],
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                0,
+                589,
+                369,
+                131
+            ]
+        },
+        "next": [
+            "LucidscapeStageFlag",
+            "LucidscapeStageRightest"
+        ]
+    },
+    "LucidscapeStageFlag": {
+        "doc": "判断当前位于醒梦片段",
+        "recognition": "OCR",
+        "expected": "本层酬劳",
+        "roi": [
+            146,
+            676,
+            67,
+            21
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "LucidscapeStarsMainFlag",
+            "LucidscapeStageFlag"
+        ]
+    },
+    "LucidscapeStageFlag_AfterFailed": {
+        "doc": "判断当前位于醒梦片段(After Failed)",
+        "recognition": "OCR",
+        "expected": "本层酬劳",
+        "roi": [
+            146,
+            676,
+            67,
+            21
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "LucidscapeStarsMainFlag_AfterFailed",
+            "LucidscapeStageFlag_AfterFailed"
+        ]
+    },
+    "LucidscapeStarsMainFlag": {
+        "doc": "判断当前位于醒梦试验酬劳界面,查看是否有奖励未领取",
+        "recognition": "OCR",
+        "expected": "醒梦片段",
+        "roi": [
+            161,
+            96,
+            163,
+            43
+        ],
+        "only_rec": true,
+        "next": [
+            "LucidscapeStarsMainNoAwards"
+        ],
+        "interrupt": [
+            "LucidscapeStarsMainAwards",
+            "ObtainedAwards"
+        ]
+    },
+    "LucidscapeStarsMainFlag_AfterFailed": {
+        "doc": "判断当前位于醒梦试验酬劳界面(After Failed)",
+        "recognition": "OCR",
+        "expected": "醒梦片段",
+        "roi": [
+            161,
+            96,
+            163,
+            43
+        ],
+        "only_rec": true,
+        "next": [
+            "LucidscapeStarsMainNoAwards_AfterFailed"
+        ],
+        "interrupt": [
+            "LucidscapeStarsMainAwards",
+            "ObtainedAwards"
+        ]
+    },
+    "LucidscapeStarsMainNoAwards": {
+        "doc": "醒梦试验酬劳界面，没有奖励未领取",
+        "recognition": "OCR",
+        "expected": [
+            "已领取",
+            "未达成"
+        ],
+        "roi": [
+            1007,
+            204,
+            70,
+            28
+        ],
+        "only_rec": true,
+        "next": [
+            "LucidscapeStageFlag_up",
+            "LucidscapeStageFlag_down",
+            "LucidscapeStageFlag_failed"
+        ]
+    },
+    "LucidscapeStarsMainNoAwards_AfterFailed": {
+        "doc": "醒梦试验酬劳界面，没有奖励未领取(After Failed)",
+        "recognition": "OCR",
+        "expected": [
+            "已领取",
+            "未达成"
+        ],
+        "roi": [
+            1007,
+            204,
+            70,
+            28
+        ],
+        "only_rec": true,
+        "target": [
+            681,
+            707,
+            85,
+            43
+        ],
+        "action": "Click",
+        "next": [
+            "LucidscapeMain",
+            "LucidscapeStarsMainNoAwards_AfterFailed"
+        ]
+    },
+    "LucidscapeStarsMainAwards": {
+        "doc": "醒梦试验酬劳界面，点击全部领取/领取",
+        "recognition": "TemplateMatch",
+        "template": [
+            "Lucidscape/ObtainedAllAwards.png",
+            "Lucidscape/ObtainedAwards.png"
+        ],
+        "roi": [
+            941,
+            132,
+            205,
+            176
+        ],
+        "action": "Click",
+        "next": [
+            "LucidscapeStarsMainNoAwardsFlag",
+            "LucidscapeStarsMainAwards"
+        ],
+        "interrupt": [
+            "ObtainedAwards"
+        ]
+    },
+    "LucidscapeStarsMainNoAwardsFlag": {
+        "doc": "判断当前位于醒梦试验酬劳界面,奖励已领取完毕",
+        "recognition": "OCR",
+        "expected": [
+            "已领取",
+            "未达成"
+        ],
+        "roi": [
+            1007,
+            204,
+            70,
+            28
+        ],
+        "only_rec": true
+    },
+    "LucidscapeStageFlag_up": {
+        "_doc": "(待修改）",
+        "doc": "判断当前位于醒梦片段上半部分",
+        "recognition": "OCR",
+        "expected": "0/6",
+        "roi": [
+            1028,
+            101,
+            66,
+            36
+        ],
+        "only_rec": true,
+        "target": [
+            681,
+            654,
+            85,
+            43
+        ],
+        "action": "Click",
+        "next": [
+            "LucidscapeStageLightest_1",
+            "LucidscapeStarsMainFlag"
+        ]
+    },
+    "LucidscapeStageFlag_down": {
+        "__doc": "(待修改）",
+        "doc": "判断当前位于醒梦片段下半部分，未开始战斗/已完成战斗",
+        "_doc": "虽有上下半共3星的情况，考虑到一般情况下不会进入上下已通过（且未满星）醒梦片段再运行m9a，而在外该醒梦片段上下半通过便会解锁新的醒梦，执行时不会进入该醒梦，故此时识别的3星可视为上半3星，即下半战斗未开始状态",
+        "recognition": "OCR",
+        "expected": "[36]/6",
+        "roi": [
+            1028,
+            101,
+            66,
+            36
+        ],
+        "only_rec": true,
+        "target": [
+            681,
+            707,
+            85,
+            43
+        ],
+        "action": "Click",
+        "next": [
+            "LucidscapeStageLightest_2",
+            "LucidscapeFinish",
+            "LucidscapeStarsMainFlag"
+        ]
+    },
+    "LucidscapeStageFlag_failed": {
+        "___doc": "(待修改）",
+        "doc": "判断当前位于醒梦片段上半部分未满星，结束任务",
+        "_doc": "经测试，上下半各一星时，会解锁下一醒梦",
+        "__doc": "参考LucidscapeStageFlag_down _doc，虽已确定不会出现检测到[45]/6的情况，但为了以防万一，还是决定加上该情况的识别",
+        "todo_doc": "后续可在这里添加重打当前醒梦片段的操作",
+        "recognition": "OCR",
+        "expected": "[1245]/6",
+        "roi": [
+            1028,
+            101,
+            66,
+            36
+        ],
+        "only_rec": true,
+        "target": [
+            681,
+            707,
+            85,
+            43
+        ],
+        "action": "Click",
+        "next": [
+            "LucidscapeMain",
+            "LucidscapeStageFlag_failed"
+        ]
+    },
+    "LucidscapeStageLightest_1": {
+        "doc": "最靓的位置，要多点几次",
+        "recognition": "TemplateMatch",
+        "template": "Lucidscape/LucidscapeStageLightest_1.png",
+        "threshold": 0.9,
+        "roi": [
+            285,
+            359,
+            73,
+            87
+        ],
+        "action": "Click",
+        "next": [
+            "LucidscapeActionFlag_1",
+            "LucidscapeStageLightest_1"
+        ]
+    },
+    "LucidscapeActionFlag_1": {
+        "doc": "进入醒梦战斗",
+        "recognition": "OCR",
+        "expected": "开始行动",
+        "roi": [
+            988,
+            566,
+            256,
+            154
+        ],
+        "next": [
+            "LucidscapeTeamSelection_1",
+            "LucidscapeActionFlag_1"
+        ]
+    },
+    "LucidscapeTeamSelection_1": {
+        "doc": "醒梦，选择队伍1，列表未展开",
+        "recognition": "TemplateMatch",
+        "template": "Lucidscape/LucidscapeTeamList_Off.png",
+        "threshold": 0.9,
+        "roi": [
+            940,
+            631,
+            48,
+            48
+        ],
+        "action": "Click",
+        "next": [
+            "LucidscapeTeamSelection_11",
+            "LucidscapeTeamSelection_1"
+        ]
+    },
+    "LucidscapeTeamSelection_11": {
+        "doc": "醒梦，选择队伍1，列表已展开，选择队伍1",
+        "recognition": "TemplateMatch",
+        "template": "Lucidscape/LucidscapeTeamList_Open.png",
+        "threshold": 0.9,
+        "roi": [
+            940,
+            631,
+            48,
+            48
+        ],
+        "action": "Click",
+        "target": [
+            799,
+            404,
+            127,
+            32
+        ],
+        "next": [
+            "LucidscapeAction_1",
+            "LucidscapeTeamSelection_11"
+        ]
+    },
+    "LucidscapeAction_1": {
+        "recognition": "OCR",
+        "expected": "开始行动",
+        "roi": [
+            988,
+            566,
+            256,
+            154
+        ],
+        "timeout": 2000000,
+        "action": "Click",
+        "next": [
+            "LucidscapeFailed",
+            "LucidscapeVictory_1",
+            "LucidscapeAction_1"
+        ],
+        "rate_limit": 5000
+    },
+    "LucidscapeFailed": {
+        "doc": "醒梦战斗失败",
+        "recognition": "OCR",
+        "expected": [
+            "战斗失败"
+        ],
+        "roi": [
+            490,
+            115,
+            289,
+            78
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "LucidscapeStageFlag_AfterFailed",
+            "LucidscapeFailed"
+        ]
+    },
+    "LucidscapeVictory_1": {
+        "doc": "醒梦战斗成功_1",
+        "recognition": "OCR",
+        "expected": [
+            "战斗胜利"
+        ],
+        "roi": [
+            678,
+            10,
+            473,
+            240
+        ],
+        "action": "Click",
+        "next": [
+            "LucidscapeVictory_1",
+            "LucidscapeStageLightest_2"
+        ]
+    },
+    "LucidscapeStageLightest_2": {
+        "doc": "最靓的位置，要多点几次",
+        "recognition": "TemplateMatch",
+        "template": "Lucidscape/LucidscapeStageLightest_2.png",
+        "threshold": 0.9,
+        "roi": [
+            961,
+            247,
+            69,
+            144
+        ],
+        "action": "Click",
+        "next": [
+            "LucidscapeActionFlag_2",
+            "LucidscapeStageLightest_2"
+        ]
+    },
+    "LucidscapeActionFlag_2": {
+        "recognition": "OCR",
+        "expected": "开始行动",
+        "roi": [
+            988,
+            566,
+            256,
+            154
+        ],
+        "next": [
+            "LucidscapeTeamSelection_2",
+            "LucidscapeActionFlag_2"
+        ]
+    },
+    "LucidscapeTeamSelection_2": {
+        "recognition": "TemplateMatch",
+        "template": "Lucidscape/LucidscapeTeamList_Off.png",
+        "threshold": 0.9,
+        "roi": [
+            940,
+            631,
+            48,
+            48
+        ],
+        "action": "Click",
+        "next": [
+            "LucidscapeTeamSelection_22",
+            "LucidscapeTeamSelection_2"
+        ]
+    },
+    "LucidscapeTeamSelection_22": {
+        "recognition": "TemplateMatch",
+        "template": "Lucidscape/LucidscapeTeamList_Open.png",
+        "threshold": 0.9,
+        "roi": [
+            940,
+            631,
+            48,
+            48
+        ],
+        "action": "Click",
+        "target": [
+            798,
+            463,
+            128,
+            33
+        ],
+        "next": [
+            "LucidscapeAction_2",
+            "LucidscapeTeamSelection_22"
+        ]
+    },
+    "LucidscapeAction_2": {
+        "recognition": "OCR",
+        "expected": "开始行动",
+        "roi": [
+            988,
+            566,
+            256,
+            154
+        ],
+        "timeout": 2000000,
+        "action": "Click",
+        "next": [
+            "LucidscapeFailed",
+            "LucidscapeVictory_2",
+            "LucidscapeAction_2"
+        ],
+        "rate_limit": 5000
+    },
+    "LucidscapeVictory_2": {
+        "doc": "醒梦下半完成时，先判断是否有finish，有则继续下面的操作，否则直接结束任务",
+        "recognition": "OCR",
+        "expected": [
+            "战斗胜利"
+        ],
+        "roi": [
+            678,
+            10,
+            473,
+            240
+        ],
+        "action": "Click",
+        "next": [
+            "LucidscapeMain",
+            "LucidscapeVictory_2"
+        ]
+    },
+    "LucidscapeMain": {
+        "doc": "醒梦片段主界面",
+        "recognition": "OCR",
+        "expected": "本层酬劳",
+        "roi": [
+            146,
+            676,
+            67,
+            21
+        ],
+        "only_rec": true,
+        "next": [
+            "LucidscapeFinish",
+            "Stop"
+        ]
+    },
+    "LucidscapeFinish": {
+        "doc": "当前醒梦片段战斗完成",
+        "recognition": "TemplateMatch",
+        "template": "Lucidscape/LucidscapeFinish.png",
+        "roi": [
+            400,
+            199,
+            569,
+            354
+        ],
+        "green_mask": true,
+        "action": "Click",
+        "next": [
+            "LucidscapeAwards",
+            "LucidscapeNoAwards"
+        ]
+    },
+    "LucidscapeNoAwards": {
+        "doc": "当前醒梦片段战斗无未领取奖励",
+        "next": [
+            "LucidscapeEnd",
+            "LucidscapeStageRightest"
+        ],
+        "interrupt": [
+            "BackButtonForLucidscape"
+        ]
+    },
+    "BackButtonForLucidscape": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "StartUp/BackButton.png",
+            "StartUp/BackButton_White.png"
+        ],
+        "roi": [
+            0,
+            0,
+            134,
+            138
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                0,
+                527,
+                1280,
+                193
+            ]
+        }
+    },
+    "LucidscapeAwards": {
+        "doc": "醒梦片段，存在本层酬劳",
+        "recognition": "TemplateMatch",
+        "template": "Lucidscape/LucidscapeAwards.png",
+        "roi": [
+            139,
+            589,
+            109,
+            110
+        ],
+        "green_mask": true,
+        "action": "Click",
+        "next": [
+            "LucidscapeObtainedAwards_1"
+        ]
+    },
+    "LucidscapeObtainedAwards_1": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Lucidscape/ObtainedAllAwards.png",
+            "Lucidscape/ObtainedAwards.png"
+        ],
+        "roi": [
+            941,
+            132,
+            205,
+            176
+        ],
+        "action": "Click",
+        "next": [
+            "LucidscapeObtainedAwards_2"
+        ],
+        "interrupt": [
+            "ObtainedAwards"
+        ]
+    },
+    "LucidscapeObtainedAwards_2": {
+        "recognition": "OCR",
+        "expected": "醒梦片段",
+        "roi": [
+            104,
+            36,
+            358,
+            157
+        ],
+        "action": "Click",
+        "target": [
+            20,
+            20,
+            20,
+            20
+        ],
+        "next": [
+            "LucidscapeEnd",
+            "LucidscapeStageRightest",
+            "LucidscapeObtainedAwards_2"
+        ],
+        "interrupt": [
+            "ObtainedAwards",
+            "BackButtonForLucidscape"
+        ]
+    },
+    "LucidscapeEnd": {
+        "doc": "醒梦片段·Ⅵ进度100%，任务结束",
+        "recognition": "TemplateMatch",
+        "template": "Lucidscape/LucidscapeEnd.png",
+        "threshold": 0.85,
+        "roi": [
+            961,
+            403,
+            151,
+            34
+        ],
+        "next": []
+    }
+}
