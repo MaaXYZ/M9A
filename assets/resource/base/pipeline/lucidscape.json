@@ -1,13 +1,13 @@
 {
-    "Limbo": {
-        "doc": "深眠任务开始",
+    "Lucidscape": {
+        "doc": "醒梦域任务开始",
         "next": [
-            "LimboEnd",
-            "LimboStageFlag",
-            "LimboStageRightest"
+            "LucidscapeEnd",
+            "LucidscapeStageFlag",
+            "LucidscapeStageRightest"
         ],
         "interrupt": [
-            "LimboEntry",
+            "LucidscapeEntry",
             "ObtainedAwards",
             "ArtificialSleepwalkingAwards",
             "EnterTheShow",
@@ -16,77 +16,17 @@
             "ReturnMain"
         ]
     },
-    "ArtificialSleepwalking": {
-        "doc": "入场后，进入人工梦游",
-        "recognition": "OCR",
-        "expected": "人工梦游",
-        "roi": [
-            0,
-            550,
-            1280,
-            170
-        ],
-        "action": "Click",
-        "post_wait_freezes": {
-            "time": 300,
-            "target": [
-                569,
-                660,
-                121,
-                27
-            ]
-        }
-    },
-    "ArtificialSleepwalkingAwards": {
-        "doc": "人工梦游主界面，点击全部领取",
-        "recognition": "TemplateMatch",
-        "template": "Limbo/ArtificialSleepwalkingAwards.png",
-        "roi": [
-            937,
-            463,
-            214,
-            189
-        ],
-        "action": "Click"
-    },
-    "ClickBlank": {
-        "doc": "点击空白关闭",
-        "recognition": "OCR",
-        "expected": [
-            "点击",
-            "空白",
-            "关闭"
-        ],
-        "roi": [
-            569,
-            660,
-            121,
-            27
-        ],
-        "only_rec": true,
-        "action": "Click",
-        "post_wait_freezes": {
-            "time": 300,
-            "target": [
-                99,
-                480,
-                1068,
-                197
-            ]
-        }
-    },
-    "LimboEntry": {
-        "doc": "人工梦游主界面，点击挑战，进入深眠域",
+    "LucidscapeEntry": {
+        "doc": "人工梦游主界面，点击挑战，进入醒梦域",
         "recognition": "TemplateMatch",
         "template": [
-            "Limbo/LimboEntry.png",
-            "Limbo/LimboEntryNew.png"
+            "Lucidscape/LucidscapeEntry.png"
         ],
         "roi": [
-            230,
-            339,
-            949,
-            215
+            856,
+            413,
+            135,
+            53
         ],
         "action": "Click",
         "post_wait_freezes": {
@@ -99,10 +39,14 @@
             ]
         }
     },
-    "LimboStageRightest": {
-        "doc": "深眠域，点击最右侧的深眠片段",
+    "LucidscapeStageRightest": {
+        "_doc": "(待修改）",
+        "doc": "醒梦域，点击最右侧的片段",
         "recognition": "OCR",
-        "expected": "深眠片段",
+        "expected": [
+            "醒梦片段",
+            "醒"
+        ],
         "roi": [
             0,
             112,
@@ -128,12 +72,12 @@
             ]
         },
         "next": [
-            "LimboStageFlag",
-            "LimboStageRightest"
+            "LucidscapeStageFlag",
+            "LucidscapeStageRightest"
         ]
     },
-    "LimboStageFlag": {
-        "doc": "判断当前位于深眠片段",
+    "LucidscapeStageFlag": {
+        "doc": "判断当前位于醒梦片段",
         "recognition": "OCR",
         "expected": "本层酬劳",
         "roi": [
@@ -145,12 +89,12 @@
         "only_rec": true,
         "action": "Click",
         "next": [
-            "LimboStarsMainFlag",
-            "LimboStageFlag"
+            "LucidscapeStarsMainFlag",
+            "LucidscapeStageFlag"
         ]
     },
-    "LimboStageFlag_AfterFailed": {
-        "doc": "判断当前位于深眠片段(After Failed)",
+    "LucidscapeStageFlag_AfterFailed": {
+        "doc": "判断当前位于醒梦片段(After Failed)",
         "recognition": "OCR",
         "expected": "本层酬劳",
         "roi": [
@@ -162,14 +106,14 @@
         "only_rec": true,
         "action": "Click",
         "next": [
-            "LimboStarsMainFlag_AfterFailed",
-            "LimboStageFlag_AfterFailed"
+            "LucidscapeStarsMainFlag_AfterFailed",
+            "LucidscapeStageFlag_AfterFailed"
         ]
     },
-    "LimboStarsMainFlag": {
-        "doc": "判断当前位于深眠试验酬劳界面,查看是否有奖励未领取",
+    "LucidscapeStarsMainFlag": {
+        "doc": "判断当前位于醒梦试验酬劳界面,查看是否有奖励未领取",
         "recognition": "OCR",
-        "expected": "深眠试验",
+        "expected": "醒梦片段",
         "roi": [
             161,
             96,
@@ -178,17 +122,17 @@
         ],
         "only_rec": true,
         "next": [
-            "LimboStarsMainNoAwards"
+            "LucidscapeStarsMainNoAwards"
         ],
         "interrupt": [
-            "LimboStarsMainAwards",
+            "LucidscapeStarsMainAwards",
             "ObtainedAwards"
         ]
     },
-    "LimboStarsMainFlag_AfterFailed": {
-        "doc": "判断当前位于深眠试验酬劳界面(After Failed)",
+    "LucidscapeStarsMainFlag_AfterFailed": {
+        "doc": "判断当前位于醒梦试验酬劳界面(After Failed)",
         "recognition": "OCR",
-        "expected": "深眠试验",
+        "expected": "醒梦片段",
         "roi": [
             161,
             96,
@@ -197,15 +141,15 @@
         ],
         "only_rec": true,
         "next": [
-            "LimboStarsMainNoAwards_AfterFailed"
+            "LucidscapeStarsMainNoAwards_AfterFailed"
         ],
         "interrupt": [
-            "LimboStarsMainAwards",
+            "LucidscapeStarsMainAwards",
             "ObtainedAwards"
         ]
     },
-    "LimboStarsMainNoAwards": {
-        "doc": "深眠试验酬劳界面，没有奖励未领取",
+    "LucidscapeStarsMainNoAwards": {
+        "doc": "醒梦试验酬劳界面，没有奖励未领取",
         "recognition": "OCR",
         "expected": [
             "已领取",
@@ -219,13 +163,13 @@
         ],
         "only_rec": true,
         "next": [
-            "LimboStageFlag_up",
-            "LimboStageFlag_down",
-            "LimboStageFlag_failed"
+            "LucidscapeStageFlag_up",
+            "LucidscapeStageFlag_down",
+            "LucidscapeStageFlag_failed"
         ]
     },
-    "LimboStarsMainNoAwards_AfterFailed": {
-        "doc": "深眠试验酬劳界面，没有奖励未领取(After Failed)",
+    "LucidscapeStarsMainNoAwards_AfterFailed": {
+        "doc": "醒梦试验酬劳界面，没有奖励未领取(After Failed)",
         "recognition": "OCR",
         "expected": [
             "已领取",
@@ -246,16 +190,16 @@
         ],
         "action": "Click",
         "next": [
-            "LimboMain",
-            "LimboStarsMainNoAwards_AfterFailed"
+            "LucidscapeMain",
+            "LucidscapeStarsMainNoAwards_AfterFailed"
         ]
     },
-    "LimboStarsMainAwards": {
-        "doc": "深眠试验酬劳界面，点击全部领取/领取",
+    "LucidscapeStarsMainAwards": {
+        "doc": "醒梦试验酬劳界面，点击全部领取/领取",
         "recognition": "TemplateMatch",
         "template": [
-            "Limbo/ObtainedAllAwards.png",
-            "Limbo/ObtainedAwards.png"
+            "Lucidscape/ObtainedAllAwards.png",
+            "Lucidscape/ObtainedAwards.png"
         ],
         "roi": [
             941,
@@ -265,15 +209,15 @@
         ],
         "action": "Click",
         "next": [
-            "LimboStarsMainNoAwardsFlag",
-            "LimboStarsMainAwards"
+            "LucidscapeStarsMainNoAwardsFlag",
+            "LucidscapeStarsMainAwards"
         ],
         "interrupt": [
             "ObtainedAwards"
         ]
     },
-    "LimboStarsMainNoAwardsFlag": {
-        "doc": "判断当前位于深眠试验酬劳界面,奖励已领取完毕",
+    "LucidscapeStarsMainNoAwardsFlag": {
+        "doc": "判断当前位于醒梦试验酬劳界面,奖励已领取完毕",
         "recognition": "OCR",
         "expected": [
             "已领取",
@@ -287,8 +231,9 @@
         ],
         "only_rec": true
     },
-    "LimboStageFlag_up": {
-        "doc": "判断当前位于深眠片段上半部分",
+    "LucidscapeStageFlag_up": {
+        "_doc": "(待修改）",
+        "doc": "判断当前位于醒梦片段上半部分",
         "recognition": "OCR",
         "expected": "0/6",
         "roi": [
@@ -306,13 +251,14 @@
         ],
         "action": "Click",
         "next": [
-            "LimboStageLightest_1",
-            "LimboStarsMainFlag"
+            "LucidscapeStageLightest_1",
+            "LucidscapeStarsMainFlag"
         ]
     },
-    "LimboStageFlag_down": {
-        "doc": "判断当前位于深眠片段下半部分，未开始战斗/已完成战斗",
-        "_doc": "虽有上下半共3星的情况，考虑到一般情况下不会进入上下已通过（且未满星）深眠片段再运行m9a，而在外该深眠片段上下半通过便会解锁新的深眠，执行时不会进入该深眠，故此时识别的3星可视为上半3星，即下半战斗未开始状态",
+    "LucidscapeStageFlag_down": {
+        "__doc": "(待修改）",
+        "doc": "判断当前位于醒梦片段下半部分，未开始战斗/已完成战斗",
+        "_doc": "虽有上下半共3星的情况，考虑到一般情况下不会进入上下已通过（且未满星）醒梦片段再运行m9a，而在外该醒梦片段上下半通过便会解锁新的醒梦，执行时不会进入该醒梦，故此时识别的3星可视为上半3星，即下半战斗未开始状态",
         "recognition": "OCR",
         "expected": "[36]/6",
         "roi": [
@@ -330,16 +276,17 @@
         ],
         "action": "Click",
         "next": [
-            "LimboStageLightest_2",
-            "LimboFinish",
-            "LimboStarsMainFlag"
+            "LucidscapeStageLightest_2",
+            "LucidscapeFinish",
+            "LucidscapeStarsMainFlag"
         ]
     },
-    "LimboStageFlag_failed": {
-        "doc": "判断当前位于深眠片段上半部分未满星，结束任务",
-        "_doc": "经测试，上下半各一星时，会解锁下一深眠",
-        "__doc": "参考LimboStageFlag_down _doc，虽已确定不会出现检测到[45]/6的情况，但为了以防万一，还是决定加上该情况的识别",
-        "todo_doc": "后续可在这里添加重打当前深眠片段的操作",
+    "LucidscapeStageFlag_failed": {
+        "___doc": "(待修改）",
+        "doc": "判断当前位于醒梦片段上半部分未满星，结束任务",
+        "_doc": "经测试，上下半各一星时，会解锁下一醒梦",
+        "__doc": "参考LucidscapeStageFlag_down _doc，虽已确定不会出现检测到[45]/6的情况，但为了以防万一，还是决定加上该情况的识别",
+        "todo_doc": "后续可在这里添加重打当前醒梦片段的操作",
         "recognition": "OCR",
         "expected": "[1245]/6",
         "roi": [
@@ -357,48 +304,29 @@
         ],
         "action": "Click",
         "next": [
-            "LimboMain",
-            "LimboStageFlag_failed"
+            "LucidscapeMain",
+            "LucidscapeStageFlag_failed"
         ]
     },
-    "LimboStageLightest_1": {
+    "LucidscapeStageLightest_1": {
         "doc": "最靓的位置，要多点几次",
-        "recognition": "NeuralNetworkDetect",
-        "model": "LimbDetection.onnx",
-        "expected": 0,
-        "action": "Click",
-        "next": [
-            "LimboActionFlag_1",
-            "LimboStageLightest_1"
-        ]
-    },
-    "LimboStageLightest_1_存档": {
-        "doc": "最靓的位置，要多点几次",
-        "recognition": "ColorMatch",
-        "method": 6,
+        "recognition": "TemplateMatch",
+        "template": "Lucidscape/LucidscapeStageLightest_1.png",
+        "threshold": 0.9,
         "roi": [
-            0,
-            70,
-            1280,
-            560
+            285,
+            359,
+            73,
+            87
         ],
-        "lower": [
-            200
-        ],
-        "upper": [
-            255
-        ],
-        "order_by": "Random",
-        "connected": true,
-        "count": 10,
         "action": "Click",
         "next": [
-            "LimboActionFlag_1",
-            "LimboStageLightest_1"
+            "LucidscapeActionFlag_1",
+            "LucidscapeStageLightest_1"
         ]
     },
-    "LimboActionFlag_1": {
-        "doc": "进入深眠战斗",
+    "LucidscapeActionFlag_1": {
+        "doc": "进入醒梦战斗",
         "recognition": "OCR",
         "expected": "开始行动",
         "roi": [
@@ -408,14 +336,14 @@
             154
         ],
         "next": [
-            "LimboTeamSelection_1",
-            "LimboActionFlag_1"
+            "LucidscapeTeamSelection_1",
+            "LucidscapeActionFlag_1"
         ]
     },
-    "LimboTeamSelection_1": {
-        "doc": "深眠，选择队伍1，列表未展开",
+    "LucidscapeTeamSelection_1": {
+        "doc": "醒梦，选择队伍1，列表未展开",
         "recognition": "TemplateMatch",
-        "template": "Limbo/LimboTeamList_Off.png",
+        "template": "Lucidscape/LucidscapeTeamList_Off.png",
         "threshold": 0.9,
         "roi": [
             940,
@@ -425,14 +353,14 @@
         ],
         "action": "Click",
         "next": [
-            "LimboTeamSelection_11",
-            "LimboTeamSelection_1"
+            "LucidscapeTeamSelection_11",
+            "LucidscapeTeamSelection_1"
         ]
     },
-    "LimboTeamSelection_11": {
-        "doc": "深眠，选择队伍1，列表已展开，选择队伍1",
+    "LucidscapeTeamSelection_11": {
+        "doc": "醒梦，选择队伍1，列表已展开，选择队伍1",
         "recognition": "TemplateMatch",
-        "template": "Limbo/LimboTeamList_Open.png",
+        "template": "Lucidscape/LucidscapeTeamList_Open.png",
         "threshold": 0.9,
         "roi": [
             940,
@@ -448,11 +376,11 @@
             32
         ],
         "next": [
-            "LimboAction_1",
-            "LimboTeamSelection_11"
+            "LucidscapeAction_1",
+            "LucidscapeTeamSelection_11"
         ]
     },
-    "LimboAction_1": {
+    "LucidscapeAction_1": {
         "recognition": "OCR",
         "expected": "开始行动",
         "roi": [
@@ -464,14 +392,14 @@
         "timeout": 2000000,
         "action": "Click",
         "next": [
-            "LimboFailed",
-            "LimboVictory_1",
-            "LimboAction_1"
+            "LucidscapeFailed",
+            "LucidscapeVictory_1",
+            "LucidscapeAction_1"
         ],
         "rate_limit": 5000
     },
-    "LimboFailed": {
-        "doc": "深眠战斗失败",
+    "LucidscapeFailed": {
+        "doc": "醒梦战斗失败",
         "recognition": "OCR",
         "expected": [
             "战斗失败"
@@ -485,12 +413,12 @@
         "only_rec": true,
         "action": "Click",
         "next": [
-            "LimboStageFlag_AfterFailed",
-            "LimboFailed"
+            "LucidscapeStageFlag_AfterFailed",
+            "LucidscapeFailed"
         ]
     },
-    "LimboVictory_1": {
-        "doc": "深眠战斗成功_1",
+    "LucidscapeVictory_1": {
+        "doc": "醒梦战斗成功_1",
         "recognition": "OCR",
         "expected": [
             "战斗胜利"
@@ -503,47 +431,28 @@
         ],
         "action": "Click",
         "next": [
-            "LimboVictory_1",
-            "LimboStageLightest_2"
+            "LucidscapeVictory_1",
+            "LucidscapeStageLightest_2"
         ]
     },
-    "LimboStageLightest_2": {
+    "LucidscapeStageLightest_2": {
         "doc": "最靓的位置，要多点几次",
-        "recognition": "NeuralNetworkDetect",
-        "model": "LimbDetection.onnx",
-        "expected": 0,
-        "action": "Click",
-        "next": [
-            "LimboActionFlag_2",
-            "LimboStageLightest_2"
-        ]
-    },
-    "LimboStageLightest_2_存档": {
-        "doc": "最靓的位置，要多点几次",
-        "recognition": "ColorMatch",
-        "method": 6,
+        "recognition": "TemplateMatch",
+        "template": "Lucidscape/LucidscapeStageLightest_2.png",
+        "threshold": 0.9,
         "roi": [
-            0,
-            70,
-            1280,
-            560
+            961,
+            247,
+            69,
+            144
         ],
-        "lower": [
-            200
-        ],
-        "upper": [
-            255
-        ],
-        "order_by": "Random",
-        "connected": true,
-        "count": 10,
         "action": "Click",
         "next": [
-            "LimboActionFlag_2",
-            "LimboStageLightest_2"
+            "LucidscapeActionFlag_2",
+            "LucidscapeStageLightest_2"
         ]
     },
-    "LimboActionFlag_2": {
+    "LucidscapeActionFlag_2": {
         "recognition": "OCR",
         "expected": "开始行动",
         "roi": [
@@ -553,13 +462,13 @@
             154
         ],
         "next": [
-            "LimboTeamSelection_2",
-            "LimboActionFlag_2"
+            "LucidscapeTeamSelection_2",
+            "LucidscapeActionFlag_2"
         ]
     },
-    "LimboTeamSelection_2": {
+    "LucidscapeTeamSelection_2": {
         "recognition": "TemplateMatch",
-        "template": "Limbo/LimboTeamList_Off.png",
+        "template": "Lucidscape/LucidscapeTeamList_Off.png",
         "threshold": 0.9,
         "roi": [
             940,
@@ -569,13 +478,13 @@
         ],
         "action": "Click",
         "next": [
-            "LimboTeamSelection_22",
-            "LimboTeamSelection_2"
+            "LucidscapeTeamSelection_22",
+            "LucidscapeTeamSelection_2"
         ]
     },
-    "LimboTeamSelection_22": {
+    "LucidscapeTeamSelection_22": {
         "recognition": "TemplateMatch",
-        "template": "Limbo/LimboTeamList_Open.png",
+        "template": "Lucidscape/LucidscapeTeamList_Open.png",
         "threshold": 0.9,
         "roi": [
             940,
@@ -591,11 +500,11 @@
             33
         ],
         "next": [
-            "LimboAction_2",
-            "LimboTeamSelection_22"
+            "LucidscapeAction_2",
+            "LucidscapeTeamSelection_22"
         ]
     },
-    "LimboAction_2": {
+    "LucidscapeAction_2": {
         "recognition": "OCR",
         "expected": "开始行动",
         "roi": [
@@ -607,14 +516,14 @@
         "timeout": 2000000,
         "action": "Click",
         "next": [
-            "LimboFailed",
-            "LimboVictory_2",
-            "LimboAction_2"
+            "LucidscapeFailed",
+            "LucidscapeVictory_2",
+            "LucidscapeAction_2"
         ],
         "rate_limit": 5000
     },
-    "LimboVictory_2": {
-        "doc": "深眠下半完成时，先判断是否有finish，有则继续下面的操作，否则直接结束任务",
+    "LucidscapeVictory_2": {
+        "doc": "醒梦下半完成时，先判断是否有finish，有则继续下面的操作，否则直接结束任务",
         "recognition": "OCR",
         "expected": [
             "战斗胜利"
@@ -627,12 +536,12 @@
         ],
         "action": "Click",
         "next": [
-            "LimboMain",
-            "LimboVictory_2"
+            "LucidscapeMain",
+            "LucidscapeVictory_2"
         ]
     },
-    "LimboMain": {
-        "doc": "深眠片段主界面",
+    "LucidscapeMain": {
+        "doc": "醒梦片段主界面",
         "recognition": "OCR",
         "expected": "本层酬劳",
         "roi": [
@@ -643,14 +552,14 @@
         ],
         "only_rec": true,
         "next": [
-            "LimboFinish",
+            "LucidscapeFinish",
             "Stop"
         ]
     },
-    "LimboFinish": {
-        "doc": "当前深眠片段战斗完成",
+    "LucidscapeFinish": {
+        "doc": "当前醒梦片段战斗完成",
         "recognition": "TemplateMatch",
-        "template": "Limbo/LimboFinish.png",
+        "template": "Lucidscape/LucidscapeFinish.png",
         "roi": [
             400,
             199,
@@ -660,21 +569,21 @@
         "green_mask": true,
         "action": "Click",
         "next": [
-            "LimboAwards",
-            "LimboNoAwards"
+            "LucidscapeAwards",
+            "LucidscapeNoAwards"
         ]
     },
-    "LimboNoAwards": {
-        "doc": "当前深眠片段战斗无未领取奖励",
+    "LucidscapeNoAwards": {
+        "doc": "当前醒梦片段战斗无未领取奖励",
         "next": [
-            "LimboEnd",
-            "LimboStageRightest"
+            "LucidscapeEnd",
+            "LucidscapeStageRightest"
         ],
         "interrupt": [
-            "BackButtonForLimbo"
+            "BackButtonForLucidscape"
         ]
     },
-    "BackButtonForLimbo": {
+    "BackButtonForLucidscape": {
         "recognition": "TemplateMatch",
         "template": [
             "StartUp/BackButton.png",
@@ -697,10 +606,10 @@
             ]
         }
     },
-    "LimboAwards": {
-        "doc": "深眠片段，存在本层酬劳",
+    "LucidscapeAwards": {
+        "doc": "醒梦片段，存在本层酬劳",
         "recognition": "TemplateMatch",
-        "template": "Limbo/LimboAwards.png",
+        "template": "Lucidscape/LucidscapeAwards.png",
         "roi": [
             139,
             589,
@@ -710,14 +619,14 @@
         "green_mask": true,
         "action": "Click",
         "next": [
-            "LimboObtainedAwards_1"
+            "LucidscapeObtainedAwards_1"
         ]
     },
-    "LimboObtainedAwards_1": {
+    "LucidscapeObtainedAwards_1": {
         "recognition": "TemplateMatch",
         "template": [
-            "Limbo/ObtainedAllAwards.png",
-            "Limbo/ObtainedAwards.png"
+            "Lucidscape/ObtainedAllAwards.png",
+            "Lucidscape/ObtainedAwards.png"
         ],
         "roi": [
             941,
@@ -727,15 +636,15 @@
         ],
         "action": "Click",
         "next": [
-            "LimboObtainedAwards_2"
+            "LucidscapeObtainedAwards_2"
         ],
         "interrupt": [
             "ObtainedAwards"
         ]
     },
-    "LimboObtainedAwards_2": {
+    "LucidscapeObtainedAwards_2": {
         "recognition": "OCR",
-        "expected": "深眠试验酬劳",
+        "expected": "醒梦片段",
         "roi": [
             104,
             36,
@@ -750,25 +659,25 @@
             20
         ],
         "next": [
-            "LimboEnd",
-            "LimboStageRightest",
-            "LimboObtainedAwards_2"
+            "LucidscapeEnd",
+            "LucidscapeStageRightest",
+            "LucidscapeObtainedAwards_2"
         ],
         "interrupt": [
             "ObtainedAwards",
-            "BackButtonForLimbo"
+            "BackButtonForLucidscape"
         ]
     },
-    "LimboEnd": {
-        "doc": "深眠片段·Ⅵ进度100%，任务结束",
+    "LucidscapeEnd": {
+        "doc": "醒梦片段·Ⅵ进度100%，任务结束",
         "recognition": "TemplateMatch",
-        "template": "Limbo/LimboEnd.png",
-        "threshold": 0.9,
+        "template": "Lucidscape/LucidscapeEnd.png",
+        "threshold": 0.85,
         "roi": [
-            843,
-            431,
-            231,
-            135
+            961,
+            403,
+            151,
+            34
         ],
         "next": []
     }
