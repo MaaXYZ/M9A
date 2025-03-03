@@ -112,6 +112,39 @@
             38
         ],
         "only_rec": true,
+        "action": "Click",
+        "target": [
+            149,
+            423,
+            132,
+            34
+        ],
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                0,
+                105,
+                1280,
+                482
+            ]
+        },
+        "next": [
+            "SOD_unmount_completed_3"
+        ],
+        "interrupt": [
+            "SOD_unmount_confirm"
+        ]
+    },
+    "SOD_unmount_completed_3": {
+        "recognition": "OCR",
+        "expected": "^挂载$",
+        "roi": [
+            1016,
+            620,
+            124,
+            38
+        ],
+        "only_rec": true,
         "post_wait_freezes": {
             "time": 300,
             "target": [
