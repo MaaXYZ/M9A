@@ -1201,7 +1201,7 @@
                 {
                     "name": "活动：东区黎明 19 艰难（已结束）",
                     "pipeline_override": {
-                        "ActivityEnterTheShow": {
+                        "EnterTheActivityMain": {
                             "template": "Combat/Activity/LondonDawningEnterTheShow.png"
                         },
                         "TargetStageName": {
