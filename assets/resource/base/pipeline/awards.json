@@ -476,8 +476,21 @@
         ],
         "interrupt": [
             "ObtainedAwards",
+            "JukeboxExitPurchase",
             "BackButton"
         ]
+    },
+    "JukeboxExitPurchase": {
+        "recognition": "OCR",
+        "expected": "再想想",
+        "roi": [
+            291,
+            580,
+            191,
+            134
+        ],
+        "action": "Click",
+        "post_delay": 1000
     },
     "Sub_JukeboxAwardsBadge": {
         "is_sub": true,
@@ -498,7 +511,8 @@
             "ExitEdition"
         ],
         "interrupt": [
-            "ObtainedAwards"
+            "ObtainedAwards",
+            "JukeboxExitPurchase"
         ]
     },
     "ExitEdition": {
