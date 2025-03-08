@@ -35,6 +35,7 @@
             183
         ],
         "action": "Click",
+        "post_delay": 3000,
         "post_wait_freezes": {
             "time": 500,
             "target": [

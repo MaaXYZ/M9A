@@ -100,7 +100,7 @@
             "pipeline_override": {
                 "EnterTheActivityMain": {
                     "template_doc": "修改为当期活动入口的template",
-                    "template": "Combat/Activity/ChinatownFilmsEnterTheShow.png"
+                    "template": "Combat/Activity/FolieETDeraison.png"
                 }
             },
             "doc": "[size:15][color:tomato]1.请自行阅读角色故事后使用本功能[/color][/size]\n[size:15][color:tomato]2.请在当期轶事活动关闭后关闭本功能[/color][/size]"
