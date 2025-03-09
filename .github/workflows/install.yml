@@ -54,7 +54,7 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        arch: [aarch64, x86_64]
+        arch: [x86_64]
       fail-fast: false
 
     steps:
@@ -121,7 +121,7 @@ jobs:
           latest: true
           out-file-path: "install"
           extract: true
-  
+
 
       - name: Install
         shell: bash
@@ -133,7 +133,7 @@ jobs:
         run: |
           rm install/MFW-PyQt6-linux-${{ matrix.arch }}*
           python ./deploy.py
-  
+
       - uses: actions/upload-artifact@v4
         with:
           name: M9A-linux-${{ matrix.arch }}
@@ -170,8 +170,8 @@ jobs:
           latest: true
           out-file-path: "install"
           extract: true
-    
-  
+
+
       - name: Install
         shell: bash
         run: |
@@ -187,41 +187,10 @@ jobs:
           name: M9A-macos-${{ matrix.arch }}
           path: "install"
 
-  android:
-    needs: meta
-    runs-on: macos-latest
-    strategy:
-      matrix:
-        arch: [aarch64, x86_64]
-      fail-fast: false
-
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: true
-
-      - name: Download MaaFramework
-        uses: robinraju/release-downloader@v1
-        with:
-          repository: MaaXYZ/MaaFramework
-          fileName: "MAA-android-${{ matrix.arch }}*"
-          latest: true
-          out-file-path: "deps"
-          extract: true
-
-      - name: Install
-        shell: bash
-        run: |
-          python ./install.py ${{ needs.meta.outputs.tag }}
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: M9A-android-${{ matrix.arch }}
-          path: "install"
 
   release:
     if: ${{ needs.meta.outputs.is_release == 'true' }}
-    needs: [meta, windows, ubuntu, macos, android]
+    needs: [meta, windows, ubuntu, macos]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
@@ -242,7 +211,7 @@ jobs:
           echo "Generating checksums for all zip files..."
           checksum_file="checksums.txt"
           touch "$checksum_file"
-      
+
           for f in *; do
             if [ -d "$f" ]; then
               echo "Processing directory: $f"
