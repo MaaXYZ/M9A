@@ -27,14 +27,20 @@
     "EnterTheActivityMain": {
         "doc": "进入当期活动主界面",
         "recognition": "TemplateMatch",
-        "template_code": "Set in code",
+        "template": "StartUp/HomeFlag.png",
         "roi": [
-            885,
-            123,
-            340,
-            183
+            1022,
+            419,
+            194,
+            166
         ],
         "action": "Click",
+        "target": [
+            1103,
+            220,
+            28,
+            22
+        ],
         "post_delay": 3000,
         "post_wait_freezes": {
             "time": 500,
