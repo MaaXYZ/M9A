@@ -474,6 +474,7 @@
             100,
             50
         ],
+        "duration": 400,
         "post_wait_freezes": 1,
         "post_delay": 0,
         "next": [

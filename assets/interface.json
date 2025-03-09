@@ -97,12 +97,6 @@
         {
             "name": "轶事派遣",
             "entry": "Anecdote",
-            "pipeline_override": {
-                "EnterTheActivityMain": {
-                    "template_doc": "修改为当期活动入口的template",
-                    "template": "Combat/Activity/FolieETDeraison.png"
-                }
-            },
             "doc": "[size:15][color:tomato]1.请自行阅读角色故事后使用本功能[/color][/size]\n[size:15][color:tomato]2.请在当期轶事活动关闭后关闭本功能[/color][/size]"
         },
         {
@@ -1101,9 +1095,6 @@
                 {
                     "name": "活动：唐人街影画 19 艰难",
                     "pipeline_override": {
-                        "EnterTheActivityMain": {
-                            "template": "Combat/Activity/ChinatownFilmsEnterTheShow.png"
-                        },
                         "ActivityMainChapter": {
                             "expected": [
                                 "开",
@@ -1127,9 +1118,6 @@
                 {
                     "name": "活动：朔日手记 19 艰难 （复刻）",
                     "pipeline_override": {
-                        "EnterTheActivityMain": {
-                            "template": "Combat/Activity/ChinatownFilmsEnterTheShow.png"
-                        },
                         "ActivityReturn": {
                             "enabled": true,
                             "expected": "朔日"
@@ -1145,9 +1133,6 @@
                 {
                     "name": "活动：地球上最后的夜晚 20 艰难（已结束）",
                     "pipeline_override": {
-                        "EnterTheActivityMain": {
-                            "template": "Combat/Activity/TheLastEveningOnEarthEnterTheShow.png"
-                        },
                         "TargetStageName": {
                             "expected": "20"
                         },
@@ -1159,9 +1144,6 @@
                 {
                     "name": "活动：再见，来亚什基 16 艰难（已结束）",
                     "pipeline_override": {
-                        "ActivityEntry": {
-                            "next": "GoodbyeRaya"
-                        },
                         "TargetStageName": {
                             "expected": "16"
                         },
@@ -1173,9 +1155,6 @@
                 {
                     "name": "活动：飞驰，明日之城 18 艰难（已结束）",
                     "pipeline_override": {
-                        "ActivityEntry": {
-                            "next": "FloorItToTheGoldenCity"
-                        },
                         "TargetStageName": {
                             "expected": "18"
                         },
@@ -1187,9 +1166,6 @@
                 {
                     "name": "活动：77号往事 18 艰难（已结束）",
                     "pipeline_override": {
-                        "ActivityEntry": {
-                            "next": "Route77"
-                        },
                         "TargetStageName": {
                             "expected": "18"
                         },
@@ -1201,9 +1177,6 @@
                 {
                     "name": "活动：东区黎明 19 艰难（已结束）",
                     "pipeline_override": {
-                        "EnterTheActivityMain": {
-                            "template": "Combat/Activity/LondonDawningEnterTheShow.png"
-                        },
                         "TargetStageName": {
                             "expected": "19"
                         },
