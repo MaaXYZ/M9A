@@ -12,7 +12,7 @@ jobs:
         with:
           filetype: latest-release
           filename: "M9A-win-x86_64-*.zip"
-          pick_files: '["resource", "interface.json"]'
+          pick_files: '["agent", "resource", "interface.json"]'
           exclude_files: '["*model/ocr/**"]'
           mirrorchyan_rid: M9A
 
