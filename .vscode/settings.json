@@ -31,6 +31,7 @@
         "editor.indentSize": "tabSize"
     },
     "[python]": {
+        "editor.formatOnSave": true,
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
     "[markdown]": {
