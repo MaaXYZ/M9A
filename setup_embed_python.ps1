@@ -3,7 +3,7 @@
 # 基本变量
 $PythonVersion = "3.12.9"
 $Architecture = "amd64" # 可选 "win32"
-$DestDir = "python"
+$DestDir = "install/python"
 $ScriptsDir = "scripts"  # 存放准备好的文件的目录
 
 # 创建目标目录
@@ -63,16 +63,6 @@ $ReqSource = "requirements.txt"
 $ReqDest = Join-Path $DestDir "requirements.txt"
 if (Test-Path $ReqSource) {
     Copy-Item -Path $ReqSource -Destination $ReqDest -Force
-}
-
-# 复制run_python.bat
-$RunPythonSource = Join-Path $ScriptsDir "run_python.bat"
-$RunPythonDest = Join-Path $DestDir "run_python.bat"
-if (Test-Path $RunPythonSource) {
-    Copy-Item -Path $RunPythonSource -Destination $RunPythonDest -Force
-} else {
-    Write-Host "error: don't find $RunPythonSource" -ForegroundColor Red
-    exit 1
 }
 
 # 运行pip安装脚本
