@@ -14,35 +14,30 @@ import subprocess
 
 
 def install_pip():
-    """下载并安装pip"""
-    print("正在设置pip...")
+    print("Setting up pip...")
 
-    # 下载get-pip.py
     get_pip_url = "https://bootstrap.pypa.io/get-pip.py"
     get_pip_path = os.path.join(os.path.dirname(__file__), "get-pip.py")
 
-    print(f"正在下载 {get_pip_url}...")
+    print(f"Downloading {get_pip_url}...")
     urllib.request.urlretrieve(get_pip_url, get_pip_path)
 
-    # 安装pip
-    print("正在安装pip...")
+    print("Install pip...")
     subprocess.check_call([sys.executable, get_pip_path, "--no-warn-script-location"])
 
-    # 删除get-pip.py
     os.unlink(get_pip_path)
 
-    print("pip已成功安装!")
+    print("pip installed.")
 
 
 def install_requirements():
-    """从requirements.txt安装依赖库"""
     requirements_path = os.path.join(os.path.dirname(__file__), "requirements.txt")
 
     if not os.path.exists(requirements_path):
-        print(f"警告: {requirements_path} 不存在，无法安装依赖库")
+        print(f"Warning: {requirements_path} not exist.")
         return
 
-    print(f"正在从 {requirements_path} 安装依赖库...")
+    print(f"Installing from {requirements_path} ...")
     try:
         subprocess.check_call(
             [
@@ -55,20 +50,11 @@ def install_requirements():
                 "--no-warn-script-location",
             ]
         )
-        print("所有依赖库安装完成!")
+        print("All requirements installed.")
     except subprocess.CalledProcessError as e:
-        print(f"警告: 安装依赖库时出错: {e}")
-        print("某些库可能需要手动安装")
-
-
-def main():
-    """主函数"""
-    # 安装pip
-    install_pip()
-
-    # 安装依赖库
-    install_requirements()
+        print(f"Warning: {e}")
 
 
 if __name__ == "__main__":
-    main()
+    install_pip()
+    install_requirements()
