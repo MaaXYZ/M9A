@@ -80,6 +80,11 @@ jobs:
           out-file-path: "MFA"
           extract: true
 
+      - name: Setup Embed Python
+        shell: powershell
+        run: |
+          ./setup_embed_python.ps1
+
       - name: Install
         shell: bash
         run: |
@@ -170,7 +175,6 @@ jobs:
           latest: true
           out-file-path: "install"
           extract: true
-
 
       - name: Install
         shell: bash
