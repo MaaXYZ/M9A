@@ -1,6 +1,9 @@
 {
     "Screenshot": {
         "action": "Custom",
-        "custom_action": "Screenshot"
+        "custom_action": "Screenshot",
+        "focus": true,
+        "focus_tip": "任务超时，已保存截图",
+        "focus_tip_color": "tomato"
     }
 }
