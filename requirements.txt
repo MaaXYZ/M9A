@@ -1,1 +1,2 @@
-maafw >= 4.0.0
+maafw>=4.0.0
+pillow
