@@ -1,5 +1,5 @@
+import os
 import json
-from os import makedirs
 from datetime import datetime
 
 from PIL import Image
@@ -32,7 +32,7 @@ class Screenshot(CustomAction):
         img = Image.fromarray(rgb_array)
 
         save_dir = json.loads(argv.custom_action_param)["save_dir"]
-        makedirs(save_dir, exist_ok=True)
+        os.makedirs(save_dir, exist_ok=True)
         img.save(f"{save_dir}/{self._get_format_timestamp()}.png")
         logger.info(f"截图保存至 {save_dir}/{self._get_format_timestamp()}.png")
 
