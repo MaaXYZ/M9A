@@ -12,6 +12,14 @@ from utils import logger
 
 @AgentServer.custom_action("Screenshot")
 class Screenshot(CustomAction):
+    """
+    自定义截图动作，保存当前屏幕截图到指定目录。
+
+    参数格式:
+    {
+        "save_dir": "保存截图的目录路径"
+    }
+    """
 
     def run(
         self,
