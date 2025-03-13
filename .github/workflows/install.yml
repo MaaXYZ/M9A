@@ -83,12 +83,12 @@ jobs:
       - name: Setup Embed Python
         shell: powershell
         run: |
-          ./setup_embed_python.ps1
+          ./tools/ci/setup_embed_python.ps1
 
       - name: Install
         shell: bash
         run: |
-          python ./install.py ${{ needs.meta.outputs.tag }}
+          python ./tools/install.py ${{ needs.meta.outputs.tag }}
           cp MFA/MFAWPF.exe install
 
       - uses: actions/upload-artifact@v4
@@ -131,13 +131,13 @@ jobs:
       - name: Install
         shell: bash
         run: |
-          python ./install.py ${{ needs.meta.outputs.tag }}
+          python ./tools/install.py ${{ needs.meta.outputs.tag }}
 
       - name: Install MFW
         shell: bash
         run: |
           rm install/MFW-PyQt6-linux-${{ matrix.arch }}*
-          python ./deploy.py
+          python ./tools/ci/deploy.py
 
       - uses: actions/upload-artifact@v4
         with:
@@ -179,13 +179,13 @@ jobs:
       - name: Install
         shell: bash
         run: |
-          python ./install.py ${{ needs.meta.outputs.tag }}
+          python ./tools/install.py ${{ needs.meta.outputs.tag }}
 
       - name: Install MFW
         shell: bash
         run: |
           rm install/MFW-PyQt6-macos-${{ matrix.arch }}*
-          python ./deploy.py
+          python ./tools/ci/deploy.py
       - uses: actions/upload-artifact@v4
         with:
           name: M9A-macos-${{ matrix.arch }}
@@ -213,7 +213,7 @@ jobs:
         run: |
           cd assets
           echo "Generating checksums for all zip files..."
-          checksum_file="checksums.txt"
+          checksum_file="checksums.sha256"
           touch "$checksum_file"
 
           for f in *; do

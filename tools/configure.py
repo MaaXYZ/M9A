@@ -2,7 +2,7 @@ from pathlib import Path
 
 import shutil
 
-assets_dir = Path(__file__).parent / "assets"
+assets_dir = Path(__file__).parent.parent / "assets"
 
 
 def configure_ocr_model():

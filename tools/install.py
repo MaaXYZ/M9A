@@ -4,10 +4,16 @@ import shutil
 import sys
 import json
 
+import os
+import sys
+
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(script_dir)
+
 from configure import configure_ocr_model
 
-
-working_dir = Path(__file__).parent
+working_dir = Path(__file__).parent.parent
 install_path = working_dir / Path("install")
 version = len(sys.argv) > 1 and sys.argv[1] or "v0.0.1"
 
