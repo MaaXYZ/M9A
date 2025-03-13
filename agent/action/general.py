@@ -1,3 +1,5 @@
+import json
+from os import makedirs
 from datetime import datetime
 
 from PIL import Image
@@ -25,7 +27,10 @@ class Screenshot(CustomAction):
             rgb_array = screen_array
 
         img = Image.fromarray(rgb_array)
-        img.save(f"{self._get_format_timestamp()}.png")
+
+        save_dir = json.loads(argv.custom_action_param)["save_dir"]
+        makedirs(save_dir, exist_ok=True)
+        img.save(f"{save_dir}/{self._get_format_timestamp()}.png")
 
         return CustomAction.RunResult(success=True)
 
