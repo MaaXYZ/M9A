@@ -7,6 +7,8 @@ from maa.agent.agent_server import AgentServer
 from maa.custom_action import CustomAction
 from maa.context import Context
 
+from utils import logger
+
 
 @AgentServer.custom_action("Screenshot")
 class Screenshot(CustomAction):
@@ -25,12 +27,14 @@ class Screenshot(CustomAction):
             rgb_array = screen_array[:, :, ::-1]
         else:
             rgb_array = screen_array
+            logger.warning("当前截图并非三通道")
 
         img = Image.fromarray(rgb_array)
 
         save_dir = json.loads(argv.custom_action_param)["save_dir"]
         makedirs(save_dir, exist_ok=True)
         img.save(f"{save_dir}/{self._get_format_timestamp()}.png")
+        logger.info(f"截图保存至 {save_dir}/{self._get_format_timestamp()}.png")
 
         return CustomAction.RunResult(success=True)
 
