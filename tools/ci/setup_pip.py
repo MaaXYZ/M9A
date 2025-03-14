@@ -30,31 +30,5 @@ def install_pip():
     print("pip installed.")
 
 
-def install_requirements():
-    requirements_path = os.path.join(os.path.dirname(__file__), "requirements.txt")
-
-    if not os.path.exists(requirements_path):
-        print(f"Warning: {requirements_path} not exist.")
-        return
-
-    print(f"Installing from {requirements_path} ...")
-    try:
-        subprocess.check_call(
-            [
-                sys.executable,
-                "-m",
-                "pip",
-                "install",
-                "-r",
-                requirements_path,
-                "--no-warn-script-location",
-            ]
-        )
-        print("All requirements installed.")
-    except subprocess.CalledProcessError as e:
-        print(f"Warning: {e}")
-
-
 if __name__ == "__main__":
     install_pip()
-    install_requirements()

@@ -12,16 +12,22 @@ if (-not (Test-Path $DestDir)) {
 }
 Write-Host "create directory: $DestDir" -ForegroundColor Cyan
 
-# 下载Python嵌入式包
-$PythonUrl = "https://www.python.org/ftp/python/$PythonVersion/python-$PythonVersion-embed-$Architecture.zip"
-$PythonZip = "python-embedded.zip"
-Write-Host "download Python: $PythonUrl" -ForegroundColor Cyan
-Invoke-WebRequest -Uri $PythonUrl -OutFile $PythonZip
+# 检查Python是否已经存在
+$PythonExePath = Join-Path $DestDir "python.exe"
+if (Test-Path $PythonExePath) {
+    Write-Host "Python already exitst in $DestDir, skip install." -ForegroundColor Yellow
+} else {
+    # 下载Python嵌入式包
+    $PythonUrl = "https://www.python.org/ftp/python/$PythonVersion/python-$PythonVersion-embed-$Architecture.zip"
+    $PythonZip = "python-embedded.zip"
+    Write-Host "download Python: $PythonUrl" -ForegroundColor Cyan
+    Invoke-WebRequest -Uri $PythonUrl -OutFile $PythonZip
 
-# 解压Python
-Write-Host "extract Python to: $DestDir" -ForegroundColor Cyan
-Expand-Archive -Path $PythonZip -DestinationPath $DestDir -Force
-Remove-Item $PythonZip
+    # 解压Python
+    Write-Host "extract Python to: $DestDir" -ForegroundColor Cyan
+    Expand-Archive -Path $PythonZip -DestinationPath $DestDir -Force
+    Remove-Item $PythonZip
+}
 
 # 修改_pth文件
 $PthFile = Get-ChildItem -Path $DestDir -Filter "python*._pth" | Select-Object -First 1
@@ -71,8 +77,25 @@ $CurrentLocation = Get-Location
 Set-Location $DestDir
 $PythonExe = Join-Path (Get-Location) "python.exe"
 
+# 检查pip是否已经安装
+$PipInstalled = $false
 try {
-    & $PythonExe setup_pip.py
+    $PipCheckOutput = & $PythonExe -m pip --version 2>&1
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "pip already installed, edition: $PipCheckOutput" -ForegroundColor Yellow
+        $PipInstalled = $true
+    }
+} catch {
+    # 如果出错，则认为pip未安装
+    $PipInstalled = $false
+}
+
+try {
+    if (-not $PipInstalled) {
+        Write-Host "install pip..." -ForegroundColor Cyan
+        & $PythonExe setup_pip.py
+        Write-Host "pip installed" -ForegroundColor Green
+    }
     Write-Host "install finished" -ForegroundColor Green
 } catch {
     Write-Host "install failed: $_" -ForegroundColor Red
