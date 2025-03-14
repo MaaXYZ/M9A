@@ -13,10 +13,26 @@ jobs:
         arch: [aarch64, x86_64]
     steps:
       - uses: MirrorChyan/uploading-action@v1
+        if: ${{ matrix.os == "win" }}
         with:
           filetype: latest-release
           fileName: "M9A-${{ matrix.os }}-${{ matrix.arch }}-*.zip"
-          pick_files: '["agent", "resource", "interface.json"]'
+          pick_files: '["agent", "resource", "python", "interface.json", "requirements.txt"]'
+          mirrorchyan_rid: M9A
+
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          owner: ${{ github.repository_owner }}
+          repo: ${{ github.event.repository.name }}
+          upload_token: ${{ secrets.MirrorChyanUploadToken }}
+          os: ${{ matrix.os }}
+          arch: ${{ matrix.arch }}
+
+      - uses: MirrorChyan/uploading-action@v1
+        if: ${{ matrix.os != "win" }}
+        with:
+          filetype: latest-release
+          fileName: "M9A-${{ matrix.os }}-${{ matrix.arch }}-*.zip"
+          pick_files: '["agent", "resource", "interface.json", "requirements.txt"]'
           mirrorchyan_rid: M9A
 
           github_token: ${{ secrets.GITHUB_TOKEN }}
