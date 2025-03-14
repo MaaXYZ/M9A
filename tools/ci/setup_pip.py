@@ -4,7 +4,6 @@
 
 该脚本用于嵌入式Python环境中，执行以下操作:
 1. 下载并安装pip
-2. 从requirements.txt中读取并安装依赖库
 """
 
 import os

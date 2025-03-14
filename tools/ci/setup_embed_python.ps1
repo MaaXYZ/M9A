@@ -65,8 +65,9 @@ if (Test-Path $SetupPipSource) {
 }
 
 # 复制requirements.txt (如果存在)
+$ParentDir = Split-Path $DestDir -Parent
 $ReqSource = "requirements.txt"
-$ReqDest = Join-Path $DestDir "requirements.txt"
+$ReqDest = Join-Path $ParentDir "requirements.txt"
 if (Test-Path $ReqSource) {
     Copy-Item -Path $ReqSource -Destination $ReqDest -Force
 }
