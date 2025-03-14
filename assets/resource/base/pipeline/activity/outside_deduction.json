@@ -215,7 +215,7 @@
         ],
         "focus": true,
         "focus_tip": "本轮肉鸽结束",
-        "focus_tip_color": "tomato"
+        "focus_tip_color": "DeepSkyBlue"
     },
     "SODStop_Confirm": {
         "recognition": "TemplateMatch",
