@@ -4,16 +4,22 @@ import json
 import subprocess
 from pathlib import Path
 
-from maa.agent.agent_server import AgentServer
-from maa.toolkit import Toolkit
 
 # 将当前目录添加到路径
 current_dir = os.path.dirname(os.path.abspath(__file__))
 if current_dir not in sys.path:
     sys.path.insert(0, current_dir)
 
-from custom import *
-from utils import logger
+try:
+    from utils import logger
+except ImportError:
+    # 如果logger不存在，创建一个简单的logger
+    import logging
+
+    logging.basicConfig(
+        format="%(asctime)s | %(levelname)s | %(message)s", level=logging.INFO
+    )
+    logger = logging
 
 
 def read_interface_version(interface_file="./interface.json") -> str:
@@ -105,6 +111,11 @@ def check_and_install_dependencies():
 
 
 def agent():
+    from maa.agent.agent_server import AgentServer
+    from maa.toolkit import Toolkit
+
+    from utils import logger
+
     Toolkit.init_option("./")
 
     socket_id = sys.argv[-1]
