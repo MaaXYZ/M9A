@@ -64,14 +64,6 @@ if (Test-Path $SetupPipSource) {
     exit 1
 }
 
-# 复制requirements.txt (如果存在)
-$ParentDir = Split-Path $DestDir -Parent
-$ReqSource = "requirements.txt"
-$ReqDest = Join-Path $ParentDir "requirements.txt"
-if (Test-Path $ReqSource) {
-    Copy-Item -Path $ReqSource -Destination $ReqDest -Force
-}
-
 # 运行pip安装脚本
 Write-Host "run setup_pip.py..." -ForegroundColor Green
 $CurrentLocation = Get-Location
