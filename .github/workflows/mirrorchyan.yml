@@ -6,87 +6,22 @@ on:
 jobs:
   mirrorchyan:
     runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [win, macos, linux]
+        arch: [aarch64, x86_64]
     steps:
       - uses: MirrorChyan/uploading-action@v1
-        if: always()
         with:
           filetype: latest-release
-          fileName: "M9A-win-x86_64-*.zip"
+          fileName: "M9A-${{ matrix.os }}-${{ matrix.arch }}-*.zip"
+          pick_files: '["agent", "resource", "interface.json"]'
           mirrorchyan_rid: M9A
 
           github_token: ${{ secrets.GITHUB_TOKEN }}
           owner: ${{ github.repository_owner }}
           repo: ${{ github.event.repository.name }}
           upload_token: ${{ secrets.MirrorChyanUploadToken }}
-          os: win
-          arch: x86_64
-
-      - uses: MirrorChyan/uploading-action@v1
-        if: always()
-        with:
-          filetype: latest-release
-          fileName: "M9A-macos-aarch64-*.zip"
-          mirrorchyan_rid: M9A
-
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          owner: ${{ github.repository_owner }}
-          repo: ${{ github.event.repository.name }}
-          upload_token: ${{ secrets.MirrorChyanUploadToken }}
-          os: macos
-          arch: aarch64
-
-      - uses: MirrorChyan/uploading-action@v1
-        if: always()
-        with:
-          filetype: latest-release
-          fileName: "M9A-macos-x86_64-*.zip"
-          mirrorchyan_rid: M9A
-
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          owner: ${{ github.repository_owner }}
-          repo: ${{ github.event.repository.name }}
-          upload_token: ${{ secrets.MirrorChyanUploadToken }}
-          os: macos
-          arch: x86_64
-
-      - uses: MirrorChyan/uploading-action@v1
-        if: always()
-        with:
-          filetype: latest-release
-          fileName: "M9A-win-aarch64-*.zip"
-          mirrorchyan_rid: M9A
-
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          owner: ${{ github.repository_owner }}
-          repo: ${{ github.event.repository.name }}
-          upload_token: ${{ secrets.MirrorChyanUploadToken }}
-          os: win
-          arch: aarch64
-
-      - uses: MirrorChyan/uploading-action@v1
-        if: always()
-        with:
-          filetype: latest-release
-          fileName: "M9A-linux-aarch64-*.zip"
-          mirrorchyan_rid: M9A
-
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          owner: ${{ github.repository_owner }}
-          repo: ${{ github.event.repository.name }}
-          upload_token: ${{ secrets.MirrorChyanUploadToken }}
-          os: linux
-          arch: aarch64
-
-      - uses: MirrorChyan/uploading-action@v1
-        if: always()
-        with:
-          filetype: latest-release
-          fileName: "M9A-linux-x86_64-*.zip"
-          mirrorchyan_rid: M9A
-
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          owner: ${{ github.repository_owner }}
-          repo: ${{ github.event.repository.name }}
-          upload_token: ${{ secrets.MirrorChyanUploadToken }}
-          os: linux
-          arch: x86_64
+          os: ${{ matrix.os }}
+          arch: ${{ matrix.arch }}
