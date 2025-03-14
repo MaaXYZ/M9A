@@ -42,7 +42,11 @@ def read_pip_config() -> dict:
     config_dir.mkdir(exist_ok=True)
 
     config_path = config_dir / "pip_config.json"
-    default_config = {"enable_pip_install": True, "last_version": "unknown"}
+    default_config = {
+        "enable_pip_install": True,
+        "last_version": "unknown",
+        "mirror": "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple",
+    }
 
     if not config_path.exists():
         with open(config_path, "w", encoding="utf-8") as f:
@@ -71,7 +75,7 @@ def update_pip_config(version) -> bool:
         return False
 
 
-def install_requirements(req_file="requirements.txt") -> bool:
+def install_requirements(req_file="requirements.txt", mirror=None) -> bool:
     req_path = Path(req_file)
     if not req_path.exists():
         logger.error(f"requirements.txt 不存在")
@@ -79,9 +83,13 @@ def install_requirements(req_file="requirements.txt") -> bool:
 
     try:
         logger.info("开始安装依赖...")
-        subprocess.check_call(
-            [sys.executable, "-m", "pip", "install", "-r", str(req_path)]
-        )
+        cmd = [sys.executable, "-m", "pip", "install", "-r", str(req_path)]
+
+        if mirror:
+            logger.info(f"使用镜像源: {mirror}")
+            cmd.extend(["-i", mirror])
+
+        subprocess.check_call(cmd)
         logger.info("依赖安装完成")
         return True
     except:
