@@ -13,7 +13,7 @@ jobs:
         arch: [aarch64, x86_64]
     steps:
       - uses: MirrorChyan/uploading-action@v1
-        if: ${{ matrix.os == "win" }}
+        if: ${{ matrix.os == 'win' }}
         with:
           filetype: latest-release
           fileName: "M9A-${{ matrix.os }}-${{ matrix.arch }}-*.zip"
@@ -28,7 +28,7 @@ jobs:
           arch: ${{ matrix.arch }}
 
       - uses: MirrorChyan/uploading-action@v1
-        if: ${{ matrix.os != "win" }}
+        if: ${{ matrix.os != 'win' }}
         with:
           filetype: latest-release
           fileName: "M9A-${{ matrix.os }}-${{ matrix.arch }}-*.zip"
