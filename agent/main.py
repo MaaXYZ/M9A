@@ -24,6 +24,7 @@ except ImportError:
 
 def read_interface_version(interface_file="./interface.json") -> str:
     interface_path = Path(interface_file)
+
     if not interface_path.exists():
         logger.warning("interface.json不存在")
         return "unknown"

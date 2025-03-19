@@ -2022,7 +2022,6 @@
             64,
             64
         ],
-        "timeout": 40000,
         "post_wait_freezes": {
             "time": 400,
             "target": [
@@ -2040,12 +2039,13 @@
             89,
             73
         ],
+        "timeout": 600000,
+        "rate_limit": 3000,
         "next": [
             "SOD_CombatVictory",
             "SOD_CombatDefeat_hint",
             "SOD_CombatDefeat",
             "SOD_ItemSelect_1",
-            "SOD_Combating",
             "SOD_ItemLose_1",
             "SOD_Acquire",
             "SOD_Skip",
@@ -2054,8 +2054,32 @@
         ],
         "interrupt": [
             "SOD_Dialog_3",
-            "SOD_Dialog_5"
+            "SOD_Dialog_5",
+            "SOD_NotCombating"
         ]
+    },
+    "SOD_NotCombating": {
+        "recognition": "Custom",
+        "custom_recognition": "IsSimilar",
+        "custom_recognition_param": {
+            "threshold": 0.90,
+            "roi": [
+                511,
+                134,
+                305,
+                129
+            ],
+            "interval": 100,
+            "times": 10
+        },
+        "action": "Click",
+        "target": [
+            1096,
+            29,
+            27,
+            25
+        ],
+        "post_delay": 2000
     },
     "Sub_SOD_Dialog_1": {
         "is_sub": true,
@@ -2139,7 +2163,8 @@
             215,
             137
         ],
-        "action": "Click"
+        "action": "Click",
+        "post_delay": 1000
     },
     "SOD_CombatDefeat_hint": {
         "recognition": "OCR",
