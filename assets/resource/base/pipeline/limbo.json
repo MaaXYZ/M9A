@@ -35,7 +35,8 @@
                 121,
                 27
             ]
-        }
+        },
+        "post_delay": 3000
     },
     "ArtificialSleepwalkingAwards": {
         "doc": "人工梦游主界面，点击全部领取",
