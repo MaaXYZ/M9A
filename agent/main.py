@@ -46,7 +46,7 @@ def read_pip_config() -> dict:
     default_config = {
         "enable_pip_install": True,
         "last_version": "unknown",
-        "mirror": "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple",
+        "mirror": "https://mirrors.ustc.edu.cn/pypi/simple",
     }
 
     if not config_path.exists():
