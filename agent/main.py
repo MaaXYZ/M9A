@@ -103,6 +103,7 @@ def check_and_install_dependencies():
     current_version = read_interface_version()
     last_version = pip_config.get("last_version", "unknown")
     enable_pip_install = pip_config.get("enable_pip_install", True)
+    mirror = pip_config.get("mirror", None)
 
     logger.info(f"当前版本: {current_version}, 上次运行版本: {last_version}")
     logger.info(f"启用 pip 安装依赖: {enable_pip_install}")
@@ -110,7 +111,7 @@ def check_and_install_dependencies():
     if enable_pip_install and (
         current_version != last_version or current_version == "unknown"
     ):
-        if install_requirements():
+        if install_requirements(mirror=mirror):
             update_pip_config(current_version)
             logger.info("依赖检查完成")
         else:
