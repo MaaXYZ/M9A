@@ -1,0 +1,12 @@
+{
+    "JudgeDuringAct": {
+        "action": "Custom",
+        "custom_action": "DuringAct",
+        "custom_action_param": {
+            "resource": "jp"
+        },
+        "next": [
+            "ActivityEntry"
+        ]
+    }
+}

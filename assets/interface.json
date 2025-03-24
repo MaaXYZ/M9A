@@ -74,7 +74,7 @@
         },
         {
             "name": "活动刷取",
-            "entry": "ActivityEntry",
+            "entry": "JudgeDuringAct",
             "option": [
                 "活动选择",
                 "复现次数",
