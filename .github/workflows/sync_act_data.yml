@@ -20,7 +20,6 @@ jobs:
       - name: Download JSON files from source repository
         run: |
           echo "Current Date and Time (UTC): $(date -u '+%Y-%m-%d %H:%M:%S')"
-          echo "Current User's Login: Windsland52"
           
           # 下载三个JSON文件
           curl -s -o assets/resource/cn.json https://raw.githubusercontent.com/Windsland52/M9A-Act-Data/master/cn.json || echo "Failed to download cn.json"
@@ -31,10 +30,21 @@ jobs:
           echo "Checking downloaded files:"
           ls -la assets/resource/
       
-      - name: Check for changes
-        id: check_changes
+      - name: Check for changes with git status
+        id: check_status
         run: |
-          git diff --quiet assets/resource/ || echo "CHANGES_DETECTED=true" >> $GITHUB_ENV
+          # 确保git能看到未跟踪的文件
+          git add -N assets/resource/
+          
+          # 检查是否有任何更改（修改、新增、删除）
+          if [[ -n "$(git status --porcelain assets/resource/)" ]]; then
+            echo "Changes detected in assets/resource/"
+            git status --porcelain assets/resource/
+            echo "CHANGES_DETECTED=true" >> $GITHUB_ENV
+          else
+            echo "No changes detected in assets/resource/"
+            echo "CHANGES_DETECTED=false" >> $GITHUB_ENV
+          fi
       
       - name: Commit and Push Changes
         if: env.CHANGES_DETECTED == 'true'
@@ -44,7 +54,7 @@ jobs:
           
           git add assets/resource/*.json
           timestamp=$(date -u "+%Y-%m-%d %H:%M:%S")
-          git commit -m "Sync JSON files from M9A-Act-Data - $timestamp UTC"
+          git commit -m "chore: Sync JSON files from M9A-Act-Data - $timestamp UTC"
           git push
           
           echo "JSON files successfully synchronized"
