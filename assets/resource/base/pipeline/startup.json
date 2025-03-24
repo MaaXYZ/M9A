@@ -28,6 +28,7 @@
     "ReturnMain": {
         "doc": "返回主界面（专供任务开始前使用）",
         "next": [
+            "HomeFlagCloseReturnMain",
             "HomeButton",
             "BackButton",
             "HomeLoading",
@@ -240,6 +241,18 @@
             68,
             64
         ]
+    },
+    "HomeFlagCloseReturnMain": {
+        "recognition": "TemplateMatch",
+        "template": "StartUp/HomeFlag.png",
+        "roi": [
+            1022,
+            419,
+            194,
+            166
+        ],
+        "action": "Custom",
+        "custom_action": "DisableReturnMain"
     },
     "BackButton": {
         "recognition": "TemplateMatch",

@@ -55,3 +55,20 @@ class Screenshot(CustomAction):
         milliseconds = f"{now.microsecond // 1000:03d}"
 
         return f"{date}-{time}.{milliseconds}"
+
+
+@AgentServer.custom_action("DisableReturnMain")
+class DisableReturnMain(CustomAction):
+    """
+    保证每次任务只执行一次 ReturnMain 。
+    """
+
+    def run(
+        self,
+        context: Context,
+        argv: CustomAction.RunArg,
+    ) -> CustomAction.RunResult:
+
+        context.override_pipeline({"ReturnMain": {"enabled": False}})
+
+        return CustomAction.RunResult(success=True)
