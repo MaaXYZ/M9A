@@ -1,0 +1,54 @@
+name: Sync JSON Files from M9A-Act-Data
+
+on:
+  schedule:
+    - cron: '5 0 * * *'  # UTC 00:05 每天运行
+  
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-json-files:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Check Out Repository
+        uses: actions/checkout@v3
+      
+      - name: Download JSON files from source repository
+        run: |
+          echo "Current Date and Time (UTC): $(date -u '+%Y-%m-%d %H:%M:%S')"
+          echo "Current User's Login: Windsland52"
+          
+          # 下载三个JSON文件
+          curl -s -o assets/resource/cn.json https://raw.githubusercontent.com/Windsland52/M9A-Act-Data/master/cn.json || echo "Failed to download cn.json"
+          curl -s -o assets/resource/en.json https://raw.githubusercontent.com/Windsland52/M9A-Act-Data/master/en.json || echo "Failed to download en.json"
+          curl -s -o assets/resource/jp.json https://raw.githubusercontent.com/Windsland52/M9A-Act-Data/master/jp.json || echo "Failed to download jp.json"
+          
+          # 检查文件是否成功下载
+          echo "Checking downloaded files:"
+          ls -la assets/resource/
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --quiet assets/resource/ || echo "CHANGES_DETECTED=true" >> $GITHUB_ENV
+      
+      - name: Commit and Push Changes
+        if: env.CHANGES_DETECTED == 'true'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          git add assets/resource/*.json
+          timestamp=$(date -u "+%Y-%m-%d %H:%M:%S")
+          git commit -m "Sync JSON files from M9A-Act-Data - $timestamp UTC"
+          git push
+          
+          echo "JSON files successfully synchronized"
+
+      - name: No changes detected
+        if: env.CHANGES_DETECTED != 'true'
+        run: echo "No changes detected in JSON files"
