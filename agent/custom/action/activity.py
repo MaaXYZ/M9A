@@ -52,6 +52,16 @@ class DuringAct(CustomAction):
             item = data[key]
             if now > item["activity"]["combat"]["start_time"]:
                 if item["activity"]["combat"]["event_type"] == "MainStory":
+                    context.override_pipeline(
+                        {
+                            "ActivityEntry": {
+                                "next": [],
+                                "interrupt": [],
+                                "focus": True,
+                                "focus_tip": "当前为主线版本，跳过当前任务",
+                            }
+                        }
+                    )
                     logger.info(f"当前主线版本：{key} {item['version_name']}")
                     logger.info(
                         f"距离版本结束还剩 {ms_timestamp_diff_to_dhm(now, item['end_time'])}，跳过当前任务"
@@ -63,5 +73,16 @@ class DuringAct(CustomAction):
                 )
                 return CustomAction.RunResult(success=True)
 
+        context.override_pipeline(
+            {
+                "ActivityEntry": {
+                    "next": [],
+                    "interrupt": [],
+                    "focus": True,
+                    "focus_tip": "当前为未知版本，跳过当前任务",
+                }
+            }
+        )
         logger.error("没有当前版本信息")
+
         return CustomAction.RunResult(success=False)
