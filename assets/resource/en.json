@@ -1,0 +1,18 @@
+{
+    "2.4": {
+        "version_name": "Last Evenings on Earth",
+        "start_time": 1743084000000,
+        "end_time": 1745657999000,
+        "activity": {
+            "combat": {
+                "event_type": "SideStory",
+                "start_time": 1743084000000,
+                "end_time": 1745398799000
+            },
+            "anecdote": {
+                "start_time": 1743498000000,
+                "end_time": 1744707599000
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "2.6": {
+        "version_name": "疯癫与文明",
+        "start_time": 1740621600000,
+        "end_time": 1744232399000,
+        "activity": {
+            "combat": {
+                "event_type": "MainStory",
+                "start_time": 1740621600000,
+                "end_time": 1743973199000
+            },
+            "anecdote": {
+                "start_time": 1741208400000,
+                "end_time": 1742417999000
+            }
+        }
+    }
+}

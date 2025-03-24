@@ -1,0 +1,18 @@
+{
+    "2.4": {
+        "version_name": "地球最後の夜",
+        "start_time": 1743037200000,
+        "end_time": 1745611199000,
+        "activity": {
+            "combat": {
+                "event_type": "SideStory",
+                "start_time": 1743037200000,
+                "end_time": 1745351999000
+            },
+            "anecdote": {
+                "start_time": 1743451200000,
+                "end_time": 1744660799000
+            }
+        }
+    }
+}
