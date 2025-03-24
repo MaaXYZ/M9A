@@ -1,4 +1,14 @@
 {
+    "JudgeDuringAnecdote": {
+        "action": "Custom",
+        "custom_action": "DuringAnecdote",
+        "custom_action_param": {
+            "resource": "cn"
+        },
+        "next": [
+            "Anecdote"
+        ]
+    },
     "Anecdote": {
         "doc": "轶事通用任务,使用需在interface.json中修改EnterTheActivityMain的template",
         "next": [
