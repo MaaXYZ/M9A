@@ -74,7 +74,7 @@
         },
         {
             "name": "活动刷取",
-            "entry": "ActivityEntry",
+            "entry": "JudgeDuringAct",
             "option": [
                 "活动选择",
                 "复现次数",
@@ -101,7 +101,7 @@
         },
         {
             "name": "轶事派遣",
-            "entry": "Anecdote",
+            "entry": "JudgeDuringAnecdote",
             "doc": "[size:15][color:tomato]1.请自行阅读角色故事后使用本功能[/color][/size]\n[size:15][color:tomato]2.请在当期轶事活动关闭后关闭本功能[/color][/size]"
         },
         {

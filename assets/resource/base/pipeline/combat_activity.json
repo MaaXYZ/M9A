@@ -1,4 +1,14 @@
 {
+    "JudgeDuringAct": {
+        "action": "Custom",
+        "custom_action": "DuringAct",
+        "custom_action_param": {
+            "resource": "cn"
+        },
+        "next": [
+            "ActivityEntry"
+        ]
+    },
     "ActivityEntry": {
         "next": [
             "ActivityReturn",
@@ -10,11 +20,9 @@
         ]
     },
     "ActivityReturn": {
-        "recognition": "OCR",
-        "expected_code": [
-            "set in code"
-        ],
         "enabled": false,
+        "recognition": "OCR",
+        "expected_code": "set in code",
         "roi": [
             33,
             89,
