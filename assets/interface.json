@@ -128,14 +128,6 @@
             "doc": "[size:15][color:darkgray]本功能有两种模式，触媒选择仅在非速刷模式生效，开启速刷模式后仅使用术式神灯刷取第一层[/color][/size]\n[size:18][color:black]速刷模式[/color][/size]\n[size:15][color:darkgray]1.使用前请先将`刻画生长-指引之歌`点满[/color][/size]\n[size:15][color:darkgray]2.请尽量调高难度等级(11难度达到最高效率)，以防止分数不够导致刷取信物失败[/color][/size]\n[size:18][color:black]非速刷模式[/color][/size]\n[size:15][color:darkgray]1.可在箱子里置顶(标记)四个角色出战[/color][/size]\n[size:15][color:darkgray]2.队伍推荐携带奶[/color][/size]\n[size:15][color:orange]⚠更多详细说明请看文档[/color][/size]"
         },
         {
-            "name": "(不可用)当期活动推图",
-            "entry": "Route77_StagePromotion",
-            "option": [
-                "模式选择",
-                "体力不够自动吃糖"
-            ]
-        },
-        {
             "name": "(测试中)推图模式",
             "entry": "StagePromotion_SwipeRightAndFindStage",
             "option": [
@@ -1140,50 +1132,6 @@
                     "pipeline_override": {
                         "TargetStageName": {
                             "expected": "20"
-                        },
-                        "StageDifficulty": {
-                            "next": "ActivityStageDifficulty"
-                        }
-                    }
-                },
-                {
-                    "name": "活动：再见，来亚什基 16 艰难（已结束）",
-                    "pipeline_override": {
-                        "TargetStageName": {
-                            "expected": "16"
-                        },
-                        "StageDifficulty": {
-                            "next": "ActivityStageDifficulty"
-                        }
-                    }
-                },
-                {
-                    "name": "活动：飞驰，明日之城 18 艰难（已结束）",
-                    "pipeline_override": {
-                        "TargetStageName": {
-                            "expected": "18"
-                        },
-                        "StageDifficulty": {
-                            "next": "ActivityStageDifficulty"
-                        }
-                    }
-                },
-                {
-                    "name": "活动：77号往事 18 艰难（已结束）",
-                    "pipeline_override": {
-                        "TargetStageName": {
-                            "expected": "18"
-                        },
-                        "StageDifficulty": {
-                            "next": "ActivityStageDifficulty"
-                        }
-                    }
-                },
-                {
-                    "name": "活动：东区黎明 19 艰难（已结束）",
-                    "pipeline_override": {
-                        "TargetStageName": {
-                            "expected": "19"
                         },
                         "StageDifficulty": {
                             "next": "ActivityStageDifficulty"
