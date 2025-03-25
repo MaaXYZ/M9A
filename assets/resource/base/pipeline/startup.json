@@ -252,7 +252,10 @@
             166
         ],
         "action": "Custom",
-        "custom_action": "DisableReturnMain"
+        "custom_action": "DisableNode",
+        "custom_action_param": {
+            "node_name": "ReturnMain"
+        }
     },
     "BackButton": {
         "recognition": "TemplateMatch",
