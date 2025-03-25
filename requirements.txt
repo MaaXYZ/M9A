@@ -1,4 +1,5 @@
 maafw>=4.0.0
-pillow
-scikit-image
 loguru
+pillow
+pytz
+scikit-image
