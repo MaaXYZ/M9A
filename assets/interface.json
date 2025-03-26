@@ -1410,6 +1410,22 @@
                 }
             ]
         },
+        "金瓜子": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "GoldenMelonSeeds": {
+                            "enabled": false
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                }
+            ]
+        },
         "获取显影罐": {
             "cases": [
                 {

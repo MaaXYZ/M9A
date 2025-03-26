@@ -60,6 +60,7 @@
             "Gluttony",
             "TinyGlobe(1)",
             "ResonantCassette",
+            "GoldenMelonSeeds",
             "ObtainedAwards",
             "BackButton"
         ]
@@ -883,6 +884,108 @@
         ]
     },
     "BankPurchase_ResonantCassette": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "roi": [
+            760,
+            509,
+            60,
+            27
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "ObtainedAwards"
+        ]
+    },
+    "GoldenMelonSeeds": {
+        "doc": "金瓜子",
+        "next": [
+            "FlagInDneiricShop_1"
+        ],
+        "interrupt": [
+            "EnterFragmentsShop"
+        ]
+    },
+    "FlagInDneiricShop_1": {
+        "recognition": "OCR",
+        "expected": "梦境记述",
+        "roi": [
+            520,
+            67,
+            83,
+            22
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                244,
+                138,
+                994,
+                464
+            ]
+        },
+        "next": [
+            "NoGoldenMelonSeeds"
+        ],
+        "interrupt": [
+            "PurchaseGoldenMelonSeeds"
+        ]
+    },
+    "NoGoldenMelonSeeds": {
+        "recognition": "Custom",
+        "custom_recognition": "BankShop",
+        "custom_recognition_param": {
+            "expected": "一瞬的躁动",
+            "inverse": true
+        },
+        "action": "Custom",
+        "custom_action": "DisableNode",
+        "custom_action_param": {
+            "node_name": "GoldenMelonSeeds"
+        },
+        "next": [
+            "PurchaseRecord_GoldenMelonSeeds"
+        ]
+    },
+    "PurchaseRecord_GoldenMelonSeeds": {
+        "action": "Custom",
+        "custom_action": "BankPurchaseRecord",
+        "custom_action_param": {
+            "item": "GoldenMelonSeeds"
+        }
+    },
+    "PurchaseGoldenMelonSeeds": {
+        "recognition": "Custom",
+        "custom_recognition": "BankShop",
+        "custom_recognition_param": {
+            "expected": "一瞬的躁动"
+        },
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "PurchaseGoldenMelonSeedsMax",
+            "PurchaseGoldenMelonSeeds"
+        ]
+    },
+    "PurchaseGoldenMelonSeedsMax": {
+        "recognition": "OCR",
+        "expected": "MAX",
+        "roi": [
+            935,
+            462,
+            46,
+            24
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "BankPurchase_GoldenMelonSeeds"
+        ]
+    },
+    "BankPurchase_GoldenMelonSeeds": {
         "recognition": "OCR",
         "expected": "购买",
         "roi": [
