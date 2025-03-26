@@ -93,6 +93,24 @@
             "doc": "[size:15][color:tomato]注意上下半编队不要重复[/color][/size]"
         },
         {
+            "name": "银行购物",
+            "entry": "ModifyBankTaskList",
+            "option": [
+                "单账号",
+                "柜台特奉",
+                "金兔子(低阶柜台)",
+                "紫地球仪(低阶柜台)",
+                "蓝地球仪(低阶柜台)",
+                "饕餮",
+                "蓝地球仪(心相观测)",
+                "共鸣晶匣",
+                "金瓜子(梦境记述)",
+                "原味鸡(梦境记述)",
+                "大薯(梦境记述)"
+            ],
+            "doc": "[size:15][color:tomato]单账号模式下会跳过当前周期执行过的任务[/color][/size]"
+        },
+        {
             "name": "领取奖励",
             "entry": "Awards",
             "option": [
@@ -1180,6 +1198,182 @@
                             "next": []
                         }
                     }
+                }
+            ]
+        },
+        "单账号": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "ModifyBankTaskList": {
+                            "action": "DoNothing"
+                        }
+                    }
+                }
+            ]
+        },
+        "柜台特奉": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "FreeWeeklyGift": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "金兔子(低阶柜台)": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "Rabbit": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "紫地球仪(低阶柜台)": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "SmallGlobe": {
+                            "enabled": false
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                }
+            ]
+        },
+        "蓝地球仪(低阶柜台)": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "TinyGlobe": {
+                            "enabled": false
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                }
+            ]
+        },
+        "饕餮": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "Gluttony": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "蓝地球仪(心相观测)": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "TinyGlobe(1)": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "共鸣晶匣": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "ResonantCassette": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "金瓜子(梦境记述)": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "GoldenMelonSeeds": {
+                            "enabled": false
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                }
+            ]
+        },
+        "原味鸡(梦境记述)": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "OriginalChicken": {
+                            "enabled": false
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                }
+            ]
+        },
+        "大薯(梦境记述)": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "Fries": {
+                            "enabled": false
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
                 }
             ]
         },

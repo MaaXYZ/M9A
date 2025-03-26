@@ -57,10 +57,15 @@ class Screenshot(CustomAction):
         return f"{date}-{time}.{milliseconds}"
 
 
-@AgentServer.custom_action("DisableReturnMain")
-class DisableReturnMain(CustomAction):
+@AgentServer.custom_action("DisableNode")
+class DisableNode(CustomAction):
     """
-    保证每次任务只执行一次 ReturnMain 。
+    将特定 node 设置为 disable 状态 。
+
+    参数格式:
+    {
+        "node_name": "结点名称"
+    }
     """
 
     def run(
@@ -69,6 +74,8 @@ class DisableReturnMain(CustomAction):
         argv: CustomAction.RunArg,
     ) -> CustomAction.RunResult:
 
-        context.override_pipeline({"ReturnMain": {"enabled": False}})
+        node_name = json.loads(argv.custom_action_param)["node_name"]
+
+        context.override_pipeline({f"{node_name}": {"enabled": False}})
 
         return CustomAction.RunResult(success=True)
