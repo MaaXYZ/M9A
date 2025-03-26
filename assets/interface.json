@@ -140,7 +140,11 @@
         "作战关卡": {
             "cases": [
                 {
-                    "name": "啮咬盒(床下怪物)：7-26 厄险 （效率1）",
+                    "name": "---按关卡综合效率排序，刷取推荐来源：必要的记录https://www.kdocs.cn/l/cd5MWeCl5bKw---",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "啮咬盒(床下怪物)：7-26 厄险（效率1）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_7"
@@ -157,7 +161,7 @@
                     }
                 },
                 {
-                    "name": "啮咬盒(银光子弹)：5-19 厄险 （效率2）",
+                    "name": "啮咬盒(银光子弹)：5-19 厄险（效率2）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
@@ -174,24 +178,7 @@
                     }
                 },
                 {
-                    "name": "啮咬盒：4-10 厄险 （效率3）",
-                    "pipeline_override": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_4"
-                        },
-                        "TargetStageName": {
-                            "expected": [
-                                "10",
-                                "夜间航行"
-                            ]
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "啮咬盒：9-3 厄险 （主线新增）",
+                    "name": "啮咬盒：9-3 厄险（效率3）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_9"
@@ -242,7 +229,7 @@
                     }
                 },
                 {
-                    "name": "盐封曼德拉：9-16 厄险（主线新增）",
+                    "name": "盐封曼德拉：9-16 厄险（效率3）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_9"
@@ -259,7 +246,7 @@
                     }
                 },
                 {
-                    "name": "双头形骨架：4-20 厄险（效率1，只刷）",
+                    "name": "双头形骨架：4-20 厄险（效率1）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_4"
@@ -276,41 +263,7 @@
                     }
                 },
                 {
-                    "name": "双头形骨架：7-7 厄险（效率2，只刷）",
-                    "pipeline_override": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_7"
-                        },
-                        "TargetStageName": {
-                            "expected": [
-                                "07",
-                                "米诺陶迷宫"
-                            ]
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "双头形骨架：8-20 厄险（效率3）",
-                    "pipeline_override": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_8"
-                        },
-                        "TargetStageName": {
-                            "expected": [
-                                "20",
-                                "亲爱的你"
-                            ]
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "双头形骨架：9-13 厄险（主线新增）",
+                    "name": "双头形骨架：9-13 厄险（效率2）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_9"
@@ -327,7 +280,7 @@
                     }
                 },
                 {
-                    "name": "祝圣秘银(幼龙骨标本)：6-14 厄险（效率1，只刷）",
+                    "name": "祝圣秘银(幼龙骨标本)：6-14 厄险（效率1）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_6"
@@ -344,58 +297,7 @@
                     }
                 },
                 {
-                    "name": "祝圣秘银：7-19 厄险（效率2）",
-                    "pipeline_override": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_7"
-                        },
-                        "TargetStageName": {
-                            "expected": [
-                                "19",
-                                "双行道"
-                            ]
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "祝圣秘银：8-10 厄险（效率3）",
-                    "pipeline_override": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_8"
-                        },
-                        "TargetStageName": {
-                            "expected": [
-                                "10",
-                                "白色航船"
-                            ]
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "祝圣秘银：2-3 厄险（效率4）",
-                    "pipeline_override": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_2"
-                        },
-                        "TargetStageName": {
-                            "expected": [
-                                "03",
-                                "青柑橘"
-                            ]
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "祝圣秘银：9-6 厄险（主线新增）",
+                    "name": "祝圣秘银：9-6 厄险（效率2）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_9"
@@ -404,6 +306,23 @@
                             "expected": [
                                 "06",
                                 "生者的幻影"
+                            ]
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "祝圣秘银：3-8 厄险（效率3）",
+                    "pipeline_override": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_3"
+                        },
+                        "TargetStageName": {
+                            "expected": [
+                                "08",
+                                "空中来信"
                             ]
                         },
                         "StageDifficulty": {
@@ -446,7 +365,7 @@
                     }
                 },
                 {
-                    "name": "百灵百验鸟：9-8 厄险（主线新增）",
+                    "name": "百灵百验鸟：9-8 厄险（效率3）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_9"
@@ -463,41 +382,7 @@
                     }
                 },
                 {
-                    "name": "翼造门匙：5-3 厄险（效率1）",
-                    "pipeline_override": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_5"
-                        },
-                        "TargetStageName": {
-                            "expected": [
-                                "03",
-                                "压箱底"
-                            ]
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "翼造门匙：7-10 厄险（效率2）",
-                    "pipeline_override": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_7"
-                        },
-                        "TargetStageName": {
-                            "expected": [
-                                "10",
-                                "泥泞路"
-                            ]
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "翼造门匙(微光蛾翼灯)：9-15 厄险（主线新增）",
+                    "name": "翼造门匙(微光蛾翼灯)：9-15 厄险（效率1）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_9"
@@ -514,7 +399,24 @@
                     }
                 },
                 {
-                    "name": "弯曲鹅颈：5-4 厄险（效率1）",
+                    "name": "翼造门匙：5-3 厄险（效率2）",
+                    "pipeline_override": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_5"
+                        },
+                        "TargetStageName": {
+                            "expected": [
+                                "03",
+                                "压箱底"
+                            ]
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "弯曲鹅颈：5-4 厄险",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_5"
@@ -531,7 +433,7 @@
                     }
                 },
                 {
-                    "name": "金草焚香：4-4 故事（效率1）",
+                    "name": "金草焚香：4-4 故事",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_4"
@@ -548,19 +450,36 @@
                     }
                 },
                 {
-                    "name": "金草焚香：8-18 厄险（效率2）",
+                    "name": "红漆泥板：9-1 厄险（效率1）",
                     "pipeline_override": {
                         "EnterTheShow": {
-                            "next": "MainChapter_8"
+                            "next": "MainChapter_9"
                         },
                         "TargetStageName": {
                             "expected": [
-                                "18",
-                                "台风眼"
+                                "01",
+                                "开篇"
                             ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "红漆泥板：4-3 故事",
+                    "pipeline_override": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_4"
+                        },
+                        "TargetStageName": {
+                            "expected": [
+                                "03",
+                                "衣帽架"
+                            ]
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Story"
                         }
                     }
                 },
@@ -591,23 +510,6 @@
                             "expected": [
                                 "20",
                                 "古希腊悲剧"
-                            ]
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "金爪灵摆：9-7 厄险（主线新增）",
-                    "pipeline_override": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_9"
-                        },
-                        "TargetStageName": {
-                            "expected": [
-                                "07",
-                                "激情与谵妄"
                             ]
                         },
                         "StageDifficulty": {
@@ -650,36 +552,19 @@
                     }
                 },
                 {
-                    "name": "红漆泥板：9-1 厄险（主线新增）",
+                    "name": "液化战栗：3-7 厄险",
                     "pipeline_override": {
                         "EnterTheShow": {
-                            "next": "MainChapter_9"
+                            "next": "MainChapter_3"
                         },
                         "TargetStageName": {
                             "expected": [
-                                "01",
-                                "开篇"
+                                "07",
+                                "苏格兰"
                             ]
                         },
                         "StageDifficulty": {
                             "next": "StageDifficulty_Hard"
-                        }
-                    }
-                },
-                {
-                    "name": "红漆泥板：4-3 故事（主线新增）",
-                    "pipeline_override": {
-                        "EnterTheShow": {
-                            "next": "MainChapter_4"
-                        },
-                        "TargetStageName": {
-                            "expected": [
-                                "03",
-                                "衣帽架"
-                            ]
-                        },
-                        "StageDifficulty": {
-                            "next": "StageDifficulty_Story"
                         }
                     }
                 },
@@ -701,15 +586,15 @@
                     }
                 },
                 {
-                    "name": "液化战栗：3-7 厄险",
+                    "name": "液化战栗：9-3 厄险",
                     "pipeline_override": {
                         "EnterTheShow": {
-                            "next": "MainChapter_3"
+                            "next": "MainChapter_9"
                         },
                         "TargetStageName": {
                             "expected": [
-                                "07",
-                                "苏格兰"
+                                "03",
+                                "岁月遗忘"
                             ]
                         },
                         "StageDifficulty": {
@@ -735,15 +620,15 @@
                     }
                 },
                 {
-                    "name": "精磨苦盐：5-8 厄险",
+                    "name": "精磨苦盐：9-16 厄险",
                     "pipeline_override": {
                         "EnterTheShow": {
-                            "next": "MainChapter_5"
+                            "next": "MainChapter_9"
                         },
                         "TargetStageName": {
                             "expected": [
-                                "08",
-                                "旧诫言"
+                                "16",
+                                "虚构的界限"
                             ]
                         },
                         "StageDifficulty": {
@@ -778,6 +663,23 @@
                             "expected": [
                                 "03",
                                 "压箱底"
+                            ]
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "粗糙银锭：9-6 厄险",
+                    "pipeline_override": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_9"
+                        },
+                        "TargetStageName": {
+                            "expected": [
+                                "06",
+                                "生者的幻影"
                             ]
                         },
                         "StageDifficulty": {
@@ -854,15 +756,15 @@
                     }
                 },
                 {
-                    "name": "狐儿尾：7-6 厄险",
+                    "name": "狐儿尾：8-18 厄险",
                     "pipeline_override": {
                         "EnterTheShow": {
-                            "next": "MainChapter_7"
+                            "next": "MainChapter_8"
                         },
                         "TargetStageName": {
                             "expected": [
-                                "06",
-                                "傲慢与偏见"
+                                "18",
+                                "台风眼"
                             ]
                         },
                         "StageDifficulty": {
@@ -871,8 +773,21 @@
                     }
                 },
                 {
-                    "name": "---刷取推荐来源：必要的记录https://www.kdocs.cn/l/cd5MWeCl5bKw。此条勿选---",
-                    "pipeline_override": {}
+                    "name": "辉石原矿：9-1 厄险",
+                    "pipeline_override": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_9"
+                        },
+                        "TargetStageName": {
+                            "expected": [
+                                "01",
+                                "开篇"
+                            ]
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
                 },
                 {
                     "name": "尘埃运动 06",
