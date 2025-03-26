@@ -59,6 +59,7 @@
             "TinyGlobe",
             "Gluttony",
             "TinyGlobe(1)",
+            "ResonantCassette",
             "ObtainedAwards",
             "BackButton"
         ]
@@ -798,5 +799,102 @@
             22
         ],
         "duration": 1000
+    },
+    "ResonantCassette": {
+        "doc": "共鸣晶匣",
+        "next": [
+            "FlagInDneiricShop"
+        ],
+        "interrupt": [
+            "EnterFragmentsShop"
+        ]
+    },
+    "FlagInDneiricShop": {
+        "recognition": "OCR",
+        "expected": "梦境记述",
+        "roi": [
+            520,
+            67,
+            83,
+            22
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                244,
+                138,
+                994,
+                464
+            ]
+        },
+        "next": [
+            "NoResonantCassette"
+        ],
+        "interrupt": [
+            "PurchaseResonantCassette"
+        ]
+    },
+    "NoResonantCassette": {
+        "recognition": "OCR",
+        "expected": ".+",
+        "replace": [
+            "共鸣晶匣",
+            ""
+        ],
+        "roi": [
+            325,
+            286,
+            87,
+            23
+        ],
+        "only_rec": true,
+        "action": "Custom",
+        "custom_action": "DisableNode",
+        "custom_action_param": {
+            "node_name": "ResonantCassette"
+        },
+        "next": [
+            "PurchaseRecord_ResonantCassette"
+        ]
+    },
+    "PurchaseRecord_ResonantCassette": {
+        "action": "Custom",
+        "custom_action": "BankPurchaseRecord",
+        "custom_action_param": {
+            "item": "ResonantCassette"
+        }
+    },
+    "PurchaseResonantCassette": {
+        "recognition": "OCR",
+        "expected": "共鸣晶匣",
+        "roi": [
+            325,
+            286,
+            87,
+            23
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "BankPurchase_ResonantCassette"
+        ]
+    },
+    "BankPurchase_ResonantCassette": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "roi": [
+            760,
+            509,
+            60,
+            27
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "ObtainedAwards"
+        ]
     }
 }

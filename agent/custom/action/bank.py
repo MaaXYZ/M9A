@@ -67,6 +67,7 @@ class ModifyBankTaskList(CustomAction):
             "TinyGlobe": "month",
             "Gluttony": "month",
             "TinyGlobe(1)": "month",
+            "ResonantCassette": "month",
         }
         resource = json.loads(argv.custom_action_param)["resource"]
 
@@ -108,7 +109,7 @@ class ModifyBankTaskList(CustomAction):
             if type == "week":
                 if is_current_week:
                     context.override_pipeline({f"{task}": {"enabled": False}})
-                    logger.info(f"{task}本周已完成，跳过")
+                    logger.info(f"{task} 本周已完成，跳过")
             elif type == "month":
                 if is_current_month:
                     context.override_pipeline({f"{task}": {"enabled": False}})

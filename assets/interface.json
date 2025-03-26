@@ -102,7 +102,8 @@
                 "紫地球仪(低阶柜台)",
                 "蓝地球仪(低阶柜台)",
                 "饕餮",
-                "蓝地球仪(心相观测)"
+                "蓝地球仪(心相观测)",
+                "共鸣晶匣"
             ]
         },
         {
@@ -1387,6 +1388,22 @@
                     "name": "No",
                     "pipeline_override": {
                         "TinyGlobe(1)": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "共鸣晶匣": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "ResonantCassette": {
                             "enabled": false
                         }
                     }
