@@ -720,11 +720,12 @@
         "recognition": "OCR",
         "expected": "商品",
         "roi": [
-            326,
-            115,
-            822,
-            575
+            1071,
+            110,
+            147,
+            24
         ],
+        "only_rec": true,
         "action": "Custom",
         "custom_action": "DisableNode",
         "custom_action_param": {
