@@ -65,6 +65,8 @@ class ModifyBankTaskList(CustomAction):
             "Rabbit": "month",
             "SmallGlobe": "month",
             "TinyGlobe": "month",
+            "Gluttony": "month",
+            "TinyGlobe(1)": "month",
         }
         resource = json.loads(argv.custom_action_param)["resource"]
 

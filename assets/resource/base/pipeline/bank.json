@@ -58,6 +58,7 @@
             "SmallGlobe",
             "TinyGlobe",
             "Gluttony",
+            "TinyGlobe(1)",
             "ObtainedAwards",
             "BackButton"
         ]
@@ -660,5 +661,141 @@
                 464
             ]
         }
+    },
+    "TinyGlobe(1)": {
+        "doc": "微频偏振(心相观测)",
+        "next": [
+            "FlagInFragmentsShop_1"
+        ],
+        "interrupt": [
+            "EnterFragmentsShop"
+        ]
+    },
+    "FlagInFragmentsShop_1": {
+        "recognition": "OCR",
+        "expected": "心相观测",
+        "roi": [
+            321,
+            65,
+            80,
+            24
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                244,
+                138,
+                994,
+                464
+            ]
+        },
+        "timeout": 60000,
+        "next": [
+            "FindTinyGlobe(1)"
+        ],
+        "interrupt": [
+            "SwipeUp"
+        ]
+    },
+    "FindTinyGlobe(1)": {
+        "recognition": "OCR",
+        "expected": "微频偏振",
+        "roi": [
+            326,
+            115,
+            822,
+            575
+        ],
+        "next": [
+            "NoTinyGlobe(1)"
+        ],
+        "interrupt": [
+            "PurchaseTinyGlobe(1)Max",
+            "PurchaseTinyGlobe(1)"
+        ]
+    },
+    "NoTinyGlobe(1)": {
+        "recognition": "OCR",
+        "expected": "商品",
+        "roi": [
+            326,
+            115,
+            822,
+            575
+        ],
+        "action": "Custom",
+        "custom_action": "DisableNode",
+        "custom_action_param": {
+            "node_name": "TinyGlobe(1)"
+        },
+        "next": [
+            "PurchaseRecord_TinyGlobe(1)"
+        ]
+    },
+    "PurchaseRecord_TinyGlobe(1)": {
+        "action": "Custom",
+        "custom_action": "BankPurchaseRecord",
+        "custom_action_param": {
+            "item": "TinyGlobe(1)"
+        }
+    },
+    "PurchaseTinyGlobe(1)": {
+        "recognition": "OCR",
+        "expected": "微频偏振",
+        "roi": [
+            326,
+            115,
+            822,
+            575
+        ],
+        "action": "Click"
+    },
+    "PurchaseTinyGlobe(1)Max": {
+        "recognition": "OCR",
+        "expected": "MAX",
+        "roi": [
+            935,
+            462,
+            46,
+            24
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "BankPurchase_TinyGlobe(1)"
+        ]
+    },
+    "BankPurchase_TinyGlobe(1)": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "roi": [
+            760,
+            509,
+            60,
+            27
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "ObtainedAwards"
+        ]
+    },
+    "SwipeUp": {
+        "action": "Swipe",
+        "begin": [
+            959,
+            435,
+            18,
+            22
+        ],
+        "end": [
+            965,
+            97,
+            18,
+            22
+        ],
+        "duration": 1000
     }
 }
