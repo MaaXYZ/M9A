@@ -62,6 +62,7 @@
             "ResonantCassette",
             "GoldenMelonSeeds",
             "OriginalChicken",
+            "Fries",
             "ObtainedAwards",
             "BackButton"
         ]
@@ -1089,6 +1090,108 @@
         ]
     },
     "BankPurchase_OriginalChicken": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "roi": [
+            760,
+            509,
+            60,
+            27
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "ObtainedAwards"
+        ]
+    },
+    "Fries": {
+        "doc": "大薯",
+        "next": [
+            "FlagInDneiricShop_3"
+        ],
+        "interrupt": [
+            "EnterFragmentsShop"
+        ]
+    },
+    "FlagInDneiricShop_3": {
+        "recognition": "OCR",
+        "expected": "梦境记述",
+        "roi": [
+            520,
+            67,
+            83,
+            22
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                244,
+                138,
+                994,
+                464
+            ]
+        },
+        "next": [
+            "NoFries"
+        ],
+        "interrupt": [
+            "PurchaseFries"
+        ]
+    },
+    "NoFries": {
+        "recognition": "Custom",
+        "custom_recognition": "BankShop",
+        "custom_recognition_param": {
+            "expected": "悠远的振响",
+            "inverse": true
+        },
+        "action": "Custom",
+        "custom_action": "DisableNode",
+        "custom_action_param": {
+            "node_name": "Fries"
+        },
+        "next": [
+            "PurchaseRecord_Fries"
+        ]
+    },
+    "PurchaseRecord_Fries": {
+        "action": "Custom",
+        "custom_action": "BankPurchaseRecord",
+        "custom_action_param": {
+            "item": "Fries"
+        }
+    },
+    "PurchaseFries": {
+        "recognition": "Custom",
+        "custom_recognition": "BankShop",
+        "custom_recognition_param": {
+            "expected": "悠远的振响"
+        },
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "PurchaseFriesMax",
+            "PurchaseFries"
+        ]
+    },
+    "PurchaseFriesMax": {
+        "recognition": "OCR",
+        "expected": "MAX",
+        "roi": [
+            935,
+            462,
+            46,
+            24
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "BankPurchase_Fries"
+        ]
+    },
+    "BankPurchase_Fries": {
         "recognition": "OCR",
         "expected": "购买",
         "roi": [

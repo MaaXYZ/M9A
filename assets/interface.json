@@ -105,7 +105,8 @@
                 "蓝地球仪(心相观测)",
                 "共鸣晶匣",
                 "金瓜子",
-                "原味鸡"
+                "原味鸡",
+                "大薯"
             ]
         },
         {
@@ -1434,6 +1435,22 @@
                     "name": "No",
                     "pipeline_override": {
                         "OriginalChicken": {
+                            "enabled": false
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                }
+            ]
+        },
+        "大薯": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "Fries": {
                             "enabled": false
                         }
                     }
