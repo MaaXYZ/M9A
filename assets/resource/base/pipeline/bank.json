@@ -57,6 +57,7 @@
             "Rabbit",
             "SmallGlobe",
             "TinyGlobe",
+            "Gluttony",
             "ObtainedAwards",
             "BackButton"
         ]
@@ -526,5 +527,138 @@
         "next": [
             "ObtainedAwards"
         ]
+    },
+    "Gluttony": {
+        "doc": "饕餮",
+        "next": [
+            "FlagInFragmentsShop"
+        ],
+        "interrupt": [
+            "EnterFragmentsShop"
+        ]
+    },
+    "FlagInFragmentsShop": {
+        "recognition": "OCR",
+        "expected": "心相观测",
+        "roi": [
+            321,
+            65,
+            80,
+            24
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                244,
+                138,
+                994,
+                464
+            ]
+        },
+        "next": [
+            "NoGluttony"
+        ],
+        "interrupt": [
+            "PurchaseGluttony"
+        ]
+    },
+    "NoGluttony": {
+        "recognition": "OCR",
+        "expected": ".+",
+        "replace": [
+            "饕餮",
+            ""
+        ],
+        "roi": [
+            325,
+            286,
+            87,
+            23
+        ],
+        "only_rec": true,
+        "action": "Custom",
+        "custom_action": "DisableNode",
+        "custom_action_param": {
+            "node_name": "Gluttony"
+        },
+        "next": [
+            "PurchaseRecord_Gluttony"
+        ]
+    },
+    "PurchaseRecord_Gluttony": {
+        "action": "Custom",
+        "custom_action": "BankPurchaseRecord",
+        "custom_action_param": {
+            "item": "Gluttony"
+        }
+    },
+    "PurchaseGluttony": {
+        "recognition": "OCR",
+        "expected": "饕餮",
+        "roi": [
+            325,
+            286,
+            87,
+            23
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "PurchaseGluttonyMax",
+            "PurchaseGluttony"
+        ]
+    },
+    "PurchaseGluttonyMax": {
+        "recognition": "OCR",
+        "expected": "MAX",
+        "roi": [
+            935,
+            462,
+            46,
+            24
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "BankPurchase_Gluttony"
+        ]
+    },
+    "BankPurchase_Gluttony": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "roi": [
+            760,
+            509,
+            60,
+            27
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "ObtainedAwards"
+        ]
+    },
+    "EnterFragmentsShop": {
+        "recognition": "OCR",
+        "expected": "碎片叙事",
+        "roi": [
+            30,
+            432,
+            208,
+            132
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                244,
+                138,
+                994,
+                464
+            ]
+        }
     }
 }

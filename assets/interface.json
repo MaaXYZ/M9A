@@ -100,7 +100,8 @@
                 "柜台特奉",
                 "金兔子(低阶柜台)",
                 "紫地球仪(低阶柜台)",
-                "蓝地球仪(低阶柜台)"
+                "蓝地球仪(低阶柜台)",
+                "饕餮"
             ]
         },
         {
@@ -1356,6 +1357,22 @@
                 {
                     "name": "Yes",
                     "pipeline_override": {}
+                }
+            ]
+        },
+        "饕餮": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "Gluttony": {
+                            "enabled": false
+                        }
+                    }
                 }
             ]
         },
