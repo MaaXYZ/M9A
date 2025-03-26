@@ -94,7 +94,14 @@
         },
         {
             "name": "银行购物",
-            "entry": "ModifyBankTaskList"
+            "entry": "ModifyBankTaskList",
+            "option": [
+                "单账号",
+                "柜台特奉",
+                "金兔子",
+                "紫地球仪",
+                "蓝地球仪"
+            ]
         },
         {
             "name": "领取奖励",
@@ -1269,6 +1276,86 @@
                             "next": []
                         }
                     }
+                }
+            ]
+        },
+        "单账号": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "ModifyBankTaskList": {
+                            "action": "DoNothing"
+                        }
+                    }
+                }
+            ]
+        },
+        "柜台特奉": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "FreeWeeklyGift": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "金兔子": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "Rabbit": {
+                            "enabled": false
+                        }
+                    }
+                }
+            ]
+        },
+        "紫地球仪": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "SmallGlobe": {
+                            "enabled": false
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                }
+            ]
+        },
+        "蓝地球仪": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "TinyGlobe": {
+                            "enabled": false
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
                 }
             ]
         },
