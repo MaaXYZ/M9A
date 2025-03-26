@@ -93,6 +93,10 @@
             "doc": "[size:15][color:tomato]注意上下半编队不要重复[/color][/size]"
         },
         {
+            "name": "银行购物",
+            "entry": "ModifyBankTaskList"
+        },
+        {
             "name": "领取奖励",
             "entry": "Awards",
             "option": [
