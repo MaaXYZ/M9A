@@ -103,7 +103,9 @@
                 "蓝地球仪(低阶柜台)",
                 "饕餮",
                 "蓝地球仪(心相观测)",
-                "共鸣晶匣"
+                "共鸣晶匣",
+                "金瓜子",
+                "原味鸡"
             ]
         },
         {
@@ -1416,6 +1418,22 @@
                     "name": "No",
                     "pipeline_override": {
                         "GoldenMelonSeeds": {
+                            "enabled": false
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
+                }
+            ]
+        },
+        "原味鸡": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "OriginalChicken": {
                             "enabled": false
                         }
                     }

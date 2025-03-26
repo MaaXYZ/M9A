@@ -61,6 +61,7 @@
             "TinyGlobe(1)",
             "ResonantCassette",
             "GoldenMelonSeeds",
+            "OriginalChicken",
             "ObtainedAwards",
             "BackButton"
         ]
@@ -986,6 +987,108 @@
         ]
     },
     "BankPurchase_GoldenMelonSeeds": {
+        "recognition": "OCR",
+        "expected": "购买",
+        "roi": [
+            760,
+            509,
+            60,
+            27
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "ObtainedAwards"
+        ]
+    },
+    "OriginalChicken": {
+        "doc": "原味鸡",
+        "next": [
+            "FlagInDneiricShop_2"
+        ],
+        "interrupt": [
+            "EnterFragmentsShop"
+        ]
+    },
+    "FlagInDneiricShop_2": {
+        "recognition": "OCR",
+        "expected": "梦境记述",
+        "roi": [
+            520,
+            67,
+            83,
+            22
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 300,
+            "target": [
+                244,
+                138,
+                994,
+                464
+            ]
+        },
+        "next": [
+            "NoOriginalChicken"
+        ],
+        "interrupt": [
+            "PurchaseOriginalChicken"
+        ]
+    },
+    "NoOriginalChicken": {
+        "recognition": "Custom",
+        "custom_recognition": "BankShop",
+        "custom_recognition_param": {
+            "expected": "片刻的喧嚣",
+            "inverse": true
+        },
+        "action": "Custom",
+        "custom_action": "DisableNode",
+        "custom_action_param": {
+            "node_name": "OriginalChicken"
+        },
+        "next": [
+            "PurchaseRecord_OriginalChicken"
+        ]
+    },
+    "PurchaseRecord_OriginalChicken": {
+        "action": "Custom",
+        "custom_action": "BankPurchaseRecord",
+        "custom_action_param": {
+            "item": "OriginalChicken"
+        }
+    },
+    "PurchaseOriginalChicken": {
+        "recognition": "Custom",
+        "custom_recognition": "BankShop",
+        "custom_recognition_param": {
+            "expected": "片刻的喧嚣"
+        },
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "next": [
+            "PurchaseOriginalChickenMax",
+            "PurchaseOriginalChicken"
+        ]
+    },
+    "PurchaseOriginalChickenMax": {
+        "recognition": "OCR",
+        "expected": "MAX",
+        "roi": [
+            935,
+            462,
+            46,
+            24
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "BankPurchase_OriginalChicken"
+        ]
+    },
+    "BankPurchase_OriginalChicken": {
         "recognition": "OCR",
         "expected": "购买",
         "roi": [
