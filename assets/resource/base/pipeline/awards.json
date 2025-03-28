@@ -30,7 +30,8 @@
             "HomeFlag"
         ],
         "interrupt": [
-            "ReturnMain"
+            "HomeButton",
+            "BackButton"
         ]
     },
     "Sub_MailBadge": {

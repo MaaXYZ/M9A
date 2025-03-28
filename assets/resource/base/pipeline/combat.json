@@ -689,7 +689,7 @@
             "HomeFlag"
         ],
         "interrupt": [
-            "ReturnMain"
+            "HomeButton"
         ]
     },
     "Replaying": {

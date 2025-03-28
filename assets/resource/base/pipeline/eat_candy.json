@@ -64,7 +64,7 @@
             "HomeFlag"
         ],
         "interrupt": [
-            "ReturnMain"
+            "HomeButton"
         ]
     },
     "EatMiniCandy24H": {
@@ -154,7 +154,7 @@
             "HomeFlag"
         ],
         "interrupt": [
-            "ReturnMain"
+            "HomeButton"
         ]
     },
     "SmallCandy24HNotEnough": {
@@ -172,7 +172,7 @@
             "HomeFlag"
         ],
         "interrupt": [
-            "ReturnMain"
+            "HomeButton"
         ]
     },
     "BigCandy24HNotEnough": {
@@ -189,7 +189,7 @@
             "HomeFlag"
         ],
         "interrupt": [
-            "ReturnMain"
+            "HomeButton"
         ]
     },
     "Sub_QuitEatCandyPage": {
