@@ -181,7 +181,9 @@
                     "PsychubeVictory"
                 ],
                 "interrupt": [
-                    "HomeButton"
+                    "HomeButton",
+                    "CombatEntering",
+                    "HomeLoading"
                 ]
             },
             "PsychubeDouble": {
