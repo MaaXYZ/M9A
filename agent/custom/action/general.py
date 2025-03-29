@@ -79,3 +79,30 @@ class DisableNode(CustomAction):
         context.override_pipeline({f"{node_name}": {"enabled": False}})
 
         return CustomAction.RunResult(success=True)
+
+
+@AgentServer.custom_action("NodeOverride")
+class NodeOverride(CustomAction):
+    """
+    在 node 中执行 pipeline_override 。
+
+    参数格式:
+    {
+        "node_name": {"被覆盖参数": "覆盖值"},
+        "node_name1": {"被覆盖参数": "覆盖值"}
+    }
+    """
+
+    def run(
+        self,
+        context: Context,
+        argv: CustomAction.RunArg,
+    ) -> CustomAction.RunResult:
+
+        nodes = json.loads(argv.custom_action_param)
+
+        for node in nodes:
+            for key in nodes[node]:
+                context.override_pipeline({f"{node}": {f"{key}": nodes[node][key]}})
+
+        return CustomAction.RunResult(success=True)

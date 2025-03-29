@@ -60,7 +60,10 @@
         },
         {
             "name": "每日心相（意志解析）",
-            "entry": "Psychube"
+            "entry": "Psychube",
+            "option": [
+                "双重解析加成作战"
+            ]
         },
         {
             "name": "常规作战",
@@ -997,6 +1000,22 @@
                             "enabled": true
                         }
                     }
+                }
+            ]
+        },
+        "双重解析加成作战": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "PsychubeDouble": {
+                            "enabled": false
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
                 }
             ]
         },

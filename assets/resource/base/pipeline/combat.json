@@ -219,13 +219,13 @@
         "next": "SwipeLeftAndFindStage"
     },
     "ResourceChapterLabel": {
-        "recognition": "TemplateMatch",
-        "template": "Combat/ResourceChapterLabel.png",
+        "recognition": "OCR",
+        "expected": "资源",
         "roi": [
-            4,
-            559,
-            1276,
-            161
+            22,
+            613,
+            1258,
+            107
         ],
         "action": "Click",
         "post_wait_freezes": {
@@ -644,6 +644,7 @@
             188,
             347
         ],
+        "order_by": "Score",
         "action": "Click",
         "next": [
             "SetReplaysTimes",

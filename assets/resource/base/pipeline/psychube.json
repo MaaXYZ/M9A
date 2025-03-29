@@ -1,47 +1,19 @@
 {
     "Psychube": {
         "next": [
-            "PsychubeEnterTheShow",
-            "PsychubeResourceStages",
-            "FreePsychubeStages",
-            "PsychubeStages_7"
+            "FreePsychube",
+            "NoFreePsychube"
         ],
         "interrupt": [
+            "EnterTheShow",
+            "ResourceChapterLabel",
             "ReturnMain"
         ]
     },
-    "PsychubeEnterTheShow": {
-        "recognition": "TemplateMatch",
-        "template": "Psychube/EnterTheShow.png",
-        "roi": [
-            926,
-            221,
-            229,
-            153
-        ],
-        "action": "Click",
-        "next": [
-            "PsychubeResourceStages"
-        ]
-    },
-    "PsychubeResourceStages": {
-        "recognition": "TemplateMatch",
-        "template": "Psychube/ResourceStages.png",
-        "roi": [
-            4,
-            559,
-            1276,
-            161
-        ],
-        "action": "Click",
-        "next": [
-            "FreePsychubeStages",
-            "NoFreePsychubeStagesFlag"
-        ]
-    },
-    "FreePsychubeStages": {
+    "FreePsychube": {
         "recognition": "TemplateMatch",
         "template": "Psychube/FreePsychubeStages.png",
+        "threshold": 0.9,
         "roi": [
             180,
             203,
@@ -50,42 +22,23 @@
         ],
         "action": "Click",
         "next": [
-            "PsychubeStages_7",
-            "PsychubeReadyForAction",
-            "FreePsychubeStages"
-        ]
-    },
-    "NoFreePsychubeStagesFlag": {
-        "recognition": "TemplateMatch",
-        "template": "Psychube/NoFreePsychubeStagesFlag.png",
-        "roi": [
-            732,
-            210,
-            233,
-            297
-        ],
-        "next": [
-            "HomeFlag"
+            "PsychubeReadyForAction"
         ],
         "interrupt": [
-            "ReturnMain"
+            "PsychubeStage07"
         ]
     },
-    "PsychubeStages_7": {
-        "recognition": "TemplateMatch",
-        "template": "Psychube/PsychubeStages_7.png",
+    "PsychubeStage07": {
+        "recognition": "OCR",
+        "expected": "7",
         "roi": [
-            306,
-            492,
-            271,
-            179
+            367,
+            551,
+            43,
+            33
         ],
-        "action": "Click",
-        "post_wait_freezes": 1,
-        "next": [
-            "PsychubeReadyForAction",
-            "PsychubeStages_7"
-        ]
+        "only_rec": true,
+        "action": "Click"
     },
     "PsychubeReadyForAction": {
         "recognition": "OCR",
@@ -100,13 +53,176 @@
         ],
         "action": "Click",
         "next": [
-            "PsychubeSwitchToReplay",
-            "PsychubeSetReplaysTimes",
-            "StartReplay"
+            "PsychubeFlagInReplayReady"
         ],
         "interrupt": [
+            "PsychubeSwitchToReplay",
             "CombatEntering"
         ]
+    },
+    "PsychubeFlagInReplayReady": {
+        "recognition": "OCR",
+        "expected": "复现",
+        "roi": [
+            1031,
+            633,
+            141,
+            36
+        ],
+        "only_rec": true,
+        "next": [
+            "PsychubeFlagInReplayTwoTimes"
+        ],
+        "interrupt": [
+            "SwitchCombatTimes"
+        ]
+    },
+    "PsychubeFlagInReplayTwoTimes": {
+        "recognition": "OCR",
+        "expected": "二",
+        "roi": [
+            1032,
+            634,
+            70,
+            31
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "timeout": 60000,
+        "next": [
+            "PsychubeVictory"
+        ],
+        "interrupt": [
+            "ReplayingNoNext"
+        ]
+    },
+    "PsychubeVictory": {
+        "recognition": "OCR",
+        "expected": [
+            "战斗",
+            "胜利"
+        ],
+        "roi": [
+            678,
+            10,
+            473,
+            240
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                614,
+                457,
+                666,
+                263
+            ]
+        },
+        "next": [
+            "PsychubeFlagInReadyForAction",
+            "PsychubeVictory"
+        ],
+        "interrupt": [
+            "BackButton",
+            "HomeLoading"
+        ]
+    },
+    "PsychubeFlagInReadyForAction": {
+        "recognition": "OCR",
+        "expected": [
+            "开始行动"
+        ],
+        "roi": [
+            1040,
+            537,
+            235,
+            136
+        ],
+        "next": [
+            "PsychubeDouble",
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "HomeButton"
+        ]
+    },
+    "PsychubeDouble": {
+        "doc": "识别加成次数，根据结果覆盖 PsychubeVictoryOverrideTask 中参数",
+        "recognition": "OCR",
+        "expected": "[1-4]/4",
+        "roi": [
+            1121,
+            565,
+            43,
+            21
+        ],
+        "only_rec": true,
+        "action": "Custom",
+        "custom_action": "PsychubeDoubleTimes",
+        "next": [
+            "PsychubeVictoryOverrideTask"
+        ]
+    },
+    "PsychubeVictoryOverrideTask": {
+        "action": "Custom",
+        "custom_action": "NodeOverride",
+        "custom_action_param": {
+            "PsychubeFlagInReplayTwoTimes": {
+                "expected": "四"
+            },
+            "SwitchCombatTimes": {
+                "custom_action_param": {
+                    "times": 4
+                }
+            },
+            "PsychubeVictory": {
+                "next": [
+                    "HomeFlag",
+                    "PsychubeVictory"
+                ],
+                "interrupt": [
+                    "HomeButton"
+                ]
+            },
+            "PsychubeDouble": {
+                "enabled": false
+            }
+        },
+        "next": [
+            "PsychubeReadyForAction"
+        ]
+    },
+    "ReplayingNoNext": {
+        "recognition": "OCR",
+        "expected": [
+            "行为",
+            "复现"
+        ],
+        "roi": [
+            1078,
+            77,
+            202,
+            143
+        ],
+        "post_delay": 5000
+    },
+    "SwitchCombatTimes": {
+        "action": "Custom",
+        "custom_action": "SwitchCombatTimes",
+        "custom_action_param": {
+            "times": 2
+        }
+    },
+    "PsychubeSwitchToReplay": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/SwitchToReplay.png",
+        "roi": [
+            538,
+            572,
+            161,
+            148
+        ],
+        "action": "Click"
     },
     "CombatEntering": {
         "recognition": "TemplateMatch",
@@ -127,53 +243,14 @@
             ]
         }
     },
-    "PsychubeSwitchToReplay": {
+    "NoFreePsychube": {
         "recognition": "TemplateMatch",
-        "template": "Psychube/SwitchToReplay.png",
-        "threshold": 0.8,
+        "template": "Psychube/NoFreePsychubeStagesFlag.png",
         "roi": [
-            548,
-            569,
-            400,
-            151
-        ],
-        "action": "Click",
-        "next": [
-            "PsychubeSetReplaysTimes",
-            "StartReplay",
-            "PsychubeSwitchToReplay"
-        ]
-    },
-    "PsychubeSetReplaysTimes": {
-        "recognition": "TemplateMatch",
-        "template": "Psychube/SetReplaysTimes.png",
-        "threshold": 0.8,
-        "roi": [
-            737,
-            586,
-            174,
-            134
-        ],
-        "action": "Click",
-        "post_wait_freezes": 1,
-        "next": [
-            "PsychubeReplayTwice",
-            "PsychubeSetReplaysTimes"
-        ]
-    },
-    "PsychubeReplayTwice": {
-        "recognition": "TemplateMatch",
-        "template": "Psychube/ReplayTwice.png",
-        "roi": [
-            740,
-            463,
-            168,
-            148
-        ],
-        "action": "Click",
-        "next": [
-            "PsychubeReplayTwice",
-            "StartReplay"
+            732,
+            210,
+            233,
+            297
         ]
     }
 }
