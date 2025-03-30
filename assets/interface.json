@@ -42,6 +42,7 @@
     "agent": {
         "child_exec": "python",
         "child_args": [
+            "-u",
             "{PROJECT_DIR}/agent/main.py"
         ]
     },
