@@ -14,5 +14,21 @@
                 "end_time": 1742417999000
             }
         }
+    },
+    "2.7": {
+        "version_name": "1987宇宙组曲",
+        "start_time": 1744250400000,
+        "end_time": 1747256399000,
+        "activity": {
+            "combat": {
+                "event_type": "SideStory",
+                "start_time": 1744250400000,
+                "end_time": 1746997199000
+            },
+            "anecdote": {
+                "start_time": 1744664400000,
+                "end_time": 1745873999000
+            }
+        }
     }
 }
