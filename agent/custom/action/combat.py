@@ -1,5 +1,6 @@
 import re
 import json
+import time
 
 from maa.agent.agent_server import AgentServer
 from maa.custom_action import CustomAction
@@ -93,11 +94,47 @@ class PsychubeDoubleTimes(CustomAction):
             return CustomAction.RunResult(success=True)
 
     def _int2Chinese(self, times: int) -> str:
-        if times == 1:
-            return "一"
-        elif times == 2:
-            return "二"
-        elif times == 3:
-            return "三"
-        else:
-            return "四"
+        Chinese = ["一", "二", "三", "四"]
+        return Chinese[times - 1]
+
+
+@AgentServer.custom_action("TeamSelect")
+class TeamSelect(CustomAction):
+    """
+    队伍选择
+
+    参数格式：
+    {
+        "team": "队伍选择"
+    }
+    """
+
+    def run(
+        self,
+        context: Context,
+        argv: CustomAction.RunArg,
+    ) -> CustomAction.RunResult:
+
+        team = json.loads(argv.custom_action_param)["team"]
+        target_list = [
+            [794, 406],
+            [794, 466],
+            [797, 525],
+            [798, 586],
+        ]
+        target = target_list[team - 1]
+
+        flag = False
+        while not flag:
+
+            img = context.tasker.controller.post_screencap().wait().get()
+
+            if context.run_recognition("TeamlistOpen", img) is not None:
+                context.tasker.controller.post_click(target[0], target[1])
+                time.sleep(1)
+                flag = True
+            elif context.run_recognition("TeamlistOff", img) is not None:
+                context.tasker.controller.post_click(965, 650)
+                time.sleep(1)
+
+        return CustomAction.RunResult(success=True)

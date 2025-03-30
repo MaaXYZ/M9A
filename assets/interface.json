@@ -97,6 +97,14 @@
             "doc": "[size:15][color:tomato]注意上下半编队不要重复[/color][/size]"
         },
         {
+            "name": "自动醒梦",
+            "entry": "Lucidscape",
+            "option": [
+                "醒梦上半编队",
+                "醒梦下半编队"
+            ]
+        },
+        {
             "name": "银行购物",
             "entry": "ModifyBankTaskList",
             "option": [
@@ -1200,6 +1208,94 @@
                                 127,
                                 32
                             ]
+                        }
+                    }
+                }
+            ]
+        },
+        "醒梦上半编队": {
+            "cases": [
+                {
+                    "name": "一",
+                    "pipeline_override": {
+                        "LucidscapeTeamSelect_1": {
+                            "custom_action_param": {
+                                "team": 1
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "二",
+                    "pipeline_override": {
+                        "LucidscapeTeamSelect_1": {
+                            "custom_action_param": {
+                                "team": 2
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "三",
+                    "pipeline_override": {
+                        "LucidscapeTeamSelect_1": {
+                            "custom_action_param": {
+                                "team": 3
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "四",
+                    "pipeline_override": {
+                        "LucidscapeTeamSelect_1": {
+                            "custom_action_param": {
+                                "team": 4
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "醒梦下半编队": {
+            "cases": [
+                {
+                    "name": "二",
+                    "pipeline_override": {
+                        "LucidscapeTeamSelect_2": {
+                            "custom_action_param": {
+                                "team": 2
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "三",
+                    "pipeline_override": {
+                        "LucidscapeTeamSelect_2": {
+                            "custom_action_param": {
+                                "team": 3
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "四",
+                    "pipeline_override": {
+                        "LucidscapeTeamSelect_2": {
+                            "custom_action_param": {
+                                "team": 4
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "一",
+                    "pipeline_override": {
+                        "LucidscapeTeamSelect_2": {
+                            "custom_action_param": {
+                                "team": 1
+                            }
                         }
                     }
                 }
