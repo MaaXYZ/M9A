@@ -28,7 +28,9 @@
     "ReturnMain": {
         "doc": "返回主界面（专供任务开始前使用）",
         "next": [
-            "HomeFlagCloseReturnMain",
+            "HomeFlagCloseReturnMain"
+        ],
+        "interrupt": [
             "HomeButton",
             "BackButton",
             "HomeLoading",
