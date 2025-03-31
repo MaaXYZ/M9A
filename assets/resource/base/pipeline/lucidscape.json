@@ -107,6 +107,7 @@
             51
         ],
         "only_rec": true,
+        "pre_delay": 2000,
         "post_delay": 1000,
         "action": "Custom",
         "custom_action": "LucidscapeStatusDetect",
@@ -159,7 +160,6 @@
         ],
         "only_rec": true,
         "action": "Click",
-        "timeout": 500000,
         "rate_limit": 10000,
         "next": [
             "LucidscapeFailed",
@@ -205,7 +205,7 @@
         "post_delay": 2000,
         "next": [
             "HomeFlag",
-            "LimboFailed"
+            "LucidscapeFailed"
         ],
         "interrupt": [
             "HomeButton"
@@ -235,7 +235,8 @@
         },
         "action": "Click",
         "next": [
-            "LucidscapeStatusDetect"
+            "LucidscapeStatusDetect",
+            "LucidscapeVictory"
         ],
         "interrupt": [
             "HomeLoading"
