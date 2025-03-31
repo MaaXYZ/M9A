@@ -81,11 +81,11 @@ jobs:
           out-file-path: "deps"
           extract: true
 
-      - name: Download MFAWPF  
+      - name: Download MFAAvalonia  
         uses: robinraju/release-downloader@v1  
         with:
-          repository: SweetSmellFox/MFAWPF
-          fileName: "MFAWPF*"
+          repository: SweetSmellFox/MFAAvalonia
+          fileName: "MFAAvalonia-*-win-x64*"
           latest: true
           out-file-path: "MFA"
           extract: true
@@ -99,7 +99,7 @@ jobs:
         shell: bash
         run: |
           python ./tools/install.py ${{ needs.meta.outputs.tag }}
-          cp MFA/MFAWPF.exe install
+          cp MFA/MFAAvalonia.exe MFA/MFAUpdater.exe MFA/MFAUpdater.dll MFA/av_libglesv2.dll MFA/libHarfBuzzSharp.dll MFA/libonigwrap.dll MFA/libSkiaSharp.dll MFA/uiohook.dll install/
 
       - uses: actions/upload-artifact@v4
         with:
@@ -153,7 +153,6 @@ jobs:
         with:
           name: M9A-linux-${{ matrix.arch }}
           path: "install"
-
 
   macos:
     needs: meta
