@@ -1,3 +1,4 @@
+import re
 import time
 import json
 
@@ -22,22 +23,42 @@ class LucidscapeStageSelect(CustomAction):
 
         img = context.tasker.controller.post_screencap().wait().get()
 
-        # Stage4-Stage1
+        # Stage1-Stage4
         roi_list = [
-            [969, 336, 93, 17],
-            [477, 195, 93, 18],
-            [634, 468, 94, 17],
-            [199, 443, 94, 17],
+            [221, 510, 95, 22],
+            [644, 542, 95, 22],
+            [486, 272, 95, 22],
+            [982, 410, 95, 22],
         ]
 
-        stage = 4
+        stage = 1
         for roi in roi_list:
+            logger.debug(f"stage: {stage}")
+            if stage == 1 or stage == 2:
+                max = 200
+            elif stage == 3 or stage == 4:
+                max = 150
             reco_detail = context.run_recognition(
-                "LucidscapeStageLocked", img, {"LucidscapeStageLocked": {"roi": roi}}
+                "LucidscapeStageLocked",
+                img,
+                {"LucidscapeStageLocked": {"expected": f"\\d/{max}", "roi": roi}},
             )
             if reco_detail is None:
-                break
-            stage -= 1
+                return CustomAction.RunResult(success=False)
+            pattern = f"(\\d{{1,3}})/{max}"
+            text = reco_detail.best_result.text
+            logger.debug(f"text: {text}")
+            match = re.search(pattern, text)
+            if match:
+                score = match.group(1)
+                score = int(score)
+                logger.debug(f"score: {score}")
+                if score == 0:
+                    break
+            stage += 1
+
+        if stage == 5:
+            stage == 4
 
         logger.info(f"当前解锁片段{stage}，准备进入")
 

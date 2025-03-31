@@ -90,6 +90,7 @@
     },
     "LucidscapeStageSelect": {
         "doc": "醒梦片段选择",
+        "pre_delay": 2000,
         "action": "Custom",
         "custom_action": "LucidscapeStageSelect",
         "next": [
@@ -160,14 +161,28 @@
         ],
         "only_rec": true,
         "action": "Click",
+        "timeout": 60000,
         "rate_limit": 10000,
         "next": [
             "LucidscapeFailed",
             "LucidscapeVictory"
         ],
         "interrupt": [
-            "Combating"
+            "Combating",
+            "LucidscapeSkipWarning"
         ]
+    },
+    "LucidscapeSkipWarning": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            774,
+            406,
+            64,
+            30
+        ],
+        "only_rec": true,
+        "action": "Click"
     },
     "Combating": {
         "recognition": "TemplateMatch",
@@ -239,8 +254,34 @@
             "LucidscapeVictory"
         ],
         "interrupt": [
-            "HomeLoading"
+            "HomeLoading",
+            "LucidscapeSkip",
+            "LucidscapeClickBlank"
         ]
+    },
+    "LucidscapeSkip": {
+        "recognition": "OCR",
+        "expected": "跳过",
+        "roi": [
+            1142,
+            42,
+            48,
+            27
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "LucidscapeClickBlank": {
+        "recognition": "OCR",
+        "expected": "空白",
+        "roi": [
+            575,
+            597,
+            128,
+            30
+        ],
+        "only_rec": true,
+        "action": "Click"
     },
     "TeamlistOff": {
         "recognition": "TemplateMatch",
@@ -361,7 +402,7 @@
     },
     "LucidscapeStageLocked": {
         "recognition": "OCR",
-        "expected": "LOCKED",
+        "expected": "\\d/[12][50]0",
         "roi_code": "Locked所在位置",
         "only_rec": true
     },

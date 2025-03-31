@@ -105,8 +105,8 @@ def check_and_install_dependencies():
     enable_pip_install = pip_config.get("enable_pip_install", True)
     mirror = pip_config.get("mirror", None)
 
-    logger.info(f"当前版本: {current_version}, 上次运行版本: {last_version}")
     logger.info(f"启用 pip 安装依赖: {enable_pip_install}")
+    logger.info(f"当前版本: {current_version}, 上次运行版本: {last_version}")
 
     if enable_pip_install and (
         current_version != last_version or current_version == "unknown"
