@@ -12,7 +12,7 @@ def setup_logger(log_dir="debug/custom"):
 
     logger.add(
         sys.stderr,
-        format="[<level>{level}</level>] <cyan>{name}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>",
+        format="[<level>{level}</level>] <level>{message}</level>",
         colorize=True,
         level="INFO",
     )
