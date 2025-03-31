@@ -494,11 +494,37 @@
             834,
             611
         ],
-        "action": "Click",
+        "action": "Custom",
+        "custom_action": "SummonlngSwipe",
+        "post_delay": 1000,
         "next": [
             "SummonlngSuccess",
             "SummonlngSuccessBack"
         ]
+    },
+    "SummonlngCardFirst": {
+        "recognition": "TemplateMatch",
+        "template": "Wilderness/UniqueParxxxx.png",
+        "roi": [
+            214,
+            109,
+            834,
+            611
+        ],
+        "order_by": "Horizontal",
+        "index": 0
+    },
+    "SummonlngCardLast": {
+        "recognition": "TemplateMatch",
+        "template": "Wilderness/UniqueParxxxx.png",
+        "roi": [
+            214,
+            109,
+            834,
+            611
+        ],
+        "order_by": "Horizontal",
+        "index": -1
     },
     "SummonlngSuccessBack": {
         "recognition": "TemplateMatch",
