@@ -41,6 +41,17 @@ jobs:
             echo "Changes detected in assets/resource/"
             git status --porcelain assets/resource/
             echo "CHANGES_DETECTED=true" >> $GITHUB_ENV
+            
+            # 检查哪些文件发生了变化
+            if [[ -n "$(git status --porcelain assets/resource/cn.json)" ]]; then
+              echo "CN_CHANGED=true" >> $GITHUB_ENV
+            fi
+            if [[ -n "$(git status --porcelain assets/resource/en.json)" ]]; then
+              echo "EN_CHANGED=true" >> $GITHUB_ENV
+            fi
+            if [[ -n "$(git status --porcelain assets/resource/jp.json)" ]]; then
+              echo "JP_CHANGED=true" >> $GITHUB_ENV
+            fi
           else
             echo "No changes detected in assets/resource/"
             echo "CHANGES_DETECTED=false" >> $GITHUB_ENV
@@ -54,7 +65,23 @@ jobs:
           
           git add assets/resource/*.json
           timestamp=$(date -u "+%Y-%m-%d %H:%M:%S")
-          git commit -m "chore: Sync JSON files from M9A-Act-Data - $timestamp UTC"
+          
+          # 创建定制的提交消息
+          changed_files=""
+          if [[ "${{ env.CN_CHANGED }}" == "true" ]]; then
+            changed_files+="cn "
+          fi
+          if [[ "${{ env.EN_CHANGED }}" == "true" ]]; then
+            changed_files+="en "
+          fi
+          if [[ "${{ env.JP_CHANGED }}" == "true" ]]; then
+            changed_files+="jp "
+          fi
+          
+          # 去除末尾空格
+          changed_files=$(echo "$changed_files" | xargs)
+          
+          git commit -m "chore: update $changed_files activity data from M9A-Act-Data - $timestamp UTC"
           git push
           
           echo "JSON files successfully synchronized"
