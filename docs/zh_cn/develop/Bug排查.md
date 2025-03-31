@@ -19,7 +19,7 @@
 
 1. 确认资源版本以及运行方式
 
-   对于 M9A 来说，有两种运行方式：1. MaaPiCli 2. MFAWPF
+   对于 M9A 来说，有两种运行方式：1. MaaPiCli 2. MFA
 
    根据观察，MaaPiCli运行时有行log为
 

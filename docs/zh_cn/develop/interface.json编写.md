@@ -12,6 +12,18 @@
 
 对于 M9A 来说，固定选择 adb 方式，基本不需要改动。
 
+## agent
+
+```json
+"agent": {
+    "child_exec": "python",
+    "child_args": [
+        "{PROJECT_DIR}/agent/main.py",
+        "-u"
+    ]
+}
+```
+
 ## resource
 
 资源配置。每种资源需要资源名 `name` 以及 资源路径 `path`，均为必填。
