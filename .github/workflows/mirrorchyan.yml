@@ -20,7 +20,6 @@ jobs:
         with:
           filetype: latest-release
           fileName: "M9A-${{ matrix.os }}-${{ matrix.arch }}-*.zip"
-          pick_files: '["agent", "resource", "python", "interface.json", "requirements.txt"]'
           mirrorchyan_rid: M9A
 
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -35,7 +34,6 @@ jobs:
         with:
           filetype: latest-release
           fileName: "M9A-${{ matrix.os }}-${{ matrix.arch }}-*.zip"
-          pick_files: '["agent", "resource", "interface.json", "requirements.txt"]'
           mirrorchyan_rid: M9A
 
           github_token: ${{ secrets.GITHUB_TOKEN }}
