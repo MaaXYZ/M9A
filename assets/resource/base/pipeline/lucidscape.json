@@ -108,7 +108,16 @@
             51
         ],
         "only_rec": true,
-        "pre_delay": 2000,
+        "pre_wait_freezes": {
+            "time": 1000,
+            "target": [
+                400,
+                199,
+                569,
+                354
+            ]
+        },
+        "pre_delay": 3000,
         "post_delay": 1000,
         "action": "Custom",
         "custom_action": "LucidscapeStatusDetect",
@@ -192,17 +201,7 @@
             6,
             64,
             64
-        ],
-        "post_wait_freezes": {
-            "time": 400,
-            "target": [
-                275,
-                196,
-                536,
-                143
-            ],
-            "threshold": 0.9
-        }
+        ]
     },
     "LucidscapeFailed": {
         "recognition": "OCR",
