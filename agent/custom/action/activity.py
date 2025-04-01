@@ -112,40 +112,19 @@ class DuringAnecdote(CustomAction):
 
         now = int(time.time() * 1000)
 
-        last_key = list(data.keys())[-1]
-        if now > data[last_key]["activity"]["anecdote"]["end_time"]:
-            context.override_pipeline(
-                {
-                    "Anecdote": {
-                        "next": [],
-                        "interrupt": [],
-                        "focus": True,
-                        "focus_tip": "当前不在轶事开放时间，跳过当前任务",
-                    }
-                }
-            )
-            logger.info("当前不在轶事开放时间，跳过当前任务")
-            return CustomAction.RunResult(success=True)
-
         for key in reversed(list(data.keys())):
             item = data[key]
-            if now > item["activity"]["anecdote"]["start_time"]:
+            if (
+                now > item["activity"]["anecdote"]["start_time"]
+                and now < item["activity"]["anecdote"]["start_time"]
+            ):
                 logger.info(f"当前版本：{key} {item['version_name']}")
                 logger.info(
                     f"距离轶事结束还剩 {ms_timestamp_diff_to_dhm(now, item['activity']['anecdote']['end_time'])}"
                 )
                 return CustomAction.RunResult(success=True)
 
-        context.override_pipeline(
-            {
-                "Anecdote": {
-                    "next": [],
-                    "interrupt": [],
-                    "focus": True,
-                    "focus_tip": "当前为未知版本，跳过当前任务",
-                }
-            }
-        )
-        logger.error("没有当前版本信息")
+        context.override_pipeline({"Anecdote": {"next": [], "interrupt": []}})
+        logger.info("当前不在轶事开放时间，跳过当前任务")
 
-        return CustomAction.RunResult(success=False)
+        return CustomAction.RunResult(success=True)
