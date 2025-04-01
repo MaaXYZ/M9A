@@ -6,6 +6,7 @@ repo = "M9A"
 # 标题
 header = """
 # 更新日志
+"""
 
 body = """
 {%- macro remote_url() -%}
