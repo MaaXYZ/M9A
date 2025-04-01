@@ -58,7 +58,7 @@ class LucidscapeStageSelect(CustomAction):
             stage += 1
 
         if stage == 5:
-            stage == 4
+            stage = 4
 
         logger.info(f"当前解锁片段{stage}，准备进入")
 
