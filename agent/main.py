@@ -84,7 +84,15 @@ def install_requirements(req_file="requirements.txt", mirror=None) -> bool:
 
     try:
         logger.info("开始安装依赖...")
-        cmd = [sys.executable, "-m", "pip", "install", "-r", str(req_path)]
+        cmd = [
+            sys.executable,
+            "-m",
+            "pip",
+            "install",
+            "-r",
+            str(req_path),
+            "--no-warn-script-location",
+        ]
 
         if mirror:
             logger.info(f"使用镜像源: {mirror}")
