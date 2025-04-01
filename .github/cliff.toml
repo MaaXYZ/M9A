@@ -17,7 +17,7 @@ body = """
     - {% if commit.scope %}*({{ commit.scope }})* {% endif %}\
         {% if commit.breaking %}[**breaking**] {% endif %}\
         {{ commit.message | upper_first }} \
-        @{{ commit.author.username | default(value=commit.author.name) }}
+        @{{ author.login | default(value=commit.author.name) }}
 {% endmacro -%}
 
 {% if version %}\
@@ -82,3 +82,7 @@ ignore_tags = "rc"
 
 # 排序规则
 sort_commits = "oldest"
+
+# 启用GitHub集成
+[git.github]
+commits = true
