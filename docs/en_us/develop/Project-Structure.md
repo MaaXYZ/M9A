@@ -1,6 +1,6 @@
-# 项目结构
+# Project Structure
 
-- [项目结构](#项目结构)
+- [Project Structure](#project-structure)
   - [`.github`](#github)
     - [`.github/ISSUE_TEMPLATE`](#githubissue_template)
     - [`.github/workflows`](#githubworkflows)
@@ -49,192 +49,192 @@
   - [`README.md`](#readmemd)
   - [`requirements.txt`](#requirementstxt)
 
-以下为本项目项目结构及说明。
+Below is the project structure and its description.
 
 ## `.github`
 
-github 配置。
+GitHub configuration.
 
 ### `.github/ISSUE_TEMPLATE`
 
-github issue 模板。
+GitHub issue templates.
 
 ### `.github/workflows`
 
-github 工作流配置。
+GitHub workflow configurations.
 
 ### `.github/cliff.toml`
 
-cliff 配置。（用于自动生成 release note）
+Cliff configuration (used for automatically generating release notes).
 
 ## `.vscode`
 
-vscode 配置。
+VSCode configuration.
 
 ## `agent`
 
-存放 agent 相关代码。
+Contains code related to the agent.
 
 ### `agent/custom`
 
-自定义动作/识别。
+Custom actions/recognition.
 
 #### `agent/custom/action`
 
-自定义动作。
+Custom actions.
 
 #### `agent/custom/reco`
 
-自定义识别。
+Custom recognition.
 
 ### `agent/utils`
 
-工具函数。
+Utility functions.
 
 ### `agent/main.py`
 
-agent 启动前流程以及启动 AgentServer 。
+Processes before starting the agent and starts the AgentServer.
 
 ## `assets`
 
-存放项目资源文件。
+Contains project resource files.
 
 ### `assets/MaaCommonAssets`
 
-存放 Maa 通用资源，如 OCR 模型。
+Contains Maa common resources, such as OCR models.
 
 ### `assets/resource`
 
-存放项目资源文件。
+Contains project resource files.
 
 #### `assets/resource/base`
 
-存放官服资源，且为其他服务器资源的覆盖基础。
+Contains official server resources, which serve as the base for other server resources.
 
 ##### `assets/resource/base/image`
 
-存放模板图片。
+Contains template images.
 
 ##### `assets/resource/base/model`
 
-存放 OCR 模型、神经网络分类模型、神经网络检测模型。[烹饪指南](https://github.com/MaaXYZ/MaaNeuralNetworkCookbook)
+Contains OCR models, neural network classification models, and neural network detection models. [Cooking Guide](https://github.com/MaaXYZ/MaaNeuralNetworkCookbook)
 
 ##### `assets/resource/base/pipeline`
 
-json 文件，用于描述任务流水线，参考 [任务流水线协议](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/3.1-%E4%BB%BB%E5%8A%A1%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%8D%8F%E8%AE%AE.md) 编写。
+JSON files describing task pipelines, written according to the [Task Pipeline Protocol](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/3.1-%E4%BB%BB%E5%8A%A1%E6%B5%81%E6%B0%B4%E7%BA%BF%E5%8D%8F%E8%AE%AE.md).
 
 ##### `assets/resource/base/default_pipeline.json`
 
-设置 pipeline 中默认属性，参考 [default_pipeline.json](https://github.com/MaaXYZ/MaaFramework/blob/main/sample/resource/default_pipeline.json)。
+Sets default properties in the pipeline, refer to [default_pipeline.json](https://github.com/MaaXYZ/MaaFramework/blob/main/sample/resource/default_pipeline.json).
 
 #### `assets/resource/bilibili`
 
-存放B服资源，覆盖官服资源。
+Contains resources for the Bilibili server, overriding official server resources.
 
 #### `assets/resource/global_en`
 
-存放欧美服资源，依次覆盖官服、日服资源。
+Contains resources for the global English server, overriding official and Japanese server resources.
 
 #### `assets/resource/global_jp`
 
-存放日服资源，覆盖官方资源。
+Contains resources for the Japanese server, overriding official server resources.
 
 #### `assets/resource/cn.json`
 
-存放 cn 服活动信息。
+Contains activity information for the CN server.
 
 #### `assets/resource/en.json`
 
-存放 en 服活动信息。
+Contains activity information for the EN server.
 
 #### `assets/resource/jp.json`
 
-存放 jp 服活动信息。
+Contains activity information for the JP server.
 
 ### `assets/interface.json`
 
-MaaFramework 的一个标准化的项目结构声明，遵循[Project Interface 协议](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/3.2-ProjectInterface%E5%8D%8F%E8%AE%AE.md)。
+A standardized project structure declaration for MaaFramework, following the [Project Interface Protocol](https://github.com/MaaXYZ/MaaFramework/blob/main/docs/zh_cn/3.2-ProjectInterface%E5%8D%8F%E8%AE%AE.md).
 
 ## `deps`
 
-存放依赖。（将 MaaFramework Release 包下载后解压于此）
+Contains dependencies (extract the MaaFramework release package here).
 
 ## `docs`
 
-用户手册、开发文档。
+User manuals and development documentation.
 
 ### `docs/zh_cn`
 
-中文文档。
+Chinese documentation.
 
 #### `docs/zh_cn/develop`
 
-开发文档。
+Chinese Development documentation.
 
 #### `docs/zh_cn/manual`
 
-用户手册。
+Chinese User manuals.
 
 ### `docs/en_us`
 
-英文文档。
+English documentation.
 
 #### `docs/en_us/develop`
 
-英文开发文档。
+English Development documentation.
 
 #### `docs/en_us/manual`
 
-英文用户手册。
+English User manuals.
 
 ### `docs/.markdownlint.yaml`
 
-markdownlint 配置。
+Markdownlint configuration.
 
 ## `tools`
 
-项目工具。
+Project tools.
 
 ### `tools/ci`
 
-仅在 ci 中会用到的工具。
+Tools used only in CI.
 
 ### `tools/configure.py`
 
-配置工具，将 MaaCommonAssets 复制到 resource 中。
+Configuration tool, copies MaaCommonAssets to the resource directory.
 
 ### `tools/install.py`
 
-安装工具，将源码和依赖组装后放入 `install` 目录。
+Installation tool, assembles source code and dependencies into the `install` directory.
 
 ## `.gitignore`
 
-git 忽略清单。
+Git ignore list.
 
 ## `.gitmodules`
 
-git 子模块。
+Git submodules.
 
 ## `.pre-commit-config.yaml`
 
-pre-commit 配置。
+Pre-commit configuration.
 
 ## `.prettierrc`
 
-prettier 配置文件。
+Prettier configuration file.
 
 ## `LICENSE`
 
-开源许可证。
+Open source license.
 
 ## `package-lock.json&package.json`
 
-prettier 依赖。
+Prettier dependencies.
 
 ## `README.md`
 
-项目说明。
+Project description.
 
 ## `requirements.txt`
 
-agent(python) 所需依赖。
+Dependencies required for the agent (Python).
