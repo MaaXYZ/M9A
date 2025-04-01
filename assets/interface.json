@@ -74,7 +74,8 @@
                 "复现次数",
                 "刷完全部体力",
                 "吃全部临期糖"
-            ]
+            ],
+            "doc": "按关卡综合效率排序，刷取推荐来源：\n必要的记录https://www.kdocs.cn/l/cd5MWeCl5bKw"
         },
         {
             "name": "活动刷取",
@@ -169,10 +170,6 @@
     "option": {
         "作战关卡": {
             "cases": [
-                {
-                    "name": "---按关卡综合效率排序，刷取推荐来源：必要的记录https://www.kdocs.cn/l/cd5MWeCl5bKw---",
-                    "pipeline_override": {}
-                },
                 {
                     "name": "啮咬盒(床下怪物)：7-26 厄险（效率1）",
                     "pipeline_override": {
