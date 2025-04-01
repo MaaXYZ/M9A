@@ -11,6 +11,7 @@ jobs:
 
     steps:
       - id: uploading
+        if: ${{ github.repository_owner == "MaaXYZ" }}
         uses: MirrorChyan/release-note-action@v1
         with:
           mirrorchyan_rid: M9A
