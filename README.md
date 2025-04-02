@@ -16,6 +16,12 @@
   <img alt="stars" src="https://img.shields.io/github/stars/MaaXYZ/M9A?style=social">
 </p>
 
+<div align="center">
+
+[English](./README_en.md) | [简体中文](./README.md)
+
+</div>
+
 ## 功能列表
 
 - 启动/关闭游戏
