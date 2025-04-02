@@ -4,7 +4,8 @@
   - [Software Fails to Run / Crashes / Reports Errors](#software-fails-to-run--crashes--reports-errors)
     - [Download/Installation Issues](#downloadinstallation-issues)
     - [Crashes During Runtime](#crashes-during-runtime)
-    - [Runtime Library Issues](#runtime-library-issues)
+    - [Runtime Library Issues (Windows)](#runtime-library-issues-windows)
+    - [Agent Long Time Wait (Windows)](#agent-long-time-wait-windows)
     - [Resource Loading Issues](#resource-loading-issues)
     - [Connection Issues](#connection-issues)
       - [1. Confirm ADB and Connection Address are Correct](#1-confirm-adb-and-connection-address-are-correct)
@@ -21,7 +22,7 @@
 ## Software Fails to Run / Crashes / Reports Errors
 
 Most problems can be solved in this section.
-They are divided into Download/Installation Issues, Runtime Library Issues, Resource Loading Issues, and Connection Issues.
+They are divided into Download/Installation Issues, Runtime Library Issues, Agent Long Time Wait Issues, Resource Loading Issues, and Connection Issues.
 Most issues fall under **Runtime Library Issues** and **Connection Issues**.
 
 ### Download/Installation Issues
@@ -40,7 +41,7 @@ This issue might occur if you have a dedicated graphics card and GPU acceleratio
 >
 > Using MFAWPF: In [Settings]-[Performance Settings], uncheck [Enable GPU Acceleration].
 
-### Runtime Library Issues
+### Runtime Library Issues (Windows)
 
 If you encounter the following when opening the software, you need to update the runtime libraries:
 
@@ -61,6 +62,10 @@ The above generally indicate runtime library issues. You need to [update the run
 
 If updating the runtime libraries still doesn't solve the problem, both startup methods **crash immediately**, and no log files are generated in the current directory, it's likely another dependency-related issue.
 Please report it on the [project Issues page](https://github.com/MaaXYZ/M9A/issues).
+
+### Agent Long Time Wait (Windows)
+
+When using a generic UI (such as MFAAvalonia), there is a long period of unresponsiveness or a prompt of `...No such file or directory`, requiring the full package to be downloaded again.
 
 ### Resource Loading Issues
 
