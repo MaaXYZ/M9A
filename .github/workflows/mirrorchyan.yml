@@ -16,10 +16,10 @@ jobs:
             arch: aarch64
     steps:
       - uses: MirrorChyan/uploading-action@v1
-        if: ${{ matrix.os == 'win' && github.repository_owner == "MaaXYZ" }}
+        if: ${{ matrix.os == 'win' && github.repository_owner == 'MaaXYZ' }}
         with:
           filetype: latest-release
-          fileName: "M9A-${{ matrix.os }}-${{ matrix.arch }}-*.zip"
+          filename: "M9A-${{ matrix.os }}-${{ matrix.arch }}-*.zip"
           mirrorchyan_rid: M9A
 
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -30,10 +30,10 @@ jobs:
           arch: ${{ matrix.arch }}
 
       - uses: MirrorChyan/uploading-action@v1
-        if: ${{ matrix.os != 'win' && github.repository_owner == "MaaXYZ" }}
+        if: ${{ matrix.os != 'win' && github.repository_owner == 'MaaXYZ' }}
         with:
           filetype: latest-release
-          fileName: "M9A-${{ matrix.os }}-${{ matrix.arch }}-*.zip"
+          filename: "M9A-${{ matrix.os }}-${{ matrix.arch }}-*.zip"
           mirrorchyan_rid: M9A
 
           github_token: ${{ secrets.GITHUB_TOKEN }}
