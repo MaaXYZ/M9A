@@ -53,13 +53,7 @@ body:
     attributes:
       label: Log and config files
       description: >-
-        **After closing M9A, upload the following 3 files:**
-          1. The `maa.log` and `maa.bak.log` log file in the `debug` folder, and indicate the approximate point in time when the problem occurred.
-          2. The `maa_pi_config.json`(MaaPiCli) or `config.json`(MFAWPF) config file in the `config` folder
-
-        If you are using MacBook, please click the "File" option in the top-left corner of the screen, then click "Open Log Folder".
-        **Please drag and drop the full file in, not your own cuttings or copies;**
-        **compress it before uploading if too large.**
+        **After closing M9A, compress `debug` and `logs` folders and upload**
       placeholder: |
         Please confirm that M9A is not running before uploading files.
     validations:
@@ -73,16 +67,12 @@ body:
         If you are using MuMu 12 or LDPlayer 9, please specify whether Screenshot Enhancement is enabled;
         Finally, please specify whether GPU accelerated inference is enabled, and if so, provide the GPU model.
     validations:
-      required: true
+      required: false
   - type: textarea
     id: screenshots
     attributes:
       label: Screenshots or recordings
       description: >-
-        In the `debug` directory, within the functionally categorized folders, 
-        there are some error images captured automatically.
-        If related to this issue, please upload them together.
-
         If available, upload screenshots and recordings to help explain your problem,
         including but not limited to screenshots of M9A software,
         screenshots of game screens.
