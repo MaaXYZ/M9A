@@ -16,6 +16,7 @@
     - [4. Extract Correctly](#4-extract-correctly)
     - [5. Confirm Emulator Support](#5-confirm-emulator-support)
     - [6. Set Emulator Resolution Correctly](#6-set-emulator-resolution-correctly)
+    - [7. Pip settings (Windows)](#7-pip-settings-windows)
   - [Related Documentation](#related-documentation)
 
 ## Prerequisites
@@ -112,6 +113,18 @@ M9A relies on emulators. Supported emulators are generally listed in the [List o
 ### 6. Set Emulator Resolution Correctly
 
 The game must run at **1280x720 resolution** inside the emulator. Configure this in the emulator's display settings. Incorrect resolution is a common cause of recognition failures.
+
+### 7. Pip settings (Windows)
+
+For Windows, we provide a Python environment for the convenience of most users. However, considering the minimum size of the installation package, we choose to use pip to install all dependencies when the program is first run locally or when the resource version is updated. The relevant configuration file is stored in `config/pip_config.json` (if it does not exist, it will be automatically created). The content is as follows:
+
+```jsonc
+{
+"enable_pip_install": true, # Whether to enable pip installation, default true, recommended to enable
+"last_version": "v3.2.0", # Read the version of interface.json when pip is installed, compare it with the version when it is started, and try to install it if it is different
+"mirror": "https://mirrors.ustc.edu.cn/pypi/simple" # Mirror source. The parameters after pip install -i can be filled in according to personal needs. Note that users outside the mainland should modify the value to ""
+}
+```
 
 ## Related Documentation
 
