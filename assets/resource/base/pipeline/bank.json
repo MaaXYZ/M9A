@@ -301,7 +301,42 @@
         "only_rec": true,
         "action": "Click",
         "next": [
+            "BankPurchase_RabbitFail",
             "ObtainedAwards"
+        ]
+    },
+    "BankPurchase_RabbitFail": {
+        "recognition": "TemplateMatch",
+        "template": "Bank/NoMoney.png",
+        "roi": [
+            987,
+            83,
+            278,
+            182
+        ],
+        "action": "Custom",
+        "custom_action": "NodeOverride",
+        "custom_action_param": {
+            "NoRabbit": {
+                "recognition": "DirectHit",
+                "action": "DoNothing"
+            },
+            "Rabbit": {
+                "enabled": false
+            }
+        },
+        "next": [
+            "Bank_ClickBlank"
+        ]
+    },
+    "Bank_ClickBlank": {
+        "pre_delay": 2000,
+        "action": "Click",
+        "target": [
+            894,
+            62,
+            112,
+            48
         ]
     },
     "EnterPawnShop": {
@@ -428,7 +463,32 @@
         "only_rec": true,
         "action": "Click",
         "next": [
+            "BankPurchase_SmallGlobeFail",
             "ObtainedAwards"
+        ]
+    },
+    "BankPurchase_SmallGlobeFail": {
+        "recognition": "TemplateMatch",
+        "template": "Bank/NoMoney.png",
+        "roi": [
+            987,
+            83,
+            278,
+            182
+        ],
+        "action": "Custom",
+        "custom_action": "NodeOverride",
+        "custom_action_param": {
+            "NoSmallGlobe": {
+                "recognition": "DirectHit",
+                "action": "DoNothing"
+            },
+            "SmallGlobe": {
+                "enabled": false
+            }
+        },
+        "next": [
+            "Bank_ClickBlank"
         ]
     },
     "TinyGlobe": {
@@ -530,7 +590,32 @@
         "only_rec": true,
         "action": "Click",
         "next": [
+            "BankPurchase_TinyGlobeFail",
             "ObtainedAwards"
+        ]
+    },
+    "BankPurchase_TinyGlobeFail": {
+        "recognition": "TemplateMatch",
+        "template": "Bank/NoMoney.png",
+        "roi": [
+            987,
+            83,
+            278,
+            182
+        ],
+        "action": "Custom",
+        "custom_action": "NodeOverride",
+        "custom_action_param": {
+            "NoTinyGlobe": {
+                "recognition": "DirectHit",
+                "action": "DoNothing"
+            },
+            "TinyGlobe": {
+                "enabled": false
+            }
+        },
+        "next": [
+            "Bank_ClickBlank"
         ]
     },
     "Gluttony": {
@@ -643,7 +728,32 @@
         "only_rec": true,
         "action": "Click",
         "next": [
+            "BankPurchase_GluttonyFail",
             "ObtainedAwards"
+        ]
+    },
+    "BankPurchase_GluttonyFail": {
+        "recognition": "TemplateMatch",
+        "template": "Bank/NoMoney.png",
+        "roi": [
+            987,
+            83,
+            278,
+            182
+        ],
+        "action": "Custom",
+        "custom_action": "NodeOverride",
+        "custom_action_param": {
+            "NoGluttony": {
+                "recognition": "DirectHit",
+                "action": "DoNothing"
+            },
+            "Gluttony": {
+                "enabled": false
+            }
+        },
+        "next": [
+            "Bank_ClickBlank"
         ]
     },
     "EnterFragmentsShop": {
@@ -784,7 +894,32 @@
         "only_rec": true,
         "action": "Click",
         "next": [
+            "BankPurchase_TinyGlobe(1)Fail",
             "ObtainedAwards"
+        ]
+    },
+    "BankPurchase_TinyGlobe(1)Fail": {
+        "recognition": "TemplateMatch",
+        "template": "Bank/NoMoney.png",
+        "roi": [
+            987,
+            83,
+            278,
+            182
+        ],
+        "action": "Custom",
+        "custom_action": "NodeOverride",
+        "custom_action_param": {
+            "NoTinyGlobe(1)": {
+                "recognition": "DirectHit",
+                "action": "DoNothing"
+            },
+            "TinyGlobe(1)": {
+                "enabled": false
+            }
+        },
+        "next": [
+            "Bank_ClickBlank"
         ]
     },
     "SwipeUp": {
@@ -897,7 +1032,32 @@
         "only_rec": true,
         "action": "Click",
         "next": [
+            "BankPurchase_ResonantCassetteFail",
             "ObtainedAwards"
+        ]
+    },
+    "BankPurchase_ResonantCassetteFail": {
+        "recognition": "TemplateMatch",
+        "template": "Bank/NoMoney.png",
+        "roi": [
+            987,
+            83,
+            278,
+            182
+        ],
+        "action": "Custom",
+        "custom_action": "NodeOverride",
+        "custom_action_param": {
+            "NoResonantCassette": {
+                "recognition": "DirectHit",
+                "action": "DoNothing"
+            },
+            "ResonantCassette": {
+                "enabled": false
+            }
+        },
+        "next": [
+            "Bank_ClickBlank"
         ]
     },
     "GoldenMelonSeeds": {
@@ -999,7 +1159,32 @@
         "only_rec": true,
         "action": "Click",
         "next": [
+            "BankPurchase_GoldenMelonSeedsFail",
             "ObtainedAwards"
+        ]
+    },
+    "BankPurchase_GoldenMelonSeedsFail": {
+        "recognition": "TemplateMatch",
+        "template": "Bank/NoMoney.png",
+        "roi": [
+            987,
+            83,
+            278,
+            182
+        ],
+        "action": "Custom",
+        "custom_action": "NodeOverride",
+        "custom_action_param": {
+            "NoGoldenMelonSeeds": {
+                "recognition": "DirectHit",
+                "action": "DoNothing"
+            },
+            "GoldenMelonSeeds": {
+                "enabled": false
+            }
+        },
+        "next": [
+            "Bank_ClickBlank"
         ]
     },
     "OriginalChicken": {
@@ -1101,7 +1286,32 @@
         "only_rec": true,
         "action": "Click",
         "next": [
+            "BankPurchase_OriginalChickenFail",
             "ObtainedAwards"
+        ]
+    },
+    "BankPurchase_OriginalChickenFail": {
+        "recognition": "TemplateMatch",
+        "template": "Bank/NoMoney.png",
+        "roi": [
+            987,
+            83,
+            278,
+            182
+        ],
+        "action": "Custom",
+        "custom_action": "NodeOverride",
+        "custom_action_param": {
+            "NoOriginalChicken": {
+                "recognition": "DirectHit",
+                "action": "DoNothing"
+            },
+            "OriginalChicken": {
+                "enabled": false
+            }
+        },
+        "next": [
+            "Bank_ClickBlank"
         ]
     },
     "Fries": {
@@ -1203,7 +1413,32 @@
         "only_rec": true,
         "action": "Click",
         "next": [
+            "BankPurchase_FriesFail",
             "ObtainedAwards"
+        ]
+    },
+    "BankPurchase_FriesFail": {
+        "recognition": "TemplateMatch",
+        "template": "Bank/NoMoney.png",
+        "roi": [
+            987,
+            83,
+            278,
+            182
+        ],
+        "action": "Custom",
+        "custom_action": "NodeOverride",
+        "custom_action_param": {
+            "NoFries": {
+                "recognition": "DirectHit",
+                "action": "DoNothing"
+            },
+            "Fries": {
+                "enabled": false
+            }
+        },
+        "next": [
+            "Bank_ClickBlank"
         ]
     }
 }
