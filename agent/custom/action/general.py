@@ -41,14 +41,13 @@ class Screenshot(CustomAction):
 
         save_dir = json.loads(argv.custom_action_param)["save_dir"]
         os.makedirs(save_dir, exist_ok=True)
-        img.save(f"{save_dir}/{self._get_format_timestamp()}.png")
-        logger.info(f"截图保存至 {save_dir}/{self._get_format_timestamp()}.png")
+        now = datetime.now()
+        img.save(f"{save_dir}/{self._get_format_timestamp(now)}.png")
+        logger.info(f"截图保存至 {save_dir}/{self._get_format_timestamp(now)}.png")
 
         return CustomAction.RunResult(success=True)
 
-    def _get_format_timestamp(self):
-
-        now = datetime.now()
+    def _get_format_timestamp(self, now):
 
         date = now.strftime("%Y.%m.%d")
         time = now.strftime("%H.%M.%S")
