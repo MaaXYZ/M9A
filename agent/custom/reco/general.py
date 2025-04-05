@@ -46,7 +46,7 @@ class IsSimilar(CustomRecognition):
             interval_ms = float(params.get("interval", 100.0))
             times = int(params.get("times", 5))
 
-            logger.info(
+            logger.debug(
                 f"开始比较，次数：{times}，间隔：{interval_ms}毫秒，阈值：{threshold}"
             )
 
@@ -54,7 +54,7 @@ class IsSimilar(CustomRecognition):
 
             for i in range(times):
                 if i > 0:
-                    logger.info(f"第 {i+1}/{times} 次比较...")
+                    logger.debug(f"第 {i+1}/{times} 次比较...")
 
                 img1 = context.tasker.controller.post_screencap().wait().get()
 
@@ -63,7 +63,7 @@ class IsSimilar(CustomRecognition):
                     img1 = img1[y : y + h, x : x + w]
 
                 sleep_seconds = interval_ms / 1000.0
-                logger.info(f"等待 {interval_ms} 毫秒...")
+                logger.debug(f"等待 {interval_ms} 毫秒...")
                 time.sleep(sleep_seconds)
 
                 img2 = context.tasker.controller.post_screencap().wait().get()
@@ -74,7 +74,7 @@ class IsSimilar(CustomRecognition):
 
                 ssim_value = self.compare_ssim(img1, img2)
                 ssim_values.append(float(ssim_value))
-                logger.info(f"当前ssim: {float(ssim_value):.4f}")
+                logger.debug(f"当前ssim: {float(ssim_value):.4f}")
 
                 if i < times - 1:
                     time.sleep(sleep_seconds)
@@ -83,8 +83,8 @@ class IsSimilar(CustomRecognition):
             avg_ssim = float(np.mean(ssim_values)) if ssim_values else 0.0
             is_similar = bool(avg_ssim >= threshold)  # 确保是Python原生bool
 
-            logger.info(f"平均ssim: {avg_ssim:.4f}")
-            logger.info(f"threshold: {threshold}, similar: {is_similar}")
+            logger.debug(f"平均ssim: {avg_ssim:.4f}")
+            logger.debug(f"threshold: {threshold}, similar: {is_similar}")
 
             # 将所有numpy值转换为Python原生类型
             python_values = [float(v) for v in ssim_values]
@@ -127,7 +127,7 @@ class IsSimilar(CustomRecognition):
             if min_dim < 7:
                 win_size = min_dim if min_dim % 2 == 1 else min_dim - 1
                 win_size = max(1, win_size)  # 确保至少为1
-                logger.info(f"图像较小，调整窗口大小为 {win_size}")
+                logger.debug(f"图像较小，调整窗口大小为 {win_size}")
             else:
                 win_size = 7  # 默认窗口大小
 
