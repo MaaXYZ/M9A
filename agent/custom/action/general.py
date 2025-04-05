@@ -87,8 +87,8 @@ class NodeOverride(CustomAction):
 
     参数格式:
     {
-        "node_name": {"被覆盖参数": "覆盖值"},
-        "node_name1": {"被覆盖参数": "覆盖值"}
+        "node_name": {"被覆盖参数": "覆盖值",...},
+        "node_name1": {"被覆盖参数": "覆盖值",...}
     }
     """
 
@@ -98,10 +98,13 @@ class NodeOverride(CustomAction):
         argv: CustomAction.RunArg,
     ) -> CustomAction.RunResult:
 
-        nodes = json.loads(argv.custom_action_param)
+        ppover = json.loads(argv.custom_action_param)
 
-        for node in nodes:
-            for key in nodes[node]:
-                context.override_pipeline({f"{node}": {f"{key}": nodes[node][key]}})
+        if not ppover:
+            logger.warning("No ppover")
+            return CustomAction.RunResult(success=True)
+
+        logger.debug(f"NodeOverride: {ppover}")
+        context.override_pipeline(ppover)
 
         return CustomAction.RunResult(success=True)
