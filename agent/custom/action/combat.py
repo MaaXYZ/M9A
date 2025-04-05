@@ -130,11 +130,61 @@ class TeamSelect(CustomAction):
             img = context.tasker.controller.post_screencap().wait().get()
 
             if context.run_recognition("TeamlistOpen", img) is not None:
-                context.tasker.controller.post_click(target[0], target[1])
+                context.tasker.controller.post_click(target[0], target[1]).wait()
                 time.sleep(1)
                 flag = True
             elif context.run_recognition("TeamlistOff", img) is not None:
-                context.tasker.controller.post_click(965, 650)
+                context.tasker.controller.post_click(965, 650).wait()
                 time.sleep(1)
+
+        return CustomAction.RunResult(success=True)
+
+
+@AgentServer.custom_action("CombatTargetLevel")
+class CombatTargetLevel(CustomAction):
+    """
+    目标难度
+
+    参数格式：
+    {
+        "level": "难度选择"
+    }
+    """
+
+    def run(
+        self,
+        context: Context,
+        argv: CustomAction.RunArg,
+    ) -> CustomAction.RunResult:
+
+        valid_levels = {"童话", "故事", "厄险"}
+        level = json.loads(argv.custom_action_param)["level"]
+
+        if not level or level not in valid_levels:
+            logger.error("目标难度不存在")
+            return CustomAction.RunResult(success=False)
+
+        img = context.tasker.controller.post_screencap().wait().get()
+        reco_detail = context.run_recognition("TargetLevelRec", img)
+
+        if reco_detail is None or not any(
+            difficulty in reco_detail.best_result.text for difficulty in valid_levels
+        ):
+            logger.warning("未识别到当前难度")
+            return CustomAction.RunResult(success=False)
+
+        text = reco_detail.best_result.text
+
+        if level == "厄险":
+            if "厄险" not in text:
+                context.tasker.controller.post_click(1175, 265).wait()
+        elif level == "故事":
+            if "厄险" in text:
+                context.tasker.controller.post_click(1130, 265).wait()
+            elif "童话" in text:
+                context.tasker.controller.post_click(1095, 265).wait()
+        else:
+            if "童话" not in text:
+                context.tasker.controller.post_click(945, 265).wait()
 
         return CustomAction.RunResult(success=True)

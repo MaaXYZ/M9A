@@ -11,6 +11,7 @@ __all__ = [
     "NodeOverride",
     "DuringAct",
     "DuringAnecdote",
+    "DuringRe_release",
     "BankPurchaseRecord",
     "ModifyBankTaskList",
     "SwitchCombatTimes",
@@ -18,5 +19,6 @@ __all__ = [
     "LucidscapeStageSelect",
     "LucidscapeStatusDetect",
     "TeamSelect",
+    "CombatTargetLevel",
     "SummonlngSwipe",
 ]
