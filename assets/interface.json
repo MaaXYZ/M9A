@@ -81,7 +81,8 @@
             "name": "活动刷取",
             "entry": "JudgeDuringAct",
             "option": [
-                "活动选择",
+                "复刻模式",
+                "活动难度",
                 "复现次数",
                 "刷完全部体力",
                 "吃全部临期糖"
@@ -1025,74 +1026,51 @@
                 }
             ]
         },
-        "模式选择": {
+        "复刻模式": {
             "cases": [
                 {
-                    "name": "故事模式",
-                    "pipeline_override": {
-                        "ActivityStageModelSelect": {
-                            "next": "ActivityStageModel_Story"
-                        }
-                    }
+                    "name": "No",
+                    "pipeline_override": {}
                 },
                 {
-                    "name": "探索模式",
+                    "name": "Yes",
                     "pipeline_override": {
-                        "ActivityStageModelSelect": {
-                            "next": "ActivityStageModel_Explore"
+                        "JudgeDuringRe_release": {
+                            "enabled": true
                         }
                     }
                 }
             ]
         },
-        "活动选择": {
+        "活动难度": {
             "cases": [
                 {
-                    "name": "活动：唐人街影画 19 艰难",
+                    "name": "厄险",
                     "pipeline_override": {
-                        "ActivityMainChapter": {
-                            "expected": [
-                                "开",
-                                "始"
-                            ],
-                            "roi": [
-                                514,
-                                547,
-                                277,
-                                104
-                            ]
-                        },
-                        "TargetStageName": {
-                            "expected": "19"
-                        },
-                        "StageDifficulty": {
-                            "next": "ActivityStageDifficulty"
+                        "ActivityTargetLevel": {
+                            "custom_action_param": {
+                                "level": "厄险"
+                            }
                         }
                     }
                 },
                 {
-                    "name": "活动：朔日手记 19 艰难 （复刻）",
+                    "name": "故事",
                     "pipeline_override": {
-                        "ActivityReturn": {
-                            "enabled": true,
-                            "expected": "朔日"
-                        },
-                        "TargetStageName": {
-                            "expected": "19"
-                        },
-                        "StageDifficulty": {
-                            "next": "ActivityStageDifficulty"
+                        "ActivityTargetLevel": {
+                            "custom_action_param": {
+                                "level": "故事"
+                            }
                         }
                     }
                 },
                 {
-                    "name": "活动：地球上最后的夜晚 20 艰难（已结束）",
+                    "name": "童话",
                     "pipeline_override": {
-                        "TargetStageName": {
-                            "expected": "20"
-                        },
-                        "StageDifficulty": {
-                            "next": "ActivityStageDifficulty"
+                        "ActivityTargetLevel": {
+                            "custom_action_param": {
+                                "level": "童话"
+                            }
                         }
                     }
                 }

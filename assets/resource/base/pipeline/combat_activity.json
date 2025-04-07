@@ -6,31 +6,27 @@
             "resource": "cn"
         },
         "next": [
-            "ActivityEntry"
-        ]
-    },
-    "ActivityEntry": {
-        "next": [
-            "ActivityReturn",
-            "ActivityMainChapter"
+            "FlagInActivityMain"
         ],
         "interrupt": [
             "EnterTheActivityMain",
             "ReturnMain"
         ]
     },
-    "ActivityReturn": {
-        "enabled": false,
+    "FlagInActivityMain": {
         "recognition": "OCR",
-        "expected_code": "set in code",
+        "expected": "成就",
         "roi": [
-            33,
-            89,
-            234,
-            479
+            1179,
+            26,
+            42,
+            22
         ],
-        "action": "Click",
-        "next": "ActivityMainChapter"
+        "only_rec": true,
+        "next": [
+            "JudgeDuringRe_release",
+            "ActivityMainChapter"
+        ]
     },
     "EnterTheActivityMain": {
         "doc": "进入当期活动主界面",
@@ -73,50 +69,145 @@
             144
         ],
         "action": "Click",
-        "next": "SwipeLeftAndFindStage"
-    },
-    "ActivityStageDifficulty": {
+        "post_delay": 2000,
         "next": [
-            "ActivityStageDifficulty_Hard",
-            "ActivityStageDifficultyToRight"
+            "FlagInActivityStage",
+            "ActivityMainChapter"
+        ],
+        "interrupt": [
+            "ActivityClickCurStage"
         ]
     },
-    "ActivityStageDifficulty_Hard": {
+    "FlagInActivityStage": {
         "recognition": "OCR",
-        "expected": [
-            "艰难"
-        ],
+        "expected": "开始行动",
         "roi": [
-            971,
-            221,
-            194,
-            51
+            1089,
+            587,
+            132,
+            34
         ],
+        "only_rec": true,
+        "next": [
+            "FlagInActivityCombatStage"
+        ],
+        "interrupt": [
+            "ActivityClickPreStage"
+        ]
+    },
+    "FlagInActivityCombatStage": {
+        "recognition": "OCR",
+        "expected": "\\d",
+        "roi": [
+            914,
+            596,
+            56,
+            35
+        ],
+        "replace": [
+            [
+                "-",
+                ""
+            ],
+            [
+                "0",
+                ""
+            ]
+        ],
+        "only_rec": true,
+        "next": [
+            "ActivityTargetLevel"
+        ]
+    },
+    "ActivityTargetLevel": {
+        "action": "Custom",
+        "custom_action": "CombatTargetLevel",
+        "custom_action_param": {
+            "level": "厄险"
+        },
+        "post_wait_freezes": {
+            "time": 700,
+            "target": [
+                896,
+                245,
+                338,
+                38
+            ]
+        },
         "next": [
             "ReadyForAction"
         ]
     },
-    "ActivityStageDifficultyToRight": {
+    "TargetLevelRec": {
         "recognition": "OCR",
-        "expected": [
-            "故事",
-            "意外"
-        ],
+        "expected": "[\\s\\S]",
         "roi": [
-            971,
-            221,
-            194,
-            51
+            999,
+            247,
+            215,
+            38
         ],
+        "only_rec": true,
+        "threshold": 0.7
+    },
+    "ActivityClickPreStage": {
         "action": "Click",
         "target": [
-            1196,
-            238,
-            24,
-            20
+            52,
+            564,
+            56,
+            53
         ],
+        "post_wait_freezes": {
+            "time": 700,
+            "target": [
+                396,
+                72,
+                864,
+                473
+            ]
+        }
+    },
+    "ActivityClickCurStage": {
+        "action": "Click",
+        "target": [
+            395,
+            569,
+            59,
+            40
+        ]
+    },
+    "JudgeDuringRe_release": {
+        "enabled": false,
+        "action": "Custom",
+        "custom_action": "DuringRe_release",
+        "custom_action_param": {
+            "resource": "cn"
+        },
         "next": [
-            "ActivityStageDifficulty"
+            "ActivityRe_releaseChapter"
+        ]
+    },
+    "ActivityRe_releaseChapter": {
+        "recognition": "Custom",
+        "custom_recognition": "ActivityRe_releaseChapter",
+        "custom_recognition_param": {
+            "Re_release_name": ""
+        },
+        "action": "Click",
+        "post_delay": 3000,
+        "next": [
+            "ActivityMainChapter"
+        ]
+    },
+    "ActivityLeftList": {
+        "recognition": "OCR",
+        "expected": "[\\s\\S]",
+        "roi": [
+            44,
+            109,
+            240,
+            562
         ]
     }
 }
