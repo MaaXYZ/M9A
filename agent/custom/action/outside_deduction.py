@@ -35,16 +35,22 @@ class SOD_DifficultySelect(CustomAction):
 
         if level == "cur":
             logger.info(f"选定当前难度 {cur}")
+            context.override_pipeline(
+                {"ODR_FlagInDifficultySelect": {"enabled": False}}
+            )
+            return CustomAction.RunResult(success=True)
         elif level in {"5", "10", "11"}:
             level = int(level)
             if cur > level:
                 delta = cur - level
                 for i in range(delta):
                     context.tasker.controller.post_click(20, 360).wait()
+                    time.sleep(0.5)
             else:
                 delta = level - cur
                 for i in range(delta):
                     context.tasker.controller.post_click(1260, 360).wait()
+                    time.sleep(0.5)
         else:
             # max
             # level 20
