@@ -1,0 +1,60 @@
+{
+    "点击左上角小盒子": {
+        "recognition": "TemplateMatch",
+        "template": "Awards/Box.png",
+        "action": "Click",
+        "next": [
+            "点击预热活动"
+        ]
+    },
+    "点击预热活动": {
+        "recognition": "OCR",
+        "expected": "实验室快照",
+        "roi": [
+            22,
+            116,
+            181,
+            80
+        ],
+        "action": "Swipe",
+        "begin": [
+            423,
+            335,
+            18,
+            22
+        ],
+        "end": [
+            600,
+            335,
+            18,
+            22
+        ],
+        "pre_wait_freezes": {
+            "time": 1000,
+            "target": [
+                822,
+                245,
+                373,
+                281
+            ]
+        },
+        "next": [
+            "点击领取奖励"
+        ]
+    },
+    "点击领取奖励": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            996,
+            552,
+            73,
+            73
+        ],
+        "action": "Click",
+        "next": [
+            "ObtainedAwards",
+            "BackButton"
+        ]
+    }
+}

@@ -1490,6 +1490,24 @@
                 }
             ]
         },
+        "领取预热奖励": {
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "ShowFlag": {
+                            "next": [
+                                "点击左上角小盒子"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {}
+                }
+            ]
+        },
         "触媒选择": {
             "cases": [
                 {
