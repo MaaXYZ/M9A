@@ -28,6 +28,12 @@
             "anecdote": {
                 "start_time": 1744664400000,
                 "end_time": 1745873999000
+            },
+            "re-release": {
+                "name": "飞驰！明日之城",
+                "alias": "飞驰",
+                "start_time": 1746046800000,
+                "end_time": 1746910799000
             }
         }
     }
