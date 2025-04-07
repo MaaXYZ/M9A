@@ -4,6 +4,7 @@ from .bank import *
 from .combat import *
 from .lucidscape import *
 from .wilderness import *
+from .outside_deduction import *
 
 __all__ = [
     "Screenshot",
@@ -21,4 +22,5 @@ __all__ = [
     "TeamSelect",
     "CombatTargetLevel",
     "SummonlngSwipe",
+    "SOD_DifficultySelect",
 ]

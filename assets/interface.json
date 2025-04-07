@@ -155,7 +155,8 @@
             "entry": "SeriesOfDusks",
             "option": [
                 "触媒选择",
-                "速刷模式"
+                "速刷模式",
+                "演绎难度"
             ],
             "doc": "[size:15][color:darkgray]本功能有两种模式，触媒选择仅在非速刷模式生效，开启速刷模式后仅使用术式神灯刷取第一层[/color][/size]\n[size:18][color:black]速刷模式[/color][/size]\n[size:15][color:darkgray]1.使用前请先将`刻画生长-指引之歌`点满[/color][/size]\n[size:15][color:darkgray]2.请尽量调高难度等级(11难度达到最高效率)，以防止分数不够导致刷取信物失败[/color][/size]\n[size:18][color:black]非速刷模式[/color][/size]\n[size:15][color:darkgray]1.可在箱子里置顶(标记)四个角色出战[/color][/size]\n[size:15][color:darkgray]2.队伍推荐携带奶[/color][/size]\n[size:15][color:orange]⚠更多详细说明请看文档[/color][/size]"
         },
@@ -1565,6 +1566,60 @@
                     "pipeline_override": {
                         "SOD_UNOPENED": {
                             "next": "ODR_Start"
+                        }
+                    }
+                }
+            ]
+        },
+        "演绎难度": {
+            "cases": [
+                {
+                    "name": "Current",
+                    "pipeline_override": {
+                        "SOD_DifficultySelect": {
+                            "custom_action_param": {
+                                "level": "cur"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "MAX",
+                    "pipeline_override": {
+                        "SOD_DifficultySelect": {
+                            "custom_action_param": {
+                                "level": "max"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "11",
+                    "pipeline_override": {
+                        "SOD_DifficultySelect": {
+                            "custom_action_param": {
+                                "level": "11"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "10",
+                    "pipeline_override": {
+                        "SOD_DifficultySelect": {
+                            "custom_action_param": {
+                                "level": "10"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "5",
+                    "pipeline_override": {
+                        "SOD_DifficultySelect": {
+                            "custom_action_param": {
+                                "level": "5"
+                            }
                         }
                     }
                 }

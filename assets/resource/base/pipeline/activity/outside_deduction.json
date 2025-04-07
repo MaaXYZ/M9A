@@ -399,6 +399,7 @@
         ],
         "action": "Click",
         "next": [
+            "ODR_FlagInDifficultySelect",
             "SODStart_Confirm",
             "SODStart"
         ],
