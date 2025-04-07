@@ -160,3 +160,4 @@ class DuringRe_release(CustomAction):
             {"JudgeDuringRe_release": {"next": [], "interrupt": []}}
         )
         logger.info("当前不在复刻作战开放时间，跳过当前任务")
+        return CustomAction.RunResult(success=True)
