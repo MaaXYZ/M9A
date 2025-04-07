@@ -1,6 +1,12 @@
 {
     "点击左上角小盒子": {
         "recognition": "TemplateMatch",
+        "roi": [
+            166,
+            28,
+            86,
+            80
+        ],
         "template": "Awards/Box.png",
         "action": "Click",
         "next": [
