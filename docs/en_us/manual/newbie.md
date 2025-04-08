@@ -57,6 +57,8 @@ Make sure your environment satisfy all necessary dependencies and their versions
 
 Download from the [M9A Releases page](https://github.com/MaaXYZ/M9A/releases).
 
+Chinese Mainland users can also download it at high speed through [MirrorChyan](https://mirrorchyan.com/en/download?rid=M9A).
+
 #### Windows
 
 Usually, download the `M9A-win-x64-<version>.zip` file.
