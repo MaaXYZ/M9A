@@ -85,11 +85,12 @@
             73
         ],
         "action": "Click",
-        "pre_wait_freezes": 1000,
         "next": [
-            "ObtainedAwards",
-            "BackButton",
             "HomeFlag"
+        ],
+        "interrupt": [
+            "ObtainedAwards",
+            "BackButton"
         ]
     }
 }
