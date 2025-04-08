@@ -1497,7 +1497,7 @@
                 {
                     "name": "No",
                     "pipeline_override": {
-                        "点击左上角小盒子": {
+                        "领取预热奖励": {
                             "enabled": false
                         }
                     }
