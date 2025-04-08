@@ -10,11 +10,11 @@
         ],
         "template": "Awards/Box.png",
         "action": "Click",
-        "timeout": 1000,
+        "timeout": 3000,
         "next": [
             "检测预热文本"
         ],
-        "on_error": [
+        "interrupt": [
             "BackButton",
             "HomeFlag"
         ]
@@ -24,13 +24,13 @@
         "recognition": "OCR",
         "expected": "实验室快照",
         "roi": [
-            22,
+            62,
+            149,
             116,
-            181,
-            80
+            34
         ],
         "action": "Click",
-        "timeout": 1000,
+        "pre_wait_freezes": 1000,
         "next": [
             "检测预热红点"
         ],
@@ -43,40 +43,36 @@
         "doc": "检测预热红点是否存在,检测超时就返回,有的话就尝试进行任务操作",
         "recognition": "TemplateMatch",
         "roi": [
-            25,
-            137,
-            162,
-            52
+            165,
+            123,
+            32,
+            33
         ],
         "template": "Awards/RedPoint.png",
-        "action": "Swipe",
-        "begin": [
-            423,
-            335,
-            18,
-            22
-        ],
-        "end": [
-            600,
-            335,
-            18,
-            22
-        ],
-        "pre_wait_freezes": {
-            "time": 1000,
-            "target": [
-                822,
-                245,
-                373,
-                281
-            ]
-        },
         "next": [
-            "点击领取奖励"
+            "尝试执行任务"
         ],
         "on_error": [
             "BackButton",
             "HomeFlag"
+        ]
+    },
+    "尝试执行任务": {
+        "action": "Swipe",
+        "begin": [
+            358,
+            339,
+            30,
+            25
+        ],
+        "end": [
+            611,
+            343,
+            28,
+            28
+        ],
+        "next": [
+            "点击领取奖励"
         ]
     },
     "点击领取奖励": {
@@ -89,7 +85,7 @@
             73
         ],
         "action": "Click",
-        "timeout": 1000,
+        "pre_wait_freezes": 1000,
         "next": [
             "ObtainedAwards",
             "BackButton",
