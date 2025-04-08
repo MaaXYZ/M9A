@@ -10,7 +10,17 @@
             113
         ],
         "action": "Click",
+        "post_wait_freezes": {
+            "time": 1500,
+            "target": [
+                0,
+                83,
+                458,
+                580
+            ]
+        },
         "next": [
+            "ODR_FlagInDifficultySelect",
             "ODR_Start_MediaSelect",
             "ODR_Start"
         ],
@@ -22,6 +32,59 @@
         "focus": true,
         "focus_tip": "开启本轮速刷",
         "focus_tip_color": "tomato"
+    },
+    "ODR_FlagInDifficultySelect": {
+        "is_sub": true,
+        "recognition": "OCR",
+        "expected": "音序选择",
+        "roi": [
+            562,
+            34,
+            156,
+            43
+        ],
+        "only_rec": true,
+        "post_wait_freezes": {
+            "time": 700,
+            "target": [
+                0,
+                83,
+                458,
+                580
+            ]
+        },
+        "next": [
+            "SOD_DifficultySelect"
+        ]
+    },
+    "SOD_DifficultySelect": {
+        "action": "Custom",
+        "custom_action": "SOD_DifficultySelect",
+        "custom_action_param": {
+            "level": "cur"
+        }
+    },
+    "SOD_LevelLocked": {
+        "recognition": "OCR",
+        "expected": "解锁",
+        "roi": [
+            702,
+            369,
+            46,
+            24
+        ],
+        "only_rec": true
+    },
+    "SOD_CurrentLevel": {
+        "recognition": "OCR",
+        "expected": "\\d",
+        "roi": [
+            587,
+            123,
+            106,
+            92
+        ],
+        "only_rec": true
     },
     "ODR_Start_Difficulty_Confirm": {
         "doc": "难度确认",

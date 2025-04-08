@@ -227,7 +227,7 @@
             54
         ],
         "action": "Click",
-        "post_delay": 2000,
+        "post_delay": 2500,
         "next": [
             "SOD_MenuFlag",
             "SODStop_Confirm"
@@ -398,7 +398,17 @@
             113
         ],
         "action": "Click",
+        "post_wait_freezes": {
+            "time": 1500,
+            "target": [
+                0,
+                83,
+                458,
+                580
+            ]
+        },
         "next": [
+            "ODR_FlagInDifficultySelect",
             "SODStart_Confirm",
             "SODStart"
         ],
