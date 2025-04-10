@@ -128,7 +128,8 @@
             "name": "领取奖励",
             "entry": "Awards",
             "option": [
-                "获取显影罐"
+                "获取显影罐",
+                "领取预热奖励"
             ]
         },
         {
@@ -1488,6 +1489,22 @@
                             ]
                         }
                     }
+                }
+            ]
+        },
+        "领取预热奖励": {
+            "cases": [
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "领取预热奖励": {
+                            "enabled": false
+                        }
+                    }
+                },
+                {
+                    "name": "Yes",
+                    "pipeline_override": {}
                 }
             ]
         },
