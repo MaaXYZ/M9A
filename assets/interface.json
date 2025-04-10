@@ -1046,11 +1046,21 @@
         "活动难度": {
             "cases": [
                 {
-                    "name": "厄险",
+                    "name": "艰难",
                     "pipeline_override": {
                         "ActivityTargetLevel": {
                             "custom_action_param": {
-                                "level": "厄险"
+                                "level": "艰难"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "意外",
+                    "pipeline_override": {
+                        "ActivityTargetLevel": {
+                            "custom_action_param": {
+                                "level": "意外"
                             }
                         }
                     }
@@ -1061,16 +1071,6 @@
                         "ActivityTargetLevel": {
                             "custom_action_param": {
                                 "level": "故事"
-                            }
-                        }
-                    }
-                },
-                {
-                    "name": "童话",
-                    "pipeline_override": {
-                        "ActivityTargetLevel": {
-                            "custom_action_param": {
-                                "level": "童话"
                             }
                         }
                     }
