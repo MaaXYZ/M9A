@@ -4,9 +4,14 @@ import json
 import subprocess
 from pathlib import Path
 
+# 获取当前main.py所在路径并设置上级目录为工作目录
+current_file_path = os.path.abspath(__file__)
+current_dir = os.path.dirname(current_file_path)
+parent_dir = os.path.dirname(current_dir)
+os.chdir(parent_dir)
+print(f"设置工作目录为: {parent_dir}")
 
 # 将当前目录添加到路径
-current_dir = os.path.dirname(os.path.abspath(__file__))
 if current_dir not in sys.path:
     sys.path.insert(0, current_dir)
 
