@@ -234,7 +234,15 @@
             54
         ],
         "action": "Click",
-        "post_delay": 2500,
+        "post_wait_freezes": {
+            "time": 700,
+            "target": [
+                417,
+                402,
+                453,
+                50
+            ]
+        },
         "next": [
             "SOD_MenuFlag",
             "SODStop_Confirm"

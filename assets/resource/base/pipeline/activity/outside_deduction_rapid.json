@@ -277,7 +277,7 @@
         "only_rec": true,
         "action": "Click",
         "post_wait_freezes": {
-            "time": 300,
+            "time": 700,
             "target": [
                 215,
                 0,
@@ -979,7 +979,7 @@
         "only_rec": true,
         "action": "Click",
         "post_wait_freezes": {
-            "time": 700,
+            "time": 1500,
             "target": [
                 33,
                 430,
