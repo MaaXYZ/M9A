@@ -93,7 +93,7 @@ Usually, download the `M9A-win-x64-<version>.zip` file.
      sudo ./MaaPiCli
      ```
 
-  3. If you want to use the graphical operation interface, please follow step 2 and execute the `MFW` program.
+  3. If you want to use the graphical operation interface, please follow step 2 and execute the `MFAAvalonia` program.
   
 #### Linux
 
