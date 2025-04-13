@@ -65,7 +65,10 @@
     },
     "LucidscapeTotalAwardsCompleted": {
         "recognition": "OCR",
-        "expected": "已领取",
+        "expected": [
+            "已领取",
+            "未达成"
+        ],
         "roi": [
             988,
             200,
@@ -341,7 +344,10 @@
     },
     "LucidscapeNoAwards": {
         "recognition": "OCR",
-        "expected": "已领取",
+        "expected": [
+            "已领取",
+            "未达成"
+        ],
         "roi": [
             988,
             200,
