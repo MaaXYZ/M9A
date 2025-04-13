@@ -1,9 +1,7 @@
 <!-- markdownlint-disable MD033 MD041 -->
 <div align="center">
 
-![4](https://github.com/user-attachments/assets/126d977a-7cc1-4d90-a36d-136a4c70bd57)
-
-
+<img alt="LOGO" src="https://github.com/user-attachments/assets/b8e4d737-d549-43f3-a2e7-a3727bf615a9" width="256" height="256" />
 
 # M9A
 
