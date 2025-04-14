@@ -231,8 +231,8 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "ODR_AddChar",
-            "ODR_Start_TeamBuild"
+            "ODR_Start_TeamBuild",
+            "ODR_AddChar"
         ]
     },
     "ODR_AddChar": {
