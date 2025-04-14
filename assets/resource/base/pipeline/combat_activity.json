@@ -15,12 +15,12 @@
     },
     "FlagInActivityMain": {
         "recognition": "OCR",
-        "expected": "成就",
+        "expected": "预告",
         "roi": [
-            1179,
-            26,
-            42,
-            22
+            1006,
+            31,
+            39,
+            21
         ],
         "only_rec": true,
         "next": [
