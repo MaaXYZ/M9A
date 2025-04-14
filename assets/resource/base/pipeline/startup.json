@@ -288,21 +288,6 @@
         "action": "Click",
         "post_delay": 3000
     },
-    "Sub_BackButton": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": [
-            "StartUp/BackButton.png",
-            "StartUp/BackButton_White.png"
-        ],
-        "roi": [
-            0,
-            0,
-            134,
-            138
-        ],
-        "action": "Click"
-    },
     "HomeButton": {
         "recognition": "TemplateMatch",
         "template": [
@@ -315,7 +300,13 @@
             144,
             144
         ],
-        "action": "Click"
+        "action": "Click",
+        "target_offset": [
+            30,
+            0,
+            -30,
+            0
+        ]
     },
     "Stop": {},
     "Reward": {
