@@ -33,7 +33,7 @@ Powered by [MaaFramework](https://github.com/MaaXYZ/MaaFramework)!
 - Automatic awakening dream area
 - Bank shopping
 - Receive daily rewards
-- Anecdotes dispatch
+- Current Anecdote
 - Suspended in the rain: Mystery Sea ("Searching" Weekly Sweep)
 - Outsider interpretation: Echo of the foothills (meat pigeon)
 
