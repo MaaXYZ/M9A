@@ -19,7 +19,15 @@
             104
         ],
         "action": "Click",
-        "post_wait_freezes": 300
+        "post_wait_freezes": {
+            "time": 700,
+            "target": [
+                33,
+                558,
+                286,
+                114
+            ]
+        }
     },
     "SOD_Menu": {
         "recognition": "OCR",
@@ -183,15 +191,14 @@
         }
     },
     "SOD_UNOPENED": {
-        "recognition": "OCR",
-        "expected": "UNOPENED",
+        "recognition": "TemplateMatch",
+        "template": "OutsideDeduction/UNOPEN.png",
         "roi": [
-            1041,
-            426,
-            122,
-            24
+            989,
+            375,
+            226,
+            126
         ],
-        "only_rec": true,
         "next": [
             "SODStart"
         ],
@@ -227,7 +234,15 @@
             54
         ],
         "action": "Click",
-        "post_delay": 2500,
+        "post_wait_freezes": {
+            "time": 700,
+            "target": [
+                417,
+                402,
+                453,
+                50
+            ]
+        },
         "next": [
             "SOD_MenuFlag",
             "SODStop_Confirm"

@@ -132,7 +132,7 @@ class DuringRe_release(CustomAction):
 
         for key in reversed(list(data.keys())):
             item = data[key]
-            if item["activity"]["re-release"]:
+            if item["activity"].get("re-release"):
                 if now < item["activity"]["re-release"]["end_time"]:
                     if now > item["activity"]["re-release"]["start_time"]:
                         logger.info(

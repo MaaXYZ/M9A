@@ -15,12 +15,12 @@
     },
     "FlagInActivityMain": {
         "recognition": "OCR",
-        "expected": "成就",
+        "expected": "预告",
         "roi": [
-            1179,
-            26,
-            42,
-            22
+            1006,
+            31,
+            39,
+            21
         ],
         "only_rec": true,
         "next": [
@@ -83,9 +83,9 @@
         "expected": "开始行动",
         "roi": [
             1089,
-            587,
-            132,
-            34
+            588,
+            131,
+            41
         ],
         "only_rec": true,
         "next": [
@@ -99,10 +99,10 @@
         "recognition": "OCR",
         "expected": "\\d",
         "roi": [
-            914,
-            596,
-            56,
-            35
+            902,
+            591,
+            101,
+            54
         ],
         "replace": [
             [
@@ -114,16 +114,15 @@
                 ""
             ]
         ],
-        "only_rec": true,
         "next": [
             "ActivityTargetLevel"
         ]
     },
     "ActivityTargetLevel": {
         "action": "Custom",
-        "custom_action": "CombatTargetLevel",
+        "custom_action": "ActivityTargetLevel",
         "custom_action_param": {
-            "level": "厄险"
+            "level": "艰难"
         },
         "post_wait_freezes": {
             "time": 700,
@@ -138,14 +137,18 @@
             "ReadyForAction"
         ]
     },
-    "TargetLevelRec": {
+    "ActivityTargetLevelRec": {
         "recognition": "OCR",
-        "expected": "[\\s\\S]",
+        "expected": [
+            "艰难",
+            "意外",
+            "故事"
+        ],
         "roi": [
-            999,
-            247,
-            215,
-            38
+            1036,
+            231,
+            57,
+            26
         ],
         "only_rec": true,
         "threshold": 0.7
@@ -175,7 +178,16 @@
             569,
             59,
             40
-        ]
+        ],
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                1098,
+                583,
+                174,
+                67
+            ]
+        }
     },
     "JudgeDuringRe_release": {
         "enabled": false,

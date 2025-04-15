@@ -143,7 +143,7 @@ class TeamSelect(CustomAction):
 @AgentServer.custom_action("CombatTargetLevel")
 class CombatTargetLevel(CustomAction):
     """
-    目标难度
+    主线目标难度
 
     参数格式：
     {
@@ -186,5 +186,65 @@ class CombatTargetLevel(CustomAction):
         else:
             if "童话" not in text:
                 context.tasker.controller.post_click(945, 265).wait()
+
+        return CustomAction.RunResult(success=True)
+
+
+@AgentServer.custom_action("ActivityTargetLevel")
+class ActivityTargetLevel(CustomAction):
+    """
+    活动目标难度
+
+    参数格式：
+    {
+        "level": "难度选择"
+    }
+    """
+
+    def run(
+        self,
+        context: Context,
+        argv: CustomAction.RunArg,
+    ) -> CustomAction.RunResult:
+
+        valid_levels = {"故事", "意外", "艰难"}
+        level = json.loads(argv.custom_action_param)["level"]
+
+        if not level or level not in valid_levels:
+            logger.error("目标难度不存在")
+            return CustomAction.RunResult(success=False)
+
+        img = context.tasker.controller.post_screencap().wait().get()
+        reco_detail = context.run_recognition("ActivityTargetLevelRec", img)
+
+        if reco_detail is None or not any(
+            difficulty in reco_detail.best_result.text for difficulty in valid_levels
+        ):
+            logger.warning("未识别到当前难度")
+            return CustomAction.RunResult(success=False)
+
+        cur_level = reco_detail.best_result.text
+
+        retry = 0
+
+        while cur_level != level:
+            if cur_level == "故事":
+                context.tasker.controller.post_click(1190, 245).wait()
+                time.sleep(0.5)
+            elif cur_level == "艰难":
+                context.tasker.controller.post_click(945, 245).wait()
+                time.sleep(0.5)
+            else:
+                if level == "故事":
+                    context.tasker.controller.post_click(945, 245).wait()
+                    time.sleep(0.5)
+                else:
+                    context.tasker.controller.post_click(1190, 245).wait()
+                    time.sleep(0.5)
+
+            img = context.tasker.controller.post_screencap().wait().get()
+            reco_detail = context.run_recognition("ActivityTargetLevelRec", img)
+
+            cur_level = reco_detail.best_result.text
 
         return CustomAction.RunResult(success=True)

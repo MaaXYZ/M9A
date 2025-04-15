@@ -106,11 +106,12 @@ jobs:
           name: M9A-win-${{ matrix.arch }}
           path: "install"
 
-  ubuntu:
+  unix:
     needs: meta
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        os: [ubuntu-latest, macos-latest]
         arch: [aarch64, x86_64]
       fail-fast: false
 
@@ -123,83 +124,38 @@ jobs:
         uses: robinraju/release-downloader@v1
         with:
           repository: MaaXYZ/MaaFramework
-          fileName: "MAA-linux-${{ matrix.arch }}*"
+          fileName: "MAA-${{ matrix.os == 'ubuntu-latest' && 'linux' || 'macos' }}-${{ matrix.arch }}*"
           latest: true
           out-file-path: "deps"
           extract: true
 
-      - name: Download MFW
-        uses: robinraju/release-downloader@v1
+      - name: Download MFAAvalonia  
+        uses: robinraju/release-downloader@v1  
         with:
-          repository: overflow65537/MFW-PyQt6
-          fileName: "MFW-PyQt6-linux-${{ matrix.arch }}*"
+          repository: SweetSmellFox/MFAAvalonia
+          fileName: "MFAAvalonia-*-${{ matrix.os == 'ubuntu-latest' && 'linux' || 'osx' }}-${{ matrix.arch == 'x86_64' && 'x64' || 'arm64' }}*"
           latest: true
-          out-file-path: "install"
-          extract: true
-
-
-      - name: Install
-        shell: bash
-        run: |
-          python ./tools/install.py ${{ needs.meta.outputs.tag }}
-
-      - name: Install MFW
-        shell: bash
-        run: |
-          rm install/MFW-PyQt6-linux-${{ matrix.arch }}*
-          python ./tools/ci/deploy.py
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: M9A-linux-${{ matrix.arch }}
-          path: "install"
-
-  macos:
-    needs: meta
-    runs-on: macos-latest
-    strategy:
-      matrix:
-        arch: [aarch64, x86_64]
-      fail-fast: false
-
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: true
-
-      - name: Download MaaFramework
-        uses: robinraju/release-downloader@v1
-        with:
-          repository: MaaXYZ/MaaFramework
-          fileName: "MAA-macos-${{ matrix.arch }}*"
-          latest: true
-          out-file-path: "deps"
-          extract: true
-
-      - name: Download MFW
-        uses: robinraju/release-downloader@v1
-        with:
-          repository: overflow65537/MFW-PyQt6
-          fileName: "MFW-PyQt6-macos-${{ matrix.arch }}*"
-          latest: true
-          out-file-path: "install"
+          out-file-path: "MFA"
           extract: true
 
       - name: Install
         shell: bash
         run: |
           python ./tools/install.py ${{ needs.meta.outputs.tag }}
+          platform_name="${{ matrix.os == 'ubuntu-latest' && 'linux' || 'macos' }}"
+          
+          # Create list of MFA files to copy
+          mfa_files=$(ls -A MFA)
+          
+          # Copy MFA files to install directory, skipping if they already exist
+          for file in $mfa_files; do
+            cp -n MFA/$file install/ 2>/dev/null || true
+          done
 
-      - name: Install MFW
-        shell: bash
-        run: |
-          rm install/MFW-PyQt6-macos-${{ matrix.arch }}*
-          python ./tools/ci/deploy.py
       - uses: actions/upload-artifact@v4
         with:
-          name: M9A-macos-${{ matrix.arch }}
+          name: M9A-${{ matrix.os == 'ubuntu-latest' && 'linux' || 'macos' }}-${{ matrix.arch }}
           path: "install"
-
 
   changelog:
     name: Generate changelog
@@ -222,10 +178,9 @@ jobs:
           OUTPUT: CHANGES.md
           GITHUB_REPO: ${{ github.repository }}
 
-
   release:
     if: ${{ needs.meta.outputs.is_release == 'true' }}
-    needs: [meta, windows, ubuntu, macos, changelog]
+    needs: [meta, windows, unix, changelog]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4

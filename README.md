@@ -1,6 +1,8 @@
 <!-- markdownlint-disable MD033 MD041 -->
 <div align="center">
 
+<img alt="LOGO" src="https://github.com/user-attachments/assets/b8e4d737-d549-43f3-a2e7-a3727bf615a9" width="256" height="256" />
+
 # M9A
 
 基于全新架构的 亿韭韭韭 小助手。图像技术 + 模拟控制，解放双手！  

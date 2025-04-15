@@ -25,15 +25,14 @@
     },
     "ReveriesInTheRainMainFlag": {
         "doc": "判断位于雨中悬想主页面",
-        "recognition": "OCR",
-        "expected": "迷思原型",
+        "recognition": "TemplateMatch",
+        "template": "ReveriesInTheRain/ReveriesInTheRainMain.png",
         "roi": [
-            108,
-            499,
-            94,
-            26
+            465,
+            200,
+            419,
+            170
         ],
-        "only_rec": true,
         "next": [
             "DepthsOfMythEnd",
             "DepthsOfMythMainFlag"

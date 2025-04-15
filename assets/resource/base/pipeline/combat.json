@@ -741,5 +741,17 @@
         "interrupt": [
             "HomeButton"
         ]
+    },
+    "TargetLevelRec": {
+        "recognition": "OCR",
+        "expected": "[\\s\\S]+",
+        "roi": [
+            999,
+            247,
+            215,
+            38
+        ],
+        "only_rec": true,
+        "threshold": 0.7
     }
 }
