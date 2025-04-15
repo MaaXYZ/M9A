@@ -25,15 +25,12 @@
     "ActivityMainFlag": {
         "doc": "活动主页面",
         "recognition": "OCR",
-        "expected": [
-            "步",
-            "入剧情"
-        ],
+        "expected": "成就",
         "roi": [
-            1046,
-            623,
-            138,
-            40
+            1181,
+            31,
+            39,
+            21
         ],
         "only_rec": true,
         "next": [
@@ -56,10 +53,10 @@
         "action": "Click",
         "next": [
             "AnecdoteMainFlag",
-            "AnecdoteNotReadEver",
             "ActivityMainAnecdoteFlag"
         ],
         "interrupt": [
+            "AnecdoteNotReadEver",
             "ObtainedAwards"
         ]
     },
@@ -73,7 +70,16 @@
             25
         ],
         "only_rec": true,
-        "action": "Click"
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                473,
+                119,
+                318,
+                395
+            ]
+        }
     },
     "AnecdoteMainFlag": {
         "recognition": "OCR",
@@ -635,72 +641,27 @@
         "action": "Click"
     },
     "AnecdoteCompleted": {
-        "doc": "追溯右上角无红点",
-        "recognition": "ColorMatch",
-        "lower": [
-            160,
-            25,
-            15
-        ],
-        "upper": [
-            210,
-            75,
-            75
-        ],
+        "doc": "未阅读和有轶事派遣内容节点未命中，同时位于轶事主页面，任务视为完成",
+        "recognition": "OCR",
+        "expected": "已完成",
         "roi": [
-            1145,
-            481,
-            16,
-            15
+            500,
+            531,
+            56,
+            21
         ],
-        "count": 100,
-        "inverse": true,
+        "only_rec": true,
         "next": [
-            "AnecdoteTaskExist",
-            "AnecdoteMainFlag2"
+            "HomeFlag"
         ],
         "interrupt": [
-            "ObtainedAwards"
+            "ObtainedAwards",
+            "HomeButton"
         ]
-    },
-    "AnecdoteMainFlag2": {
-        "recognition": "TemplateMatch",
-        "template": "./Anecdote/MainFlag.png",
-        "roi": [
-            956,
-            443,
-            178,
-            146
-        ],
-        "next": [
-            "AnecdoteTaskExist",
-            "AnecdoteCompleted_NoNext"
-        ]
-    },
-    "AnecdoteCompleted_NoNext": {
-        "doc": "追溯右上角无红点",
-        "recognition": "ColorMatch",
-        "lower": [
-            160,
-            25,
-            15
-        ],
-        "upper": [
-            210,
-            75,
-            75
-        ],
-        "roi": [
-            1145,
-            481,
-            16,
-            15
-        ],
-        "count": 100,
-        "inverse": true
     },
     "AnecdoteNotRead": {
-        "doc": "尚未阅读完故事，任务结束",
+        "is_sub": true,
+        "doc": "尚未阅读完故事，尝试阅读",
         "recognition": "OCR",
         "expected": "剧情进度",
         "roi": [
@@ -711,17 +672,144 @@
         ],
         "only_rec": true,
         "next": [
-            "AnecdoteTaskExist",
-            "AnecdoteCompleted"
+            "AnecdoteTryAward"
         ],
         "interrupt": [
-            "AnecdoteTryAward",
+            "AnecdoteReadStory",
             "ObtainedAwards"
         ]
     },
-    "AnecdoteTryAward": {
+    "AnecdoteReadStory": {
         "recognition": "OCR",
-        "expected": "7/7",
+        "expected": [
+            "[0-6]/7",
+            "[0-7]/8"
+        ],
+        "roi": [
+            617,
+            529,
+            39,
+            23
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "target": [
+            474,
+            404,
+            320,
+            100
+        ],
+        "next": [
+            "AnecdoteReadStory",
+            "AnecdoteReadStoryMain"
+        ]
+    },
+    "AnecdoteReadStoryMain": {
+        "next": [
+            "AnecdoteReadStoryComplete"
+        ],
+        "interrupt": [
+            "AnecdoteSkip",
+            "AnecdoteSkipConfirm",
+            "AnecdoteFlagInStoryStage",
+            "AnecdoteClickCurStory"
+        ]
+    },
+    "AnecdoteReadStoryComplete": {
+        "recognition": "ColorMatch",
+        "lower": [
+            220,
+            87,
+            39
+        ],
+        "upper": [
+            270,
+            137,
+            89
+        ],
+        "roi": [
+            427,
+            546,
+            32,
+            35
+        ],
+        "connected": true,
+        "count": 30,
+        "next": [
+            "BackButton"
+        ]
+    },
+    "AnecdoteSkip": {
+        "recognition": "OCR",
+        "expected": [
+            "跳过",
+            "SKIP"
+        ],
+        "roi": [
+            978,
+            0,
+            265,
+            115
+        ],
+        "action": "Click",
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                343,
+                170,
+                586,
+                277
+            ]
+        }
+    },
+    "AnecdoteSkipConfirm": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            776,
+            406,
+            60,
+            31
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "AnecdoteFlagInStoryStage": {
+        "recognition": "OCR",
+        "expected": "开始行动",
+        "roi": [
+            1092,
+            590,
+            128,
+            33
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "AnecdoteClickCurStory": {
+        "recognition": "OCR",
+        "expected": "\\d+",
+        "roi": [
+            321,
+            499,
+            138,
+            133
+        ],
+        "action": "Click",
+        "target": [
+            401,
+            569,
+            33,
+            40
+        ]
+    },
+    "AnecdoteTryAward": {
+        "doc": "阅读进度满",
+        "recognition": "OCR",
+        "expected": [
+            "7/7",
+            "8/8"
+        ],
         "roi": [
             618,
             530,
@@ -729,7 +817,21 @@
             25
         ],
         "action": "Click",
-        "post_wait_freezes": 300
+        "target": [
+            461,
+            526,
+            21,
+            24
+        ],
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                480,
+                34,
+                275,
+                162
+            ]
+        }
     },
     "ActivityMainSelectAnecdote": {
         "recognition": "OCR",
