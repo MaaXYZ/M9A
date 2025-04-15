@@ -62,6 +62,14 @@
 
 更多文档请前往 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 主仓库查看
 
+## Star History
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=MaaXYZ/M9A&type=Date&theme=dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=MaaXYZ/M9A&type=Date" />
+  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=MaaXYZ/M9A&type=Date" />
+</picture>
+
 ## 鸣谢
 
 本项目由 **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)** 强力驱动！  

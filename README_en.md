@@ -60,6 +60,14 @@ Powered by [MaaFramework](https://github.com/MaaXYZ/MaaFramework)!
 
 For more documents, please visit the [MaaFramework](https://github.com/MaaXYZ/MaaFramework) main repository
 
+## Star History
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=MaaXYZ/M9A&type=Date&theme=dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=MaaXYZ/M9A&type=Date" />
+  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=MaaXYZ/M9A&type=Date" />
+</picture>
+
 ## Acknowledgements
 
 This project is strongly driven by **[MaaFramework](https://github.com/MaaXYZ/MaaFramework)**!
