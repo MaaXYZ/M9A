@@ -145,10 +145,10 @@ def agent():
     socket_id = sys.argv[-1]
 
     AgentServer.start_up(socket_id)
-    logger.info("AgentSever 启动")
+    logger.info("AgentServer 启动")
     AgentServer.join()
     AgentServer.shut_down()
-    logger.info("AgentSever 关闭")
+    logger.info("AgentServer 关闭")
 
 
 def main():
