@@ -262,8 +262,7 @@
     "BackButton": {
         "recognition": "TemplateMatch",
         "template": [
-            "StartUp/BackButton.png",
-            "StartUp/BackButton_White.png"
+            "StartUp/BackButton.png"
         ],
         "roi": [
             0,
@@ -271,13 +270,13 @@
             134,
             138
         ],
+        "green_mask": true,
         "action": "Click"
     },
     "BackButtonWithDelay": {
         "recognition": "TemplateMatch",
         "template": [
-            "StartUp/BackButton.png",
-            "StartUp/BackButton_White.png"
+            "StartUp/BackButton.png"
         ],
         "roi": [
             0,
@@ -285,6 +284,7 @@
             134,
             138
         ],
+        "green_mask": true,
         "action": "Click",
         "post_delay": 3000
     },
