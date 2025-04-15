@@ -10,7 +10,24 @@ permissions:
   contents: write
 
 jobs:
+  check-repository:
+    runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.check.outputs.should_run }}
+    steps:
+      - id: check
+        run: |
+          if [[ "${{ github.repository }}" == "MaaXYZ/M9A" ]]; then
+            echo "Repository is MaaXYZ/M9A, proceeding with sync"
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          else
+            echo "Repository is not MaaXYZ/M9A, skipping sync"
+            echo "should_run=false" >> $GITHUB_OUTPUT
+          fi
+
   sync-json-files:
+    needs: check-repository
+    if: needs.check-repository.outputs.should_run == 'true'
     runs-on: ubuntu-latest
     
     steps:
