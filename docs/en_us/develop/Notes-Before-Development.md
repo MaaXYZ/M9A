@@ -169,7 +169,6 @@ pre-commit run --all-files
 - [Writing interface.json](./Writing-interface.json.md)
 - [Writing Pipelines](./Writing-Pipelines.md)
 - [Writing Custom Scripts](./Writing-Custom.md)
-- [Bug Troubleshooting](./Bug-Troubleshooting.md)
 - [Project Refactoring](./Project-Refactoring.md)
 - [Adapting for External Servers](./Adapting-Global-Servers.md)
 - [Writing Documentation](./Writing-Documentation.md)

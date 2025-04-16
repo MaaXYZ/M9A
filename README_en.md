@@ -53,7 +53,6 @@ Powered by [MaaFramework](https://github.com/MaaXYZ/MaaFramework)!
 - [Interface.json writing](./docs/en_us/develop/Writing-interface.json.md)
 - [Pipeline writing](./docs/en_us/develop/Writing-Pipelines.md)
 - [Custom Writing](./docs/en_us/develop/Writing-Custom.md)
-- [Bug Troubleshooting](./docs/en_us/develop/Bug-Troubleshooting.md)
 - [Project Refactoring](./docs/en_us/develop/Project-Refactoring.md)
 - [Adapting Global Servers](./docs/en_us/develop/Adapting-Global-Servers.md)
 - [Document Writing](./docs/en_us/develop/Writing-Documentation.md)
@@ -62,11 +61,13 @@ For more documents, please visit the [MaaFramework](https://github.com/MaaXYZ/Ma
 
 ## Star History
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=MaaXYZ/M9A&type=Date&theme=dark" />
-  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=MaaXYZ/M9A&type=Date" />
-  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=MaaXYZ/M9A&type=Date" />
-</picture>
+<a href="https://www.star-history.com/#MaaXYZ/M9A&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=MaaXYZ/M9A&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=MaaXYZ/M9A&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=MaaXYZ/M9A&type=Date" />
+ </picture>
+</a>
 
 ## Acknowledgements
 
