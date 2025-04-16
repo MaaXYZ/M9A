@@ -2771,8 +2771,7 @@
     "SOD_BackButton": {
         "recognition": "TemplateMatch",
         "template": [
-            "StartUp/BackButton.png",
-            "StartUp/BackButton_White.png"
+            "StartUp/BackButton.png"
         ],
         "roi": [
             0,
@@ -2780,6 +2779,7 @@
             134,
             138
         ],
+        "green_mask": true,
         "action": "Click",
         "post_wait_freezes": {
             "time": 300,
