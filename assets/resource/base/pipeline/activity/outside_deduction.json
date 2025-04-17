@@ -220,9 +220,7 @@
             "SODStop_Confirm",
             "SODStop"
         ],
-        "focus": true,
-        "focus_tip": "本轮肉鸽结束",
-        "focus_tip_color": "DeepSkyBlue"
+        "focus": "[color:DeepSkyBlue]本轮肉鸽结束[/color]"
     },
     "SODStop_Confirm": {
         "recognition": "TemplateMatch",
@@ -427,9 +425,7 @@
             "SODStart_Confirm",
             "SODStart"
         ],
-        "focus": true,
-        "focus_tip": "开始本轮肉鸽",
-        "focus_tip_color": "tomato"
+        "focus": "[color:tomato]开启本轮肉鸽[/color]"
     },
     "SODStart_Confirm": {
         "recognition": "TemplateMatch",
