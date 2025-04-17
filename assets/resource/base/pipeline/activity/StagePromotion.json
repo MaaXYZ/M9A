@@ -1,301 +1,169 @@
 {
-    "ActivityStageModelSelect": {
-        "next_doc": "Set in code."
-    },
-    "ActivityStageModel_Story": {
-        "recognition": "OCR",
-        "expected": [
-            "故事模式"
-        ],
-        "roi": [
-            10,
-            90,
-            250,
-            140
-        ],
-        "action": "Click",
+    "StagePromotion": {
+        "timeout": 30000,
         "next": [
-            "StagePromotion_SwipeRightAndFindStage"
+            "StagePromotionComplete"
+        ],
+        "interrupt": [
+            "StagePromotionFlagInCombat",
+            "StagePromotionCombatVictory",
+            "StagePromotionSkip",
+            "StagePromotionSkipConfirm",
+            "StagePromotionClickNextStage",
+            "StagePromotionFlagInStoryStage",
+            "StagePromotionStartAction",
+            "StagePromotionClickCurStage"
         ]
     },
-    "ActivityStageModel_Explore": {
-        "recognition": "OCR",
-        "expected": [
-            "探索模式"
-        ],
-        "roi": [
-            10,
-            200,
-            250,
-            140
-        ],
-        "action": "Click",
-        "next": [
-            "StagePromotion_SwipeRightAndFindStage"
-        ]
+    "StagePromotionComplete": {
+        "recognition": "Custom",
+        "custom_recognition": "StagePromotionComplete"
     },
-    "StagePromotion_SwipeRightAndFindStage": {
-        "next": [
-            "StagePromotion_NextStage2",
-            "StagePromotion_NextStage1",
-            "StagePromotion_SwipeRightForStageList"
-        ]
-    },
-    "StagePromotion_NextStage1": {
+    "StagePromotionCurStageComplete": {
         "recognition": "ColorMatch",
-        "roi": [
-            44,
-            533,
-            1209,
-            50
-        ],
-        "method": 4,
         "lower": [
-            85,
-            85,
-            85
+            220,
+            87,
+            39
         ],
         "upper": [
-            150,
-            150,
-            150
+            270,
+            137,
+            89
         ],
-        "connected": true,
-        "count": 70,
-        "action": "Click",
-        "next": [
-            "StagePromotion_ReadyForAction",
-            "StagePromotion_Skip",
-            "StagePromotion_NextStage1"
-        ]
-    },
-    "StagePromotion_NextStage2": {
-        "recognition": "ColorMatch",
         "roi": [
-            424,
+            425,
             542,
-            353,
-            41
-        ],
-        "method": 4,
-        "lower": [
-            85,
-            85,
-            85
-        ],
-        "upper": [
-            150,
-            150,
-            150
+            49,
+            43
         ],
         "connected": true,
-        "count": 70,
-        "action": "Click",
-        "next": [
-            "StagePromotion_ReadyForAction",
-            "StagePromotion_Skip",
-            "StagePromotion_NextStage2"
-        ]
+        "count": 10
     },
-    "StagePromotion_ReadyForAction": {
-        "recognition": "OCR",
-        "expected": [
-            "开始行动"
+    "StagePromotionCurStageComplete1": {
+        "recognition": "ColorMatch",
+        "lower": [
+            209,
+            193,
+            133
+        ],
+        "upper": [
+            229,
+            213,
+            153
         ],
         "roi": [
-            900,
-            500,
-            380,
-            220
+            425,
+            542,
+            49,
+            43
         ],
-        "action": "Click",
-        "next": [
-            "StagePromotion_Skip",
-            "StagePromotion_Combating",
-            "StagePromotion_EatCandy",
-            "StagePromotion_BalanceModel",
-            "StagePromotion_ReadyForAction"
-        ]
+        "connected": true,
+        "count": 10
     },
-    "StagePromotion_BalanceModel": {
-        "is_sub": true,
-        "recognition": "OCR",
-        "expected": [
-            "制衡模式"
+    "StagePromotionCurStageComplete2": {
+        "recognition": "ColorMatch",
+        "lower": [
+            183,
+            29,
+            29
+        ],
+        "upper": [
+            221,
+            38,
+            38
         ],
         "roi": [
-            510,
-            105,
-            290,
+            425,
+            542,
+            49,
+            43
+        ],
+        "connected": true,
+        "count": 10
+    },
+    "StagePromotionSkip": {
+        "recognition": "OCR",
+        "expected": [
+            "跳过",
+            "SKIP"
+        ],
+        "roi": [
+            978,
+            0,
+            265,
             115
         ],
         "action": "Click",
-        "target_offset": [
-            -200,
-            -100,
-            30,
-            30
-        ]
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                343,
+                170,
+                586,
+                277
+            ]
+        }
     },
-    "StagePromotion_EatCandy": {
-        "enabled": false,
+    "StagePromotionSkipConfirm": {
         "recognition": "OCR",
-        "expected": [
-            "活性",
-            "恢复"
-        ],
+        "expected": "确认",
         "roi": [
-            465,
-            571,
-            277,
-            149
+            776,
+            406,
+            60,
+            31
         ],
-        "threshold": 0.7,
-        "next": [
-            "StagePromotion_SmallCandy",
-            "StagePromotion_MiniCandy",
-            "StagePromotion_BigCandy"
-        ]
+        "only_rec": true,
+        "action": "Click"
     },
-    "StagePromotion_MiniCandy": {
-        "recognition": "TemplateMatch",
-        "template": "EatCandy/MiniCandy.png",
-        "roi": [
-            989,
-            212,
-            165,
-            200
-        ],
-        "action": "Click",
-        "next": [
-            "StagePromotion_MiniCandyConfirm",
-            "StagePromotion_MiniCandy"
-        ]
-    },
-    "StagePromotion_SmallCandy": {
-        "recognition": "TemplateMatch",
-        "template": "EatCandy/SmallCandy.png",
-        "roi": [
-            829,
-            65,
-            145,
-            295
-        ],
-        "action": "Click",
-        "next": [
-            "StagePromotion_EatCandyConfirm",
-            "StagePromotion_SmallCandy"
-        ]
-    },
-    "StagePromotion_BigCandy": {
-        "recognition": "TemplateMatch",
-        "template": "EatCandy/BigCandy.png",
-        "roi": [
-            856,
-            373,
-            196,
-            344
-        ],
-        "action": "Click",
-        "next": [
-            "StagePromotion_EatCandyConfirm",
-            "StagePromotion_SmallCandy"
-        ]
-    },
-    "StagePromotion_MiniCandyConfirm": {
-        "recognition": "TemplateMatch",
-        "template": "EatCandy/ConvertCandyConfirm.png",
-        "roi": [
-            594,
-            491,
-            88,
-            48
-        ],
-        "action": "Click",
-        "next": [
-            "StagePromotion_QuitEatCandyPage",
-            "StagePromotion_EatCandyConfirm"
-        ]
-    },
-    "StagePromotion_EatCandyConfirm": {
-        "recognition": "TemplateMatch",
-        "template": "EatCandy/Confirm.png",
-        "roi": [
-            709,
-            352,
-            189,
-            151
-        ],
-        "action": "Click",
-        "next": [
-            "StagePromotion_QuitEatCandyPage",
-            "StagePromotion_EatCandyConfirm"
-        ]
-    },
-    "StagePromotion_QuitEatCandyPage": {
+    "StagePromotionFlagInStoryStage": {
         "recognition": "OCR",
-        "expected": [
-            "活性",
-            "恢复"
-        ],
+        "expected": "开始行动",
         "roi": [
-            465,
-            571,
-            277,
-            149
+            1092,
+            590,
+            128,
+            33
         ],
-        "action": "Click",
-        "target": [
-            1116,
-            636,
-            155,
-            76
-        ],
-        "next": [
-            "StagePromotion_ReadyForAction",
-            "StagePromotion_QuitEatCandyPage"
-        ]
+        "only_rec": true,
+        "action": "Click"
     },
-    "StagePromotion_Skip": {
+    "StagePromotionClickNextStage": {
         "recognition": "OCR",
-        "expected": [
-            "跳过"
-        ],
+        "expected": "\\d+",
         "roi": [
-            1015,
-            7,
-            263,
-            70
+            701,
+            550,
+            182,
+            53
         ],
-        "action": "Click",
-        "next": [
-            "StagePromotion_Confirm",
-            "StagePromotion_Combating",
-            "StagePromotion_Skip"
-        ]
+        "action": "Click"
     },
-    "StagePromotion_Confirm": {
+    "StagePromotionClickCurStage": {
         "recognition": "OCR",
-        "expected": [
-            "确认"
-        ],
+        "expected": "\\d+",
         "roi": [
-            687,
-            336,
-            280,
-            174
+            321,
+            499,
+            138,
+            133
         ],
-        "action": "Click",
-        "next": [
-            "StagePromotion_ReadyForAction",
-            "StagePromotion_BalanceModel",
-            "StagePromotion_Skip",
-            "StagePromotion_NextStage2",
-            "StagePromotion_NextStage1",
-            "StagePromotion_Confirm"
-        ]
+        "action": "Click"
     },
-    "StagePromotion_Combating": {
+    "StagePromotionStartAction": {
+        "recognition": "OCR",
+        "expected": "开始行动",
+        "roi": [
+            1054,
+            638,
+            124,
+            32
+        ],
+        "only_rec": true,
+        "action": "Click"
+    },
+    "StagePromotionFlagInCombat": {
         "recognition": "TemplateMatch",
         "template": "OutsideDeduction/SOD_Combating.png",
         "roi": [
@@ -304,18 +172,9 @@
             64,
             64
         ],
-        "timeout": 40000,
-        "next": [
-            "StagePromotion_Victory",
-            "StagePromotion_CombatDefeat",
-            "StagePromotion_Skip",
-            "StagePromotion_ReadyForAction",
-            "StagePromotion_Dialog_Right",
-            "StagePromotion_Dialog_Left",
-            "StagePromotion_Combating"
-        ]
+        "post_delay": 5000
     },
-    "StagePromotion_Victory": {
+    "StagePromotionCombatVictory": {
         "recognition": "OCR",
         "expected": [
             "战斗",
@@ -328,107 +187,14 @@
             240
         ],
         "action": "Click",
-        "post_wait_freezes": 1,
-        "next": [
-            "StagePromotion_Skip",
-            "StagePromotion_ReadyForAction",
-            "StagePromotion_NextStage2",
-            "StagePromotion_NextStage1",
-            "StagePromotion_Victory"
-        ]
-    },
-    "StagePromotion_CombatDefeat": {
-        "recognition": "OCR",
-        "expected": [
-            "战斗",
-            "失败"
-        ],
-        "roi": [
-            384,
-            42,
-            446,
-            214
-        ]
-    },
-    "StagePromotion_Dialog_Right": {
-        "is_sub": true,
-        "recognition": "ColorMatch",
-        "roi": [
-            1093,
-            44,
-            122,
-            42
-        ],
-        "method": 4,
-        "lower": [
-            225,
-            215,
-            200
-        ],
-        "upper": [
-            245,
-            225,
-            210
-        ],
-        "count": 1,
-        "order_by": "Score",
-        "index": 0,
-        "action": "Click",
-        "target": true
-    },
-    "StagePromotion_Dialog_Left": {
-        "is_sub": true,
-        "recognition": "ColorMatch",
-        "roi": [
-            72,
-            44,
-            122,
-            122
-        ],
-        "method": 4,
-        "lower": [
-            225,
-            215,
-            200
-        ],
-        "upper": [
-            245,
-            225,
-            210
-        ],
-        "count": 1,
-        "order_by": "Score",
-        "index": 0,
-        "action": "Click",
-        "target": true
-    },
-    "StagePromotion_CantAuto": {
-        "recognition": "TemplateMatch",
-        "template": "Combat/CantAuto.png",
-        "roi": [
-            1072,
-            6,
-            72,
-            72
-        ]
-    },
-    "StagePromotion_SwipeRightForStageList": {
-        "action": "Swipe",
-        "begin": [
-            900,
-            600,
-            100,
-            50
-        ],
-        "end": [
-            300,
-            600,
-            100,
-            50
-        ],
-        "post_wait_freezes": 1,
-        "next": [
-            "StagePromotion_SwipeRightAndFindStage"
-        ]
+        "pre_wait_freezes": {
+            "time": 500,
+            "target": [
+                622,
+                522,
+                659,
+                145
+            ]
+        }
     }
 }
