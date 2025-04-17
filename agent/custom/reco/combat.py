@@ -21,26 +21,28 @@ class StagePromotionComplete(CustomRecognition):
     ) -> Union[CustomRecognition.AnalyzeResult, Optional[RectType]]:
 
         cur_flag = False
+        # 轶事
         reco_detail = context.run_recognition(
             "StagePromotionCurStageComplete", argv.image
+        )
+        # 故事模式
+        reco_detail1 = context.run_recognition(
+            "StagePromotionCurStageComplete1", argv.image
+        )
+        # 探索模式
+        reco_detail2 = context.run_recognition(
+            "StagePromotionCurStageComplete2", argv.image
         )
         if reco_detail is not None:
             if reco_detail.best_result:
                 cur_flag = True
-        else:
-            reco_detail = context.run_recognition(
-                "StagePromotionCurStageComplete",
-                argv.image,
-                {
-                    "StagePromotionCurStageComplete": {
-                        "lower": [201, 38, 38],
-                        "upper": [221, 58, 58],
-                    }
-                },
-            )
-            if reco_detail is not None:
-                if reco_detail.best_result:
-                    cur_flag = True
+        if reco_detail1 is not None:
+            if reco_detail1.best_result:
+                cur_flag = True
+        if reco_detail2 is not None:
+            if reco_detail2.best_result:
+                cur_flag = True
+
         if cur_flag:
             reco_detail = context.run_recognition(
                 "StagePromotionClickNextStage", argv.image
@@ -48,4 +50,6 @@ class StagePromotionComplete(CustomRecognition):
             if reco_detail is not None:
                 if not reco_detail.best_result:
                     return [0, 0, 0, 0]
+            else:
+                return [0, 0, 0, 0]
         return None
