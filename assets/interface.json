@@ -166,10 +166,7 @@
         },
         {
             "name": "(测试中)推图模式",
-            "entry": "StagePromotion_SwipeRightAndFindStage",
-            "option": [
-                "体力不够自动吃糖"
-            ],
+            "entry": "StagePromotion",
             "doc": "[size:15][color:tomato]本功能处于测试中，不保证正常运行。当前本功能主线不可用。[/color][/size]\n[size:15][color:tomato]使用时请先手动打开需要推图的页面，如当期活动、佚事等，然后再运行此任务[/color][/size]"
         }
     ],
@@ -949,26 +946,6 @@
                     "name": "No",
                     "pipeline_override": {
                         "EatCandyWithin24H": {
-                            "enabled": false
-                        }
-                    }
-                }
-            ]
-        },
-        "体力不够自动吃糖": {
-            "cases": [
-                {
-                    "name": "Yes",
-                    "pipeline_override": {
-                        "StagePromotion_EatCandy": {
-                            "enabled": true
-                        }
-                    }
-                },
-                {
-                    "name": "No",
-                    "pipeline_override": {
-                        "StagePromotion_EatCandy": {
                             "enabled": false
                         }
                     }
