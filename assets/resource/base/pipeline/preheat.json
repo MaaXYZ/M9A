@@ -1,0 +1,96 @@
+{
+    "领取预热奖励": {
+        "doc": "判断左上角小盒子是否有红点,检测超时就算了",
+        "recognition": "TemplateMatch",
+        "roi": [
+            166,
+            28,
+            86,
+            80
+        ],
+        "template": "Awards/Box.png",
+        "action": "Click",
+        "timeout": 3000,
+        "next": [
+            "检测预热文本"
+        ],
+        "interrupt": [
+            "BackButton",
+            "HomeFlag"
+        ]
+    },
+    "检测预热文本": {
+        "doc": "检测预热文本是否存在,检测超时就返回,有的话就检测下一个",
+        "recognition": "OCR",
+        "expected": "实验室快照",
+        "roi": [
+            62,
+            149,
+            116,
+            34
+        ],
+        "action": "Click",
+        "pre_wait_freezes": 1000,
+        "next": [
+            "检测预热红点"
+        ],
+        "on_error": [
+            "BackButton",
+            "HomeFlag"
+        ]
+    },
+    "检测预热红点": {
+        "doc": "检测预热红点是否存在,检测超时就返回,有的话就尝试进行任务操作",
+        "recognition": "TemplateMatch",
+        "roi": [
+            165,
+            123,
+            32,
+            33
+        ],
+        "template": "Awards/RedPoint.png",
+        "next": [
+            "尝试执行任务"
+        ],
+        "on_error": [
+            "BackButton",
+            "HomeFlag"
+        ]
+    },
+    "尝试执行任务": {
+        "action": "Swipe",
+        "begin": [
+            358,
+            339,
+            30,
+            25
+        ],
+        "end": [
+            611,
+            343,
+            28,
+            28
+        ],
+        "next": [
+            "点击领取奖励"
+        ]
+    },
+    "点击领取奖励": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            996,
+            552,
+            73,
+            73
+        ],
+        "action": "Click",
+        "next": [
+            "HomeFlag"
+        ],
+        "interrupt": [
+            "ObtainedAwards",
+            "BackButton"
+        ]
+    }
+}
