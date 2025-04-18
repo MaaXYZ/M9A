@@ -176,7 +176,16 @@
             359,
             364,
             152
-        ]
+        ],
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                517,
+                271,
+                259,
+                140
+            ]
+        }
     },
     "HomeLoading_wait": {
         "doc": "专供启动时使用，与原版分开以防止ReturnMain大面积报错",
