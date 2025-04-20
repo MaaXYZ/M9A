@@ -227,8 +227,7 @@
         "interrupt": [
             "HomeButton"
         ],
-        "focus": true,
-        "focus_tip": "战斗失败，任务结束"
+        "focus": "[color:red]战斗失败，任务结束[/color]"
     },
     "LucidscapeVictory": {
         "recognition": "OCR",

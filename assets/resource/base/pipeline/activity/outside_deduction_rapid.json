@@ -29,9 +29,7 @@
             "ODR_Start_Gift",
             "SOD_SwipeLeft"
         ],
-        "focus": true,
-        "focus_tip": "开启本轮速刷",
-        "focus_tip_color": "tomato"
+        "focus": "[color:tomato]开启本轮速刷[/color]"
     },
     "ODR_FlagInDifficultySelect": {
         "is_sub": true,
