@@ -17,7 +17,7 @@ jobs:
     steps:
       - id: check
         run: |
-          if [[ "${{ github.repository }}" == "MaaXYZ/M9A" ]]; then
+          if [[ "${{ github.repository }}" == "MAA1999/M9A" ]]; then
             echo "Repository is MaaXYZ/M9A, proceeding with sync"
             echo "should_run=true" >> $GITHUB_OUTPUT
           else
@@ -39,9 +39,9 @@ jobs:
           echo "Current Date and Time (UTC): $(date -u '+%Y-%m-%d %H:%M:%S')"
           
           # 下载三个JSON文件
-          curl -s -o assets/resource/cn.json https://raw.githubusercontent.com/Windsland52/M9A-Act-Data/master/cn.json || echo "Failed to download cn.json"
-          curl -s -o assets/resource/en.json https://raw.githubusercontent.com/Windsland52/M9A-Act-Data/master/en.json || echo "Failed to download en.json"
-          curl -s -o assets/resource/jp.json https://raw.githubusercontent.com/Windsland52/M9A-Act-Data/master/jp.json || echo "Failed to download jp.json"
+          curl -s -o assets/resource/cn.json https://raw.githubusercontent.com/MAA1999/M9A-Act-Data/master/cn.json || echo "Failed to download cn.json"
+          curl -s -o assets/resource/en.json https://raw.githubusercontent.com/MAA1999/M9A-Act-Data/master/en.json || echo "Failed to download en.json"
+          curl -s -o assets/resource/jp.json https://raw.githubusercontent.com/MAA1999/M9A-Act-Data/master/jp.json || echo "Failed to download jp.json"
           
           # 检查文件是否成功下载
           echo "Checking downloaded files:"
