@@ -1,0 +1,204 @@
+{
+    "TheAlarm": {
+        "next": "Alarm_Is_7_3/3",
+        "interrupt": [
+            "Alarm_Find0/3"
+        ]
+    },
+    "Alarm_Is_7_3/3": {
+        "recognition": "OCR",
+        "expected": "7/3",
+        "roi": [
+            1126,
+            64,
+            135,
+            630
+        ]
+    },
+    "Alarm_Find0/3": {
+        "recognition": "OCR",
+        "expected": [
+            "0/3",
+            "1/3",
+            "2/3"
+        ],
+        "roi": [
+            1126,
+            64,
+            135,
+            630
+        ],
+        "action": "Click",
+        "order_by": "Vertical",
+        "next": [
+            "Alarm_Complete"
+        ],
+        "interrupt": "Alarm_StageFlag"
+    },
+    "Alarm_Complete": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat\\Activity\\complete.png"
+        ],
+        "threshold": 0.95,
+        "roi": [
+            737,
+            454,
+            402,
+            193
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            38,
+            36,
+            17,
+            12
+        ]
+    },
+    "Alarm_StageFlag": {
+        "recognition": "OCR",
+        "expected": "当前进度",
+        "roi": [
+            484,
+            57,
+            86,
+            37
+        ],
+        "only_rec": true,
+        "next": [
+            "Alarm_FindStage"
+        ]
+    },
+    "Alarm_FindStage": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "Combat\\Activity\\stage1.png",
+            "Combat\\Activity\\stage2.png",
+            "Combat\\Activity\\stage3.png"
+        ],
+        "roi": [
+            245,
+            128,
+            796,
+            510
+        ],
+        "threshold": 0.95,
+        "action": "Click",
+        "next": [
+            "Alarm_Action1"
+        ]
+    },
+    "Alarm_Action1": {
+        "recognition": "OCR",
+        "expected": "开始挑战",
+        "roi": [
+            1049,
+            607,
+            134,
+            50
+        ],
+        "action": "Click",
+        "next": [
+            "Alarm_Action2",
+            "Alarm_Action1"
+        ]
+    },
+    "Alarm_Action2": {
+        "recognition": "OCR",
+        "expected": "开始",
+        "roi": [
+            1049,
+            614,
+            134,
+            79
+        ],
+        "action": "Click",
+        "next": [
+            "Alarm_StageFlagEnd",
+            "Alarm_Action2"
+        ],
+        "interrupt": [
+            "Alarm_Action3",
+            "TheAlarm_Combat"
+        ]
+    },
+    "Alarm_Action3": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "roi": [
+            589,
+            614,
+            95,
+            38
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "Alarm_Action4",
+            "Alarm_Action3"
+        ]
+    },
+    "Alarm_Action4": {
+        "recognition": "OCR",
+        "expected": "确认",
+        "roi": [
+            761,
+            403,
+            86,
+            40
+        ],
+        "only_rec": true,
+        "action": "Click",
+        "next": [
+            "Alarm_StageFlagEnd",
+            "Alarm_Action4"
+        ]
+    },
+    "TheAlarm_Combat": {
+        "recognition": "OCR",
+        "expected": "回合",
+        "roi": [
+            22,
+            28,
+            205,
+            46
+        ],
+        "timeout": 60000,
+        "next": [
+            "TheAlarm_Combat",
+            "TheAlarm_Victory"
+        ]
+    },
+    "TheAlarm_Victory": {
+        "recognition": "OCR",
+        "expected": "战斗",
+        "roi": [
+            766,
+            78,
+            306,
+            102
+        ],
+        "action": "Click",
+        "pre_wait_freezes": {
+            "time": 500,
+            "target": [
+                718,
+                243,
+                218,
+                54
+            ]
+        }
+    },
+    "Alarm_StageFlagEnd": {
+        "recognition": "OCR",
+        "expected": "当前进度",
+        "roi": [
+            484,
+            57,
+            86,
+            37
+        ],
+        "only_rec": true
+    }
+}
