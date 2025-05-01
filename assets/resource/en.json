@@ -14,5 +14,25 @@
                 "end_time": 1744707599000
             }
         }
+    },
+    "2.5": {
+        "version_name": "Showdown in Chinatown",
+        "start_time": 1745503200000,
+        "end_time": 1748249999000,
+        "activity": {
+            "combat":{
+                "event_type": "SideStory",
+                "start_time": 1745503200000,
+                "end_time": 1748249999000
+            },
+            "anecdote": {
+                "start_time": 1746522000000,
+                "end_time": 1747731599000
+            },
+            "re-release": {
+                "start_time": 1747386000000,
+                "end_time": 1748249999000
+            }
+        }
     }
 }

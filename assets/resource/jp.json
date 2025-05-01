@@ -14,5 +14,25 @@
                 "end_time": 1744660799000
             }
         }
+    },
+    "2.5": {
+        "version_name": "チャイナタウン秘話",
+        "start_time": 1745456400000,
+        "end_time": 1748203199000,
+        "activity": {
+            "combat": {
+                "event_type": "SideStory",
+                "start_time": 1745456400000,
+                "end_time": 1748203199000
+            },
+            "anecdote": {
+                "start_time": 1746475200000,
+                "end_time": 1747684799000
+            },
+            "re-release": {
+                "start_time": 1747386000000,
+                "end_time": 1748249999000
+            }
+        }
     }
 }
