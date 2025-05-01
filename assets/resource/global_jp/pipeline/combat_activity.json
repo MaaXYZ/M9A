@@ -3,5 +3,10 @@
         "custom_action_param": {
             "resource": "jp"
         }
+    },
+    "JudgeDuringRe_release": {
+        "custom_action_param": {
+            "resource": "jp"
+        }
     }
 }
