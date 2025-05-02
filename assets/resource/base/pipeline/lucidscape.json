@@ -262,7 +262,10 @@
     },
     "LucidscapeSkip": {
         "recognition": "OCR",
-        "expected": "跳过",
+        "expected": [
+            "跳过",
+            "SKIP"
+        ],
         "roi": [
             1142,
             42,

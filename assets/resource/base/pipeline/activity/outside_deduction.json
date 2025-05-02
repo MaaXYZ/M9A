@@ -255,7 +255,8 @@
     "SOD_Skip_NoNext": {
         "recognition": "OCR",
         "expected": [
-            "跳过"
+            "跳过",
+            "SKIP"
         ],
         "roi": [
             1143,
