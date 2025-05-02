@@ -12,13 +12,13 @@
     },
     "ReveriesInTheRainMainEntry": {
         "doc": "进入雨中悬想主页面",
-        "recognition": "TemplateMatch",
-        "template": "ReveriesInTheRain/ReveriesInTheRainMainEntry.png",
+        "recognition": "OCR",
+        "expected": "雨中悬想",
         "roi": [
-            1097,
-            564,
-            151,
-            148
+            814,
+            616,
+            449,
+            104
         ],
         "action": "Click",
         "post_wait_freezes": 300
