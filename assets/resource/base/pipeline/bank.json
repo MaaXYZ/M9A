@@ -205,12 +205,11 @@
         "recognition": "OCR",
         "expected": "低阶柜台",
         "roi": [
-            321,
-            65,
-            80,
-            24
+            306,
+            56,
+            786,
+            51
         ],
-        "only_rec": true,
         "action": "Click",
         "post_wait_freezes": {
             "time": 300,
@@ -372,12 +371,11 @@
         "recognition": "OCR",
         "expected": "低阶柜台",
         "roi": [
-            321,
-            65,
-            80,
-            24
+            306,
+            56,
+            786,
+            51
         ],
-        "only_rec": true,
         "action": "Click",
         "post_wait_freezes": {
             "time": 300,
@@ -504,12 +502,11 @@
         "recognition": "OCR",
         "expected": "低阶柜台",
         "roi": [
-            321,
-            65,
-            80,
-            24
+            306,
+            56,
+            786,
+            51
         ],
-        "only_rec": true,
         "action": "Click",
         "post_wait_freezes": {
             "time": 300,
