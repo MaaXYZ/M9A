@@ -55,6 +55,10 @@ class DuringAct(CustomAction):
                             }
                         }
                     )
+                    if item["activity"]["combat"].get("override"):
+                        context.override_pipeline(
+                            item["activity"]["combat"].get("override")
+                        )
                     return CustomAction.RunResult(success=True)
                 continue
             break
@@ -152,6 +156,10 @@ class DuringRe_release(CustomAction):
                                 }
                             }
                         )
+                        if item["activity"]["re-release"].get("override"):
+                            context.override_pipeline(
+                                item["activity"]["re-release"].get("override")
+                            )
                         return CustomAction.RunResult(success=True)
                     continue
                 break
