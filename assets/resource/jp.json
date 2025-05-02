@@ -23,15 +23,31 @@
             "combat": {
                 "event_type": "SideStory",
                 "start_time": 1745456400000,
-                "end_time": 1748203199000
+                "end_time": 1748203199000,
+                "override": {
+                    "ActivityMainChapter": {
+                        "expected": [
+                            "开",
+                            "始"
+                        ],
+                        "roi": [
+                            514,
+                            547,
+                            277,
+                            104
+                        ]
+                    }
+                }
             },
             "anecdote": {
                 "start_time": 1746475200000,
                 "end_time": 1747684799000
             },
             "re-release": {
-                "start_time": 1747386000000,
-                "end_time": 1748249999000
+                "name": "朔日手记",
+                "alias": "朔日",
+                "start_time": 1747339200000,
+                "end_time": 1748203199000
             }
         }
     }
