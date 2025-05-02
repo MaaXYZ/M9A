@@ -61,7 +61,7 @@ If you encounter the following when opening the software, you need to update the
 The above generally indicate runtime library issues. You need to [update the runtime libraries](./newbie.md#2-install-runtime-environment).
 
 If updating the runtime libraries still doesn't solve the problem, both startup methods **crash immediately**, and no log files are generated in the current directory, it's likely another dependency-related issue.
-Please report it on the [project Issues page](https://github.com/MaaXYZ/M9A/issues).
+Please report it on the [project Issues page](https://github.com/MAA1999/M9A/issues).
 
 ### Agent Long Time Wait (Windows)
 
@@ -70,7 +70,7 @@ When using a generic UI (such as MFAAvalonia), there is a long period of unrespo
 ### Resource Loading Issues
 
 When this problem occurs, it prompts **Resource loading failed**.
-The solution is to delete the entire folder and then [download](https://github.com/MaaXYZ/M9A/releases) and install M9A again.
+The solution is to delete the entire folder and then [download](https://github.com/MAA1999/M9A/releases) and install M9A again.
 
 ### Connection Issues
 
@@ -125,5 +125,5 @@ Generally, MuMu12 or LDPlayer 9 are recommended.
 
 When you are **sure you have read the common issues above** and **tried to solve them yourself without success**, you can:
 
-1. Go to the [project Issues page](https://github.com/MaaXYZ/M9A/issues) and submit relevant materials **according to the template requirements**.
+1. Go to the [project Issues page](https://github.com/MAA1999/M9A/issues) and submit relevant materials **according to the template requirements**.
 2. Join the M9A Communication QQ Group: 175638678. Ask your question **after reading the group announcement**.

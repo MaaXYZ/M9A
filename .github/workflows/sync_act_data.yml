@@ -18,10 +18,10 @@ jobs:
       - id: check
         run: |
           if [[ "${{ github.repository }}" == "MAA1999/M9A" ]]; then
-            echo "Repository is MaaXYZ/M9A, proceeding with sync"
+            echo "Repository is MAA1999/M9A, proceeding with sync"
             echo "should_run=true" >> $GITHUB_OUTPUT
           else
-            echo "Repository is not MaaXYZ/M9A, skipping sync"
+            echo "Repository is not MAA1999/M9A, skipping sync"
             echo "should_run=false" >> $GITHUB_OUTPUT
           fi
 

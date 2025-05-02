@@ -18,7 +18,7 @@ Check out the [GitHub Pull Request Guide for Beginners](https://maa.plus/docs/zh
 
 1. If you forked the repository a long time ago, go to `Settings` in your repository, scroll to the bottom, and delete it.
 
-2. Open the [M9A Main Repository](https://github.com/MaaXYZ/M9A), click `Fork`, and then click `Create fork`.
+2. Open the [M9A Main Repository](https://github.com/MAA1999/M9A), click `Fork`, and then click `Create fork`.
 
 3. Clone your own repository locally and pull the submodules:
 
@@ -95,7 +95,7 @@ Check out the [GitHub Pull Request Guide for Beginners](https://maa.plus/docs/zh
     1. Link the original M9A repository:
 
         ```bash
-        git remote add upstream https://github.com/MaaXYZ/M9A.git
+        git remote add upstream https://github.com/MAA1999/M9A.git
         ```
 
     2. Fetch updates from the remote repository:

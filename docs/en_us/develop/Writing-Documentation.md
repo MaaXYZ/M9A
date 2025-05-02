@@ -35,7 +35,7 @@ However, note that [nested Block Quotes will not be rendered by GitHub](https://
 To add images to the documentation, follow these steps:
 
 1. Upload the image to the public repository's `Issues` or `Pull Requests`.  
-    [Example](https://github.com/MaaXYZ/M9A/pull/255#issuecomment-2489676567)
+    [Example](https://github.com/MAA1999/M9A/pull/255#issuecomment-2489676567)
 2. Select `Edit` to see content like `![name](anonymized URL)` and copy it for later use.
 3. Use the `![name](anonymized URL)` syntax to insert the image into the documentation.
 

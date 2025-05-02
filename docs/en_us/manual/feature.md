@@ -38,7 +38,7 @@ After switching, you can continue adding tasks to run tasks with multiple accoun
 > 1. M9A does not handle the story, tutorials, etc., that appear only when playing the roguelike mode for the first time. You need to complete it manually once before using this function.
 
 > [!NOTE]
-> Due to the complexity of this function's implementation, strange issues may occur. If possible, please enable screen recording on your emulator. When encountering problems, try to preserve sufficient information (all content under the `debug` and `logs` directories) so that developers can quickly locate and resolve the issue. [Click here to submit an issue](https://github.com/MaaXYZ/M9A/issues/new/choose)
+> Due to the complexity of this function's implementation, strange issues may occur. If possible, please enable screen recording on your emulator. When encountering problems, try to preserve sufficient information (all content under the `debug` and `logs` directories) so that developers can quickly locate and resolve the issue. [Click here to submit an issue](https://github.com/MAA1999/M9A/issues/new/choose)
 
 #### Pinning Demonstration
 
