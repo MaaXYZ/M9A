@@ -31,6 +31,7 @@ After switching, you can continue adding tasks to run tasks with multiple accoun
 >
 > 1. Before use, you can pin (mark) four characters in your box to serve as the deployed characters.
 > 2. It's recommended to include a healer in the team composition.
+> 3. Please make sure that the last battle was in automatic combat before use. M9A cannot check whether it is in automatic combat.
 
 > [!WARNING]
 >

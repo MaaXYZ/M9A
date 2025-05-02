@@ -2,4 +2,3 @@ maafw>=4.0.0
 loguru
 pillow
 pytz
-scikit-image
