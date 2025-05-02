@@ -17,12 +17,11 @@
         "recognition": "OCR",
         "expected": "预告",
         "roi": [
-            1006,
-            31,
-            39,
-            21
+            947,
+            0,
+            147,
+            101
         ],
-        "only_rec": true,
         "next": [
             "JudgeDuringRe_release",
             "ActivityMainChapter"
