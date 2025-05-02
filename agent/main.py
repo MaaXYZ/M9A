@@ -97,6 +97,7 @@ def install_requirements(req_file="requirements.txt", mirror=None) -> bool:
             "-m",
             "pip",
             "install",
+            "-U",
             "-r",
             str(req_path),
             "--no-warn-script-location",
