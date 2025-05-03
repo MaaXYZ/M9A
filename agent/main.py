@@ -52,6 +52,7 @@ def read_pip_config() -> dict:
 
     config_path = config_dir / "pip_config.json"
     default_config = {
+        "enable_pip_update": True,
         "enable_pip_install": True,
         "last_version": "unknown",
         "mirror": "https://mirrors.ustc.edu.cn/pypi/simple",
@@ -115,12 +116,43 @@ def install_requirements(req_file="requirements.txt", mirror=None) -> bool:
         return False
 
 
+def update_pip(mirror=None):
+    try:
+        logger.info("正在更新 pip...")
+        cmd = [
+            sys.executable,
+            "-m",
+            "pip",
+            "install",
+            "--upgrade",
+            "pip",
+            "--no-warn-script-location",
+        ]
+
+        if mirror:
+            logger.info(f"使用镜像源更新 pip: {mirror}")
+            cmd.extend(["-i", mirror])
+
+        subprocess.check_call(cmd)
+        logger.info("pip 更新成功")
+        return True
+    except Exception:
+        logger.exception("更新 pip 时出错")
+        return False
+
+
 def check_and_install_dependencies():
     pip_config = read_pip_config()
+    mirror = pip_config.get("mirror", None)
+    enable_pip_update = pip_config.get("enable_pip_update", True)
+    enable_pip_install = pip_config.get("enable_pip_install", True)
+
+    if enable_pip_update:
+        if not update_pip(mirror=mirror):
+            logger.warning("pip 更新失败，继续尝试安装依赖...")
+
     current_version = read_interface_version()
     last_version = pip_config.get("last_version", "unknown")
-    enable_pip_install = pip_config.get("enable_pip_install", True)
-    mirror = pip_config.get("mirror", None)
 
     logger.info(f"启用 pip 安装依赖: {enable_pip_install}")
     logger.info(f"当前版本: {current_version}, 上次运行版本: {last_version}")

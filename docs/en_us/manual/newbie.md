@@ -122,9 +122,10 @@ For Windows, we provide a Python environment for the convenience of most users. 
 
 ```jsonc
 {
-"enable_pip_install": true, # Whether to enable pip installation, default true, recommended to enable
-"last_version": "v3.2.0", # Read the version of interface.json when pip is installed, compare it with the version when it is started, and try to install it if it is different
-"mirror": "https://mirrors.ustc.edu.cn/pypi/simple" # Mirror source. The parameters after pip install -i can be filled in according to personal needs. Note that users outside the mainland should modify the value to ""
+    "enable_pip_update": true, # Whether to enable update pip, default true, recommended to enable
+    "enable_pip_install": true, # Whether to enable pip installation, default true, recommended to enable
+    "last_version": "v3.2.0", # Read the version of interface.json when pip is installed, compare it with the version when it is started, and try to install it if it is different
+    "mirror": "https://mirrors.ustc.edu.cn/pypi/simple" # Mirror source. The parameters after pip install -i can be filled in according to personal needs. Note that users outside the mainland should modify the value to ""
 }
 ```
 
