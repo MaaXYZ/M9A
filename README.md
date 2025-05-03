@@ -11,11 +11,13 @@
 </div>
 
 <p align="center">
-  <img alt="license" src="https://img.shields.io/github/license/MAA1999/M9A">
   <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white">
   <img alt="platform" src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-blueviolet">
+  <br>
+  <img alt="license" src="https://img.shields.io/github/license/MAA1999/M9A">
   <img alt="commit" src="https://img.shields.io/github/commit-activity/m/MAA1999/M9A">
   <img alt="stars" src="https://img.shields.io/github/stars/MAA1999/M9A?style=social">
+  <a href="https://mirrorchyan.com/zh/projects?rid=M9A" target="_blank"><img alt="mirrorc" src="https://img.shields.io/badge/Mirror%E9%85%B1-%239af3f6?logo=countingworkspro&logoColor=4f46e5"></a>
 </p>
 
 <div align="center">
