@@ -458,10 +458,9 @@
         "recognition": "TemplateMatch",
         "template": [
             "Awards/JukeboxBadge1.png",
-            "Awards/JukeboxBadge2.png",
-            "Awards/JukeboxBadge3.png"
+            "Awards/JukeboxBadge2.png"
         ],
-        "threshold": 0.7,
+        "threshold": 0.85,
         "roi": [
             154,
             29,
