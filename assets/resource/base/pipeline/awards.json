@@ -417,7 +417,7 @@
             418,
             105
         ],
-        "action": "click",
+        "action": "Click",
         "post_wait_freezes": {
             "time": 300,
             "target": [
