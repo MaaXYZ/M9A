@@ -2072,11 +2072,10 @@
             "SOD_Acquire",
             "SOD_Skip",
             "SOD_Main",
-            "SOD_Nothinghappen"
-        ],
-        "interrupt": [
+            "SOD_Nothinghappen",
             "SOD_Dialog_3",
-            "SOD_Dialog_5"
+            "SOD_Dialog_5",
+            "SOD_Combating"
         ]
     },
     "Sub_SOD_Dialog_1": {
@@ -2104,6 +2103,7 @@
         "action": "Click"
     },
     "SOD_Dialog_3": {
+        "is_sub": true,
         "doc": "战斗中露西的升华",
         "recognition": "OCR",
         "expected": [
@@ -2131,6 +2131,7 @@
         "action": "Click"
     },
     "SOD_Dialog_5": {
+        "is_sub": true,
         "doc": "战斗中天使娜娜的缔结契约",
         "recognition": "OCR",
         "expected": "选择缔约对象",
