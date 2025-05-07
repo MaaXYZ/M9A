@@ -170,21 +170,25 @@ def check_and_install_dependencies():
 
 
 def agent():
-    from maa.agent.agent_server import AgentServer
-    from maa.toolkit import Toolkit
+    try:
+        from maa.agent.agent_server import AgentServer
+        from maa.toolkit import Toolkit
 
-    import custom
-    from utils import logger
+        import custom
+        from utils import logger
 
-    Toolkit.init_option("./")
+        Toolkit.init_option("./")
 
-    socket_id = sys.argv[-1]
+        socket_id = sys.argv[-1]
 
-    AgentServer.start_up(socket_id)
-    logger.info("AgentServer 启动")
-    AgentServer.join()
-    AgentServer.shut_down()
-    logger.info("AgentServer 关闭")
+        AgentServer.start_up(socket_id)
+        logger.info("AgentServer 启动")
+        AgentServer.join()
+        AgentServer.shut_down()
+        logger.info("AgentServer 关闭")
+    except Exception as e:
+        logger.exception("agent 运行过程中发生异常")
+        raise
 
 
 def main():
