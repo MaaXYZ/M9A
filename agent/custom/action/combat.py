@@ -271,7 +271,7 @@ class SelectChapter(CustomAction):
         mainchapter = json.loads(argv.custom_action_param)["mainchapter"]
         # subchapter = json.loads(argv.custom_action_param)["subchapter"]
 
-        context.run_task("ReturnMainChapter", {"ReturnMainChapter": {"next": []}})
+        context.run_task("ReturnMainChapter", {"ReturnMainChapter": {}})
 
         logger.info(f"选择主线第{mainchapter}大章")
         context.run_task(

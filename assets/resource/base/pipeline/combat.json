@@ -7,6 +7,58 @@
             "ReturnMain"
         ]
     },
+    "ReturnMainChapter": {
+        "next": [
+            "ReturnMainChapterFalse",
+            "ReturnMainChapterTrue"
+        ]
+    },
+    "ReturnMainChapterTrue": {
+        "recognition": "OCR",
+        "expected": [
+            "生者",
+            "余众",
+            "旅行",
+            "归来"
+        ],
+        "roi": [
+            9,
+            62,
+            917,
+            87
+        ],
+        "action": "Click",
+        "next": []
+    },
+    "ReturnMainChapterFalse": {
+        "recognition": "OCR",
+        "expected": [
+            "生者",
+            "余众",
+            "旅行",
+            "归来"
+        ],
+        "roi": [
+            9,
+            62,
+            917,
+            87
+        ],
+        "inverse": true,
+        "next": []
+    },
+    "SelectMainChapter": {
+        "recognition": "TemplateMatch",
+        "template_code": "Set in code",
+        "roi": [
+            53,
+            132,
+            1150,
+            462
+        ],
+        "action": "Click",
+        "next": []
+    },
     "EnterTheShow": {
         "recognition": "TemplateMatch",
         "template": "Combat/EnterTheShow.png",
@@ -49,34 +101,6 @@
         ],
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
-    },
-    "ReturnMainChapter": {
-        "recognition": "OCR",
-        "expected": [
-            "生者",
-            "余众",
-            "旅行",
-            "归来"
-        ],
-        "roi": [
-            9,
-            62,
-            917,
-            87
-        ],
-        "action": "Click"
-    },
-    "SelectMainChapter": {
-        "recognition": "TemplateMatch",
-        "template_code": "Set in code",
-        "roi": [
-            53,
-            132,
-            1150,
-            462
-        ],
-        "action": "Click",
-        "next": []
     },
     "MainChapter_2": {
         "doc": "主线第二章 夜色温柔",
