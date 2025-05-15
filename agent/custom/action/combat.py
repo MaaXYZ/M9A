@@ -257,8 +257,8 @@ class SelectChapter(CustomAction):
 
     参数格式:
     {
-        "mainchapter": "第X大章",
-        "subchapter": "第X小章（原章节）"
+        "mainStoryChapter": "第X大章",
+        "mainChapter": "第X小章（原章节）"
     }
     """
 
@@ -268,29 +268,29 @@ class SelectChapter(CustomAction):
         argv: CustomAction.RunArg,
     ) -> CustomAction.RunResult:
 
-        mainchapter = json.loads(argv.custom_action_param)["mainchapter"]
-        # subchapter = json.loads(argv.custom_action_param)["subchapter"]
+        mainStoryChapter = json.loads(argv.custom_action_param)["mainStoryChapter"]
+        # mainChapter = json.loads(argv.custom_action_param)["mainChapter"]
 
-        context.run_task("ReturnMainChapter", {"ReturnMainChapter": {}})
+        context.run_task("ReturnMainStoryChapter", {"ReturnMainStoryChapter": {}})
 
-        logger.info(f"选择主线第{mainchapter}大章")
+        logger.info(f"选择主线第{mainStoryChapter}大章")
         context.run_task(
-            "SelectMainChapter",
+            "SelectMainStoryChapter",
             {
-                "SelectMainChapter": {
-                    "template": f"Combat/MainChapter{mainchapter}.png",
+                "SelectMainStoryChapter": {
+                    "template": f"Combat/MainStoryChapter_{mainStoryChapter}.png",
                     "next": [],
                 }
             },
         )
 
-        # logger.info(f"选择主线第{subchapter}小章")
+        # logger.info(f"选择主线第{mainChapter}小章")
         # context.run_task(
-        #     f"MainChapter_{subchapter}",
+        #     f"MainChapter_{mainChapter}",
         #     {
-        #         f"MainChapter_{subchapter}": {
+        #         f"MainChapter_{mainChapter}": {
         #             "action": "click",
-        #             "next": [f"MainChapter_{subchapter}Enter"],
+        #             "next": [f"MainChapter_{mainChapter}Enter"],
         #             "interrupt": ["SwipeLeftForChapter"],
         #         }
         #     },
