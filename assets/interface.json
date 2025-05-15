@@ -179,6 +179,142 @@
         "作战关卡": {
             "cases": [
                 {
+                    "name": "弯曲鹅颈(轮与轴之芯)：10-22 厄险（主线新增）",
+                    "pipeline_override": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_10"
+                        },
+                        "TargetStageName": {
+                            "expected": [
+                                "22",
+                                "以我纯净的血"
+                            ]
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "红漆泥板：10-19 厄险（主线新增）",
+                    "pipeline_override": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_10"
+                        },
+                        "TargetStageName": {
+                            "expected": [
+                                "19",
+                                "旧路新程"
+                            ]
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "啮咬盒：10-17 厄险（主线新增）",
+                    "pipeline_override": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_10"
+                        },
+                        "TargetStageName": {
+                            "expected": [
+                                "17",
+                                "弥涅尔瓦的侍女"
+                            ]
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "双头形骨架：10-14 厄险（主线新增）",
+                    "pipeline_override": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_10"
+                        },
+                        "TargetStageName": {
+                            "expected": [
+                                "14",
+                                "九重城"
+                            ]
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "祝圣秘银：10-09 厄险（主线新增）",
+                    "pipeline_override": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_10"
+                        },
+                        "TargetStageName": {
+                            "expected": [
+                                "09",
+                                "愚人与女祭司"
+                            ]
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "百灵百验鸟：10-06 厄险（主线新增）",
+                    "pipeline_override": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_10"
+                        },
+                        "TargetStageName": {
+                            "expected": [
+                                "06",
+                                "一路平安"
+                            ]
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "翼造门匙：10-04 厄险（主线新增）",
+                    "pipeline_override": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_10"
+                        },
+                        "TargetStageName": {
+                            "expected": [
+                                "04",
+                                "引路人"
+                            ]
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
+                    "name": "砂金甲虫：10-02 厄险（主线新增）",
+                    "pipeline_override": {
+                        "EnterTheShow": {
+                            "next": "MainChapter_10"
+                        },
+                        "TargetStageName": {
+                            "expected": [
+                                "02",
+                                "古舟子咏"
+                            ]
+                        },
+                        "StageDifficulty": {
+                            "next": "StageDifficulty_Hard"
+                        }
+                    }
+                },
+                {
                     "name": "啮咬盒(床下怪物)：7-26 厄险（效率1）",
                     "pipeline_override": {
                         "EnterTheShow": {

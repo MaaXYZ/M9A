@@ -248,3 +248,52 @@ class ActivityTargetLevel(CustomAction):
             cur_level = reco_detail.best_result.text
 
         return CustomAction.RunResult(success=True)
+
+
+@AgentServer.custom_action("SelectChapter")
+class SelectChapter(CustomAction):
+    """
+    章节选择 。
+
+    参数格式:
+    {
+        "mainchapter": "第X大章",
+        "subchapter": "第X小章（原章节）"
+    }
+    """
+
+    def run(
+        self,
+        context: Context,
+        argv: CustomAction.RunArg,
+    ) -> CustomAction.RunResult:
+
+        mainchapter = json.loads(argv.custom_action_param)["mainchapter"]
+        # subchapter = json.loads(argv.custom_action_param)["subchapter"]
+
+        context.run_task("ReturnMainChapter", {"ReturnMainChapter": {"next": []}})
+
+        logger.info(f"选择主线第{mainchapter}大章")
+        context.run_task(
+            "SelectMainChapter",
+            {
+                "SelectMainChapter": {
+                    "template": f"Combat/MainChapter{mainchapter}.png",
+                    "next": [],
+                }
+            },
+        )
+
+        # logger.info(f"选择主线第{subchapter}小章")
+        # context.run_task(
+        #     f"MainChapter_{subchapter}",
+        #     {
+        #         f"MainChapter_{subchapter}": {
+        #             "action": "click",
+        #             "next": [f"MainChapter_{subchapter}Enter"],
+        #             "interrupt": ["SwipeLeftForChapter"],
+        #         }
+        #     },
+        # )
+
+        return CustomAction.RunResult(success=True)

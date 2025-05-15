@@ -455,3 +455,4 @@ tools/ImageCropper/**/*.png
 config/maa_option.json
 assets/config/maa_pi_config.json
 /python
+config/pip_config.json
