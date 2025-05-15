@@ -50,8 +50,41 @@
         "action": "Click",
         "next": "SwipeLeftAndFindStage"
     },
+    "ReturnMainChapter": {
+        "recognition": "OCR",
+        "expected": [
+            "生者",
+            "余众",
+            "旅行",
+            "归来"
+        ],
+        "roi": [
+            9,
+            62,
+            917,
+            87
+        ],
+        "action": "Click"
+    },
+    "SelectMainChapter": {
+        "recognition": "TemplateMatch",
+        "template_code": "Set in code",
+        "roi": [
+            53,
+            132,
+            1150,
+            462
+        ],
+        "action": "Click",
+        "next": []
+    },
     "MainChapter_2": {
         "doc": "主线第二章 夜色温柔",
+        "action": "Custom",
+        "custom_action": "SelectChapter",
+        "custom_action_param": {
+            "mainchapter": 1
+        },
         "next": [
             "MainChapter_2Enter"
         ],
@@ -73,6 +106,11 @@
     },
     "MainChapter_3": {
         "doc": "主线第三章 故事一无所有",
+        "action": "Custom",
+        "custom_action": "SelectChapter",
+        "custom_action_param": {
+            "mainchapter": 1
+        },
         "next": [
             "MainChapter_3Enter"
         ],
@@ -94,6 +132,11 @@
     },
     "MainChapter_4": {
         "doc": "主线第四章 老虎的金黄",
+        "action": "Custom",
+        "custom_action": "SelectChapter",
+        "custom_action_param": {
+            "mainchapter": 1
+        },
         "next": [
             "MainChapter_4Enter"
         ],
@@ -115,6 +158,11 @@
     },
     "MainChapter_5": {
         "doc": "主线第五章 洞穴的囚徒",
+        "action": "Custom",
+        "custom_action": "SelectChapter",
+        "custom_action_param": {
+            "mainchapter": 1
+        },
         "next": [
             "MainChapter_5Enter"
         ],
@@ -136,6 +184,11 @@
     },
     "MainChapter_6": {
         "doc": "主线第六章 今夜星光灿烂",
+        "action": "Custom",
+        "custom_action": "SelectChapter",
+        "custom_action_param": {
+            "mainchapter": 1
+        },
         "next": [
             "MainChapter_6Enter"
         ],
@@ -157,6 +210,11 @@
     },
     "MainChapter_7": {
         "doc": "主线第七章 孤独之歌",
+        "action": "Custom",
+        "custom_action": "SelectChapter",
+        "custom_action_param": {
+            "mainchapter": 1
+        },
         "next": [
             "MainChapter_7Enter"
         ],
@@ -178,6 +236,11 @@
     },
     "MainChapter_8": {
         "doc": "主线第八章 忧郁的热带",
+        "action": "Custom",
+        "custom_action": "SelectChapter",
+        "custom_action_param": {
+            "mainchapter": 2
+        },
         "next": [
             "MainChapter_8Enter"
         ],
@@ -199,6 +262,11 @@
     },
     "MainChapter_9": {
         "doc": "主线第九章 疯癫与文明",
+        "action": "Custom",
+        "custom_action": "SelectChapter",
+        "custom_action_param": {
+            "mainchapter": 2
+        },
         "next": [
             "MainChapter_9Enter"
         ],
@@ -211,9 +279,35 @@
         "template": "Combat/MainChapter_9Enter.png",
         "roi": [
             0,
-            90,
+            200,
             1280,
-            460
+            350
+        ],
+        "action": "Click",
+        "next": "SwipeLeftAndFindStage"
+    },
+    "MainChapter_10": {
+        "doc": "主线第九章 疯癫与文明",
+        "action": "Custom",
+        "custom_action": "SelectChapter",
+        "custom_action_param": {
+            "mainchapter": 2
+        },
+        "next": [
+            "MainChapter_10Enter"
+        ],
+        "interrupt": [
+            "SwipeLeftForChapter"
+        ]
+    },
+    "MainChapter_10Enter": {
+        "recognition": "TemplateMatch",
+        "template": "Combat/MainChapter_10Enter.png",
+        "roi": [
+            0,
+            200,
+            1280,
+            350
         ],
         "action": "Click",
         "next": "SwipeLeftAndFindStage"

@@ -23,4 +23,5 @@ __all__ = [
     "CombatTargetLevel",
     "SummonlngSwipe",
     "SOD_DifficultySelect",
+    "SelectChapter",
 ]
