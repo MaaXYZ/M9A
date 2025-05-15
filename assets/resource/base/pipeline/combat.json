@@ -7,13 +7,13 @@
             "ReturnMain"
         ]
     },
-    "ReturnMainChapter": {
+    "ReturnMainStoryChapter": {
         "next": [
-            "ReturnMainChapterFalse",
-            "ReturnMainChapterTrue"
+            "ReturnMainStoryChapterFalse",
+            "ReturnMainStoryChapterTrue"
         ]
     },
-    "ReturnMainChapterTrue": {
+    "ReturnMainStoryChapterTrue": {
         "recognition": "OCR",
         "expected": [
             "生者",
@@ -30,7 +30,7 @@
         "action": "Click",
         "next": []
     },
-    "ReturnMainChapterFalse": {
+    "ReturnMainStoryChapterFalse": {
         "recognition": "OCR",
         "expected": [
             "生者",
@@ -47,7 +47,7 @@
         "inverse": true,
         "next": []
     },
-    "SelectMainChapter": {
+    "SelectMainStoryChapter": {
         "recognition": "TemplateMatch",
         "template_code": "Set in code",
         "roi": [
@@ -107,7 +107,7 @@
         "action": "Custom",
         "custom_action": "SelectChapter",
         "custom_action_param": {
-            "mainchapter": 1
+            "mainStoryChapter": 1
         },
         "next": [
             "MainChapter_2Enter"
@@ -133,7 +133,7 @@
         "action": "Custom",
         "custom_action": "SelectChapter",
         "custom_action_param": {
-            "mainchapter": 1
+            "mainStoryChapter": 1
         },
         "next": [
             "MainChapter_3Enter"
@@ -159,7 +159,7 @@
         "action": "Custom",
         "custom_action": "SelectChapter",
         "custom_action_param": {
-            "mainchapter": 1
+            "mainStoryChapter": 1
         },
         "next": [
             "MainChapter_4Enter"
@@ -185,7 +185,7 @@
         "action": "Custom",
         "custom_action": "SelectChapter",
         "custom_action_param": {
-            "mainchapter": 1
+            "mainStoryChapter": 1
         },
         "next": [
             "MainChapter_5Enter"
@@ -211,7 +211,7 @@
         "action": "Custom",
         "custom_action": "SelectChapter",
         "custom_action_param": {
-            "mainchapter": 1
+            "mainStoryChapter": 1
         },
         "next": [
             "MainChapter_6Enter"
@@ -237,7 +237,7 @@
         "action": "Custom",
         "custom_action": "SelectChapter",
         "custom_action_param": {
-            "mainchapter": 1
+            "mainStoryChapter": 1
         },
         "next": [
             "MainChapter_7Enter"
@@ -263,7 +263,7 @@
         "action": "Custom",
         "custom_action": "SelectChapter",
         "custom_action_param": {
-            "mainchapter": 2
+            "mainStoryChapter": 2
         },
         "next": [
             "MainChapter_8Enter"
@@ -289,7 +289,7 @@
         "action": "Custom",
         "custom_action": "SelectChapter",
         "custom_action_param": {
-            "mainchapter": 2
+            "mainStoryChapter": 2
         },
         "next": [
             "MainChapter_9Enter"
@@ -315,7 +315,7 @@
         "action": "Custom",
         "custom_action": "SelectChapter",
         "custom_action_param": {
-            "mainchapter": 2
+            "mainStoryChapter": 2
         },
         "next": [
             "MainChapter_10Enter"
