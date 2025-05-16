@@ -314,7 +314,10 @@
     },
     "AccountSettingEnter": {
         "recognition": "OCR",
-        "expected": "账号",
+        "expected": [
+            "账号",
+            "账户"
+        ],
         "roi": [
             22,
             78,
