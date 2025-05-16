@@ -230,14 +230,14 @@
                     }
                 },
                 {
-                    "name": "双头形骨架：10-14 厄险（主线新增）",
+                    "name": "双头形骨架：10-13 厄险（主线新增）",
                     "pipeline_override": {
                         "EnterTheShow": {
                             "next": "MainChapter_10"
                         },
                         "TargetStageName": {
                             "expected": [
-                                "14",
+                                "13",
                                 "九重城"
                             ]
                         },
