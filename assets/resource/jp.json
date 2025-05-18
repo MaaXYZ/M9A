@@ -50,5 +50,27 @@
                 "end_time": 1748203199000
             }
         }
+    },
+    "2.6": {
+        "version_name": "狂気と非理性",
+        "start_time": 1748480400000,
+        "end_time": 1751486399000,
+        "activity": {
+            "combat": {
+                "event_type": "MainStory",
+                "start_time": 1748480400000,
+                "end_time": 1751227199000
+            },
+            "anecdote": {
+                "start_time": 1749067200000,
+                "end_time": 1750276799000
+            },
+            "re-release": {
+                "name": "再见，来亚什基",
+                "alias": "再见",
+                "start_time": 1750363200000,
+                "end_time": 1751227199000
+            }
+        }
     }
 }
