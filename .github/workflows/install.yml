@@ -100,7 +100,14 @@ jobs:
         shell: bash
         run: |
           python ./tools/install.py ${{ needs.meta.outputs.tag }}
-          cp MFA/MFAAvalonia.exe MFA/MFAUpdater.exe MFA/MFAUpdater.dll MFA/MFAUpdater.runtimeconfig.json MFA/av_libglesv2.dll MFA/libHarfBuzzSharp.dll MFA/libonigwrap.dll MFA/libSkiaSharp.dll MFA/uiohook.dll install/
+
+          if [ -d "MFA" ]; then
+            echo "Copying MFA files to install directory..."
+            mkdir -p install
+            cp -rpvn MFA/. install/
+          else
+            echo "MFA directory not found, skipping copy."
+          fi
 
       - uses: actions/upload-artifact@v4
         with:
@@ -144,15 +151,18 @@ jobs:
         shell: bash
         run: |
           python ./tools/install.py ${{ needs.meta.outputs.tag }}
-          platform_name="${{ matrix.os == 'ubuntu-latest' && 'linux' || 'macos' }}"
-          
-          # Create list of MFA files to copy
-          mfa_files=$(ls -A MFA)
-          
-          # Copy MFA files to install directory, skipping if they already exist
-          for file in $mfa_files; do
-            cp -n MFA/$file install/ 2>/dev/null || true
-          done
+
+          if [[ "${{ matrix.os }}" != "android" ]]; then
+            if [ -d "MFA" ]; then
+              echo "Copying MFA files to install directory..."
+              mkdir -p install
+              rsync -av --ignore-existing MFA/ install/
+            else
+              echo "MFA directory not found, skipping copy."
+            fi
+          else
+            echo "Skipping copy MFA for Android."
+          fi
 
       - uses: actions/upload-artifact@v4
         with:
