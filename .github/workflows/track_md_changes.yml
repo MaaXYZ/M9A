@@ -1,0 +1,10 @@
+name: Track MD Changes
+on:
+  push:
+    paths:
+      - '**.md'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "检测到 .md 文件变更！"
